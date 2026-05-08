@@ -126,6 +126,111 @@
       "type": "string",
       "enum": ["open", "contested", "resolved", "theoretical", "watching"]
     },
+    "trend": {
+      "type": "string",
+      "enum": ["growing", "stable", "shrinking", "resolved", "theoretical"],
+      "description": "Direction of the discrepancy's significance over recent years. Orthogonal to status; an entry can be 'open' and 'stable' or 'contested' and 'shrinking'."
+    },
+    "principles_stressed": {
+      "type": "array",
+      "description": "Foundational principles that this anomaly would stress IF it is fundamentally real and not a systematic. The default and most common entry is the explicit 'none' record: documenting that an anomaly does not break a foundational principle is just as informative as documenting one that does.",
+      "items": {
+        "type": "object",
+        "required": ["principle", "status"],
+        "properties": {
+          "principle": {
+            "type": "string",
+            "enum": [
+              "unitarity",
+              "causality",
+              "lorentz_invariance",
+              "cpt",
+              "equivalence_principle",
+              "lepton_flavor_universality",
+              "gauge_invariance",
+              "locality",
+              "background_independence",
+              "naturalness",
+              "none"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["would_violate", "stresses", "tests", "none", "contested"]
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "smeft_context": {
+      "type": "object",
+      "description": "How this anomaly enters the Standard Model Effective Field Theory (Warsaw basis). Particle-physics entries only; cosmology/astrophysics entries should leave this field unset.",
+      "properties": {
+        "operators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Warsaw-basis operator label, e.g. 'O_eB', 'O_eW', 'O_HD', 'O_HWB'."
+              },
+              "dimension": { "type": "integer" },
+              "description": { "type": "string" },
+              "current_bound": {
+                "type": "string",
+                "description": "Symbolic statement of the current Wilson-coefficient bound, e.g. '|C_eγ^μμ| / Λ² < few × 10^-9 GeV^-2'."
+              },
+              "reference": { "type": "string" }
+            }
+          }
+        },
+        "oblique_parameters": {
+          "type": "object",
+          "description": "Peskin-Takeuchi S/T/U where directly relevant.",
+          "properties": {
+            "S": { "type": "string" },
+            "T": { "type": "string" },
+            "U": { "type": "string" },
+            "reference": { "type": "string" }
+          }
+        },
+        "global_fits": {
+          "type": "array",
+          "description": "References to standard SMEFT global fits whose constraints this entry should be checked against.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "cosmology_context": {
+      "type": "object",
+      "description": "Extension classes that move the needle on this tension, and what each costs elsewhere. Cosmology/astrophysics entries only.",
+      "properties": {
+        "extension_classes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "effect"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Extension class name (e.g. 'Early Dark Energy', 'Interacting Dark Sector', 'Sign-switching Lambda')."
+              },
+              "effect": {
+                "type": "string",
+                "description": "How and how much it moves this tension."
+              },
+              "cost_elsewhere": {
+                "type": "string",
+                "description": "What other tension or constraint is exacerbated."
+              },
+              "reference": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
     "summary": {
       "type": "string",
       "description": "Plain-English summary, 2-4 sentences."

@@ -102,6 +102,48 @@
     }
   ],
   "status": "open",
+  "trend": "stable",
+  "principles_stressed": [
+    {
+      "principle": "none",
+      "status": "none",
+      "note": "Parameter inconsistency between two pipelines for inferring H_0 within LambdaCDM. Does not directly violate unitarity, causality, Lorentz invariance, the equivalence principle, or any gauge structure. If real, it indicates LambdaCDM is incomplete, not that a foundational principle is wrong."
+    }
+  ],
+  "cosmology_context": {
+    "extension_classes": [
+      {
+        "name": "Early Dark Energy (EDE)",
+        "effect": "An additional energy component that briefly dominates around matter-radiation equality reduces the sound horizon r_s, raising the inferred local H_0 from CMB-anchored data toward ~71-72.",
+        "cost_elsewhere": "Best-fit EDE worsens the S_8 / structure-growth tension and is in tension with Big Bang Nucleosynthesis fits in the most economical realizations.",
+        "reference": "Poulin, Smith, Karwal, Kamionkowski, PRL 122, 221301 (2019), arXiv:1811.04083; Hill et al. 2020, arXiv:2003.07355"
+      },
+      {
+        "name": "Dark radiation / extra N_eff",
+        "effect": "Increasing N_eff raises H(z) at recombination and shifts inferred H_0 upward by a few percent.",
+        "cost_elsewhere": "Tightly constrained by CMB damping tail (Planck high-l) and BBN deuterium abundances. Cannot fully close the gap without violating CMB-shape constraints.",
+        "reference": "Vagnozzi, PRD 102, 023518 (2020), arXiv:1907.07569"
+      },
+      {
+        "name": "Sign-switching cosmological constant (Lambda_s CDM)",
+        "effect": "Lambda flips sign at z ~ 2 (negative -> positive). Changes the late-time expansion history and can move H_0 toward the SH0ES value while preserving CMB.",
+        "cost_elsewhere": "Requires an exotic transition mechanism with no established UV completion; phenomenological rather than fundamental.",
+        "reference": "Akarsu, Barrow, Escamilla, Vazquez, PRD 101, 063528 (2020), arXiv:1912.08751"
+      },
+      {
+        "name": "Modified recombination / varying m_e",
+        "effect": "A shift in the electron mass (or other recombination physics) at z ~ 1100 changes r_s and the inferred H_0.",
+        "cost_elsewhere": "Time-varying fundamental constants are tightly constrained by quasar absorption spectra and atomic-clock comparisons; the required shift is in some tension with these.",
+        "reference": "Hart and Chluba, MNRAS 493, 3255 (2020), arXiv:1912.03986"
+      },
+      {
+        "name": "Interacting dark energy / dark sector",
+        "effect": "Energy exchange between dark matter and dark energy modifies late-time expansion; some models reach intermediate H_0 values.",
+        "cost_elsewhere": "Most viable models close less than half of the gap and still leave residual tension in joint CMB+BAO+SN fits.",
+        "reference": "Di Valentino, Melchiorri, Mena, Vagnozzi, PRD 101, 063502 (2020), arXiv:1910.09853"
+      }
+    ]
+  },
   "summary": "The locally-measured expansion rate (Cepheid-anchored distance ladder, anchored further by JWST as of 2024) is ~73 km/s/Mpc, while LambdaCDM applied to Planck CMB data and to BAO+BBN inverse distance ladders gives ~67.4. The ~5 sigma discrepancy has survived multiple independent cross-checks. Either there is a systematic in one of the two pipelines that has eluded a decade of scrutiny, or LambdaCDM is incomplete. Proposed solutions (early dark energy, modified recombination, varying fundamental constants) so far each create new tensions elsewhere.",
   "systematics_notes": "TRGB-based calibrations sit between the two values, and the Cepheid-vs-TRGB debate is itself active. Time-delay strong lensing gives high values but with large lens-modeling uncertainties. Megamaser distances (e.g., Pesce et al.) also support a high local value. No single early-universe extension to LambdaCDM cleanly resolves H0 without violating BAO, S8, or CMB damping-tail constraints.",
   "references": [

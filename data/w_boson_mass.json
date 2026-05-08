@@ -99,6 +99,42 @@
     }
   ],
   "status": "contested",
+  "trend": "shrinking",
+  "principles_stressed": [
+    {
+      "principle": "none",
+      "status": "none",
+      "note": "A CDF-like value of m_W would imply new physics contributing to the electroweak oblique parameters (primarily T), but does not violate unitarity, causality, gauge invariance, or CPT. With ATLAS+CMS+LHCb consistent with the SM, the present discrepancy is between experiments, not between the world average and the SM."
+    }
+  ],
+  "smeft_context": {
+    "operators": [
+      {
+        "name": "O_HD",
+        "dimension": 6,
+        "description": "(H^dagger D_mu H)^* (H^dagger D^mu H). Custodial-symmetry-breaking operator; its Wilson coefficient C_HD shifts the Peskin-Takeuchi T parameter.",
+        "current_bound": "EW global fits constrain C_HD / Lambda^2 at the level of ~0.05 TeV^-2 (post-2024 LHC m_W average). The CDF II value alone, if used, would prefer a ~2-3 sigma nonzero C_HD.",
+        "reference": "de Blas et al. (HEPfit) 2022, arXiv:2204.04204; Bagnaschi et al. 2022, arXiv:2204.05260"
+      },
+      {
+        "name": "O_HWB",
+        "dimension": 6,
+        "description": "(H^dagger tau^I H) W^I_{mu nu} B^{mu nu}. Wilson coefficient shifts the S parameter.",
+        "reference": "Grzadkowski, Iskrzynski, Misiak, Rosiek, JHEP 10, 085 (2010), arXiv:1008.4884 (Warsaw basis)"
+      }
+    ],
+    "oblique_parameters": {
+      "S": "Consistent with 0; m_W shift is dominantly a T-direction effect.",
+      "T": "CDF II (alone) prefers T ~ 0.15-0.20 (3-sigma nonzero). Post-2024 world average (CDF + ATLAS + CMS + LHCb + D0 + LEP) is consistent with T = 0 within errors.",
+      "U": "Consistent with 0; usually fixed to 0 in SMEFT fits.",
+      "reference": "Strumia, JHEP 08, 248 (2022), arXiv:2204.04191; Lu et al., PRL 129, 271801 (2022), arXiv:2204.03796"
+    },
+    "global_fits": [
+      "de Blas et al. (HEPfit), arXiv:2204.04204",
+      "Bagnaschi, Ellis, Madigan, Mimasu, Sanz, You, arXiv:2204.05260",
+      "Fitmaker / SMEFiT (post-2024 m_W updates)"
+    ]
+  },
   "summary": "CDF II's 2022 measurement of m_W gave 80,433.5 +/- 9.4 MeV, ~7 sigma above the SM electroweak fit and ~76 MeV above the previous world average. Subsequent measurements at the LHC (LHCb 2022, ATLAS reanalysis 2024, CMS first measurement 2024) all favor the SM value. The discrepancy now sits primarily *between* CDF and the LHC experiments, not between the world average and the SM. The remaining open question is the systematic source of CDF's high value.",
   "systematics_notes": "PDF uncertainties in the underlying p-pbar / pp -> W production are the dominant theoretical input to all hadronic m_W measurements. CDF's analysis used different PDF sets and recoil-modeling choices than the LHC experiments; revisiting CDF data with modern PDF profiling has been proposed but is non-trivial post-Tevatron-shutdown.",
   "references": [

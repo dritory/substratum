@@ -43,6 +43,24 @@ Each anomaly is a JSON file under `data/` validated against
 - **status** — `open`, `contested`, `resolved`, or `theoretical`
 - **references** — primary literature, DOIs where available
 
+Optional structured hooks (filled per domain when meaningful):
+
+- **trend** — `growing` / `stable` / `shrinking` / `resolved` /
+  `theoretical`. Orthogonal to status.
+- **principles_stressed** — which foundational principles (unitarity,
+  causality, Lorentz, CPT, equivalence, lepton-flavor universality, …)
+  the anomaly would stress *if* it survives systematics. Most entries
+  explicitly record `principle: none, status: none` — that the anomaly
+  does *not* violate a foundational principle is itself information.
+- **smeft_context** — for particle entries, the Warsaw-basis SMEFT
+  operator(s) most directly probed plus references to standard global
+  fits (Fitmaker, SMEFiT, HEPfit). No invented dictionaries; we use
+  the BSM community's working framework.
+- **cosmology_context** — for cosmology / astrophysics entries, the
+  extension classes that move the needle (early dark energy,
+  interacting dark sectors, modified recombination, …) and the *cost
+  elsewhere* of each (which other tension or constraint they worsen).
+
 See `schema/anomaly.schema.json` for the full schema and
 `CONTRIBUTING.md` for how to add or update entries.
 

@@ -93,6 +93,41 @@
     }
   ],
   "status": "open",
+  "trend": "stable",
+  "principles_stressed": [
+    {
+      "principle": "none",
+      "status": "none",
+      "note": "Parameter-level tension within LambdaCDM. Does not violate any foundational principle. If real, it points to either suppressed late-time / small-scale clustering (new physics in the dark sector or modified gravity) or to a baryonic / photometric-z systematic in the weak-lensing surveys."
+    }
+  ],
+  "cosmology_context": {
+    "extension_classes": [
+      {
+        "name": "Strong baryonic feedback (astrophysical, not new physics)",
+        "effect": "AGN feedback that ejects gas more efficiently than current hydrodynamical simulations assume can suppress the matter power spectrum on ~Mpc scales and lower the inferred S_8 from cosmic shear back toward Planck.",
+        "cost_elsewhere": "Requires feedback strengths somewhat above the range preferred by X-ray and SZ observations of clusters; an open astrophysics question rather than a violated constraint.",
+        "reference": "Amon and Efstathiou, MNRAS 516, 5355 (2022), arXiv:2206.11794"
+      },
+      {
+        "name": "Decaying dark matter",
+        "effect": "A small fraction of dark matter decaying after recombination suppresses late-time clustering and lowers S_8 without altering the CMB.",
+        "cost_elsewhere": "Tightly constrained by Lyman-alpha forest and Milky Way satellite counts; viable parameter region is narrow.",
+        "reference": "Abellan, Murgia, Poulin, Lavalle, PRD 105, 063525 (2022), arXiv:2008.09615"
+      },
+      {
+        "name": "Interacting dark matter - dark energy",
+        "effect": "Momentum or energy transfer between DE and DM at late times suppresses growth on weak-lensing scales.",
+        "cost_elsewhere": "Most realizations cannot simultaneously close H_0 and S_8 tensions; fixing one tends to worsen the other.",
+        "reference": "Poulin, Bernal, Kovetz, Kamionkowski, PRD 107, 123538 (2023), arXiv:2209.06217"
+      },
+      {
+        "name": "Warm / fuzzy dark matter",
+        "effect": "Suppresses small-scale power below a free-streaming or de Broglie scale, lowering S_8.",
+        "cost_elsewhere": "Lyman-alpha forest constraints push the suppression scale outside the range that would resolve S_8 alone."
+      }
+    ]
+  },
   "summary": "Weak gravitational lensing surveys (KiDS, DES, HSC) consistently measure less late-time structure clustering than LambdaCDM predicts when fit to Planck CMB data. The tension sits at ~2-3 sigma and has been stable across multiple independent surveys. Galaxy clustering, cluster counts, and full-shape galaxy power spectra give a mixed picture; CMB lensing (ACT, SPT) is consistent with Planck. Whether this is a genuine signal of suppressed structure growth (e.g., a non-cold dark matter component, or modified gravity) or a baryonic-feedback / photometric systematic remains unresolved.",
   "systematics_notes": "Modeling of baryonic feedback at small scales, photometric redshift calibration, and intrinsic alignments of galaxies are the leading systematics for cosmic shear. Different scale-cut choices can move S8 by ~1 sigma. The fact that CMB lensing (a different physical probe at higher redshift) gives a Planck-like S8 favors a low-redshift / small-scale source of any new physics, if any.",
   "references": [

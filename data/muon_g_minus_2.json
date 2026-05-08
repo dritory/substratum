@@ -105,6 +105,40 @@
     }
   ],
   "status": "contested",
+  "trend": "shrinking",
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "a_mu probes muon-specific dipole couplings. A surviving anomaly inconsistent with a_e (and ultimately a_tau) would be a direct, model-independent break of LFU. The BNL/FNAL measurement of a_mu is the most precise muon-sector test of LFU currently available."
+    },
+    {
+      "principle": "none",
+      "status": "none",
+      "note": "Even if the anomaly survives all hadronic-systematics scrutiny, it does not by itself violate unitarity, causality, Lorentz invariance, gauge invariance, or CPT. It would be parametrized within SMEFT as a heavy new-physics dipole contribution."
+    }
+  ],
+  "smeft_context": {
+    "operators": [
+      {
+        "name": "O_eB^(22)",
+        "dimension": 6,
+        "description": "(l_bar_2 sigma^{mu nu} e_R_2) H B_{mu nu}. Muon-flavor entry of the SMEFT lepton-hypercharge dipole operator.",
+        "current_bound": "Combined with O_eW into the photon-dipole coefficient C_e gamma^{mu mu}; current a_mu measurement constrains |C_e gamma^{mu mu}|/Lambda^2 at the level of ~1e-9 GeV^-2 (sign and magnitude depend on whether one treats a_mu itself as a constraint or as a target).",
+        "reference": "Aebischer et al., 'Dipole operators in SMEFT' / global SMEFT fits"
+      },
+      {
+        "name": "O_eW^(22)",
+        "dimension": 6,
+        "description": "(l_bar_2 sigma^{mu nu} e_R_2) tau^I H W^I_{mu nu}. Muon-flavor entry of the SU(2)_L dipole operator. Combines with O_eB after EWSB into the photon and Z dipole moments.",
+        "reference": "Grzadkowski, Iskrzynski, Misiak, Rosiek, JHEP 10, 085 (2010), arXiv:1008.4884 (Warsaw basis)"
+      }
+    ],
+    "global_fits": [
+      "Ellis, Madigan, Mimasu, Sanz, You, 'Top, Higgs, Diboson and Electroweak Fit to the Standard Model Effective Field Theory' (Fitmaker), JHEP 04, 279 (2021), arXiv:2012.02779",
+      "SMEFiT Collaboration, 'Combined SMEFT interpretation of Higgs, diboson and top quark data from the LHC', JHEP 11, 089 (2021), arXiv:2105.00006"
+    ]
+  },
   "summary": "The muon's anomalous magnetic moment, measured to extraordinary precision at BNL and Fermilab, was for a decade ~3-4 sigma above the Standard Model prediction built from data-driven hadronic vacuum polarization. Lattice QCD evaluations (led by BMW 2020) and a tension in the underlying e+e- -> hadrons data (CMD-3 vs KLOE/BaBar) have shifted the picture: against the lattice SM the discrepancy is ~2 sigma. Whether a_mu is a window on new physics or on hadronic-physics systematics is currently unresolved.",
   "systematics_notes": "The dominant theoretical uncertainty is the leading-order hadronic vacuum polarization. Two methods (data-driven dispersive, and lattice QCD) currently disagree at ~2 sigma. Within the data-driven approach, CMD-3's pi+pi- cross section disagrees with KLOE and BaBar at 2.5-5 sigma in some energy bins. Resolving these is a prerequisite for a clean SM prediction.",
   "references": [
