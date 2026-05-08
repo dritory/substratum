@@ -40,6 +40,19 @@
       "note": "SM contains no QCD axion or ALP; the strong CP problem is unaddressed but no axion-photon coupling is predicted. Trivially below any haloscope/helioscope bound.",
       "reference": "Standard Model Lagrangian (no PQ symmetry); strong_cp_theta_qcd benchmark records the unaddressed theta_QCD problem"
     },
+    "cabibbo_angle_anomaly": {
+      "kind": "value",
+      "value": 1.0,
+      "uncertainty": 0.0,
+      "units": "dimensionless",
+      "note": "CKM unitarity is exact at tree level in the SM; loop corrections to first-row unitarity are below 10^-5. The currently-measured value 0.9985 +/- 0.0005 sits ~3 sigma below the SM prediction - this is the Cabibbo-angle anomaly itself.",
+      "reference": "Cabibbo, PRL 10, 531 (1963); Kobayashi and Maskawa, Prog. Theor. Phys. 49, 652 (1973); Cirigliano, Crivellin, Hoferichter, Moulson, PLB 838, 137748 (2023), arXiv:2208.11707"
+    },
+    "cmb_blackbody_firas": {
+      "kind": "by_construction",
+      "note": "Standard cosmological recombination plus Silk damping in LambdaCDM gives mu ~ 10^-8 and y ~ 10^-6, both well below the FIRAS limits |mu| < 9e-5 and |y| < 1.5e-5. PIXIE-class future experiments will probe the SM y prediction at ~10^-7 sensitivity.",
+      "reference": "Hu and Silk, PRD 48, 485 (1993); Chluba and Sunyaev, MNRAS 419, 1294 (2012), arXiv:1109.6552"
+    },
     "dark_photon_kinetic_mixing": {
       "kind": "by_construction",
       "note": "SM gauge group is SU(3) x SU(2) x U(1)_Y with no additional U(1)'. epsilon = 0 by construction.",
@@ -79,6 +92,11 @@
       "note": "GR predicts the tensor-mode equation h_ij;mu;mu = 0 on a Ricci-flat background, giving c_gw = c exactly at all orders in vacuum. Cosmological backgrounds yield O(H^2/k^2) corrections at the LIGO band that are unobservably small.",
       "reference": "Misner, Thorne, Wheeler, 'Gravitation' (1973), chapter 35; Maggiore, 'Gravitational Waves vol. 1' (2008)"
     },
+    "hydrogen_1s_2s_transition": {
+      "kind": "by_construction",
+      "note": "SM bound-state QED (Dirac equation + radiative + recoil + nuclear-size + nuclear-polarisability corrections, computed to ~13 digits) reproduces the Parthey 2011 measurement 2 466 061 413 187 035 +/- 10 Hz to within the proton-charge-radius input. The 'proton-radius puzzle' (muonic vs electronic H) is itself a separate ~5 sigma input-parameter tension, not a failure of QED.",
+      "reference": "Karshenboim, 'Precision Physics of Simple Atoms', Phys. Rep. 422, 1 (2005); Yerokhin et al., 'Theory of the Lamb Shift in Hydrogen and Light Hydrogen-like Ions', Annalen Phys. 531, 1800324 (2019)"
+    },
     "inverse_square_law_short_distance": {
       "kind": "by_construction",
       "note": "GR + SM predicts purely Newtonian gravity at sub-mm distances; no Yukawa correction. Equivalent to alpha = 0 at all lambda.",
@@ -88,6 +106,11 @@
       "kind": "by_construction",
       "note": "The SM with right-handed neutrinos accommodates any neutrino mass spectrum below the cosmological sum bound (Sum m_nu < 0.072 eV from DESI+CMB+SN); KATRIN's effective electron-neutrino mass m_nu_e < 0.45 eV is well below this. The SM does not predict the masses, but is consistent with the measurement.",
       "reference": "Particle Data Group, 'Neutrino Properties' review, Phys. Rev. D 110, 030001 (2024)"
+    },
+    "lyman_alpha_forest_small_scale_power": {
+      "kind": "by_construction",
+      "note": "Cold dark matter in LambdaCDM has zero free-streaming length: the m_WDM > 5.3 keV bound is the limit m_WDM -> infinity. Equivalent to a CDM-only cosmology, which is the assumed framework here.",
+      "reference": "Peebles and Ratra, RMP 75, 559 (2003); Irsic et al., PRD 96, 023522 (2017), arXiv:1702.01764"
     },
     "mu_e_conversion_sindrum": {
       "kind": "by_construction",
@@ -103,6 +126,14 @@
       "kind": "open",
       "note": "SM contributions to d_n have two pieces: (a) the QCD theta-term, with d_n_theta ~ e * theta_QCD * m_q / Lambda_QCD ~ 10^-16 e cm * theta_QCD - this saturates the bound at theta ~ 10^-10, the strong CP problem itself; (b) CKM CP violation, predicting d_n^SM(CKM) ~ 10^-32 e cm, well below the bound. Whether the SM 'passes' depends on whether one treats theta_QCD as a free parameter (open) or assumes a Peccei-Quinn or analogous mechanism (by_construction).",
       "reference": "Pospelov and Ritz, Annals Phys. 318, 119 (2005), arXiv:hep-ph/0504231; see also strong_cp_theta_qcd benchmark."
+    },
+    "nucleon_axial_charge_g_a": {
+      "kind": "value",
+      "value": 1.271,
+      "uncertainty": 0.013,
+      "units": "dimensionless",
+      "note": "Lattice QCD prediction at percent precision (CalLat 2018) gives g_A^QCD = 1.271 +/- 0.013. PERKEO III experimental value is 1.27641 +/- 0.0006; the two agree at sub-1-sigma combined uncertainty, validating QCD via lattice in the nucleon-structure sector.",
+      "reference": "Chang et al. (CalLat), 'A per-cent-level determination of the nucleon axial coupling from quantum chromodynamics', Nature 558, 91 (2018), arXiv:1805.12130"
     },
     "primordial_gw_tensor_to_scalar_ratio": {
       "kind": "open",
