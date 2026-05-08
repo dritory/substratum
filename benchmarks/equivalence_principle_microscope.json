@@ -19,6 +19,22 @@
     "confidence_level": "95% CL combined limit |eta| < 4.7e-15"
   },
   "what_it_excludes": "Any framework predicting composition-dependent fifth forces or equivalence-principle-violating couplings of dark sectors to ordinary matter at levels above eta ~ 10^-15. This severely constrains models that try to explain dark matter or dark energy through new long-range forces with non-universal couplings (e.g. baryon-coupled scalars).",
+  "procedural": {
+    "parameterization": {
+      "name": "Eotvos parameter eta = 2 (a_1 - a_2) / (a_1 + a_2) for two test masses of different composition. In dilaton/EP-violating models, parameterized by a coupling Q_hat between a new scalar and ordinary matter.",
+      "reference": "Damour and Donoghue, PRD 82, 084033 (2010), arXiv:1007.2792 (dilaton parameterization).",
+      "summary": "WEP violations in any framework with new scalar/vector fields show up as composition-dependent accelerations. The dilaton parameterization separates 'how strongly the new field couples' from 'how composition-dependent the coupling is'."
+    },
+    "predicted_observable": "eta_AB = (Q_A - Q_B) * Q_hat for materials A, B, where Q_A, Q_B are dilaton charges per unit mass computed from nuclear and atomic structure. For MICROSCOPE: A = titanium (Ti), B = platinum (Pt), with Q_Ti - Q_Pt approximately 8 x 10^-4 in standard dilaton charge units.",
+    "bound_in_parameterization": "|eta_TiPt| < 1.5 x 10^-15 (1 sigma central value), |eta| < 4.7 x 10^-15 at 95% CL. Translates into bounds on dilaton coupling |Q_hat| <~ 10^-12 for typical dilaton models.",
+    "framework_inputs": [
+      "If the framework introduces a new long-range scalar/vector field, compute its couplings to electromagnetism, QCD, and Yukawa sectors at the matching scale.",
+      "Convert these into dilaton charges per unit mass for Ti and Pt using the standard composition formulas (Damour-Donoghue).",
+      "Multiply by overall coupling Q_hat to predict eta."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Frameworks with no long-range non-gravitational fields trivially predict eta = 0. Strong equivalence principle violations (Nordtvedt effect) are constrained separately by lunar laser ranging and pulsar timing."
+  },
   "primary_references": [
     {
       "citation": "Touboul et al. (MICROSCOPE), 'MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle', PRL 129, 121102 (2022)",

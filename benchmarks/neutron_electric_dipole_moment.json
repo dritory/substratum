@@ -18,6 +18,21 @@
     "confidence_level": "90% CL"
   },
   "what_it_excludes": "Severely constrains supersymmetric extensions with TeV-scale superpartners and natural CP phases (the 'SUSY CP problem'). Forbids many composite Higgs models with large CP-violating couplings. Together with the QCD theta term, motivates the existence of a Peccei-Quinn symmetry and an axion as the natural dynamical solution.",
+  "procedural": {
+    "parameterization": {
+      "name": "Effective theta angle (theta_QCD) plus SMEFT CP-violating Wilson coefficients (Weinberg three-gluon operator C_GtildeG, quark chromo-EDMs C_qG, quark EDMs C_eF).",
+      "reference": "Pospelov and Ritz, Annals Phys. 318, 119 (2005), arXiv:hep-ph/0504231; Engel, Ramsey-Musolf, van Kolck, PPNP 71, 21 (2013), arXiv:1303.2371.",
+      "summary": "d_n receives contributions from (a) the QCD theta term, with d_n_theta ~ e * theta_QCD * (m_q / Lambda_QCD), and (b) BSM CP phases entering the quark EDMs and chromo-EDMs at low energy via SMEFT operators C_eF^q and C_qG^q."
+    },
+    "predicted_observable": "d_n = a_theta * theta_QCD + sum_q (a_q * C_eF^q + b_q * C_qG^q) + a_GG * C_GtildeG + ..., where the a_i, b_i are nucleon matrix elements computed by lattice QCD or chiral perturbation theory.",
+    "bound_in_parameterization": "theta_QCD < ~10^-10 (the strong CP problem). For BSM phases: |C_eF / Lambda^2|, |C_qG / Lambda^2| <~ (few TeV)^-2 with O(1) phases.",
+    "framework_inputs": [
+      "If the framework predicts CP violation beyond the SM, compute its contribution to the QCD theta term and to the relevant SMEFT CP-violating Wilson coefficients.",
+      "Use lattice or ChPT matrix elements to convert these into a prediction for d_n. Compare against |d_n| < 1.8 x 10^-26 e cm."
+    ],
+    "evaluator_status": "requires_code",
+    "notes": "Lattice-QCD evaluations of nucleon EDM matrix elements (theta term and quark chromo-EDMs) are improving but still have ~30-50% uncertainties. The theta contribution is less precisely calibrated than the quark-EDM contribution."
+  },
   "primary_references": [
     {
       "citation": "Abel et al. (nEDM Collaboration), 'Measurement of the Permanent Electric Dipole Moment of the Neutron', PRL 124, 081803 (2020)",

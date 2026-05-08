@@ -1,0 +1,48 @@
+{
+  "id": "antihydrogen_gravity_alpha_g",
+  "name": "Antihydrogen falls down in Earth's gravitational field",
+  "kind": "principle_invariance",
+  "principle": "equivalence_principle",
+  "requirement": "Any candidate framework must predict that antimatter responds to gravity the same way matter does, in agreement with the ALPHA-g 2023 measurement that cold antihydrogen atoms fall downward at 0.75 +/- 0.21 g in Earth's gravitational field. This decisively rules out 'antigravity' for antimatter (a_gbar / g = -1) and constrains composition-dependent equivalence-principle violations involving antimatter.",
+  "regime": {
+    "length_m": 1,
+    "energy_ev": 1e-9,
+    "description": "Laboratory-scale free-fall of cold antihydrogen atoms (sub-millikelvin trapped in magnetic minimum, then released)."
+  },
+  "current_bound": {
+    "value": 0.75,
+    "uncertainty": "+/- 0.13 (stat) +/- 0.16 (syst)",
+    "units": "in units of local g (downward = +1, upward = -1)",
+    "experiment": "ALPHA-g at CERN antiproton decelerator",
+    "year": 2023,
+    "reference": "Anderson et al. (ALPHA Collaboration), 'Observation of the effect of gravity on the motion of antimatter', Nature 621, 716 (2023)",
+    "confidence_level": "1 sigma; -1 (antigravity) excluded at high significance"
+  },
+  "what_it_excludes": "Theories predicting that antimatter has negative gravitational mass (antigravity, ruled out at high significance). Constrains gravitational-CPT violations and antimatter-specific fifth-force scenarios. Future improvements (ALPHA-g, AEgIS, GBAR) target precision approaching the matter-WEP precision (10^-15), at which point antihydrogen gravity becomes a strong test of CPT in the gravitational sector.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct ratio a_gbar / g for antimatter in a gravitational field. In SME framework: gravitational-sector coefficients (a_eff)^mu and (s)^mu nu that distinguish matter from antimatter response.",
+      "reference": "Kostelecky and Tasson, PRD 83, 016013 (2011), arXiv:1006.4106 (gravitational SME).",
+      "summary": "CPT and the equivalence principle together predict a_gbar / g = +1 for any antimatter species. The SME parameterizes possible gravitational CPT violation through coefficients in the matter-graviton coupling Lagrangian."
+    },
+    "predicted_observable": "Free-fall acceleration of antihydrogen in a uniform gravitational field, measured in units of the local matter free-fall acceleration g.",
+    "bound_in_parameterization": "a_gbar / g = 0.75 +/- 0.21 (combined). Antigravity (a_gbar / g = -1) is excluded at high significance. Future ALPHA-g phase 2 + GBAR aim at percent-level precision; eventually atom-interferometry approaches may reach 10^-6 or better.",
+    "framework_inputs": [
+      "If the framework distinguishes matter and antimatter gravitationally, compute a_gbar / g in a uniform external gravitational field.",
+      "Include any contributions from gravitational-sector SME coefficients or non-trivial CPT structure in the gravitational coupling."
+    ],
+    "evaluator_status": "trivial",
+    "notes": "Some 'fourth-force' or 'gravivector' proposals predicted a_gbar < g without going to a_gbar = -g; future improvements will tighten these constraints as well."
+  },
+  "primary_references": [
+    {
+      "citation": "Anderson et al. (ALPHA Collaboration), 'Observation of the effect of gravity on the motion of antimatter', Nature 621, 716 (2023)",
+      "doi": "10.1038/s41586-023-06527-1"
+    },
+    {
+      "citation": "Kostelecky and Tasson, 'Matter-Gravity Couplings and Lorentz Violation', PRD 83, 016013 (2011)",
+      "arxiv": "1006.4106"
+    }
+  ],
+  "tags": ["antimatter", "equivalence_principle", "cpt", "gravity"]
+}

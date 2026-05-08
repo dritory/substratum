@@ -19,6 +19,23 @@
   },
   "what_it_excludes": "Frameworks that modify the expansion rate during BBN (i.e. change effective N_eff by more than ~0.3-0.5), or that introduce extra weak-scale interactions changing neutron-proton freeze-out, are tightly constrained. Combined with the CMB, BBN provides a powerful, independent measurement of the baryon density and is one of the strongest tests of cosmology between recombination and today.",
   "notes": "The 'lithium problem' (predicted ^7Li abundance is ~3x higher than observed in metal-poor halo stars) is a longstanding ~3 sigma tension. Some authors include it as an anomaly in its own right; we list it here as a known systematic-or-physics question rather than as a passing benchmark.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard BBN parameterized by baryon-to-photon ratio eta (or equivalently Omega_b h^2) and effective number of relativistic species N_eff. Extensions: modified expansion rate during BBN (parameterized by H_BBN / H_BBN^SM), late-time decaying particles (lifetime tau, abundance), modified neutron-proton freeze-out.",
+      "reference": "Pisanti et al. (PArthENoPE), CPC 178, 956 (2008); Iliadis (NETSurfer); Kawano nuclear network.",
+      "summary": "BBN is solved by integrating a nuclear reaction network through the radiation-dominated epoch from T ~ 1 MeV to T ~ 10 keV. Standard inputs: eta, N_eff, neutron lifetime tau_n, and ~20 nuclear cross sections. Outputs: D/H, ^3He/H, Y_p, ^7Li/H."
+    },
+    "predicted_observable": "Y_p ~ 0.247 + 0.015 * (Delta N_eff) for small deviations; D/H is sensitive to eta as D/H ~ 2.5e-5 * (eta / 6.1e-10)^-1.6 with a milder N_eff dependence. Detailed dependences computed numerically by PArthENoPE / PRIMAT / AlterBBN.",
+    "bound_in_parameterization": "Delta N_eff < 0.3-0.5 (depending on D/H or Y_p constraint chosen). eta = (6.14 +/- 0.04) x 10^-10 from BBN alone, in agreement with the CMB-derived value at sub-percent level.",
+    "framework_inputs": [
+      "Effective number of relativistic species during BBN (T ~ 100 keV - 1 MeV).",
+      "Modified Hubble rate during BBN (H_BBN / H_BBN^SM as a function of T).",
+      "Any new particle decaying or annihilating during BBN: lifetime, abundance, decay products.",
+      "Modified neutron-proton freeze-out conditions if the framework alters weak interaction rates."
+    ],
+    "evaluator_status": "requires_simulation",
+    "notes": "Public BBN codes (PArthENoPE 3.0, PRIMAT, AlterBBN) accept these inputs directly. Evaluation against the bound is a single chi^2 calculation against D/H and Y_p once the framework's parameters are fixed."
+  },
   "primary_references": [
     {
       "citation": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020)",

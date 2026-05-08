@@ -88,19 +88,35 @@ See `schema/anomaly.schema.json` for the full schema and
 
 ### `benchmarks/` — what any new framework must satisfy
 
-| ID | Kind | Excludes |
-|----|------|----------|
-| `recover_general_relativity` | reduction | unscreened modified-gravity at solar-system scale |
-| `recover_standard_model_precision` | reduction | sub-TeV new physics above current precision |
-| `graviton_speed_gw170817` | precision_test | most scalar/vector-tensor dark-energy models |
-| `equivalence_principle_microscope` | principle | composition-dependent fifth forces above η ~ 10⁻¹⁵ |
-| `lorentz_invariance_photon` | principle | linear-in-E LIV near M_Planck |
-| `inverse_square_law_short_distance` | precision_test | mm-scale large extra dimensions |
-| `proton_decay_lifetime` | forbidden | minimal SU(5), most minimal SO(10) GUTs |
-| `neutron_electric_dipole_moment` | forbidden | many TeV-SUSY phases; large strong-CP phase |
-| `bbn_light_element_abundances` | cosmological | early-universe ΔN_eff > ~0.3 |
-| `cmb_acoustic_peak_structure` | cosmological | drastic recombination physics, large EDE |
-| `address_open_tensions` | tension_to_address | "fix one tension, ignore the others" |
+Each entry includes a `procedural` block: the canonical parameterization
+(PPN, SMEFT, SME, ΛCDM extensions, Yukawa…), the predicted observable,
+the bound restated in those parameters, what a candidate framework must
+expose to be evaluated, and an `evaluator_status` flag indicating how
+hard the evaluation is (`trivial` / `tractable` / `requires_code` /
+`requires_simulation` / `requires_lattice` / `research_problem`).
+
+| ID | Kind | Parameterization | Excludes |
+|----|------|------------------|----------|
+| `recover_general_relativity` | reduction | PPN + PPK + TIGER | unscreened modified-gravity at solar-system scale |
+| `recover_standard_model_precision` | reduction | SMEFT (Warsaw) | sub-TeV new physics above current precision |
+| `graviton_speed_gw170817` | precision_test | direct (c_gw − c)/c | most scalar/vector-tensor dark-energy models |
+| `equivalence_principle_microscope` | principle | Eötvös η + dilaton charge | composition-dependent fifth forces above η ~ 10⁻¹⁵ |
+| `antihydrogen_gravity_alpha_g` | principle | a_g̅/g + grav. SME | antimatter antigravity |
+| `lorentz_invariance_photon` | principle | SME photon sector | linear-in-E LIV near M_Planck |
+| `inverse_square_law_short_distance` | precision_test | Yukawa (α, λ) | mm-scale large extra dimensions |
+| `bullet_cluster_lensing_offset` | cosmological | lensing-vs-gas offset | pure modified-gravity-without-DM |
+| `proton_decay_lifetime` | forbidden | M_GUT, BNV SMEFT | minimal SU(5), most minimal SO(10) GUTs |
+| `neutron_electric_dipole_moment` | forbidden | θ_QCD + SMEFT CP | many TeV-SUSY phases; large strong-CP phase |
+| `electron_edm_jila` | forbidden | SMEFT C_eγ + Barr-Zee | leptonic CP violation at TeV |
+| `alpha_variation_atomic_clocks` | precision_test | α̇/α + dilaton d_e | rolling moduli, ULDM photon coupling |
+| `bbn_light_element_abundances` | cosmological | η, N_eff + nuclear network | early-universe ΔN_eff > ~0.3 |
+| `cmb_acoustic_peak_structure` | cosmological | ΛCDM + extensions | drastic recombination physics, large EDE |
+| `address_open_tensions` | tension_to_address | links to `data/` | "fix one tension, ignore the others" |
+
+See `ROADMAP.md` for the inventory of constraints we have identified
+but not yet populated (~30 more, covering extended PPN, B-meson and
+kaon flavor physics, Lorentz/CPT in matter sectors, primordial GW
+ratio, dark-matter direct detection, pulsar timing arrays, and more).
 
 ## Roadmap
 

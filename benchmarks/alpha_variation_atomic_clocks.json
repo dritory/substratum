@@ -1,0 +1,52 @@
+{
+  "id": "alpha_variation_atomic_clocks",
+  "name": "Time variation of the fine-structure constant",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must predict |alpha_dot / alpha| consistent with current atomic-clock-comparison limits. Cross-laboratory comparisons of optical clocks in different atomic species (Yb+ E2 vs E3 octupole, Sr lattice vs Cs fountain, etc.) bound the present-day fractional drift of the fine-structure constant at the ~10^-19 per year level.",
+  "regime": {
+    "length_m": 1e-10,
+    "energy_ev": 1,
+    "description": "Atomic-scale physics; precision comparisons of optical-clock transitions sensitive to different powers of alpha."
+  },
+  "current_bound": {
+    "value": "alpha_dot / alpha = (1.0 +/- 1.1) x 10^-18 / yr",
+    "uncertainty": null,
+    "units": "1/year",
+    "experiment": "PTB Yb+ E2/E3 + Cs fountain + (171)Yb lattice clock comparisons",
+    "year": 2023,
+    "reference": "Filzinger et al., 'Improved Limits on the Coupling of Ultralight Bosonic Dark Matter to Photons from Optical Atomic Clock Comparisons', PRL 130, 253001 (2023), arXiv:2301.03433",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains string-theory dilaton scenarios with rolling moduli, varying-constant cosmologies (Bekenstein-Sandvik-Barrow-Magueijo), and ultralight scalar dark-matter models with photon couplings. Combined with redshifted-quasar-absorption constraints (which probe alpha at z ~ 1-3 to ~10^-6 fractional precision), this benchmark restricts the entire late-time history of fundamental constants.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct dimensionless: d(ln alpha)/dt. For ultralight scalar dark matter coupled to photons, parameterized by coupling d_e in the dilaton-charge convention.",
+      "reference": "Damour and Donoghue, PRD 82, 084033 (2010), arXiv:1007.2792.",
+      "summary": "A scalar field phi with Lagrangian -(1/4) (1 + d_e phi/M_Pl) F_munu F^munu shifts alpha proportionally to phi. Time-evolution of phi (e.g. cosmological rolling, oscillating dark matter) sources alpha-dot."
+    },
+    "predicted_observable": "alpha_dot / alpha = (d_e / M_Pl) * phi_dot for a slowly-rolling scalar; for oscillating ULDM phi(t) = phi_0 cos(m_phi t), the comparison is between clock-comparison Allan variance at frequency m_phi and the predicted oscillation amplitude.",
+    "bound_in_parameterization": "|alpha_dot / alpha| < 2.1 x 10^-18 / yr (95% CL). For ULDM photon coupling: |d_e| < ~10^-5 at m_phi ~ 10^-22 eV (improving rapidly).",
+    "framework_inputs": [
+      "If the framework predicts a varying alpha (cosmological evolution, environmental dependence, or oscillation), compute its time derivative at the present epoch in laboratory frame.",
+      "If the framework includes ultralight scalars coupled to photons, compute the dilaton-photon coupling d_e and the scalar mass m_phi."
+    ],
+    "evaluator_status": "trivial",
+    "notes": "Atomic clocks also bound mu_dot/mu (proton-electron mass ratio) via molecular vibrational/rotational transitions. A serious framework predicting varying constants must respect both."
+  },
+  "primary_references": [
+    {
+      "citation": "Filzinger et al., 'Improved Limits on the Coupling of Ultralight Bosonic Dark Matter to Photons from Optical Atomic Clock Comparisons', PRL 130, 253001 (2023)",
+      "arxiv": "2301.03433"
+    },
+    {
+      "citation": "Lange et al., 'Improved Limits for Violations of Local Position Invariance from Atomic Clock Comparisons', PRL 126, 011102 (2021)",
+      "arxiv": "2010.06620"
+    },
+    {
+      "citation": "Webb et al., 'Indications of a Spatial Variation of the Fine Structure Constant', PRL 107, 191101 (2011)",
+      "arxiv": "1008.3907",
+      "note": "Quasar-absorption constraints; sensitivity to spatial variation."
+    }
+  ],
+  "tags": ["alpha_variation", "atomic_clocks", "dilaton", "ultralight_dark_matter"]
+}

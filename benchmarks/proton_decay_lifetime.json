@@ -18,6 +18,21 @@
     "confidence_level": "90% CL"
   },
   "what_it_excludes": "Most minimal SU(5) Grand Unified Theories were already excluded by earlier IMB and Kamiokande limits; the current Super-K bounds also exclude minimal SO(10) GUTs and place severe constraints on supersymmetric SU(5) and SO(10) variants. Hyper-Kamiokande (operational ~2027) will probe an order of magnitude further, potentially closing minimal SUSY GUTs entirely.",
+  "procedural": {
+    "parameterization": {
+      "name": "GUT-style: tau(p -> e+ pi^0) ~ M_GUT^4 / (alpha_GUT^2 m_p^5), with model-dependent O(1) coefficients. More generally, dimension-six baryon-number-violating SMEFT operators with Wilson coefficients C_BNV / Lambda^2.",
+      "reference": "Particle Data Group, Review of Particle Physics, 'Grand Unified Theories' chapter; Nath and Fileviez Perez, Phys. Rep. 441, 191 (2007), arXiv:hep-ph/0601023.",
+      "summary": "In GUTs, p decay is mediated by exchange of heavy gauge bosons of mass M_GUT, with rate scaling as 1/M_GUT^4. SMEFT contains four BNV dim-6 operators (O_duue, O_qque, etc.) whose Wilson coefficients are bounded by current limits."
+    },
+    "predicted_observable": "tau_p^-1 = sum_channels Gamma(p -> X) where each channel has a calculable matrix element times C_BNV^2 / Lambda^4.",
+    "bound_in_parameterization": "M_GUT > 10^16 GeV in minimal SU(5) (already excluded). For SUSY GUTs: M_GUT >~ 10^15-16 GeV survives; tighter constraints from p -> nu_bar K+ channel. SMEFT BNV Wilson coefficients: |C_BNV / Lambda^2| < 10^-31 GeV^-2.",
+    "framework_inputs": [
+      "If the framework predicts proton decay, compute the partial widths into the major channels (e+ pi^0, mu+ pi^0, nu_bar K+, e+ K^0, etc.) using the framework's effective BNV operators.",
+      "Sum partial widths to total decay rate; require lifetime exceeds Super-K bounds in every channel."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Nucleon matrix elements relevant for proton decay are now known from lattice QCD to ~10% precision (e.g. RBC/UKQCD), so the matching from BNV Wilson coefficients to lifetimes is a controlled calculation."
+  },
   "primary_references": [
     {
       "citation": "Super-Kamiokande Collaboration, 'Search for proton decay via p -> e+ pi^0 and p -> mu+ pi^0', PRD 102, 112011 (2020)",

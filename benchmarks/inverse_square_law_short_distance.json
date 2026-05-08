@@ -18,6 +18,21 @@
     "confidence_level": "95% CL"
   },
   "what_it_excludes": "Large-extra-dimension scenarios (ADD-style) with two extra dimensions are excluded down to compactification radii below ~30 micrometers, ruling out the original 'gravity becomes strong at the TeV scale via mm-sized extra dimensions' proposals. Forbids generic moduli or radion fields with gravitational-strength couplings and ranges above ~50 micrometers.",
+  "procedural": {
+    "parameterization": {
+      "name": "Yukawa parameterization of the gravitational potential. Long-distance modifications use a slightly different fit but the same (alpha, lambda) structure.",
+      "reference": "Adelberger, Heckel, Nelson, ARNPS 53, 77 (2003).",
+      "summary": "V(r) = -G m_1 m_2 / r [1 + alpha * exp(-r / lambda)]. The (alpha, lambda) plane summarizes lab tests of gravity at sub-mm to ~10 m scales. Excludes both extra dimensions (large alpha at sub-mm lambda) and light moduli (smaller alpha at meter-scale lambda)."
+    },
+    "predicted_observable": "Force between two test masses at separation r, computed in the framework. Subtract Newtonian, fit residual to Yukawa form to extract (alpha, lambda).",
+    "bound_in_parameterization": "alpha < 1 for lambda > 52 micrometers (Eot-Wash 2020). Tighter bounds at larger lambda: alpha < 10^-4 at lambda ~ 1 cm; alpha < 10^-9 at lambda ~ 1 AU (planetary ephemerides).",
+    "framework_inputs": [
+      "Predict the gravitational potential between two static masses as a function of separation, including all new-field contributions.",
+      "Identify the dominant non-Newtonian contribution and fit it to Yukawa form to read off (alpha, lambda)."
+    ],
+    "evaluator_status": "trivial",
+    "notes": "ADD-style large extra dimensions parameterize directly: alpha = 8 N/3, lambda = R_compactification, where N is the number of extra dimensions. Fitting against the Eot-Wash exclusion plot is one of the cleanest tests for any framework with new long-range forces."
+  },
   "primary_references": [
     {
       "citation": "Lee et al. (Eot-Wash), 'New Test of the Gravitational 1/r^2 Law at Separations down to 52 micrometers', PRL 124, 101101 (2020)",

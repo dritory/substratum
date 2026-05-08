@@ -81,6 +81,50 @@
       "type": "string",
       "description": "Plain-English statement of which frameworks or model classes are killed by this benchmark, so it is clear why this constraint matters."
     },
+    "procedural": {
+      "type": "object",
+      "description": "How a candidate framework would be evaluated against this benchmark. Text-first: each entry should name the canonical parameterization (PPN, SME, SMEFT, ΛCDM extensions, etc.), state the predicted observable in that parameterization, give the numerical bound in those parameters, and list what a candidate framework must expose to be evaluated. This makes the constraint executable in principle even before evaluator code is written.",
+      "properties": {
+        "parameterization": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Canonical parameterization (e.g. 'Parameterized Post-Newtonian (PPN)', 'Standard Model Effective Field Theory (Warsaw basis)', 'Standard Model Extension (SME) photon sector')."
+            },
+            "reference": { "type": "string" },
+            "summary": { "type": "string" }
+          }
+        },
+        "predicted_observable": {
+          "type": "string",
+          "description": "Formula or expression giving the experimentally measured observable in terms of the parameterization."
+        },
+        "bound_in_parameterization": {
+          "type": "string",
+          "description": "The numerical bound restated in the parameterization's variables."
+        },
+        "framework_inputs": {
+          "type": "array",
+          "description": "Concrete things a candidate framework must expose (compute, derive, predict) to be evaluated against this benchmark.",
+          "items": { "type": "string" }
+        },
+        "evaluator_status": {
+          "type": "string",
+          "enum": [
+            "trivial",
+            "tractable",
+            "requires_code",
+            "requires_simulation",
+            "requires_lattice",
+            "research_problem"
+          ],
+          "description": "How hard the evaluation is: 'trivial' (single-number compare), 'tractable' (extract a parameter from a closed-form computation), 'requires_code' (PPN extraction, SMEFT matching), 'requires_simulation' (Boltzmann hierarchy through recombination, lattice QCD), 'research_problem' (no general method exists yet)."
+        },
+        "notes": { "type": "string" }
+      }
+    },
     "primary_references": {
       "type": "array",
       "minItems": 1,

@@ -18,6 +18,23 @@
     "confidence_level": "68% CL"
   },
   "what_it_excludes": "Frameworks that significantly modify recombination physics (e.g. early-dark-energy proposals beyond ~10% energy density at z ~ 3000), drastically change the sound horizon, or introduce extra relativistic species above |Delta N_eff| ~ 0.3 are excluded. The CMB damping tail in particular is a precision sieve for new light degrees of freedom in the early universe.",
+  "procedural": {
+    "parameterization": {
+      "name": "LambdaCDM 6-parameter model (Omega_b h^2, Omega_c h^2, theta_MC, tau, A_s, n_s) plus optional extensions (Omega_K, Sum m_nu, w_0, w_a, N_eff, EDE fraction f_EDE and z_EDE, etc.).",
+      "reference": "Boltzmann codes: CAMB (Lewis-Challinor) and CLASS (Blas-Lesgourgues-Tram). Likelihood pipelines: cobaya, MontePython.",
+      "summary": "The CMB power spectra C_l^TT, C_l^TE, C_l^EE are computed by solving a coupled Boltzmann hierarchy through recombination plus an MCMC fit to Planck and ground-based data."
+    },
+    "predicted_observable": "Predicted C_l for ell ~ 2 - 2500 in temperature and polarization. Fit against Planck PR4 (or NPIPE) likelihoods plus ACT DR6 + SPT-3G high-l data.",
+    "bound_in_parameterization": "Omega_b h^2 = 0.02237 +/- 0.00015; Omega_c h^2 = 0.1200 +/- 0.0012; theta_MC = 1.04092 +/- 0.00031; n_s = 0.9649 +/- 0.0042; N_eff = 2.99 +/- 0.17; Sum m_nu < 0.12 eV (95% CL combined CMB + BAO); Omega_K = 0.0007 +/- 0.0019.",
+    "framework_inputs": [
+      "Modified Boltzmann hierarchy: any new species, modified gravity, or non-trivial dark sector must be expressible as additions to the perturbation equations.",
+      "Modified background expansion H(z) if the framework alters the cosmological background.",
+      "Modified recombination physics if the framework affects atomic transitions or photon decoupling.",
+      "Initial conditions for perturbations consistent with inflation or whatever the framework's early-universe theory is."
+    ],
+    "evaluator_status": "requires_simulation",
+    "notes": "CLASS and CAMB are the standard tools. Adding a new framework typically requires implementing it as a CLASS/CAMB module (a research-level engineering task per framework). Once implemented, the chi^2 against Planck/ACT/SPT data is mechanical."
+  },
   "primary_references": [
     {
       "citation": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020)",

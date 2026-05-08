@@ -1,0 +1,51 @@
+{
+  "id": "bullet_cluster_lensing_offset",
+  "name": "Spatial offset between weak-lensing mass and X-ray gas in the Bullet Cluster",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the observed spatial separation between the weak-lensing mass distribution and the X-ray-emitting baryonic gas in the merging cluster 1E 0657-558 (Bullet Cluster) and similar systems (e.g. MACS J0025.4-1222, the 'Train Wreck' cluster Abell 520). The lensing peaks coincide with the collisionless galaxy distribution and are spatially offset by ~0.7 Mpc from the X-ray gas peaks.",
+  "regime": {
+    "length_m": 2e22,
+    "energy_ev": null,
+    "description": "Galaxy-cluster-scale gravitational lensing and X-ray emission, post-merger system at z ~ 0.3."
+  },
+  "current_bound": {
+    "value": "lensing-vs-gas offset: 6.5 sigma significance",
+    "uncertainty": null,
+    "units": "spatial offset (kpc) and detection significance",
+    "experiment": "HST + Magellan + Chandra weak-lensing reconstruction",
+    "year": 2006,
+    "reference": "Clowe et al., 'A direct empirical proof of the existence of dark matter', ApJ 648, L109 (2006), arXiv:astro-ph/0608407",
+    "confidence_level": "6.5 sigma significance for the offset"
+  },
+  "what_it_excludes": "Pure modified-gravity-without-dark-matter proposals (MOND in its original form, TeVeS) cannot accommodate this offset: in those frameworks, gravitational lensing tracks visible mass, but here the lensing mass is nowhere near the dominant baryonic component (the gas). This observation is the cleanest single argument that a non-baryonic, weakly-interacting matter component must exist in some form. Modified-gravity frameworks can only survive by reintroducing a dark-sector matter component (i.e. accepting some form of dark matter), which defeats the original motivation.",
+  "procedural": {
+    "parameterization": {
+      "name": "For modified-gravity frameworks: ratio of integrated convergence in the lensing reconstruction to the integrated baryonic surface density along the same line of sight. For dark-matter frameworks: the dark-matter / baryon fraction in the cluster and the relative collisionality of the two components.",
+      "reference": "Clowe et al. 2006 (lensing reconstruction); Markevitch et al. 2004, ApJ 606, 819 (X-ray analysis); Springel and Farrar 2007, MNRAS 380, 911 (N-body simulation of merger).",
+      "summary": "The Bullet Cluster offset constrains the relative drag/collisionality of the gravitating component and the gas. Standard collisionless cold dark matter passes trivially; any framework where gravitating mass tracks gas (pure modified gravity without DM) cannot."
+    },
+    "predicted_observable": "Position of the inferred gravitational potential peak vs position of the X-ray gas peak in a cluster merger.",
+    "bound_in_parameterization": "Offset must reproduce the ~0.7 Mpc separation observed; equivalently, lensing convergence must NOT track gas surface density.",
+    "framework_inputs": [
+      "Predicted relation between lensing convergence and matter / baryon distribution in the framework.",
+      "If the framework includes a dark-matter-like component, its self-interaction cross section sigma/m must be < ~1 cm^2/g to avoid disrupting cluster mergers."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Self-interacting dark matter is constrained by similar cluster-merger systems to sigma/m < 0.5-1 cm^2/g. Frameworks proposing strongly-interacting dark sectors must respect this bound."
+  },
+  "primary_references": [
+    {
+      "citation": "Clowe et al., 'A direct empirical proof of the existence of dark matter', ApJ 648, L109 (2006)",
+      "arxiv": "astro-ph/0608407"
+    },
+    {
+      "citation": "Markevitch et al., 'Direct constraints on the dark matter self-interaction cross-section from the merging galaxy cluster 1E 0657-56', ApJ 606, 819 (2004)",
+      "arxiv": "astro-ph/0309303"
+    },
+    {
+      "citation": "Bradac et al., 'Revealing the properties of dark matter in the merging cluster MACS J0025.4-1222', ApJ 687, 959 (2008)",
+      "arxiv": "0806.2320"
+    }
+  ],
+  "tags": ["dark_matter", "modified_gravity", "lensing", "clusters", "mond"]
+}

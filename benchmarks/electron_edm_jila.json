@@ -1,0 +1,47 @@
+{
+  "id": "electron_edm_jila",
+  "name": "Electron electric dipole moment below JILA limit",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict an electron electric dipole moment |d_e| below the JILA HfF+ ion-trap upper limit. Like the neutron EDM, a nonzero d_e signals CP violation beyond the SM. The bound is currently the most stringent test of CP-violating new physics in the lepton sector.",
+  "regime": {
+    "length_m": 5e-12,
+    "energy_ev": 5e5,
+    "description": "Electron-scale; sensitive to multi-TeV CP-violating new physics depending on couplings."
+  },
+  "current_bound": {
+    "value": 4.1e-30,
+    "uncertainty": null,
+    "units": "e cm (90% CL upper limit)",
+    "experiment": "JILA HfF+ ion trap",
+    "year": 2023,
+    "reference": "Roussy et al., 'An improved bound on the electron's electric dipole moment', Science 381, 6653 (2023), arXiv:2212.11841",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Together with the neutron EDM, severely constrains CP-violating new physics at the multi-TeV scale. Generic SUSY with O(1) phases at LHC-accessible masses is heavily constrained; many leptoquark, two-Higgs-doublet, and extended-gauge models with natural CP phases are excluded or pushed to high scales. The electron-EDM bound is the most stringent test of leptonic CP violation.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT dipole and four-fermion CP-violating Wilson coefficients in the electron sector: Im(C_eB^11), Im(C_eW^11), and four-fermion operators contributing to the electron EDM via mixing.",
+      "reference": "Engel, Ramsey-Musolf, van Kolck, PPNP 71, 21 (2013); Cesarotti, Lu, Nakai, Parikh, Reece, JHEP 05, 059 (2019), arXiv:1810.07736.",
+      "summary": "The electron EDM is dominantly produced by the photon dipole operator coefficient C_egamma = c_W C_eB - s_W C_eW evaluated at the electroweak scale, with contributions from two-loop Barr-Zee diagrams when CP-violating Higgs-like states are present."
+    },
+    "predicted_observable": "d_e = (v / sqrt(2)) * Im(C_egamma^11) / Lambda^2 + two-loop contributions from CP-violating Yukawas and Higgs sector.",
+    "bound_in_parameterization": "|Im(C_egamma^11) / Lambda^2| < ~2 x 10^-12 GeV^-2, i.e. |Im(C_egamma)| < O(10^-6) for Lambda = 1 TeV.",
+    "framework_inputs": [
+      "If the framework predicts CP violation in the lepton sector, compute its contribution to the electron dipole Wilson coefficients (one-loop matching) plus dominant two-loop Barr-Zee diagrams.",
+      "Include any RG running between the matching scale and the electron scale."
+    ],
+    "evaluator_status": "requires_code",
+    "notes": "Companion to neutron_electric_dipole_moment.json: together they probe CP violation in the lepton and quark sectors. Future improvements: ACME III, advanced YbOH and BaF molecular experiments aim for ~10^-30 - 10^-31 e cm sensitivity."
+  },
+  "primary_references": [
+    {
+      "citation": "Roussy et al., 'An improved bound on the electron's electric dipole moment', Science 381, 6653 (2023)",
+      "arxiv": "2212.11841"
+    },
+    {
+      "citation": "Cesarotti, Lu, Nakai, Parikh, Reece, 'Interpreting the Electron EDM Constraint', JHEP 05, 059 (2019)",
+      "arxiv": "1810.07736"
+    }
+  ],
+  "tags": ["edm", "cp_violation", "lepton_sector", "forbidden"]
+}

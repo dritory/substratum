@@ -18,6 +18,21 @@
     "confidence_level": "consistent at conservative interpretation"
   },
   "what_it_excludes": "This single observation killed most viable scalar-tensor and vector-tensor modifications of gravity that had been proposed to explain dark energy: large classes of Galileon, beyond-Horndeski, TeVeS, and Einstein-Aether models with non-trivial conformal/disformal couplings predicted c_gw not equal to c at observable levels. The GW170817 bound effectively closed those branches of modified gravity overnight.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct: fractional speed deviation delta_g = (c_gw - c)/c. In Horndeski/beyond-Horndeski scalar-tensor, equivalently c_T^2 - 1.",
+      "reference": "Ezquiaga and Zumalacarregui, PRL 119, 251304 (2017), arXiv:1710.05901.",
+      "summary": "A single scalar parameter. Any framework that propagates tensor (spin-2) GW perturbations on a generic background metric has a calculable c_gw."
+    },
+    "predicted_observable": "c_gw is the propagation speed of transverse-traceless metric perturbations h_ij in the framework's effective tensor-mode equation. For Horndeski-class theories: c_T^2 = 1 + (Higher-order kinetic and disformal terms)/G_4, with explicit formulas in Ezquiaga-Zumalacarregui.",
+    "bound_in_parameterization": "-3 x 10^-15 < delta_g < 7 x 10^-16.",
+    "framework_inputs": [
+      "Equation of motion for tensor perturbations h_ij^TT around a cosmological FLRW or generic background.",
+      "From that EOM, read off the coefficient of the Laplacian (sets c_gw^2) and the coefficient of d^2/dt^2 (sets normalization). Their ratio is c_gw^2."
+    ],
+    "evaluator_status": "trivial",
+    "notes": "This is the cleanest single-line constraint in modern fundamental physics. Matching the framework to the bound is a one-line algebraic check."
+  },
   "primary_references": [
     {
       "citation": "Abbott et al. (LVC + Fermi-GBM + INTEGRAL), 'Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A', ApJL 848, L13 (2017)",

@@ -20,6 +20,22 @@
   },
   "what_it_excludes": "Frameworks predicting an energy-dependent photon propagation speed at the linear-in-E/M_Planck level - including some 'phenomenological quantum gravity' ansatze and certain non-commutative-spacetime models. Quadratic-suppression models remain viable.",
   "notes": "Many other LIV channels exist (electron synchrotron edges, vacuum birefringence from polarized AGN photons, neutrino time-of-flight, threshold anomalies in cosmic-ray propagation). Each places independent bounds. A serious candidate framework must pass all of them; this entry uses the GRB photon-dispersion bound as the most readily-quoted single number.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard Model Extension (SME), photon sector. Dispersion can also be parameterized model-independently by a quantum-gravity scale E_QG^(n) at order n in E/E_QG.",
+      "reference": "Kostelecky and Russell, RMP 83, 11 (2011), arXiv:0801.0287 (annual updates: SME Data Tables); Kostelecky and Mewes, PRD 80, 015020 (2009).",
+      "summary": "The photon-sector SME Lagrangian adds CPT-even (k_F)^kappa lambda mu nu and CPT-odd (k_AF)^kappa coefficients to Maxwell's equations. These produce energy-dependent and direction-dependent propagation, vacuum birefringence, and frequency-dependent polarization rotation."
+    },
+    "predicted_observable": "Photon dispersion: omega^2 = k^2 (1 + alpha_n (k/E_QG)^n) for n = 1 or 2. Vacuum birefringence: position-angle rotation phi = (k_AF) * L for source distance L. Direction-dependent c shifts: |delta c / c|(theta, phi) decomposed in spherical harmonics with SME coefficients.",
+    "bound_in_parameterization": "Linear-in-energy modification (n=1): E_QG^(1) > 7.6 M_Planck (Fermi GRB 090510). Quadratic (n=2): E_QG^(2) > 1.3 x 10^11 GeV. SME coefficient bounds: |(k_AF)^kappa| < 10^-43 GeV (from polarization of distant sources). Full coefficient table in arXiv:0801.0287.",
+    "framework_inputs": [
+      "Modified photon dispersion relation derived from the framework's effective electromagnetic Lagrangian.",
+      "If the framework predicts vacuum birefringence, the polarization rotation as a function of energy and propagation distance.",
+      "Decomposition of any direction-dependent propagation effect into SME coefficients."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Many independent channels constrain Lorentz violation. A serious framework must pass all of them; the GRB photon-dispersion bound is just the most readily quoted single number. The SME data tables list dozens of distinct empirical coefficients with tight bounds."
+  },
   "primary_references": [
     {
       "citation": "Vasileiou et al., 'Constraints on Lorentz Invariance Violation from Fermi-Large Area Telescope Observations of Gamma-Ray Bursts', PRD 87, 122001 (2013)",

@@ -11,6 +11,22 @@
     "description": "From atomic scales (10^-10 m, eV) to LHC scales (10^-19 m, TeV). Six decades of energy with sub-percent agreement."
   },
   "what_it_excludes": "Any framework that modifies QED, QCD, or electroweak couplings at energies < ~1 TeV by more than current precision tests allow. This forbids most direct 'new force' modifications and forces all new physics to live above the EW scale or to be extremely weakly coupled.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard Model Effective Field Theory (SMEFT), Warsaw basis at dimension six (and selected dimension eight), with SU(3) x SU(2) x U(1) gauge invariance and SM particle content.",
+      "reference": "Grzadkowski, Iskrzynski, Misiak, Rosiek, JHEP 10, 085 (2010), arXiv:1008.4884 (Warsaw basis); SMEFT global fits: Fitmaker (arXiv:2012.02779), SMEFiT (arXiv:2105.00006), HEPfit (arXiv:2204.04204).",
+      "summary": "SMEFT parameterizes any heavy new physics that decouples above the SM scale as a tower of higher-dimensional operators built from SM fields, multiplied by Wilson coefficients C_i / Lambda^(d-4). At dimension six there are 59 operators (preserving baryon number) plus 5 baryon-number-violating operators. Wilson coefficients are constrained by global fits to ~hundreds of EW, Higgs, top, and flavor observables."
+    },
+    "predicted_observable": "Every SM precision observable receives corrections of the form O = O_SM + sum_i (C_i / Lambda^2) M_i, where M_i are calculable matrix elements. For example: shift in m_W is dominantly delta m_W ~ -m_W (s_W^2 c_W^2)/(c_W^2 - s_W^2) C_HD v^2 / Lambda^2 + ... at tree level.",
+    "bound_in_parameterization": "Most dimension-6 Wilson coefficients are constrained at |C_i / Lambda^2| <~ (TeV)^-2 individually, with marginalized bounds typically a factor of few weaker due to flat directions. See Fitmaker / SMEFiT / HEPfit tables for entry-level bounds per operator.",
+    "framework_inputs": [
+      "Match the framework onto SMEFT at a chosen scale Lambda by integrating out heavy degrees of freedom. Output: Wilson coefficient values C_i(Lambda) for every operator the framework generates.",
+      "Optionally, run the Wilson coefficients down to the relevant observable scale using anomalous dimensions tabulated in arXiv:1308.2627, 1310.4838, 1312.2014.",
+      "Compute the predicted shifts in observables and confront with the global fit chi^2."
+    ],
+    "evaluator_status": "requires_code",
+    "notes": "SMEFT matching is mechanical for any explicit BSM Lagrangian. Tools: matchmakereft, MatchMaker, matchete. For frameworks that are not standard QFTs (e.g. modified gravity, emergent geometry), SMEFT is the wrong language and a different parameterization is needed."
+  },
   "primary_references": [
     {
       "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)"

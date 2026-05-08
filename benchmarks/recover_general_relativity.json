@@ -11,6 +11,22 @@
     "description": "Length scales from ~10^4 m (lab gravity tests) to ~10^11 m (solar system) to ~10^9-10^7 m (binary inspiral). Curvature radii large compared to Planck length."
   },
   "what_it_excludes": "Any modified-gravity proposal that predicts deviations from GR larger than the Cassini PPN bound, or that distorts the inspiral chirp of binary mergers beyond LIGO sensitivity. This kills most large-distance modifications of gravity that try to explain dark matter or dark energy without paying for the modification with a screening mechanism that hides on solar-system scales.",
+  "procedural": {
+    "parameterization": {
+      "name": "Parameterized Post-Newtonian (PPN) framework, plus parameterized post-Keplerian (PPK) for binary pulsars and TIGER-style parameterized GW deviations for compact-binary inspiral.",
+      "reference": "Will, Living Rev. Relativ. 17, 4 (2014); Damour and Deruelle, Ann. Inst. H. Poincare A 44, 263 (1986); LVC, PRD 84, 062003 (2011) (TIGER).",
+      "summary": "PPN expresses the most general weak-field, slow-motion metric around a spherical mass in terms of ten dimensionless parameters: gamma (space curvature per unit mass), beta (nonlinear superposition of gravity), xi (preferred-location), alpha_1, alpha_2, alpha_3 (preferred-frame), zeta_1, zeta_2, zeta_3, zeta_4 (conservation-law violations). GR predicts gamma = beta = 1 and all others = 0."
+    },
+    "predicted_observable": "Each PPN parameter maps to a class of weak-field tests. gamma controls Shapiro delay and light deflection; beta controls perihelion precession (combined with gamma); alpha_1, alpha_2, alpha_3 control preferred-frame effects in the solar system and pulsars; ppk Q dot and other PPK timing parameters constrain dipolar GW emission in binaries.",
+    "bound_in_parameterization": "gamma - 1 = (2.1 +/- 2.3) x 10^-5 (Cassini Shapiro delay, Bertotti et al. 2003); |beta - 1| < 8 x 10^-5 (Mercury perihelion + LLR); |alpha_1| < 10^-4, |alpha_2| < 10^-7, |alpha_3| < 4 x 10^-20 (binary pulsar timing, solar-spin alignment, pulsar self-acceleration). For GW: bounds on graviton mass m_g < 1.27 x 10^-23 eV/c^2 (LIGO/Virgo GWTC-3) and on dispersion / propagation deviations.",
+    "framework_inputs": [
+      "Static, isotropic metric to first post-Newtonian order around a spherical mass: framework must produce g_00 and g_ij in standard PPN gauge.",
+      "Post-Keplerian timing of a relativistic binary: framework must produce Damour-Deruelle parameters (k, gamma_PPK, P_b dot, r, s).",
+      "Compact-binary GW inspiral waveform: framework must produce h(t) at 3.5PN or higher accuracy in the inspiral band, parameterized so that LIGO/Virgo's pyRing/TIGER pipelines can extract deviation coefficients delta phi_i."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "PPN extraction is a closed-form computation once the metric is in hand. PPK is a fitting problem against a published timing solution. GW waveform comparison is research-grade code (LALSuite, pyRing) but the procedure is well-defined."
+  },
   "primary_references": [
     {
       "citation": "Will, 'The Confrontation between General Relativity and Experiment', Living Rev. Relativ. 17, 4 (2014)",
