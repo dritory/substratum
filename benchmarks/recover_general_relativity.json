@@ -1,0 +1,29 @@
+{
+  "id": "recover_general_relativity",
+  "name": "Reduce to General Relativity in tested regimes",
+  "kind": "reduction",
+  "requirement": "Any candidate framework must reproduce the predictions of General Relativity wherever GR has been experimentally tested: solar-system gravimetry, lunar laser ranging, binary pulsars, and the inspiral phases of compact-object mergers. Numerically: parameterized post-Newtonian (PPN) parameter gamma must equal 1 to better than ~2 x 10^-5 (Cassini Shapiro-delay), beta must equal 1 to ~10^-4, and the inspiral waveforms of GW150914 and subsequent binary black-hole mergers must be reproduced within LIGO/Virgo measurement precision.",
+  "recovered_theory": "General Relativity",
+  "limit": "Curvature scales from solar-system to compact-binary inspiral; weak-to-moderate field. Strong-field interior of black holes and big-bang singularity are NOT in this benchmark - they are precisely where GR is expected to break down.",
+  "regime": {
+    "length_m": 1.5e11,
+    "energy_ev": null,
+    "description": "Length scales from ~10^4 m (lab gravity tests) to ~10^11 m (solar system) to ~10^9-10^7 m (binary inspiral). Curvature radii large compared to Planck length."
+  },
+  "what_it_excludes": "Any modified-gravity proposal that predicts deviations from GR larger than the Cassini PPN bound, or that distorts the inspiral chirp of binary mergers beyond LIGO sensitivity. This kills most large-distance modifications of gravity that try to explain dark matter or dark energy without paying for the modification with a screening mechanism that hides on solar-system scales.",
+  "primary_references": [
+    {
+      "citation": "Will, 'The Confrontation between General Relativity and Experiment', Living Rev. Relativ. 17, 4 (2014)",
+      "doi": "10.12942/lrr-2014-4"
+    },
+    {
+      "citation": "Bertotti, Iess, Tortora, 'A test of general relativity using radio links with the Cassini spacecraft', Nature 425, 374 (2003)",
+      "doi": "10.1038/nature01997"
+    },
+    {
+      "citation": "Abbott et al. (LIGO/Virgo), 'Tests of General Relativity with GWTC-3', PRD 103, 122002 (2021)",
+      "arxiv": "2010.14529"
+    }
+  ],
+  "tags": ["gravity", "reduction", "ppn", "gravitational_waves"]
+}

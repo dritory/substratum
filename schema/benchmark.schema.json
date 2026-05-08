@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dritory/substratum/schema/benchmark.schema.json",
+  "title": "Framework Benchmark Constraint",
+  "description": "A single non-negotiable constraint that any candidate unified-physics framework must satisfy. Together, the entries in benchmarks/ form a falsifier set: a framework that fails any one of them is dead.",
+  "type": "object",
+  "required": ["id", "name", "kind", "requirement", "primary_references"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Stable slug used as the filename."
+    },
+    "name": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "reduction",
+        "precision_test",
+        "principle_invariance",
+        "forbidden_phenomenon",
+        "cosmological_observable",
+        "tension_to_address"
+      ],
+      "description": "reduction = must reproduce an established theory in a stated regime; precision_test = must reproduce a specific measurement to its quoted precision; principle_invariance = must respect a foundational symmetry to current experimental bound; forbidden_phenomenon = must not predict a phenomenon already excluded; cosmological_observable = must reproduce a cosmological observation; tension_to_address = links to existing data/ entries that the framework must explain."
+    },
+    "requirement": {
+      "type": "string",
+      "description": "Plain-English statement of what any candidate framework must do to pass this benchmark."
+    },
+    "regime": {
+      "type": "object",
+      "properties": {
+        "length_m": { "type": ["number", "null"] },
+        "energy_ev": { "type": ["number", "null"] },
+        "description": { "type": "string" }
+      }
+    },
+    "current_bound": {
+      "type": "object",
+      "description": "Current best measurement or upper limit. Required for precision_test, principle_invariance, forbidden_phenomenon, cosmological_observable.",
+      "properties": {
+        "value": { "type": ["number", "string"] },
+        "uncertainty": { "type": ["number", "string", "null"] },
+        "units": { "type": "string" },
+        "experiment": { "type": "string" },
+        "year": { "type": "integer" },
+        "reference": { "type": "string" },
+        "confidence_level": { "type": "string" }
+      }
+    },
+    "recovered_theory": {
+      "type": "string",
+      "description": "For 'reduction' kind: which established theory must be reproduced (e.g. 'General Relativity', 'QED', 'Standard Model', 'LambdaCDM')."
+    },
+    "limit": {
+      "type": "string",
+      "description": "For 'reduction' kind: the regime where the recovery is required (e.g. 'weak field, low velocity', 'energies << 1 TeV')."
+    },
+    "principle": {
+      "type": "string",
+      "enum": [
+        "unitarity",
+        "causality",
+        "lorentz_invariance",
+        "cpt",
+        "equivalence_principle",
+        "gauge_invariance",
+        "locality",
+        "background_independence",
+        "lepton_flavor_universality"
+      ],
+      "description": "For 'principle_invariance' kind: which principle is being tested."
+    },
+    "tension_links": {
+      "type": "array",
+      "description": "For 'tension_to_address' kind: list of data/<id> entries that any new framework must explain.",
+      "items": { "type": "string" }
+    },
+    "what_it_excludes": {
+      "type": "string",
+      "description": "Plain-English statement of which frameworks or model classes are killed by this benchmark, so it is clear why this constraint matters."
+    },
+    "primary_references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["citation"],
+        "properties": {
+          "citation": { "type": "string" },
+          "doi": { "type": "string" },
+          "arxiv": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "notes": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

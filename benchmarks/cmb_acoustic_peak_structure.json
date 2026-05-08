@@ -1,0 +1,36 @@
+{
+  "id": "cmb_acoustic_peak_structure",
+  "name": "Reproduce CMB acoustic peak structure",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the locations and amplitudes of the temperature and polarization acoustic peaks in the cosmic microwave background, as measured by Planck (and confirmed by ACT and SPT), at the per-mille level. The peak ratios fix the baryon density independently of BBN, the angular position of the first peak fixes the spatial geometry to be flat to ~0.4%, and the damping tail fixes the effective number of relativistic species N_eff = 2.99 +/- 0.17.",
+  "regime": {
+    "length_m": 1.4e26,
+    "energy_ev": 0.26,
+    "description": "Last-scattering surface at redshift z ~ 1100, temperature ~3000 K. Sound-horizon physics encoded in multipoles ell ~ 200 - 2500."
+  },
+  "current_bound": {
+    "value": "Omega_b h^2 = 0.02237 +/- 0.00015; Omega_m h^2 = 0.1430 +/- 0.0011; n_s = 0.9649 +/- 0.0042; N_eff = 2.99 +/- 0.17; Omega_K = 0.0007 +/- 0.0019",
+    "uncertainty": null,
+    "units": "various (LambdaCDM parameters from CMB)",
+    "experiment": "Planck 2018 (TT,TE,EE+lowE+lensing) with consistency from ACT DR6 and SPT-3G",
+    "year": 2020,
+    "reference": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020), arXiv:1807.06209",
+    "confidence_level": "68% CL"
+  },
+  "what_it_excludes": "Frameworks that significantly modify recombination physics (e.g. early-dark-energy proposals beyond ~10% energy density at z ~ 3000), drastically change the sound horizon, or introduce extra relativistic species above |Delta N_eff| ~ 0.3 are excluded. The CMB damping tail in particular is a precision sieve for new light degrees of freedom in the early universe.",
+  "primary_references": [
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020)",
+      "arxiv": "1807.06209"
+    },
+    {
+      "citation": "ACT Collaboration, 'The Atacama Cosmology Telescope: DR6 Power Spectra, Likelihoods and LCDM Parameters' (2023)",
+      "arxiv": "2304.05203"
+    },
+    {
+      "citation": "SPT-3G Collaboration, 'Measurements of the E-mode polarization and temperature-E-mode correlation of the CMB from SPT-3G 2018 data', PRD 104, 022003 (2021)",
+      "arxiv": "2103.13618"
+    }
+  ],
+  "tags": ["cmb", "cosmology", "lambda_cdm", "n_eff", "early_universe"]
+}

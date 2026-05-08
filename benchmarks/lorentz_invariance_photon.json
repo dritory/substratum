@@ -1,0 +1,38 @@
+{
+  "id": "lorentz_invariance_photon",
+  "name": "Lorentz invariance of photon propagation",
+  "kind": "principle_invariance",
+  "principle": "lorentz_invariance",
+  "requirement": "Any candidate framework must respect Lorentz invariance to the precision set by astrophysical and laboratory tests. The most stringent kinematic test comes from the energy-dependent dispersion of photons over cosmological distances: high-energy and low-energy gamma-ray photons from a single gamma-ray burst arrive within constraints implying a quantum-gravity scale E_QG well above the Planck mass for linear-in-energy modifications, and well above the Planck mass squared for quadratic-in-energy modifications.",
+  "regime": {
+    "length_m": 1e26,
+    "energy_ev": 1e11,
+    "description": "GRB photons in the GeV-TeV range, propagating over Gpc distances."
+  },
+  "current_bound": {
+    "value": "E_QG^(linear) > 7.6 x M_Planck (lower limit on linear-in-energy LIV scale)",
+    "uncertainty": null,
+    "units": "Planck masses",
+    "experiment": "Fermi-LAT + GBM analysis of GRB 090510",
+    "year": 2013,
+    "reference": "Vasileiou et al., 'Constraints on Lorentz Invariance Violation from Fermi-Large Area Telescope Observations of Gamma-Ray Bursts', PRD 87, 122001 (2013), arXiv:1305.3463",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Frameworks predicting an energy-dependent photon propagation speed at the linear-in-E/M_Planck level - including some 'phenomenological quantum gravity' ansatze and certain non-commutative-spacetime models. Quadratic-suppression models remain viable.",
+  "notes": "Many other LIV channels exist (electron synchrotron edges, vacuum birefringence from polarized AGN photons, neutrino time-of-flight, threshold anomalies in cosmic-ray propagation). Each places independent bounds. A serious candidate framework must pass all of them; this entry uses the GRB photon-dispersion bound as the most readily-quoted single number.",
+  "primary_references": [
+    {
+      "citation": "Vasileiou et al., 'Constraints on Lorentz Invariance Violation from Fermi-Large Area Telescope Observations of Gamma-Ray Bursts', PRD 87, 122001 (2013)",
+      "arxiv": "1305.3463"
+    },
+    {
+      "citation": "Mattingly, 'Modern Tests of Lorentz Invariance', Living Rev. Relativ. 8, 5 (2005)",
+      "doi": "10.12942/lrr-2005-5"
+    },
+    {
+      "citation": "Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', Rev. Mod. Phys. 83, 11 (2011); annual updates at arXiv:0801.0287",
+      "arxiv": "0801.0287"
+    }
+  ],
+  "tags": ["lorentz", "quantum_gravity", "grb", "principle"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "equivalence_principle_microscope",
+  "name": "Weak equivalence principle (universality of free fall)",
+  "kind": "principle_invariance",
+  "principle": "equivalence_principle",
+  "requirement": "Any candidate framework must respect the weak equivalence principle - inertial mass equals gravitational mass for all matter - to the precision set by the MICROSCOPE satellite mission. Two test masses of different composition (titanium and platinum) must fall identically in Earth's gravitational field to better than ~1.5 x 10^-15 in the Eotvos parameter eta = 2 |a_1 - a_2| / |a_1 + a_2|.",
+  "regime": {
+    "length_m": 7e6,
+    "energy_ev": null,
+    "description": "Earth-orbit-scale gravitational field, sustained free-fall inside a satellite."
+  },
+  "current_bound": {
+    "value": -1.5e-15,
+    "uncertainty": "+/- 2.3e-15 (stat) +/- 1.5e-15 (syst)",
+    "units": "Eotvos parameter eta (dimensionless)",
+    "experiment": "MICROSCOPE final result",
+    "year": 2022,
+    "reference": "Touboul et al., 'MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle', PRL 129, 121102 (2022), arXiv:2209.15487",
+    "confidence_level": "95% CL combined limit |eta| < 4.7e-15"
+  },
+  "what_it_excludes": "Any framework predicting composition-dependent fifth forces or equivalence-principle-violating couplings of dark sectors to ordinary matter at levels above eta ~ 10^-15. This severely constrains models that try to explain dark matter or dark energy through new long-range forces with non-universal couplings (e.g. baryon-coupled scalars).",
+  "primary_references": [
+    {
+      "citation": "Touboul et al. (MICROSCOPE), 'MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle', PRL 129, 121102 (2022)",
+      "arxiv": "2209.15487"
+    },
+    {
+      "citation": "Will, 'The Confrontation between General Relativity and Experiment', Living Rev. Relativ. 17, 4 (2014)",
+      "doi": "10.12942/lrr-2014-4"
+    }
+  ],
+  "tags": ["gravity", "equivalence_principle", "fifth_force", "dark_sector"]
+}

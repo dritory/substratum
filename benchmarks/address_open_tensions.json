@@ -1,0 +1,21 @@
+{
+  "id": "address_open_tensions",
+  "name": "Address every open tension recorded in data/",
+  "kind": "tension_to_address",
+  "requirement": "Any candidate framework must give a coherent account of every entry in data/ whose status is 'open' or 'contested'. 'Coherent account' means: either (a) reproducing the standard prediction so that the tension is shifted to a measurement systematic, (b) predicting the observed value from genuinely new physics with no additional fine-tuning, or (c) explicitly identifying which entry the framework treats as a measurement systematic and which it treats as new physics, and accepting the consequences of that choice elsewhere in the catalog (the 'cost_elsewhere' fields).",
+  "tension_links": [
+    "muon_g_minus_2",
+    "hubble_tension",
+    "w_boson_mass",
+    "s8_tension",
+    "cosmological_constant"
+  ],
+  "what_it_excludes": "A framework that explains one tension while violating others is not progress, it is bookkeeping. This benchmark forces candidate frameworks to face the cross-tension landscape. In particular: any framework that fixes H_0 must say what happens to S_8; any framework that explains a CDF-style m_W must say what happens to ATLAS and CMS; any framework that predicts a large muon-dipole contribution must accommodate the lattice-vs-data-driven HVP situation.",
+  "notes": "This entry is meta - it points back into data/. The list under tension_links should be kept in sync as data/ grows. A framework does not have to predict every tension to be interesting, but it must be explicit about which it is solving and which it is leaving alone.",
+  "primary_references": [
+    {
+      "citation": "See data/ entries for primary literature on each tension."
+    }
+  ],
+  "tags": ["meta", "constraint_set", "tensions"]
+}

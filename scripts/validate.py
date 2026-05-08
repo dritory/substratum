@@ -20,12 +20,23 @@ except ImportError:
     sys.exit(2)
 
 ROOT = Path(__file__).resolve().parent.parent
-SCHEMA_PATH = ROOT / "schema" / "anomaly.schema.json"
-DATA_DIR = ROOT / "data"
+
+DATASETS = [
+    {
+        "name": "data",
+        "dir": ROOT / "data",
+        "schema": ROOT / "schema" / "anomaly.schema.json",
+    },
+    {
+        "name": "benchmarks",
+        "dir": ROOT / "benchmarks",
+        "schema": ROOT / "schema" / "benchmark.schema.json",
+    },
+]
 
 
-def load_schema() -> Draft202012Validator:
-    with SCHEMA_PATH.open() as f:
+def load_validator(schema_path: Path) -> Draft202012Validator:
+    with schema_path.open() as f:
         schema = json.load(f)
     return Draft202012Validator(schema)
 
@@ -51,32 +62,67 @@ def validate_file(validator: Draft202012Validator, path: Path) -> list[str]:
     return msgs
 
 
+def cross_check_tension_links() -> list[str]:
+    """Verify every tension_links id in benchmarks/ resolves to a data/ entry."""
+    data_ids = {p.stem for p in (ROOT / "data").glob("*.json")}
+    msgs = []
+    for path in (ROOT / "benchmarks").glob("*.json"):
+        try:
+            with path.open() as f:
+                entry = json.load(f)
+        except json.JSONDecodeError:
+            continue
+        for ref in entry.get("tension_links", []):
+            if ref not in data_ids:
+                msgs.append(
+                    f"{path.relative_to(ROOT)}: tension_links references "
+                    f"unknown data entry {ref!r}"
+                )
+    return msgs
+
+
 def main(argv: list[str]) -> int:
-    validator = load_schema()
-    if len(argv) > 1:
-        targets = [Path(p) for p in argv[1:]]
-    else:
-        targets = sorted(DATA_DIR.glob("*.json"))
-
-    if not targets:
-        print("no data files found")
-        return 0
-
+    explicit_targets = [Path(p) for p in argv[1:]]
     fail = 0
-    for path in targets:
-        errs = validate_file(validator, path)
-        if errs:
-            fail += 1
-            print(f"FAIL {path.relative_to(ROOT)}")
-            for e in errs:
-                print(f"  - {e}")
+    total = 0
+
+    for ds in DATASETS:
+        validator = load_validator(ds["schema"])
+        if explicit_targets:
+            targets = [
+                p for p in explicit_targets if p.resolve().is_relative_to(ds["dir"])
+            ]
         else:
-            print(f"ok   {path.relative_to(ROOT)}")
+            targets = sorted(ds["dir"].glob("*.json"))
+
+        if not targets:
+            continue
+
+        print(f"== {ds['name']} ==")
+        for path in targets:
+            errs = validate_file(validator, path)
+            total += 1
+            if errs:
+                fail += 1
+                print(f"FAIL {path.relative_to(ROOT)}")
+                for e in errs:
+                    print(f"  - {e}")
+            else:
+                print(f"ok   {path.relative_to(ROOT)}")
+        print()
+
+    cross_errs = cross_check_tension_links()
+    if cross_errs:
+        print("== cross-references ==")
+        for e in cross_errs:
+            print(f"FAIL {e}")
+        fail += len(cross_errs)
+        print()
 
     if fail:
-        print(f"\n{fail} file(s) failed validation")
+        print(f"{fail} problem(s) across {total} file(s)")
         return 1
-    print(f"\nall {len(targets)} file(s) valid")
+    print(f"all {total} file(s) valid")
     return 0
 
 

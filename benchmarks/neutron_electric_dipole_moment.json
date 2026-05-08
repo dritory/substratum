@@ -1,0 +1,32 @@
+{
+  "id": "neutron_electric_dipole_moment",
+  "name": "Neutron electric dipole moment below PSI limit",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict a neutron electric dipole moment |d_n| below the PSI 2020 upper limit. A nonzero d_n at observable levels would simultaneously signal CP violation beyond the SM and unambiguous time-reversal violation in the strong sector. The current bound directly tightens constraints on the QCD theta angle to |theta_QCD| < ~10^-10.",
+  "regime": {
+    "length_m": 1e-15,
+    "energy_ev": 9.4e8,
+    "description": "Neutron-scale physics; sensitive to CP-violating new physics up to multi-TeV mass scales depending on couplings."
+  },
+  "current_bound": {
+    "value": 1.8e-26,
+    "uncertainty": null,
+    "units": "e cm (90% CL upper limit)",
+    "experiment": "nEDM at Paul Scherrer Institut (PSI)",
+    "year": 2020,
+    "reference": "Abel et al. (nEDM), 'Measurement of the Permanent Electric Dipole Moment of the Neutron', PRL 124, 081803 (2020), arXiv:2001.11966",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Severely constrains supersymmetric extensions with TeV-scale superpartners and natural CP phases (the 'SUSY CP problem'). Forbids many composite Higgs models with large CP-violating couplings. Together with the QCD theta term, motivates the existence of a Peccei-Quinn symmetry and an axion as the natural dynamical solution.",
+  "primary_references": [
+    {
+      "citation": "Abel et al. (nEDM Collaboration), 'Measurement of the Permanent Electric Dipole Moment of the Neutron', PRL 124, 081803 (2020)",
+      "arxiv": "2001.11966"
+    },
+    {
+      "citation": "Pospelov and Ritz, 'Electric dipole moments as probes of new physics', Annals Phys. 318, 119 (2005)",
+      "arxiv": "hep-ph/0504231"
+    }
+  ],
+  "tags": ["edm", "cp_violation", "susy", "axion", "forbidden"]
+}

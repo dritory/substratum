@@ -1,0 +1,28 @@
+{
+  "id": "recover_standard_model_precision",
+  "name": "Reduce to the Standard Model at electroweak energies and below",
+  "kind": "reduction",
+  "requirement": "Any candidate framework must reproduce the Standard Model's most precisely tested predictions to their experimental precision. In particular: the electron anomalous magnetic moment a_e to ~13 significant figures, the Z boson mass to ppm precision, hadronic Z decay widths to per-mille, atomic-spectroscopy QED predictions (Lamb shift, hydrogen 1S-2S) to their measured precision, and Standard Model cross sections at the LHC over the kinematic ranges where ATLAS and CMS data exist.",
+  "recovered_theory": "Standard Model (QED + QCD + electroweak)",
+  "limit": "Energies below a few TeV in the Earth-frame, in low-density vacuum. New physics is allowed and expected at higher energies, but must decouple to leave the SM intact below ~1 TeV.",
+  "regime": {
+    "length_m": 1e-19,
+    "energy_ev": 1e12,
+    "description": "From atomic scales (10^-10 m, eV) to LHC scales (10^-19 m, TeV). Six decades of energy with sub-percent agreement."
+  },
+  "what_it_excludes": "Any framework that modifies QED, QCD, or electroweak couplings at energies < ~1 TeV by more than current precision tests allow. This forbids most direct 'new force' modifications and forces all new physics to live above the EW scale or to be extremely weakly coupled.",
+  "primary_references": [
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)"
+    },
+    {
+      "citation": "Fan, Myers, Sukra, Gabrielse, 'Measurement of the Electron Magnetic Moment', PRL 130, 071801 (2023)",
+      "arxiv": "2209.13084"
+    },
+    {
+      "citation": "ALEPH/DELPHI/L3/OPAL/SLD collaborations, 'Precision electroweak measurements on the Z resonance', Phys. Rep. 427, 257 (2006)",
+      "arxiv": "hep-ex/0509008"
+    }
+  ],
+  "tags": ["standard_model", "reduction", "qed", "electroweak", "precision"]
+}

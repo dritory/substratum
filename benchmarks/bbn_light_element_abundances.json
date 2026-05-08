@@ -1,0 +1,37 @@
+{
+  "id": "bbn_light_element_abundances",
+  "name": "Reproduce Big Bang Nucleosynthesis light-element abundances",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the observed primordial abundances of light elements - deuterium, helium-3, helium-4, and lithium-7 - given a single value of the baryon-to-photon ratio eta consistent with the CMB-derived value. Specifically: D/H = (2.527 +/- 0.030) x 10^-5; primordial helium mass fraction Y_p = 0.245 +/- 0.003; ^7Li/H ~ (1.6 +/- 0.3) x 10^-10 (with the well-known 'lithium problem' as a mild ~3 sigma anomaly).",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 1e6,
+    "description": "Universe at temperatures from ~1 MeV (neutron freeze-out) down to ~30 keV (deuterium bottleneck). Time scale ~1 s to ~20 minutes after Big Bang. Energy scale set by the deuterium binding energy (~2.2 MeV) modulo a large entropy factor."
+  },
+  "current_bound": {
+    "value": "D/H = (2.527 +/- 0.030) x 10^-5; Y_p = 0.245 +/- 0.003",
+    "uncertainty": null,
+    "units": "abundance ratios (dimensionless)",
+    "experiment": "Quasar absorption spectroscopy (D/H), HII region spectroscopy (Y_p)",
+    "year": 2020,
+    "reference": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020), arXiv:1912.01132",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Frameworks that modify the expansion rate during BBN (i.e. change effective N_eff by more than ~0.3-0.5), or that introduce extra weak-scale interactions changing neutron-proton freeze-out, are tightly constrained. Combined with the CMB, BBN provides a powerful, independent measurement of the baryon density and is one of the strongest tests of cosmology between recombination and today.",
+  "notes": "The 'lithium problem' (predicted ^7Li abundance is ~3x higher than observed in metal-poor halo stars) is a longstanding ~3 sigma tension. Some authors include it as an anomaly in its own right; we list it here as a known systematic-or-physics question rather than as a passing benchmark.",
+  "primary_references": [
+    {
+      "citation": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020)",
+      "arxiv": "1912.01132"
+    },
+    {
+      "citation": "Cooke, Pettini, Steidel, 'One Percent Determination of the Primordial Deuterium Abundance', ApJ 855, 102 (2018)",
+      "arxiv": "1710.11129"
+    },
+    {
+      "citation": "Aver, Olive, Skillman, 'The effects of He I lambda 10830 on helium abundance determinations', JCAP 07, 011 (2015)",
+      "arxiv": "1503.08146"
+    }
+  ],
+  "tags": ["bbn", "cosmology", "early_universe", "n_eff"]
+}

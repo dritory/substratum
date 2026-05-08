@@ -1,0 +1,32 @@
+{
+  "id": "proton_decay_lifetime",
+  "name": "Proton lifetime exceeds Super-Kamiokande limits",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework that predicts proton decay must do so with a partial lifetime exceeding the Super-Kamiokande limits. The strongest single-channel constraint is on p -> e+ pi^0, with tau/B > 2.4 x 10^34 years at 90% CL. The p -> nu_bar K^+ channel (favored by SUSY GUTs) is constrained to tau/B > 5.9 x 10^33 years.",
+  "regime": {
+    "length_m": 8e-16,
+    "energy_ev": 9.4e8,
+    "description": "Proton-scale lengths and the proton mass itself; baryon-number-violating decays."
+  },
+  "current_bound": {
+    "value": "tau/B(p -> e+ pi^0) > 2.4e34 years; tau/B(p -> nu_bar K+) > 5.9e33 years",
+    "uncertainty": null,
+    "units": "years (lower limit)",
+    "experiment": "Super-Kamiokande",
+    "year": 2020,
+    "reference": "Super-K Collaboration, 'Search for proton decay via p -> e+ pi^0 and p -> mu+ pi^0 in 0.31 megaton-years exposure of the Super-Kamiokande water Cherenkov detector', PRD 102, 112011 (2020), arXiv:2010.16098",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Most minimal SU(5) Grand Unified Theories were already excluded by earlier IMB and Kamiokande limits; the current Super-K bounds also exclude minimal SO(10) GUTs and place severe constraints on supersymmetric SU(5) and SO(10) variants. Hyper-Kamiokande (operational ~2027) will probe an order of magnitude further, potentially closing minimal SUSY GUTs entirely.",
+  "primary_references": [
+    {
+      "citation": "Super-Kamiokande Collaboration, 'Search for proton decay via p -> e+ pi^0 and p -> mu+ pi^0', PRD 102, 112011 (2020)",
+      "arxiv": "2010.16098"
+    },
+    {
+      "citation": "Super-Kamiokande Collaboration, 'Search for proton decay via p -> nu_bar K+ using 260 kiloton-year data of Super-Kamiokande', PRD 90, 072005 (2014)",
+      "arxiv": "1408.1195"
+    }
+  ],
+  "tags": ["gut", "baryon_number", "super_kamiokande", "forbidden"]
+}

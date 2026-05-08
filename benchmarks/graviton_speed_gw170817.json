@@ -1,0 +1,36 @@
+{
+  "id": "graviton_speed_gw170817",
+  "name": "Gravitational waves propagate at the speed of light",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must predict that gravitational-wave propagation speed c_gw equals the speed of light c to within the bound set by GW170817 and its electromagnetic counterpart GRB 170817A. The gravitational and gamma-ray signals arrived within ~1.7 seconds of each other after travelling ~40 Mpc, giving |c_gw - c|/c at the level of ~10^-15.",
+  "regime": {
+    "length_m": 1.2e24,
+    "energy_ev": 4e-13,
+    "description": "Cosmological propagation distance (~40 Mpc) of GW frequencies in the ~10-1000 Hz LIGO band."
+  },
+  "current_bound": {
+    "value": "-3e-15 < (c_gw - c)/c < 7e-16",
+    "uncertainty": null,
+    "units": "fractional",
+    "experiment": "LIGO/Virgo + Fermi-GBM + INTEGRAL",
+    "year": 2017,
+    "reference": "Abbott et al., 'Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A', ApJL 848, L13 (2017), arXiv:1710.05834",
+    "confidence_level": "consistent at conservative interpretation"
+  },
+  "what_it_excludes": "This single observation killed most viable scalar-tensor and vector-tensor modifications of gravity that had been proposed to explain dark energy: large classes of Galileon, beyond-Horndeski, TeVeS, and Einstein-Aether models with non-trivial conformal/disformal couplings predicted c_gw not equal to c at observable levels. The GW170817 bound effectively closed those branches of modified gravity overnight.",
+  "primary_references": [
+    {
+      "citation": "Abbott et al. (LVC + Fermi-GBM + INTEGRAL), 'Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A', ApJL 848, L13 (2017)",
+      "arxiv": "1710.05834"
+    },
+    {
+      "citation": "Ezquiaga and Zumalacarregui, 'Dark Energy After GW170817: Dead Ends and the Road Ahead', PRL 119, 251304 (2017)",
+      "arxiv": "1710.05901"
+    },
+    {
+      "citation": "Creminelli and Vernizzi, 'Dark Energy after GW170817 and GRB170817A', PRL 119, 251302 (2017)",
+      "arxiv": "1710.05877"
+    }
+  ],
+  "tags": ["gravity", "gravitational_waves", "modified_gravity", "dark_energy"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "inverse_square_law_short_distance",
+  "name": "Newtonian inverse-square law down to ~50 micrometers",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework that introduces extra spatial dimensions or new long-range forces must respect laboratory tests of the gravitational inverse-square law at sub-millimeter distances. Yukawa-type deviations of the form V(r) = -G m1 m2/r [1 + alpha exp(-r/lambda)] are excluded for alpha ~ 1 down to lambda ~ 52 micrometers.",
+  "regime": {
+    "length_m": 5e-5,
+    "energy_ev": null,
+    "description": "Sub-millimeter to ~10 micrometer separations between rotating tungsten test masses; torsion-balance and microcantilever experiments."
+  },
+  "current_bound": {
+    "value": "alpha < 1 for lambda > 52 micrometers",
+    "uncertainty": null,
+    "units": "Yukawa amplitude alpha (dimensionless), range lambda (length)",
+    "experiment": "Eot-Wash torsion-balance group (Univ. of Washington)",
+    "year": 2020,
+    "reference": "Lee et al., 'New Test of the Gravitational 1/r^2 Law at Separations down to 52 micrometers', PRL 124, 101101 (2020), arXiv:2002.11761",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Large-extra-dimension scenarios (ADD-style) with two extra dimensions are excluded down to compactification radii below ~30 micrometers, ruling out the original 'gravity becomes strong at the TeV scale via mm-sized extra dimensions' proposals. Forbids generic moduli or radion fields with gravitational-strength couplings and ranges above ~50 micrometers.",
+  "primary_references": [
+    {
+      "citation": "Lee et al. (Eot-Wash), 'New Test of the Gravitational 1/r^2 Law at Separations down to 52 micrometers', PRL 124, 101101 (2020)",
+      "arxiv": "2002.11761"
+    },
+    {
+      "citation": "Adelberger, Heckel, Nelson, 'Tests of the Gravitational Inverse-Square Law', Annu. Rev. Nucl. Part. Sci. 53, 77 (2003)",
+      "doi": "10.1146/annurev.nucl.53.041002.110503"
+    }
+  ],
+  "tags": ["gravity", "extra_dimensions", "fifth_force", "short_distance"]
+}

@@ -4,10 +4,20 @@ A curated, schema-validated catalog of open tensions and anomalies in
 contemporary physics, spanning particle physics, cosmology, gravitation,
 and condensed matter.
 
-The goal is modest and concrete: produce a rigorous, sourced, machine-readable
-record of where the Standard Model and ΛCDM are currently under empirical
-stress — with each entry tracking the discrepancy's history, current
-significance, primary references, and status (open, contested, resolved).
+The repository has two parallel layers:
+
+- **`data/`** — a record of where the Standard Model and ΛCDM are currently
+  under empirical stress. Each entry tracks the discrepancy's history,
+  current significance, primary references, and status (open, contested,
+  resolved, theoretical).
+- **`benchmarks/`** — the **non-negotiable constraint set** that any
+  candidate replacement framework must satisfy before it is worth taking
+  seriously. Reductions to known theories, foundational-principle tests,
+  forbidden phenomena, and a meta-entry pointing back into `data/` for
+  the open tensions any new framework has to explain.
+
+Together: tensions tell you where the current models break; benchmarks tell
+you what the next model has to look like.
 
 ## Why
 
@@ -66,13 +76,31 @@ See `schema/anomaly.schema.json` for the full schema and
 
 ## Current entries
 
-| ID | Domain | Status | Latest σ |
-|----|--------|--------|----------|
-| `muon_g_minus_2` | particle | contested | ~1–4 (depends on SM input) |
-| `hubble_tension` | cosmology | open | ~5 |
-| `w_boson_mass` | particle | contested | CDF outlier; world avg consistent |
-| `s8_tension` | cosmology | open | ~2–3 |
-| `cosmological_constant` | theoretical | theoretical | naturalness, not σ |
+### `data/` — open tensions
+
+| ID | Domain | Status | Trend | Latest σ |
+|----|--------|--------|-------|----------|
+| `muon_g_minus_2` | particle | contested | shrinking | ~1–4 (depends on SM input) |
+| `hubble_tension` | cosmology | open | stable | ~5 |
+| `w_boson_mass` | particle | contested | shrinking | CDF outlier; world avg consistent |
+| `s8_tension` | cosmology | open | stable | ~2–3 |
+| `cosmological_constant` | theoretical | theoretical | — | naturalness, not σ |
+
+### `benchmarks/` — what any new framework must satisfy
+
+| ID | Kind | Excludes |
+|----|------|----------|
+| `recover_general_relativity` | reduction | unscreened modified-gravity at solar-system scale |
+| `recover_standard_model_precision` | reduction | sub-TeV new physics above current precision |
+| `graviton_speed_gw170817` | precision_test | most scalar/vector-tensor dark-energy models |
+| `equivalence_principle_microscope` | principle | composition-dependent fifth forces above η ~ 10⁻¹⁵ |
+| `lorentz_invariance_photon` | principle | linear-in-E LIV near M_Planck |
+| `inverse_square_law_short_distance` | precision_test | mm-scale large extra dimensions |
+| `proton_decay_lifetime` | forbidden | minimal SU(5), most minimal SO(10) GUTs |
+| `neutron_electric_dipole_moment` | forbidden | many TeV-SUSY phases; large strong-CP phase |
+| `bbn_light_element_abundances` | cosmological | early-universe ΔN_eff > ~0.3 |
+| `cmb_acoustic_peak_structure` | cosmological | drastic recombination physics, large EDE |
+| `address_open_tensions` | tension_to_address | "fix one tension, ignore the others" |
 
 ## Roadmap
 

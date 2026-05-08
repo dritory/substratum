@@ -1,5 +1,13 @@
 # Contributing
 
+The repo has two layers, with two schemas:
+
+- `data/` entries are validated against `schema/anomaly.schema.json`.
+- `benchmarks/` entries are validated against `schema/benchmark.schema.json`.
+
+`scripts/validate.py` runs both, plus a cross-reference check that every
+`tension_links` id in `benchmarks/` resolves to an existing `data/` entry.
+
 ## Adding an anomaly
 
 1. Pick a stable slug (e.g. `r_k_lepton_universality`) and create
@@ -18,6 +26,22 @@
   old one. Old measurements have value as a record.
 - If the status changes (`open` → `resolved`, `open` → `contested`),
   note when and why in the summary.
+
+## Adding a benchmark
+
+1. Pick a stable slug (e.g. `vacuum_birefringence_blazar`) and create
+   `benchmarks/<slug>.json`.
+2. Set `kind` to one of: `reduction`, `precision_test`,
+   `principle_invariance`, `forbidden_phenomenon`, `cosmological_observable`,
+   `tension_to_address`.
+3. Fill in `requirement` as a precise, plain-English statement of what
+   any candidate framework must do — phrased so it is testable, not
+   aspirational.
+4. Always populate `what_it_excludes` so it is clear what model classes
+   actually die against this benchmark. A constraint that excludes
+   nothing is not useful.
+5. Cite primary literature for the bound. No textbook-only references.
+6. Run `python scripts/validate.py`.
 
 ## What does *not* belong
 
