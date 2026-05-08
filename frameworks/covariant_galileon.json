@@ -1,0 +1,80 @@
+{
+  "id": "covariant_galileon",
+  "name": "Covariant Galileon dark energy (quartic)",
+  "summary": "A scalar-tensor extension of GR in the Horndeski class with non-trivial G_4(X), proposed as a self-accelerating dark-energy alternative to the cosmological constant. The 'covariant Galileon' is the canonical worked example of a modified-gravity model that GW170817 killed: any Horndeski theory with G_4,X != 0 or G_5 != 0 generically predicts c_T^2 != 1 in cosmological backgrounds. Included here as a deliberately-failing test case for the evaluator skeleton.",
+  "lineage": [
+    {
+      "citation": "Nicolis, Rattazzi, Trincherini, 'The Galileon as a local modification of gravity', PRD 79, 064036 (2009)",
+      "arxiv": "0811.2197"
+    },
+    {
+      "citation": "Deffayet, Esposito-Farese, Vikman, 'Covariant Galileon', PRD 79, 084003 (2009)",
+      "arxiv": "0901.1314"
+    },
+    {
+      "citation": "Ezquiaga and Zumalacarregui, 'Dark Energy After GW170817: Dead Ends and the Road Ahead', PRL 119, 251304 (2017)",
+      "arxiv": "1710.05901"
+    }
+  ],
+  "predictions": {
+    "alpha_variation_atomic_clocks": {
+      "kind": "open",
+      "note": "Galileon coupled conformally to matter (the 'covariant' construction) generically induces a time-dependent effective Newton constant and thus alpha variation; the magnitude depends on the conformal-coupling parameter beta and is sub-model dependent."
+    },
+    "antihydrogen_gravity_alpha_g": {
+      "kind": "value",
+      "value": 1.0,
+      "uncertainty": 0.0,
+      "units": "local g",
+      "note": "Galileon couples universally to matter via the metric (plus Vainshtein-screened fifth-force corrections that vanish in laboratory environments); a_gbar / g = +1 to high precision.",
+      "reference": "Nicolis-Rattazzi-Trincherini, PRD 79, 064036 (2009)"
+    },
+    "equivalence_principle_microscope": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 1e-16,
+      "units": "dimensionless",
+      "note": "Vainshtein screening drives the scalar fifth-force exponentially small in dense laboratory environments; residual eta predicted to be << 10^-15. Symmetry-breaking corrections at second order in the Vainshtein expansion can be at most ~10^-16 for typical Galileon parameters.",
+      "reference": "Hiramatsu et al., PRD 87, 063525 (2013); Vainshtein, Phys. Lett. B 39, 393 (1972)"
+    },
+    "graviton_mass_gw_dispersion": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 0.0,
+      "units": "eV",
+      "note": "Galileon adds a scalar degree of freedom but does not give the graviton a mass; tensor mode remains massless.",
+      "reference": "Deffayet, Esposito-Farese, Vikman, PRD 79, 084003 (2009)"
+    },
+    "graviton_speed_gw170817": {
+      "kind": "value",
+      "value": 0.1,
+      "uncertainty": 0.1,
+      "units": "fractional (c_gw - c) / c",
+      "note": "Quartic covariant Galileon with G_4,X != 0 generically predicts c_T^2 - 1 of order Omega_DE in cosmological backgrounds (~0.1-1). Specific value depends on field configuration at GW170817's redshift. This framework was killed by GW170817 precisely because |c_gw - c|/c = 0.1 is fourteen orders of magnitude above the +/- 10^-15 bound.",
+      "reference": "Ezquiaga and Zumalacarregui, PRL 119, 251304 (2017), arXiv:1710.05901; Sakstein and Jain, PRL 119, 251303 (2017), arXiv:1710.05893"
+    },
+    "inverse_square_law_short_distance": {
+      "kind": "by_construction",
+      "note": "Vainshtein screening makes Galileon fifth force vanish in high-density regions including the Earth's surface; sub-mm gravity is purely Newtonian. Equivalent to alpha = 0 in the Yukawa parameterization at all sub-mm lambda.",
+      "reference": "Vainshtein, PLB 39, 393 (1972); Babichev and Deffayet, Class. Quant. Grav. 30, 184001 (2013)"
+    },
+    "katrin_neutrino_mass": {
+      "kind": "open",
+      "note": "Galileon does not predict neutrino masses; this benchmark is a particle-physics constraint that the framework inherits from its assumed SM matter sector."
+    },
+    "proton_decay_lifetime": {
+      "kind": "by_construction",
+      "note": "Galileon does not modify the SM matter sector or violate baryon number; proton is stable.",
+      "reference": "Particle Data Group, 'Baryon-Number Violating Processes' review, Phys. Rev. D 110, 030001 (2024)"
+    },
+    "sum_neutrino_masses_cosmology": {
+      "kind": "open",
+      "note": "Galileon dark energy modifies the cosmological background and perturbations; the Sum m_nu cosmological bound depends on the joint fit including the modified-gravity prediction. Without redoing the Boltzmann integration in CLASS/CAMB this cannot be quoted as a clean number."
+    },
+    "strong_cp_theta_qcd": {
+      "kind": "open",
+      "note": "Galileon does not address the strong CP problem; theta_QCD remains a free parameter inherited from the SM matter sector."
+    }
+  },
+  "tags": ["modified_gravity", "scalar_tensor", "horndeski", "dark_energy", "killed_by_gw170817"]
+}

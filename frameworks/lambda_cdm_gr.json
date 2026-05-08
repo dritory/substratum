@@ -50,6 +50,14 @@
       "note": "The 2023 measurement a_e = 1.15965218059(13) x 10^-3 agrees with the SM five-loop QED prediction to ~10^-10. The remaining ~2.4 sigma tension is in the alpha-determination (Cs vs Rb interferometry), not in QED itself, so the SM is not falsified.",
       "reference": "Aoyama, Kinoshita, Nio, Atoms 7, 28 (2019); Fan et al., PRL 130, 071801 (2023)"
     },
+    "equivalence_principle_microscope": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 0.0,
+      "units": "dimensionless",
+      "note": "GR is a metric theory with universal coupling to matter; the Eotvos parameter eta vanishes identically.",
+      "reference": "Will, 'The Confrontation between General Relativity and Experiment', Living Rev. Relativ. 17, 4 (2014)"
+    },
     "graviton_mass_gw_dispersion": {
       "kind": "value",
       "value": 0.0,
@@ -74,6 +82,21 @@
     "katrin_neutrino_mass": {
       "kind": "by_construction",
       "note": "The SM with right-handed neutrinos accommodates any neutrino mass spectrum below the cosmological sum bound (Sum m_nu < 0.072 eV from DESI+CMB+SN); KATRIN's effective electron-neutrino mass m_nu_e < 0.45 eV is well below this. The SM does not predict the masses, but is consistent with the measurement.",
+      "reference": "Particle Data Group, 'Neutrino Properties' review, Phys. Rev. D 110, 030001 (2024)"
+    },
+    "proton_decay_lifetime": {
+      "kind": "by_construction",
+      "note": "The SM has unbroken accidental B and L (and B-L) symmetries at the renormalizable level; baryon number is violated only by non-perturbative sphalerons that conserve B-L and are exponentially suppressed at low temperatures. The proton is stable in the SM.",
+      "reference": "'t Hooft, PRL 37, 8 (1976); Particle Data Group, 'Baryon-Number Violating Processes' review, Phys. Rev. D 110, 030001 (2024)"
+    },
+    "strong_cp_theta_qcd": {
+      "kind": "open",
+      "note": "The SM accommodates any value of theta_QCD; the experimental bound |theta_QCD| < 1e-10 is the strong CP problem itself. Plain SM has no dynamical mechanism to suppress theta. Frameworks claiming to address this benchmark must invoke Peccei-Quinn (axion), a massless quark, or an analogous mechanism.",
+      "reference": "Peccei and Quinn, PRL 38, 1440 (1977); see strong_cp_theta_qcd benchmark for the bound."
+    },
+    "sum_neutrino_masses_cosmology": {
+      "kind": "by_construction",
+      "note": "The SM accommodates any neutrino mass spectrum consistent with oscillation data and the cosmological bound. Reproducing Sum m_nu < 0.072 eV is automatic provided the framework's neutrino mass spectrum is taken to satisfy the data.",
       "reference": "Particle Data Group, 'Neutrino Properties' review, Phys. Rev. D 110, 030001 (2024)"
     }
   },

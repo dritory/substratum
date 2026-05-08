@@ -29,10 +29,14 @@ EVALUATORS: dict[str, str] = {
     "axion_haloscope_admx": "evaluators.axion_haloscope_admx",
     "dark_photon_kinetic_mixing": "evaluators.dark_photon_kinetic_mixing",
     "electron_g_minus_2_precision": "evaluators.electron_g_minus_2_precision",
+    "equivalence_principle_microscope": "evaluators.equivalence_principle_microscope",
     "graviton_mass_gw_dispersion": "evaluators.graviton_mass_gw_dispersion",
     "graviton_speed_gw170817": "evaluators.graviton_speed_gw170817",
     "inverse_square_law_short_distance": "evaluators.inverse_square_law_short_distance",
     "katrin_neutrino_mass": "evaluators.katrin_neutrino_mass",
+    "proton_decay_lifetime": "evaluators.proton_decay_lifetime",
+    "strong_cp_theta_qcd": "evaluators.strong_cp_theta_qcd",
+    "sum_neutrino_masses_cosmology": "evaluators.sum_neutrino_masses_cosmology",
 }
 
 

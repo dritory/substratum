@@ -54,6 +54,13 @@ def _numeric(prediction: dict[str, Any], key: str) -> tuple[float | None, str]:
     return float(raw), ""
 
 
+def _clip(score: float | None) -> float | None:
+    """Clamp to [-1, 1] so scores have a uniform colour-map range."""
+    if score is None:
+        return None
+    return max(-1.0, min(1.0, score))
+
+
 def upper_limit_on_abs(
     prediction: dict[str, Any],
     *,
@@ -73,7 +80,7 @@ def upper_limit_on_abs(
     sigma = float(sigma_raw) if isinstance(sigma_raw, (int, float)) else 0.0
 
     effective = abs(value) + sigma
-    score = (limit - effective) / limit if limit else None
+    score = _clip((limit - effective) / limit) if limit else None
 
     if effective > limit:
         return Verdict(
@@ -90,6 +97,46 @@ def upper_limit_on_abs(
         note=(
             f"|{what}| = {abs(value):.3g}{f' + {sigma:.3g}' if sigma else ''} {units}"
             f" within limit {limit:.3g} {units}"
+        ),
+    )
+
+
+def lower_limit_on_value(
+    prediction: dict[str, Any],
+    *,
+    limit: float,
+    units: str,
+    what: str,
+) -> Verdict:
+    """Pass if (prediction.value - uncertainty) >= limit (e.g. lifetime > L)."""
+    nv = _dispatch_non_value(prediction, by_construction_passes=True)
+    if nv is not None:
+        return nv
+
+    value, err = _numeric(prediction, "value")
+    if value is None:
+        return Verdict(status="open", score=None, note=err)
+    sigma_raw = prediction.get("uncertainty")
+    sigma = float(sigma_raw) if isinstance(sigma_raw, (int, float)) else 0.0
+
+    effective = value - sigma
+    score = _clip((effective - limit) / limit) if limit else None
+
+    if effective < limit:
+        return Verdict(
+            status="fail",
+            score=score,
+            note=(
+                f"{what} = {value:.3g}{f' - {sigma:.3g}' if sigma else ''} {units}"
+                f" below limit {limit:.3g} {units}"
+            ),
+        )
+    return Verdict(
+        status="pass",
+        score=score,
+        note=(
+            f"{what} = {value:.3g}{f' - {sigma:.3g}' if sigma else ''} {units}"
+            f" above limit {limit:.3g} {units}"
         ),
     )
 
@@ -122,7 +169,7 @@ def within_measurement(
             note="cannot evaluate: combined uncertainty is zero",
         )
     pull = (value - measured) / sigma_total
-    score = max(0.0, 1.0 - abs(pull) / sigma_threshold)
+    score = _clip(1.0 - abs(pull) / sigma_threshold)
 
     detail = (
         f"{what} = {value:.6g}{f' +/- {sigma_th:.2g}' if sigma_th else ''} {units}"
