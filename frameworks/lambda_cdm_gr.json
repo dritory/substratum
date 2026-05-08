@@ -1,0 +1,81 @@
+{
+  "id": "lambda_cdm_gr",
+  "name": "LambdaCDM cosmology + General Relativity + Standard Model",
+  "summary": "The concordance baseline. General Relativity for gravity, the Standard Model for matter and gauge interactions, cold dark matter as a non-interacting non-relativistic fluid, and a cosmological constant. By construction this framework passes any benchmark whose 'requirement' is to reproduce GR / the SM / LambdaCDM in the appropriate regime; the open tensions in data/ are precisely the places where it does not pass cleanly. Predictions for all benchmarks are intentionally enumerated even where the answer is 'by_construction', so this file is a working template for new framework entries.",
+  "lineage": [
+    {
+      "citation": "Einstein, 'Die Feldgleichungen der Gravitation', Sitzungsberichte der Preussischen Akademie der Wissenschaften zu Berlin (1915)"
+    },
+    {
+      "citation": "Glashow, Weinberg, Salam, electroweak theory (1961-1968)"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', Phys. Rev. D 110, 030001 (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    },
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020)",
+      "arxiv": "1807.06209"
+    }
+  ],
+  "predictions": {
+    "alpha_variation_atomic_clocks": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 0.0,
+      "units": "1/yr",
+      "note": "SM has no mechanism for time-varying gauge couplings; alpha is a fixed Lagrangian parameter. alpha_dot / alpha = 0 by construction.",
+      "reference": "Standard Model Lagrangian; renormalization-group running at fixed reference scale gives a fixed alpha at any cosmological epoch."
+    },
+    "antihydrogen_gravity_alpha_g": {
+      "kind": "value",
+      "value": 1.0,
+      "uncertainty": 0.0,
+      "units": "local g",
+      "note": "CPT + the equivalence principle require antimatter to fall like matter. a_gbar / g = +1 exactly in GR + SM.",
+      "reference": "Will, 'The Confrontation between General Relativity and Experiment', Living Rev. Relativ. 17, 4 (2014)"
+    },
+    "axion_haloscope_admx": {
+      "kind": "by_construction",
+      "note": "SM contains no QCD axion or ALP; the strong CP problem is unaddressed but no axion-photon coupling is predicted. Trivially below any haloscope/helioscope bound.",
+      "reference": "Standard Model Lagrangian (no PQ symmetry); strong_cp_theta_qcd benchmark records the unaddressed theta_QCD problem"
+    },
+    "dark_photon_kinetic_mixing": {
+      "kind": "by_construction",
+      "note": "SM gauge group is SU(3) x SU(2) x U(1)_Y with no additional U(1)'. epsilon = 0 by construction.",
+      "reference": "Standard Model Lagrangian"
+    },
+    "electron_g_minus_2_precision": {
+      "kind": "by_construction",
+      "note": "The 2023 measurement a_e = 1.15965218059(13) x 10^-3 agrees with the SM five-loop QED prediction to ~10^-10. The remaining ~2.4 sigma tension is in the alpha-determination (Cs vs Rb interferometry), not in QED itself, so the SM is not falsified.",
+      "reference": "Aoyama, Kinoshita, Nio, Atoms 7, 28 (2019); Fan et al., PRL 130, 071801 (2023)"
+    },
+    "graviton_mass_gw_dispersion": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 0.0,
+      "units": "eV",
+      "note": "GR is a massless spin-2 gauge theory; a graviton mass would break diffeomorphism invariance and is excluded by construction at the Lagrangian level.",
+      "reference": "Misner, Thorne, Wheeler, 'Gravitation' (1973)"
+    },
+    "graviton_speed_gw170817": {
+      "kind": "value",
+      "value": 0.0,
+      "uncertainty": 0.0,
+      "units": "fractional (c_gw - c) / c",
+      "note": "GR predicts the tensor-mode equation h_ij;mu;mu = 0 on a Ricci-flat background, giving c_gw = c exactly at all orders in vacuum. Cosmological backgrounds yield O(H^2/k^2) corrections at the LIGO band that are unobservably small.",
+      "reference": "Misner, Thorne, Wheeler, 'Gravitation' (1973), chapter 35; Maggiore, 'Gravitational Waves vol. 1' (2008)"
+    },
+    "inverse_square_law_short_distance": {
+      "kind": "by_construction",
+      "note": "GR + SM predicts purely Newtonian gravity at sub-mm distances; no Yukawa correction. Equivalent to alpha = 0 at all lambda.",
+      "reference": "Standard treatment of weak-field GR; Will, Living Rev. Relativ. 17, 4 (2014)"
+    },
+    "katrin_neutrino_mass": {
+      "kind": "by_construction",
+      "note": "The SM with right-handed neutrinos accommodates any neutrino mass spectrum below the cosmological sum bound (Sum m_nu < 0.072 eV from DESI+CMB+SN); KATRIN's effective electron-neutrino mass m_nu_e < 0.45 eV is well below this. The SM does not predict the masses, but is consistent with the measurement.",
+      "reference": "Particle Data Group, 'Neutrino Properties' review, Phys. Rev. D 110, 030001 (2024)"
+    }
+  },
+  "tags": ["baseline", "concordance", "gr", "standard_model", "lambda_cdm"]
+}

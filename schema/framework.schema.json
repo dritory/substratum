@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dritory/substratum/schema/framework.schema.json",
+  "title": "Candidate Unified-Physics Framework",
+  "description": "A candidate framework that is to be evaluated against the benchmark set. The 'predictions' map is keyed by benchmark id and supplies whatever input the corresponding benchmark.framework_inputs requires.",
+  "type": "object",
+  "required": ["id", "name", "summary", "predictions"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Stable slug used as the filename."
+    },
+    "name": { "type": "string" },
+    "summary": {
+      "type": "string",
+      "description": "One-paragraph plain-English description of the framework, what it modifies relative to the SM+GR baseline, and what it claims to explain."
+    },
+    "lineage": {
+      "type": "array",
+      "description": "Origin papers / canonical references for the framework itself (not for individual predictions).",
+      "items": {
+        "type": "object",
+        "required": ["citation"],
+        "properties": {
+          "citation": { "type": "string" },
+          "doi": { "type": "string" },
+          "arxiv": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "predictions": {
+      "type": "object",
+      "description": "Map from benchmark id to the framework's prediction for that benchmark. Every benchmark id present must resolve to a file in benchmarks/.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["kind"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["value", "by_construction", "not_applicable", "open"],
+            "description": "value = numerical prediction supplied; by_construction = framework reproduces the standard prediction by structural identity (e.g. GR predicts c_gw = c without computation); not_applicable = framework claims the benchmark is outside its scope (this is itself a position that must be defended elsewhere); open = framework has not yet computed this."
+          },
+          "value": {
+            "description": "The numerical prediction. Required when kind == 'value'.",
+            "type": ["number", "string", "array", "object", "null"]
+          },
+          "uncertainty": {
+            "description": "Theoretical or parametric uncertainty on the prediction.",
+            "type": ["number", "string", "null"]
+          },
+          "units": { "type": "string" },
+          "note": {
+            "type": "string",
+            "description": "One-line plain-English explanation of how the prediction is obtained or why the kind was chosen."
+          },
+          "reference": {
+            "type": "string",
+            "description": "Primary literature where this prediction is derived for this framework. Required for kind == 'value'; recommended for 'by_construction'."
+          },
+          "doi": { "type": "string" },
+          "arxiv": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
