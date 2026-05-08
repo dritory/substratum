@@ -1,40 +1,41 @@
 :root {
-  --bg:           #f7f5ef;
-  --bg-elev:     #ffffff;
-  --ink:          #16181d;
-  --ink-soft:     #4a4f59;
-  --ink-faint:    #7a818d;
-  --rule:         #d8d2c2;
-  --rule-soft:    #e9e3d2;
-  --accent:       #1f4f8b;
-  --accent-soft:  #5d80b3;
-  --warn:         #b3501f;
-  --good:         #2f6b4f;
-  --domain-particle:    #1f4f8b;
-  --domain-cosmology:   #b3501f;
-  --domain-gravitation: #5b3a8a;
-  --domain-atomic:      #2f6b4f;
-  --domain-nuclear:     #8a6c1a;
-  --domain-astrophysics:#3a6e8a;
-  --domain-condensed_matter: #88284b;
-  --domain-theoretical: #5a5e6a;
-  --kind-reduction:            #2f6b4f;
-  --kind-precision_test:       #1f4f8b;
-  --kind-principle_invariance: #5b3a8a;
-  --kind-forbidden_phenomenon: #b3501f;
-  --kind-cosmological_observable: #3a6e8a;
-  --kind-tension_to_address:   #88284b;
-  --status-open:        #b3501f;
-  --status-contested:   #8a6c1a;
-  --status-resolved:    #2f6b4f;
-  --status-theoretical: #5a5e6a;
-  --status-watching:    #5d80b3;
-  --eval-trivial:             #2f6b4f;
-  --eval-tractable:           #5d80b3;
-  --eval-requires_code:       #8a6c1a;
-  --eval-requires_simulation: #b3501f;
-  --eval-requires_lattice:    #88284b;
-  --eval-research_problem:    #5a5e6a;
+  --bg:           #0f1218;
+  --bg-elev:      #161a23;
+  --bg-raised:    #1d2230;
+  --ink:          #e6e3d6;
+  --ink-soft:     #aeb1bd;
+  --ink-faint:    #6b7180;
+  --rule:         #2a3142;
+  --rule-soft:    #1f2533;
+  --accent:       #7fb1e1;
+  --accent-soft:  #4f7fb0;
+  --warn:         #e0a04a;
+  --good:         #6dc197;
+  --domain-particle:         #7fb1e1;
+  --domain-cosmology:        #e0a04a;
+  --domain-gravitation:      #b69adf;
+  --domain-atomic:           #6dc197;
+  --domain-nuclear:          #d4b974;
+  --domain-astrophysics:     #82b9d4;
+  --domain-condensed_matter: #d77ea1;
+  --domain-theoretical:      #9ea3b3;
+  --kind-reduction:               #6dc197;
+  --kind-precision_test:          #7fb1e1;
+  --kind-principle_invariance:    #b69adf;
+  --kind-forbidden_phenomenon:    #e0a04a;
+  --kind-cosmological_observable: #82b9d4;
+  --kind-tension_to_address:      #d77ea1;
+  --status-open:        #e0a04a;
+  --status-contested:   #d4b974;
+  --status-resolved:    #6dc197;
+  --status-theoretical: #9ea3b3;
+  --status-watching:    #7fb1e1;
+  --eval-trivial:              #6dc197;
+  --eval-tractable:            #7fb1e1;
+  --eval-requires_code:        #d4b974;
+  --eval-requires_simulation:  #e0a04a;
+  --eval-requires_lattice:     #d77ea1;
+  --eval-research_problem:     #9ea3b3;
 }
 
 * { box-sizing: border-box; }
@@ -47,7 +48,13 @@ body {
   font-family: "Iowan Old Style", "Charter", "Source Serif Pro", Georgia, serif;
   line-height: 1.55;
   font-feature-settings: "kern", "liga", "onum";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main.wrap { flex: 1 0 auto; }
+.footer   { flex: 0 0 auto; }
 
 .wrap {
   max-width: 1180px;
@@ -62,13 +69,17 @@ code, .mono {
   font-family: "JetBrains Mono", "Iosevka", "SF Mono", "Menlo", monospace;
   font-size: 0.92em;
   background: var(--rule-soft);
+  color: var(--ink);
   padding: 0.05em 0.35em;
   border-radius: 3px;
 }
 
 /* ---------- masthead ---------- */
 .masthead {
-  background: linear-gradient(180deg, #efe9d8 0%, var(--bg) 100%);
+  background:
+    radial-gradient(ellipse at 20% -20%, rgba(127,177,225,0.12), transparent 60%),
+    radial-gradient(ellipse at 90% 10%, rgba(214,158,235,0.08), transparent 50%),
+    linear-gradient(180deg, #1a1f2c 0%, var(--bg) 100%);
   border-bottom: 1px solid var(--rule);
   padding: 2.4rem 0 1.6rem;
 }
@@ -160,13 +171,18 @@ code, .mono {
   border-radius: 4px;
   padding: 0.4rem 0.6rem 0.6rem;
   min-height: 320px;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 .chart.tall { min-height: 460px; }
 .chart.very-tall { min-height: 620px; }
 .grid-2 {
   display: grid; gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  min-width: 0;
 }
+.grid-2 > .chart { width: 100%; }
 
 /* small multiples */
 .grid-small-multiples {
@@ -188,12 +204,12 @@ code, .mono {
 }
 .sm-card .domain-chip {
   font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--bg-elev);
+  color: #0a0d12;
   background: var(--ink-soft);
   padding: 0.05rem 0.45rem;
   border-radius: 2px;
   font-family: "JetBrains Mono", monospace;
-  font-weight: 500;
+  font-weight: 600;
 }
 .sm-card .latest {
   margin-top: 0.4rem;
@@ -205,7 +221,12 @@ code, .mono {
   color: var(--ink);
   font-size: 1rem;
 }
-.sm-card .chart-mini { flex: 1; min-height: 160px; margin-top: 0.4rem; }
+.sm-card .chart-mini {
+  flex: 1; min-height: 160px; margin-top: 0.4rem;
+  min-width: 0; max-width: 100%; overflow: hidden;
+}
+.sm-card { min-width: 0; }
+.grid-small-multiples { min-width: 0; }
 .sm-card a.src {
   display: block; margin-top: 0.5rem;
   font-size: 0.8rem; color: var(--ink-faint); border: 0;
@@ -242,9 +263,9 @@ code, .mono {
 }
 .chip:hover { color: var(--ink); border-color: var(--ink-faint); }
 .chip.on {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0a0d12;
 }
 .search {
   flex: 1 1 200px;
@@ -275,7 +296,7 @@ code, .mono {
   align-items: baseline;
 }
 .row:last-child { border-bottom: 0; }
-.row:hover { background: #fbf8ee; }
+.row:hover { background: var(--bg-raised); }
 .row .layer {
   font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
   font-family: "JetBrains Mono", monospace;
@@ -307,7 +328,7 @@ code, .mono {
   width: min(560px, 92vw);
   background: var(--bg-elev);
   border-left: 1px solid var(--rule);
-  box-shadow: -8px 0 30px rgba(0,0,0,0.08);
+  box-shadow: -8px 0 30px rgba(0,0,0,0.5);
   overflow-y: auto;
   z-index: 100;
   padding: 1.2rem 1.4rem 2.5rem;
@@ -361,7 +382,7 @@ code, .mono {
   padding: 1.2rem 0 1.6rem;
   font-size: 0.85rem;
   color: var(--ink-faint);
-  background: linear-gradient(180deg, var(--bg) 0%, #efe9d8 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, #1a1f2c 100%);
 }
 
 /* ---------- responsive ---------- */

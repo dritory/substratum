@@ -12,40 +12,40 @@
 const REPO_BLOB = "https://github.com/dritory/substratum/blob/main";
 
 const DOMAIN_COLOR = {
-  particle: "#1f4f8b",
-  cosmology: "#b3501f",
-  gravitation: "#5b3a8a",
-  atomic: "#2f6b4f",
-  nuclear: "#8a6c1a",
-  astrophysics: "#3a6e8a",
-  condensed_matter: "#88284b",
-  theoretical: "#5a5e6a",
+  particle:         "#7fb1e1",
+  cosmology:        "#e0a04a",
+  gravitation:      "#b69adf",
+  atomic:           "#6dc197",
+  nuclear:          "#d4b974",
+  astrophysics:     "#82b9d4",
+  condensed_matter: "#d77ea1",
+  theoretical:      "#9ea3b3",
 };
 
 const KIND_COLOR = {
-  reduction:               "#2f6b4f",
-  precision_test:          "#1f4f8b",
-  principle_invariance:    "#5b3a8a",
-  forbidden_phenomenon:    "#b3501f",
-  cosmological_observable: "#3a6e8a",
-  tension_to_address:      "#88284b",
+  reduction:               "#6dc197",
+  precision_test:          "#7fb1e1",
+  principle_invariance:    "#b69adf",
+  forbidden_phenomenon:    "#e0a04a",
+  cosmological_observable: "#82b9d4",
+  tension_to_address:      "#d77ea1",
 };
 
 const EVAL_COLOR = {
-  trivial:             "#2f6b4f",
-  tractable:           "#5d80b3",
-  requires_code:       "#8a6c1a",
-  requires_simulation: "#b3501f",
-  requires_lattice:    "#88284b",
-  research_problem:    "#5a5e6a",
+  trivial:             "#6dc197",
+  tractable:           "#7fb1e1",
+  requires_code:       "#d4b974",
+  requires_simulation: "#e0a04a",
+  requires_lattice:    "#d77ea1",
+  research_problem:    "#9ea3b3",
 };
 
 const STATUS_COLOR = {
-  open:        "#b3501f",
-  contested:   "#8a6c1a",
-  resolved:    "#2f6b4f",
-  theoretical: "#5a5e6a",
-  watching:    "#5d80b3",
+  open:        "#e0a04a",
+  contested:   "#d4b974",
+  resolved:    "#6dc197",
+  theoretical: "#9ea3b3",
+  watching:    "#7fb1e1",
 };
 
 const PLOTLY_BASE = {
@@ -56,6 +56,20 @@ const PLOTLY_BASE = {
 
 const FONT_BODY = '"Iowan Old Style","Charter","Source Serif Pro",Georgia,serif';
 const FONT_MONO = '"JetBrains Mono","Iosevka","SF Mono",Menlo,monospace';
+
+// Plotly theme — kept in sync with CSS custom properties in styles.css
+const THEME = {
+  paper:   "#161a23",   // --bg-elev
+  plot:    "#161a23",
+  ink:     "#e6e3d6",   // --ink
+  ink_soft:"#aeb1bd",   // --ink-soft
+  ink_faint:"#6b7180",  // --ink-faint
+  grid:    "#22293a",
+  grid_soft:"#1d2330",
+  spike:   "#3a4257",
+  marker_edge:"#0f1218", // --bg
+  annot_bg:"rgba(15,18,24,0.85)",
+};
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -120,6 +134,11 @@ async function main() {
   renderBenchmarkCharts(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
+
+  // After everything is in the DOM, force one resize pass so charts that were
+  // initially hidden pick up their final container width.
+  requestAnimationFrame(() => resizeChartsIn(document));
+  window.addEventListener("resize", () => resizeChartsIn(document));
 }
 
 function setupTabs() {
@@ -129,15 +148,29 @@ function setupTabs() {
     t.addEventListener("click", () => {
       tabs.forEach((x) => x.classList.remove("active"));
       t.classList.add("active");
+      let activated;
       views.forEach((v) => {
         const match = v.id === "view-" + t.dataset.view;
         v.classList.toggle("active", match);
         v.hidden = !match;
+        if (match) activated = v;
       });
-      // some Plotly charts need a relayout when un-hidden
-      window.dispatchEvent(new Event("resize"));
+      // Plotly charts drawn into hidden containers latch onto the fallback
+      // size; resize them now that their container has its real width.
+      if (activated) resizeChartsIn(activated);
     })
   );
+}
+
+function resizeChartsIn(root) {
+  if (!root || !window.Plotly) return;
+  root.querySelectorAll(".chart, .chart-mini").forEach((div) => {
+    // Plotly tags drawn divs with internal state; `_fullLayout` is present
+    // once newPlot has run. Skip undrawn divs.
+    if (div._fullLayout) {
+      try { Plotly.Plots.resize(div); } catch (_) { /* ignore */ }
+    }
+  });
 }
 
 /* ---------- tensions view ---------- */
@@ -153,18 +186,18 @@ function renderTensionsView(bundle) {
     traces,
     {
       margin: { l: 50, r: 16, t: 16, b: 50 },
-      paper_bgcolor: "#ffffff",
-      plot_bgcolor: "#ffffff",
-      font: { family: FONT_BODY, size: 13, color: "#16181d" },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 13, color: THEME.ink },
       xaxis: {
         title: { text: "year", font: { size: 12 } },
-        gridcolor: "#eee5d0",
+        gridcolor: THEME.grid,
         zeroline: false,
         tickformat: "d",
       },
       yaxis: {
         title: { text: "significance σ", font: { size: 12 } },
-        gridcolor: "#eee5d0",
+        gridcolor: THEME.grid,
         rangemode: "tozero",
       },
       legend: {
@@ -212,18 +245,18 @@ function renderTensionsView(bundle) {
         [trace],
         {
           margin: { l: 36, r: 8, t: 6, b: 28 },
-          paper_bgcolor: "#ffffff",
-          plot_bgcolor: "#ffffff",
-          font: { family: FONT_BODY, size: 10, color: "#4a4f59" },
+          paper_bgcolor: THEME.paper,
+          plot_bgcolor: THEME.plot,
+          font: { family: FONT_BODY, size: 10, color: THEME.ink_soft },
           xaxis: {
             tickformat: "d",
-            gridcolor: "#f0e9d6",
+            gridcolor: THEME.grid_soft,
             zeroline: false,
             fixedrange: true,
           },
           yaxis: {
             rangemode: "tozero",
-            gridcolor: "#f0e9d6",
+            gridcolor: THEME.grid_soft,
             zeroline: false,
             fixedrange: true,
           },
@@ -235,7 +268,7 @@ function renderTensionsView(bundle) {
     } else {
       const div = document.getElementById(`mini-${t.id}`);
       div.innerHTML =
-        '<div style="padding:1.5rem;color:#7a818d;font-style:italic;font-size:0.85rem">' +
+        '<div style="padding:1.5rem;color:#6b7180;font-style:italic;font-size:0.85rem">' +
         "no numeric σ — see source for the narrative</div>";
     }
   });
@@ -253,9 +286,9 @@ function buildTensionTrace(t, forSmall = false) {
     text: points.map((p) =>
       [
         `<b>${escapeHtml(t.name)}</b>`,
-        `σ: ${escapeHtml(p.sigma_text)}`,
-        p.comparison ? `vs: ${escapeHtml(p.comparison)}` : "",
-        p.note ? `<i>${escapeHtml(truncate(p.note, 220))}</i>` : "",
+        `σ: ${wrapText(escapeHtml(p.sigma_text), 64)}`,
+        p.comparison ? `vs: ${wrapText(escapeHtml(p.comparison), 64)}` : "",
+        p.note ? `<i>${wrapText(escapeHtml(truncate(p.note, 240)), 64)}</i>` : "",
       ]
         .filter(Boolean)
         .join("<br>")
@@ -264,7 +297,7 @@ function buildTensionTrace(t, forSmall = false) {
     type: "scatter",
     mode: forSmall ? "lines+markers" : "lines+markers",
     line: { color, width: forSmall ? 1.6 : 2.2, shape: "linear" },
-    marker: { size: forSmall ? 6 : 9, color, line: { color: "#fff", width: 1 } },
+    marker: { size: forSmall ? 6 : 9, color, line: { color: THEME.marker_edge, width: 1 } },
     hovertemplate: "%{text}<extra></extra>",
   };
 }
@@ -311,7 +344,7 @@ function renderLandscape(bundle) {
     marker: {
       symbol: "circle",
       size: 18,
-      line: { width: 1.5, color: "#16181d" },
+      line: { width: 1.5, color: THEME.ink },
       color: tensionsPts.map((p) => STATUS_COLOR[p.status] || "#666"),
       opacity: 0.92,
     },
@@ -335,7 +368,7 @@ function renderLandscape(bundle) {
         symbol: "square",
         size: 12,
         color: KIND_COLOR[k] || "#888",
-        line: { width: 1, color: "#fff" },
+        line: { width: 1, color: THEME.marker_edge },
         opacity: 0.85,
       },
       hovertemplate: "%{text}<extra></extra>",
@@ -360,26 +393,26 @@ function renderLandscape(bundle) {
     traces,
     {
       margin: { l: 70, r: 30, t: 16, b: 60 },
-      paper_bgcolor: "#ffffff",
-      plot_bgcolor: "#ffffff",
-      font: { family: FONT_BODY, size: 13, color: "#16181d" },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 13, color: THEME.ink },
       xaxis: {
         title: { text: "characteristic length  ℓ  [m]" },
         type: "log",
-        gridcolor: "#eee5d0",
+        gridcolor: THEME.grid,
         zeroline: false,
         showspikes: true,
-        spikecolor: "#bbb",
+        spikecolor: THEME.spike,
         spikedash: "dot",
         spikethickness: 1,
       },
       yaxis: {
         title: { text: "characteristic energy  E  [eV]" },
         type: "log",
-        gridcolor: "#eee5d0",
+        gridcolor: THEME.grid,
         zeroline: false,
         showspikes: true,
-        spikecolor: "#bbb",
+        spikecolor: THEME.spike,
         spikedash: "dot",
         spikethickness: 1,
       },
@@ -419,8 +452,8 @@ function annotation(x, y, label, kind) {
       yanchor: "bottom",
       showarrow: false,
       text: label,
-      font: { size: 10, color: "#7a818d", family: FONT_MONO },
-      bgcolor: "rgba(255,255,255,0.85)",
+      font: { size: 10, color: THEME.ink_faint, family: FONT_MONO },
+      bgcolor: "THEME.annot_bg",
     };
   }
   if (kind === "y") {
@@ -432,8 +465,8 @@ function annotation(x, y, label, kind) {
       xanchor: "left",
       showarrow: false,
       text: label,
-      font: { size: 10, color: "#7a818d", family: FONT_MONO },
-      bgcolor: "rgba(255,255,255,0.85)",
+      font: { size: 10, color: THEME.ink_faint, family: FONT_MONO },
+      bgcolor: "THEME.annot_bg",
     };
   }
   // free annotation in (x,y) space
@@ -444,8 +477,8 @@ function annotation(x, y, label, kind) {
     yref: "y",
     showarrow: false,
     text: label,
-    font: { size: 10, color: "#7a818d", family: FONT_MONO, style: "italic" },
-    bgcolor: "rgba(255,255,255,0.7)",
+    font: { size: 10, color: THEME.ink_faint, family: FONT_MONO, style: "italic" },
+    bgcolor: "THEME.annot_bg",
   };
 }
 
@@ -463,7 +496,8 @@ function buildLandscapeHover(p) {
     `<span style="font-family:${FONT_MONO}">ℓ=${fmtScale(p._length_m)} m, E=${fmtScale(p._energy_ev)} eV</span>`
   );
   if (p.summary || p.requirement) {
-    lines.push(`<i>${escapeHtml(truncate(p.summary || p.requirement, 220))}</i>`);
+    const text = truncate(p.summary || p.requirement, 240);
+    lines.push(`<i>${wrapText(escapeHtml(text), 64)}</i>`);
   }
   return lines.join("<br>");
 }
@@ -493,10 +527,10 @@ function renderBenchmarkCharts(bundle) {
     {
       title: { text: "by kind", font: { size: 13, family: FONT_BODY } },
       margin: { l: 170, r: 30, t: 36, b: 36 },
-      paper_bgcolor: "#ffffff",
-      plot_bgcolor: "#ffffff",
-      font: { family: FONT_BODY, size: 12, color: "#16181d" },
-      xaxis: { gridcolor: "#eee5d0", title: "" },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: { gridcolor: THEME.grid, title: "" },
       yaxis: { automargin: true, tickfont: { family: FONT_MONO, size: 11 } },
     },
     PLOTLY_BASE
@@ -521,10 +555,10 @@ function renderBenchmarkCharts(bundle) {
     {
       title: { text: "by evaluator status", font: { size: 13, family: FONT_BODY } },
       margin: { l: 170, r: 30, t: 36, b: 36 },
-      paper_bgcolor: "#ffffff",
-      plot_bgcolor: "#ffffff",
-      font: { family: FONT_BODY, size: 12, color: "#16181d" },
-      xaxis: { gridcolor: "#eee5d0", title: "" },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: { gridcolor: THEME.grid, title: "" },
       yaxis: { automargin: true, tickfont: { family: FONT_MONO, size: 11 } },
     },
     PLOTLY_BASE
@@ -853,7 +887,7 @@ function showDetail(entry, panelId) {
             h.sigma_text || "—"
           ),
           h.comparison ? el("i", {}, ` ${h.comparison}`) : null,
-          h.note ? el("div", { style: "color:#4a4f59;font-size:0.92em" }, h.note) : null
+          h.note ? el("div", { style: "color:#aeb1bd;font-size:0.92em" }, h.note) : null
         )
       );
     }
@@ -881,7 +915,7 @@ function showDetail(entry, panelId) {
             `${m.experiment}: `,
             `${m.value}${m.uncertainty != null ? "±" + m.uncertainty : ""} ${m.units || ""}`
           ),
-          m.note ? el("div", { style: "color:#4a4f59;font-size:0.92em" }, m.note) : null
+          m.note ? el("div", { style: "color:#aeb1bd;font-size:0.92em" }, m.note) : null
         )
       );
     }
@@ -914,7 +948,7 @@ function showDetail(entry, panelId) {
         el("p", {}, el("b", {}, "Parameterization: "), proc.parameterization.name)
       );
       if (proc.parameterization.summary) {
-        sec.appendChild(el("p", { style: "color:#4a4f59" }, proc.parameterization.summary));
+        sec.appendChild(el("p", { style: "color:#aeb1bd" }, proc.parameterization.summary));
       }
     }
     if (proc.predicted_observable) {
@@ -959,7 +993,7 @@ function showDetail(entry, panelId) {
           c.cost_elsewhere
             ? el(
                 "div",
-                { style: "color:#b3501f;margin-top:0.2rem" },
+                { style: "color:#e0a04a;margin-top:0.2rem" },
                 el("i", {}, "cost elsewhere: "),
                 c.cost_elsewhere
               )
@@ -982,7 +1016,7 @@ function showDetail(entry, panelId) {
           el("span", { class: "mono" }, o.name),
           o.description ? el("div", {}, o.description) : null,
           o.current_bound
-            ? el("div", { style: "color:#4a4f59" }, el("i", {}, "bound: "), o.current_bound)
+            ? el("div", { style: "color:#aeb1bd" }, el("i", {}, "bound: "), o.current_bound)
             : null
         )
       );
@@ -1059,6 +1093,29 @@ function truncate(s, n) {
   if (!s) return "";
   s = String(s);
   return s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
+}
+
+// Word-wrap a string into lines no longer than `width` characters, joined
+// with `<br>` for use inside Plotly hoverlabels (which apply white-space:
+// nowrap per line, so without explicit breaks the tooltip stretches off
+// screen). Splits on whitespace; never breaks inside a word.
+function wrapText(s, width = 60) {
+  if (!s) return "";
+  const words = String(s).split(/\s+/);
+  const lines = [];
+  let line = "";
+  for (const w of words) {
+    if (!line) {
+      line = w;
+    } else if (line.length + 1 + w.length <= width) {
+      line += " " + w;
+    } else {
+      lines.push(line);
+      line = w;
+    }
+  }
+  if (line) lines.push(line);
+  return lines.join("<br>");
 }
 
 function hookupKeyboard() {
