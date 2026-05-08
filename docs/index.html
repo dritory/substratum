@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Substratum — atlas of open tensions and benchmark constraints in physics</title>
+<meta name="description" content="Schema-validated catalog of open tensions in fundamental physics and the non-negotiable benchmarks any candidate replacement framework must satisfy.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="title">
+      <h1>Substratum</h1>
+      <p class="tagline">
+        an atlas of where the Standard Model and ΛCDM are under empirical stress,
+        and the non-negotiable benchmarks any successor framework must clear.
+      </p>
+    </div>
+    <nav class="counts" aria-label="catalog size">
+      <span><b id="count-tensions">…</b><small>open tensions</small></span>
+      <span><b id="count-benchmarks">…</b><small>benchmark constraints</small></span>
+      <span><b id="count-domains">…</b><small>domains</small></span>
+    </nav>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" data-view="tensions" class="tab active">Tensions over time</button>
+  <button role="tab" data-view="landscape" class="tab">Length–energy landscape</button>
+  <button role="tab" data-view="benchmarks" class="tab">Benchmark catalog</button>
+  <button role="tab" data-view="browse" class="tab">Browse all</button>
+</nav>
+
+<main class="wrap">
+
+  <section id="view-tensions" class="view active">
+    <header class="view-head">
+      <h2>σ‑over‑time, all tensions</h2>
+      <p>Each line is one anomaly. Numeric σ is parsed from <code>tension_history</code>;
+         hover for the original wording and the comparison being drawn.
+         Multiple comparisons in the same year (e.g. data‑driven vs lattice SM)
+         appear as separate points on the same line.</p>
+    </header>
+    <div id="chart-overview" class="chart tall"></div>
+
+    <header class="view-head" style="margin-top:2rem;">
+      <h2>Per‑tension detail</h2>
+      <p>Small multiples — one card per anomaly, with the same axes for
+         legibility. Cards link to their source file on GitHub.</p>
+    </header>
+    <div id="grid-small-multiples" class="grid-small-multiples"></div>
+  </section>
+
+  <section id="view-landscape" class="view" hidden>
+    <header class="view-head">
+      <h2>Length–energy landscape</h2>
+      <p>Every entry placed on log‑log <span class="tex">(ℓ, E)</span> axes by its
+         <code>characteristic_scale</code> (tensions) or <code>regime</code>
+         (benchmarks). Circles are open tensions; squares are benchmark
+         constraints. Color encodes layer and status. Click a marker for full
+         detail.</p>
+    </header>
+    <div id="chart-landscape" class="chart very-tall"></div>
+    <aside id="landscape-detail" class="detail-panel" hidden></aside>
+  </section>
+
+  <section id="view-benchmarks" class="view" hidden>
+    <header class="view-head">
+      <h2>Benchmark coverage</h2>
+      <p>How the 67 benchmark constraints break down. <em>Kind</em> is the role
+         a benchmark plays (reduction, precision test, principle invariance,
+         forbidden phenomenon, cosmological observable, meta). <em>Evaluator
+         status</em> is how hard it is to actually test a candidate framework
+         against the benchmark in practice.</p>
+    </header>
+    <div class="grid-2">
+      <div id="chart-bench-kind" class="chart"></div>
+      <div id="chart-bench-evaluator" class="chart"></div>
+    </div>
+  </section>
+
+  <section id="view-browse" class="view" hidden>
+    <header class="view-head">
+      <h2>Browse all entries</h2>
+      <p>One row per JSON file. Filter by layer, domain/kind, status, and
+         evaluator status. Click any row for full detail and primary references.</p>
+    </header>
+    <div id="filters" class="filters"></div>
+    <div id="browse-table" class="browse-table"></div>
+    <aside id="browse-detail" class="detail-panel" hidden></aside>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>
+      Source: <a href="https://github.com/dritory/substratum">github.com/dritory/substratum</a>.
+      Each row links to the raw JSON file the row was generated from.
+      Bundle generated <span id="generated-at">…</span>.
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
