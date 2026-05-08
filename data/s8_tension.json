@@ -40,12 +40,21 @@
       "reference": "Abbott et al. (DES), PRD 105, 023520 (2022), arXiv:2105.13549"
     },
     {
-      "experiment": "HSC-Y3 cosmic shear",
-      "value": 0.775,
-      "uncertainty": 0.043,
+      "experiment": "HSC-Y3 cosmic shear (power spectrum)",
+      "value": 0.776,
+      "uncertainty": "+0.032/-0.033",
       "units": "dimensionless",
       "year": 2023,
-      "reference": "Dalal et al., PRD 108, 123519 (2023), arXiv:2304.00701"
+      "reference": "Dalal et al., 'Hyper Suprime-Cam Year 3 Results: Cosmology from Cosmic Shear Power Spectra', PRD 108, 123519 (2023), arXiv:2304.00701"
+    },
+    {
+      "experiment": "HSC-Y3 + SDSS 3x2pt (Sugiyama et al.)",
+      "value": 0.775,
+      "uncertainty": "+0.043/-0.038",
+      "units": "dimensionless",
+      "year": 2023,
+      "reference": "Sugiyama et al., 'Hyper Suprime-Cam Year 3 Results: Cosmology from Galaxy Clustering and Weak Lensing with HSC and SDSS using the Minimal Bias Model', PRD 108, 123521 (2023), arXiv:2304.00705",
+      "note": "Galaxy-galaxy-lensing + galaxy clustering + cosmic shear joint analysis with HSC-Y3 plus SDSS spectroscopic galaxies."
     },
     {
       "experiment": "ACT DR6 lensing + BAO",
@@ -138,6 +147,14 @@
     {
       "citation": "Abbott et al. (DES), 'Dark Energy Survey Year 3 results: Cosmological constraints from galaxy clustering and weak lensing', PRD 105, 023520 (2022)",
       "arxiv": "2105.13549"
+    },
+    {
+      "citation": "Dalal et al. (HSC), 'Hyper Suprime-Cam Year 3 Results: Cosmology from Cosmic Shear Power Spectra', PRD 108, 123519 (2023)",
+      "arxiv": "2304.00701"
+    },
+    {
+      "citation": "Sugiyama et al. (HSC), 'Hyper Suprime-Cam Year 3 Results: Cosmology from Galaxy Clustering and Weak Lensing with HSC and SDSS using the Minimal Bias Model', PRD 108, 123521 (2023)",
+      "arxiv": "2304.00705"
     },
     {
       "citation": "Madhavacheril et al. (ACT), 'The Atacama Cosmology Telescope: DR6 Gravitational Lensing Map and Cosmological Parameters', ApJ 962, 113 (2024)",

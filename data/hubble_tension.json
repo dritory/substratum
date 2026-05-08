@@ -30,7 +30,7 @@
         "label": "BAO + BBN (no CMB)",
         "value": 67.5,
         "uncertainty": 1.1,
-        "reference": "e.g. Schoneberg et al. 2022, arXiv:2202.04077",
+        "reference": "Schoneberg, Lesgourgues, Hooper, 'The BAO+BBN take on the Hubble tension', JCAP 10, 029 (2019), arXiv:1907.11594",
         "note": "Sound-horizon-anchored inverse distance ladder gives essentially the same low value without CMB."
       }
     ],
@@ -62,8 +62,17 @@
       "uncertainty": 1.0,
       "units": "km/s/Mpc",
       "year": 2024,
-      "reference": "Riess et al. 2024, arXiv:2408.11770",
-      "note": "JWST imaging confirms HST Cepheid photometry; rules out crowding bias as a major systematic for SH0ES."
+      "reference": "Riess et al., 'JWST Observations Reject Unrecognized Crowding of Cepheid Photometry as an Explanation for the Hubble Tension at 8 sigma Confidence', ApJL 962, L17 (2024), arXiv:2401.04773",
+      "note": "JWST imaging of HST Cepheid hosts rejects unrecognized-crowding bias as the explanation for the SH0ES tension at 8.2 sigma; the SH0ES baseline H0 ~ 73 is reaffirmed."
+    },
+    {
+      "experiment": "JWST + HST joint H0 (Riess 2024b)",
+      "value": 72.6,
+      "uncertainty": 2.0,
+      "units": "km/s/Mpc",
+      "year": 2024,
+      "reference": "Riess et al., 'JWST Validates HST Distance Measurements: Selection of Supernova Subsample Explains Differences in JWST Estimates of Local H0', arXiv:2408.11770",
+      "note": "Joint JWST + HST distance ladder. Argues that subsample-selection effects (not Cepheid systematics) explain low-H0 JWST claims by other groups."
     },
     {
       "experiment": "H0LiCOW / TDCOSMO (strong-lensing time delays)",
@@ -158,6 +167,14 @@
     {
       "citation": "Riess et al., 'JWST Observations Reject Unrecognized Crowding of Cepheid Photometry as an Explanation for the Hubble Tension at 8 sigma Confidence', ApJL 962, L17 (2024)",
       "arxiv": "2401.04773"
+    },
+    {
+      "citation": "Riess et al., 'JWST Validates HST Distance Measurements: Selection of Supernova Subsample Explains Differences in JWST Estimates of Local H0' (2024)",
+      "arxiv": "2408.11770"
+    },
+    {
+      "citation": "Schoneberg, Lesgourgues, Hooper, 'The BAO+BBN take on the Hubble tension', JCAP 10, 029 (2019)",
+      "arxiv": "1907.11594"
     },
     {
       "citation": "Freedman et al., 'Status Report on the Chicago-Carnegie Hubble Program (CCHP)' (2024)",
