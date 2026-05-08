@@ -1,0 +1,50 @@
+{
+  "id": "neutron_star_mass_radius",
+  "name": "Neutron-star mass-radius relation (NICER + GW170817)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the observed neutron-star mass-radius relation as constrained by NICER X-ray pulse-profile measurements of PSR J0740+6620 (M = 2.07 +/- 0.07 M_sun, R = 12.39 +1.30/-0.98 km) and PSR J0030+0451, plus the GW170817 tidal-deformability constraint. NS exist with masses up to ~2.1 M_sun and radii ~11-13 km; this constrains the dense-matter equation of state and any modified strong-field gravity.",
+  "regime": {
+    "length_m": 1e4,
+    "energy_ev": 1e9,
+    "description": "Compact-object-scale strong-field gravity, ~ 10 km radius, density up to a few times nuclear saturation density."
+  },
+  "current_bound": {
+    "value": "M_max > 2.07 +/- 0.07 M_sun (PSR J0740+6620); R(1.4 M_sun) ~ 11-13 km from joint NICER + GW170817 analyses",
+    "uncertainty": null,
+    "units": "M_sun (mass), km (radius)",
+    "experiment": "NICER + LIGO/Virgo + radio timing",
+    "year": 2021,
+    "reference": "Miller et al., 'The Radius of PSR J0740+6620 from NICER and XMM-Newton Data', ApJL 918, L28 (2021), arXiv:2105.06979; Riley et al., ApJL 918, L27 (2021); Cromartie et al., Nature Astronomy 4, 72 (2020) (J0740 mass)",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains both the dense-matter EOS (must support at least a 2.07 M_sun NS) and modifications to gravity in the strong-field regime. Many scalar-tensor and f(R) gravity models predict NS structure substantially different from GR; the observed M-R region constrains them. Combined GW + NICER data exclude strong scalarization in massive NS.",
+  "procedural": {
+    "parameterization": {
+      "name": "Tolman-Oppenheimer-Volkoff (TOV) equation in GR; modified-TOV in alternative gravity. EOS parameterized by piecewise polytropes or by sound-speed parameterization c_s^2(rho).",
+      "reference": "Lattimer and Prakash, Phys. Rep. 442, 109 (2007); Hinderer, ApJ 677, 1216 (2008) (tidal deformability).",
+      "summary": "Given EOS p(rho), TOV gives M-R relation. Modified gravity changes both the TOV structure equations and the mass-radius mapping."
+    },
+    "predicted_observable": "Maximum mass M_max; radius at fiducial mass R(1.4 M_sun); tidal deformability Lambda(M).",
+    "bound_in_parameterization": "M_max > 2 M_sun; Lambda(1.4 M_sun) < 720 (GW170817).",
+    "framework_inputs": [
+      "Modified TOV-like structure equations from the framework's gravity sector.",
+      "Dense-matter EOS - typically taken from nuclear physics, but a candidate framework with modified strong interactions must specify how it changes."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Miller et al., 'The Radius of PSR J0740+6620 from NICER and XMM-Newton Data', ApJL 918, L28 (2021)",
+      "arxiv": "2105.06979"
+    },
+    {
+      "citation": "Abbott et al. (LVC), 'GW170817: Measurements of Neutron Star Radii and Equation of State', PRL 121, 161101 (2018)",
+      "arxiv": "1805.11581"
+    },
+    {
+      "citation": "Cromartie et al., 'Relativistic Shapiro delay measurements of an extremely massive millisecond pulsar', Nature Astronomy 4, 72 (2020)",
+      "arxiv": "1904.06759"
+    }
+  ],
+  "tags": ["astrophysics", "neutron_stars", "strong_field_gravity", "nuclear_eos"]
+}

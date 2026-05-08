@@ -1,0 +1,46 @@
+{
+  "id": "graviton_mass_gw_dispersion",
+  "name": "Upper limit on graviton mass from GW dispersion",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict a graviton mass m_g (or equivalent dispersion-modifying parameter) below the LIGO/Virgo GWTC-3 upper limit. A massive graviton would produce a frequency-dependent group velocity, dephasing the inspiral chirp from compact-binary mergers in a way LIGO/Virgo would have detected.",
+  "regime": {
+    "length_m": 1e26,
+    "energy_ev": 1.27e-23,
+    "description": "Cosmological propagation of GW signals from binary black hole and neutron star mergers, frequencies 10-1000 Hz."
+  },
+  "current_bound": {
+    "value": 1.27e-23,
+    "uncertainty": null,
+    "units": "eV/c^2 (90% CL upper limit)",
+    "experiment": "LIGO/Virgo combined analysis of GWTC-3 events",
+    "year": 2021,
+    "reference": "Abbott et al. (LVC), 'Tests of General Relativity with GWTC-3', PRD 103, 122002 (2021), arXiv:2010.14529",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Theories of massive gravity (dRGT, bigravity) with graviton mass above ~10^-23 eV. Combined with the GW170817 graviton-speed bound, severely constrains the parameter space of modified-gravity proposals for dark energy.",
+  "procedural": {
+    "parameterization": {
+      "name": "Graviton dispersion: E^2 = p^2 c^2 + m_g^2 c^4. More general: parameterized GW dispersion with deviation parameter A_alpha at order p^alpha.",
+      "reference": "Mirshekari, Yunes, Will, PRD 85, 024041 (2012), arXiv:1110.2720; LVC GWTC-3 tests-of-GR analysis.",
+      "summary": "The standard parameterization adds a power-law modification to graviton dispersion. m_g is the alpha=0 case."
+    },
+    "predicted_observable": "Frequency-dependent group velocity v_g(f) = c sqrt(1 - (m_g c^2 / h f)^2) leading to inspiral phase shift Delta phi(f).",
+    "bound_in_parameterization": "m_g < 1.27 x 10^-23 eV/c^2. For non-zero alpha, see GWTC-3 figure 4 and table 4 for bounds at alpha = 0, 0.5, 1, 1.5, ..., 4.",
+    "framework_inputs": [
+      "Modified GW dispersion relation derived from the framework's tensor-perturbation EOM in vacuum.",
+      "Standard waveform-modeling pipeline (LALSuite) accepts the parameterized dispersion as a single deviation parameter."
+    ],
+    "evaluator_status": "trivial"
+  },
+  "primary_references": [
+    {
+      "citation": "Abbott et al. (LIGO/Virgo/KAGRA), 'Tests of General Relativity with GWTC-3', PRD 103, 122002 (2021)",
+      "arxiv": "2010.14529"
+    },
+    {
+      "citation": "de Rham, Deskins, Tolley, Zhou, 'Graviton Mass Bounds', RMP 89, 025004 (2017)",
+      "arxiv": "1606.08462"
+    }
+  ],
+  "tags": ["gravity", "gravitational_waves", "massive_gravity", "dispersion", "forbidden"]
+}

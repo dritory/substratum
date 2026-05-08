@@ -1,0 +1,45 @@
+{
+  "id": "primordial_black_holes_microlensing",
+  "name": "Primordial black hole abundance from microlensing surveys",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting primordial black holes (PBHs) as a significant DM component must respect microlensing constraints from MACHO, EROS, OGLE, and HSC Subaru surveys. PBHs constitute < ~10% of dark matter for masses 10^-11 - 10 M_sun; tighter limits in some sub-windows. Larger masses constrained by CMB / dwarf-galaxy heating; smaller masses by Hawking-evaporation gamma-ray bounds.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": null,
+    "description": "Asteroid-to-stellar mass scales for compact objects in the galactic halo and Milky Way - M31 light path."
+  },
+  "current_bound": {
+    "value": "f_PBH < 0.1 for 10^-11 < M_PBH/M_sun < 10; tighter in specific sub-windows",
+    "uncertainty": null,
+    "units": "fraction of DM in PBHs (dimensionless)",
+    "experiment": "OGLE + Subaru HSC microlensing toward M31",
+    "year": 2019,
+    "reference": "Niikura et al., 'Microlensing constraints on primordial black holes with Subaru/HSC Andromeda observations', Nature Astron. 3, 524 (2019), arXiv:1701.02151; Carr et al., Rep. Prog. Phys. 84, 116902 (2021), arXiv:2002.12778 (review)",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Severely constrains PBH DM scenarios. Open windows for PBHs as 100% of DM remain narrow: the 'asteroid-mass window' 10^-17 - 10^-12 M_sun (between Hawking-evaporation and microlensing) and possibly the Stupar-mass window. Solar-mass PBHs as DM are essentially excluded.",
+  "procedural": {
+    "parameterization": {
+      "name": "PBH mass function (monochromatic or extended) plus DM fraction f_PBH = Omega_PBH / Omega_DM.",
+      "reference": "Carr, Kuhnel, Sandstad, PRD 94, 083504 (2016), arXiv:1607.06077; Carr et al., Rep. Prog. Phys. 84, 116902 (2021).",
+      "summary": "Different observables constrain different mass ranges: Hawking gamma-rays (M < 10^17 g), microlensing (10^-11 - 10 M_sun), CMB accretion (M > 10 M_sun), GW dynamical effects in clusters."
+    },
+    "predicted_observable": "Number of microlensing events as a function of duration in surveys with known optical-depth maps.",
+    "bound_in_parameterization": "f_PBH(M) bounded as a function of mass; full constraint plot in Carr et al. 2021.",
+    "framework_inputs": [
+      "If the framework predicts PBHs (e.g. from inflationary spike, phase transitions, scalar collapse), compute the mass function dN/dM and the total DM fraction."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Niikura et al., 'Microlensing constraints on primordial black holes with Subaru/HSC Andromeda observations', Nature Astron. 3, 524 (2019)",
+      "arxiv": "1701.02151"
+    },
+    {
+      "citation": "Carr, Kohri, Sendouda, Yokoyama, 'Constraints on primordial black holes', Rep. Prog. Phys. 84, 116902 (2021)",
+      "arxiv": "2002.12778"
+    }
+  ],
+  "tags": ["dark_matter", "primordial_black_holes", "microlensing", "constraints"]
+}

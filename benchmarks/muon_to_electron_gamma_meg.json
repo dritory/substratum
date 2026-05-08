@@ -1,0 +1,46 @@
+{
+  "id": "muon_to_electron_gamma_meg",
+  "name": "Charged lepton flavor violation: mu -> e gamma",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict Br(mu+ -> e+ gamma) below the MEG experiment upper limit. In the SM with massless neutrinos, charged lepton flavor violation (CLFV) is exactly forbidden; even with neutrino masses, the predicted branching is ~10^-54, completely negligible. Any observable CLFV is unambiguous BSM physics.",
+  "regime": {
+    "length_m": 1.87e-15,
+    "energy_ev": 1.057e8,
+    "description": "Muon-scale physics; loop sensitivity to multi-TeV BSM masses depending on couplings."
+  },
+  "current_bound": {
+    "value": 4.2e-13,
+    "uncertainty": null,
+    "units": "branching ratio (90% CL upper limit)",
+    "experiment": "MEG at PSI",
+    "year": 2016,
+    "reference": "Baldini et al. (MEG Collaboration), 'Search for the lepton flavour violating decay mu+ -> e+ gamma with the full dataset of the MEG experiment', EPJC 76, 434 (2016), arXiv:1605.05081",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Severely constrains supersymmetric models with non-trivial slepton mixing, leptoquark models, and any TeV-scale flavor structure that mixes muon and electron lepton numbers. MEG II (running) targets ~6 x 10^-14, an order of magnitude improvement.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT lepton-flavor-violating dipole operators C_eB^(12) and C_eW^(12) (mu-e off-diagonal), plus four-fermion LFV operators contributing through penguins.",
+      "reference": "Crivellin, Najjari, Rosiek, JHEP 04, 167 (2014), arXiv:1312.0634; Cirigliano, Davidson, Kuno, PLB 771, 242 (2017).",
+      "summary": "Br(mu -> e gamma) = (3 alpha / pi) * |C_egamma^(12) v / Lambda^2|^2 / (G_F^2 m_mu^2)."
+    },
+    "predicted_observable": "Br(mu -> e gamma) = (proportional to) |Im(C_egamma^(12)) / Lambda^2|^2.",
+    "bound_in_parameterization": "|C_egamma^(12) / Lambda^2| < ~3 x 10^-13 GeV^-2 from MEG.",
+    "framework_inputs": [
+      "Match the framework onto SMEFT and read off the off-diagonal dipole Wilson coefficients C_eB^(12), C_eW^(12).",
+      "Include possible Z-penguin and box contributions for predicting other CLFV channels (mu-e conversion, mu -> 3e)."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Baldini et al. (MEG), 'Search for the lepton flavour violating decay mu+ -> e+ gamma with the full dataset of the MEG experiment', EPJC 76, 434 (2016)",
+      "arxiv": "1605.05081"
+    },
+    {
+      "citation": "Calibbi and Signorelli, 'Charged Lepton Flavour Violation: An Experimental and Theoretical Introduction', Riv. Nuovo Cim. 41, 71 (2018)",
+      "arxiv": "1709.00294"
+    }
+  ],
+  "tags": ["lfv", "clfv", "smeft", "leptons", "forbidden"]
+}

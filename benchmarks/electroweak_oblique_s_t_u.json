@@ -1,0 +1,50 @@
+{
+  "id": "electroweak_oblique_s_t_u",
+  "name": "Electroweak oblique parameters S, T, U",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must yield electroweak oblique parameters S, T, U consistent with the post-2024 EW global fit. After ATLAS and CMS m_W measurements brought the W mass into agreement with the SM, the global fit gives S = -0.05 +/- 0.07, T = 0.00 +/- 0.06, U = 0.00 +/- 0.05 (with U fixed = 0 in many fits to break degeneracy).",
+  "regime": {
+    "length_m": 2e-18,
+    "energy_ev": 9e10,
+    "description": "Electroweak scale; oblique BSM contributions to W, Z, photon self-energies parameterize universal heavy-new-physics effects."
+  },
+  "current_bound": {
+    "value": "S = -0.05 +/- 0.07; T = 0.00 +/- 0.06; U = 0.00 +/- 0.05 (constrained fit)",
+    "uncertainty": null,
+    "units": "Peskin-Takeuchi parameters (dimensionless)",
+    "experiment": "Global EW fit (Z resonance LEP/SLC + LHC m_W + LHC m_t + Higgs mass)",
+    "year": 2024,
+    "reference": "Particle Data Group 2024 Electroweak Review; de Blas et al. (HEPfit), 'The Global Electroweak and Higgs Fits in the LHC era', PoS EPS-HEP2017, 467 (2017), arXiv:1710.05402; updated with post-2024 m_W",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Strongly constrains universal heavy-new-physics (technicolor, generic 4th generation, heavy Z'). The CDF II m_W result alone preferred T ~ 0.15-0.20 (3 sigma); incorporating ATLAS+CMS+LHCb brings T back to zero, removing the motivation for many BSM proposals from 2022-2023.",
+  "procedural": {
+    "parameterization": {
+      "name": "Peskin-Takeuchi oblique parameters S, T, U from gauge-boson self-energy corrections; equivalently SMEFT operators O_HD (T), O_HWB (S), O_HWB + dimension-8 (U).",
+      "reference": "Peskin and Takeuchi, PRD 46, 381 (1992); Wells and Zhang, JHEP 04, 042 (2017), arXiv:1611.04484 (SMEFT translation).",
+      "summary": "BSM heavy fields contribute through transverse vacuum polarizations of W, Z; reduced to three numbers in the leading-order universal-new-physics expansion."
+    },
+    "predicted_observable": "Pre-EWSB self-energy corrections to W, Z, photon, computed from new heavy-particle loops. Project onto S, T, U via standard formulas.",
+    "bound_in_parameterization": "S, T, U all consistent with 0 within ~0.1, equivalently new-physics scale Lambda_NP > ~5-10 TeV for O(1) couplings.",
+    "framework_inputs": [
+      "Compute the framework's contributions to gauge-boson self-energies (W^+ W^-, Z Z, gamma gamma, gamma Z) at one loop.",
+      "Translate into S, T, U via the standard Peskin-Takeuchi formulas."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Peskin and Takeuchi, 'Estimation of oblique electroweak corrections', PRD 46, 381 (1992)",
+      "doi": "10.1103/PhysRevD.46.381"
+    },
+    {
+      "citation": "Wells and Zhang, 'Renormalization group evolution of the universal theories EFT', JHEP 04, 042 (2017)",
+      "arxiv": "1611.04484"
+    },
+    {
+      "citation": "de Blas, Pierini, Reina, Silvestrini, 'Impact of the recent measurements of the top-quark and W-boson masses on electroweak precision fits', PRL 129, 271801 (2022)",
+      "arxiv": "2204.04204"
+    }
+  ],
+  "tags": ["electroweak", "oblique", "smeft", "precision"]
+}

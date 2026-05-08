@@ -1,0 +1,46 @@
+{
+  "id": "cmb_blackbody_firas",
+  "name": "CMB blackbody spectrum (FIRAS)",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the near-perfect blackbody spectrum of the CMB measured by COBE-FIRAS: T_CMB = 2.7255 +/- 0.0006 K with deviations from a Planck spectrum (mu and y distortions) bounded at |mu| < 9 x 10^-5 and |y| < 1.5 x 10^-5.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 2.35e-4,
+    "description": "Microwave wavelengths, photon thermalization era at z > 2 x 10^6 (mu epoch) and 2 x 10^4 < z < 2 x 10^6 (y epoch)."
+  },
+  "current_bound": {
+    "value": "T = 2.7255 K (sigma = 0.6 mK); |mu| < 9e-5, |y| < 1.5e-5",
+    "uncertainty": null,
+    "units": "Kelvin (T), dimensionless (mu, y)",
+    "experiment": "COBE-FIRAS",
+    "year": 1996,
+    "reference": "Fixsen et al., 'The cosmic microwave background spectrum from the full COBE FIRAS data set', ApJ 473, 576 (1996); Mather et al., ApJ 420, 439 (1994)",
+    "confidence_level": "95% CL upper limits on distortions"
+  },
+  "what_it_excludes": "Constrains any energy-injection process between z ~ 2 x 10^6 and recombination: decaying or annihilating particles, primordial black hole evaporation, dissipation of acoustic modes. Severely limits scenarios with non-thermal photon production at MeV-eV scales between BBN and recombination.",
+  "procedural": {
+    "parameterization": {
+      "name": "Spectral distortion parameters mu (chemical-potential distortion from energy injection in mu-era) and y (Compton-y distortion from energy injection in y-era).",
+      "reference": "Chluba and Sunyaev, MNRAS 419, 1294 (2012); Hu and Silk, PRD 48, 485 (1993).",
+      "summary": "Energy injection per unit time Q_dot maps to Delta mu, y via well-known formulas; observables computed by integrating over redshift weighted by the appropriate visibility functions."
+    },
+    "predicted_observable": "CMB spectrum measured against a Planck blackbody at T_CMB; deviations parameterized as mu and y plus residual relative-intensity distortion.",
+    "bound_in_parameterization": "Upper bounds as quoted; PIXIE / PRISTINE proposals aim to improve by 3 orders of magnitude.",
+    "framework_inputs": [
+      "If the framework predicts any pre-recombination energy injection, compute its mu and y signatures.",
+      "Include photon-baryon thermalization timescales (Compton, double-Compton, bremsstrahlung)."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Fixsen et al., 'The cosmic microwave background spectrum from the full COBE FIRAS data set', ApJ 473, 576 (1996)",
+      "doi": "10.1086/178173"
+    },
+    {
+      "citation": "Chluba and Sunyaev, 'The evolution of CMB spectral distortions in the early universe', MNRAS 419, 1294 (2012)",
+      "arxiv": "1109.6552"
+    }
+  ],
+  "tags": ["cosmology", "cmb", "spectral_distortion", "energy_injection"]
+}

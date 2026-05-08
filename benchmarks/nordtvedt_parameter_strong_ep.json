@@ -1,0 +1,50 @@
+{
+  "id": "nordtvedt_parameter_strong_ep",
+  "name": "Strong equivalence principle (Nordtvedt effect)",
+  "kind": "principle_invariance",
+  "principle": "equivalence_principle",
+  "requirement": "Any candidate framework must respect the strong equivalence principle - that the gravitational binding energy of a body falls in an external gravitational field at the same rate as the rest of its mass-energy. This is tested by lunar laser ranging (Earth-Moon-Sun system, where Earth has ~5e-10 fractional gravitational self-energy) and by the triple system PSR J0337+1715 (a millisecond pulsar in a hierarchical triple with two white dwarfs).",
+  "regime": {
+    "length_m": 3.8e8,
+    "energy_ev": null,
+    "description": "Earth-Moon scale and stellar-binary scale; SEP test sensitivity grows with the gravitational self-energy of the test body."
+  },
+  "current_bound": {
+    "value": "eta_N = (-0.2 +/- 1.1) x 10^-13 (PSR J0337+1715); |eta_N| < 4.4 x 10^-4 (LLR)",
+    "uncertainty": null,
+    "units": "Nordtvedt parameter eta_N (dimensionless)",
+    "experiment": "Lunar Laser Ranging + millisecond pulsar PSR J0337+1715",
+    "year": 2018,
+    "reference": "Archibald et al., 'Universality of free fall from the orbital motion of a pulsar in a stellar triple system', Nature 559, 73 (2018), arXiv:1807.02059; Williams, Turyshev, Boggs, CQG 29, 184004 (2012), arXiv:1203.2150",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Many alternative theories of gravity (Brans-Dicke-style scalar-tensor with low Brans-Dicke parameter omega, f(R) without screening) predict eta_N > 0 at observable levels. The PSR J0337+1715 bound is six orders of magnitude tighter than LLR for gravitational self-energy ratios characteristic of neutron stars.",
+  "procedural": {
+    "parameterization": {
+      "name": "Nordtvedt parameter eta_N. In PPN: eta_N = 4 beta - gamma - 3 - (10/3) xi - alpha_1 + (2/3) alpha_2 - (2/3) zeta_1 - (1/3) zeta_2.",
+      "reference": "Will, Living Rev. Relativ. 17, 4 (2014), section 8.1.",
+      "summary": "SEP violation makes a body's gravitational mass m_g differ from its inertial mass m_i by a factor depending on its gravitational self-energy: m_g / m_i = 1 + eta_N (E_grav / m_i c^2)."
+    },
+    "predicted_observable": "Differential acceleration of a self-gravitating body in an external field, proportional to eta_N times its fractional gravitational self-energy.",
+    "bound_in_parameterization": "|eta_N| < ~3 x 10^-13 (PSR J0337+1715, dominant); |eta_N| < 4.4 x 10^-4 (LLR).",
+    "framework_inputs": [
+      "If the framework predicts SEP violation, compute eta_N either from the PPN parameter combination above, or directly from the dependence of the framework's gravitational self-energy contribution on the external potential."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Archibald et al., 'Universality of free fall from the orbital motion of a pulsar in a stellar triple system', Nature 559, 73 (2018)",
+      "arxiv": "1807.02059"
+    },
+    {
+      "citation": "Williams, Turyshev, Boggs, 'Lunar laser ranging tests of the equivalence principle', CQG 29, 184004 (2012)",
+      "arxiv": "1203.2150"
+    },
+    {
+      "citation": "Voisin et al., 'An improved test of the strong equivalence principle with the pulsar in a triple star system', A&A 638, A24 (2020)",
+      "arxiv": "2005.01388"
+    }
+  ],
+  "tags": ["gravity", "equivalence_principle", "ppn", "pulsar"]
+}

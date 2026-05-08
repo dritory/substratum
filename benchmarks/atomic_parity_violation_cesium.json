@@ -1,0 +1,50 @@
+{
+  "id": "atomic_parity_violation_cesium",
+  "name": "Atomic parity violation: weak charge of cesium",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the measured weak charge Q_W(133Cs) of cesium, the most precise low-energy test of the electroweak theory available outside collider experiments. Combined experimental and atomic-theory result Q_W(Cs) = -73.71 +/- 0.35 (Wood et al. + atomic-structure calculations) agrees with SM prediction Q_W^SM(Cs) = -73.23 +/- 0.01.",
+  "regime": {
+    "length_m": 1e-10,
+    "energy_ev": 1,
+    "description": "Atomic-scale physics with weak-neutral-current contribution. Sensitivity to TeV-scale Z' bosons and to electroweak loop corrections."
+  },
+  "current_bound": {
+    "value": -73.71,
+    "uncertainty": 0.35,
+    "units": "weak charge of (133)Cs (dimensionless)",
+    "experiment": "Boulder cesium APV (Wood et al. 1997) plus atomic-structure calculations (Dzuba et al., Porsev et al.)",
+    "year": 2012,
+    "reference": "Wood et al., 'Measurement of Parity Nonconservation and an Anomalous Anapole Moment in Cesium', Science 275, 1759 (1997); Dzuba, Berengut, Flambaum, Roberts, PRL 109, 203003 (2012), arXiv:1207.5864",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains Z'-mediated contributions to electron-quark neutral currents at the TeV scale. Sensitive to the running of the weak mixing angle from M_Z down to atomic scales (large logarithm). Currently most precise low-energy probe of electroweak couplings outside the Z resonance.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT semileptonic operators O_lq^(1), O_lu, O_ld, O_eq, O_eu, O_ed in their parity-violating combinations.",
+      "reference": "Erler and Su, Prog. Part. Nucl. Phys. 71, 119 (2013), arXiv:1303.5522.",
+      "summary": "Q_W = -2[Z(C_1u + 2 C_1d) + N(2 C_1u + C_1d)] in SM; SMEFT contributions appear as shifts in C_1u, C_1d."
+    },
+    "predicted_observable": "Q_W(Cs) extracted from parity-violating optical rotation in atomic transitions, divided by atomic-physics matrix elements computed by relativistic many-body theory.",
+    "bound_in_parameterization": "Constrains specific SMEFT Wilson-coefficient combinations at |C / Lambda^2| <~ (5 TeV)^-2.",
+    "framework_inputs": [
+      "Match framework onto SMEFT and read off C_1u, C_1d (electron-up and electron-down parity-violating couplings) at the atomic scale.",
+      "Sensitivity to running of sin^2(theta_W) from M_Z down to ~MeV scales."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Wood et al., 'Measurement of Parity Nonconservation and an Anomalous Anapole Moment in Cesium', Science 275, 1759 (1997)",
+      "doi": "10.1126/science.275.5307.1759"
+    },
+    {
+      "citation": "Dzuba, Berengut, Flambaum, Roberts, 'Revisiting parity nonconservation in cesium', PRL 109, 203003 (2012)",
+      "arxiv": "1207.5864"
+    },
+    {
+      "citation": "Erler and Su, 'The Weak Neutral Current', Prog. Part. Nucl. Phys. 71, 119 (2013)",
+      "arxiv": "1303.5522"
+    }
+  ],
+  "tags": ["electroweak", "parity_violation", "atomic_physics", "z_prime"]
+}

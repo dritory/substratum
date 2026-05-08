@@ -1,0 +1,46 @@
+{
+  "id": "dm_direct_detection_lz",
+  "name": "Direct-detection limits on WIMP-nucleon cross section (LZ, XENONnT)",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict a spin-independent WIMP-nucleon elastic-scattering cross section below the LUX-ZEPLIN (LZ) and XENONnT bounds. LZ 2024 sets sigma_SI < 9.2 x 10^-48 cm^2 at the most sensitive WIMP mass m_chi ~ 36 GeV. Spin-dependent bounds at the 10^-42 - 10^-41 cm^2 level depending on target nucleon.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 1e10,
+    "description": "Galactic-halo WIMP velocities (v ~ 10^-3 c), recoil energies keV; sensitive to dark-matter-quark or dark-matter-gluon couplings."
+  },
+  "current_bound": {
+    "value": 9.2e-48,
+    "uncertainty": null,
+    "units": "cm^2 (90% CL upper limit, sigma_SI at m_chi ~ 36 GeV)",
+    "experiment": "LUX-ZEPLIN (LZ) at SURF",
+    "year": 2024,
+    "reference": "LZ Collaboration, 'First Dark Matter Search Results from the LUX-ZEPLIN (LZ) Experiment', PRL 131, 041002 (2023), arXiv:2207.03764",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Closes large parts of the parameter space for thermal-relic WIMPs in the 10 GeV - 1 TeV range with electroweak-scale couplings: most natural SUSY neutralinos, generic Higgs-portal scalars, and Z'-mediated dark matter. Approaching the irreducible 'neutrino floor' from coherent solar/atmospheric/diffuse-supernova neutrino scattering.",
+  "procedural": {
+    "parameterization": {
+      "name": "Non-relativistic effective theory of DM-nucleon scattering: 14 operators (Anand-Fitzpatrick-Haxton) capturing all standard couplings; mapped to particle-physics models via SMEFT / DM-EFT matching.",
+      "reference": "Anand, Fitzpatrick, Haxton, PRC 89, 065501 (2014), arXiv:1308.6288; Goodman et al., PRD 82, 116010 (2010) (DM-EFT for colliders).",
+      "summary": "DM-nucleon scattering rate: R = (rho_chi / m_chi) * sigma_SI * <v> * eta(v_min), with sigma_SI converted from particle-level cross section via Helm form factor."
+    },
+    "predicted_observable": "Recoil-energy spectrum dR/dE in xenon, expressed as sigma_SI(m_chi) at fixed momentum transfer.",
+    "bound_in_parameterization": "Operator-dependent. Standard SI: sigma_SI < 9.2 x 10^-48 cm^2 at 36 GeV.",
+    "framework_inputs": [
+      "If the framework includes a stable DM particle with mass and couplings to quarks/gluons, compute sigma_SI(m_chi) using DM-EFT matching.",
+      "Include nuclear form factors (Helm, or shell-model) for spin-dependent couplings."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "LZ Collaboration, 'First Dark Matter Search Results from the LUX-ZEPLIN (LZ) Experiment', PRL 131, 041002 (2023)",
+      "arxiv": "2207.03764"
+    },
+    {
+      "citation": "XENONnT Collaboration, 'First Dark Matter Search with Nuclear Recoils from the XENONnT Experiment', PRL 131, 041003 (2023)",
+      "arxiv": "2303.14729"
+    }
+  ],
+  "tags": ["dark_matter", "wimp", "direct_detection", "xenon"]
+}

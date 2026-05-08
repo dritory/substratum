@@ -1,0 +1,46 @@
+{
+  "id": "r_k_lepton_universality",
+  "name": "Lepton universality in b -> s l+ l- transitions: R(K), R(K*)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the LHCb 2022 measurements of R(K) = Br(B+ -> K+ mu+ mu-)/Br(B+ -> K+ e+ e-) and R(K*) = Br(B0 -> K*0 mu+ mu-)/Br(B0 -> K*0 e+ e-), now consistent with SM prediction (~1.0) after the long-standing 3.1 sigma anomaly was reanalyzed with improved electron-channel reconstruction.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 5.28e9,
+    "description": "B-meson decays via the b -> s l+ l- electroweak penguin / box; sensitive to TeV-scale BSM contributions to the Wilson coefficients C_9, C_10."
+  },
+  "current_bound": {
+    "value": "R(K) = 0.949 +/- 0.041 (low-q^2), 0.949 +/- 0.041 (central-q^2); R(K*) = 0.927 +/- 0.087 (low-q^2), 1.027 +/- 0.072 (central-q^2)",
+    "uncertainty": null,
+    "units": "ratio (dimensionless)",
+    "experiment": "LHCb full Run 1 + Run 2 reanalysis",
+    "year": 2023,
+    "reference": "LHCb Collaboration, 'Measurement of lepton universality parameters in B+ -> K+ l+ l- and B0 -> K*0 l+ l- decays', PRD 108, 032002 (2023), arXiv:2212.09153",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Earlier hints of LFU violation in R(K), R(K*) at ~3 sigma motivated whole classes of BSM (Z' models, leptoquarks, scalar mediators) tuned to give muon-electron asymmetry. The 2022 LHCb update brought R(K), R(K*) back to SM consistency. Surviving anomalies are now in angular observables (P_5') and in Br(B_s -> phi mu mu), where SM agreement remains contested due to hadronic uncertainties.",
+  "procedural": {
+    "parameterization": {
+      "name": "Weak effective theory (WET) at the b-quark scale: Wilson coefficients C_9^(l), C_10^(l), and (right-handed) C_9'^(l), C_10'^(l) for each lepton flavor.",
+      "reference": "Buchalla, Buras, Lautenbacher, RMP 68, 1125 (1996); Altmannshofer, Stangl, EPJC 81, 952 (2021), arXiv:2103.13370 (post-2021 fit).",
+      "summary": "R(K), R(K*) are sensitive to the difference C_9^mu - C_9^e and C_10^mu - C_10^e. Hadronic form factors largely cancel in the ratio."
+    },
+    "predicted_observable": "R(K, K*) = integral |amplitude|^2 over q^2 bin, ratio of muon to electron channels. SM predicts 1 to ~1% precision below threshold corrections.",
+    "bound_in_parameterization": "|C_9^mu - C_9^mu^SM|, |C_10^mu - C_10^mu^SM| consistent with 0 within ~10% at this point.",
+    "framework_inputs": [
+      "Match framework onto WET; compute Wilson coefficients C_9, C_10 for muon and electron channels separately.",
+      "Standard tools: flavio, EOS, Wilson coefficient global fitter (smelli)."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "LHCb Collaboration, 'Measurement of lepton universality parameters in B+ -> K+ l+ l- and B0 -> K*0 l+ l- decays', PRD 108, 032002 (2023)",
+      "arxiv": "2212.09153"
+    },
+    {
+      "citation": "Altmannshofer and Stangl, 'New physics in rare B decays after Moriond 2021', EPJC 81, 952 (2021)",
+      "arxiv": "2103.13370"
+    }
+  ],
+  "tags": ["flavor", "b_meson", "lfu", "weak_effective_theory"]
+}

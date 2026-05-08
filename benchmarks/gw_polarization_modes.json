@@ -1,0 +1,45 @@
+{
+  "id": "gw_polarization_modes",
+  "name": "GW polarization is dominantly tensor (+, x)",
+  "kind": "principle_invariance",
+  "principle": "lorentz_invariance",
+  "requirement": "Any candidate framework must predict that gravitational waves carry primarily the two transverse-traceless tensor polarizations (+ and x) of GR, not pure scalar (breathing or longitudinal) or pure vector modes. The Bayesian comparison from GW170814 (a three-detector event) strongly favors pure tensor over pure scalar (Bayes factor > 200) and pure vector (Bayes factor > 1000).",
+  "regime": {
+    "length_m": 1e25,
+    "energy_ev": 4e-13,
+    "description": "GW propagation from binary black hole mergers at hundreds of Mpc."
+  },
+  "current_bound": {
+    "value": "Bayes factor > 200 favoring pure tensor over pure scalar; > 1000 over pure vector",
+    "uncertainty": null,
+    "units": "dimensionless Bayes factor",
+    "experiment": "LIGO/Virgo three-detector network on GW170814",
+    "year": 2017,
+    "reference": "Abbott et al. (LVC), 'GW170814: A Three-Detector Observation of Gravitational Waves from a Binary Black Hole Coalescence', PRL 119, 141101 (2017), arXiv:1709.09660",
+    "confidence_level": "Bayes factor stated"
+  },
+  "what_it_excludes": "Pure scalar-tensor theories (Brans-Dicke alone) predict significant scalar GW component and are excluded. Mixed theories must keep non-tensor modes subdominant. With more multi-detector events, GWTC-3 places quantitative bounds on each polarization mode separately.",
+  "procedural": {
+    "parameterization": {
+      "name": "GR predicts 2 polarizations (+, x). General metric theories admit up to 6: tensor (+, x), vector (x, y), scalar (breathing, longitudinal). Eardley-Lee-Lightman E(2) classification.",
+      "reference": "Eardley, Lee, Lightman, PRL 30, 884 (1973); Will, Living Rev. Relativ. 17, 4 (2014).",
+      "summary": "Six possible polarization modes; GR populates only two. Multi-detector networks measure the relative amplitude of each."
+    },
+    "predicted_observable": "Decomposition of the strain h_ij into + , x, x, y, breathing, longitudinal components, measured as relative amplitudes in a multi-detector network.",
+    "bound_in_parameterization": "Pure tensor strongly favored. Mixed-mode bounds tighten with each new event.",
+    "framework_inputs": [
+      "Compute the polarization content of GW emitted by a generic compact-binary inspiral in the framework. Confront the predicted mode decomposition with multi-detector data."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Abbott et al. (LVC), 'GW170814: A Three-Detector Observation of Gravitational Waves from a Binary Black Hole Coalescence', PRL 119, 141101 (2017)",
+      "arxiv": "1709.09660"
+    },
+    {
+      "citation": "Eardley, Lee, Lightman, 'Gravitational-Wave Observations as a Tool for Testing Relativistic Gravity', PRL 30, 884 (1973)"
+    }
+  ],
+  "tags": ["gravity", "gravitational_waves", "polarization", "modified_gravity"]
+}

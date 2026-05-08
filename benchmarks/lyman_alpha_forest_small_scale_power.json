@@ -1,0 +1,46 @@
+{
+  "id": "lyman_alpha_forest_small_scale_power",
+  "name": "Lyman-alpha forest constraints on small-scale matter power",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the observed small-scale matter power spectrum P(k) at k ~ 1-10 h/Mpc as inferred from the Lyman-alpha forest of high-z quasars (z ~ 2-5). The data probe the smallest scales constrained by cosmological observations and rule out warm-dark-matter masses below ~5.3 keV (thermal-relic equivalent, 95% CL).",
+  "regime": {
+    "length_m": 5e22,
+    "energy_ev": null,
+    "description": "Mpc-scale density fluctuations imprinted on the inter-galactic medium hydrogen at z = 2-5."
+  },
+  "current_bound": {
+    "value": "m_WDM > 5.3 keV (thermal-relic-equivalent, 95% CL); equivalent fuzzy-DM mass m_FDM > 2 x 10^-21 eV",
+    "uncertainty": null,
+    "units": "keV (WDM); eV (FDM)",
+    "experiment": "XQ-100 + HIRES Lyman-alpha forest",
+    "year": 2017,
+    "reference": "Irsic et al., 'New Constraints on the free-streaming of warm dark matter from intermediate and small scale Lyman-alpha forest data', PRD 96, 023522 (2017), arXiv:1702.01764",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Excludes warm-dark-matter scenarios with m < 5 keV thermal-relic equivalent, including most sterile-neutrino dark matter produced via Dodelson-Widrow oscillations. Constrains fuzzy / ultralight dark matter masses below ~10^-21 eV. Forces any successful DM candidate to behave essentially like CDM down to galaxy scales.",
+  "procedural": {
+    "parameterization": {
+      "name": "Suppression of the linear matter power spectrum on small scales: P(k) -> T(k)^2 P_CDM(k), with transfer function T(k) parameterized by a free-streaming or de Broglie scale k_FS or k_dB.",
+      "reference": "Viel, Becker, Bolton, Haehnelt, PRD 88, 043502 (2013); Hui, Ostriker, Tremaine, Witten, PRD 95, 043541 (2017) (FDM).",
+      "summary": "Hydrodynamic simulations + flux-power-spectrum modeling extract Plinear(k); compared to framework's prediction."
+    },
+    "predicted_observable": "1D flux power spectrum P_F(k) of Lyman-alpha forest; deconvolved into linear matter power via simulations.",
+    "bound_in_parameterization": "T(k = 10 h/Mpc) > 0.6, equivalently DM with free-streaming length < ~Mpc.",
+    "framework_inputs": [
+      "Compute the framework's linear matter power spectrum at small scales, including any new free-streaming or wave-like behavior.",
+      "Hydrodynamic-simulation comparison required for absolute predictions; a framework provides P_lin(k), and existing simulations propagate to P_F(k)."
+    ],
+    "evaluator_status": "requires_simulation"
+  },
+  "primary_references": [
+    {
+      "citation": "Irsic et al., 'New Constraints on the free-streaming of warm dark matter from intermediate and small scale Lyman-alpha forest data', PRD 96, 023522 (2017)",
+      "arxiv": "1702.01764"
+    },
+    {
+      "citation": "Rogers and Peiris, 'Strong Bound on Canonical Ultralight Axion Dark Matter from the Lyman-Alpha Forest', PRL 126, 071302 (2021)",
+      "arxiv": "2007.12705"
+    }
+  ],
+  "tags": ["cosmology", "dark_matter", "warm_dark_matter", "lyman_alpha", "small_scale"]
+}

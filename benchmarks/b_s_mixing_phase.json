@@ -1,0 +1,50 @@
+{
+  "id": "b_s_mixing_phase",
+  "name": "B_s - B_s_bar mixing phase phi_s",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the measured CP-violating phase in B_s - B_s_bar mixing, phi_s = -2 beta_s, as extracted primarily from B_s -> J/psi phi at LHCb. The SM prediction (from CKM-fit beta_s) is small and negative; the LHCb 2024 update phi_s = -0.039 +/- 0.022 rad agrees with SM at 1 sigma.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 5.37e9,
+    "description": "B_s system; sensitive to TeV-scale BSM contributions to the B_s mixing box diagrams."
+  },
+  "current_bound": {
+    "value": -0.039,
+    "uncertainty": 0.022,
+    "units": "radians",
+    "experiment": "LHCb (B_s -> J/psi phi, J/psi pi+ pi-, etc.)",
+    "year": 2024,
+    "reference": "LHCb Collaboration, 'Measurement of the time-dependent CP asymmetries in B_s -> J/psi K+ K- decays', PRL 132, 051802 (2024), arXiv:2308.01468",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Bounds new CP-violating contributions to B_s mixing at the TeV scale: |delta phi_s^NP| < 50 mrad. Constrains generic 4th-generation, leptoquark, and SUSY contributions; very little room remains for large new CP phases in this sector.",
+  "procedural": {
+    "parameterization": {
+      "name": "Weak effective theory at scale m_b: Wilson coefficients C_1, ..., C_5 for the four-quark Delta B = 2 operators.",
+      "reference": "Buras, Misiak, Urban, NPB 586, 397 (2000); Lenz and Nierste, JHEP 0706, 072 (2007), hep-ph/0612167.",
+      "summary": "phi_s = arg(M_12), with M_12 the off-diagonal element of the B_s mass matrix. SM contribution dominated by W-top box; BSM contributions encoded as Delta C_1^NP."
+    },
+    "predicted_observable": "Time-dependent CP asymmetry in B_s -> J/psi phi, sin(2 beta_s) extracted from the interference between mixing and decay.",
+    "bound_in_parameterization": "|Delta C_1^NP| < ~0.1 in standard normalization (TeV new physics with O(1) couplings excluded).",
+    "framework_inputs": [
+      "Match framework onto Delta B = 2 effective theory; compute Wilson coefficients including all 5 LR operators.",
+      "Standard lattice matrix elements (Fermilab/MILC, RBC/UKQCD) needed for absolute predictions."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "LHCb Collaboration, 'Measurement of the time-dependent CP asymmetries in B_s -> J/psi K+ K- decays', PRL 132, 051802 (2024)",
+      "arxiv": "2308.01468"
+    },
+    {
+      "citation": "Lenz and Nierste, 'Theoretical update of B_s - B_s_bar mixing', JHEP 0706, 072 (2007)",
+      "arxiv": "hep-ph/0612167"
+    },
+    {
+      "citation": "UTfit Collaboration, 'New UTfit Analysis of the Unitarity Triangle in the Cabibbo-Kobayashi-Maskawa scheme', Rendiconti Lincei 34, 37 (2023)",
+      "arxiv": "2212.03894"
+    }
+  ],
+  "tags": ["flavor", "b_meson", "cp_violation", "mixing"]
+}

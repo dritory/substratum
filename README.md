@@ -95,28 +95,32 @@ expose to be evaluated, and an `evaluator_status` flag indicating how
 hard the evaluation is (`trivial` / `tractable` / `requires_code` /
 `requires_simulation` / `requires_lattice` / `research_problem`).
 
-| ID | Kind | Parameterization | Excludes |
-|----|------|------------------|----------|
-| `recover_general_relativity` | reduction | PPN + PPK + TIGER | unscreened modified-gravity at solar-system scale |
-| `recover_standard_model_precision` | reduction | SMEFT (Warsaw) | sub-TeV new physics above current precision |
-| `graviton_speed_gw170817` | precision_test | direct (c_gw − c)/c | most scalar/vector-tensor dark-energy models |
-| `equivalence_principle_microscope` | principle | Eötvös η + dilaton charge | composition-dependent fifth forces above η ~ 10⁻¹⁵ |
-| `antihydrogen_gravity_alpha_g` | principle | a_g̅/g + grav. SME | antimatter antigravity |
-| `lorentz_invariance_photon` | principle | SME photon sector | linear-in-E LIV near M_Planck |
-| `inverse_square_law_short_distance` | precision_test | Yukawa (α, λ) | mm-scale large extra dimensions |
-| `bullet_cluster_lensing_offset` | cosmological | lensing-vs-gas offset | pure modified-gravity-without-DM |
-| `proton_decay_lifetime` | forbidden | M_GUT, BNV SMEFT | minimal SU(5), most minimal SO(10) GUTs |
-| `neutron_electric_dipole_moment` | forbidden | θ_QCD + SMEFT CP | many TeV-SUSY phases; large strong-CP phase |
-| `electron_edm_jila` | forbidden | SMEFT C_eγ + Barr-Zee | leptonic CP violation at TeV |
-| `alpha_variation_atomic_clocks` | precision_test | α̇/α + dilaton d_e | rolling moduli, ULDM photon coupling |
-| `bbn_light_element_abundances` | cosmological | η, N_eff + nuclear network | early-universe ΔN_eff > ~0.3 |
-| `cmb_acoustic_peak_structure` | cosmological | ΛCDM + extensions | drastic recombination physics, large EDE |
-| `address_open_tensions` | tension_to_address | links to `data/` | "fix one tension, ignore the others" |
+44 benchmark entries across 11 domains. Every entry is backed by
+primary literature (arXiv / DOI). See `ROADMAP.md` for the full
+populated list and remaining additions.
 
-See `ROADMAP.md` for the inventory of constraints we have identified
-but not yet populated (~30 more, covering extended PPN, B-meson and
-kaon flavor physics, Lorentz/CPT in matter sectors, primordial GW
-ratio, dark-matter direct detection, pulsar timing arrays, and more).
+**Domain coverage:**
+
+| Domain | Entries | Canonical parameterizations |
+|--------|---------|------------------------------|
+| Gravity (PPN, GW, EP) | 12 | PPN, PPK, TIGER, Yukawa, SME-grav |
+| Particle precision (QED) | 4 | SMEFT (Warsaw), bound-state QED |
+| Flavor and CP violation | 10 | WET, CKM, SMEFT CP-odd |
+| Weak / EW precision | 3 | SMEFT, Peskin-Takeuchi S/T/U |
+| Lorentz / CPT | 4 | SME (photon, meson, lepton sectors) |
+| Cosmology | 7 | ΛCDM + extensions, Boltzmann codes |
+| Dark matter | 5 | DM-EFT, SIDM, axion couplings |
+| QCD | 3 | Lattice QCD, χPT |
+| Astrophysics | 3 | TOV, helioseismic inversion |
+| Constants / clocks | 1 | dilaton d_e, ULDM |
+| Meta | 1 | links to `data/` |
+
+The procedural block makes each constraint executable in principle.
+For `trivial` and `tractable` cases (graviton speed, EP, m_W, S/T/U,
+PPN parameters, axion-photon coupling), evaluation against a candidate
+framework is a one-liner; for `requires_simulation` (CMB, BBN, LSS,
+Lyman-α, helioseismology), the framework needs to be implemented as a
+module in CLASS / CAMB / PArthENoPE / GARSTEC.
 
 ## Roadmap
 

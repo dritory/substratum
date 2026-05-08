@@ -1,0 +1,44 @@
+{
+  "id": "binary_pulsar_psr_j0737_3039",
+  "name": "Double pulsar PSR J0737-3039A/B precision tests",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must pass the multi-parameter consistency tests provided by the unique double-pulsar system PSR J0737-3039A/B, in which both neutron stars are observed as pulsars. Seven post-Keplerian parameters and the mass ratio give six independent tests of GR; all consistent at the 0.05% level on the most stringent, P_b_dot.",
+  "regime": {
+    "length_m": 1.3e9,
+    "energy_ev": null,
+    "description": "Double-neutron-star binary, orbital period 2.45 hours, eccentricity 0.088, inclination ~89 degrees (nearly edge-on)."
+  },
+  "current_bound": {
+    "value": "P_b_dot_obs / P_b_dot_GR = 0.99963 +/- 0.00063; Shapiro delay shape s = 0.99977 +/- 0.00010",
+    "uncertainty": null,
+    "units": "fractional ratio (dimensionless)",
+    "experiment": "Long-term timing at Parkes, Green Bank, Westerbork, MeerKAT",
+    "year": 2021,
+    "reference": "Kramer et al., 'Strong-field Gravity Tests with the Double Pulsar', PRX 11, 041050 (2021), arXiv:2112.06795",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Provides the most precise strong-field test of GR currently available, including bounds on dipolar GW emission, gravitomagnetism, and Lense-Thirring precession of the orbital plane. Constrains scalar-tensor theories and effective-field-theory deviations from GR with unprecedented precision in the strong-field regime.",
+  "procedural": {
+    "parameterization": {
+      "name": "Parameterized Post-Keplerian, with seven measured parameters: omega_dot, gamma_PPK, r, s (Shapiro), P_b_dot, and the Damour-Schaefer mass ratio R = m_A/m_B from observing both pulsars.",
+      "reference": "Damour and Deruelle, Ann. Inst. H. Poincare A 44, 263 (1986); Damour and Taylor, PRD 45, 1840 (1992); Kramer et al., PRX 11, 041050 (2021).",
+      "summary": "Both component masses are over-determined by the seven PPK observables, providing six independent consistency tests of GR."
+    },
+    "predicted_observable": "Each PPK parameter has a closed-form GR prediction in (m_A, m_B, K, e). The framework must reproduce all seven simultaneously.",
+    "bound_in_parameterization": "Tightest single test: P_b_dot agreement at 0.063%. Combined chi^2 across all PPK parameters provides the cleanest existing bound on strong-field deviations from GR.",
+    "framework_inputs": [
+      "All inputs from binary_pulsar_psr_b1913_16, plus the framework's prediction for the Shapiro time delay shape s (sensitive to gamma) and for the relativistic spin-orbit precession of pulsar B."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Kramer et al., 'Strong-field Gravity Tests with the Double Pulsar', PRX 11, 041050 (2021)",
+      "arxiv": "2112.06795"
+    },
+    {
+      "citation": "Burgay et al., 'An increased estimate of the merger rate of double neutron stars from observations of a highly relativistic system', Nature 426, 531 (2003)"
+    }
+  ],
+  "tags": ["gravity", "pulsar", "ppk", "strong_field", "shapiro_delay"]
+}

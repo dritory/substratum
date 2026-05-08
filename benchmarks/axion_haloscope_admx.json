@@ -1,0 +1,50 @@
+{
+  "id": "axion_haloscope_admx",
+  "name": "QCD axion couplings from haloscope and helioscope searches",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting an axion-like particle as dark matter must respect ADMX, HAYSTAC, CAPP, and helioscope (CAST) bounds on the axion-photon coupling g_a_gamma_gamma. ADMX has excluded the QCD-axion DFSZ and KSVZ benchmark couplings in narrow mass windows from 2.66 to ~4.2 microeV.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 3e-6,
+    "description": "MicroeV-mass axion dark matter with photon coupling testable in cavity haloscopes; helioscope reaches up to keV-scale axions from solar production."
+  },
+  "current_bound": {
+    "value": "ADMX: g_a_gamma_gamma < ~3e-16 GeV^-1 in the 2.66 - 4.2 microeV range, KSVZ benchmark excluded; CAST: g_a_gamma_gamma < 6.6 x 10^-11 GeV^-1 for m_a < 0.02 eV",
+    "uncertainty": null,
+    "units": "GeV^-1",
+    "experiment": "ADMX and CAST",
+    "year": 2024,
+    "reference": "ADMX Collaboration, 'Extended Search for the Invisible Axion with the Axion Dark Matter Experiment', PRL 124, 101303 (2020), arXiv:1910.08638; CAST Collaboration, Nature Phys. 13, 584 (2017)",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Constrains QCD axion (DFSZ and KSVZ couplings) and axion-like-particle dark matter in specific mass ranges. Combined with ADMX-G2, HAYSTAC, ABRACADABRA, DMRadio, BREAD, MADMAX, and CAPP, the next decade will close most natural QCD axion parameter space from 0.1 microeV to 10 eV.",
+  "procedural": {
+    "parameterization": {
+      "name": "Axion-photon coupling g_a_gamma_gamma in the Lagrangian L = (g_a_gamma_gamma / 4) a F F_tilde. QCD axion: g_a_gamma_gamma = (alpha / 2 pi f_a) * (E/N - 1.92), with model-dependent E/N (DFSZ: 8/3; KSVZ: 0).",
+      "reference": "Sikivie, PRL 51, 1415 (1983) (haloscope concept); GrahamGCpk, Irastorza, Lamoreaux, Lindner, van Bibber, Annu. Rev. Nucl. Part. Sci. 65, 485 (2015).",
+      "summary": "Haloscope rate = power converted from DM oscillation to photons in a tunable resonant cavity. CAST searches for solar-produced axions converting to X-rays in a magnetic field."
+    },
+    "predicted_observable": "Cavity power deposit at frequency m_a c^2 / h (haloscope) or X-ray flux from sun (helioscope).",
+    "bound_in_parameterization": "QCD axion line in (m_a, g_a_gamma_gamma) plane; bounds tighten across the QCD axion band at sub-microeV to eV masses.",
+    "framework_inputs": [
+      "If the framework includes a QCD axion or ALP, compute g_a_gamma_gamma at the relevant mass.",
+      "Include axion-electron and axion-nucleon couplings for non-photon channels."
+    ],
+    "evaluator_status": "trivial"
+  },
+  "primary_references": [
+    {
+      "citation": "ADMX Collaboration, 'Extended Search for the Invisible Axion with the Axion Dark Matter Experiment', PRL 124, 101303 (2020)",
+      "arxiv": "1910.08638"
+    },
+    {
+      "citation": "CAST Collaboration, 'New CAST Limit on the Axion-Photon Interaction', Nature Phys. 13, 584 (2017)",
+      "doi": "10.1038/nphys4109"
+    },
+    {
+      "citation": "Irastorza and Redondo, 'New experimental approaches in the search for axion-like particles', Prog. Part. Nucl. Phys. 102, 89 (2018)",
+      "arxiv": "1801.08127"
+    }
+  ],
+  "tags": ["dark_matter", "axion", "haloscope", "helioscope"]
+}

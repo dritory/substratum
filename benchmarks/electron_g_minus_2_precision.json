@@ -1,0 +1,49 @@
+{
+  "id": "electron_g_minus_2_precision",
+  "name": "Electron anomalous magnetic moment (cleanest QED test)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the measured electron anomalous magnetic moment a_e = (g_e - 2)/2 to its experimental precision of ~13 significant figures. The Northwestern 2023 measurement gives a_e = 1.15965218059(13) x 10^-3, the most precisely measured fundamental quantity in physics.",
+  "regime": {
+    "length_m": 3.86e-13,
+    "energy_ev": 5.11e5,
+    "description": "Electron Compton wavelength; QED at energies <<EWSB scale."
+  },
+  "current_bound": {
+    "value": "1.15965218059e-3",
+    "uncertainty": "0.13e-12 (relative ~1.1e-10)",
+    "units": "dimensionless",
+    "experiment": "Single-electron Penning trap (Gabrielse group, Northwestern)",
+    "year": 2023,
+    "reference": "Fan, Myers, Sukra, Gabrielse, 'Measurement of the Electron Magnetic Moment', PRL 130, 071801 (2023), arXiv:2209.13084",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Any framework modifying QED below the electroweak scale at relative precision better than ~10^-10 fails this test. The current ~2.4 sigma discrepancy between SM predictions using alpha measured by Cs-recoil interferometry vs Rb-recoil interferometry is a tension in the determination of alpha, NOT in QED itself, but any candidate framework affecting either QED or alpha-determining atomic physics has to address it.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT dipole operator C_egamma at electron flavor index, plus the structure of QED at five-loop accuracy. The SM calculation uses alpha from Cs or Rb atom interferometry as input.",
+      "reference": "Aoyama, Kinoshita, Nio, 'Theory of the Anomalous Magnetic Moment of the Electron', Atoms 7, 28 (2019); Morel et al., Nature 588, 61 (2020) (Rb alpha); Parker et al., Science 360, 191 (2018) (Cs alpha).",
+      "summary": "Any deviation enters as Im(C_egamma^11) / Lambda^2 (BSM dipole) plus uncertainty in alpha that propagates into a_e^SM."
+    },
+    "predicted_observable": "a_e = a_e^QED(alpha) + a_e^EW + a_e^had + delta a_e^BSM, with delta a_e^BSM = (m_e v / sqrt(2)) Re(C_egamma^11) / Lambda^2.",
+    "bound_in_parameterization": "|delta a_e^BSM| < ~3 x 10^-13 (from experimental precision plus theory uncertainty including alpha).",
+    "framework_inputs": [
+      "Predicted modification to the electron magnetic dipole, in SMEFT or directly. If the framework affects atomic physics relevant to alpha-determination (Cs or Rb recoil), include that contribution."
+    ],
+    "evaluator_status": "trivial"
+  },
+  "primary_references": [
+    {
+      "citation": "Fan, Myers, Sukra, Gabrielse, 'Measurement of the Electron Magnetic Moment', PRL 130, 071801 (2023)",
+      "arxiv": "2209.13084"
+    },
+    {
+      "citation": "Aoyama, Kinoshita, Nio, 'Theory of the Anomalous Magnetic Moment of the Electron', Atoms 7, 28 (2019)",
+      "doi": "10.3390/atoms7010028"
+    },
+    {
+      "citation": "Morel et al., 'Determination of the fine-structure constant with an accuracy of 81 parts per trillion', Nature 588, 61 (2020)",
+      "doi": "10.1038/s41586-020-2964-7"
+    }
+  ],
+  "tags": ["qed", "precision", "anomalous_moment", "alpha_determination"]
+}

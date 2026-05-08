@@ -1,0 +1,50 @@
+{
+  "id": "hydrogen_1s_2s_transition",
+  "name": "Hydrogen 1S-2S two-photon transition",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the hydrogen 1S-2S transition frequency, the most precisely measured atomic transition. Parthey et al. 2011 measured f(1S-2S) = 2,466,061,413,187,035(10) Hz, fractional precision ~4.2 x 10^-15. SM prediction agrees within current proton-radius uncertainty.",
+  "regime": {
+    "length_m": 5.29e-11,
+    "energy_ev": 10.2,
+    "description": "Atomic hydrogen, optical transition; sensitivity to QED vacuum polarization, nuclear structure, and any new electron-proton interaction."
+  },
+  "current_bound": {
+    "value": "f_1S2S = 2466061413187035 Hz",
+    "uncertainty": "10 Hz (4.2e-15 fractional)",
+    "units": "Hz",
+    "experiment": "Hydrogen frequency comb spectroscopy, Garching",
+    "year": 2011,
+    "reference": "Parthey et al., 'Improved Measurement of the Hydrogen 1S-2S Transition Frequency', PRL 107, 203001 (2011), arXiv:1107.3101",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Any new long-range electron-proton interaction, modification of the Coulomb potential, or shift in QED vacuum-polarization corrections at the few-Hz level (i.e. fractional 10^-15) is excluded. Combined with hydrogen 2S-2P and muonic-hydrogen Lamb-shift measurements, sets the proton charge radius and tests bound-state QED at extreme precision.",
+  "procedural": {
+    "parameterization": {
+      "name": "Bound-state QED with input parameters R_infinity, alpha, m_e, m_p, and proton charge radius r_p; plus optional new physics encoded as modifications to the e-p potential (Yukawa, dilaton, dark photon).",
+      "reference": "Beyer et al., Science 358, 79 (2017); CODATA recommended values; Karshenboim, PRD 73, 075024 (2006).",
+      "summary": "The 1S-2S frequency depends on these parameters with calculable QED corrections through alpha^7 m_e c^2 / h."
+    },
+    "predicted_observable": "f_1S2S = (3/4) c R_infinity * (1 + alpha^2 corrections + finite-nuclear-size corrections + QED radiative corrections).",
+    "bound_in_parameterization": "Any new e-p interaction with strength alpha' Yukawa range > 10^-10 m must satisfy |alpha' / alpha| < ~10^-10.",
+    "framework_inputs": [
+      "If the framework modifies QED, predict the resulting shift in f_1S2S.",
+      "If the framework introduces new e-p interactions, compute the matrix element <1S-2S| V_new |1S-2S>."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Parthey et al., 'Improved Measurement of the Hydrogen 1S-2S Transition Frequency', PRL 107, 203001 (2011)",
+      "arxiv": "1107.3101"
+    },
+    {
+      "citation": "Matveev et al., 'Precision Measurement of the Hydrogen 1S-2S Frequency via a 920-km Fiber Link', PRL 110, 230801 (2013)",
+      "doi": "10.1103/PhysRevLett.110.230801"
+    },
+    {
+      "citation": "Beyer et al., 'The Rydberg constant and proton size from atomic hydrogen', Science 358, 79 (2017)",
+      "doi": "10.1126/science.aah6677"
+    }
+  ],
+  "tags": ["qed", "precision", "spectroscopy", "atomic_physics", "proton_radius"]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "vacuum_birefringence_polarization",
+  "name": "Vacuum birefringence from astrophysical polarization",
+  "kind": "principle_invariance",
+  "principle": "lorentz_invariance",
+  "requirement": "Any candidate framework must respect the absence of significant vacuum birefringence in photon propagation, as constrained by polarization observations of distant astrophysical sources. Linear polarization of gamma-ray bursts and active galactic nuclei sets bounds on CPT-odd Lorentz-violating photon couplings (k_AF) at |k_AF| < 10^-43 GeV.",
+  "regime": {
+    "length_m": 1e26,
+    "energy_ev": 1e3,
+    "description": "Cosmological photon propagation distances; from radio polarimetry of AGN to optical polarization of GRBs."
+  },
+  "current_bound": {
+    "value": "|k_AF| < 1e-43 GeV; CPT-even coefficients |(k_F)| < 10^-37 to 10^-32 depending on direction",
+    "uncertainty": null,
+    "units": "GeV (k_AF); dimensionless (k_F)",
+    "experiment": "Polarization measurements of high-redshift sources (AGN, GRBs) collated in Kostelecky-Russell SME data tables",
+    "year": 2008,
+    "reference": "Kostelecky and Mewes, 'Astrophysical Tests of Lorentz and CPT Violation with Photons', ApJ 689, L1 (2008), arXiv:0809.2846; Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', RMP 83, 11 (2011), updated annually at arXiv:0801.0287",
+    "confidence_level": "varies; 95% CL typical"
+  },
+  "what_it_excludes": "Astrophysical polarization complements GRB-dispersion bounds (lorentz_invariance_photon entry) by constraining different SME coefficients. Vacuum birefringence would rotate polarization position angles in an energy-dependent way; the absence of such effects in distant sources rules out CPT-violating photon couplings at the 10^-43 GeV level.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard Model Extension photon sector: CPT-odd 4-vector (k_AF)^kappa and CPT-even tensor (k_F)^kappa lambda mu nu coefficients.",
+      "reference": "Kostelecky and Mewes, PRD 66, 056005 (2002), arXiv:hep-ph/0205211; Kostelecky and Russell, RMP 83, 11 (2011).",
+      "summary": "Modifications of Maxwell equations parameterized by (k_AF), (k_F). Vacuum birefringence enters through the CPT-even tensor's parity-odd components."
+    },
+    "predicted_observable": "Energy-dependent polarization rotation phi(E) = (k_AF)^0 * L * E for CPT-odd; energy-dependent ellipticity for CPT-even effects.",
+    "bound_in_parameterization": "|k_AF^kappa| < 10^-43 GeV. Direction-dependent coefficients tabulated in arXiv:0801.0287.",
+    "framework_inputs": [
+      "Modified photon dispersion / propagation derived from the framework's effective electromagnetic Lagrangian.",
+      "Decomposition into SME coefficients via standard formulas."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Kostelecky and Mewes, 'Astrophysical Tests of Lorentz and CPT Violation with Photons', ApJ 689, L1 (2008)",
+      "arxiv": "0809.2846"
+    },
+    {
+      "citation": "Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', RMP 83, 11 (2011); updated annually",
+      "arxiv": "0801.0287"
+    }
+  ],
+  "tags": ["lorentz", "cpt", "photons", "sme", "polarization"]
+}

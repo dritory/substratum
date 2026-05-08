@@ -1,0 +1,38 @@
+{
+  "id": "lattice_qcd_hadron_spectrum",
+  "name": "Light hadron spectrum from lattice QCD",
+  "kind": "reduction",
+  "requirement": "Any candidate framework that includes QCD must reproduce the light-hadron spectrum (pion, kaon, proton, neutron, omega, ...) obtained from first-principles lattice QCD. The 2008 BMW result (Durr et al.) computed the masses of the lightest baryons from QCD with QED inputs only (m_u, m_d, m_s, alpha_s) and reproduced experimental values to ~1-2%.",
+  "recovered_theory": "QCD",
+  "limit": "Hadronic energies; few-quark bound states.",
+  "regime": {
+    "length_m": 1e-15,
+    "energy_ev": 1e9,
+    "description": "Strong-coupling QCD at the confinement scale; first-principles non-perturbative calculation."
+  },
+  "what_it_excludes": "Any framework that claims to replace QCD as the strong-interaction sector must reproduce these confinement-scale predictions. Lattice QCD has now matured to the point where the entire light-hadron spectrum, decay constants, and form factors are calculable with controlled uncertainties.",
+  "procedural": {
+    "parameterization": {
+      "name": "Lattice QCD: discretize Euclidean QCD on a 4D space-time lattice with finite spacing a; take continuum limit a -> 0 and infinite-volume limit V -> infinity.",
+      "reference": "Durr et al. (BMW), Science 322, 1224 (2008), arXiv:0906.3599.",
+      "summary": "Inputs: bare quark masses m_u, m_d, m_s, gauge coupling g_s. Outputs: hadron masses in units of one chosen scale (e.g. f_pi or m_Omega)."
+    },
+    "predicted_observable": "Mass of any hadron: M = function of bare-parameter inputs after taking continuum and chiral limits. For mesons: M_pi = 139.57 MeV, M_K = 493.677 MeV, M_eta = 547.86 MeV. For baryons: M_p = 938.272 MeV, M_n = 939.565 MeV, M_Lambda = 1115.683 MeV.",
+    "bound_in_parameterization": "Lattice predictions match experiment at sub-percent for stable hadrons; few-percent for resonances.",
+    "framework_inputs": [
+      "If the framework replaces or modifies QCD in any regime, predict the hadron spectrum or, equivalently, the strong-interaction running coupling and confinement mechanism."
+    ],
+    "evaluator_status": "requires_lattice"
+  },
+  "primary_references": [
+    {
+      "citation": "Durr et al. (BMW), 'Ab Initio Determination of Light Hadron Masses', Science 322, 1224 (2008)",
+      "arxiv": "0906.3599"
+    },
+    {
+      "citation": "Borsanyi et al., 'Ab initio calculation of the neutron-proton mass difference', Science 347, 1452 (2015)",
+      "arxiv": "1406.4088"
+    }
+  ],
+  "tags": ["qcd", "lattice", "hadron_spectrum", "reduction"]
+}

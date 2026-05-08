@@ -1,0 +1,50 @@
+{
+  "id": "kaon_rare_decays_kpi_nu_nu",
+  "name": "Ultra-rare kaon decays K -> pi nu nu",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the branching ratios for the 'golden modes' K+ -> pi+ nu nu and K_L -> pi0 nu nu. NA62 measures Br(K+ -> pi+ nu nu) = (1.06 +0.40 -0.34) x 10^-10, in agreement with SM prediction (8.4 +/- 1.0) x 10^-11. KOTO has set Br(K_L -> pi0 nu nu) < 4.1 x 10^-9.",
+  "regime": {
+    "length_m": 4e-16,
+    "energy_ev": 4.94e8,
+    "description": "Neutral and charged kaon decays; cleanest theoretical SM predictions in flavor physics due to short-distance dominance and known form factors."
+  },
+  "current_bound": {
+    "value": "Br(K+ -> pi+ nu nu) = (10.6 +4.0/-3.4) x 10^-11; Br(K_L -> pi0 nu nu) < 4.1 x 10^-9",
+    "uncertainty": null,
+    "units": "branching ratio (90% CL upper bound for K_L)",
+    "experiment": "NA62 (CERN, charged) and KOTO (J-PARC, neutral)",
+    "year": 2021,
+    "reference": "NA62 Collaboration, 'Measurement of the very rare K+ -> pi+ nu nu decay', JHEP 06, 093 (2021), arXiv:2103.15389; KOTO Collaboration, PRL 122, 021802 (2019), arXiv:1810.09655",
+    "confidence_level": "NA62: 1 sigma; KOTO: 90% CL upper limit"
+  },
+  "what_it_excludes": "These modes are theoretically the cleanest probes of flavor-changing neutral currents in the kaon sector. Constrains Z-prime, leptoquark, and SUSY models with CP-violating squark mixing. A KOTO measurement of Br(K_L -> pi0 nu nu) > 5 x 10^-10 would be a clean smoking gun for new physics; KOTO is currently approaching SM-relevant sensitivity.",
+  "procedural": {
+    "parameterization": {
+      "name": "Weak effective theory: Wilson coefficient C_nu of the operator (s_bar gamma^mu d) (nu_bar gamma_mu nu).",
+      "reference": "Buchalla, Buras, NPB 412, 106 (1994); Buras, Gambino, Haisch, NPB 570, 117 (2000).",
+      "summary": "Branching ratios depend on |C_nu^SM + C_nu^NP|^2; NP can shift either or generate right-handed contributions."
+    },
+    "predicted_observable": "Br(K+ -> pi+ nu nu) = kappa_+ * |C_nu_SM + C_nu_NP|^2 with kappa_+ a calculable kinematic factor.",
+    "bound_in_parameterization": "|C_nu_NP / C_nu_SM| < ~0.5 currently; KOTO bound much weaker on K_L.",
+    "framework_inputs": [
+      "Wilson coefficient of (s_bar gamma^mu d) (nu_bar gamma_mu nu) at scale m_c, with both left- and right-handed quark currents.",
+      "Tools: flavio, EOS."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "NA62 Collaboration, 'Measurement of the very rare K+ -> pi+ nu nu decay', JHEP 06, 093 (2021)",
+      "arxiv": "2103.15389"
+    },
+    {
+      "citation": "KOTO Collaboration, 'Search for the K_L -> pi0 nu nu and K_L -> pi0 X^0 decays at the J-PARC KOTO experiment', PRL 122, 021802 (2019)",
+      "arxiv": "1810.09655"
+    },
+    {
+      "citation": "Buras, Buttazzo, Knegjens, JHEP 11, 166 (2015), 'K+ -> pi+ nu nu and K_L -> pi0 nu nu in the SM: status and perspectives'",
+      "arxiv": "1507.08672"
+    }
+  ],
+  "tags": ["flavor", "kaon", "rare_decay", "fcnc"]
+}

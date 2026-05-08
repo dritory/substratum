@@ -1,0 +1,50 @@
+{
+  "id": "pulsar_timing_array_gw_background",
+  "name": "Nano-Hz gravitational-wave background (NANOGrav 15 yr)",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must accommodate the Hellings-Downs-correlated stochastic gravitational-wave signal detected by NANOGrav, EPTA, PPTA, and CPTA (3-4 sigma in the 15-year NANOGrav data). The signal is consistent with a population of supermassive-black-hole binaries but also with cosmological GW backgrounds (cosmic strings, inflationary GW, first-order phase transitions, dark-photon dark matter).",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 4e-23,
+    "description": "Nano-Hz gravitational-wave frequencies (~10^-9 - 10^-7 Hz); years to decades observation timescales of millisecond pulsars."
+  },
+  "current_bound": {
+    "value": "h_c(f_yr) ~ 2.4 +/- 0.6 x 10^-15; spectral index gamma ~ 3.2 +/- 0.6",
+    "uncertainty": null,
+    "units": "characteristic strain at 1/yr; gamma is timing residual power-law index",
+    "experiment": "NANOGrav 15-yr data set",
+    "year": 2023,
+    "reference": "Agazie et al. (NANOGrav), 'The NANOGrav 15 yr Data Set: Evidence for a Gravitational-Wave Background', ApJL 951, L8 (2023), arXiv:2306.16213; EPTA Collaboration, A&A 678, A50 (2023), arXiv:2306.16214",
+    "confidence_level": "3-4 sigma evidence for HD-correlated signal"
+  },
+  "what_it_excludes": "If interpreted as new physics, constrains cosmic-string tension G mu < ~10^-7, certain phase-transition energy scales near the QCD scale, and ultralight-dark-matter coupling to spacetime metric. The strain amplitude is at the high end of pre-2023 SMBH-binary expectations; cosmological-source interpretations remain open and actively debated.",
+  "procedural": {
+    "parameterization": {
+      "name": "Stochastic GW background characterized by Omega_GW(f) (energy density per log frequency) and angular correlation Hellings-Downs (HD) signature.",
+      "reference": "Hellings and Downs, ApJL 265, L39 (1983); Maggiore, 'Gravitational Waves Vol. 2' (Oxford 2018).",
+      "summary": "PTA timing residuals exhibit a quadrupolar correlation between pulsars as a function of angular separation; spectrum strain h_c(f) ~ A_GWB (f / yr^-1)^(-2/3) for SMBH binary expectation."
+    },
+    "predicted_observable": "Cross-correlated timing residual power vs angular separation; characteristic strain at f = 1/yr.",
+    "bound_in_parameterization": "Source-dependent. SMBH-binary interpretation: amplitude consistent with ~10^9 M_sun mergers. Cosmic-string tension G mu < ~10^-7 if attributed to strings.",
+    "framework_inputs": [
+      "If the framework predicts a stochastic GW background source (cosmic strings, primordial phase transition, ultralight DM), compute Omega_GW(f) at PTA frequencies.",
+      "Predict whether the signal has the HD spatial correlation (genuine GW) or different (e.g. ULDM monopole, scalar-tensor scalar-mode contribution)."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Agazie et al. (NANOGrav), 'The NANOGrav 15 yr Data Set: Evidence for a Gravitational-Wave Background', ApJL 951, L8 (2023)",
+      "arxiv": "2306.16213"
+    },
+    {
+      "citation": "EPTA Collaboration, 'The second data release from the European Pulsar Timing Array III. Search for gravitational wave signals', A&A 678, A50 (2023)",
+      "arxiv": "2306.16214"
+    },
+    {
+      "citation": "Afzal et al. (NANOGrav), 'The NANOGrav 15 yr Data Set: Search for Signals from New Physics', ApJL 951, L11 (2023)",
+      "arxiv": "2306.16219"
+    }
+  ],
+  "tags": ["gravitational_waves", "pulsar_timing", "cosmic_strings", "smbh"]
+}

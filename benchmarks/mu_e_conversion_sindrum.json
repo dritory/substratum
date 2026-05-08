@@ -1,0 +1,50 @@
+{
+  "id": "mu_e_conversion_sindrum",
+  "name": "Coherent mu-e conversion in nuclei",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict the coherent mu-to-e conversion rate in nuclei below current bounds. SINDRUM II (gold target) sets R(mu N -> e N) < 7 x 10^-13. Mu2e at Fermilab and COMET at J-PARC are designed to reach ~10^-17, four orders of magnitude better.",
+  "regime": {
+    "length_m": 1.87e-15,
+    "energy_ev": 1.057e8,
+    "description": "Muonic atoms in heavy nuclei (Au, Al); CLFV with possible coherent enhancement on the nucleus."
+  },
+  "current_bound": {
+    "value": 7e-13,
+    "uncertainty": null,
+    "units": "branching ratio R(mu Au -> e Au) (90% CL upper limit)",
+    "experiment": "SINDRUM II at PSI (gold target)",
+    "year": 2006,
+    "reference": "Bertl et al. (SINDRUM II), 'A search for muon to electron conversion in muonic gold', EPJC 47, 337 (2006)",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "Complementary to mu -> e gamma: mu-e conversion is sensitive to scalar/vector four-fermion CLFV operators that do not generate mu -> e gamma at one loop. Together they probe orthogonal directions in BSM CLFV parameter space. Mu2e/COMET will close many SUSY and leptoquark models if they see no signal.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT CLFV dipole + scalar/vector four-fermion operators: C_egamma^(12), C_lq^(1)/(3), C_eu, C_ed (mu-e off-diagonal).",
+      "reference": "Cirigliano, Davidson, Kuno, PLB 771, 242 (2017), arXiv:1702.03020; Kitano, Koike, Okada, PRD 66, 096002 (2002).",
+      "summary": "Conversion rate is a coherent sum over nucleons; nuclear-structure-dependent overlap integrals tabulated in Kitano-Koike-Okada."
+    },
+    "predicted_observable": "R(mu N -> e N) = sum |a_dipole + a_scalar + a_vector|^2 with target-dependent coefficients computed from nuclear wavefunctions.",
+    "bound_in_parameterization": "Operator-dependent; for pure dipole, |C_egamma^(12) / Lambda^2| < ~few x 10^-13 GeV^-2 (similar to MEG).",
+    "framework_inputs": [
+      "Match the framework onto SMEFT CLFV operators including four-fermion ones.",
+      "Use Kitano-Koike-Okada overlap integrals (Au, Al, Ti) to compute the conversion rate per target."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Bertl et al. (SINDRUM II), 'A search for muon to electron conversion in muonic gold', EPJC 47, 337 (2006)",
+      "doi": "10.1140/epjc/s2006-02582-x"
+    },
+    {
+      "citation": "Kitano, Koike, Okada, 'Detailed calculation of lepton flavor violating muon-electron conversion rate for various nuclei', PRD 66, 096002 (2002); Erratum PRD 76, 059902 (2007)",
+      "arxiv": "hep-ph/0203110"
+    },
+    {
+      "citation": "Mu2e Collaboration, 'Mu2e Technical Design Report', arXiv:1501.05241 (2015)",
+      "arxiv": "1501.05241"
+    }
+  ],
+  "tags": ["lfv", "clfv", "smeft", "nuclear", "forbidden"]
+}

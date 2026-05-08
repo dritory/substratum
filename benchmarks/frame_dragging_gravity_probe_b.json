@@ -1,0 +1,45 @@
+{
+  "id": "frame_dragging_gravity_probe_b",
+  "name": "Geodetic and frame-dragging precession (Gravity Probe B)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the geodetic (de Sitter) and Lense-Thirring (frame-dragging) gyroscope precessions in Earth orbit, as measured by Gravity Probe B and confirmed by satellite laser ranging (LARES, LAGEOS).",
+  "regime": {
+    "length_m": 7e6,
+    "energy_ev": null,
+    "description": "Polar Earth orbit at 642 km altitude; weak-field, slow-rotation regime."
+  },
+  "current_bound": {
+    "value": "geodetic: -6601.8 +/- 18.3 mas/yr (GR predicts -6606.1); frame-dragging: -37.2 +/- 7.2 mas/yr (GR predicts -39.2)",
+    "uncertainty": null,
+    "units": "milliarcseconds/year",
+    "experiment": "Gravity Probe B (4 cryogenic gyroscopes in Earth orbit)",
+    "year": 2011,
+    "reference": "Everitt et al., 'Gravity Probe B: Final Results of a Space Experiment to Test General Relativity', PRL 106, 221101 (2011), arXiv:1105.3456",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Frameworks predicting deviations in either precession at the few-percent level are excluded. LARES + LAGEOS independently confirm the frame-dragging effect to ~5%, providing a cross-check of any modification of GR's gravitomagnetic sector.",
+  "procedural": {
+    "parameterization": {
+      "name": "PPN parameters gamma (geodetic) and (1 + gamma + alpha_1/4) (frame-dragging combination).",
+      "reference": "Will, Living Rev. Relativ. 17, 4 (2014), section 7.",
+      "summary": "Geodetic precession scales with gamma; frame-dragging tests a specific PPN combination including alpha_1."
+    },
+    "predicted_observable": "Geodetic: Omega_geo = (1 + 2 gamma)/3 * (3 G M / 2 c^2 r^3) v cross r. Frame-dragging: Omega_LT = (1 + gamma + alpha_1/4)/2 * (G I omega / c^2 r^3).",
+    "bound_in_parameterization": "Same gamma constraint as Cassini (gamma - 1 = (2.1 +/- 2.3) x 10^-5). Frame-dragging combination tested to ~20% by GP-B alone.",
+    "framework_inputs": [
+      "PPN parameters as in recover_general_relativity entry; frame-dragging requires the off-diagonal g_0i metric component at 1.5PN."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Everitt et al., 'Gravity Probe B: Final Results of a Space Experiment to Test General Relativity', PRL 106, 221101 (2011)",
+      "arxiv": "1105.3456"
+    },
+    {
+      "citation": "Ciufolini et al., 'A test of general relativity using the LARES and LAGEOS satellites and a GRACE Earth gravity model', EPJC 76, 120 (2016)",
+      "arxiv": "1603.09674"
+    }
+  ],
+  "tags": ["gravity", "gyroscope", "frame_dragging", "ppn"]
+}

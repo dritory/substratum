@@ -1,0 +1,50 @@
+{
+  "id": "strong_cp_theta_qcd",
+  "name": "Strong-CP problem: theta_QCD bound from neutron EDM",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must explain or constrain the QCD theta angle, theta_QCD < ~10^-10, derived from the neutron-EDM upper bound through theta_QCD * (m_q / Lambda_QCD). The smallness of theta_QCD relative to its naturally O(1) range is the strong-CP problem; addressing it is one of the canonical motivations for the QCD axion.",
+  "regime": {
+    "length_m": 1e-15,
+    "energy_ev": 1e9,
+    "description": "QCD scale; CP-violating topological term in the QCD Lagrangian L_theta = (theta g_s^2 / 32 pi^2) G_munu G_tilde^munu."
+  },
+  "current_bound": {
+    "value": 1e-10,
+    "uncertainty": null,
+    "units": "dimensionless (radians; value is upper bound on |theta|)",
+    "experiment": "Derived from PSI nEDM 2020 upper bound |d_n| < 1.8e-26 e cm",
+    "year": 2020,
+    "reference": "Pospelov and Ritz, 'Electric dipole moments as probes of new physics', Annals Phys. 318, 119 (2005), arXiv:hep-ph/0504231; Abel et al. (nEDM at PSI), PRL 124, 081803 (2020), arXiv:2001.11966",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Naturalness arguments suggest theta_QCD = O(1); the observed bound at 10^-10 demands an explanation. The leading proposal is the Peccei-Quinn mechanism with a dynamical axion. Other proposed solutions (massless up quark, Nelson-Barr mechanism, parity-symmetric BSM) all require new physics. Any candidate framework must specify which.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct: dimensionless QCD theta angle as parameter of the strong-interaction Lagrangian.",
+      "reference": "Peccei and Quinn, PRL 38, 1440 (1977); Weinberg, PRL 40, 223 (1978); Wilczek, PRL 40, 279 (1978).",
+      "summary": "Theta is a free parameter of QCD that can be rotated into an O(1) phase in the quark mass matrix. PQ mechanism: introduce a chiral U(1)_PQ symmetry whose anomaly cancels theta, leaving the axion as Goldstone."
+    },
+    "predicted_observable": "theta-induced contribution to the neutron EDM: d_n_theta = e * theta * (m_*) * (chiral coefficient), where m_* = m_u m_d / (m_u + m_d). Lattice and chiral perturbation theory give |d_n / theta| ~ 1.5 x 10^-16 e cm.",
+    "bound_in_parameterization": "|theta_QCD| < 1.0 x 10^-10.",
+    "framework_inputs": [
+      "If the framework solves the strong-CP problem dynamically (PQ axion), specify the axion decay constant f_a and the model-dependent E/N anomaly coefficient.",
+      "If the framework instead realizes parity-symmetric or Nelson-Barr structures, specify how the resulting theta is rendered small without an axion."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Pospelov and Ritz, 'Electric dipole moments as probes of new physics', Annals Phys. 318, 119 (2005)",
+      "arxiv": "hep-ph/0504231"
+    },
+    {
+      "citation": "Peccei and Quinn, 'CP Conservation in the Presence of Pseudoparticles', PRL 38, 1440 (1977)",
+      "doi": "10.1103/PhysRevLett.38.1440"
+    },
+    {
+      "citation": "Abel et al. (nEDM at PSI), 'Measurement of the Permanent Electric Dipole Moment of the Neutron', PRL 124, 081803 (2020)",
+      "arxiv": "2001.11966"
+    }
+  ],
+  "tags": ["qcd", "cp_violation", "axion", "naturalness", "strong_cp"]
+}

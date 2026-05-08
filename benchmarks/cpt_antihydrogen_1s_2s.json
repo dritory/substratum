@@ -1,0 +1,46 @@
+{
+  "id": "cpt_antihydrogen_1s_2s",
+  "name": "Antihydrogen 1S-2S transition matches hydrogen (CPT test)",
+  "kind": "principle_invariance",
+  "principle": "cpt",
+  "requirement": "Any candidate framework must predict that antihydrogen and hydrogen have identical 1S-2S transition frequencies, as required by CPT. The ALPHA Collaboration measurement gives the H-bar 1S-2S frequency consistent with hydrogen at the ~2 x 10^-12 fractional level - the most precise direct CPT test on neutral antimatter.",
+  "regime": {
+    "length_m": 5.29e-11,
+    "energy_ev": 10.2,
+    "description": "Antihydrogen atomic-scale physics; magnetically trapped at sub-Kelvin temperatures."
+  },
+  "current_bound": {
+    "value": "f(H_bar) - f(H) consistent with zero at <2 kHz",
+    "uncertainty": null,
+    "units": "fractional precision ~2e-12",
+    "experiment": "ALPHA at CERN antiproton decelerator",
+    "year": 2018,
+    "reference": "Ahmadi et al. (ALPHA), 'Characterization of the 1S-2S transition in antihydrogen', Nature 557, 71 (2018)",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains CPT-violating couplings affecting bound-state QED in matter vs antimatter. SME analysis: bounds on (a_eff) and (b_eff) coefficients in the lepton and proton sectors at ~10^-19 GeV level. Future ALPHA-2 measurements aim to reach 10^-15 fractional precision, comparable to hydrogen.",
+  "procedural": {
+    "parameterization": {
+      "name": "SME lepton and proton coefficients: (a_eff)^mu and (b_eff)^mu for the relevant species, plus CPT-conserving Lorentz-violating coefficients (c)^mu nu, (d)^mu nu.",
+      "reference": "Kostelecky and Russell, RMP 83, 11 (2011); Kostelecky and Vargas, PRD 92, 056002 (2015).",
+      "summary": "A CPT-violating SME term shifts the antihydrogen 1S-2S frequency relative to hydrogen by an amount proportional to specific (a_eff) coefficient combinations of the constituent particles."
+    },
+    "predicted_observable": "f_1S2S(H_bar) - f_1S2S(H), measured directly.",
+    "bound_in_parameterization": "Dominant SME lepton-sector coefficients bounded at |(a_eff)^mu| < 10^-19 GeV.",
+    "framework_inputs": [
+      "Compute matter-antimatter splitting in any spectroscopic transition predicted by the framework, parameterized as CPT-violating SME coefficients."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Ahmadi et al. (ALPHA), 'Characterization of the 1S-2S transition in antihydrogen', Nature 557, 71 (2018)",
+      "doi": "10.1038/s41586-018-0017-2"
+    },
+    {
+      "citation": "Kostelecky and Vargas, 'Lorentz and CPT tests with hydrogen, antihydrogen, and related systems', PRD 92, 056002 (2015)",
+      "arxiv": "1506.01706"
+    }
+  ],
+  "tags": ["cpt", "antimatter", "spectroscopy", "sme"]
+}

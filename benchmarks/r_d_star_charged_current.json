@@ -1,0 +1,46 @@
+{
+  "id": "r_d_star_charged_current",
+  "name": "Lepton universality in b -> c l nu: R(D), R(D*)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the world-average ratios R(D) = Br(B -> D tau nu)/Br(B -> D l nu) and R(D*) = Br(B -> D* tau nu)/Br(B -> D* l nu). The HFLAV 2024 averages sit ~3 sigma above SM predictions, a long-standing tension testing tau-vs-light-lepton universality in the charged-current b -> c transition.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 5.28e9,
+    "description": "B-meson semileptonic decays via tree-level W exchange; sensitivity to TeV-scale leptoquarks, charged Higgs, or W' bosons coupling preferentially to the third lepton family."
+  },
+  "current_bound": {
+    "value": "R(D) = 0.342 +/- 0.026; R(D*) = 0.287 +/- 0.012; combined ~3.3 sigma above SM",
+    "uncertainty": null,
+    "units": "ratio (dimensionless)",
+    "experiment": "HFLAV 2024 world average (BaBar, Belle, Belle II, LHCb)",
+    "year": 2024,
+    "reference": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (HFLAV 2024 update; see also HFLAV web tables)",
+    "confidence_level": "Combined tension ~3.3 sigma against SM predictions"
+  },
+  "what_it_excludes": "Provides motivation for leptoquark models (U_1 vector LQ in particular), charged-Higgs models, and W' bosons. Constrains the TeV-scale flavor structure of any framework predicting third-generation-enhanced charged currents. The persistence of this anomaly across multiple experiments and channels is one of the strongest current hints of TeV-scale flavor BSM.",
+  "procedural": {
+    "parameterization": {
+      "name": "Weak effective theory at the b-quark scale: Wilson coefficients C_V_L, C_V_R, C_S_L, C_S_R, C_T for each lepton flavor in b -> c l nu.",
+      "reference": "Becirevic et al., JHEP 11, 084 (2016); Iguro, Kitahara, Watanabe, arXiv:2210.10751.",
+      "summary": "SM has only C_V_L = 1 for all flavors. Anomalies parameterize a tau-flavor enhancement of C_V_L^tau, or generation of right-handed/scalar/tensor coefficients."
+    },
+    "predicted_observable": "R(D), R(D*) = integral over phase space of |amplitude|^2, ratio of tau to l = e, mu channels; sensitive to specific Wilson-coefficient combinations.",
+    "bound_in_parameterization": "Required deviation: C_V_L^tau ~ 1.05 (5% enhancement), or scalar / tensor coefficients of order 0.1.",
+    "framework_inputs": [
+      "Match framework onto WET in b -> c l nu sector at scale m_b.",
+      "Use lattice QCD form factors (Fermilab/MILC, JLQCD) to compute R(D), R(D*) in the framework."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (2024)",
+      "arxiv": "2411.18639"
+    },
+    {
+      "citation": "Iguro, Kitahara, Watanabe, 'Global fit to b -> c tau nu anomalies', arXiv:2210.10751 (2022)",
+      "arxiv": "2210.10751"
+    }
+  ],
+  "tags": ["flavor", "b_meson", "lfu", "tau", "leptoquark", "anomaly"]
+}

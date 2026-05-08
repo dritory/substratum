@@ -1,0 +1,46 @@
+{
+  "id": "dm_indirect_fermi_lat_dwarfs",
+  "name": "Indirect-detection limits from dwarf galaxy stacking (Fermi-LAT)",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting dark-matter annihilation must respect the gamma-ray upper limits from Fermi-LAT stacking of Milky Way dwarf spheroidal galaxies. For m_DM ~ 100 GeV annihilating to b b_bar, <sigma v> < 5 x 10^-26 cm^3/s (95% CL), reaching the canonical thermal-relic value sigma v ~ 3 x 10^-26 cm^3/s for m_DM > ~100 GeV.",
+  "regime": {
+    "length_m": 1e21,
+    "energy_ev": 1e10,
+    "description": "Galactic-halo to dwarf-galaxy DM densities; gamma-rays from DM annihilation in nearby DM-dominated systems."
+  },
+  "current_bound": {
+    "value": "<sigma v> < 5e-26 cm^3/s for m_DM ~ 100 GeV (b b_bar channel)",
+    "uncertainty": null,
+    "units": "cm^3/s",
+    "experiment": "Fermi-LAT 6-year stacked dwarf-spheroidal analysis",
+    "year": 2017,
+    "reference": "Albert et al. (Fermi-LAT), 'Searching for Dark Matter Annihilation from Milky Way Dwarf Spheroidal Galaxies with Six Years of Fermi Large Area Telescope Data', ApJ 834, 110 (2017), arXiv:1611.03184",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Excludes thermal-relic WIMPs annihilating to standard-model gauge bosons with m_DM < ~100 GeV. Constrains cosmic-ray-positron-excess explanations of AMS-02 / PAMELA in terms of DM annihilation. Combined with HESS, MAGIC, VERITAS, and CTA limits, leaves narrow regions of WIMP parameter space.",
+  "procedural": {
+    "parameterization": {
+      "name": "Annihilation cross-section <sigma v> per channel (b b_bar, tau+ tau-, W+ W-, mu+ mu-, etc.); J-factor of each dwarf integrated over line-of-sight density-squared.",
+      "reference": "Bertone, Hooper, Silk, Phys. Rep. 405, 279 (2005); Geringer-Sameth, Koushiappas, Walker, ApJ 801, 74 (2015) (J-factors).",
+      "summary": "Predicted gamma-ray flux from a dwarf spheroidal: dPhi/dE = (sigma v / 8 pi m_DM^2) * dN_gamma/dE * J-factor."
+    },
+    "predicted_observable": "Stacked gamma-ray excess in dwarf spheroidals; absence of signal sets upper limit on <sigma v>.",
+    "bound_in_parameterization": "Channel-dependent; b b_bar bound is most stringent at <sigma v> < 5e-26 cm^3/s for 100 GeV DM.",
+    "framework_inputs": [
+      "Annihilation cross sections per final-state channel.",
+      "Predicted photon spectrum dN_gamma / dE per channel (tools: PPPC4DMID by Cirelli et al.)."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Albert et al. (Fermi-LAT), 'Searching for Dark Matter Annihilation from Milky Way Dwarf Spheroidal Galaxies with Six Years of Fermi Large Area Telescope Data', ApJ 834, 110 (2017)",
+      "arxiv": "1611.03184"
+    },
+    {
+      "citation": "Cirelli et al., 'PPPC 4 DM ID: A Poor Particle Physicist Cookbook for Dark Matter Indirect Detection', JCAP 03, 051 (2011)",
+      "arxiv": "1012.4515"
+    }
+  ],
+  "tags": ["dark_matter", "indirect_detection", "fermi_lat", "annihilation"]
+}

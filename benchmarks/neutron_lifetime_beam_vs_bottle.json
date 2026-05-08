@@ -1,0 +1,50 @@
+{
+  "id": "neutron_lifetime_beam_vs_bottle",
+  "name": "Neutron lifetime: beam-vs-bottle tension",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework should account for the persistent ~4 sigma discrepancy between the two methods of measuring the free neutron lifetime: 'bottle' experiments (count UCNs surviving in storage) give tau_n = 877.75 +/- 0.32 s; 'beam' experiments (count protons produced by beta decay) give tau_n = 887.7 +/- 2.2 s. The difference (about 10 s) is one of the most stubborn unresolved tensions in low-energy physics.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 7.8e5,
+    "description": "Free neutron at rest; weak charged-current decay n -> p e nu_e."
+  },
+  "current_bound": {
+    "value": "tau_n^bottle = 877.75 +/- 0.28 +/- 0.16 s (UCNtau, 2021); tau_n^beam = 887.7 +/- 1.2 +/- 1.9 s (Yue et al. 2013)",
+    "uncertainty": null,
+    "units": "seconds",
+    "experiment": "UCNtau (LANL) for bottle; NIST trap for beam",
+    "year": 2021,
+    "reference": "Gonzalez et al. (UCNtau), 'Improved Neutron Lifetime Measurement with UCNtau', PRL 127, 162501 (2021), arXiv:2106.10375; Yue et al., 'Improved Determination of the Neutron Lifetime', PRL 111, 222501 (2013)",
+    "confidence_level": "Tension ~4 sigma"
+  },
+  "what_it_excludes": "Possible explanations include: (a) systematic error in either method (favored by most physicists), (b) BSM neutron decay channels (e.g. n -> chi gamma where chi is a dark fermion, proposed by Fornal-Grinstein 2018, ruled out by SNS-IIa neutron-star observations and direct laboratory searches), or (c) unaccounted nuclear physics in the proton-counting normalization. Any candidate framework that addresses this tension should specify which.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct: tau_n. BSM scenarios add a partial decay rate Gamma_BSM that affects bottle (which measures total lifetime) and beam (which measures only beta-decay rate) differently.",
+      "reference": "Fornal and Grinstein, PRL 120, 191801 (2018), arXiv:1801.01124 (proposed dark-decay scenario, now strongly disfavored).",
+      "summary": "If BSM neutron decay exists with branching B, bottle tau_n^obs = (Gamma_beta + Gamma_BSM)^-1, beam tau_n^obs = Gamma_beta^-1. Difference enables BSM partial width."
+    },
+    "predicted_observable": "tau_n^bottle - tau_n^beam = Gamma_BSM * tau_n^beta^2 / (1 + Gamma_BSM tau_n^beta).",
+    "bound_in_parameterization": "Required Gamma_BSM ~ 1% of total to explain tension. This level of dark-decay branching is excluded by neutron-star equation-of-state observations, leaving systematic-error explanations as most likely.",
+    "framework_inputs": [
+      "If the framework introduces BSM neutron decay channels, compute the partial branching fraction.",
+      "If the framework modifies V_ud or G_F, compute the resulting shift in tau_n^beta."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Gonzalez et al. (UCNtau), 'Improved Neutron Lifetime Measurement with UCNtau', PRL 127, 162501 (2021)",
+      "arxiv": "2106.10375"
+    },
+    {
+      "citation": "Yue et al., 'Improved Determination of the Neutron Lifetime', PRL 111, 222501 (2013)",
+      "doi": "10.1103/PhysRevLett.111.222501"
+    },
+    {
+      "citation": "Fornal and Grinstein, 'Dark Matter Interpretation of the Neutron Decay Anomaly', PRL 120, 191801 (2018)",
+      "arxiv": "1801.01124"
+    }
+  ],
+  "tags": ["neutron", "weak_decay", "anomaly", "v_ud"]
+}

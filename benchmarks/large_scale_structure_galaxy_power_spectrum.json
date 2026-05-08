@@ -1,0 +1,50 @@
+{
+  "id": "large_scale_structure_galaxy_power_spectrum",
+  "name": "Large-scale structure and galaxy power spectrum (BOSS, eBOSS, DESI)",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must reproduce the observed large-scale galaxy power spectrum and full-shape clustering measurements from BOSS, eBOSS, DESI, and DES, including: BAO scale at multiple redshifts (z = 0.1 - 2.3), redshift-space distortions probing f sigma_8(z), and the broadband shape at scales 0.001 < k h/Mpc < 0.3.",
+  "regime": {
+    "length_m": 1e23,
+    "energy_ev": null,
+    "description": "Tens-of-Mpc-to-Gpc scales, redshifts z ~ 0 - 2.3."
+  },
+  "current_bound": {
+    "value": "f sigma_8 measurements consistent with LambdaCDM at ~10% precision per redshift bin; BAO scale d_M(z), d_H(z) at sub-percent precision.",
+    "uncertainty": null,
+    "units": "various (BAO distance ratios, f sigma_8)",
+    "experiment": "BOSS DR12, eBOSS DR16, DESI Y1",
+    "year": 2024,
+    "reference": "DESI Collaboration, 'DESI 2024 III: Baryon Acoustic Oscillations from Galaxies and Quasars', arXiv:2404.03000; 'DESI 2024 V: Full-Shape Galaxy Clustering from Galaxies and Quasars', arXiv:2411.12022",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains modified-gravity models at large scales (DGP, f(R), galileons), interacting dark sectors, and warm/fuzzy dark matter. The broadband shape is sensitive to relativistic species (N_eff), neutrino mass, and primordial non-Gaussianity (f_NL).",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard cosmological perturbation theory plus effective-field-theory of large-scale structure (EFTofLSS) for nonlinear regime. LambdaCDM extensions parameterized by Sum m_nu, w_0-w_a, modified gravity (mu, Sigma) functions, etc.",
+      "reference": "Senatore and Zaldarriaga, JCAP 02, 013 (2015), arXiv:1404.5954 (EFTofLSS); Ivanov, Simonovic, Zaldarriaga, JCAP 05, 042 (2020) (full-shape).",
+      "summary": "Galaxy power spectrum P_g(k, z) modeled to 1-loop in EFTofLSS plus bias parameters; fit to BAO post-reconstruction + full-shape data."
+    },
+    "predicted_observable": "P_g(k, z) at multiple redshifts; alternatively xi(s) in correlation-function form. BAO scale and f sigma_8 extracted from compressed observables.",
+    "bound_in_parameterization": "LambdaCDM consistent at 1-2 sigma. Extensions constrained at varying levels; e.g. modified-gravity Sigma(z, k) function bounded to within ~10% of GR.",
+    "framework_inputs": [
+      "Implement framework as modifications to the linear perturbation equations (CLASS/CAMB module) and to the bias / EFT counter-terms in the nonlinear regime.",
+      "Run MCMC against DESI / BOSS likelihoods using cobaya or MontePython."
+    ],
+    "evaluator_status": "requires_simulation"
+  },
+  "primary_references": [
+    {
+      "citation": "DESI Collaboration, 'DESI 2024 V: Full-Shape Galaxy Clustering from Galaxies and Quasars'",
+      "arxiv": "2411.12022"
+    },
+    {
+      "citation": "DESI Collaboration, 'DESI 2024 III: Baryon Acoustic Oscillations from Galaxies and Quasars'",
+      "arxiv": "2404.03000"
+    },
+    {
+      "citation": "eBOSS Collaboration, 'Completed SDSS-IV extended Baryon Oscillation Spectroscopic Survey: Cosmological implications', PRD 103, 083533 (2021)",
+      "arxiv": "2007.08991"
+    }
+  ],
+  "tags": ["cosmology", "lss", "bao", "redshift_distortions", "modified_gravity"]
+}

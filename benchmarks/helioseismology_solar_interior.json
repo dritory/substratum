@@ -1,0 +1,45 @@
+{
+  "id": "helioseismology_solar_interior",
+  "name": "Helioseismology constraints on the solar interior",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework that modifies fundamental physics inside dense plasma (modified gravity, varying constants, screened scalar fields) must respect helioseismic measurements of the solar sound-speed profile c(r), agreeing with the Standard Solar Model at the 0.1-1% level over r/R_sun = 0.1 - 0.95. The Sun is the most precisely characterized stellar interior available.",
+  "regime": {
+    "length_m": 7e8,
+    "energy_ev": 1e3,
+    "description": "Solar-interior plasma at temperatures 10^7 K (core) to 10^4 K (surface); densities up to 150 g/cm^3."
+  },
+  "current_bound": {
+    "value": "Delta c^2 / c^2 < ~0.1% over most of the solar interior",
+    "uncertainty": null,
+    "units": "fractional sound speed",
+    "experiment": "GONG and SOHO/MDI/HMI acoustic-mode frequency measurements",
+    "year": 2009,
+    "reference": "Christensen-Dalsgaard, 'Solar structure and evolution', Living Rev. Solar Phys. 18, 2 (2021); Bahcall, Serenelli, Basu, ApJ 621, L85 (2005), arXiv:astro-ph/0412440",
+    "confidence_level": "1 sigma typical"
+  },
+  "what_it_excludes": "Constrains screened-scalar (chameleon, symmetron) modified-gravity proposals at solar densities. Constrains varying-constant scenarios in dense plasma. Constrains DM-energy-loss mechanisms inside the Sun (light scalars, axions) through their effect on the temperature profile.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard Solar Model with framework-dependent modifications. Comparison done in inverted sound-speed and density profiles.",
+      "reference": "Bahcall, Pinsonneault, RMP 67, 781 (1995); Vinyoles et al., ApJ 835, 202 (2017), arXiv:1611.09867 (modern SSM).",
+      "summary": "Stellar-evolution code (GARSTEC, Cesam, MESA) integrates the framework's gravitational and microphysics inputs to produce c(r), rho(r); compared to inverted helioseismic data."
+    },
+    "predicted_observable": "Sound-speed profile c(r), density profile rho(r), surface helium abundance Y_s, base of convective zone R_bcz.",
+    "bound_in_parameterization": "Fractional deviation in c(r) constrained at <0.1% over most of the radius.",
+    "framework_inputs": [
+      "Modified gravity (e.g. chameleon screening level inside the sun) or varying constants relevant to nuclear reaction rates and opacities."
+    ],
+    "evaluator_status": "requires_simulation"
+  },
+  "primary_references": [
+    {
+      "citation": "Christensen-Dalsgaard, 'Solar structure and evolution', Living Rev. Solar Phys. 18, 2 (2021)",
+      "doi": "10.1007/s41116-020-00028-3"
+    },
+    {
+      "citation": "Vinyoles et al., 'A New Generation of Standard Solar Models', ApJ 835, 202 (2017)",
+      "arxiv": "1611.09867"
+    }
+  ],
+  "tags": ["astrophysics", "sun", "helioseismology", "modified_gravity"]
+}

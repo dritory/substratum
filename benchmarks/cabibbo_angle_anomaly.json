@@ -1,0 +1,49 @@
+{
+  "id": "cabibbo_angle_anomaly",
+  "name": "First-row CKM unitarity (Cabibbo-angle anomaly)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the unitarity sum |V_ud|^2 + |V_us|^2 + |V_ub|^2 = 1 of the first row of the CKM matrix. Tension at the ~3 sigma level: |V_ud|^2 + |V_us|^2 + |V_ub|^2 - 1 = -0.0017 +/- 0.0006, with internal disagreement among different determinations of V_us and V_ud.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 8e10,
+    "description": "Charged-current hadronic transitions: super-allowed nuclear beta decays (V_ud), kaon and pion semileptonic decays (V_us). Sensitive to BSM modifications of the W-quark coupling at the TeV scale."
+  },
+  "current_bound": {
+    "value": "|V_ud|^2 + |V_us|^2 + |V_ub|^2 = 0.9985 +/- 0.0005",
+    "uncertainty": null,
+    "units": "dimensionless",
+    "experiment": "Combined nuclear beta decay (V_ud) + K_l3, K_l2, tau decays (V_us) + B -> X_u l nu (V_ub)",
+    "year": 2022,
+    "reference": "Cirigliano, Crivellin, Hoferichter, Moulson, 'Scrutinizing CKM unitarity with a new measurement of the K_mu3 / K_mu2 branching fraction', PLB 838, 137748 (2023), arXiv:2208.11707; Particle Data Group 2024",
+    "confidence_level": "~3 sigma deviation from unitarity"
+  },
+  "what_it_excludes": "Could be a sign of BSM physics in W-quark coupling (modified V_ud or V_us) or of unaccounted hadronic / radiative-correction systematics. Constrains right-handed W couplings, leptoquarks, and modified Fermi constant. Resolution requires improved nuclear-structure corrections in super-allowed beta decays and lattice-QCD form factors for kaon decays.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT operators modifying charged currents: O_lq^(3) (left-left), O_phi q^(3) (Higgs-current), and right-handed couplings O_phi ud.",
+      "reference": "Falkowski, Gonzalez-Alonso, Naviliat-Cuncic, JHEP 04, 126 (2021), arXiv:2010.13797; Crivellin and Hoferichter, PRL 125, 111801 (2020), arXiv:2002.07184.",
+      "summary": "BSM contributions appear as effective shifts in V_ud, V_us extracted from different processes, breaking the apparent unitarity sum."
+    },
+    "predicted_observable": "Effective V_ud_eff, V_us_eff measured in different processes; framework must give consistent values in all.",
+    "bound_in_parameterization": "|C_lq^(3) / Lambda^2| <~ (5 TeV)^-2; specific operator combinations probed at sub-permille level.",
+    "framework_inputs": [
+      "Wilson coefficients of the relevant SMEFT operators in the quark sector.",
+      "Inclusion of QED radiative corrections and electroweak running."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "Cirigliano, Crivellin, Hoferichter, Moulson, 'Scrutinizing CKM unitarity with a new measurement of the K_mu3 / K_mu2 branching fraction', PLB 838, 137748 (2023)",
+      "arxiv": "2208.11707"
+    },
+    {
+      "citation": "Crivellin and Hoferichter, 'beta decays as sensitive probes of lepton flavor universality', PRL 125, 111801 (2020)",
+      "arxiv": "2002.07184"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', 2024"
+    }
+  ],
+  "tags": ["flavor", "ckm", "weak_decay", "anomaly"]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "primordial_gw_tensor_to_scalar_ratio",
+  "name": "Tensor-to-scalar ratio r from primordial gravitational waves",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework with an inflationary or alternative early-universe phase must predict a tensor-to-scalar ratio r (amplitude of primordial GW power spectrum relative to scalar) below the BICEP/Keck 2021 upper bound r < 0.036 at 95% CL (at pivot scale k = 0.05 Mpc^-1).",
+  "regime": {
+    "length_m": 1e25,
+    "energy_ev": null,
+    "description": "Inflationary horizon scales, ~10^16 GeV energy density if r ~ 0.01."
+  },
+  "current_bound": {
+    "value": 0.036,
+    "uncertainty": null,
+    "units": "tensor-to-scalar ratio (dimensionless), 95% CL upper limit",
+    "experiment": "BICEP/Keck Array CMB B-mode polarization",
+    "year": 2021,
+    "reference": "BICEP/Keck Collaboration, 'Improved Constraints on Primordial Gravitational Waves using Planck, WMAP, and BICEP/Keck Observations through the 2018 Observing Season', PRL 127, 151301 (2021), arXiv:2110.00483",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "r < 0.036 excludes large classes of large-field inflationary models, including phi^p chaotic inflation for p >= 2 (Linde) and natural inflation for f < M_Planck. Surviving inflationary models include R^2 (Starobinsky), alpha-attractors, hilltop, and small-field models. Future LiteBIRD, CMB-S4, Simons Observatory aim at sigma(r) ~ 10^-3.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard inflationary parameterization: r, n_s (scalar tilt), n_t (tensor tilt), running. Single-field consistency relation: r = -8 n_t.",
+      "reference": "Baumann, 'TASI Lectures on Inflation', arXiv:0907.5424; Planck 2018 X (inflation): A&A 641, A10 (2020).",
+      "summary": "Inflation with potential V(phi) predicts r ~ 16 epsilon_V where epsilon_V is the slow-roll parameter; energy scale of inflation V^(1/4) = 1.04 x 10^16 GeV (r/0.01)^(1/4)."
+    },
+    "predicted_observable": "B-mode polarization power spectrum of CMB at degree scales (l ~ 80), proportional to r.",
+    "bound_in_parameterization": "r < 0.036 at k = 0.05 Mpc^-1; with implied bound on inflationary potential height V < (1.6 x 10^16 GeV)^4.",
+    "framework_inputs": [
+      "If the framework includes inflation, compute r and n_s in slow-roll.",
+      "If the framework is non-inflationary (bouncing cosmology, ekpyrotic, string-gas), compute the tensor power spectrum from the alternative mechanism."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "BICEP/Keck Collaboration, 'Improved Constraints on Primordial Gravitational Waves using Planck, WMAP, and BICEP/Keck Observations through the 2018 Observing Season', PRL 127, 151301 (2021)",
+      "arxiv": "2110.00483"
+    },
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. X. Constraints on inflation', A&A 641, A10 (2020)",
+      "arxiv": "1807.06211"
+    }
+  ],
+  "tags": ["cosmology", "inflation", "primordial_gw", "b_mode"]
+}

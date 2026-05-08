@@ -1,0 +1,45 @@
+{
+  "id": "sidm_self_interaction_clusters",
+  "name": "Self-interaction cross-section limits from cluster mergers",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting self-interacting dark matter must respect upper limits on the self-interaction cross section sigma_DM/m from cluster-merger systems (Bullet, Abell 520, MACS J0025, ...). Harvey et al. 2015 stack 30 cluster mergers and find sigma_DM/m < 0.47 cm^2/g (95% CL) at velocities ~1000 km/s.",
+  "regime": {
+    "length_m": 1e22,
+    "energy_ev": null,
+    "description": "Galaxy-cluster-scale DM with internal velocities ~1000 km/s; mergers shock baryonic gas while DM passes nearly collisionlessly."
+  },
+  "current_bound": {
+    "value": 0.47,
+    "uncertainty": null,
+    "units": "cm^2/g (95% CL upper limit) at v ~ 1000 km/s",
+    "experiment": "Stacked weak-lensing analysis of cluster mergers",
+    "year": 2015,
+    "reference": "Harvey, Massey, Kitching, Taylor, Tittley, 'The non-gravitational interactions of dark matter in colliding galaxy clusters', Science 347, 1462 (2015), arXiv:1503.07675",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Constrains self-interacting dark matter (SIDM) models proposed to alleviate small-scale CDM problems (cusp-core, missing satellites, too-big-to-fail). Velocity-dependent SIDM models with sigma/m ~ 1-10 cm^2/g at dwarf-galaxy scales (v ~ 100 km/s) but ~0.1 cm^2/g at cluster scales remain viable.",
+  "procedural": {
+    "parameterization": {
+      "name": "Self-interaction cross section sigma_DM(v) / m as a function of relative velocity. Velocity-dependent SIDM (Yukawa mediator) parameterized by mediator mass and coupling.",
+      "reference": "Tulin and Yu, Phys. Rep. 730, 1 (2018); Spergel and Steinhardt, PRL 84, 3760 (2000) (original SIDM proposal).",
+      "summary": "Cluster-merger constraint: sigma/m < 0.47 cm^2/g at v ~ 1000 km/s. Dwarf-galaxy halo cores prefer sigma/m ~ 1 cm^2/g at v ~ 30-100 km/s."
+    },
+    "predicted_observable": "Spatial offset of DM mass relative to galaxy positions in merging clusters; mass loss from interactions.",
+    "bound_in_parameterization": "sigma/m < 0.47 cm^2/g at cluster velocities.",
+    "framework_inputs": [
+      "If the framework includes a self-interacting DM sector, compute the elastic scattering cross section sigma(v) including the velocity dependence from any light mediator."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Harvey et al., 'The non-gravitational interactions of dark matter in colliding galaxy clusters', Science 347, 1462 (2015)",
+      "arxiv": "1503.07675"
+    },
+    {
+      "citation": "Tulin and Yu, 'Dark matter self-interactions and small scale structure', Phys. Rep. 730, 1 (2018)",
+      "arxiv": "1705.02358"
+    }
+  ],
+  "tags": ["dark_matter", "sidm", "clusters", "self_interaction"]
+}

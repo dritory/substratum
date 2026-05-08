@@ -1,0 +1,49 @@
+{
+  "id": "lamb_shift_qed_precision",
+  "name": "Lamb shift and bound-state QED",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the hydrogen 2S-2P Lamb shift, currently measured to ~kHz precision (~10^-6 fractional) and consistent with bound-state QED. The Bezginov et al. 2019 measurement of the 2S_1/2 to 2P_1/2 splitting in hydrogen, combined with muonic-hydrogen Lamb-shift measurements (Pohl et al. 2010), simultaneously determines the proton charge radius and tests QED.",
+  "regime": {
+    "length_m": 5.29e-11,
+    "energy_ev": 4.4e-6,
+    "description": "Hydrogen 2S-2P fine-structure splitting; sensitive to QED vacuum polarization and self-energy at the alpha^5 m_e c^2 level."
+  },
+  "current_bound": {
+    "value": "1057.8298 MHz",
+    "uncertainty": "0.0032 MHz (3 ppm)",
+    "units": "MHz (2S-2P_1/2 splitting in atomic hydrogen)",
+    "experiment": "Frequency-comb hydrogen spectroscopy at York University",
+    "year": 2019,
+    "reference": "Bezginov, Valdez, Horbatsch, Marsman, Vutha, Hessels, 'A measurement of the atomic hydrogen Lamb shift and the proton charge radius', Science 365, 1007 (2019)",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Any modification of QED vacuum polarization, electron self-energy, or proton charge structure at fractional precision > 10^-6 is excluded. Bound-state QED tested at four-loop accuracy. Together with muonic hydrogen, definitively settled the proton-radius puzzle by 2019: r_p ~ 0.842 fm.",
+  "procedural": {
+    "parameterization": {
+      "name": "Bound-state QED with one free parameter (proton radius), plus any framework-specific modifications to the Coulomb potential or photon propagator.",
+      "reference": "Karshenboim, Phys. Rep. 422, 1 (2005); Pohl et al., Nature 466, 213 (2010) (muonic hydrogen).",
+      "summary": "Lamb-shift theory expansion in alpha and (Z alpha) m_e/m_p with calculable coefficients up to four-loop level."
+    },
+    "predicted_observable": "Delta E_LS = sum_n a_n alpha^(n+1) (Z alpha)^m R_infinity + nuclear-structure corrections proportional to <r_p^2>.",
+    "bound_in_parameterization": "Fractional deviation < 3 x 10^-6.",
+    "framework_inputs": [
+      "Any modification to the photon propagator at energies <~ atomic scale, or any new electron-photon coupling, must be evaluated for its contribution to the 2S-2P shift."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Bezginov et al., 'A measurement of the atomic hydrogen Lamb shift and the proton charge radius', Science 365, 1007 (2019)",
+      "doi": "10.1126/science.aau7807"
+    },
+    {
+      "citation": "Pohl et al., 'The size of the proton', Nature 466, 213 (2010)",
+      "doi": "10.1038/nature09250"
+    },
+    {
+      "citation": "Karshenboim, 'Precision Physics of Simple Atoms: QED Tests, Nuclear Structure and Fundamental Constants', Phys. Rep. 422, 1 (2005)",
+      "doi": "10.1016/j.physrep.2005.08.008"
+    }
+  ],
+  "tags": ["qed", "lamb_shift", "atomic_physics", "proton_radius", "bound_state"]
+}
