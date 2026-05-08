@@ -1,0 +1,129 @@
+{
+  "id": "muon_g_minus_2",
+  "name": "Muon anomalous magnetic moment (g-2)",
+  "aliases": ["a_mu", "muon g-2"],
+  "domain": "particle",
+  "observable": {
+    "symbol": "a_mu = (g_mu - 2) / 2",
+    "description": "Anomalous magnetic moment of the muon. The Dirac equation predicts g = 2 exactly; quantum corrections from QED, electroweak, and hadronic loops produce a_mu, which is sensitive to virtual contributions from any particle that couples (directly or indirectly) to the muon.",
+    "units": "dimensionless (often quoted in units of 1e-11)"
+  },
+  "characteristic_scale": {
+    "length_m": 1.87e-15,
+    "energy_ev": 1.057e8,
+    "note": "Muon mass sets the natural scale; the observable integrates over loop momenta from m_mu up to where new physics decouples."
+  },
+  "standard_prediction": {
+    "model": "Standard Model",
+    "value": 116591810,
+    "uncertainty": 43,
+    "units": "1e-11",
+    "method_variants": [
+      {
+        "label": "Theory Initiative White Paper 2020 (data-driven HVP from e+e- -> hadrons)",
+        "value": 116591810,
+        "uncertainty": 43,
+        "reference": "Aoyama et al., Phys. Rep. 887, 1 (2020), arXiv:2006.04822",
+        "note": "Hadronic vacuum polarization built from KLOE, BaBar, CMD-2, SND e+e- data."
+      },
+      {
+        "label": "BMW lattice HVP (2020)",
+        "value": 116591954,
+        "uncertainty": 55,
+        "reference": "Borsanyi et al., Nature 593, 51 (2021), arXiv:2002.12347",
+        "note": "Pure lattice QCD evaluation of leading-order hadronic vacuum polarization. Sits ~2.1 sigma above WP2020 data-driven value, much closer to experiment."
+      },
+      {
+        "label": "CMD-3 e+e- -> pi+pi- (2023)",
+        "value": "shifts data-driven SM upward",
+        "reference": "CMD-3, arXiv:2302.08834",
+        "note": "CMD-3 measured the dominant 2-pion channel cross section ~2-5% higher than KLOE/BaBar/SND. If used as input, data-driven HVP rises and the SM-experiment gap narrows substantially. The discrepancy among e+e- experiments is itself an open problem."
+      }
+    ],
+    "references": [
+      "Aoyama et al., Phys. Rep. 887, 1 (2020), arXiv:2006.04822",
+      "Borsanyi et al., Nature 593, 51 (2021), arXiv:2002.12347"
+    ]
+  },
+  "measurements": [
+    {
+      "experiment": "BNL E821",
+      "value": 116592089,
+      "uncertainty": 63,
+      "units": "1e-11",
+      "year": 2006,
+      "reference": "Bennett et al. (E821), Phys. Rev. D 73, 072003 (2006), hep-ex/0602035"
+    },
+    {
+      "experiment": "Fermilab Muon g-2 Run-1",
+      "value": 116592040,
+      "uncertainty": 54,
+      "units": "1e-11",
+      "year": 2021,
+      "reference": "Abi et al. (FNAL g-2), Phys. Rev. Lett. 126, 141801 (2021), arXiv:2104.03281"
+    },
+    {
+      "experiment": "Fermilab Muon g-2 Run-1+2+3 / world avg with BNL",
+      "value": 116592059,
+      "uncertainty": 22,
+      "units": "1e-11",
+      "year": 2023,
+      "reference": "Aguillard et al. (FNAL g-2), Phys. Rev. Lett. 131, 161802 (2023), arXiv:2308.06230",
+      "note": "World-average experimental value combining BNL E821 and Fermilab Run-1+2+3."
+    }
+  ],
+  "tension_history": [
+    {
+      "year": 2006,
+      "sigma": 3.4,
+      "comparison": "BNL E821 vs SM (data-driven HVP, ca. 2006)",
+      "note": "The original 'muon anomaly'."
+    },
+    {
+      "year": 2021,
+      "sigma": 4.2,
+      "comparison": "BNL+FNAL(Run-1) world avg vs Theory Initiative White Paper 2020",
+      "note": "Headline number when Fermilab Run-1 was released."
+    },
+    {
+      "year": 2023,
+      "sigma": 5.1,
+      "comparison": "BNL+FNAL(Run-1+2+3) vs WP2020 SM",
+      "note": "Significance against the data-driven WP2020 SM grew due to reduced experimental uncertainty."
+    },
+    {
+      "year": 2023,
+      "sigma": 1.8,
+      "comparison": "BNL+FNAL(Run-1+2+3) vs BMW lattice SM",
+      "note": "Against the BMW lattice SM prediction the tension is mild."
+    },
+    {
+      "year": 2024,
+      "sigma": "1-2 (lattice) / 3-5 (some data-driven)",
+      "comparison": "Theory side in flux",
+      "note": "Multiple lattice collaborations (BMW, RBC/UKQCD, Mainz) converging near BMW's value. CMD-3 data tension with KLOE/BaBar unresolved. Tension is increasingly viewed as a problem in evaluating hadronic contributions, not necessarily new physics."
+    }
+  ],
+  "status": "contested",
+  "summary": "The muon's anomalous magnetic moment, measured to extraordinary precision at BNL and Fermilab, was for a decade ~3-4 sigma above the Standard Model prediction built from data-driven hadronic vacuum polarization. Lattice QCD evaluations (led by BMW 2020) and a tension in the underlying e+e- -> hadrons data (CMD-3 vs KLOE/BaBar) have shifted the picture: against the lattice SM the discrepancy is ~2 sigma. Whether a_mu is a window on new physics or on hadronic-physics systematics is currently unresolved.",
+  "systematics_notes": "The dominant theoretical uncertainty is the leading-order hadronic vacuum polarization. Two methods (data-driven dispersive, and lattice QCD) currently disagree at ~2 sigma. Within the data-driven approach, CMD-3's pi+pi- cross section disagrees with KLOE and BaBar at 2.5-5 sigma in some energy bins. Resolving these is a prerequisite for a clean SM prediction.",
+  "references": [
+    {
+      "citation": "Aguillard et al. (Fermilab Muon g-2), Phys. Rev. Lett. 131, 161802 (2023)",
+      "arxiv": "2308.06230"
+    },
+    {
+      "citation": "Aoyama et al., 'The anomalous magnetic moment of the muon in the Standard Model', Phys. Rep. 887, 1-166 (2020)",
+      "arxiv": "2006.04822"
+    },
+    {
+      "citation": "Borsanyi et al. (BMW), 'Leading hadronic contribution to the muon magnetic moment from lattice QCD', Nature 593, 51 (2021)",
+      "arxiv": "2002.12347"
+    },
+    {
+      "citation": "CMD-3 Collaboration, 'Measurement of the e+e- -> pi+pi- cross section from threshold to 1.2 GeV with the CMD-3 detector'",
+      "arxiv": "2302.08834"
+    }
+  ],
+  "tags": ["new_physics", "qed", "hadronic_uncertainty", "lattice_qcd", "precision_test"]
+}

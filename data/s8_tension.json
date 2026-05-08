@@ -1,0 +1,117 @@
+{
+  "id": "s8_tension",
+  "name": "S8 / sigma_8 tension",
+  "aliases": ["sigma8 tension", "structure-growth tension"],
+  "domain": "cosmology",
+  "observable": {
+    "symbol": "S_8 = sigma_8 * sqrt(Omega_m / 0.3)",
+    "description": "Amplitude of matter clustering on 8 Mpc/h scales, normalized by matter density. Probes how much late-time structure has grown, and is therefore sensitive to physics that suppresses or enhances gravitational clustering between recombination and today.",
+    "units": "dimensionless"
+  },
+  "characteristic_scale": {
+    "length_m": 2.5e23,
+    "energy_ev": null,
+    "note": "8 Mpc/h ~ 2.5e23 m. This tension probes the late-time growth of structure on tens-of-Mpc scales."
+  },
+  "standard_prediction": {
+    "model": "LambdaCDM fit to Planck 2018 CMB",
+    "value": 0.832,
+    "uncertainty": 0.013,
+    "units": "dimensionless",
+    "references": [
+      "Planck 2018 Results VI, A&A 641, A6 (2020), arXiv:1807.06209"
+    ]
+  },
+  "measurements": [
+    {
+      "experiment": "KiDS-1000 cosmic shear",
+      "value": 0.766,
+      "uncertainty": "+0.020/-0.014",
+      "units": "dimensionless",
+      "year": 2021,
+      "reference": "Heymans et al., A&A 646, A140 (2021), arXiv:2007.15632"
+    },
+    {
+      "experiment": "DES Y3 (3x2pt)",
+      "value": 0.776,
+      "uncertainty": 0.017,
+      "units": "dimensionless",
+      "year": 2022,
+      "reference": "Abbott et al. (DES), PRD 105, 023520 (2022), arXiv:2105.13549"
+    },
+    {
+      "experiment": "HSC-Y3 cosmic shear",
+      "value": 0.775,
+      "uncertainty": 0.043,
+      "units": "dimensionless",
+      "year": 2023,
+      "reference": "Dalal et al., PRD 108, 123519 (2023), arXiv:2304.00701"
+    },
+    {
+      "experiment": "ACT DR6 lensing + BAO",
+      "value": 0.840,
+      "uncertainty": 0.028,
+      "units": "dimensionless",
+      "year": 2023,
+      "reference": "Madhavacheril et al., ApJ 962, 113 (2024), arXiv:2304.05203",
+      "note": "CMB lensing prefers the high (Planck-like) value; the tension is primarily between weak gravitational lensing of galaxies and CMB-anchored predictions, not between all probes."
+    },
+    {
+      "experiment": "DES Y3 + KiDS-1000 joint",
+      "value": 0.790,
+      "uncertainty": 0.014,
+      "units": "dimensionless",
+      "year": 2023,
+      "reference": "DES + KiDS, arXiv:2305.17173",
+      "note": "Joint analysis with harmonized scale cuts and modeling."
+    }
+  ],
+  "tension_history": [
+    {
+      "year": 2017,
+      "sigma": 2.3,
+      "comparison": "KiDS-450 vs Planck 2015",
+      "note": "Hildebrandt et al. 2017."
+    },
+    {
+      "year": 2021,
+      "sigma": 3.0,
+      "comparison": "KiDS-1000 vs Planck 2018",
+      "note": "Heymans et al. 2021 cosmic shear + galaxy clustering."
+    },
+    {
+      "year": 2022,
+      "sigma": 2.3,
+      "comparison": "DES Y3 vs Planck 2018",
+      "note": "DES 3x2pt full result."
+    },
+    {
+      "year": 2023,
+      "sigma": 2.5,
+      "comparison": "DES Y3 + KiDS joint vs Planck 2018",
+      "note": "Persistent low-amplitude clustering on weak-lensing scales."
+    }
+  ],
+  "status": "open",
+  "summary": "Weak gravitational lensing surveys (KiDS, DES, HSC) consistently measure less late-time structure clustering than LambdaCDM predicts when fit to Planck CMB data. The tension sits at ~2-3 sigma and has been stable across multiple independent surveys. Galaxy clustering, cluster counts, and full-shape galaxy power spectra give a mixed picture; CMB lensing (ACT, SPT) is consistent with Planck. Whether this is a genuine signal of suppressed structure growth (e.g., a non-cold dark matter component, or modified gravity) or a baryonic-feedback / photometric systematic remains unresolved.",
+  "systematics_notes": "Modeling of baryonic feedback at small scales, photometric redshift calibration, and intrinsic alignments of galaxies are the leading systematics for cosmic shear. Different scale-cut choices can move S8 by ~1 sigma. The fact that CMB lensing (a different physical probe at higher redshift) gives a Planck-like S8 favors a low-redshift / small-scale source of any new physics, if any.",
+  "references": [
+    {
+      "citation": "Heymans et al. (KiDS-1000), 'KiDS-1000 Cosmology: Multi-probe weak gravitational lensing and spectroscopic galaxy clustering constraints', A&A 646, A140 (2021)",
+      "arxiv": "2007.15632"
+    },
+    {
+      "citation": "Abbott et al. (DES), 'Dark Energy Survey Year 3 results: Cosmological constraints from galaxy clustering and weak lensing', PRD 105, 023520 (2022)",
+      "arxiv": "2105.13549"
+    },
+    {
+      "citation": "Madhavacheril et al. (ACT), 'The Atacama Cosmology Telescope: DR6 Gravitational Lensing Map and Cosmological Parameters', ApJ 962, 113 (2024)",
+      "arxiv": "2304.05203"
+    },
+    {
+      "citation": "Di Valentino et al., 'Cosmology Intertwined III: f(sigma_8) and S_8', Astropart. Phys. 131, 102604 (2021)",
+      "arxiv": "2008.11286"
+    }
+  ],
+  "tags": ["lambda_cdm", "structure_growth", "weak_lensing", "baryonic_feedback"]
+}

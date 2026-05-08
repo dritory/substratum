@@ -1,0 +1,122 @@
+{
+  "id": "w_boson_mass",
+  "name": "W boson mass",
+  "aliases": ["m_W", "W mass anomaly"],
+  "domain": "particle",
+  "observable": {
+    "symbol": "m_W",
+    "description": "Mass of the W boson, predicted in the Standard Model by an electroweak global fit using m_Z, the top mass, the Higgs mass, alpha_em, and G_F. Direct measurements at hadron and lepton colliders test the SM at loop level.",
+    "units": "MeV"
+  },
+  "characteristic_scale": {
+    "length_m": 2.5e-18,
+    "energy_ev": 8.04e10,
+    "note": "W mass itself sets the scale."
+  },
+  "standard_prediction": {
+    "model": "SM electroweak global fit",
+    "value": 80354,
+    "uncertainty": 7,
+    "units": "MeV",
+    "method_variants": [
+      {
+        "label": "Gfitter post-2018",
+        "value": 80354,
+        "uncertainty": 7,
+        "reference": "Haller et al., Eur. Phys. J. C 78, 675 (2018), arXiv:1803.01853"
+      }
+    ],
+    "references": [
+      "Haller et al., Eur. Phys. J. C 78, 675 (2018), arXiv:1803.01853",
+      "Particle Data Group, Review of Particle Physics 2024"
+    ]
+  },
+  "measurements": [
+    {
+      "experiment": "LEP combined (ALEPH, DELPHI, L3, OPAL)",
+      "value": 80376,
+      "uncertainty": 33,
+      "units": "MeV",
+      "year": 2013,
+      "reference": "ALEPH/DELPHI/L3/OPAL/SLD collaborations, Phys. Rep. 532, 119 (2013), arXiv:1302.3415"
+    },
+    {
+      "experiment": "D0 II",
+      "value": 80375,
+      "uncertainty": 23,
+      "units": "MeV",
+      "year": 2012,
+      "reference": "D0 Collaboration, PRL 108, 151804 (2012), arXiv:1203.0293"
+    },
+    {
+      "experiment": "CDF II",
+      "value": 80433.5,
+      "uncertainty": 9.4,
+      "units": "MeV",
+      "year": 2022,
+      "reference": "CDF Collaboration, Science 376, 6589, 170-176 (2022)",
+      "note": "The headline 7-sigma anomaly. ~76 MeV above the SM and the ATLAS/CMS/LHCb measurements."
+    },
+    {
+      "experiment": "LHCb",
+      "value": 80354,
+      "uncertainty": 32,
+      "units": "MeV",
+      "year": 2022,
+      "reference": "LHCb Collaboration, JHEP 01, 036 (2022), arXiv:2109.01113"
+    },
+    {
+      "experiment": "ATLAS (reanalysis)",
+      "value": 80366.5,
+      "uncertainty": 15.9,
+      "units": "MeV",
+      "year": 2024,
+      "reference": "ATLAS Collaboration, arXiv:2403.15085",
+      "note": "Improved analysis with PDF profiling. Consistent with SM, inconsistent with CDF II."
+    },
+    {
+      "experiment": "CMS",
+      "value": 80360.2,
+      "uncertainty": 9.9,
+      "units": "MeV",
+      "year": 2024,
+      "reference": "CMS Collaboration, Nature 632, 506-511 (2024)",
+      "note": "First CMS m_W measurement. Consistent with SM."
+    }
+  ],
+  "tension_history": [
+    {
+      "year": 2022,
+      "sigma": 7.0,
+      "comparison": "CDF II vs SM EW fit",
+      "note": "Headline result. Also ~3 sigma above the pre-2022 world average."
+    },
+    {
+      "year": 2024,
+      "sigma": "<1 (excl. CDF) / ~5 (CDF only)",
+      "comparison": "ATLAS+CMS+LHCb+D0+LEP avg vs SM, with CDF as outlier",
+      "note": "After ATLAS reanalysis and CMS first result, the non-CDF world average is fully consistent with the SM. CDF II remains a ~5 sigma outlier among the experimental measurements themselves."
+    }
+  ],
+  "status": "contested",
+  "summary": "CDF II's 2022 measurement of m_W gave 80,433.5 +/- 9.4 MeV, ~7 sigma above the SM electroweak fit and ~76 MeV above the previous world average. Subsequent measurements at the LHC (LHCb 2022, ATLAS reanalysis 2024, CMS first measurement 2024) all favor the SM value. The discrepancy now sits primarily *between* CDF and the LHC experiments, not between the world average and the SM. The remaining open question is the systematic source of CDF's high value.",
+  "systematics_notes": "PDF uncertainties in the underlying p-pbar / pp -> W production are the dominant theoretical input to all hadronic m_W measurements. CDF's analysis used different PDF sets and recoil-modeling choices than the LHC experiments; revisiting CDF data with modern PDF profiling has been proposed but is non-trivial post-Tevatron-shutdown.",
+  "references": [
+    {
+      "citation": "CDF Collaboration, 'High-precision measurement of the W boson mass with the CDF II detector', Science 376, 170-176 (2022)",
+      "doi": "10.1126/science.abk1781"
+    },
+    {
+      "citation": "ATLAS Collaboration, 'Measurement of the W-boson mass and width with the ATLAS detector using proton-proton collisions at sqrt(s)=7 TeV' (2024)",
+      "arxiv": "2403.15085"
+    },
+    {
+      "citation": "CMS Collaboration, 'High-precision measurement of the W boson mass with the CMS experiment at the LHC', Nature 632, 506-511 (2024)"
+    },
+    {
+      "citation": "LHCb Collaboration, 'Measurement of the W boson mass', JHEP 01, 036 (2022)",
+      "arxiv": "2109.01113"
+    }
+  ],
+  "tags": ["electroweak", "precision_test", "pdf_systematics", "outlier"]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "cosmological_constant",
+  "name": "Cosmological constant problem",
+  "aliases": ["vacuum energy problem", "Lambda problem"],
+  "domain": "theoretical",
+  "observable": {
+    "symbol": "rho_Lambda",
+    "description": "The energy density of the cosmological constant inferred from cosmic acceleration. The 'tension' here is not between two measurements; it is between the measured value and naive estimates of the QFT vacuum energy. It is a naturalness problem rather than an experimental anomaly, included here because any future fundamental theory has to address it.",
+    "units": "(eV)^4 (natural units) or J/m^3"
+  },
+  "characteristic_scale": {
+    "length_m": 1.3e26,
+    "energy_ev": 2.3e-3,
+    "note": "(rho_Lambda)^(1/4) ~ 2.3 meV. The Hubble radius sets the relevant length. The problem is precisely that this scale is enormously below any UV scale in physics."
+  },
+  "standard_prediction": {
+    "model": "Naive QFT zero-point energy with UV cutoff",
+    "value": "cutoff-dependent; (M_Pl)^4, (M_GUT)^4, (M_EW)^4 all hugely larger than observed",
+    "uncertainty": null,
+    "units": "(eV)^4",
+    "method_variants": [
+      {
+        "label": "Planck-scale cutoff",
+        "value": "~ (1.2e28 eV)^4",
+        "reference": "Standard textbook estimate",
+        "note": "Ratio (M_Pl/meV)^4 ~ 1e122. This is the famous '10^120 problem' figure. The number depends on the assumed cutoff and regularization scheme; it is heuristic, not a controlled QFT prediction."
+      },
+      {
+        "label": "Electroweak cutoff",
+        "value": "~ (1e12 eV)^4",
+        "reference": "Standard textbook estimate",
+        "note": "Ratio ~ 1e60. Still catastrophically large."
+      },
+      {
+        "label": "QCD scale cutoff",
+        "value": "~ (200 MeV)^4",
+        "reference": "Standard textbook estimate",
+        "note": "Ratio ~ 1e44. Still very large."
+      },
+      {
+        "label": "Dimensional regularization (e.g. supersymmetry-broken EFT)",
+        "value": "model-dependent",
+        "reference": "Martin, CR Physique 13 (2012), arXiv:1205.3365",
+        "note": "Properly-regularized QFT does not produce a unique 'prediction' for the cosmological constant; the answer depends entirely on the assumed UV completion. The '10^120' figure should be read as 'no known UV completion explains why Lambda is small without fine-tuning'."
+      }
+    ],
+    "references": [
+      "Weinberg, 'The cosmological constant problem', Rev. Mod. Phys. 61, 1 (1989)",
+      "Martin, 'Everything you always wanted to know about the cosmological constant problem (but were afraid to ask)', CR Physique 13, 566 (2012), arXiv:1205.3365"
+    ]
+  },
+  "measurements": [
+    {
+      "experiment": "Planck 2018 + BAO + SN Ia (LambdaCDM fit)",
+      "value": 5.36e-10,
+      "uncertainty": 0.05e-10,
+      "units": "J/m^3",
+      "year": 2020,
+      "reference": "Planck Collaboration 2018 VI, arXiv:1807.06209",
+      "note": "Equivalent to Omega_Lambda ~ 0.685 with H_0 ~ 67.4. (rho_Lambda)^(1/4) ~ 2.26 meV in natural units."
+    },
+    {
+      "experiment": "DESI BAO Y1 + CMB + SN",
+      "value": "consistent with Planck, with mild preference for evolving dark energy (w_0 != -1)",
+      "year": 2024,
+      "reference": "DESI Collaboration, arXiv:2404.03002",
+      "note": "DESI Y1 prefers a time-evolving dark energy equation of state at ~2-3 sigma when combined with SN Ia. If real, this would mean Lambda is not a constant at all, deepening the puzzle."
+    }
+  ],
+  "tension_history": [
+    {
+      "year": 1989,
+      "sigma": "naturalness, not statistical",
+      "comparison": "rho_Lambda observed vs naive QFT vacuum energy",
+      "note": "Weinberg's review crystallized the problem."
+    },
+    {
+      "year": 1998,
+      "sigma": "naturalness",
+      "comparison": "Discovery of cosmic acceleration confirmed Lambda is nonzero and tiny",
+      "note": "Riess 1998, Perlmutter 1999."
+    },
+    {
+      "year": 2024,
+      "sigma": "naturalness; plus possible 2-3 sigma w(z) evolution from DESI",
+      "comparison": "DESI BAO + SN: hint that w != -1",
+      "note": "If confirmed, this is no longer 'just' a naturalness problem; Lambda may be dynamical."
+    }
+  ],
+  "status": "theoretical",
+  "summary": "The observed value of the cosmological constant is enormously smaller than any natural scale in known physics. The 'factor of 10^120' often quoted is heuristic and cutoff-dependent; the substantive statement is that no UV completion of the Standard Model has cleanly explained why Lambda is positive and tiny without fine-tuning. As of 2024, DESI BAO + supernova combinations show a 2-3 sigma preference for time-evolving dark energy, which if confirmed would replace 'why is Lambda so small' with 'what dynamical field is driving acceleration'. Both versions of the question remain open.",
+  "systematics_notes": "This is a theoretical/naturalness puzzle, so 'systematics' are different from an experimental entry. The naive estimate is sensitive to (a) the regularization scheme, (b) the assumed cutoff, (c) which fields are included, and (d) whether the underlying theory has a symmetry (such as supersymmetry) that protects the vacuum energy. For DESI's hint of evolving dark energy, systematic concerns include SN Ia calibration (e.g., the Pantheon+ vs Union3 vs DES-SN5YR samples give different w(z) preferences) and the BAO reconstruction.",
+  "references": [
+    {
+      "citation": "Weinberg, 'The cosmological constant problem', Rev. Mod. Phys. 61, 1 (1989)",
+      "doi": "10.1103/RevModPhys.61.1"
+    },
+    {
+      "citation": "Martin, 'Everything you always wanted to know about the cosmological constant problem (but were afraid to ask)', CR Physique 13, 566 (2012)",
+      "arxiv": "1205.3365"
+    },
+    {
+      "citation": "DESI Collaboration, 'DESI 2024 VI: Cosmological Constraints from the Measurements of Baryon Acoustic Oscillations'",
+      "arxiv": "2404.03002"
+    },
+    {
+      "citation": "Riess et al., 'Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant', AJ 116, 1009 (1998)"
+    }
+  ],
+  "tags": ["naturalness", "vacuum_energy", "dark_energy", "qft", "general_relativity"]
+}

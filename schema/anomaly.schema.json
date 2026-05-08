@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dritory/substratum/schema/anomaly.schema.json",
+  "title": "Physics Anomaly / Tension Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "domain",
+    "observable",
+    "standard_prediction",
+    "measurements",
+    "tension_history",
+    "status",
+    "references"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Stable slug used as the filename."
+    },
+    "name": { "type": "string" },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "particle",
+        "cosmology",
+        "gravitation",
+        "condensed_matter",
+        "nuclear",
+        "atomic",
+        "astrophysics",
+        "theoretical"
+      ]
+    },
+    "observable": {
+      "type": "object",
+      "required": ["symbol", "description"],
+      "properties": {
+        "symbol": { "type": "string" },
+        "description": { "type": "string" },
+        "units": { "type": "string" }
+      }
+    },
+    "characteristic_scale": {
+      "type": "object",
+      "description": "Approximate scale where the observable is probed. Heuristic only; many observables do not have a single scale.",
+      "properties": {
+        "length_m": { "type": ["number", "null"] },
+        "energy_ev": { "type": ["number", "null"] },
+        "note": { "type": "string" }
+      }
+    },
+    "standard_prediction": {
+      "type": "object",
+      "required": ["model", "value", "references"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "Which theoretical framework produces this prediction (e.g. 'Standard Model', 'LambdaCDM', 'QED + lattice HVP')."
+        },
+        "value": { "type": ["number", "string"] },
+        "uncertainty": { "type": ["number", "string", "null"] },
+        "units": { "type": "string" },
+        "method_variants": {
+          "type": "array",
+          "description": "Alternative SM/baseline predictions when the theory side is itself contested (e.g. data-driven HVP vs lattice HVP for muon g-2).",
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": ["number", "string"] },
+              "uncertainty": { "type": ["number", "string", "null"] },
+              "reference": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "references": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "measurements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["experiment", "value", "year", "reference"],
+        "properties": {
+          "experiment": { "type": "string" },
+          "value": { "type": ["number", "string"] },
+          "uncertainty": { "type": ["number", "string", "null"] },
+          "units": { "type": "string" },
+          "year": { "type": "integer" },
+          "reference": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "tension_history": {
+      "type": "array",
+      "description": "How the discrepancy's significance has evolved over time. Each entry is a snapshot.",
+      "items": {
+        "type": "object",
+        "required": ["year", "sigma", "note"],
+        "properties": {
+          "year": { "type": "integer" },
+          "sigma": { "type": ["number", "string"] },
+          "comparison": {
+            "type": "string",
+            "description": "What was being compared (e.g. 'BNL+FNAL avg vs WP2020 SM data-driven HVP')."
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "contested", "resolved", "theoretical", "watching"]
+    },
+    "summary": {
+      "type": "string",
+      "description": "Plain-English summary, 2-4 sentences."
+    },
+    "systematics_notes": {
+      "type": "string",
+      "description": "Known systematic concerns or theoretical disputes that affect interpretation."
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["citation"],
+        "properties": {
+          "citation": { "type": "string" },
+          "doi": { "type": "string" },
+          "arxiv": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

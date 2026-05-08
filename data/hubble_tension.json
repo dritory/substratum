@@ -1,0 +1,130 @@
+{
+  "id": "hubble_tension",
+  "name": "Hubble tension",
+  "aliases": ["H0 tension"],
+  "domain": "cosmology",
+  "observable": {
+    "symbol": "H_0",
+    "description": "Present-day expansion rate of the universe. Late-universe distance-ladder measurements (Cepheids + Type Ia supernovae) give a value persistently higher than the value inferred by fitting LambdaCDM to early-universe CMB data.",
+    "units": "km/s/Mpc"
+  },
+  "characteristic_scale": {
+    "length_m": 1.3e26,
+    "energy_ev": 1.4e-33,
+    "note": "Hubble radius ~ c/H_0 ~ 4.4 Gpc. Energy scale is the corresponding Hubble parameter expressed as eV. The tension itself spans the gap between local (Mpc) distance ladder and last-scattering surface (Gpc) physics."
+  },
+  "standard_prediction": {
+    "model": "LambdaCDM fit to Planck 2018 CMB (TT,TE,EE+lowE+lensing)",
+    "value": 67.36,
+    "uncertainty": 0.54,
+    "units": "km/s/Mpc",
+    "method_variants": [
+      {
+        "label": "ACT DR4 + WMAP",
+        "value": 67.6,
+        "uncertainty": 1.1,
+        "reference": "Aiola et al. 2020, arXiv:2007.07288",
+        "note": "Independent CMB pipeline, consistent with Planck."
+      },
+      {
+        "label": "BAO + BBN (no CMB)",
+        "value": 67.5,
+        "uncertainty": 1.1,
+        "reference": "e.g. Schoneberg et al. 2022, arXiv:2202.04077",
+        "note": "Sound-horizon-anchored inverse distance ladder gives essentially the same low value without CMB."
+      }
+    ],
+    "references": [
+      "Planck 2018 Results VI: Cosmological Parameters, A&A 641, A6 (2020), arXiv:1807.06209"
+    ]
+  },
+  "measurements": [
+    {
+      "experiment": "SH0ES (Cepheid + SN Ia distance ladder)",
+      "value": 73.04,
+      "uncertainty": 1.04,
+      "units": "km/s/Mpc",
+      "year": 2022,
+      "reference": "Riess et al., ApJL 934, L7 (2022), arXiv:2112.04510"
+    },
+    {
+      "experiment": "CCHP (TRGB + SN Ia)",
+      "value": 69.8,
+      "uncertainty": 1.7,
+      "units": "km/s/Mpc",
+      "year": 2024,
+      "reference": "Freedman et al. 2024, arXiv:2408.06153",
+      "note": "Tip-of-the-Red-Giant-Branch calibration sits between SH0ES and Planck. The choice of distance-ladder rung is itself contested."
+    },
+    {
+      "experiment": "JWST + HST (SH0ES re-validation)",
+      "value": 73.0,
+      "uncertainty": 1.0,
+      "units": "km/s/Mpc",
+      "year": 2024,
+      "reference": "Riess et al. 2024, arXiv:2408.11770",
+      "note": "JWST imaging confirms HST Cepheid photometry; rules out crowding bias as a major systematic for SH0ES."
+    },
+    {
+      "experiment": "H0LiCOW / TDCOSMO (strong-lensing time delays)",
+      "value": 73.3,
+      "uncertainty": 1.8,
+      "units": "km/s/Mpc",
+      "year": 2020,
+      "reference": "Wong et al., MNRAS 498, 1420 (2020), arXiv:1907.04869",
+      "note": "Independent of distance ladder. With more conservative lens-mass priors (TDCOSMO 2020), uncertainty grows."
+    }
+  ],
+  "tension_history": [
+    {
+      "year": 2013,
+      "sigma": 2.4,
+      "comparison": "Riess 2011 vs Planck 2013",
+      "note": "First time the discrepancy was widely flagged."
+    },
+    {
+      "year": 2019,
+      "sigma": 4.4,
+      "comparison": "SH0ES 2019 vs Planck 2018",
+      "note": "Riess et al. 2019, arXiv:1903.07603."
+    },
+    {
+      "year": 2022,
+      "sigma": 5.0,
+      "comparison": "SH0ES 2022 vs Planck 2018",
+      "note": "Headline 5-sigma claim."
+    },
+    {
+      "year": 2024,
+      "sigma": 5.0,
+      "comparison": "SH0ES + JWST vs Planck 2018",
+      "note": "JWST data weakened the case that the SH0ES result is a Cepheid systematic. Tension persists."
+    }
+  ],
+  "status": "open",
+  "summary": "The locally-measured expansion rate (Cepheid-anchored distance ladder, anchored further by JWST as of 2024) is ~73 km/s/Mpc, while LambdaCDM applied to Planck CMB data and to BAO+BBN inverse distance ladders gives ~67.4. The ~5 sigma discrepancy has survived multiple independent cross-checks. Either there is a systematic in one of the two pipelines that has eluded a decade of scrutiny, or LambdaCDM is incomplete. Proposed solutions (early dark energy, modified recombination, varying fundamental constants) so far each create new tensions elsewhere.",
+  "systematics_notes": "TRGB-based calibrations sit between the two values, and the Cepheid-vs-TRGB debate is itself active. Time-delay strong lensing gives high values but with large lens-modeling uncertainties. Megamaser distances (e.g., Pesce et al.) also support a high local value. No single early-universe extension to LambdaCDM cleanly resolves H0 without violating BAO, S8, or CMB damping-tail constraints.",
+  "references": [
+    {
+      "citation": "Riess et al., 'A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team', ApJL 934, L7 (2022)",
+      "arxiv": "2112.04510"
+    },
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020)",
+      "arxiv": "1807.06209"
+    },
+    {
+      "citation": "Riess et al., 'JWST Observations Reject Unrecognized Crowding of Cepheid Photometry as an Explanation for the Hubble Tension at 8 sigma Confidence', ApJL 962, L17 (2024)",
+      "arxiv": "2401.04773"
+    },
+    {
+      "citation": "Freedman et al., 'Status Report on the Chicago-Carnegie Hubble Program (CCHP)' (2024)",
+      "arxiv": "2408.06153"
+    },
+    {
+      "citation": "Di Valentino et al., 'In the Realm of the Hubble Tension - A Review of Solutions', Class. Quantum Grav. 38, 153001 (2021)",
+      "arxiv": "2103.01183"
+    }
+  ],
+  "tags": ["lambda_cdm", "expansion_rate", "distance_ladder", "cmb", "early_universe"]
+}
