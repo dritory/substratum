@@ -95,7 +95,7 @@ expose to be evaluated, and an `evaluator_status` flag indicating how
 hard the evaluation is (`trivial` / `tractable` / `requires_code` /
 `requires_simulation` / `requires_lattice` / `research_problem`).
 
-44 benchmark entries across 11 domains. Every entry is backed by
+53 benchmark entries across 12 domains. Every entry is backed by
 primary literature (arXiv / DOI). See `ROADMAP.md` for the full
 populated list and remaining additions.
 

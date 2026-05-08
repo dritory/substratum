@@ -1,0 +1,51 @@
+{
+  "id": "lorentz_electron_sme",
+  "name": "Lorentz invariance in the electron sector (SME)",
+  "kind": "principle_invariance",
+  "principle": "lorentz_invariance",
+  "requirement": "Any candidate framework must respect Lorentz invariance in the electron sector to the precision set by laboratory comagnetometer, ion-trap, and atomic-spectroscopy experiments. SME electron-sector coefficients (b_e)^mu, (c_e)^mu nu, (d_e)^mu nu, and (g_e)^lambda mu nu are bounded at levels typically 10^-29 - 10^-33 GeV depending on the specific component.",
+  "regime": {
+    "length_m": 1e-1,
+    "energy_ev": 5.11e5,
+    "description": "Tabletop laboratory experiments (atomic clocks, ion traps, comagnetometers) plus astrophysical electron-photon vacuum bounds; sensitivity to direction-dependent and energy-dependent electron propagation."
+  },
+  "current_bound": {
+    "value": "|(b_e)^X|, |(b_e)^Y| < 10^-31 GeV (comagnetometers); |(c_e)^TT|, |(c_e)^XY| < 10^-19 (Ca+ ion trap); various other components bounded at 10^-29 - 10^-33 GeV",
+    "uncertainty": null,
+    "units": "GeV (SME coefficient bounds, sun-centered frame)",
+    "experiment": "Co-magnetometer (Smiciklas et al.), Ca+ ion trap (Pruttivarasin et al.), Yb+ ion clock comparison",
+    "year": 2015,
+    "reference": "Pruttivarasin et al., 'Michelson-Morley analogue for electrons using trapped ions to test Lorentz symmetry', Nature 517, 592 (2015), arXiv:1412.2194; Smiciklas et al., 'New test of local Lorentz invariance using a 21Ne-Rb-K comagnetometer', PRL 107, 171604 (2011); compiled bounds in Kostelecky-Russell SME data tables",
+    "confidence_level": "varies; 95% CL typical"
+  },
+  "what_it_excludes": "Together with photon-sector and proton/neutron-sector SME bounds (covered in lorentz_invariance_photon, vacuum_birefringence_polarization, cpt_kaon_mass_difference), constrains all components of fermion Lorentz violation at typically 10^-29 GeV or better. Closes most natural Planck-suppressed Lorentz-violating scenarios except for those with additional suppression mechanisms.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard Model Extension (SME) electron-sector Lagrangian extension, including CPT-odd coefficients (a_e, b_e) and CPT-even coefficients (c_e, d_e, e_e, f_e, g_e, H_e).",
+      "reference": "Colladay and Kostelecky, PRD 58, 116002 (1998), arXiv:hep-ph/9809521; Kostelecky and Lane, PRD 60, 116010 (1999); Kostelecky and Russell, RMP 83, 11 (2011), arXiv:0801.0287 (data tables).",
+      "summary": "Each SME coefficient enters the Dirac Hamiltonian and produces specific signatures: spectral shifts, sidereal modulation, magnetic-field dependence."
+    },
+    "predicted_observable": "Energy splittings, transition frequencies, comagnetometer phase shifts as functions of laboratory orientation and time of day (sidereal modulation).",
+    "bound_in_parameterization": "Component-by-component bounds tabulated in Kostelecky-Russell SME data tables (annual update at arXiv:0801.0287).",
+    "framework_inputs": [
+      "If the framework breaks Lorentz invariance in the electron sector, decompose the modification onto SME basis coefficients and confront with the relevant entry in the data tables.",
+      "Include possible Planck-suppressed Lorentz-violating operators (dimension >= 5 in the SME)."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Pruttivarasin et al., 'Michelson-Morley analogue for electrons using trapped ions to test Lorentz symmetry', Nature 517, 592 (2015)",
+      "arxiv": "1412.2194"
+    },
+    {
+      "citation": "Smiciklas et al., 'New test of local Lorentz invariance using a 21Ne-Rb-K comagnetometer', PRL 107, 171604 (2011)",
+      "arxiv": "1106.0738"
+    },
+    {
+      "citation": "Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', RMP 83, 11 (2011) (annual updates)",
+      "arxiv": "0801.0287"
+    }
+  ],
+  "tags": ["lorentz", "electron", "sme", "atomic_physics", "comagnetometer"]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "proton_radius_muonic_hydrogen",
+  "name": "Proton charge radius from muonic hydrogen and electronic spectroscopy",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the proton charge radius r_p measured by muonic-hydrogen Lamb-shift spectroscopy and (post-2017) by re-measured electronic-hydrogen spectroscopy: r_p = 0.84087 +/- 0.00039 fm (muonic H, Antognini et al. 2013), in agreement with later electronic-H measurements within ~0.001 fm. The earlier 'proton radius puzzle' (~5 sigma discrepancy 2010-2017) is now considered largely resolved.",
+  "regime": {
+    "length_m": 0.84e-15,
+    "energy_ev": null,
+    "description": "Sub-fm proton-charge structure; sensitive to any new electron-proton or muon-proton interaction."
+  },
+  "current_bound": {
+    "value": 0.84087,
+    "uncertainty": 0.00039,
+    "units": "fm (proton root-mean-square charge radius)",
+    "experiment": "Muonic hydrogen Lamb-shift spectroscopy at PSI",
+    "year": 2013,
+    "reference": "Antognini et al., 'Proton structure from the measurement of 2S-2P transition frequencies of muonic hydrogen', Science 339, 417 (2013); Pohl et al., Nature 466, 213 (2010)",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "The post-2017 re-measurements of the electronic-hydrogen 2S-2P Lamb shift (Bezginov et al. 2019, Beyer et al. 2017) give r_p consistent with the muonic value, settling the proton-radius puzzle. This eliminates motivation for muon-specific new physics that would have been needed to explain a genuine muonic-vs-electronic difference, but tightly constrains any framework predicting flavor-non-universal electromagnetic couplings.",
+  "procedural": {
+    "parameterization": {
+      "name": "Direct: proton charge radius r_p = (-6 dG_E/dQ^2 |_{Q^2=0})^(1/2). Bound-state QED corrections are calculable to alpha^7 m c^2 / h precision.",
+      "reference": "Antognini et al., Annals Phys. 331, 127 (2013); Pachucki, PRA 60, 3593 (1999).",
+      "summary": "Lamb shift in muonic H depends on r_p^2 with O(1) coefficient because the muon Bohr radius is ~200 times smaller, dramatically enhancing finite-size effects."
+    },
+    "predicted_observable": "2S_1/2 - 2P_3/2 splitting in muonic hydrogen; 1S Lamb shift in electronic hydrogen.",
+    "bound_in_parameterization": "r_p (muonic H) = 0.84087 +/- 0.00039 fm; r_p (electronic, recent) consistent at ~0.001 fm. Older CODATA r_p = 0.8775 +/- 0.0051 fm (electronic H + e-p scattering, pre-2017) caused the original puzzle.",
+    "framework_inputs": [
+      "If the framework predicts flavor-non-universal QED corrections, compute the resulting shift in r_p^muonic vs r_p^electronic.",
+      "If the framework introduces new short-range e-p or mu-p interactions, compute their contribution to the Lamb shift in each system."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Antognini et al., 'Proton structure from the measurement of 2S-2P transition frequencies of muonic hydrogen', Science 339, 417 (2013)",
+      "doi": "10.1126/science.1230016"
+    },
+    {
+      "citation": "Pohl et al., 'The size of the proton', Nature 466, 213 (2010)",
+      "doi": "10.1038/nature09250"
+    },
+    {
+      "citation": "Beyer et al., 'The Rydberg constant and proton size from atomic hydrogen', Science 358, 79 (2017)",
+      "doi": "10.1126/science.aah6677"
+    },
+    {
+      "citation": "Bezginov et al., 'A measurement of the atomic hydrogen Lamb shift and the proton charge radius', Science 365, 1007 (2019)",
+      "doi": "10.1126/science.aau7807"
+    }
+  ],
+  "tags": ["qed", "muonic_atom", "proton_radius", "atomic_physics", "lfu"]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "cmb_large_scale_anomalies",
+  "name": "CMB large-scale anomalies (low-l power, axis of evil, hemispherical asymmetry, cold spot)",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must accommodate (or predict) the persistent ~2-3 sigma anomalies in the large-scale CMB temperature pattern observed by WMAP and confirmed by Planck. These include: (a) low quadrupole and octopole power; (b) alignment between the quadrupole and octopole and special directions ('axis of evil'); (c) hemispherical power asymmetry; (d) the Cold Spot in the southern Galactic hemisphere; (e) lensing-amplitude tension A_L = 1.18 +/- 0.06.",
+  "regime": {
+    "length_m": 1.4e26,
+    "energy_ev": 2e-4,
+    "description": "Last-scattering surface at largest angular scales, multipoles l ~ 2-30; horizon-scale features."
+  },
+  "current_bound": {
+    "value": "Each individual anomaly at ~2-3 sigma. Combined a posteriori significance debated.",
+    "uncertainty": null,
+    "units": "various; significances quoted in standard deviations",
+    "experiment": "Planck 2018 + WMAP",
+    "year": 2020,
+    "reference": "Planck Collaboration, 'Planck 2018 results. VII. Isotropy and statistics of the CMB', A&A 641, A7 (2020), arXiv:1906.02552",
+    "confidence_level": "Each at ~2-3 sigma; cumulative significance is contested due to a-posteriori-statistics concerns"
+  },
+  "what_it_excludes": "Anomalies at the few-sigma level are easy to dismiss as look-elsewhere artifacts (the multitude of CMB statistics each yields some 2-3 sigma feature by chance). However, their persistence across WMAP and Planck and their broad spatial coherence motivate non-standard explanations: anisotropic inflation, broken statistical isotropy, topology, residual foregrounds, or non-Gaussian initial conditions. Any framework predicting deviations from statistical isotropy on the sky must score against these features.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard inflationary perturbation theory predicts statistical isotropy; deviations parameterized by (a) multipole-by-multipole power-suppression factor S(l), (b) dipolar modulation amplitude A and direction, (c) bipolar spherical-harmonic moments B_LM^ll'.",
+      "reference": "Schwarz, Starkman, Huterer, Copi, Phys. Rep. 778-779, 1 (2018), arXiv:1510.07929; Hanson and Lewis, PRD 80, 063004 (2009).",
+      "summary": "Quantitative measures of each anomaly (low power, alignment, asymmetry, cold-spot statistics) all yield numerical statistics with calculable distributions under LambdaCDM null."
+    },
+    "predicted_observable": "Statistical anisotropy measures: angular power suppression at low l; multipole-vector alignments; dipolar-modulation amplitude.",
+    "bound_in_parameterization": "Each anomaly quantified by its specific statistic; LambdaCDM is consistent with observation at the 2-3 sigma per-anomaly level.",
+    "framework_inputs": [
+      "If the framework predicts an anisotropic or topologically non-trivial early universe, compute the modified angular power and multipole alignments.",
+      "Include foreground systematics (Galactic dust, synchrotron) when comparing predictions to data."
+    ],
+    "evaluator_status": "requires_simulation"
+  },
+  "primary_references": [
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. VII. Isotropy and statistics of the CMB', A&A 641, A7 (2020)",
+      "arxiv": "1906.02552"
+    },
+    {
+      "citation": "Schwarz, Starkman, Huterer, Copi, 'CMB Anomalies after Planck', Phys. Rep. 778-779, 1 (2018)",
+      "arxiv": "1510.07929"
+    }
+  ],
+  "tags": ["cosmology", "cmb", "anomaly", "statistical_isotropy", "inflation"]
+}

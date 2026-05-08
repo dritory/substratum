@@ -1,0 +1,46 @@
+{
+  "id": "higgs_couplings_lhc",
+  "name": "Higgs couplings to gauge bosons and third-generation fermions (LHC combined)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the Higgs-boson couplings to W, Z, top, bottom, tau, and (recently) charm and muon, as measured by ATLAS and CMS in their full LHC Run 2 combinations. Coupling-strength modifiers kappa_X are consistent with unity within ~7-15% per coupling: kappa_W = 1.05 +/- 0.06; kappa_Z = 0.99 +/- 0.06; kappa_t = 0.94 +/- 0.11; kappa_b = 0.89 +/- 0.10; kappa_tau = 0.93 +/- 0.07.",
+  "regime": {
+    "length_m": 1.6e-18,
+    "energy_ev": 1.25e11,
+    "description": "Higgs scale, ~125 GeV. Sensitive to BSM Higgs sectors (extended doublets, composite Higgs, dilaton-Higgs mixing) at the few-percent level."
+  },
+  "current_bound": {
+    "value": "kappa_W, kappa_Z, kappa_t, kappa_b, kappa_tau all consistent with 1 within ~10%; kappa_mu observed at ATLAS at 2 sigma; H -> c c_bar bounded |kappa_c| < 4.2",
+    "uncertainty": null,
+    "units": "coupling-modifier ratios kappa_X = (g_HXX^obs / g_HXX^SM)",
+    "experiment": "ATLAS and CMS combined Run 2 analysis",
+    "year": 2022,
+    "reference": "ATLAS Collaboration, 'A detailed map of the Higgs boson interactions by the ATLAS experiment ten years after the discovery', Nature 607, 52 (2022), arXiv:2207.00092; CMS Collaboration, Nature 607, 60 (2022), arXiv:2207.00043",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Constrains BSM Higgs sectors at the few-percent level: composite Higgs scenarios with f >~ 1 TeV; two-Higgs-doublet models with tan beta < 50; heavy-vector-like-quark mixing with the SM third generation. Higgs invisible decay branching < 11% (ATLAS+CMS) constrains Higgs-portal dark matter. The Higgs self-coupling lambda is currently bounded -0.6 < lambda/lambda_SM < 6.6 and will be the focus of HL-LHC.",
+  "procedural": {
+    "parameterization": {
+      "name": "kappa-framework: kappa_X = ratio of observed to SM coupling strength to species X. Equivalently, SMEFT operators C_phi^(...) modifying Higgs production and decay rates.",
+      "reference": "LHC Higgs Cross Section Working Group, CERN-2017-002-M (2017); de Florian et al., arXiv:1610.07922.",
+      "summary": "Each kappa is fit to a global combination of Higgs production cross sections and decay branching ratios; SMEFT translation is one-to-one at leading order."
+    },
+    "predicted_observable": "Higgs production rates (ggF, VBF, VH, ttH) times decay branching ratios in each channel (gamma gamma, ZZ -> 4l, WW -> 2l 2nu, b b_bar, tau tau, mu mu, c c_bar, Z gamma).",
+    "bound_in_parameterization": "Each kappa within ~10% of unity; specific combinations (e.g. fermiophobic) constrained more tightly.",
+    "framework_inputs": [
+      "Match the framework onto SMEFT and compute Wilson coefficients of Higgs-relevant operators (C_phi G, C_phi W, C_phi B, C_phi WB, C_phi e, C_phi u, C_phi d, ...).",
+      "Standard tools: Lilith, HiggsSignals, eHDECAY."
+    ],
+    "evaluator_status": "requires_code"
+  },
+  "primary_references": [
+    {
+      "citation": "ATLAS Collaboration, 'A detailed map of the Higgs boson interactions by the ATLAS experiment ten years after the discovery', Nature 607, 52 (2022)",
+      "arxiv": "2207.00092"
+    },
+    {
+      "citation": "CMS Collaboration, 'A portrait of the Higgs boson by the CMS experiment ten years after the discovery', Nature 607, 60 (2022)",
+      "arxiv": "2207.00043"
+    }
+  ],
+  "tags": ["higgs", "electroweak", "smeft", "lhc", "precision"]
+}

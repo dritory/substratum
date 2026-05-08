@@ -16,7 +16,7 @@ it.
 
 ## Status
 
-### Populated (44 benchmark entries, 5 data entries)
+### Populated (53 benchmark entries, 5 data entries)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -98,19 +98,31 @@ it.
 **Meta (1):**
 - `address_open_tensions` (links into `data/`)
 
+### Recently populated (this batch — 9 entries)
+
+- `katrin_neutrino_mass` (m_ν_e < 0.45 eV)
+- `neutrinoless_double_beta_decay` (KamLAND-Zen <m_ββ>)
+- `lithium_problem_bbn` (~3σ ⁷Li/H discrepancy)
+- `proton_radius_muonic_hydrogen` (Antognini 2013 + post-2017 e-H)
+- `neutrino_oscillation_pmns` (NuFIT 5.2 mass splittings + angles)
+- `cmb_large_scale_anomalies` (low-ℓ, axis of evil, hemispherical, Cold Spot)
+- `higgs_couplings_lhc` (κ_W, κ_Z, κ_t, κ_b, κ_τ)
+- `dark_photon_kinetic_mixing` (BaBar, NA64; ε vs m_A')
+- `lorentz_electron_sme` (electron-sector SME bounds)
+
 ### Future high-priority additions
 
+- `muon_edm_bnl` — muon EDM bound and PSI muEDM future sensitivity
+- `casimir_force_precision` — sub-mm gravity / new short-range forces
 - `n_eff_combined_cmb_bbn` — combined N_eff bound from CMB damping tail
   + BBN; finer than per-experiment entries
-- `lorentz_electron_sme` — full electron-sector SME coefficient table
-- `cmb_isotropy_dipole_anomalies` — large-scale anomalies (low-l, axis
-  of evil, hemispherical asymmetry)
-- `katrin_neutrino_mass` — direct kinematic m(ν_e) bound
-- `0nubb_neutrino_majorana` — neutrinoless double-beta-decay limits
-- `proton_radius_muonic_hydrogen` — separate entry for the Pohl-et-al.
-  measurement (currently mentioned in `lamb_shift_qed_precision`)
-- `lithium_problem_bbn` — the ~3σ ⁷Li/H discrepancy (currently noted
-  inside `bbn_light_element_abundances`)
+- `tau_lepton_universality` — Pich global fit of tau decays
+- `b_to_s_gamma_inclusive` — inclusive Br(B → X_s γ)
+- `meson_mixing_d_k` — neutral D and K mixing constraints
+- `mu_e_anomalous_magnetic` — separate entry for muon g-2 (the data/
+  entry covers it but a benchmark form would be useful)
+- `cosmic_ray_gzk_cutoff` — Lorentz invariance from UHECR spectrum
+- `solar_neutrino_msw` — MSW resonance and adiabatic flavor conversion
 
 ## How to contribute
 

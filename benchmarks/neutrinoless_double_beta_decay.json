@@ -1,0 +1,47 @@
+{
+  "id": "neutrinoless_double_beta_decay",
+  "name": "Neutrinoless double-beta decay: Majorana effective mass",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting Majorana neutrinos must respect upper bounds on the effective Majorana mass <m_betabeta> from neutrinoless double-beta-decay searches. KamLAND-Zen 2023 (Xe-136) sets <m_betabeta> < (28-122) meV at 90% CL, depending on which nuclear matrix elements are used. Detection of 0nubb would prove neutrinos are Majorana fermions and probe lepton-number violation at the TeV scale.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 2.5e6,
+    "description": "Nuclear-scale lepton-number-violating process (Delta L = 2). Q-values at the MeV scale; sensitivity to TeV-scale BSM through the standard light-Majorana-exchange mechanism or directly via heavy mediators."
+  },
+  "current_bound": {
+    "value": "<m_betabeta> < 28-122 meV (Xe-136); < 79-180 meV (Ge-76, GERDA + LEGEND-200); < 36-156 meV (Te-130, CUORE)",
+    "uncertainty": null,
+    "units": "meV (90% CL upper limit on effective Majorana mass)",
+    "experiment": "KamLAND-Zen (Xe-136), GERDA / LEGEND-200 (Ge-76), CUORE (Te-130)",
+    "year": 2024,
+    "reference": "Abe et al. (KamLAND-Zen), 'Search for the Majorana Nature of Neutrinos in the Inverted Mass Ordering Region with KamLAND-Zen', PRL 130, 051801 (2023), arXiv:2203.02139; Agostini et al. (GERDA), PRL 125, 252502 (2020); Adams et al. (CUORE), Nature 604, 53 (2022)",
+    "confidence_level": "90% CL"
+  },
+  "what_it_excludes": "If neutrinos are inverted-ordering Majorana with the lightest mass below ~10 meV, the predicted <m_betabeta> band is ~15-50 meV - approaching the most aggressive KamLAND-Zen bound. nEXO, LEGEND-1000, CUPID aim to probe the entire inverted-ordering region within the next decade. Discovery would establish lepton-number violation; non-detection over the inverted band would favor normal ordering or Dirac neutrinos.",
+  "procedural": {
+    "parameterization": {
+      "name": "Effective Majorana mass <m_betabeta> = |sum_i U_ei^2 m_i| (with complex Majorana phases). For BSM heavy-particle exchange, parameterized by SMEFT operators of dimension >= 7 violating lepton number.",
+      "reference": "Bilenky and Petcov, RMP 59, 671 (1987); Cirigliano et al., 'Neutrinoless Double-Beta Decay: A Roadmap for Matching Theory to Experiment', arXiv:2203.12169 (2022).",
+      "summary": "Decay rate Gamma_0nubb proportional to G_0nu * |M_0nu|^2 * <m_betabeta>^2 / m_e^2, where G_0nu is a phase-space factor and M_0nu the nuclear matrix element."
+    },
+    "predicted_observable": "Half-life T^0nu_(1/2) of a 0nubb-candidate isotope, converted to <m_betabeta> via T^0nu_(1/2) = (G_0nu |M_0nu|^2 <m_betabeta>^2 / m_e^2)^(-1).",
+    "bound_in_parameterization": "<m_betabeta> < 28 meV (best Xe-136 bound assuming favorable NME).",
+    "framework_inputs": [
+      "If the framework predicts Majorana neutrinos, compute <m_betabeta> from the mass spectrum and PMNS matrix.",
+      "If the framework includes heavy LNV mediators, match onto Delta L = 2 SMEFT operators and compute their contribution to the 0nubb rate.",
+      "Nuclear matrix elements |M_0nu| have ~factor-2 uncertainties; report bounds bracketing the NME range."
+    ],
+    "evaluator_status": "requires_lattice"
+  },
+  "primary_references": [
+    {
+      "citation": "Abe et al. (KamLAND-Zen Collaboration), 'Search for the Majorana Nature of Neutrinos in the Inverted Mass Ordering Region with KamLAND-Zen', PRL 130, 051801 (2023)",
+      "arxiv": "2203.02139"
+    },
+    {
+      "citation": "Cirigliano et al., 'Neutrinoless Double-Beta Decay: A Roadmap for Matching Theory to Experiment' (2022)",
+      "arxiv": "2203.12169"
+    }
+  ],
+  "tags": ["neutrino", "majorana", "lepton_number_violation", "double_beta_decay", "forbidden"]
+}

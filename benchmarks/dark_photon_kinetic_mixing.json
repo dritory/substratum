@@ -1,0 +1,50 @@
+{
+  "id": "dark_photon_kinetic_mixing",
+  "name": "Dark photon kinetic mixing parameter epsilon",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework predicting a dark photon (a massive U(1)' gauge boson kinetically mixed with the SM photon) must respect bounds on the mixing parameter epsilon as a function of dark-photon mass m_A'. Beam-dump experiments (NA64, E137), e+e- colliders (BaBar, KLOE, Belle II), and astrophysical bounds (supernova SN1987A, sun) constrain epsilon in different mass ranges from 10^-3 down to ~10^-10 depending on m_A'.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": null,
+    "description": "Dark photon mass range from sub-MeV to ~100 GeV (10^6 - 10^11 eV); multiple production and detection channels."
+  },
+  "current_bound": {
+    "value": "epsilon < 10^-3 to 10^-7 in the MeV-GeV mass range (visible-decay searches); epsilon < 10^-9 (invisible-decay BaBar/Belle II); cosmological + astrophysical bounds extend to lower epsilon at sub-MeV masses",
+    "uncertainty": null,
+    "units": "kinetic-mixing parameter epsilon (dimensionless)",
+    "experiment": "BaBar, NA64, KLOE, Belle II, LHCb (visible); supernova 1987A and stellar-cooling (low-mass)",
+    "year": 2024,
+    "reference": "Lees et al. (BaBar), 'Search for Invisible Decays of a Dark Photon Produced in e+e- Collisions at BaBar', PRL 119, 131804 (2017), arXiv:1702.03327; Banerjee et al. (NA64), PRL 123, 121801 (2019), arXiv:1906.00176; Caputo, Millar, O'Hare, Vitagliano, 'Dark photon limits: a handbook', PRD 104, 095029 (2021), arXiv:2105.04565",
+    "confidence_level": "90% CL typical"
+  },
+  "what_it_excludes": "Closes much of the parameter space of dark-photon-mediated dark matter, dark-photon-portal-coupled hidden sectors, and dark-photon explanations of the muon g-2 anomaly (the latter now mostly excluded after BaBar invisible search). The 'standard sub-GeV dark photon DM' models with epsilon ~ 10^-3 are ruled out across most masses.",
+  "procedural": {
+    "parameterization": {
+      "name": "Lagrangian L = -(1/4) F'_munu F'^munu - (epsilon/2) F_munu F'^munu + (1/2) m_A'^2 A'_mu A'^mu, plus possible decay channels into dark-sector states.",
+      "reference": "Holdom, PLB 166, 196 (1986) (original kinetic-mixing paper); Pospelov, PRD 80, 095002 (2009).",
+      "summary": "Two parameters fully characterize the model: m_A' and epsilon. Decay channels (visible vs invisible) determine which experimental searches are sensitive."
+    },
+    "predicted_observable": "Production cross section in e+e- -> gamma A' or e- N -> e- N A', combined with decay branching ratio into visible (l+l-, hadrons) or invisible final states.",
+    "bound_in_parameterization": "Plot in (m_A', epsilon) plane. See Caputo et al. arXiv:2105.04565 for full exclusion compilation.",
+    "framework_inputs": [
+      "If the framework predicts a dark photon, specify m_A' and epsilon, plus branching to visible vs invisible decay channels.",
+      "Include possible direct couplings to dark-sector matter (relevant for invisible-decay searches)."
+    ],
+    "evaluator_status": "trivial"
+  },
+  "primary_references": [
+    {
+      "citation": "Caputo, Millar, O'Hare, Vitagliano, 'Dark photon limits: a handbook', PRD 104, 095029 (2021)",
+      "arxiv": "2105.04565"
+    },
+    {
+      "citation": "Lees et al. (BaBar), 'Search for Invisible Decays of a Dark Photon Produced in e+e- Collisions at BaBar', PRL 119, 131804 (2017)",
+      "arxiv": "1702.03327"
+    },
+    {
+      "citation": "Banerjee et al. (NA64), 'Improved limits on a hypothetical X(16.7) boson and a dark photon decaying into e+e- pairs', PRD 101, 071101 (2020)",
+      "arxiv": "1912.11389"
+    }
+  ],
+  "tags": ["dark_photon", "hidden_sector", "kinetic_mixing", "bsm"]
+}

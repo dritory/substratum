@@ -1,0 +1,46 @@
+{
+  "id": "neutrino_oscillation_pmns",
+  "name": "Neutrino oscillation parameters (PMNS matrix and mass-squared splittings)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the global-fit values of the three-flavor PMNS mixing matrix and the two mass-squared differences. NuFIT 5.2 (Esteban et al. 2020, with 2024 updates) gives Delta m^2_21 = (7.42 +0.21 -0.20) x 10^-5 eV^2; |Delta m^2_31| = (2.51 +/- 0.027) x 10^-3 eV^2 (normal ordering); sin^2 theta_12 = 0.304 +/- 0.012; sin^2 theta_23 = 0.450 +0.019 -0.016 or 0.570 +0.016 -0.022 (octant-dependent); sin^2 theta_13 = (2.20 +/- 0.07) x 10^-2; CP-violating phase delta_CP weakly constrained to ~1.0-1.5 pi.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 0.05,
+    "description": "Neutrino propagation over baselines from short (reactor, ~1 km) to atmospheric (Earth-diameter) and solar (1 AU); oscillation lengths from m to AU."
+  },
+  "current_bound": {
+    "value": "Delta m^2_21 = (7.42 +0.21 -0.20) x 10^-5 eV^2; |Delta m^2_31| = 2.51 +/- 0.027 x 10^-3 eV^2; theta_12 = 33.4 deg; theta_23 = 42-49 deg; theta_13 = 8.55 deg",
+    "uncertainty": null,
+    "units": "eV^2 (mass splittings); degrees (mixing angles)",
+    "experiment": "NuFIT 5.2 global fit: Daya Bay, RENO, Double Chooz (theta_13); KamLAND, SNO, Super-K solar (theta_12, Delta m^2_21); T2K, NOvA, Super-K, IceCube (theta_23, Delta m^2_31, delta_CP)",
+    "year": 2024,
+    "reference": "Esteban, Gonzalez-Garcia, Maltoni, Schwetz, Zhou, 'The fate of hints: updated global analysis of three-flavor neutrino oscillations', JHEP 09, 178 (2020), arXiv:2007.14792 (NuFIT 5.2 update at www.nu-fit.org); de Salas et al., JHEP 02, 071 (2021), arXiv:2006.11237",
+    "confidence_level": "1 sigma typical"
+  },
+  "what_it_excludes": "Defines the framework of three-flavor oscillation. Constrains additional sterile neutrino states (current data disfavor 1 eV-scale steriles at ~3 sigma; sub-eV remain open). Mass ordering (normal vs inverted) is currently preferred at ~2-3 sigma in favor of normal. Maximal CP violation (delta_CP = 3 pi/2) is preferred but with weak significance (~1.5 sigma). Future JUNO, DUNE, Hyper-K aim to settle the mass ordering and delta_CP at >5 sigma.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard PMNS parameterization with three mixing angles (theta_12, theta_23, theta_13), one Dirac CP phase (delta_CP), two mass-squared differences (Delta m^2_21, Delta m^2_31), and two Majorana phases (alpha_1, alpha_2) if neutrinos are Majorana.",
+      "reference": "Pontecorvo (original 2-flavor); Maki, Nakagawa, Sakata, Prog. Theor. Phys. 28, 870 (1962); modern global-fit conventions in Esteban et al. JHEP 09, 178 (2020).",
+      "summary": "Oscillation probabilities P(nu_alpha -> nu_beta) are calculable functions of (E, L, mass splittings, PMNS angles, matter density along path)."
+    },
+    "predicted_observable": "Flavor-disappearance and -appearance probabilities at multiple baselines and energies, fit jointly to determine PMNS parameters.",
+    "bound_in_parameterization": "Each parameter constrained as quoted above. Sterile-neutrino mass splittings Delta m^2_41 < ~10^-3 eV^2 in some regions of mixing space.",
+    "framework_inputs": [
+      "If the framework predicts the neutrino mass spectrum and lepton mixing matrix, compute oscillation probabilities at relevant baselines/energies.",
+      "If the framework includes non-standard interactions (NSI) of neutrinos with matter, include them in the matter-effect Hamiltonian."
+    ],
+    "evaluator_status": "tractable"
+  },
+  "primary_references": [
+    {
+      "citation": "Esteban, Gonzalez-Garcia, Maltoni, Schwetz, Zhou, 'The fate of hints: updated global analysis of three-flavor neutrino oscillations', JHEP 09, 178 (2020); NuFIT 5.2 update at www.nu-fit.org",
+      "arxiv": "2007.14792"
+    },
+    {
+      "citation": "de Salas et al., '2020 global reassessment of the neutrino oscillation picture', JHEP 02, 071 (2021)",
+      "arxiv": "2006.11237"
+    }
+  ],
+  "tags": ["neutrino", "oscillation", "pmns", "mass_splitting", "cp_violation"]
+}

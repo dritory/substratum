@@ -1,0 +1,50 @@
+{
+  "id": "lithium_problem_bbn",
+  "name": "Cosmological lithium-7 problem",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework should account for the persistent ~3-4 sigma discrepancy between the BBN-predicted primordial ^7Li abundance and the value inferred from spectroscopy of metal-poor halo stars. Standard BBN with the Planck-determined baryon density predicts ^7Li/H ~ (4.7 +/- 0.7) x 10^-10, while the Spite-plateau measurement gives ^7Li/H ~ (1.6 +/- 0.3) x 10^-10. The ratio is about a factor of 3.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 1e6,
+    "description": "BBN epoch (T ~ 30-100 keV) for production; metal-poor halo stars (Pop II, [Fe/H] < -1.5) for observed value."
+  },
+  "current_bound": {
+    "value": "BBN prediction: ^7Li/H = (4.7 +/- 0.7) x 10^-10; Observed (Spite plateau): (1.6 +/- 0.3) x 10^-10",
+    "uncertainty": null,
+    "units": "abundance ratio (dimensionless)",
+    "experiment": "Spectroscopy of metal-poor halo stars (Sbordone et al. 2010 and updates)",
+    "year": 2020,
+    "reference": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020), arXiv:1912.01132; Sbordone et al., A&A 522, A26 (2010)",
+    "confidence_level": "~3-4 sigma tension"
+  },
+  "what_it_excludes": "Possible explanations: (a) stellar atmospheric depletion of lithium in halo stars (atomic-diffusion + turbulent mixing models partially work but don't fully account for the dispersion); (b) systematic in nuclear cross sections, especially the ^7Be(d,p) reaction (LUNA experiment continuing measurements); (c) BSM physics during BBN such as charged-particle catalyzed BBN, decaying particles, or modified expansion. The first two are widely viewed as the most likely resolutions.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard BBN reaction network (parameterized by eta, N_eff, neutron lifetime, and ~12 nuclear cross sections); plus stellar-atmosphere depletion factor f_dep; plus optional BSM contributions parameterized by decay lifetime tau and abundance Y of injected particles.",
+      "reference": "Cyburt, Fields, Olive, Yeh, RMP 88, 015004 (2016); Iocco et al., Phys. Rep. 472, 1 (2009).",
+      "summary": "Baseline BBN prediction is a function of eta_b alone given fixed nuclear cross sections; deviations require BSM input."
+    },
+    "predicted_observable": "Primordial ^7Li/H ratio, modified by post-BBN processing in stars.",
+    "bound_in_parameterization": "Tension at the factor-of-3 level. Resolution requires either non-standard stellar diffusion or a ~10-30% revision of the ^7Be production / destruction cross-section network or BSM intervention.",
+    "framework_inputs": [
+      "If the framework predicts post-BBN energy injection (decaying or annihilating particles, primordial black hole evaporation), compute the change in light-element abundances using AlterBBN or PRIMAT.",
+      "If the framework affects nuclear cross sections (varying constants, modified electromagnetic / strong couplings during BBN), compute their effect on the ^7Li reaction network."
+    ],
+    "evaluator_status": "requires_simulation"
+  },
+  "primary_references": [
+    {
+      "citation": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020)",
+      "arxiv": "1912.01132"
+    },
+    {
+      "citation": "Sbordone et al., 'The metal-poor end of the Spite plateau. I. Stellar parameters, metallicities, and lithium abundances', A&A 522, A26 (2010)",
+      "arxiv": "1003.4510"
+    },
+    {
+      "citation": "Cyburt, Fields, Olive, Yeh, 'Big bang nucleosynthesis: Present status', RMP 88, 015004 (2016)",
+      "arxiv": "1505.01076"
+    }
+  ],
+  "tags": ["bbn", "cosmology", "lithium", "anomaly", "stellar_physics"]
+}
