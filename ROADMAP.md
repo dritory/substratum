@@ -16,7 +16,7 @@ it.
 
 ## Status
 
-### Populated (53 benchmark entries, 5 data entries)
+### Populated (62 benchmark entries, 5 data entries)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -98,8 +98,9 @@ it.
 **Meta (1):**
 - `address_open_tensions` (links into `data/`)
 
-### Recently populated (this batch — 9 entries)
+### Recently populated
 
+Previous batch (9 entries):
 - `katrin_neutrino_mass` (m_ν_e < 0.45 eV)
 - `neutrinoless_double_beta_decay` (KamLAND-Zen <m_ββ>)
 - `lithium_problem_bbn` (~3σ ⁷Li/H discrepancy)
@@ -110,19 +111,37 @@ it.
 - `dark_photon_kinetic_mixing` (BaBar, NA64; ε vs m_A')
 - `lorentz_electron_sme` (electron-sector SME bounds)
 
+Latest batch (9 entries; previously listed as future high-priority):
+- `muon_edm_bnl` (BNL E821 |d_μ| < 1.8×10⁻¹⁹ e cm; PSI muEDM target)
+- `casimir_force_precision` (Yukawa bounds at sub-μm to 8 μm)
+- `n_eff_combined_cmb_bbn` (CMB+BBN joint, |ΔN_eff| < 0.3)
+- `tau_lepton_universality` (HFLAV g_τ/g_l ratios at 0.1% level)
+- `b_to_s_gamma_inclusive` (NNLO SM vs world-avg, |ΔC_7| < 0.05)
+- `meson_mixing_d_k` (Δm_K, ε_K, x_D, y_D — generic FCNC reach 10⁵ TeV)
+- `muon_anomalous_magnetic_moment` (FNAL+BNL world avg vs WP2020 / lattice SM)
+- `cosmic_ray_gzk_cutoff` (UHECR suppression; |δ_p − δ_π| < 6×10⁻²³)
+- `solar_neutrino_msw` (Borexino + SNO MSW-LMA, P_ee(E))
+
 ### Future high-priority additions
 
-- `muon_edm_bnl` — muon EDM bound and PSI muEDM future sensitivity
-- `casimir_force_precision` — sub-mm gravity / new short-range forces
-- `n_eff_combined_cmb_bbn` — combined N_eff bound from CMB damping tail
-  + BBN; finer than per-experiment entries
-- `tau_lepton_universality` — Pich global fit of tau decays
-- `b_to_s_gamma_inclusive` — inclusive Br(B → X_s γ)
-- `meson_mixing_d_k` — neutral D and K mixing constraints
-- `mu_e_anomalous_magnetic` — separate entry for muon g-2 (the data/
-  entry covers it but a benchmark form would be useful)
-- `cosmic_ray_gzk_cutoff` — Lorentz invariance from UHECR spectrum
-- `solar_neutrino_msw` — MSW resonance and adiabatic flavor conversion
+The original high-priority list is now fully populated. Candidates for
+the next batch (none yet written; pull requests welcome):
+
+- `b_to_k_nu_nu_belle2` — Belle II 2.7σ excess in B⁺ → K⁺ νν̄
+- `atmospheric_neutrino_oscillation_super_k` — independent measurement
+  of θ₂₃, |Δm²₃₁| from atmospheric neutrinos
+- `pion_beta_decay_vud` — V_ud from π⁺ → π⁰ e⁺ ν, complementary to
+  superallowed nuclear β decay (cabibbo_angle_anomaly)
+- `bbn_deuterium_precision` — D/H from Cooke et al. as a clean probe
+  of Ω_b h² (currently folded into bbn_light_element_abundances)
+- `direct_w_boson_mass_measurement` — separate from
+  `electroweak_oblique_s_t_u`, focusing on the m_W observable itself
+  and the CDF / ATLAS / CMS / LHCb tension landscape (currently in
+  data/w_boson_mass.json)
+- `inflationary_n_s_alpha_s` — scalar spectral index and running from
+  Planck + ACT (currently in cmb_acoustic_peak_structure)
+- `super_k_atmospheric_lorentz` — atmospheric-neutrino LIV bounds
+  complementary to `lorentz_electron_sme`
 
 ## How to contribute
 

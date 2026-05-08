@@ -1,0 +1,61 @@
+{
+  "id": "meson_mixing_d_k",
+  "name": "Neutral D and K meson mixing constraints",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the observed neutral-meson mixing parameters in both the kaon and charm sectors: Delta m_K = (3.484 +/- 0.006) x 10^-15 GeV, |epsilon_K| = (2.228 +/- 0.011) x 10^-3 (CP violation in mixing), and the D-meson mixing parameters x_D = (0.407 +/- 0.044)% and y_D = (0.645 +/- 0.024)% (HFLAV charm 2024 average), with no observed CP violation in D mixing at the current level. Together these are among the strongest precision constraints on flavor-violating new physics across multiple generations of quarks: epsilon_K alone constrains TeV-scale generic FCNC at the 10^4-10^5 TeV new-physics scale.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 1.86e9,
+    "description": "Strange (s-d-bar) and charm (c-u-bar) mixing through second-order weak processes (box diagrams in the SM). Energy scales: m_K ~ 0.5 GeV, m_D ~ 1.86 GeV; characteristic energy taken as the larger (charm). New TeV-scale physics enters via tree-level Z'/leptoquark/heavy-Higgs exchange or new loop contributions; mixing is the most stringent FCNC test in the down-type sector (K) and the only up-type-quark FCNC measurement (D)."
+  },
+  "current_bound": {
+    "value": "Delta m_K = (3.484 +/- 0.006) x 10^-15 GeV; |epsilon_K| = (2.228 +/- 0.011) x 10^-3; x_D = (0.407 +/- 0.044)%; y_D = (0.645 +/- 0.024)%; |q/p| - 1 and arg(q/p) consistent with 0 in D mixing (no CPV)",
+    "uncertainty": null,
+    "units": "GeV (Delta m_K), dimensionless (others)",
+    "experiment": "Kaon: PDG 2024 review (NA48, KTeV, KLOE long history); Charm: HFLAV charm group 2024 average (LHCb dominant, BaBar, Belle, Belle II, CDF)",
+    "year": 2024,
+    "reference": "Particle Data Group, 'Review of Particle Physics', Phys. Rev. D 110, 030001 (2024); HFLAV Collaboration, arXiv:2411.18639 (2024); LHCb, 'Observation of CP violation in charm decays', PRL 122, 211803 (2019), arXiv:1903.08726",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "epsilon_K is the single most constraining flavor observable for generic Delta F = 2 BSM with O(1) coefficients: a tree-level new-physics contribution to s-d-bar mixing with O(1) flavor coefficient is bounded to mediator masses above ~10^4-10^5 TeV depending on chiral structure. Together with B-mixing (Delta m_d, Delta m_s, phi_s) and D-mixing, this defines the 'flavor problem': any TeV-scale BSM must have a strongly suppressed flavor structure (MFV, Froggatt-Nielsen, U(2) flavor symmetry, partial compositeness with anarchic Yukawas plus RS-GIM) to evade the bounds. D-mixing additionally probes FCNC in the up-quark sector, where K and B mixing are blind, and constrains flavor structures aligned with the down-quark mass basis.",
+  "procedural": {
+    "parameterization": {
+      "name": "Delta F = 2 effective Hamiltonian H_eff = sum_i C_i Q_i with five operator basis (VLL, VLR, SLL, SLR, TLL/TLR) for each meson system. Bag parameters B_i and decay constants from lattice QCD (FLAG averages).",
+      "reference": "Buras, Gambino, Haisch, NPB 570, 117 (2000); Bagger, Matchev, Zhang, PLB 412, 77 (1997); FLAG Review 2024 (Aoki et al.), arXiv:2411.04268 (kaon and D bag parameters); Brod, Gorbahn, PRL 108, 121801 (2012), arXiv:1108.2036 (NNLO eta_cc, eta_ct).",
+      "summary": "epsilon_K = (kappa_epsilon e^{i phi_epsilon} / sqrt(2) Delta m_K) Im(M_12^K). M_12 receives SM contributions from charm and top in the box loop (parameterized by eta_cc, eta_ct, eta_tt) and BSM contributions from new heavy mediators. D mixing is dominated by long-distance hadronic effects in the SM, making the SM prediction less reliable than for K and B; the BSM bound is therefore on the difference between measurement and a conservatively bracketed SM range."
+    },
+    "predicted_observable": "Delta m_K, |epsilon_K|, Re(epsilon'/epsilon), Delta m_D, x_D, y_D, |q/p|, arg(q/p) for both K and D systems.",
+    "bound_in_parameterization": "Generic |C_VLL^sd / Lambda^2| < (2 x 10^4 TeV)^-2 from Delta m_K; tighter from epsilon_K with O(1) imaginary part: |Im(C_VLL^sd) / Lambda^2| < (2 x 10^5 TeV)^-2. Charm: |C^cu / Lambda^2| < (~10^3 TeV)^-2 (less stringent, large hadronic SM uncertainty).",
+    "framework_inputs": [
+      "Match framework onto Delta F = 2 effective theory at the EW scale; compute Wilson coefficients in K, D systems including all chiral structures.",
+      "Run to hadronic scale (mu = 2 GeV for K and D) using NLO/NNLO RGEs.",
+      "Use FLAG-averaged bag parameters (B_K, and the BSM operators B_2-B_5) to compute physical observables.",
+      "For D mixing, account explicitly for long-distance SM contributions or use a phenomenological bracket: only the NP residual part can be cleanly bounded."
+    ],
+    "evaluator_status": "requires_code",
+    "notes": "K mixing is more theoretically clean than D mixing because the D-system long-distance contribution is the dominant SM effect and is poorly known. Tools: flavio, FormFlavor, smelli. The 5+ sigma tension in some Delta epsilon_K analyses (using particular lattice and Wolfenstein-parameter inputs) is sensitive to the choice of |V_cb| inclusive vs exclusive; this is a controlled tension, not a robust BSM signal."
+  },
+  "primary_references": [
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', Phys. Rev. D 110, 030001 (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    },
+    {
+      "citation": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (2024)",
+      "arxiv": "2411.18639"
+    },
+    {
+      "citation": "LHCb Collaboration, 'Observation of CP violation in charm decays', PRL 122, 211803 (2019)",
+      "arxiv": "1903.08726"
+    },
+    {
+      "citation": "FLAG Working Group (Aoki et al.), 'FLAG Review 2024', arXiv:2411.04268 (2024)",
+      "arxiv": "2411.04268"
+    },
+    {
+      "citation": "Brod and Gorbahn, 'Next-to-Next-to-Leading-Order Charm-Quark Contribution to the CP Violation Parameter epsilon_K and Delta m_K', PRL 108, 121801 (2012)",
+      "arxiv": "1108.2036"
+    }
+  ],
+  "tags": ["flavor", "kaon_mixing", "d_meson_mixing", "fcnc", "epsilon_k", "cp_violation"]
+}

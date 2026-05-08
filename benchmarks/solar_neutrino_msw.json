@@ -1,0 +1,64 @@
+{
+  "id": "solar_neutrino_msw",
+  "name": "MSW resonance and adiabatic flavor conversion in the Sun",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the measured solar electron-neutrino survival probability P_ee(E) across the full pp-chain energy range (pp at ~0.1 MeV through 8B at ~10 MeV), including the characteristic MSW transition: low-energy vacuum-dominated regime with P_ee ~ 1 - sin^2(2 theta_12)/2 ~ 0.55, high-energy matter-dominated (adiabatic) regime with P_ee ~ sin^2(theta_12) ~ 0.30, and the rising 'upturn' through 1-5 MeV. The Borexino spectroscopic measurements of pp, 7Be, pep, 8B, and CNO solar-neutrino fluxes plus the SNO neutral-current 8B flux establish the MSW-LMA solution at >5 sigma over a vacuum-only oscillation, fixing Delta m^2_21 = (7.42 +/- 0.21) x 10^-5 eV^2 and sin^2(theta_12) = 0.304 +/- 0.012 (NuFIT 6.0).",
+  "regime": {
+    "length_m": 1.5e11,
+    "energy_ev": 1e7,
+    "description": "Solar core (rho ~ 150 g/cm^3, electron density n_e ~ 6 x 10^25 cm^-3) to vacuum propagation over 1 AU. Adiabatic resonance at the layer where 2 sqrt(2) G_F n_e E = Delta m^2_21 cos(2 theta_12); for the high-energy 8B neutrinos (E ~ 10 MeV, taken as the characteristic energy) this layer lies in the radiative core. Full energy range probed: ~0.1 MeV (pp) to ~15 MeV (hep tail)."
+  },
+  "current_bound": {
+    "value": "Delta m^2_21 = (7.42 +0.21 -0.20) x 10^-5 eV^2; sin^2(theta_12) = 0.304 +/- 0.012; P_ee at 8B ~0.32 (Borexino + SNO + Super-K), at pp ~0.57 (Borexino), with the predicted MSW upturn structure observed",
+    "uncertainty": null,
+    "units": "eV^2 (mass splitting); dimensionless (mixing angle, survival probability)",
+    "experiment": "SNO (NC, CC, ES), Super-Kamiokande (8B, day-night), Borexino (pp, 7Be, pep, 8B, CNO), KamLAND (reactor anti-nu_e disappearance, fixes Delta m^2_21)",
+    "year": 2024,
+    "reference": "Ahmad et al. (SNO), 'Direct Evidence for Neutrino Flavor Transformation from Neutral-Current Interactions in the Sudbury Neutrino Observatory', PRL 89, 011301 (2002), arXiv:nucl-ex/0204008; Borexino Collaboration, 'Comprehensive measurement of pp-chain solar neutrinos', Nature 562, 505 (2018); 'Experimental evidence of neutrinos produced in the CNO fusion cycle in the Sun', Nature 587, 577 (2020); NuFIT 6.0 (Esteban et al., JHEP 12, 216 (2024), arXiv:2410.05380)",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "Three classes of alternatives: (1) pure vacuum oscillation with the same Delta m^2_21 and theta_12 - excluded because it would not produce the energy-dependent transition between low-E and high-E P_ee. (2) 'Sterile-only' or 'Majoron decay' explanations of the original solar neutrino deficit - all excluded since SNO's neutral-current measurement showed total flux equals SSM. (3) Frameworks that change the Sun's interior matter potential (modified weak interactions, non-standard neutrino-electron couplings (NSI), light dark-matter modification of solar density). NSI parameters are bounded at the few-percent level. Together with reactor neutrino measurements (KamLAND fixes Delta m^2_21 independently of solar matter effects), this benchmark is the cleanest test of MSW-style adiabatic flavor conversion - the textbook prediction of three-flavor neutrino oscillation in matter.",
+  "procedural": {
+    "parameterization": {
+      "name": "Three-flavor neutrino propagation in matter, MSW Hamiltonian H = H_vac + sqrt(2) G_F n_e diag(1, 0, 0). Standard parameterization in (theta_12, theta_13, theta_23, delta_CP, Delta m^2_21, Delta m^2_31).",
+      "reference": "Wolfenstein, PRD 17, 2369 (1978); Mikheev and Smirnov, Sov. J. Nucl. Phys. 42, 913 (1985); Bahcall, Pinsonneault, Basu, ApJ 555, 990 (2001) (B16-AGSS09 / B16-GS98 Standard Solar Models).",
+      "summary": "Solar electron-neutrinos are produced in pp-chain (pp, pep, 7Be, 8B, hep) and CNO-cycle (13N, 15O, 17F) reactions with calculable fluxes. They propagate adiabatically through the solar density profile, undergo MSW resonance for E > ~2 MeV, and free-stream to Earth. P_ee(E) integrates over the production-region density distribution from the Standard Solar Model."
+    },
+    "predicted_observable": "Solar nu_e survival probability P_ee(E), measured by Borexino (low-E) and SNO/SK (high-E); CC/NC ratio at SNO; day-night asymmetry at SK and SNO (regeneration through Earth matter).",
+    "bound_in_parameterization": "Delta m^2_21 = 7.42(21) x 10^-5 eV^2, sin^2(theta_12) = 0.304(12); NSI parameters epsilon_ee^uV, epsilon_ee^dV bounded at the 1-10% level; sterile-neutrino mixing into solar nu_e disfavored at delta theta < ~10^-3 for sterile mass splittings in the relevant range.",
+    "framework_inputs": [
+      "If the framework predicts neutrino masses and mixings, derive theta_12 and Delta m^2_21 and confront with NuFIT.",
+      "If the framework predicts non-standard neutrino-matter interactions, include them in the matter Hamiltonian and recompute P_ee(E).",
+      "If the framework alters the solar interior (e.g. light dark matter changing energy transport, modified neutrino-electron weak coupling), recompute the Standard Solar Model fluxes and solar density profile.",
+      "Required: prediction of P_ee(E) over 0.1-15 MeV with the MSW upturn through 1-5 MeV reproduced."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "The MSW-LMA solution is now textbook physics, but it is also the most precision-tested example of in-matter adiabatic flavor conversion. Future JUNO will measure the solar neutrinos with sub-percent precision and probe the MSW upturn at higher significance; Hyper-K and DUNE will refine. The MSW mechanism also operates in supernova neutrinos and in the early universe; reproducing the solar bound is a necessary but not sufficient condition for handling those regimes."
+  },
+  "primary_references": [
+    {
+      "citation": "Ahmad et al. (SNO Collaboration), 'Direct Evidence for Neutrino Flavor Transformation from Neutral-Current Interactions in the Sudbury Neutrino Observatory', PRL 89, 011301 (2002)",
+      "arxiv": "nucl-ex/0204008"
+    },
+    {
+      "citation": "Borexino Collaboration, 'Comprehensive measurement of pp-chain solar neutrinos', Nature 562, 505 (2018)",
+      "doi": "10.1038/s41586-018-0624-y"
+    },
+    {
+      "citation": "Borexino Collaboration, 'Experimental evidence of neutrinos produced in the CNO fusion cycle in the Sun', Nature 587, 577 (2020)",
+      "doi": "10.1038/s41586-020-2934-0"
+    },
+    {
+      "citation": "Esteban, Gonzalez-Garcia, Maltoni, Martinez-Soler, Pinheiro, Schwetz (NuFIT 6.0), 'Updated global analysis of three-flavor neutrino oscillations', JHEP 12, 216 (2024)",
+      "arxiv": "2410.05380"
+    },
+    {
+      "citation": "Wolfenstein, 'Neutrino oscillations in matter', PRD 17, 2369 (1978)",
+      "doi": "10.1103/PhysRevD.17.2369"
+    },
+    {
+      "citation": "Mikheev and Smirnov, 'Resonance enhancement of oscillations in matter and solar neutrino spectroscopy', Sov. J. Nucl. Phys. 42, 913 (1985)"
+    }
+  ],
+  "tags": ["neutrino", "msw", "solar", "matter_effect", "flavor_conversion", "borexino", "sno"]
+}

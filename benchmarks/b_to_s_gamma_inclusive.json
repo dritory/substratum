@@ -1,0 +1,56 @@
+{
+  "id": "b_to_s_gamma_inclusive",
+  "name": "Inclusive radiative B decay branching ratio Br(B -> X_s gamma)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework must reproduce the world-average inclusive radiative B-decay branching ratio Br(B -> X_s gamma) for photon energies E_gamma > 1.6 GeV in the B rest frame. The HFLAV world average from CLEO, BaBar, and Belle gives (3.49 +/- 0.19) x 10^-4, in excellent agreement with the NNLO QCD SM prediction (3.40 +/- 0.17) x 10^-4. The agreement constrains the magnitudes of new-physics contributions to the b -> s photon dipole Wilson coefficients C_7 and C_7' at the level of |Delta C_7| < ~0.05 in units of the SM value.",
+  "regime": {
+    "length_m": 1e-18,
+    "energy_ev": 4.18e9,
+    "description": "B-meson radiative decay via the b -> s gamma electroweak penguin; sensitivity to TeV-scale charged-Higgs, chargino-stop, leptoquark, and flavor-violating gauge-boson loops affecting the photon dipole coefficient."
+  },
+  "current_bound": {
+    "value": "Br(B -> X_s gamma) = (3.49 +/- 0.19) x 10^-4 for E_gamma > 1.6 GeV (HFLAV world average); SM prediction (3.40 +/- 0.17) x 10^-4 (NNLO QCD, Misiak-Rehman-Steinhauser 2020)",
+    "uncertainty": null,
+    "units": "branching fraction (dimensionless)",
+    "experiment": "HFLAV global average (CLEO, BaBar, Belle); SM prediction at NNLO from Misiak et al.",
+    "year": 2020,
+    "reference": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (2024); Misiak, Rehman, Steinhauser, 'Towards B -> X_s gamma at NNLO in QCD without interpolation in m_c', JHEP 06, 175 (2020), arXiv:2002.01548",
+    "confidence_level": "1 sigma"
+  },
+  "what_it_excludes": "The strongest single bound on a charged Higgs in the type-II two-Higgs-doublet model: m_H+ > ~600 GeV (95% CL), independent of tan(beta), because the H+/t loop interferes constructively with the SM. Also constrains chargino-stop loops in MSSM, vector and scalar leptoquarks coupling to b/s, Z' bosons mediating flavor-changing transitions, and any TeV-scale physics modifying C_7. Combined with B_s -> mu mu (which constrains C_10) and the angular observables in B -> K* l l (which constrain C_9), b -> s gamma is one of the three pillars of the rare-B precision program.",
+  "procedural": {
+    "parameterization": {
+      "name": "Weak effective theory at the b-quark scale: Wilson coefficients C_7 (left-handed b -> s gamma photon dipole) and C_7' (right-handed photon dipole). Br(B -> X_s gamma) ~ |C_7^eff|^2 + |C_7'^eff|^2 + interference with chromomagnetic C_8 and four-quark operators C_1-C_6.",
+      "reference": "Buchalla, Buras, Lautenbacher, RMP 68, 1125 (1996); Misiak et al., PRL 114, 221801 (2015), arXiv:1503.01789; Czakon et al., JHEP 04, 168 (2015), arXiv:1503.01791.",
+      "summary": "The SM Wilson coefficient C_7^SM(m_b) ~ -0.30 receives BSM contributions Delta C_7 from new heavy particles. The branching ratio depends quadratically on the photon-dipole coefficient at scale m_b, with QCD running matched at the EW scale."
+    },
+    "predicted_observable": "Br(B -> X_s gamma) for E_gamma > 1.6 GeV in the B rest frame. The cut energy is held fixed and SM and experiment are compared in this restricted phase space to control non-perturbative tail contributions.",
+    "bound_in_parameterization": "|Delta C_7^NP(m_b)| < ~0.05 (95% CL), and the same on Delta C_7'^NP. In a type-II 2HDM, this excludes m_H+ < 600 GeV; in MFV scenarios with new TeV-scale physics, |C_7^NP / C_7^SM| < 17%.",
+    "framework_inputs": [
+      "If the framework introduces new physics with b -> s gamma loop contributions, match onto the WET at the EW scale and compute Delta C_7, Delta C_7' (and Delta C_8 if relevant).",
+      "Run from EW scale to m_b using the standard QCD anomalous-dimension matrix.",
+      "Combine with SM result to predict Br(B -> X_s gamma); compare to HFLAV. Tools: flavio, EOS, smelli, SuperIso."
+    ],
+    "evaluator_status": "requires_code",
+    "notes": "Br(B -> X_s gamma) is the cleanest single observable for new-physics contributions to the chirality-flipping electromagnetic dipole, and is among the most precisely measured quantities in flavor physics. Note also the closely-related observable Br(B -> X_s l+ l-) which constrains C_9 and C_10, and the time-dependent CP asymmetry S_K* gamma which probes C_7' (right-handed currents)."
+  },
+  "primary_references": [
+    {
+      "citation": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (2024)",
+      "arxiv": "2411.18639"
+    },
+    {
+      "citation": "Misiak, Rehman, Steinhauser, 'Towards B -> X_s gamma at the NNLO in QCD without interpolation in m_c', JHEP 06, 175 (2020)",
+      "arxiv": "2002.01548"
+    },
+    {
+      "citation": "Misiak et al., 'Updated NNLO QCD predictions for the weak radiative B-meson decays', PRL 114, 221801 (2015)",
+      "arxiv": "1503.01789"
+    },
+    {
+      "citation": "Czakon et al., 'The (Q7, Q1,2) contribution to B -> X_s gamma at O(alpha_s^2)', JHEP 04, 168 (2015)",
+      "arxiv": "1503.01791"
+    }
+  ],
+  "tags": ["flavor", "b_meson", "radiative_decay", "wilson_coefficient", "charged_higgs"]
+}
