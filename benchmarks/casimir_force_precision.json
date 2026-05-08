@@ -1,0 +1,52 @@
+{
+  "id": "casimir_force_precision",
+  "name": "Casimir-regime tests of new short-range forces (sub-mm to sub-micron)",
+  "kind": "precision_test",
+  "requirement": "Any candidate framework that predicts new short-range bosonic exchange forces, modifications to QED vacuum fluctuations, or extra spatial dimensions accessible at micron-to-nanometer scales must respect Casimir-force precision experiments. The IUPUI/Decca microcantilever measurements bound Yukawa-type new forces at alpha < 4 x 10^7 for lambda ~ 100 nm and improve down to alpha < ~1 for lambda ~ 8 micrometers, complementing torsion-balance bounds at larger separations.",
+  "regime": {
+    "length_m": 1e-7,
+    "energy_ev": null,
+    "description": "Sub-micron to sub-millimeter separations between Au-coated test surfaces; complementary to Eot-Wash torsion-balance reach, which bottoms out near 50 micrometers. Casimir-regime experiments dominate the (alpha, lambda) exclusion plot for lambda < ~10 micrometers."
+  },
+  "current_bound": {
+    "value": "alpha < ~4 x 10^7 at lambda = 100 nm; alpha < ~10^4 at lambda = 1 micrometer; alpha <~ 1 at lambda ~ 8 micrometers (Yukawa amplitude relative to Newtonian gravity)",
+    "uncertainty": null,
+    "units": "Yukawa amplitude alpha (dimensionless), range lambda (length)",
+    "experiment": "Casimir-less differential force measurement (IUPUI/Decca group, Au-Au sphere-plate microcantilever); INRIM torsion balance for sub-mm overlap",
+    "year": 2016,
+    "reference": "Chen, Mohideen, Klimchitskaya, Mostepanenko, 'Stronger limits on hypothetical Yukawa interactions in the 30-8000 nm range', PRL 116, 221102 (2016), arXiv:1410.7267; Klimchitskaya, Mohideen, Mostepanenko, 'The Casimir force between real materials: experiment and theory', RMP 81, 1827 (2009)",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Extra-dimension scenarios (ADD-style) at compactification scales below ~50 micrometers in the gravity-coupled sector; light moduli, dilatons, and chameleon-screened scalars with sub-micron Compton wavelengths and gravity-strength couplings; Yukawa exchange of any boson with mass m > ~25 meV and gravitational-strength coupling. Together with the inverse_square_law_short_distance benchmark (Eot-Wash, lambda > 50 micrometers), it closes the (alpha, lambda) plane between roughly 100 nm and several meters at alpha <~ 1. Frameworks that predict altered Casimir energies (e.g. modified vacuum structure, Lifshitz-screening models, BSM photon coupling) must also reproduce the absolute Casimir force itself to within current experimental precision (~1% at ~200 nm Au-Au).",
+  "procedural": {
+    "parameterization": {
+      "name": "Yukawa parameterization V(r) = -G m_1 m_2 / r [1 + alpha exp(-r/lambda)] for short-range new forces, plus the standard Lifshitz formula F_Casimir(d) for the absolute Casimir background.",
+      "reference": "Adelberger, Heckel, Nelson, ARNPS 53, 77 (2003); Klimchitskaya, Mohideen, Mostepanenko, RMP 81, 1827 (2009); Decca et al., PRD 75, 077101 (2007), arXiv:hep-ph/0611184.",
+      "summary": "The total measured force is F_Newton + F_Casimir(d, materials) + F_Yukawa(d; alpha, lambda). The Casimir background is computed from the full frequency-dependent dielectric function of the test surfaces (Lifshitz formula). Residuals after subtracting Casimir + electrostatic backgrounds are fit to the Yukawa form to bound (alpha, lambda)."
+    },
+    "predicted_observable": "Differential force or force gradient between curved Au surfaces (typically a sphere-plate geometry) at separations d = 30 nm to several micrometers, with subtraction of the dominant Casimir contribution.",
+    "bound_in_parameterization": "Composite (alpha, lambda) exclusion plot: alpha < 4 x 10^7 at lambda = 100 nm; alpha < ~10^4 at lambda = 1 micrometer; alpha < ~1 at lambda ~ 8 micrometers; alpha < 1 for lambda > 52 micrometers (Eot-Wash 2020).",
+    "framework_inputs": [
+      "If the framework introduces new bosonic exchange between standard-model fields with mass m_phi and gravity-strength (or stronger) coupling, derive the corresponding (alpha, lambda) and place on the exclusion plot.",
+      "If the framework alters QED vacuum fluctuations or vacuum-energy regularization, recompute the Casimir force in the framework. The absolute force is itself a precision observable: theory-experiment agreement is at the few-percent level for Au-Au sphere-plate, and frameworks that change F_Casimir at that level are excluded directly without invoking a Yukawa fit.",
+      "Identify whether predicted modifications scale with mass (matter density) or with electric / dielectric properties; the latter case requires comparison with isoelectronic-difference experiments (e.g. Au-Au vs Au-Si)."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Casimir-precision experiments and inverse-square-law experiments use overlapping but distinct techniques and live on the same (alpha, lambda) exclusion plot - they are kept as separate benchmarks because the absolute Casimir force is itself a QED prediction that any candidate framework must reproduce, in addition to the Yukawa-residual constraint."
+  },
+  "primary_references": [
+    {
+      "citation": "Chen, Mohideen, Klimchitskaya, Mostepanenko, 'Stronger limits on hypothetical Yukawa interactions in the 30-8000 nm range', PRL 116, 221102 (2016)",
+      "arxiv": "1410.7267"
+    },
+    {
+      "citation": "Decca et al., 'Tests of new physics from precise measurements of the Casimir pressure between two gold-coated plates', PRD 75, 077101 (2007)",
+      "arxiv": "hep-ph/0611184"
+    },
+    {
+      "citation": "Klimchitskaya, Mohideen, Mostepanenko, 'The Casimir force between real materials: experiment and theory', Rev. Mod. Phys. 81, 1827 (2009)",
+      "doi": "10.1103/RevModPhys.81.1827"
+    }
+  ],
+  "tags": ["casimir", "short_range_force", "extra_dimensions", "qed_vacuum", "yukawa"]
+}

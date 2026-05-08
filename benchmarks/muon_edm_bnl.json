@@ -1,0 +1,55 @@
+{
+  "id": "muon_edm_bnl",
+  "name": "Muon electric dipole moment below BNL E821 limit",
+  "kind": "forbidden_phenomenon",
+  "requirement": "Any candidate framework must predict a muon electric dipole moment |d_mu| below the BNL E821 upper limit |d_mu| < 1.8 x 10^-19 e cm (95% CL). A nonzero d_mu would simultaneously signal CP violation beyond the SM and violate T (and CP, given CPT). The PSI muEDM experiment is targeting a sensitivity of 6 x 10^-23 e cm with the frozen-spin technique, and a J-PARC muon g-2/EDM run is also in preparation; any framework should also remain compatible with these projected reaches.",
+  "regime": {
+    "length_m": 1.87e-15,
+    "energy_ev": 1.057e8,
+    "description": "Muon-scale physics; sensitive to second-generation CP-violating new physics that need not couple appreciably to the electron, so d_mu provides a flavor-non-universal probe complementary to d_e."
+  },
+  "current_bound": {
+    "value": 1.8e-19,
+    "uncertainty": null,
+    "units": "e cm (95% CL upper limit)",
+    "experiment": "BNL Muon (g-2) E821 (parasitic EDM analysis)",
+    "year": 2009,
+    "reference": "Bennett et al. (BNL E821), 'An improved limit on the muon electric dipole moment', PRD 80, 052008 (2009), arXiv:0811.1207",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Constrains BSM scenarios in which CP violation is enhanced for second-generation leptons - including some leptoquark, two-Higgs-doublet, and muon-philic Z' models. Naively rescaling d_e by m_mu/m_e (as in minimal-flavor-violating SUSY) would put d_mu near 10^-26 e cm, far below current bounds, but BSM scenarios with non-MFV couplings can decouple d_mu from d_e. PSI muEDM and J-PARC g-2/EDM will close most of this 'naive scaling violation' window. Any anomaly larger than 10^-22 e cm would also be relevant for the muon g-2 interpretation.",
+  "procedural": {
+    "parameterization": {
+      "name": "SMEFT muon-flavor dipole operators C_eB^(22), C_eW^(22), matched at low energy onto the muon photon dipole d_mu = -2 m_mu Im(C_e gamma^(22)) / Lambda^2.",
+      "reference": "Crivellin, Hoferichter, Schmidt-Wellenburg, PRD 98, 113002 (2018), arXiv:1807.11484; Pruna and Signer, JHEP 10, 014 (2014), arXiv:1408.3565.",
+      "summary": "EDM sources at the muon scale are encoded in the imaginary part of the SMEFT photon-dipole Wilson coefficient at muon-flavor index 22; the same operator's real part contributes to a_mu, so d_mu and a_mu are tightly correlated within any given model."
+    },
+    "predicted_observable": "d_mu = -(2 m_mu / e) Im(C_e gamma^(22)) v / (sqrt(2) Lambda^2). Spin-precession rate in a frozen-spin storage ring: omega_EDM = -(eta/2)(beta x E + v x B), where eta encodes d_mu in units of the Bohr magneton.",
+    "bound_in_parameterization": "|Im(C_e gamma^(22)) / Lambda^2| < ~9 x 10^-7 GeV^-2 (current); PSI muEDM target probes ~3 x 10^-10 GeV^-2; J-PARC similar reach.",
+    "framework_inputs": [
+      "Predicted CP phases in the muon dipole sector (computed in the framework's UV completion, then matched onto the muon-flavor entry of C_eB and C_eW at the EW scale).",
+      "Correlation with the framework's prediction for Delta a_mu - any model addressing the muon g-2 anomaly via heavy chiral mediators predicts a corresponding d_mu unless additional CP-protection mechanisms are enforced."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "Whether d_mu and d_e scale linearly with lepton mass, quadratically, or are decoupled is a sharp diagnostic of the framework's flavor structure. Frameworks that enforce minimal flavor violation predict d_mu / d_e = m_mu / m_e to leading order; observation (or non-observation) at PSI/J-PARC sensitivity directly tests this."
+  },
+  "primary_references": [
+    {
+      "citation": "Bennett et al. (BNL E821), 'An improved limit on the muon electric dipole moment', PRD 80, 052008 (2009)",
+      "arxiv": "0811.1207"
+    },
+    {
+      "citation": "Adelmann et al. (PSI muEDM Collaboration), 'Search for a muon EDM using the frozen-spin technique' (proposal based on the letter of intent to the PSI CHRISP research committee, 2021)",
+      "arxiv": "2102.08838"
+    },
+    {
+      "citation": "Abe et al. (J-PARC g-2/EDM), 'A new approach for measuring the muon anomalous magnetic moment and electric dipole moment', PTEP 2019, 053C02 (2019)",
+      "doi": "10.1093/ptep/ptz030"
+    },
+    {
+      "citation": "Crivellin, Hoferichter, Schmidt-Wellenburg, 'Combined explanations of (g-2)_mu, (g-2)_e and implications for a large muon EDM', PRD 98, 113002 (2018)",
+      "arxiv": "1807.11484"
+    }
+  ],
+  "tags": ["edm", "muon", "cp_violation", "lepton_flavor", "forbidden"]
+}

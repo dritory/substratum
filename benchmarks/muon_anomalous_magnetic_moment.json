@@ -1,0 +1,57 @@
+{
+  "id": "muon_anomalous_magnetic_moment",
+  "name": "Muon anomalous magnetic moment a_mu (Fermilab/BNL world average)",
+  "kind": "tension_to_address",
+  "requirement": "Any candidate framework must reproduce the world-average muon anomalous magnetic moment a_mu = (g_mu - 2)/2 = 116592059(22) x 10^-11 (Fermilab Muon g-2 final 2025 result combined with BNL E821) and account for the discrepancy with at least one of the two independent SM theory determinations: (a) the data-driven Theory Initiative White Paper 2020 SM, with which the world average sits ~5 sigma high, or (b) the lattice-QCD-based SM (BMW 2020 / RBC-UKQCD / Mainz / converging) with which the world average sits ~1-2 sigma high. The framework must commit to a position: BSM contribution to the muon dipole, hadronic-vacuum-polarization systematic, or a combination - and accept the consequences elsewhere (e.g. on the muon EDM, on hadronic-vacuum-polarization-dependent observables like the running of alpha, on lepton-flavor universality).",
+  "regime": {
+    "length_m": 1.87e-15,
+    "energy_ev": 1.057e8,
+    "description": "Muon-scale physics. a_mu integrates loop momenta from m_mu up to where new physics decouples; sensitive to virtual contributions of any particle that couples directly or indirectly to the muon."
+  },
+  "current_bound": {
+    "value": "a_mu^exp = 116592059(22) x 10^-11 (Fermilab Muon g-2 Run-1+2+3 combined with BNL E821, 2023); SM (WP2020 data-driven) = 116591810(43) x 10^-11; SM (BMW lattice 2020) = 116591954(55) x 10^-11; world-average sigma vs SM is 5.1 (data-driven) / 1.8 (lattice).",
+    "uncertainty": "22 x 10^-11 (experimental, world average)",
+    "units": "1e-11",
+    "experiment": "FNAL Muon g-2 Run-1+2+3 combined with BNL E821 (Aguillard et al. 2023)",
+    "year": 2023,
+    "reference": "Aguillard et al. (FNAL Muon g-2), 'Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm', PRL 131, 161802 (2023), arXiv:2308.06230",
+    "confidence_level": "1 sigma"
+  },
+  "tension_links": ["muon_g_minus_2"],
+  "what_it_excludes": "Frameworks that predict no new contribution to the muon dipole are forced to pick a side in the lattice-vs-data-driven HVP dispute, and must explain the CMD-3 vs KLOE/BaBar discrepancy in e+e- -> pi+pi- cross sections. Frameworks that predict significant new contributions to a_mu (e.g. SUSY with light smuons + binos at moderate tan(beta), TeV-scale leptoquarks, two-Higgs-doublet models with tau-philic couplings) are constrained simultaneously by the muon EDM (muon_edm_bnl), by the electron g-2 (electron_g_minus_2_precision), by direct LHC searches, and by lepton-flavor universality (R(K), R(D), tau decays). Naive correlated explanations are increasingly tightly bracketed; the surviving parameter space is narrow.",
+  "procedural": {
+    "parameterization": {
+      "name": "SM decomposition a_mu^SM = a_mu^QED + a_mu^EW + a_mu^HVP + a_mu^HLbL plus BSM additions captured in SMEFT as muon-flavor entries of the dipole operators C_eB^(22), C_eW^(22) (combined into C_e gamma^(22) after EWSB).",
+      "reference": "Aoyama et al., Phys. Rep. 887, 1 (2020) [Theory Initiative White Paper 2020], arXiv:2006.04822; Borsanyi et al. (BMW), Nature 593, 51 (2021), arXiv:2002.12347; CMD-3, arXiv:2302.08834; Crivellin, Hoferichter, Schmidt-Wellenburg, PRD 98, 113002 (2018), arXiv:1807.11484.",
+      "summary": "The dominant SM uncertainty is the leading-order hadronic vacuum polarization a_mu^HVP. Two SM determinations exist: data-driven dispersive integral of e+e- -> hadrons (WP2020) and lattice-QCD computation (BMW and others). They disagree at ~2-2.5 sigma in their HVP value, and the world-average a_mu^exp is high relative to the data-driven SM by ~5 sigma but only ~1-2 sigma high relative to the lattice SM. Within the data-driven approach, CMD-3's pi+pi- cross-section measurement disagrees with KLOE / BaBar / SND at multi-sigma in dominant energy bins."
+    },
+    "predicted_observable": "a_mu directly. BSM contribution Delta a_mu^BSM = (m_mu v / sqrt(2)) Re(C_e gamma^(22)) / Lambda^2 in SMEFT; correlated to Im(C_e gamma^(22)) which sets the muon EDM.",
+    "bound_in_parameterization": "Required Delta a_mu^BSM depends on which SM is adopted: ~250 x 10^-11 (vs WP2020 data-driven) or ~110 x 10^-11 (vs BMW lattice). For new heavy mediators with chiral enhancement, the corresponding NP scale is Lambda ~ 1-3 TeV with O(1) couplings; without chiral enhancement it can be sub-TeV.",
+    "framework_inputs": [
+      "Predicted Delta a_mu^BSM in the framework's parameter space.",
+      "Position on the data-driven vs lattice HVP dispute: does the framework alter low-energy hadronic vacuum polarization (e.g. via modified e+e- -> hadrons couplings), or does it leave the SM HVP untouched and add a clean BSM dipole contribution?",
+      "Correlated predictions for: muon EDM (Im(C_e gamma)), the running of alpha at high energy (probed at LEP / future e+e-), and any companion observable in flavor or precision physics."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "The status of a_mu as a discovery channel is currently in flux: the lattice-vs-data-driven HVP dispute has to settle before a clean SM number can be quoted. In the meantime, candidate frameworks must be evaluated against both SM determinations and against the auxiliary constraints. See data/muon_g_minus_2.json for the historical tension trajectory and full list of measurements and SM evaluations."
+  },
+  "primary_references": [
+    {
+      "citation": "Aguillard et al. (FNAL Muon g-2 Collaboration), 'Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm', PRL 131, 161802 (2023)",
+      "arxiv": "2308.06230"
+    },
+    {
+      "citation": "Aoyama et al. (Theory Initiative White Paper 2020), 'The anomalous magnetic moment of the muon in the Standard Model', Phys. Rep. 887, 1-166 (2020)",
+      "arxiv": "2006.04822"
+    },
+    {
+      "citation": "Borsanyi et al. (BMW), 'Leading hadronic contribution to the muon magnetic moment from lattice QCD', Nature 593, 51 (2021)",
+      "arxiv": "2002.12347"
+    },
+    {
+      "citation": "CMD-3 Collaboration, 'Measurement of the e+e- -> pi+pi- cross section from threshold to 1.2 GeV with the CMD-3 detector', arXiv:2302.08834 (2023)",
+      "arxiv": "2302.08834"
+    }
+  ],
+  "tags": ["new_physics", "qed", "muon", "anomalous_moment", "hvp", "tension"]
+}

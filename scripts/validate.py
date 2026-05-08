@@ -32,6 +32,11 @@ DATASETS = [
         "dir": ROOT / "benchmarks",
         "schema": ROOT / "schema" / "benchmark.schema.json",
     },
+    {
+        "name": "frameworks",
+        "dir": ROOT / "frameworks",
+        "schema": ROOT / "schema" / "framework.schema.json",
+    },
 ]
 
 
@@ -81,6 +86,28 @@ def cross_check_tension_links() -> list[str]:
     return msgs
 
 
+def cross_check_framework_predictions() -> list[str]:
+    """Verify every prediction key in frameworks/ resolves to a benchmark."""
+    fw_dir = ROOT / "frameworks"
+    if not fw_dir.exists():
+        return []
+    bench_ids = {p.stem for p in (ROOT / "benchmarks").glob("*.json")}
+    msgs = []
+    for path in fw_dir.glob("*.json"):
+        try:
+            with path.open() as f:
+                entry = json.load(f)
+        except json.JSONDecodeError:
+            continue
+        for ref in entry.get("predictions", {}):
+            if ref not in bench_ids:
+                msgs.append(
+                    f"{path.relative_to(ROOT)}: predictions references "
+                    f"unknown benchmark {ref!r}"
+                )
+    return msgs
+
+
 def main(argv: list[str]) -> int:
     explicit_targets = [Path(p) for p in argv[1:]]
     fail = 0
@@ -111,7 +138,7 @@ def main(argv: list[str]) -> int:
                 print(f"ok   {path.relative_to(ROOT)}")
         print()
 
-    cross_errs = cross_check_tension_links()
+    cross_errs = cross_check_tension_links() + cross_check_framework_predictions()
     if cross_errs:
         print("== cross-references ==")
         for e in cross_errs:

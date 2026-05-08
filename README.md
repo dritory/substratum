@@ -144,3 +144,26 @@ python scripts/validate.py
 ```
 
 Validates every file in `data/` against the schema and reports problems.
+
+## Visualization site
+
+A static visualization (σ-vs-time per tension, length–energy landscape, and a
+filterable catalog of every entry) is published to GitHub Pages from the
+`docs/` directory. The data layer for the site is built from `data/` and
+`benchmarks/` by:
+
+```bash
+python scripts/build_site.py    # writes docs/data.json
+```
+
+To preview locally:
+
+```bash
+python scripts/build_site.py
+python -m http.server -d docs 8000
+# open http://localhost:8000
+```
+
+`docs/data.json` is generated and excluded from the repo. The
+`.github/workflows/pages.yml` workflow rebuilds and redeploys the site on
+every push to `main`.

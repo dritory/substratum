@@ -1,0 +1,61 @@
+{
+  "id": "cosmic_ray_gzk_cutoff",
+  "name": "Lorentz invariance from UHECR spectrum (GZK suppression)",
+  "kind": "principle_invariance",
+  "principle": "lorentz_invariance",
+  "requirement": "Any candidate framework must reproduce the observed suppression of the ultra-high-energy cosmic-ray (UHECR) spectrum near E ~ 5 x 10^19 eV (the 'GZK cutoff' or 'ankle-plus-suppression' structure). The suppression is the predicted consequence of photopion production (p + gamma_CMB -> Delta+ -> N + pi) and photodisintegration off the cosmic microwave background, and is observed at >20 sigma significance by both the Pierre Auger Observatory and the Telescope Array. Lorentz invariance violation that shifts the photopion threshold above ~10^20 eV is excluded; in the Coleman-Glashow parameterization, |delta_p - delta_pi| < ~6 x 10^-23 (95% CL).",
+  "regime": {
+    "length_m": 1e26,
+    "energy_ev": 5e19,
+    "description": "UHECRs (protons and heavier nuclei) propagating over Mpc-Gpc distances through the CMB photon bath. Sensitivity to Lorentz-violating modifications of the photopion threshold via energy-dependent dispersion or modified energy-momentum relations of either the proton or the pion."
+  },
+  "current_bound": {
+    "value": "|delta| = |delta_p - delta_pi| < 6 x 10^-23 (Coleman-Glashow LIV parameter, 95% CL); equivalently, n=2 quantum-gravity scale E_QG^(2) > ~10^15 GeV from the proton sector",
+    "uncertainty": null,
+    "units": "dimensionless (Coleman-Glashow delta = (c/c_max)^2 - 1)",
+    "experiment": "Pierre Auger Observatory + Telescope Array (UHECR spectra above 10^18 eV)",
+    "year": 2009,
+    "reference": "Scully and Stecker, 'Lorentz Invariance Violation and the Observed Spectrum of Ultrahigh Energy Cosmic Rays', Astropart. Phys. 31, 220 (2009), arXiv:0811.2230; Pierre Auger Collaboration, 'Measurement of the cosmic-ray energy spectrum above 2.5 x 10^18 eV', PRD 102, 062005 (2020), arXiv:2008.06486",
+    "confidence_level": "95% CL"
+  },
+  "what_it_excludes": "Frameworks predicting Lorentz violation in the proton or pion sector at the n=1 (linear in E/E_Planck) level above |delta| ~ 10^-23 are excluded - this is among the strongest hadron-sector LIV bounds available. Excludes the simplest 'doubly-special-relativity' / phenomenological-quantum-gravity ansatze with nucleon coupling. The constraint is complementary to the photon-sector bounds in lorentz_invariance_photon (GRB photon dispersion) and the electron-sector bounds in lorentz_electron_sme: a serious framework must pass all three. Composition uncertainty (proton vs heavier nucleus dominance at the highest energies) widens the bound somewhat but does not eliminate it - the photodisintegration of nuclei is the analogue of photopion production for the heavy-nucleus dominant scenario, with similar LIV reach.",
+  "procedural": {
+    "parameterization": {
+      "name": "Coleman-Glashow LIV parameterization with species-dependent maximum attainable velocities, c_p, c_pi, c_n. Equivalently, modified dispersion E^2 = p^2 c_max^2 + m^2 c_max^4 with c_max = c (1 + delta_i / 2). Connects to the SME hadron-sector coefficients in the limit of isotropic LIV.",
+      "reference": "Coleman and Glashow, PRD 59, 116008 (1999), arXiv:hep-ph/9812418; Stecker and Glashow, Astropart. Phys. 16, 97 (2001); Scully and Stecker, arXiv:0811.2230 (formalism applied to GZK).",
+      "summary": "The photopion threshold is shifted by Lorentz violation: E_thresh^LIV = E_thresh^SM (1 + delta E_thresh / E_thresh) with shifts depending on (delta_p - delta_pi). LIV that raises the threshold above the highest observed UHECR energy would eliminate the GZK suppression. The observed suppression therefore bounds (delta_p - delta_pi)."
+    },
+    "predicted_observable": "Differential UHECR flux phi(E) above 10^18 eV. Predicted SM spectrum has an ankle near 4 x 10^18 eV and exponential-like suppression starting at ~5 x 10^19 eV.",
+    "bound_in_parameterization": "(delta_p - delta_pi) < 4.5 x 10^-23 (best fit) with 95% CL upper limit 6 x 10^-23 (Scully-Stecker). For SME hadron-sector coefficients, equivalent bounds at ~10^-23 GeV-scale.",
+    "framework_inputs": [
+      "If the framework predicts Lorentz violation in the proton/nucleon sector, derive the modified dispersion relation and compute the resulting shift in photopion threshold.",
+      "Propagate UHECRs from candidate sources through the CMB photon bath using the modified kinematics; Monte-Carlo tools (CRPropa, SimProp) include LIV-modification options.",
+      "Fit predicted spectrum + composition against Auger / TA data, requiring consistency at >5 x 10^19 eV.",
+      "If composition is heavier than proton, treat photodisintegration analogously: the binding-energy thresholds shift with nuclear-sector LIV coefficients."
+    ],
+    "evaluator_status": "requires_simulation",
+    "notes": "The original GZK papers (Greisen 1966; Zatsepin & Kuzmin 1966) predicted the cutoff for the proton-dominated case. Modern UHECR composition is closer to mixed mass with a trend to heavier nuclei at the highest energies - the constraint on LIV is therefore phrased equivalently for nucleon and pion sectors and for nuclear photodisintegration. Future detectors (AugerPrime, GCOS) will sharpen the bound by a factor of a few."
+  },
+  "primary_references": [
+    {
+      "citation": "Scully and Stecker, 'Lorentz Invariance Violation and the Observed Spectrum of Ultrahigh Energy Cosmic Rays', Astropart. Phys. 31, 220 (2009)",
+      "arxiv": "0811.2230"
+    },
+    {
+      "citation": "Pierre Auger Collaboration, 'Measurement of the cosmic-ray energy spectrum above 2.5 x 10^18 eV using the Pierre Auger Observatory', PRD 102, 062005 (2020)",
+      "arxiv": "2008.06486"
+    },
+    {
+      "citation": "Coleman and Glashow, 'High-energy tests of Lorentz invariance', PRD 59, 116008 (1999)",
+      "arxiv": "hep-ph/9812418"
+    },
+    {
+      "citation": "Greisen, 'End to the cosmic-ray spectrum?', PRL 16, 748 (1966)",
+      "doi": "10.1103/PhysRevLett.16.748"
+    },
+    {
+      "citation": "Zatsepin and Kuzmin, 'Upper limit of the spectrum of cosmic rays', JETP Lett. 4, 78 (1966)"
+    }
+  ],
+  "tags": ["lorentz", "uhecr", "gzk", "auger", "telescope_array", "principle"]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "n_eff_combined_cmb_bbn",
+  "name": "Effective number of relativistic species N_eff (combined CMB + BBN)",
+  "kind": "cosmological_observable",
+  "requirement": "Any candidate framework must predict N_eff consistent with the combined CMB damping-tail and BBN constraints. Independently: CMB (Planck 2018 TT,TE,EE+lowE+lensing+BAO) gives N_eff = 2.99 +/- 0.17; BBN-only fits (D/H + Y_p with the Pitrou et al. 2018 reaction-rate update) give N_eff = 2.88 +/- 0.27. The joint CMB+BBN fit gives N_eff = 2.99 +/- 0.16, with the SM theory expectation N_eff^SM = 3.044, leaving |Delta N_eff| <~ 0.3 (95% CL) for any new relativistic species at recombination or BBN.",
+  "regime": {
+    "length_m": null,
+    "energy_ev": 1e6,
+    "description": "Two independent epochs probed: BBN (T ~ 0.1 - 1 MeV, t ~ 1 - 200 s) constrains the radiation density at neutron freeze-out and deuterium production; CMB damping tail (T ~ 0.3 eV, z ~ 1100) constrains it at recombination. The characteristic energy is taken as the BBN epoch (~MeV); a candidate framework must reproduce both."
+  },
+  "current_bound": {
+    "value": "N_eff = 2.99 +/- 0.16 (CMB + BBN combined); |Delta N_eff| < 0.3 (95% CL); SM expectation N_eff^SM = 3.044",
+    "uncertainty": null,
+    "units": "effective number of relativistic species (dimensionless)",
+    "experiment": "Planck 2018 + BBN (Pitrou-Coc-Uzan-Vangioni reaction-rate update + D/H from Cooke et al., Y_p from Aver et al.)",
+    "year": 2020,
+    "reference": "Planck Collaboration, A&A 641, A6 (2020), arXiv:1807.06209; Pitrou, Coc, Uzan, Vangioni, Phys. Rep. 754, 1 (2018), arXiv:1801.08023; Fields, Olive, Yeh, Young, JCAP 03, 010 (2020), arXiv:1912.01132",
+    "confidence_level": "68% CL on central value, 95% CL on |Delta N_eff|"
+  },
+  "what_it_excludes": "Excludes any thermalized BSM relativistic species at the eV-to-MeV scale unless its abundance is suppressed by late kinetic decoupling. A single fully thermalized Dirac sterile neutrino contributes Delta N_eff = 1.014 (excluded at >5 sigma). A thermalized scalar contributes Delta N_eff = 4/7 ~ 0.57 (excluded at ~3 sigma). Real-scalar dark photons, axion-like particles thermalized via photon coupling, and extra Dirac fermions are all bounded; the constraint is strongest because BBN and CMB probe two different epochs with consistent answers, foreclosing the loophole of species that disappear between BBN and recombination unless the disappearance produces other observable effects (entropy injection, spectral distortions). Together with cmb_blackbody_firas and bbn_light_element_abundances, this benchmark closes the 'extra light degree of freedom' window quite tightly.",
+  "procedural": {
+    "parameterization": {
+      "name": "Standard radiation-era cosmology with rho_rad = rho_gamma [1 + (7/8)(4/11)^(4/3) N_eff] for T < m_e. SM result N_eff^SM = 3.044 from Akita-Yamaguchi and Froustey et al. (2020) accounting for non-instantaneous neutrino decoupling, finite-temperature QED corrections, and neutrino oscillations during decoupling.",
+      "reference": "Akita and Yamaguchi, JCAP 08, 012 (2020), arXiv:2005.07047; Froustey, Pitrou, Volpe, JCAP 12, 015 (2020), arXiv:2008.01074; de Salas and Pastor, JCAP 07, 051 (2016).",
+      "summary": "N_eff parameterizes the energy density in non-photon, non-baryon relativistic species relative to a single-species reference. Cosmological observables sensitive to N_eff: BBN (n/p freeze-out, helium-4 abundance, deuterium burning), CMB (sound-horizon at decoupling, damping-tail Silk-damping scale), and the matter-radiation equality redshift."
+    },
+    "predicted_observable": "Y_p (^4He mass fraction), D/H (deuterium-to-hydrogen ratio), and CMB power-spectrum damping tail (l > ~1000) anisotropy.",
+    "bound_in_parameterization": "Combined CMB + BBN: Delta N_eff = -0.05 +/- 0.16 (1 sigma); |Delta N_eff| < 0.3 (95% CL). CMB-only: Delta N_eff = -0.05 +/- 0.17. BBN-only: Delta N_eff = -0.16 +/- 0.27.",
+    "framework_inputs": [
+      "If the framework includes light BSM particles (ALPs, dark photons, extra neutrinos, light dark sectors), compute their contribution to rho_rad at T ~ 1 MeV (BBN epoch) and T ~ 0.3 eV (recombination epoch).",
+      "Track entropy transfers between sectors: a particle that decouples while relativistic with comoving temperature T' contributes Delta N_eff = (g_*'/2)(T'/T_nu)^4 (per Dirac fermion equivalent). Frameworks with secret interactions that re-couple or decouple between BBN and CMB must compute Delta N_eff at both epochs.",
+      "If the framework modifies the SM neutrino decoupling itself (e.g. via neutrino self-interactions, NSI), include the modified N_eff^SM."
+    ],
+    "evaluator_status": "requires_simulation",
+    "notes": "BBN and CMB give independent handles. Some BSM scenarios (e.g. light particles produced after BBN but before CMB, or species that annihilate to neutrinos between BBN and CMB) shift the two N_eff values relative to each other; the joint fit is more constraining than either alone. BBN N_eff is degenerate with eta = n_B/n_gamma; the CMB measurement of Omega_b h^2 lifts this degeneracy."
+  },
+  "primary_references": [
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. VI. Cosmological parameters', A&A 641, A6 (2020)",
+      "arxiv": "1807.06209"
+    },
+    {
+      "citation": "Pitrou, Coc, Uzan, Vangioni, 'Precision big bang nucleosynthesis with improved Helium-4 predictions', Phys. Rep. 754, 1 (2018)",
+      "arxiv": "1801.08023"
+    },
+    {
+      "citation": "Fields, Olive, Yeh, Young, 'Big-Bang Nucleosynthesis after Planck', JCAP 03, 010 (2020)",
+      "arxiv": "1912.01132"
+    },
+    {
+      "citation": "Akita and Yamaguchi, 'A precision calculation of relic neutrino decoupling', JCAP 08, 012 (2020)",
+      "arxiv": "2005.07047"
+    },
+    {
+      "citation": "Froustey, Pitrou, Volpe, 'Neutrino decoupling including flavour oscillations and primordial nucleosynthesis', JCAP 12, 015 (2020)",
+      "arxiv": "2008.01074"
+    }
+  ],
+  "tags": ["cosmology", "n_eff", "bbn", "cmb_damping_tail", "early_universe", "light_relics"]
+}

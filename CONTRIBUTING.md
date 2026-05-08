@@ -67,8 +67,18 @@ The repo has two layers, with two schemas:
 
 ```bash
 pip install jsonschema
-python scripts/validate.py
+python scripts/validate.py            # schema validation
+python scripts/check_citations.py     # arXiv API cross-check (network)
 ```
 
-CI is not yet wired up; if you set it up, the green check is just
-`python scripts/validate.py` against the whole `data/` directory.
+`check_citations.py` walks every entry, pulls each cited arXiv ID through
+the arXiv API, and confirms that the cited author surname (or experiment
+collaboration) actually matches the arXiv record. It catches the two most
+common citation bugs in this repo: a typoed/wrong arXiv ID glued to a
+real-looking citation string, and a stale citation pointing at a paper
+that has since been replaced with unrelated content. Add `--offline` to
+skip the network and only check JSON parseability. Results are cached in
+`.arxiv_cache.json` (gitignored), so reruns are nearly free.
+
+CI is not yet wired up; the green check is `python scripts/validate.py &&
+python scripts/check_citations.py` against the whole repo.

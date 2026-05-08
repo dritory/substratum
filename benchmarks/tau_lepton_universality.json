@@ -1,0 +1,57 @@
+{
+  "id": "tau_lepton_universality",
+  "name": "Lepton flavor universality in tau decays",
+  "kind": "principle_invariance",
+  "principle": "lepton_flavor_universality",
+  "requirement": "Any candidate framework must reproduce the observed equality of the W-boson couplings to the three lepton generations as inferred from purely-leptonic and semihadronic tau decays. The HFLAV-averaged ratios |g_tau / g_mu|, |g_tau / g_e|, |g_mu / g_e| extracted from B(tau -> e nu nu_bar), B(tau -> mu nu nu_bar), B(tau -> pi nu_tau), B(tau -> K nu_tau), and B(W -> l nu) all agree with unity at the 0.1-0.3% level, with no surviving anomaly except possibly a mild tension in B(W -> tau nu) / B(W -> mu nu) measured at LEP and reanalyzed at the LHC.",
+  "regime": {
+    "length_m": 1.1e-16,
+    "energy_ev": 1.777e9,
+    "description": "Tau decays at energies near m_tau (B-factories, LEP, LHC). Leptonic decays are pure electroweak; semihadronic decays involve well-controlled hadronic matrix elements (V_us f_K, V_ud f_pi)."
+  },
+  "current_bound": {
+    "value": "|g_tau / g_mu| = 1.0009 +/- 0.0014; |g_tau / g_e| = 1.0027 +/- 0.0014; |g_mu / g_e| = 1.0019 +/- 0.0014 (HFLAV 2024 averages from leptonic and hadronic tau decays plus pi -> l nu, K -> l nu, W -> l nu)",
+    "uncertainty": null,
+    "units": "ratio of charged-current lepton couplings (dimensionless)",
+    "experiment": "HFLAV global tau LFU fit (BaBar, Belle, Belle II, LEP-ALEPH/OPAL, CLEO, LHCb, ATLAS) using leptonic and semihadronic tau branchings, pion / kaon -> l nu, and W -> l nu",
+    "year": 2024,
+    "reference": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (HFLAV 2024 update)",
+    "confidence_level": "1 sigma typical"
+  },
+  "what_it_excludes": "Constrains charged-Higgs scenarios (2HDM type-II / type-X with large tan(beta)) at tan(beta)/m_H < ~0.4 GeV^-1; vector leptoquarks coupling to taus; W' bosons with non-universal couplings. Together with R(D), R(D*) (b -> c tau nu) and R(K), R(K*) (b -> s l+ l-), tau LFU is the most precise generation-comparison test in the SM and excludes wide classes of LFU-violating BSM at the (g_tau / g_l - 1) < 0.001 level. The B(W -> tau nu) / B(W -> mu nu) ratio (LEP gave 1.066 +/- 0.025, ATLAS 2021 gave 0.992 +/- 0.013) is now consistent with universality after the ATLAS measurement; any framework predicting tau-enhanced W couplings must accommodate the modern ATLAS-averaged value.",
+  "procedural": {
+    "parameterization": {
+      "name": "Charged-current effective couplings g_e, g_mu, g_tau in the SM Lagrangian (gauge boson - lepton vertex). Equivalently, SMEFT operators C_Hl^(3) and C_ll diagonal in lepton flavor; LFU breaking parameterized by their flavor-off-diagonal structure.",
+      "reference": "Pich, 'Precision Tau Physics', Prog. Part. Nucl. Phys. 75, 41 (2014), arXiv:1310.7922; Bryman, Cirigliano, Crivellin, Inguglia, ARNPS 72, 69 (2022), arXiv:2111.05338.",
+      "summary": "Tau LFU is tested by comparing leptonic tau branching fractions B(tau -> l nu nu_bar) (which probe |g_tau g_l|^2), semihadronic decays such as B(tau -> pi nu) / B(pi -> mu nu) (which probe |g_tau / g_mu|^2), and W decay branching ratios B(W -> l nu). Each ratio is computed in the SM with sub-permille precision after radiative corrections and known phase-space and hadronic factors."
+    },
+    "predicted_observable": "B(tau -> e nu nu_bar) / tau_tau, B(tau -> mu nu nu_bar) / tau_tau, B(tau -> pi nu) / B(pi -> mu nu), B(tau -> K nu) / B(K -> mu nu), and B(W -> l nu). Ratios constructed to cancel hadronic uncertainties.",
+    "bound_in_parameterization": "(g_tau / g_l - 1) at the 0.001 level for l = e, mu and the corresponding semihadronic comparisons; Wilson-coefficient bound |C_Hl^(3) flavor-off-diagonal| < few x 10^-3 / Lambda^2 (TeV^-2).",
+    "framework_inputs": [
+      "If the framework introduces lepton-flavor-non-universal couplings to W (or new charged-current mediators), compute the effective g_l for each generation and confront with HFLAV averages.",
+      "Include tree-level charged-Higgs contributions to tau -> l nu nu_bar (Michel parameter rho_tau, eta_tau spectra are also constrained at the percent level).",
+      "Match onto SMEFT C_Hl^(3) or, for non-decoupled mediators, full UV completions; tools: flavio, smelli, RGEs to m_tau scale."
+    ],
+    "evaluator_status": "tractable",
+    "notes": "The Pich review (1310.7922) provides the full SM analytic framework and remains the standard reference; HFLAV maintains the live world averages (2411.18639 is the most recent update). Tau LFU is comparable in precision to electron / muon mass ratios as a test of universality."
+  },
+  "primary_references": [
+    {
+      "citation": "Pich, 'Precision Tau Physics', Prog. Part. Nucl. Phys. 75, 41-85 (2014)",
+      "arxiv": "1310.7922"
+    },
+    {
+      "citation": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2023', arXiv:2411.18639 (2024)",
+      "arxiv": "2411.18639"
+    },
+    {
+      "citation": "Bryman, Cirigliano, Crivellin, Inguglia, 'Testing Lepton Flavor Universality with Pion, Kaon, Tau, and Beta Decays', Annu. Rev. Nucl. Part. Sci. 72, 69 (2022)",
+      "arxiv": "2111.05338"
+    },
+    {
+      "citation": "ATLAS Collaboration, 'Test of the universality of tau and mu lepton couplings in W-boson decays with the ATLAS detector', Nature Phys. 17, 813 (2021)",
+      "arxiv": "2007.14040"
+    }
+  ],
+  "tags": ["tau", "lepton_universality", "lfu", "pich_review", "principle"]
+}
