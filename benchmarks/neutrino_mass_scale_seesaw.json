@@ -1,0 +1,76 @@
+{
+  "id": "neutrino_mass_scale_seesaw",
+  "name": "Neutrino mass scale: seesaw compression",
+  "kind": "pattern_compression",
+  "requirement": "Any mechanism for neutrino masses must compress the eV-scale neutrino-mass spectrum into a parameter ratio that does not require fine-tuned Yukawas. The textbook compression is m_nu ~ y_nu^2 v^2 / M_R: three small numbers (m_nu_i) re-expressed as a Yukawa structure (y_nu) at a high Majorana mass scale M_R. For y_nu of order y_t and m_nu ~ 0.05 eV, M_R is forced to ~10^14-10^15 GeV, an independent scale predicted by the compression rather than set by hand.",
+  "what_it_excludes": "Pure Dirac neutrino mass with anarchic Yukawas y_nu ~ 1 is excluded by the smallness; y_nu ~ 10^-12 is allowed but provides no compression. A mechanism that predicts neutrinos to be exactly massless (e.g., naive SM with no right-handed neutrinos) is excluded by oscillation data.",
+  "regime": {
+    "energy_ev": 1e23,
+    "description": "Heavy Majorana scale at which the seesaw matching is performed (~10^14 GeV typical for hierarchical seesaw with y_nu ~ y_top)."
+  },
+  "procedural": {
+    "parameterization": {
+      "name": "Type-I seesaw block-diagonalization",
+      "reference": "Minkowski (1977); Yanagida (1979); Gell-Mann-Ramond-Slansky (1979); Mohapatra-Senjanovic (1980)",
+      "summary": "Active-sterile mass matrix M = [[0, m_D], [m_D^T, M_R]] with m_D = y_nu * v / sqrt(2). Block-diagonalising for M_R >> m_D yields light masses m_nu ~ -m_D^T M_R^{-1} m_D."
+    },
+    "predicted_observable": "m_nu_i (light masses) = y_nu_eff^2 v^2 / M_R_eff with y_nu_eff and M_R_eff capturing the leading scaling. Equivalent: Weinberg dimension-5 operator coefficient C_W ~ 1 / Lambda with Lambda ~ M_R / y_nu^2.",
+    "bound_in_parameterization": "m_nu_lightest < 0.8 eV (KATRIN); sum m_nu < 0.12 eV (Planck + BAO); Delta m^2_atm = 2.5e-3 eV^2; Delta m^2_sol = 7.5e-5 eV^2 (oscillation data). For y_nu ~ 1, M_R ~ 10^14 GeV reproduces the atmospheric scale; for y_nu ~ 0.01, M_R ~ 10^10 GeV.",
+    "framework_inputs": [
+      "Predicted mechanism for generating neutrino mass (Dirac vs Majorana)",
+      "Predicted M_R hierarchy or single scale",
+      "Predicted Yukawa structure relating active-sterile mixing to charged-lepton sector"
+    ],
+    "evaluator_status": "tractable",
+    "compression_ansatz": "m_nu_i = (y_nu)^2 * v^2 / M_R_i with y_nu ~ y_charged-lepton or y_top, and M_R_i a single high scale (or two scales for hierarchy).",
+    "target_data": [
+      {
+        "label": "Delta m^2_atm",
+        "value": "2.51e-3",
+        "uncertainty": "0.03e-3",
+        "units": "eV^2",
+        "reference": "NuFIT 5.3 (2024)"
+      },
+      {
+        "label": "Delta m^2_sol",
+        "value": "7.41e-5",
+        "uncertainty": "0.21e-5",
+        "units": "eV^2",
+        "reference": "NuFIT 5.3 (2024)"
+      },
+      {
+        "label": "sum m_nu (cosmological bound)",
+        "value": "< 0.12",
+        "units": "eV",
+        "reference": "Planck 2018 + BAO"
+      },
+      {
+        "label": "m_beta (KATRIN bound)",
+        "value": "< 0.8",
+        "units": "eV",
+        "reference": "KATRIN 2022"
+      }
+    ],
+    "free_parameters": [
+      "y_nu (Yukawa scale)",
+      "M_R (Majorana mass scale; one or three values for hierarchical seesaw)",
+      "PMNS angles and phases (three angles, one Dirac CP phase, two Majorana phases)"
+    ],
+    "notes": "Compression ratio: three small light-neutrino masses reduce to a Yukawa scale + Majorana scale ratio. A predictive flavor mechanism (FN, modular) further reduces y_nu to integer charges; combined seesaw + FN is the textbook example of stacked compressions."
+  },
+  "primary_references": [
+    {
+      "citation": "Minkowski, 'mu -> e gamma at a rate of one out of 10^9 muon decays?', Phys. Lett. B 67, 421 (1977)",
+      "doi": "10.1016/0370-2693(77)90435-X"
+    },
+    {
+      "citation": "Mohapatra and Senjanovic, 'Neutrino mass and spontaneous parity violation', PRL 44, 912 (1980)",
+      "doi": "10.1103/PhysRevLett.44.912"
+    },
+    {
+      "citation": "Esteban et al. (NuFIT 5.3), 'The fate of hints: updated global analysis of three-flavor neutrino oscillations', JHEP 09, 178 (2020)",
+      "arxiv": "2007.14792"
+    }
+  ],
+  "tags": ["pattern_compression", "neutrinos", "seesaw", "majorana"]
+}

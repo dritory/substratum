@@ -20,9 +20,10 @@
         "principle_invariance",
         "forbidden_phenomenon",
         "cosmological_observable",
-        "tension_to_address"
+        "tension_to_address",
+        "pattern_compression"
       ],
-      "description": "reduction = must reproduce an established theory in a stated regime; precision_test = must reproduce a specific measurement to its quoted precision; principle_invariance = must respect a foundational symmetry to current experimental bound; forbidden_phenomenon = must not predict a phenomenon already excluded; cosmological_observable = must reproduce a cosmological observation; tension_to_address = links to existing data/ entries that the framework must explain."
+      "description": "reduction = must reproduce an established theory in a stated regime; precision_test = must reproduce a specific measurement to its quoted precision; principle_invariance = must respect a foundational symmetry to current experimental bound; forbidden_phenomenon = must not predict a phenomenon already excluded; cosmological_observable = must reproduce a cosmological observation; tension_to_address = links to existing data/ entries that the framework must explain; pattern_compression = the structured set of values within an apparently 'ugly' observable should compress to a smaller number of inputs under the right ansatz (e.g., quark mass spectrum as integer Froggatt-Nielsen charges)."
     },
     "requirement": {
       "type": "string",
@@ -121,6 +122,31 @@
             "research_problem"
           ],
           "description": "How hard the evaluation is: 'trivial' (single-number compare), 'tractable' (extract a parameter from a closed-form computation), 'requires_code' (PPN extraction, SMEFT matching), 'requires_simulation' (Boltzmann hierarchy through recombination, lattice QCD), 'research_problem' (no general method exists yet)."
+        },
+        "compression_ansatz": {
+          "type": "string",
+          "description": "For 'pattern_compression' kind: the functional form that the apparently random data is hypothesised to fit (e.g., 'm_i ~ v * eps^{q_i} with integer q_i and single eps'). A mechanism passes the benchmark if it produces this ansatz from first principles."
+        },
+        "target_data": {
+          "type": "array",
+          "description": "For 'pattern_compression' kind: the observables whose pattern is being compressed.",
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": ["number", "string"] },
+              "uncertainty": { "type": ["number", "string", "null"] },
+              "units": { "type": "string" },
+              "reference": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "free_parameters": {
+          "type": "array",
+          "description": "For 'pattern_compression' kind: the small number of parameters the ansatz fits, against which compression is measured.",
+          "items": { "type": "string" }
         },
         "notes": { "type": "string" }
       }

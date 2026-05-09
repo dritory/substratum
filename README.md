@@ -4,7 +4,7 @@ A curated, schema-validated catalog of open tensions and anomalies in
 contemporary physics, spanning particle physics, cosmology, gravitation,
 and condensed matter.
 
-The repository has two parallel layers:
+The repository has four parallel layers:
 
 - **`data/`** — a record of where the Standard Model and ΛCDM are currently
   under empirical stress. Each entry tracks the discrepancy's history,
@@ -13,11 +13,28 @@ The repository has two parallel layers:
 - **`benchmarks/`** — the **non-negotiable constraint set** that any
   candidate replacement framework must satisfy before it is worth taking
   seriously. Reductions to known theories, foundational-principle tests,
-  forbidden phenomena, and a meta-entry pointing back into `data/` for
-  the open tensions any new framework has to explain.
+  forbidden phenomena, pattern-compression demands, and a meta-entry
+  pointing back into `data/` for the open tensions any new framework has
+  to explain.
+- **`puzzles/`** — first-class **naturalness puzzles** (cosmological
+  constant smallness, gauge hierarchy, strong-CP, fermion mass hierarchy,
+  CKM mixing pattern, neutrino mass smallness, baryon asymmetry, dark
+  matter identity, gauge coupling unification). Most of these are not
+  measurement disagreements; they are unexplained numbers and patterns
+  that the standard frameworks expose without resolving.
+- **`mechanisms/`** — proposed structural answers to one or more puzzles
+  (Peccei-Quinn axion, type-I seesaw, Froggatt-Nielsen, MSSM, twin
+  Higgs, relaxion, leptogenesis, anthropic landscape, sequestering,
+  unimodular gravity, quintessence, Nelson-Barr). Each mechanism declares
+  which puzzles it addresses and with what role (`solves`,
+  `ameliorates`, `explains_pattern`, `requires`), which benchmarks it
+  touches and with what effect (`respects`, `near_bound`, `violates`,
+  `predicts_signal`), and how many new free parameters it introduces.
 
 Together: tensions tell you where the current models break; benchmarks tell
-you what the next model has to look like.
+you what the next model has to look like; puzzles say what the next model
+has to *explain*; mechanisms enumerate the candidate explanations and let
+you score how much each compresses.
 
 ## Why
 
@@ -95,9 +112,39 @@ expose to be evaluated, and an `evaluator_status` flag indicating how
 hard the evaluation is (`trivial` / `tractable` / `requires_code` /
 `requires_simulation` / `requires_lattice` / `research_problem`).
 
-53 benchmark entries across 12 domains. Every entry is backed by
+72 benchmark entries across 12 domains. Every entry is backed by
 primary literature (arXiv / DOI). See `ROADMAP.md` for the full
 populated list and remaining additions.
+
+Three benchmarks are of `kind: pattern_compression` — they encode the
+demand that an apparently "ugly" set of values (quark mass spectrum, CKM
+hierarchy, neutrino mass scale) compress into a small set of inputs
+under the right ansatz. A flavor mechanism passes by deriving the
+compression from first principles; it fails by reproducing the data
+with as many free parameters as the data has values.
+
+### `puzzles/` and `mechanisms/` — the dot-alignment graph
+
+Naturalness puzzles and proposed mechanisms are stored as a bipartite
+graph. Each `mechanisms/<id>.json` declares its `addresses_puzzles`
+edges (with role and confidence) and its `touches_benchmarks` edges
+(with effect). `scripts/dot_alignment.py` produces a markdown report
+showing:
+
+- the bipartite mechanisms × puzzles table,
+- a compression score per mechanism = (puzzles closed) / (new free
+  parameters introduced),
+- "high-degree mechanisms" (touching ≥3 puzzles) — the historical
+  signature of theoretical proposals worth taking seriously,
+- "convergent puzzles" (≥3 mechanisms competing) — the active
+  battlegrounds of theoretical physics,
+- structural-feature co-occurrence across mechanisms,
+- any `violates` edges that should retire a mainstream mechanism.
+
+The principle is to make it *expensive to ignore evidence and cheap to
+compress it*. Cherry-picked solutions show up immediately as low
+compression or violated benchmarks; high-leverage proposals (one
+mechanism, several puzzles, few new parameters) surface to the top.
 
 **Domain coverage:**
 
@@ -143,7 +190,22 @@ module in CLASS / CAMB / PArthENoPE / GARSTEC.
 python scripts/validate.py
 ```
 
-Validates every file in `data/` against the schema and reports problems.
+Validates every file in `data/`, `benchmarks/`, `frameworks/`,
+`puzzles/`, and `mechanisms/` against their schemas and cross-checks
+that every reference (tension link, framework prediction, puzzle data
+link, mechanism puzzle/benchmark/composes-with edge, data
+mechanism/puzzle link) resolves.
+
+## Dot-alignment report
+
+```bash
+python scripts/dot_alignment.py
+python scripts/dot_alignment.py -o report.md
+```
+
+Renders the puzzle ↔ mechanism bipartite graph, compression scores,
+high-degree mechanisms, convergent puzzles, encoded violations, and
+structural-feature clusters as a markdown report.
 
 ## Visualization site
 

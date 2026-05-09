@@ -1,0 +1,62 @@
+{
+  "id": "seesaw_type_i",
+  "name": "Type-I seesaw",
+  "aliases": ["right-handed neutrino seesaw"],
+  "type": "uv_completion",
+  "summary": "Adds heavy right-handed neutrinos N_R with Majorana mass M_R >> v. Block-diagonalising the resulting 6x6 mass matrix yields light neutrino masses m_nu ~ y_nu^2 v^2 / M_R, naturally tiny for M_R near the GUT scale. The mechanism turns the neutrino-mass smallness from a Yukawa fine-tuning into a high-scale mass-ratio puzzle with a clear UV interpretation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "For y_nu ~ y_t and M_R ~ 10^14 GeV, light masses naturally come out at the observed eV-scale. The 'pattern' is the m_nu ~ m_D^2 / M_R compression that turns three small numbers into a single high-scale ratio."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_mass_scale_seesaw",
+      "effect": "predicts_signal",
+      "note": "Type-I seesaw is the textbook mechanism that produces this benchmark's compression ansatz m_nu ~ y_nu^2 v^2 / M_R."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Majorana mass for active neutrinos generates 0nubb at a rate set by m_betabeta; current experiments probe inverted hierarchy."
+    },
+    {
+      "benchmark_id": "katrin_neutrino_mass",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "sum_neutrino_masses_cosmology",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["right-handed neutrinos N_R (typically three)"],
+    "new_scales": ["M_R ~ 10^9 - 10^14 GeV"],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Three Majorana mass eigenvalues plus a complex 3x3 Yukawa matrix; with PMNS observables most parameters are fitted to data, leaving ~3 free scales (the M_R hierarchy)."
+  },
+  "structural_features": ["majorana_mass", "high_scale", "lepton_number_violation"],
+  "composes_with": ["leptogenesis", "froggatt_nielsen", "mssm"],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Minkowski (1977); Yanagida (1979); Gell-Mann, Ramond, Slansky (1979); Mohapatra and Senjanovic (1980). Type-II (scalar triplet) and type-III (fermion triplet) variants followed. The seesaw is the textbook explanation; its high-scale character makes direct verification difficult, but neutrinoless double beta decay and leptogenesis provide indirect probes.",
+  "references": [
+    {
+      "citation": "Minkowski, 'mu -> e gamma at a rate of one out of 10^9 muon decays?', Phys. Lett. B 67, 421 (1977)",
+      "doi": "10.1016/0370-2693(77)90435-X"
+    },
+    {
+      "citation": "Mohapatra and Senjanovic, 'Neutrino mass and spontaneous parity violation', PRL 44, 912 (1980)",
+      "doi": "10.1103/PhysRevLett.44.912"
+    }
+  ],
+  "tags": ["seesaw", "neutrinos", "majorana"]
+}

@@ -3,7 +3,9 @@
 This file tracks the constraint inventory we have populated and what
 remains. The goal is a procedural benchmark set comprehensive enough
 that any candidate unified-physics framework can be evaluated against
-it.
+it, plus a layered representation of naturalness puzzles and proposed
+mechanisms that surfaces dot-alignment across the open structural
+problems.
 
 ## Conventions
 
@@ -11,12 +13,19 @@ it.
   `benchmarks/` that validates against `schema/benchmark.schema.json`,
   cites primary literature with arXiv/DOI, and (where applicable)
   includes a `procedural` block with the canonical parameterization.
+- A puzzle is populated when it validates against
+  `schema/puzzle.schema.json` and includes characteristic numbers and
+  primary references.
+- A mechanism is populated when it validates against
+  `schema/mechanism.schema.json`, declares at least one
+  `addresses_puzzles` edge with a confidence label, and includes
+  primary references.
 - Every entry must be backed by primary references. No textbook-only
   citations.
 
 ## Status
 
-### Populated (62 benchmark entries, 5 data entries)
+### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 12 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -97,6 +106,25 @@ it.
 
 **Meta (1):**
 - `address_open_tensions` (links into `data/`)
+
+**Pattern compression (3, new):**
+- `quark_mass_fn_compression` (Froggatt-Nielsen ε^q ansatz vs PDG quark masses)
+- `ckm_wolfenstein_lambda_hierarchy` (CKM organised in powers of λ ≈ 0.225)
+- `neutrino_mass_scale_seesaw` (m_ν ~ y_ν² v² / M_R compression)
+
+**Puzzles (9, new layer):**
+- `cosmological_constant_smallness`, `gauge_hierarchy_problem`,
+  `strong_cp_problem`, `flavor_mass_hierarchy`, `ckm_mixing_pattern`,
+  `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
+  `gauge_coupling_unification`
+
+**Mechanisms (12, new layer):**
+- Strong-CP: `peccei_quinn_axion`, `nelson_barr`
+- Flavor: `froggatt_nielsen`
+- Neutrino mass + BAU: `seesaw_type_i`, `leptogenesis`
+- Hierarchy: `mssm`, `twin_higgs`, `relaxion`
+- Cosmological constant: `anthropic_landscape`, `sequestering`,
+  `unimodular_gravity`, `quintessence`
 
 ### Recently populated
 

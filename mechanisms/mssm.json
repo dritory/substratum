@@ -1,0 +1,83 @@
+{
+  "id": "mssm",
+  "name": "Minimal Supersymmetric Standard Model",
+  "aliases": ["MSSM", "low-scale SUSY"],
+  "type": "symmetry",
+  "summary": "A spacetime supersymmetry between bosons and fermions, broken at a scale near the electroweak scale, gives the Higgs mass technical naturalness through cancellation of quadratic divergences between SM particles and their superpartners. With R-parity, the lightest superpartner is a stable dark-matter candidate. Gauge couplings unify cleanly under MSSM running. LHC null results have pushed the natural SUSY scale above ~1-2 TeV, eroding but not eliminating the framework.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Solves the technical-naturalness problem if M_SUSY ~ EW scale. Post-LHC bounds (M_SUSY > 1-2 TeV for colored superpartners) introduce a residual little hierarchy of ~few %; whether SUSY still 'solves' or merely 'softens' the puzzle depends on which definition of naturalness one accepts."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "R-parity-conserving MSSM has the lightest neutralino as a WIMP DM candidate; direct-detection nulls have squeezed the parameter space but not closed it (well-tempered, focus point, coannihilation regions remain)."
+    },
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Three-loop precision running with MSSM particle content closes the gauge-coupling unification mismatch to <~1% near 2e16 GeV; this is the most data-supported feature of MSSM."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Exact SUSY would cancel vacuum-energy contributions; broken SUSY at M_SUSY ~ TeV leaves a residual ~M_SUSY^4, which is ~10^60 too large relative to the observed Lambda. Listed for graph completeness; not a viable solution."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects",
+      "note": "Decoupling limit reproduces SM Higgs couplings; post-LHC viable parameter space sits in this regime."
+    },
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "predicts_signal",
+      "note": "MSSM with light electroweakinos and sleptons can naturally accommodate the Fermilab + BNL g-2 result, depending on tan(beta) and the slepton spectrum."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound",
+      "note": "Generic MSSM phases generate EDMs at 1-loop; nEDM and electron-EDM bounds force CP-violating phases to be small (the SUSY CP problem)."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "LZ constrains spin-independent neutralino-nucleon cross-sections to <2e-47 cm^2 at ~30 GeV; viable MSSM neutralino DM remaining is mostly bino-like with coannihilation."
+    },
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "SUSY-GUT contributions to dimension-5 proton-decay operators (p -> K nu) saturate Super-Kamiokande bounds in much of the natural parameter space."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["full set of superpartners (squarks, sleptons, gauginos, higgsinos)", "two Higgs doublets H_u, H_d"],
+    "new_scales": ["M_SUSY ~ 0.1 - 10 TeV"],
+    "new_symmetries": ["N=1 spacetime supersymmetry (broken)", "R-parity (Z_2)"],
+    "new_parameters_count": 105,
+    "note": "The full unconstrained MSSM has 105 parameters beyond the SM (Haber 1997). Constrained models (mSUGRA/CMSSM) reduce this to ~5, but at the cost of theoretical assumptions. We use the unconstrained count for the compression denominator; this is precisely why MSSM is becoming hard to motivate post-LHC."
+  },
+  "structural_features": ["spacetime_symmetry", "extra_doublet", "lsp_dark_matter", "soft_breaking", "r_parity"],
+  "composes_with": ["seesaw_type_i", "leptogenesis", "froggatt_nielsen", "peccei_quinn_axion"],
+  "excludes": ["twin_higgs"],
+  "status": "niche",
+  "history": "Wess-Zumino (1974); Dimopoulos-Georgi (1981) MSSM; Dimopoulos-Raby-Wilczek (1981) gauge unification. Dominant BSM paradigm 1985-2015. Post-LHC Run 1+2 nulls (2012-2018) demoted from 'mainstream' to 'niche' for low-scale natural SUSY; high-scale (PeV) and split SUSY remain.",
+  "references": [
+    {
+      "citation": "Martin, 'A supersymmetry primer' (1997, updated)",
+      "arxiv": "hep-ph/9709356"
+    },
+    {
+      "citation": "Haber, 'The status of the minimal supersymmetric Standard Model and beyond' (1997)",
+      "arxiv": "hep-ph/9709450"
+    }
+  ],
+  "tags": ["supersymmetry", "hierarchy", "dark_matter", "gut"]
+}

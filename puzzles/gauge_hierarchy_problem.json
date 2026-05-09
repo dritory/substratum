@@ -1,0 +1,47 @@
+{
+  "id": "gauge_hierarchy_problem",
+  "name": "Gauge hierarchy problem",
+  "aliases": ["electroweak hierarchy problem", "Higgs naturalness problem"],
+  "kind": "naturalness",
+  "summary": "The Higgs mass m_H ~ 125 GeV is enormously smaller than the natural cutoff scale at which new physics is expected (Planck, GUT, or seesaw scales). Scalar masses receive quadratically divergent radiative corrections, so without a protective mechanism m_H^2 is fine-tuned to one part in (M_cutoff/m_H)^2.",
+  "characteristic_numbers": [
+    {
+      "symbol": "m_H / M_Planck",
+      "value": "1e-17",
+      "expected": "O(1)",
+      "gap_log10": -17,
+      "note": "Squared in the mass-parameter sensitivity: tuning is ~10^34 against M_Planck cutoff, ~10^28 against GUT scale."
+    },
+    {
+      "symbol": "v_EW",
+      "value": "246",
+      "expected": "M_cutoff (~10^16 GeV or higher)",
+      "gap_log10": -14,
+      "units": "GeV"
+    }
+  ],
+  "benchmark_links": ["higgs_couplings_lhc", "electroweak_oblique_s_t_u"],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Quadratic sensitivity of scalar masses to UV cutoff is the canonical motivation for naturalness as a guiding principle. LHC's null results for natural-scale new physics have made this puzzle sharper, not softer."
+    }
+  ],
+  "history": "Articulated in the late 1970s in the context of grand unification (Gildener 1976, Weinberg 1979). Drove SUSY's appeal in the 1980s. Post-LHC, the absence of natural-scale BSM has prompted reformulations: relaxion (Graham-Kaplan-Rajendran 2015), 'split SUSY', anthropic / multiverse selection, or a re-examination of whether quadratic sensitivity is a real puzzle in dimensional regularisation.",
+  "references": [
+    {
+      "citation": "Gildener, 'Gauge symmetry hierarchies', Phys. Rev. D 14, 1667 (1976)",
+      "doi": "10.1103/PhysRevD.14.1667"
+    },
+    {
+      "citation": "Weinberg, 'Implications of dynamical symmetry breaking', Phys. Rev. D 19, 1277 (1979)",
+      "doi": "10.1103/PhysRevD.19.1277"
+    },
+    {
+      "citation": "Giudice, 'Naturally Speaking: The Naturalness Criterion and Physics at the LHC' (2008)",
+      "arxiv": "0801.2562"
+    }
+  ],
+  "tags": ["naturalness", "higgs", "ew_scale", "fine_tuning"]
+}

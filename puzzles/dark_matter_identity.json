@@ -1,0 +1,41 @@
+{
+  "id": "dark_matter_identity",
+  "name": "Dark matter identity",
+  "kind": "consistency",
+  "summary": "Galactic rotation curves, cluster lensing, the CMB acoustic peak structure, and large-scale structure formation independently require ~26% of the cosmological energy density to be in non-baryonic, non-relativistic, gravitationally interacting matter that does not couple substantially to photons. Decades of direct, indirect, and collider searches have failed to identify the particle (or non-particle) responsible.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Omega_DM h^2",
+      "value": "0.120",
+      "expected": "0 in SM",
+      "note": "Planck 2018; uncertainty ~1%."
+    },
+    {
+      "symbol": "Omega_DM / Omega_b",
+      "value": "5.4",
+      "expected": "no SM relation",
+      "note": "Dark and baryonic densities are within a factor of 6, despite (presumably) entirely different origins. This 'cosmic coincidence' is itself a sub-puzzle."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": ["dm_direct_detection_lz", "dm_indirect_fermi_lat_dwarfs", "sidm_self_interaction_clusters", "bullet_cluster_lensing_offset", "primordial_black_holes_microlensing"],
+  "principles_stressed": [
+    {
+      "principle": "none",
+      "status": "tests",
+      "note": "Dark matter does not violate any foundational principle; it just requires a beyond-SM particle (or compact object). Its identity remains the largest unsolved BSM consistency question grounded in unambiguous data."
+    }
+  ],
+  "history": "Postulated by Zwicky (1933) from Coma cluster velocity dispersion; confirmed by Rubin's rotation curves (1970s); cemented by the CMB. WIMP miracle dominated 1980s-2010s; null results from XENON, LUX-ZEPLIN, PandaX have pushed cross-sections below 10^-47 cm^2 in the 30 GeV range. Axion, sterile-neutrino, primordial-black-hole, and ultralight scalar candidates are increasingly active alternatives.",
+  "references": [
+    {
+      "citation": "Bertone and Hooper, 'A History of Dark Matter', Rev. Mod. Phys. 90, 045002 (2018)",
+      "arxiv": "1605.04909"
+    },
+    {
+      "citation": "Planck Collaboration 2018, 'Cosmological parameters', A&A 641, A6 (2020)",
+      "arxiv": "1807.06209"
+    }
+  ],
+  "tags": ["dark_matter", "cosmology", "open_question"]
+}

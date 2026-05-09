@@ -1,0 +1,41 @@
+{
+  "id": "gauge_coupling_unification",
+  "name": "Gauge coupling unification",
+  "aliases": ["GUT-scale convergence"],
+  "kind": "coincidence",
+  "summary": "When the three SM gauge couplings g_1, g_2, g_3 are extrapolated to high energies under SM running, they nearly meet near 10^15-10^16 GeV but do not quite converge. Under MSSM running they meet much more cleanly. This is one of the strongest 'coincidence' clues that some structure (grand unification, supersymmetry, or both) lives near the GUT scale.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Delta(g_1, g_2, g_3) at M_GUT (SM)",
+      "value": "few %",
+      "expected": "0 if unified",
+      "note": "SM-only running misses by a few percent; MSSM running closes the gap to <~1%."
+    },
+    {
+      "symbol": "M_GUT (MSSM)",
+      "value": "2e16",
+      "expected": "no SM derivation",
+      "units": "GeV"
+    }
+  ],
+  "benchmark_links": ["proton_decay_lifetime"],
+  "principles_stressed": [
+    {
+      "principle": "gauge_invariance",
+      "status": "tests",
+      "note": "Unification suggests the SM gauge group is embedded in a larger simple (or semi-simple) group at high scale. Proton decay is the dominant low-energy probe."
+    }
+  ],
+  "history": "Georgi-Quinn-Weinberg (1974) computed the meeting scale in SU(5). Dimopoulos-Raby-Wilczek (1981) noted SUSY improves the convergence. Subsequent precision data (LEP, lattice alpha_s) made the SM-only mismatch unmistakable.",
+  "references": [
+    {
+      "citation": "Georgi, Quinn, Weinberg, 'Hierarchy of interactions in unified gauge theories', PRL 33, 451 (1974)",
+      "doi": "10.1103/PhysRevLett.33.451"
+    },
+    {
+      "citation": "Dimopoulos, Raby, Wilczek, 'Supersymmetry and the scale of unification', Phys. Rev. D 24, 1681 (1981)",
+      "doi": "10.1103/PhysRevD.24.1681"
+    }
+  ],
+  "tags": ["coincidence", "gut", "unification"]
+}

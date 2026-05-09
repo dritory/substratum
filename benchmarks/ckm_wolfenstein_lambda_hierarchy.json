@@ -1,0 +1,69 @@
+{
+  "id": "ckm_wolfenstein_lambda_hierarchy",
+  "name": "CKM mixing: Wolfenstein lambda-hierarchy compression",
+  "kind": "pattern_compression",
+  "requirement": "Any candidate flavor mechanism must reproduce the CKM matrix hierarchical structure |V_us| ~ lambda, |V_cb| ~ A*lambda^2, |V_ub| ~ A*lambda^3*sqrt(rho^2 + eta^2), |V_td| ~ A*lambda^3*sqrt((1-rho)^2 + eta^2), with a single small expansion parameter lambda ~ 0.225 and order-unity coefficients.",
+  "what_it_excludes": "A flavor mechanism that predicts O(1) mixing angles (anarchic CKM) is excluded. The hierarchical pattern is too pronounced to be a fluctuation.",
+  "regime": {
+    "energy_ev": 9.1e10,
+    "description": "M_Z scale; CKM elements are quoted at this scale by convention."
+  },
+  "procedural": {
+    "parameterization": {
+      "name": "Wolfenstein parameterization",
+      "reference": "Wolfenstein, PRL 51, 1945 (1983)",
+      "summary": "V_CKM expanded in powers of lambda = sin(theta_C) ~ 0.225, with coefficients A ~ 0.81 and (rho, eta) describing the CP-violating apex of the unitarity triangle."
+    },
+    "predicted_observable": "|V_us|, |V_cb|, |V_ub|, |V_td| should fit lambda^n hierarchy to leading order in lambda.",
+    "bound_in_parameterization": "lambda = 0.22500 +/- 0.00067; A = 0.826 +/- 0.012; rho_bar = 0.159 +/- 0.010; eta_bar = 0.348 +/- 0.010 (PDG 2024).",
+    "framework_inputs": [
+      "Predicted hierarchy in CKM elements at the matching scale",
+      "Identification of expansion parameter (must be a single small parameter, not multiple unrelated small parameters)",
+      "Prediction or post-diction of the CP-violating phase magnitude"
+    ],
+    "evaluator_status": "tractable",
+    "compression_ansatz": "V_CKM = 1 + lambda * V_1 + lambda^2 * V_2 + lambda^3 * V_3 + ... with O(1) coefficients in V_n. Equivalent to integer Froggatt-Nielsen charges of the left-handed quark doublets {q_Q_1, q_Q_2, q_Q_3} = {3, 2, 0} (or similar) with epsilon = lambda.",
+    "target_data": [
+      {
+        "label": "|V_us| (Cabibbo angle)",
+        "value": "0.22500",
+        "uncertainty": "0.00067",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "|V_cb|",
+        "value": "0.0410",
+        "uncertainty": "0.0014",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "|V_ub|",
+        "value": "0.00382",
+        "uncertainty": "0.00020",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "|V_td|",
+        "value": "0.0086",
+        "uncertainty": "0.0002",
+        "reference": "PDG 2024"
+      }
+    ],
+    "free_parameters": [
+      "lambda (one continuous; ~0.225)",
+      "A, rho_bar, eta_bar (three additional Wolfenstein parameters)"
+    ],
+    "notes": "Compression ratio: nine real parameters in V_CKM (4 angles + 1 phase, with unitarity reducing the rank) compressed to four parameters (lambda, A, rho_bar, eta_bar) once the lambda^n hierarchy is recognised. A flavor mechanism passes by deriving the structure from a higher-level construct; it fails by having to put the hierarchy in by hand."
+  },
+  "primary_references": [
+    {
+      "citation": "Wolfenstein, 'Parametrization of the Kobayashi-Maskawa Matrix', PRL 51, 1945 (1983)",
+      "doi": "10.1103/PhysRevLett.51.1945"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics' - CKM section (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    }
+  ],
+  "tags": ["pattern_compression", "flavor", "ckm", "wolfenstein"]
+}

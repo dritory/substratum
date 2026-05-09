@@ -101,39 +101,16 @@
       "note": "Does not violate unitarity, causality, Lorentz invariance, the equivalence principle, or any gauge structure. The puzzle is one of UV-IR sensitivity inside QFT coupled to gravity, not of the principles themselves."
     }
   ],
-  "cosmology_context": {
-    "extension_classes": [
-      {
-        "name": "Anthropic landscape (string-theory multiverse)",
-        "effect": "Lambda is environmentally selected from a vast distribution of vacua; small positive values are anthropically required for galaxy formation (Weinberg's bound).",
-        "cost_elsewhere": "Sacrifices predictivity. The number of metastable vacua needed (~10^500) makes the framework difficult to falsify.",
-        "reference": "Weinberg, PRL 59, 2607 (1987); Bousso and Polchinski, JHEP 06, 006 (2000), arXiv:hep-th/0004134"
-      },
-      {
-        "name": "Unimodular gravity",
-        "effect": "Promotes Lambda to an integration constant of a constrained variational principle, so that vacuum-energy contributions do not source curvature.",
-        "cost_elsewhere": "Does not explain why the integration constant takes the meV^4 value; relabels the puzzle rather than resolving it.",
-        "reference": "Weinberg, RMP 61, 1 (1989), section IV"
-      },
-      {
-        "name": "Sequestering",
-        "effect": "Couples QFT vacuum energy to a global modulus that enforces cancellation against the historic average of trace contributions, separating 'particle physics' vacuum energy from 'gravitating' vacuum energy.",
-        "cost_elsewhere": "Requires global degrees of freedom and a specific cosmological history; predictions for late-time dynamics differ subtly from LambdaCDM and are testable in principle.",
-        "reference": "Kaloper and Padilla, PRL 112, 091304 (2014), arXiv:1309.6562"
-      },
-      {
-        "name": "Dynamical dark energy / quintessence (w_0-w_a)",
-        "effect": "Replaces a true constant with a slowly-evolving scalar field. DESI Y1 BAO + SN Ia data give a 2-3 sigma preference for w_0 > -1, w_a < 0.",
-        "cost_elsewhere": "Trades a single fine-tuning puzzle for a family of them: the field potential, initial conditions, and mass all need explanation. SN Ia systematics and supernova-sample choice (Pantheon+, Union3, DES-SN5YR) significantly affect the strength of the hint.",
-        "reference": "DESI Collaboration, 'DESI 2024 VI', arXiv:2404.03002"
-      },
-      {
-        "name": "Supersymmetry (broken)",
-        "effect": "Exact SUSY would cancel bosonic and fermionic vacuum-energy contributions. Broken SUSY at scale M_SUSY leaves a residual ~ M_SUSY^4.",
-        "cost_elsewhere": "Requires M_SUSY ~ meV to land at the observed Lambda; LHC null results push M_SUSY >~ TeV, so SUSY at any phenomenologically allowed scale leaves a ~10^60 residual."
-      }
-    ]
-  },
+  "mechanism_links": [
+    "anthropic_landscape",
+    "unimodular_gravity",
+    "sequestering",
+    "quintessence",
+    "mssm"
+  ],
+  "puzzle_links": [
+    "cosmological_constant_smallness"
+  ],
   "summary": "The observed value of the cosmological constant is enormously smaller than any natural scale in known physics. The 'factor of 10^120' often quoted is heuristic and cutoff-dependent; the substantive statement is that no UV completion of the Standard Model has cleanly explained why Lambda is positive and tiny without fine-tuning. As of 2024, DESI BAO + supernova combinations show a 2-3 sigma preference for time-evolving dark energy, which if confirmed would replace 'why is Lambda so small' with 'what dynamical field is driving acceleration'. Both versions of the question remain open.",
   "systematics_notes": "This is a theoretical/naturalness puzzle, so 'systematics' are different from an experimental entry. The naive estimate is sensitive to (a) the regularization scheme, (b) the assumed cutoff, (c) which fields are included, and (d) whether the underlying theory has a symmetry (such as supersymmetry) that protects the vacuum energy. For DESI's hint of evolving dark energy, systematic concerns include SN Ia calibration (e.g., the Pantheon+ vs Union3 vs DES-SN5YR samples give different w(z) preferences) and the BAO reconstruction.",
   "references": [

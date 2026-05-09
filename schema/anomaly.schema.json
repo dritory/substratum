@@ -205,7 +205,7 @@
     },
     "cosmology_context": {
       "type": "object",
-      "description": "Extension classes that move the needle on this tension, and what each costs elsewhere. Cosmology/astrophysics entries only.",
+      "description": "Extension classes that move the needle on this tension, and what each costs elsewhere. Cosmology/astrophysics entries only. Prefer mechanism_links at the top level for new entries; extension_classes is retained for entries whose extensions are not (yet) lifted into mechanisms/.",
       "properties": {
         "extension_classes": {
           "type": "array",
@@ -230,6 +230,16 @@
           }
         }
       }
+    },
+    "mechanism_links": {
+      "type": "array",
+      "description": "List of mechanisms/<id> entries that propose to address this tension/puzzle. Cross-checked by the validator.",
+      "items": { "type": "string" }
+    },
+    "puzzle_links": {
+      "type": "array",
+      "description": "List of puzzles/<id> entries that this data entry exemplifies. Cross-checked by the validator.",
+      "items": { "type": "string" }
     },
     "summary": {
       "type": "string",

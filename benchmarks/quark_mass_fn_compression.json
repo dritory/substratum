@@ -1,0 +1,86 @@
+{
+  "id": "quark_mass_fn_compression",
+  "name": "Quark mass spectrum: Froggatt-Nielsen compression",
+  "kind": "pattern_compression",
+  "requirement": "Any candidate flavor mechanism must reproduce the six quark masses (and ideally three charged-lepton masses) by compressing them into a small set of inputs. The Froggatt-Nielsen ansatz y_ij ~ epsilon^{q_i + q_j} with epsilon ~ 0.22 and integer left-handed/right-handed charges fits the observed Yukawa hierarchy at the order-of-magnitude level with a single continuous parameter epsilon and ~6 integer charges.",
+  "what_it_excludes": "A flavor mechanism that produces only flat or random Yukawa structure cannot reproduce the geometric hierarchy. A mechanism that introduces ~9 independent free parameters (one per Yukawa) achieves no compression; the benchmark scores it as a non-explanation.",
+  "regime": {
+    "energy_ev": 1.7e11,
+    "description": "Top-quark mass scale; Yukawas are run-dependent but the hierarchical structure is preserved across renormalization-group flow."
+  },
+  "procedural": {
+    "parameterization": {
+      "name": "Froggatt-Nielsen abelian flavor U(1)",
+      "reference": "Froggatt and Nielsen, Nucl. Phys. B 147, 277 (1979)",
+      "summary": "Each fermion carries an integer charge q_i under U(1)_FN. After the flavon picks up VEV <phi>/Lambda = epsilon, Yukawa couplings y_ij ~ epsilon^{|q_i + q_j|} arise from the leading allowed operator. Hierarchy is geometric in the integer charges."
+    },
+    "predicted_observable": "y_ii(M) ~ epsilon^{2 q_i} for diagonal Yukawas; off-diagonals follow from charge sums.",
+    "bound_in_parameterization": "epsilon ~ 0.22 (Cabibbo angle) with integer charges {q_Q1, q_Q2, q_Q3, q_u1, q_u2, q_u3, q_d1, q_d2, q_d3} chosen to reproduce y_t ~ 1, y_c ~ epsilon^4, y_u ~ epsilon^6-7, y_b ~ epsilon^3, y_s ~ epsilon^5, y_d ~ epsilon^7. Charge assignments are not unique but are highly constrained.",
+    "framework_inputs": [
+      "Predicted scale of expansion parameter epsilon",
+      "Predicted set of integer charges per fermion species",
+      "RG-running boundary conditions if Yukawas are predicted at a scale other than M_Z"
+    ],
+    "evaluator_status": "tractable",
+    "compression_ansatz": "y_ij(M_high) = c_ij * epsilon^{|q_Q_i + q_R_j|} with c_ij = O(1) coefficients and integer q_Q_i, q_R_j; running to M_Z reproduces the measured PDG masses to within factor-of-few.",
+    "target_data": [
+      {
+        "label": "y_u (up Yukawa at M_Z)",
+        "value": "1.2e-5",
+        "uncertainty": "5e-7",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "y_d (down Yukawa at M_Z)",
+        "value": "2.7e-5",
+        "uncertainty": "1e-6",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "y_s (strange Yukawa at M_Z)",
+        "value": "5.4e-4",
+        "uncertainty": "2e-5",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "y_c (charm Yukawa at M_Z)",
+        "value": "7.3e-3",
+        "uncertainty": "2e-4",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "y_b (bottom Yukawa at M_Z)",
+        "value": "2.4e-2",
+        "uncertainty": "1e-3",
+        "reference": "PDG 2024"
+      },
+      {
+        "label": "y_t (top Yukawa at M_Z)",
+        "value": "0.99",
+        "uncertainty": "0.01",
+        "reference": "PDG 2024"
+      }
+    ],
+    "free_parameters": [
+      "epsilon (one continuous; expected ~0.22)",
+      "{q_Q_i, q_u_i, q_d_i} (nine integers; constrained but not unique)",
+      "O(1) coefficients c_ij (treated as anarchic; nine moduli)"
+    ],
+    "notes": "Compression ratio: six measured masses + nine off-diagonal Yukawas reduced to one continuous parameter + ~9 integers + O(1) anarchic coefficients. Treat the integers as discrete data and the c_ij as not contributing to the explanation; the six logarithmic spreads then collapse to one (epsilon)."
+  },
+  "primary_references": [
+    {
+      "citation": "Froggatt and Nielsen, 'Hierarchy of quark masses, Cabibbo angles and CP violation', Nucl. Phys. B 147, 277 (1979)",
+      "doi": "10.1016/0550-3213(79)90316-X"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics' (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    },
+    {
+      "citation": "Leurer, Nir, Seiberg, 'Mass matrix models', Nucl. Phys. B 398, 319 (1993)",
+      "arxiv": "hep-ph/9212278"
+    }
+  ],
+  "tags": ["pattern_compression", "flavor", "froggatt_nielsen", "yukawa"]
+}

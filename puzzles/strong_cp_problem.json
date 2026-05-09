@@ -1,0 +1,39 @@
+{
+  "id": "strong_cp_problem",
+  "name": "Strong-CP problem",
+  "kind": "naturalness",
+  "summary": "QCD allows a CP-violating topological term theta * G G-tilde with a dimensionless coefficient theta that should naturally be O(1). Neutron-EDM bounds force |theta_eff| < ~10^-10. No SM mechanism enforces this smallness; theta receives independent contributions from the QCD vacuum angle and the quark-mass-matrix phase, with no symmetry tying them to cancel.",
+  "characteristic_numbers": [
+    {
+      "symbol": "theta_eff",
+      "value": "< 1e-10",
+      "expected": "O(1)",
+      "gap_log10": -10,
+      "note": "Bound from |d_n| < 1.8e-26 e cm (nEDM 2020). Natural expectation in the absence of a protective symmetry is theta ~ O(1)."
+    }
+  ],
+  "benchmark_links": ["strong_cp_theta_qcd", "neutron_electric_dipole_moment"],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Setting theta = 0 in the SM does not restore a symmetry once the quark mass matrix is complex; an axial U(1) rotates the phase between theta and the mass matrix without changing the physical theta_eff. Solving strong-CP requires either a new symmetry (PQ, parity, or CP), a special quark-mass structure (Nelson-Barr), or a vanishing up-quark mass (excluded by lattice)."
+    }
+  ],
+  "history": "QCD theta term recognized as physical after the U(1)_A puzzle was resolved by 't Hooft (1976). PQ axion proposed (Peccei-Wess 1977; Wilczek; Weinberg) as the dominant solution. Massless up quark (Kaplan-Manohar) ruled out by lattice ~2010. Nelson-Barr revived periodically. Parity-symmetric models (Babu-Mohapatra) remain alive.",
+  "references": [
+    {
+      "citation": "Peccei and Quinn, 'CP conservation in the presence of pseudoparticles', PRL 38, 1440 (1977)",
+      "doi": "10.1103/PhysRevLett.38.1440"
+    },
+    {
+      "citation": "'t Hooft, 'Symmetry breaking through Bell-Jackiw anomalies', PRL 37, 8 (1976)",
+      "doi": "10.1103/PhysRevLett.37.8"
+    },
+    {
+      "citation": "Abel et al. (nEDM), 'Measurement of the permanent electric dipole moment of the neutron', PRL 124, 081803 (2020)",
+      "arxiv": "2001.11966"
+    }
+  ],
+  "tags": ["naturalness", "qcd", "cp_violation", "topology"]
+}
