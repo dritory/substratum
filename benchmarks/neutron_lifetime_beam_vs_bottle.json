@@ -9,7 +9,7 @@
     "description": "Free neutron at rest; weak charged-current decay n -> p e nu_e."
   },
   "current_bound": {
-    "value": "tau_n^bottle = 877.75 +/- 0.28 +/- 0.16 s (UCNtau, 2021); tau_n^beam = 887.7 +/- 1.2 +/- 1.9 s (Yue et al. 2013)",
+    "value": "tau_n^bottle = 877.75 +/- 0.28 (stat) +0.22/-0.16 (syst) s (UCNtau, 2021); tau_n^beam = 887.7 +/- 1.2 +/- 1.9 s (Yue et al. 2013)",
     "uncertainty": null,
     "units": "seconds",
     "experiment": "UCNtau (LANL) for bottle; NIST trap for beam",

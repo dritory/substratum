@@ -21,7 +21,7 @@
   "procedural": {
     "parameterization": {
       "name": "Peskin-Takeuchi oblique parameters S, T, U from gauge-boson self-energy corrections; equivalently SMEFT operators O_HD (T), O_HWB (S), O_HWB + dimension-8 (U).",
-      "reference": "Peskin and Takeuchi, PRD 46, 381 (1992); Wells and Zhang, JHEP 04, 042 (2017), arXiv:1611.04484 (SMEFT translation).",
+      "reference": "Peskin and Takeuchi, PRD 46, 381 (1992); Wells and Zhang, 'Renormalization group evolution of the universal theories EFT', JHEP 06, 122 (2016), arXiv:1512.03056 (SMEFT translation).",
       "summary": "BSM heavy fields contribute through transverse vacuum polarizations of W, Z; reduced to three numbers in the leading-order universal-new-physics expansion."
     },
     "predicted_observable": "Pre-EWSB self-energy corrections to W, Z, photon, computed from new heavy-particle loops. Project onto S, T, U via standard formulas.",
@@ -38,8 +38,8 @@
       "doi": "10.1103/PhysRevD.46.381"
     },
     {
-      "citation": "Wells and Zhang, 'Renormalization group evolution of the universal theories EFT', JHEP 04, 042 (2017)",
-      "arxiv": "1611.04484"
+      "citation": "Wells and Zhang, 'Renormalization group evolution of the universal theories EFT', JHEP 06, 122 (2016)",
+      "arxiv": "1512.03056"
     },
     {
       "citation": "de Blas, Pierini, Reina, Silvestrini, 'Impact of the recent measurements of the top-quark and W-boson masses on electroweak precision fits', PRL 129, 271801 (2022)",
