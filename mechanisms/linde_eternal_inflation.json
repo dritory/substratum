@@ -1,0 +1,50 @@
+{
+  "id": "linde_eternal_inflation",
+  "name": "Linde eternal (chaotic) inflation",
+  "aliases": ["self-reproducing inflation", "stochastic eternal inflation"],
+  "type": "dynamical",
+  "summary": "Quantum fluctuations of the inflaton during chaotic inflation locally drive the inflaton field upward in some regions, where slow-roll inflation continues forever even as inflation ends elsewhere. Produces a fractal multiverse of bubble universes with different effective low-energy physics; provides the natural cosmological setting for the anthropic-landscape interpretation of the cosmological-constant problem.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Once inflation starts somewhere, eternal self-reproduction guarantees infinite inflating regions, making the 'why did inflation start' question less acute. The 'measure problem' (how to compute probabilities in an infinite multiverse) remains an active issue."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "Combined with a string-theory landscape, eternal inflation populates all metastable vacua, making anthropic selection (Weinberg's bound) operationally meaningful. Anthropic landscape requires eternal inflation to make sense as a probabilistic explanation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Builds on inflationary mechanism. New 'parameter' is the choice of measure for computing observer-weighted predictions in the infinite multiverse."
+  },
+  "structural_features": ["self_reproduction", "multiverse", "fractal_structure", "stochastic_inflation"],
+  "composes_with": ["chaotic_inflation", "new_inflation", "starobinsky_inflation", "anthropic_landscape", "heterotic_string_compactification"],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Linde (1986), 'Eternally existing self-reproducing chaotic inflationary universe', Phys. Lett. B 175, 395 — formalised stochastic eternal inflation in the chaotic inflation context. Vilenkin (1983) had earlier proposed eternal inflation in the new-inflation framework. Underlies most modern multiverse discussions.",
+  "references": [
+    {
+      "citation": "Linde, 'Eternally existing self-reproducing chaotic inflationary universe', Phys. Lett. B 175, 395 (1986)",
+      "doi": "10.1016/0370-2693(86)90611-8"
+    }
+  ],
+  "tags": ["inflation", "eternal_inflation", "multiverse", "self_reproduction"]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "f_r_modified_gravity",
+  "name": "f(R) modified gravity",
+  "aliases": ["fourth-order gravity", "Buchdahl-Starobinsky-style gravity"],
+  "type": "geometric",
+  "summary": "Replaces the Einstein-Hilbert action R with a general function f(R). Introduces an effective scalar degree of freedom (the 'scalaron') which can drive cosmic acceleration without a true cosmological constant. Specific functional forms (Hu-Sawicki, Starobinsky, Tsujikawa) reproduce LCDM at high redshift while modifying late-time dynamics. Cosmic-acceleration-driving f(R) is constrained by solar-system tests (chameleon screening) and by structure-growth measurements.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Replaces Lambda with the dynamics of the scalaron. Doesn't resolve the underlying smallness of the late-time acceleration scale; trades one fine-tuning for another. Late-time-acceleration variants are tightly constrained by RSD and ISW; LZ-friendly variants are even more restricted."
+    },
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Starobinsky inflation (R + R^2/M^2) is a special case of f(R) gravity that reproduces Planck observations excellently — one of the leading inflation models."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "near_bound",
+      "note": "Solar-system tests bound the scalaron-mediated fifth force; chameleon-screened f(R) variants survive. PPN gamma constraints from Cassini Shapiro delay restrict |f''(R)/f'(R)| at galactic scales."
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects",
+      "note": "Pure f(R) gravity does not change tensor mode propagation speed; consistent with c_GW = c."
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "predicts_signal",
+      "note": "f(R) modifies gravitational growth of structure; constraint sigma_8(z) from RSD constrains f(R) dark-energy-driving variants."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["effective scalaron from f(R) -> f'(R) Einstein-frame mapping"],
+    "new_scales": ["scalaron mass M ~ 10^-30 - 10^13 GeV depending on use case"],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Functional shape of f(R); typical late-DE models have 2-3 parameters (Hu-Sawicki uses 3)."
+  },
+  "structural_features": ["fourth_order_gravity", "scalaron", "no_lambda_term", "modified_friedmann"],
+  "composes_with": ["starobinsky_inflation"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Buchdahl (1970) introduced general f(R) gravity. Starobinsky (1980) used R + R^2 for inflation. Modern late-time-acceleration f(R) (Hu-Sawicki 2007, Starobinsky 2007, Tsujikawa 2008). Comprehensive review: Sotiriou and Faraoni (2010), 'f(R) theories of gravity', Rev. Mod. Phys. 82, 451, arXiv:0805.1726.",
+  "references": [
+    {
+      "citation": "Sotiriou and Faraoni, 'f(R) theories of gravity', Rev. Mod. Phys. 82, 451 (2010)",
+      "arxiv": "0805.1726"
+    }
+  ],
+  "tags": ["modified_gravity", "f_r", "scalaron", "fourth_order"]
+}

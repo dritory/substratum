@@ -1,0 +1,35 @@
+{
+  "id": "hartle_hawking_no_boundary",
+  "name": "Hartle-Hawking no-boundary proposal",
+  "aliases": ["no-boundary wave function", "Euclidean cosmology"],
+  "type": "geometric",
+  "summary": "The wave function of the universe is given by a path integral over compact, positive-definite Euclidean four-geometries that have the present three-geometry as their only boundary. Removes the need for a separately-specified initial condition by making the initial state computable from the Euclidean action of regular four-geometries. Predicts a specific (smooth, low-perturbation, inflationary) start of the universe.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Provides a definite boundary condition replacing arbitrary pre-inflationary initial conditions. Predicts that a smooth, inflationary universe is preferred. Vilenkin's tunneling proposal is the main competitor; the two give different probability distributions (Hartle-Hawking is more dispersed in field-theory-space; Vilenkin is more concentrated)."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Boundary-condition prescription on the wave function of the universe. No new fields or scales."
+  },
+  "structural_features": ["quantum_cosmology", "no_boundary", "euclidean_path_integral", "wave_function_universe"],
+  "composes_with": ["new_inflation", "starobinsky_inflation", "higgs_inflation"],
+  "excludes": ["vilenkin_tunneling_universe"],
+  "status": "niche",
+  "history": "Hartle and Hawking (1983), 'Wave function of the universe', Phys. Rev. D 28, 2960. Foundational for quantum cosmology; competing with Vilenkin's tunneling-from-nothing proposal. Modern Lorentzian-path-integral analyses (Feldbrugge-Lehners-Turok 2017) have challenged the original WKB prescription, sparking active controversy.",
+  "references": [
+    {
+      "citation": "Hartle and Hawking, 'Wave function of the universe', Phys. Rev. D 28, 2960 (1983)",
+      "doi": "10.1103/PhysRevD.28.2960"
+    }
+  ],
+  "tags": ["quantum_cosmology", "no_boundary", "wave_function", "initial_conditions"]
+}
