@@ -1,0 +1,59 @@
+{
+  "id": "higgs_mass_value",
+  "name": "Specific value of the Higgs mass",
+  "aliases": [
+    "m_H = 125 GeV puzzle",
+    "Higgs near-criticality"
+  ],
+  "kind": "coincidence",
+  "summary": "The Higgs boson mass m_H = 125.09 +/- 0.24 GeV (ATLAS+CMS 2015 combination) sits remarkably close to the boundary between absolute and metastable electroweak vacuum (Degrassi et al. 2012 give m_H_critical ~ 129 GeV for current m_top). This 'near-criticality' is an unexplained coincidence: either it points to a deep UV structure (asymptotic safety predicts a specific m_H, e.g., Shaposhnikov-Wetterich 2010), or to inflation-Higgs coupling, or it is anthropically selected.",
+  "characteristic_numbers": [
+    {
+      "symbol": "m_H (ATLAS+CMS 2015)",
+      "value": "125.09",
+      "uncertainty": "0.24",
+      "units": "GeV",
+      "expected": "no SM derivation",
+      "note": "Combined LHC Run-1 measurement to 0.2% precision; Run 2 + 3 are pinning down m_H further but the value remains a free SM parameter."
+    },
+    {
+      "symbol": "m_H_critical (NNLO)",
+      "value": "~129",
+      "expected": "if SM vacuum exactly critical",
+      "units": "GeV",
+      "note": "Boundary of absolute-stability region in (m_H, m_t) plane; observed m_H sits ~4 GeV below, in the metastable but not catastrophic regime."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "higgs_couplings_lhc"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "The 'near-critical' Higgs mass is a striking coincidence: m_H is close enough to the metastability boundary to be suspicious, but not exactly on it. Possible explanations: (a) asymptotic safety with specific boundary conditions at the Planck scale predicts m_H in this range; (b) Higgs-inflation viability requires near-criticality; (c) multiverse + Higgs-mediated vacuum-decay anthropic argument; (d) numerical accident."
+    }
+  ],
+  "history": "Higgs discovery: ATLAS PLB 716, 1 (2012), arXiv:1207.7214; CMS PLB 716, 30 (2012), arXiv:1207.7235. Combined mass: ATLAS+CMS PRL 114, 191803 (2015), arXiv:1503.07589. Near-criticality discussion: Buttazzo-Degrassi-Giardino-Giudice-Sala-Salvio-Strumia (2013), arXiv:1307.3536. Asymptotic-safety prediction (Shaposhnikov-Wetterich, PLB 683, 196 (2010), arXiv:0912.0208) preceded the discovery and got m_H within 1 GeV.",
+  "references": [
+    {
+      "citation": "ATLAS and CMS Collaborations, 'Combined measurement of the Higgs boson mass in pp collisions at sqrt(s)=7 and 8 TeV', Phys. Rev. Lett. 114, 191803 (2015)",
+      "arxiv": "1503.07589"
+    },
+    {
+      "citation": "Buttazzo, Degrassi, Giardino, Giudice, Sala, Salvio, Strumia, 'Investigating the near-criticality of the Higgs boson', JHEP 12, 089 (2013)",
+      "arxiv": "1307.3536"
+    },
+    {
+      "citation": "Shaposhnikov and Wetterich, 'Asymptotic safety of gravity and the Higgs boson mass', Phys. Lett. B 683, 196 (2010)",
+      "arxiv": "0912.0208"
+    }
+  ],
+  "tags": [
+    "coincidence",
+    "higgs",
+    "near_criticality",
+    "vacuum_stability"
+  ]
+}

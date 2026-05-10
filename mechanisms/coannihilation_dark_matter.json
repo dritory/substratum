@@ -1,0 +1,64 @@
+{
+  "id": "coannihilation_dark_matter",
+  "name": "Coannihilation dark matter",
+  "aliases": [
+    "Griest-Seckel coannihilation",
+    "near-degenerate-partner DM"
+  ],
+  "type": "dynamical",
+  "summary": "Thermal-relic dark matter whose abundance is determined not (or not solely) by chi-chi self-annihilation, but by the joint freeze-out of chi together with a slightly heavier partner X (with mass splitting Delta m / m ~ few percent) that co-annihilates more efficiently. The relic abundance is exponentially sensitive to Delta m. Mechanism resolves the tension between LZ constraints (which push sigma_chi_chi down) and the observed Omega_DM (which requires sigma_eff ~ pb).",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Reproduces Omega_DM h^2 ~ 0.12 for chi-X mass splittings ~ 5-15% even when direct chi-chi annihilation is below the standard WIMP cross-section. Major escape route from LZ exclusion for MSSM neutralino DM (bino-stop, bino-stau, bino-wino coannihilation regions remain alive)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "By construction allows arbitrarily low direct-detection cross-section while still saturating relic abundance via coannihilation; this is precisely the loophole that keeps MSSM neutralino DM alive."
+    },
+    {
+      "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
+      "effect": "respects",
+      "note": "Late-time annihilation can be suppressed: at v -> 0 only chi-chi contributes (X has decayed); indirect signal can be far below dwarf-galaxy bounds."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "mass splitting Delta m ~ 0.05 m_chi"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Builds on existing DM frameworks. New parameters: partner mass Delta m, partner-SM couplings."
+  },
+  "structural_features": [
+    "near_degenerate_partner",
+    "exponential_freeze_out_sensitivity",
+    "low_direct_detection_natural",
+    "lz_escape"
+  ],
+  "composes_with": [
+    "mssm",
+    "wimp_thermal_freezeout"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Griest and Seckel (1991), 'Three exceptions in the calculation of relic abundances', Phys. Rev. D 43, 3191 — established the framework. Extensively used in MSSM dark-matter phenomenology (Edsjo-Gondolo 1997; modern MicrOMEGAs / DarkSUSY codes implement coannihilation by default).",
+  "references": [
+    {
+      "citation": "Griest and Seckel, 'Three exceptions in the calculation of relic abundances', Phys. Rev. D 43, 3191 (1991)",
+      "doi": "10.1103/PhysRevD.43.3191"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "coannihilation",
+    "thermal_relic",
+    "mssm"
+  ]
+}

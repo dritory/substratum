@@ -1,0 +1,58 @@
+{
+  "id": "galactic_small_scale_structure",
+  "name": "Galactic small-scale structure challenges to LambdaCDM",
+  "aliases": [
+    "core-cusp problem",
+    "missing satellites problem",
+    "too-big-to-fail"
+  ],
+  "kind": "naturalness",
+  "summary": "Cold dark matter N-body simulations under LambdaCDM predict steep central density cusps (rho ~ r^-1) in dwarf galaxies, large numbers of low-mass satellite galaxies, and several massive subhalos that should host visible galaxies but do not. Observations show flat cores (rho ~ const) in dwarf rotation curves, far fewer satellites than predicted, and the most massive predicted subhalos appear to be empty ('too-big-to-fail'). Either baryonic feedback inside collisionless CDM resolves this, or DM has non-CDM properties (warm DM, self-interacting DM, fuzzy DM).",
+  "characteristic_numbers": [
+    {
+      "symbol": "central density slope",
+      "value": "observed ~ flat",
+      "expected": "CDM N-body predicts rho ~ r^-1 (NFW cusp)",
+      "note": "Local-Group dwarf rotation curves systematically flatter than CDM-only simulations; difference at 1-10 kpc scale."
+    },
+    {
+      "symbol": "satellite count (Milky Way)",
+      "value": "~50 known",
+      "expected": "CDM predicts ~500-1000 massive subhalos",
+      "note": "Pure-CDM simulations overpredict; ultra-faint dwarfs from DES and LSST are adding to count but not closing the gap."
+    },
+    {
+      "symbol": "TBTF massive subhalos missing",
+      "value": "~10 expected, ~3 observed",
+      "expected": "all 'too-big-to-fail' subhalos should host visible galaxies",
+      "note": "Massive subhalos around MW with V_max > 30 km/s should be hard to keep dark."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "sidm_self_interaction_clusters",
+    "dm_indirect_fermi_lat_dwarfs",
+    "lyman_alpha_forest_small_scale_power"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Possibilities: (a) baryonic feedback (SN-driven turbulence, AGN) flattens cusps and suppresses small galaxies in standard CDM - active area of simulation work; (b) DM is self-interacting at sigma/m ~ 0.1-1 cm^2/g (resolves all three); (c) DM is warm/fuzzy and suppresses small-scale power; (d) systematic in observations. Status: significantly relieved by improved feedback but not closed."
+    }
+  ],
+  "history": "Core-cusp: Flores-Primack (1994), Moore (1994). Missing satellites: Klypin-Kravtsov-Valenzuela-Prada (1999); Moore et al. (1999). Too-big-to-fail: Boylan-Kolchin-Bullock-Kaplinghat (2011). Comprehensive review: Bullock and Boylan-Kolchin (2017), 'Small-scale challenges to the LambdaCDM paradigm', Annu. Rev. Astron. Astrophys. 55, 343, arXiv:1707.04256.",
+  "references": [
+    {
+      "citation": "Bullock and Boylan-Kolchin, 'Small-scale challenges to the LambdaCDM paradigm', Annu. Rev. Astron. Astrophys. 55, 343 (2017)",
+      "arxiv": "1707.04256"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "dark_matter",
+    "galaxies",
+    "structure_formation",
+    "small_scale"
+  ]
+}

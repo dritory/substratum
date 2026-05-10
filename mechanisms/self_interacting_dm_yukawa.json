@@ -1,0 +1,85 @@
+{
+  "id": "self_interacting_dm_yukawa",
+  "name": "Self-interacting dark matter (Yukawa-mediator)",
+  "aliases": [
+    "SIDM with light mediator",
+    "Tulin-Yu SIDM"
+  ],
+  "type": "dynamical",
+  "summary": "Dark matter has sizable self-scattering through a light mediator (dark photon or dark Higgs), with cross-section sigma/m ~ 1 cm^2/g at dwarf-galaxy velocities decreasing to ~0.1 cm^2/g at cluster scales. The velocity-dependent cross-section comes from a Yukawa potential: Sommerfeld enhancement at low v, Born-regime suppression at high v. Resolves galactic small-scale-structure problems (core-cusp, missing satellites, too-big-to-fail) while respecting cluster-merger bounds.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "galactic_small_scale_structure",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "sigma/m ~ 0.5 - 5 cm^2/g at dwarf-galaxy velocities (10-100 km/s) thermalises DM in halo centres and produces flat-cored profiles. Sigma/m falls at cluster velocities (>1000 km/s) due to the Yukawa-mediator velocity dependence, satisfying Bullet Cluster bounds (sigma/m < 0.47 cm^2/g at v ~ 4000 km/s)."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Specifies the SIDM particle and its mediator; thermal-relic freeze-out fixes the abundance for a given mediator coupling. Connects DM physics to dark-photon / dark-Higgs hidden-sector phenomenology."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "sidm_self_interaction_clusters",
+      "effect": "near_bound",
+      "note": "Predicts sigma/m ~ 0.1-0.5 cm^2/g at cluster velocities, just below the Harvey-Massey-Kitching cluster-merger bound 0.47 cm^2/g. Velocity dependence is the key distinguishing prediction relative to constant-cross-section SIDM."
+    },
+    {
+      "benchmark_id": "bullet_cluster_lensing_offset",
+      "effect": "respects",
+      "note": "Velocity-suppressed cross-section at high relative velocities (v_rel ~ 4000 km/s in Bullet Cluster) saturates but doesn't violate the merger-offset bound."
+    },
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "predicts_signal",
+      "note": "If the mediator is a dark photon with SM kinetic mixing, predicts direct-detection and beam-dump signals correlated with the SIDM parameter region."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "DM particle chi",
+      "light mediator (dark photon or dark Higgs)"
+    ],
+    "new_scales": [
+      "m_chi ~ GeV - TeV",
+      "mediator mass m_phi ~ 1 - 100 MeV"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising chi"
+    ],
+    "new_parameters_count": 4,
+    "note": "DM mass, mediator mass, dark coupling, kinetic-mixing portal."
+  },
+  "structural_features": [
+    "self_interaction",
+    "yukawa_mediator",
+    "velocity_dependent_cross_section",
+    "sommerfeld_enhancement"
+  ],
+  "composes_with": [
+    "dark_photon_portal",
+    "wimp_thermal_freezeout"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Carlson-Machacek-Hall (1992), Spergel-Steinhardt (2000) first proposed self-interacting DM. Velocity-dependent Yukawa-mediator framework: Buckley-Fox (2010), Loeb-Weiner (2011). Comprehensive review: Tulin and Yu (2017), 'Dark matter self-interactions and small scale structure', Phys. Rep. 730, 1, arXiv:1705.02358.",
+  "references": [
+    {
+      "citation": "Tulin and Yu, 'Dark matter self-interactions and small scale structure', Phys. Rep. 730, 1 (2018)",
+      "arxiv": "1705.02358"
+    },
+    {
+      "citation": "Spergel and Steinhardt, 'Observational evidence for self-interacting cold dark matter', Phys. Rev. Lett. 84, 3760 (2000)",
+      "arxiv": "astro-ph/9909386"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "sidm",
+    "small_scale_structure",
+    "yukawa_mediator"
+  ]
+}

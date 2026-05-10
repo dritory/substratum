@@ -1,0 +1,60 @@
+{
+  "id": "dark_energy_evolution_hint",
+  "name": "Dark energy equation-of-state evolution (DESI hint)",
+  "aliases": [
+    "w(z) evolution",
+    "DESI evolving dark energy"
+  ],
+  "kind": "naturalness",
+  "summary": "DESI Year 1 BAO data combined with Type Ia supernovae and Planck CMB shows a ~2-4 sigma preference for time-evolving dark energy (w_0 > -1, w_a < 0 in the Chevallier-Polarski-Linder parameterisation) over the cosmological-constant null hypothesis w = -1. If real, dark energy is not a true constant Lambda but a dynamical scalar field whose effect grows then decreases - a striking deviation from LambdaCDM. Significance is sample-dependent (Pantheon+, Union3, DES-SN5YR give different preferences) and not yet confirmed.",
+  "characteristic_numbers": [
+    {
+      "symbol": "w_0 (DESI Y1 + Planck + Union3)",
+      "value": "-0.65",
+      "uncertainty": "0.11",
+      "expected": "-1 (Lambda)",
+      "note": "Most-significant SN sample combination (Union3 + DESI Y1 BAO + CMB)."
+    },
+    {
+      "symbol": "w_a (DESI Y1 + Planck + Union3)",
+      "value": "-1.27",
+      "uncertainty": "0.40",
+      "expected": "0 (Lambda)",
+      "note": "Time-evolution parameter. Preference for w_a < 0 is the new feature."
+    },
+    {
+      "symbol": "preference vs Lambda",
+      "value": "~2.5 - 3.8 sigma",
+      "expected": "0",
+      "note": "Sample-dependent: Pantheon+ ~2.5 sigma, Union3 ~3.5 sigma, DES-SN5YR ~3.9 sigma."
+    }
+  ],
+  "data_links": [
+    "cosmological_constant"
+  ],
+  "benchmark_links": [
+    "cmb_acoustic_peak_structure",
+    "large_scale_structure_galaxy_power_spectrum"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "If confirmed, ends the LambdaCDM era and replaces the cosmological-constant problem with a dynamical-DE problem. Quintessence, k-essence, DGP, holographic DE all become directly testable. The DESI hint will be tested by DESI-Y3 (2026), DES-Y6, Euclid, LSST/Rubin."
+    }
+  ],
+  "history": "DESI Collaboration (2024), 'DESI 2024 VI: Cosmological constraints from BAO measurements', JCAP 02, 021 (2025), arXiv:2404.03002. DESI 2024 IV (DESI Collaboration, arXiv:2404.03000) is the BAO measurement paper. SNe systematic-induced variation explored in Notari-Redi-Tesi (2024), arXiv:2406.08459 and many follow-ups. Active controversy; will be resolved by DESI-Y3.",
+  "references": [
+    {
+      "citation": "DESI Collaboration, 'DESI 2024 VI: Cosmological constraints from BAO measurements', JCAP 02, 021 (2025)",
+      "arxiv": "2404.03002"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "dark_energy",
+    "w_0_w_a",
+    "DESI",
+    "data_tension"
+  ]
+}

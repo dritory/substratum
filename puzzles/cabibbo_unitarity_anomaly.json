@@ -1,0 +1,49 @@
+{
+  "id": "cabibbo_unitarity_anomaly",
+  "name": "Cabibbo-angle / first-row CKM unitarity anomaly",
+  "aliases": [
+    "V_us vs V_ud tension",
+    "first-row CKM tension",
+    "Cabibbo anomaly"
+  ],
+  "kind": "naturalness",
+  "summary": "The first-row CKM unitarity test |V_ud|^2 + |V_us|^2 + |V_ub|^2 = 1 currently shows a ~3 sigma deficit when V_ud is extracted from superallowed nuclear beta decays and V_us from kaon semileptonic decays. The tension was sharpened post-2018 by improvements in nuclear inner radiative corrections (Seng-Gorchtein-Patel-Ramsey-Musolf 2018, arXiv:1807.10197). Either there is undiscovered new physics in beta decays (lepton-universality violation, right-handed currents) or systematic effects in V_ud / V_us extraction remain.",
+  "characteristic_numbers": [
+    {
+      "symbol": "|V_ud|^2 + |V_us|^2 + |V_ub|^2 - 1",
+      "value": "-0.0017",
+      "uncertainty": "0.0005",
+      "expected": "0",
+      "note": "Roughly 3-3.5 sigma deficit using superallowed V_ud and K_l3 V_us. Treatment of nuclear corrections (Seng et al. radiative corrections, structure-dependent) determines significance."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "cabibbo_angle_anomaly"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "If real, points to ~10^-3 - 10^-4 corrections to charged-current weak interaction, possibly from vector-like quarks, W' bosons, or right-handed currents. New-physics scales >~ 10 TeV typically needed."
+    }
+  ],
+  "history": "Long history of <2 sigma tensions; sharpened post-2018 with improved nuclear corrections (Seng-Gorchtein-Patel-Ramsey-Musolf, arXiv:1807.10197). Crivellin-Hoferichter program (arXiv:2002.07184 onward) treats it systematically as a global SMEFT-fit anomaly. Crivellin-Hoferichter 'Explaining the Cabibbo angle anomaly' (arXiv:2111.04519) and SMEFT global fits (Cirigliano-Crivellin-Hoferichter-Moulson 2022, arXiv:2208.11707) constrain new physics.",
+  "references": [
+    {
+      "citation": "Seng, Gorchtein, Patel, Ramsey-Musolf, 'Reduced hadronic uncertainty in the determination of V_ud', Phys. Rev. Lett. 121, 241804 (2018)",
+      "arxiv": "1807.10197"
+    },
+    {
+      "citation": "Crivellin and Hoferichter, 'Beta decays as sensitive probes of lepton flavor universality', Phys. Rev. Lett. 125, 111801 (2020)",
+      "arxiv": "2002.07184"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "ckm_unitarity",
+    "weak_interaction",
+    "data_tension",
+    "lepton_universality"
+  ]
+}

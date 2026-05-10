@@ -1,0 +1,86 @@
+{
+  "id": "nmssm",
+  "name": "Next-to-Minimal Supersymmetric Standard Model (NMSSM)",
+  "aliases": [
+    "NMSSM",
+    "MSSM + singlet"
+  ],
+  "type": "symmetry",
+  "summary": "Adds a gauge-singlet superfield S to the MSSM whose VEV dynamically generates the mu-term (Higgs-Higgsino mixing) via mu_eff = lambda <S>. Solves the MSSM mu-problem (why is the supersymmetric mu parameter at the EW scale, not Planck?), relaxes the LEP-tension upper bound on the Higgs mass at tree level (m_h up to ~ 130 GeV), and provides a richer Higgs sector including singlet-doublet mixing. The simplest viable extension of the MSSM.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Builds on MSSM SUSY-protection of the Higgs mass while relaxing the LEP-imposed fine-tuning. Larger tree-level Higgs mass means less radiative-correction fine-tuning needed to reach 125 GeV; viable parameter space sits at lower fine-tuning than vanilla MSSM."
+    },
+    {
+      "puzzle_id": "higgs_mass_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Singlet-doublet mixing pushes tree-level m_h up to ~130 GeV (vs MSSM bound m_h < 125 GeV at tree level); 125 GeV is easily accommodated with modest stop masses."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Singlino-dominated neutralino DM evades LZ bounds more easily than bino-dominated MSSM DM; viable parameter space remains for thermal-relic singlino."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Singlet-doublet Higgs mixing produces O(few %) deviations from SM couplings; HL-LHC will pin down or exclude."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "Singlino LSP has gauge couplings only through small mixing with binos/winos; SI cross-section suppressed below LZ."
+    },
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "predicts_signal",
+      "note": "Light singlino-Higgsino with light sleptons can fit (g-2)_mu in parts of parameter space, more easily than vanilla MSSM."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "singlet superfield S (chiral)"
+    ],
+    "new_scales": [
+      "<S> ~ EW (so mu_eff = lambda <S> ~ EW)"
+    ],
+    "new_symmetries": [
+      "Z_3 (in Z_3-invariant NMSSM)"
+    ],
+    "new_parameters_count": 6,
+    "note": "Builds on MSSM. New parameters: lambda, kappa (singlet self-coupling), A_lambda, A_kappa, mass <S>, scalar phase."
+  },
+  "structural_features": [
+    "extra_singlet",
+    "dynamical_mu",
+    "extended_higgs_sector",
+    "singlino_lsp"
+  ],
+  "composes_with": [
+    "mssm",
+    "wess_zumino_supersymmetry",
+    "dynamical_susy_breaking"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Originated with Fayet (1975), 'Supergauge invariant extension of the Higgs mechanism and a model for the electron and its neutrino', Nucl. Phys. B 90, 104 (singlet introduction). Modern NMSSM developed through 1990s-2000s. Comprehensive review: Ellwanger, Hugonie, Teixeira (2010), 'The next-to-minimal supersymmetric Standard Model', Phys. Rep. 496, 1, arXiv:0910.1785. Among the leading post-LHC SUSY candidates due to its relaxed Higgs-mass tuning.",
+  "references": [
+    {
+      "citation": "Ellwanger, Hugonie, Teixeira, 'The next-to-minimal supersymmetric Standard Model', Phys. Rep. 496, 1 (2010)",
+      "arxiv": "0910.1785"
+    }
+  ],
+  "tags": [
+    "supersymmetry",
+    "nmssm",
+    "extra_singlet",
+    "mu_problem"
+  ]
+}
