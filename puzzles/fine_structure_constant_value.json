@@ -1,0 +1,50 @@
+{
+  "id": "fine_structure_constant_value",
+  "name": "Value of the fine-structure constant",
+  "aliases": [
+    "alpha 1/137",
+    "Eddington fine-structure constant"
+  ],
+  "kind": "naturalness",
+  "summary": "The fine-structure constant alpha = e^2 / (4 pi epsilon_0 hbar c) ~ 1/137.036 has a specific numerical value that is, in the SM + GR framework, simply a free parameter without explanation. Eddington's 1929 attempt to derive 1/137 from pure number theory was a notable failure; modern attempts (string-landscape, anthropic) replace derivation with selection. The puzzle is whether alpha is a derivable constant or an environmental input.",
+  "characteristic_numbers": [
+    {
+      "symbol": "alpha (CODATA 2022)",
+      "value": "0.0072973525693",
+      "expected": "no SM derivation",
+      "note": "Equivalent to alpha^-1 = 137.035999084. Measured to ~ 10^-10 precision via Cs-fountain and Rb-fountain atom interferometry."
+    },
+    {
+      "symbol": "alpha at high scale",
+      "value": "1/127 at M_Z (running)",
+      "expected": "M_GUT unification with alpha_strong, alpha_weak",
+      "note": "Running of alpha brings it close to alpha_2 and alpha_3 near the GUT scale; the unified alpha_GUT ~ 1/24 has no first-principles derivation either."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "alpha_variation_atomic_clocks",
+    "electron_g_minus_2_precision"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "alpha is technically natural (small relative to 1, no symmetry argument needed), but the specific value has no derivation. Anthropic arguments (Davies, Barrow-Tipler) suggest a window |alpha - 1/137| / alpha < few % is required for complex chemistry; this is an upper bound on tuning, not a derivation. String landscape replaces 'why this value' with 'this is the value the multiverse selects in our patch'."
+    }
+  ],
+  "history": "Eddington (1929) attempted derivation from group theory and degrees of freedom; widely viewed as numerology after his failed 1/136 prediction. Modern variation bounds (Webb et al. 2001, 2011 on quasar absorbers; atomic-clock comparisons) constrain delta alpha / alpha < 10^-7 over the age of the universe.",
+  "references": [
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics' - Physical Constants section, Prog. Theor. Exp. Phys. 2024, 083C01 (2024)",
+      "doi": "10.1093/ptep/ptae163",
+      "url": "https://pdg.lbl.gov/"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "fundamental_constants",
+    "alpha",
+    "anthropic"
+  ]
+}

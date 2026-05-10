@@ -1,0 +1,56 @@
+{
+  "id": "string_landscape_predictivity",
+  "name": "String landscape predictivity",
+  "aliases": [
+    "10^500 vacua problem",
+    "landscape vs swampland"
+  ],
+  "kind": "consistency",
+  "summary": "Flux compactifications of string theory (KKLT, Bousso-Polchinski) give an exponentially-large number of metastable vacua (~10^500 estimated for type IIB), spanning an effectively continuous range of low-energy physics. If the landscape is real and selection is anthropic + multiverse, almost any low-energy parameter combination consistent with our existence is selectable. This raises the meta-puzzle of whether string theory is meaningfully predictive in the low-energy regime, or only constrains the boundary between landscape and 'swampland' (theories not arising from any consistent UV completion).",
+  "characteristic_numbers": [
+    {
+      "symbol": "N_vacua (typical estimate)",
+      "value": "~10^500",
+      "expected": "few or unique vacuum",
+      "note": "Bousso-Polchinski (2000) flux-vacuum counting with O(100) fluxes; Douglas (2003) statistical estimates. Specific number is highly uncertain but the magnitude is robust."
+    },
+    {
+      "symbol": "ratio Lambda_observed / Lambda_landscape-typical",
+      "value": "~10^-122",
+      "expected": "anthropic narrow window of ~10^-90 - 10^-120",
+      "note": "Landscape Lambda values are quasi-uniformly distributed; observed value is in the anthropic window for galaxy formation but special even within that window."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "If the landscape is real, naturalness becomes a statement about the prior distribution + anthropic weighting, not about Lagrangian symmetries. Swampland conjectures (Vafa 2005; Obied-Ooguri-Spodyneiko-Vafa 2018) attempt to constrain which EFTs lift to UV-complete string vacua, recovering some predictive content."
+    }
+  ],
+  "history": "Bousso and Polchinski (2000), 'Quantization of four-form fluxes and dynamical neutralization of the cosmological constant', JHEP 06, 006, arXiv:hep-th/0004134 — first quantitative landscape estimate. Susskind (2003), 'The anthropic landscape of string theory', arXiv:hep-th/0302219 — coined 'landscape'. Vafa (2005), 'The string landscape and the swampland', arXiv:hep-th/0509212 — introduced swampland program. Active controversy about whether the landscape is well-defined.",
+  "references": [
+    {
+      "citation": "Bousso and Polchinski, 'Quantization of four-form fluxes and dynamical neutralization of the cosmological constant', JHEP 06, 006 (2000)",
+      "arxiv": "hep-th/0004134"
+    },
+    {
+      "citation": "Susskind, 'The anthropic landscape of string theory' (2003)",
+      "arxiv": "hep-th/0302219"
+    },
+    {
+      "citation": "Vafa, 'The string landscape and the swampland' (2005)",
+      "arxiv": "hep-th/0509212"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "string_theory",
+    "landscape",
+    "swampland",
+    "predictivity",
+    "meta_puzzle"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "three_three_one_model",
+  "name": "3-3-1 model (SU(3)_C x SU(3)_L x U(1)_X)",
+  "aliases": [
+    "Pisano-Pleitez-Frampton",
+    "331 electroweak extension"
+  ],
+  "type": "uv_completion",
+  "summary": "Extends the SM weak-isospin SU(2)_L to SU(3)_L, with a TeV-scale U(1)_X factor, producing an electroweak gauge group SU(3)_C x SU(3)_L x U(1)_X that breaks to SM near the TeV scale. Fermions are arranged in triplets/anti-triplets; anomaly cancellation requires exactly three generations (proportional to colour). Provides a 'why three families' answer at the cost of a richer Higgs and gauge sector.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "three_generations_problem",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Anomaly cancellation in SU(3)_L x U(1)_X is non-trivial: each lepton generation contributes a triangle anomaly that is cancelled only by an integer number of quark generations equal to the number of colours (3). Forces N_gen = 3 exactly. Among the few known mechanisms that derive 3 from anomaly consistency."
+    },
+    {
+      "puzzle_id": "fermion_chirality_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Embeds chiral structure naturally; the SU(3)_L assignment is forced by anomaly cancellation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "electroweak_oblique_s_t_u",
+      "effect": "near_bound",
+      "note": "TeV-scale Z' and exotic doubly-charged gauge bosons contribute to S, T at observable levels; current EW precision pushes M_Z' > ~3-4 TeV."
+    },
+    {
+      "benchmark_id": "meson_mixing_d_k",
+      "effect": "near_bound",
+      "note": "Z' tree-level FCNCs from non-universal flavour assignments; K-Kbar and B-Bbar bounds constrain TeV-scale 331 implementations."
+    },
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "predicts_signal",
+      "note": "Doubly-charged scalar and exotic-quark loops contribute to (g-2)_mu; 331 model can fit FNAL+BNL anomaly in part of parameter space."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "exotic-charge gauge bosons (V, Y, doubly-charged)",
+      "vector-like exotic quarks T, D, S",
+      "extended Higgs (3-4 triplets)"
+    ],
+    "new_scales": [
+      "SU(3)_L breaking scale ~ TeV - 10 TeV"
+    ],
+    "new_symmetries": [
+      "SU(3)_L x U(1)_X gauge"
+    ],
+    "new_parameters_count": 8,
+    "note": "Gauge couplings, Higgs sector parameters, exotic Yukawa structure, breaking scale."
+  },
+  "structural_features": [
+    "extended_electroweak",
+    "anomaly_forces_three_generations",
+    "vector_like_exotics",
+    "doubly_charged_gauge"
+  ],
+  "composes_with": [
+    "froggatt_nielsen",
+    "seesaw_type_i"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Pisano and Pleitez (1992), 'SU(3) x U(1) model for electroweak interactions', Phys. Rev. D 46, 410. Frampton (1992, PRL 69, 2889) independently. Active variant model-building 2010s-2020s especially in connection with B-anomalies and (g-2)_mu.",
+  "references": [
+    {
+      "citation": "Pisano and Pleitez, 'SU(3) x U(1) model for electroweak interactions', Phys. Rev. D 46, 410 (1992)",
+      "doi": "10.1103/PhysRevD.46.410"
+    },
+    {
+      "citation": "Frampton, 'Chiral dilepton model and the flavor question', Phys. Rev. Lett. 69, 2889 (1992)",
+      "doi": "10.1103/PhysRevLett.69.2889"
+    }
+  ],
+  "tags": [
+    "electroweak_extension",
+    "331",
+    "three_generations",
+    "anomaly_cancellation"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "neutron_lifetime_anomaly",
+  "name": "Neutron lifetime anomaly (beam vs bottle)",
+  "aliases": [
+    "tau_n discrepancy",
+    "neutron beta-decay puzzle"
+  ],
+  "kind": "naturalness",
+  "summary": "Two methods of measuring the free-neutron lifetime give discrepant results at ~4 sigma: 'bottle' experiments confine ultracold neutrons and count survivors (tau_bottle ~ 877.75 +/- 0.28 s), while 'beam' experiments measure decay-product protons in a cold-neutron beam (tau_beam ~ 887.7 +/- 2.2 s). The 10 s gap could indicate either a systematic in one method (most likely beam, due to undercounted final-state protons), an exotic decay channel n -> dark + gamma at the few-permil level, or new physics in beta-decay matrix elements.",
+  "characteristic_numbers": [
+    {
+      "symbol": "tau_bottle (UCNtau, 2021)",
+      "value": "877.75",
+      "uncertainty": "0.28",
+      "units": "s",
+      "expected": "matches beam method",
+      "note": "Latest precision UCN-bottle measurement (Gonzalez et al. 2021)."
+    },
+    {
+      "symbol": "tau_beam (NIST, 2013)",
+      "value": "887.7",
+      "uncertainty": "2.2",
+      "units": "s",
+      "expected": "matches bottle method",
+      "note": "Yue et al. 2013, PRL 111, 222501."
+    },
+    {
+      "symbol": "Delta tau / tau",
+      "value": "~ 10/880 ~ 1.1%",
+      "expected": "0",
+      "note": "Discrepancy at ~4 sigma; if bottle is correct and beam is missing protons, exotic channel BR ~ 1% at Delta E ~ 1 MeV."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "neutron_lifetime_beam_vs_bottle",
+    "nucleon_axial_charge_g_a"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "If interpreted as beta-decay BR shift, would imply new V-A or scalar/tensor currents at 10^-3 level - but other measurements (cabibbo unitarity, R(D)) bound such couplings tightly. More plausibly a systematic; also interesting as a constraint on dark-decay channels n -> chi + photon."
+    }
+  ],
+  "history": "Discrepancy emerged in the 2010s as bottle experiments became more precise. Czarnecki, Marciano, Sirlin (2018, arXiv:1802.01804) systematic review. Fornal-Grinstein (2018, PRL 120, 191801) proposed n -> chi gamma exotic channel. Active experimental program: UCNtau (LANL), magneto-gravitational traps, cold-neutron beam at NIST.",
+  "references": [
+    {
+      "citation": "Czarnecki, Marciano, Sirlin, 'Neutron lifetime and axial coupling connection', PRL 120, 202002 (2018)",
+      "arxiv": "1802.01804"
+    },
+    {
+      "citation": "Fornal and Grinstein, 'Dark matter interpretation of the neutron decay anomaly', Phys. Rev. Lett. 120, 191801 (2018)",
+      "arxiv": "1801.01124"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "neutron",
+    "beta_decay",
+    "data_tension"
+  ]
+}

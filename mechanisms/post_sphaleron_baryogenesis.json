@@ -1,0 +1,72 @@
+{
+  "id": "post_sphaleron_baryogenesis",
+  "name": "Post-sphaleron baryogenesis",
+  "aliases": [
+    "Babu-Mohapatra PSB",
+    "low-temperature baryogenesis with B-violation"
+  ],
+  "type": "dynamical",
+  "summary": "Generates the baryon asymmetry below the electroweak phase transition (T < T_EWPT ~ 100 GeV), after sphaleron processes have decoupled, by direct out-of-equilibrium decays of a TeV-scale baryon-number-violating singlet scalar. Connects to neutron-antineutron oscillations (Delta B = 2) and color-sextet scalar phenomenology. Provides a leptogenesis-independent route to BAU testable at LHC and via n-nbar searches.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 6e-10 with a TeV-scale singlet decaying to color-sextet diquarks. Generates Delta B = 2 operators that drive observable n-nbar oscillations - directly testable at upcoming European Spallation Source NNBAR and tests at PSI."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "respects",
+      "note": "Mechanism requires Delta B = 2 (not Delta B = 1) operators, suppressing proton decay relative to n-nbar oscillation. Consistent with Super-K p-decay bounds while predicting accessible n-nbar."
+    },
+    {
+      "benchmark_id": "neutron_lifetime_beam_vs_bottle",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "TeV-scale B-violating singlet scalar",
+      "color-sextet diquark scalars"
+    ],
+    "new_scales": [
+      "M_singlet ~ TeV"
+    ],
+    "new_symmetries": [
+      "global B (broken explicitly)"
+    ],
+    "new_parameters_count": 4,
+    "note": "Singlet mass, Yukawa couplings, CP phases, color-sextet mass."
+  },
+  "structural_features": [
+    "post_ewpt_baryogenesis",
+    "delta_b_equals_2",
+    "color_sextet_diquark",
+    "n_nbar_signal"
+  ],
+  "composes_with": [
+    "pati_salam",
+    "so10_gut"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Babu and Mohapatra (2006), 'Post-sphaleron baryogenesis', Phys. Rev. Lett. 97, 131301, arXiv:hep-ph/0606144. Refined upper bound on n-nbar oscillation time: Babu-Dev-Mohapatra (2013), 'Post-sphaleron baryogenesis and an upper limit on the neutron-antineutron oscillation time', Phys. Rev. D 87, 115019, arXiv:1303.6918. ESS NNBAR experiment (2025+) directly tests the prediction.",
+  "references": [
+    {
+      "citation": "Babu and Mohapatra, 'Post-sphaleron baryogenesis', Phys. Rev. Lett. 97, 131301 (2006)",
+      "arxiv": "hep-ph/0606144"
+    },
+    {
+      "citation": "Babu, Dev, Mohapatra, 'Post-sphaleron baryogenesis and an upper limit on the neutron-antineutron oscillation time', Phys. Rev. D 87, 115019 (2013)",
+      "arxiv": "1303.6918"
+    }
+  ],
+  "tags": [
+    "baryogenesis",
+    "n_nbar_oscillation",
+    "post_sphaleron",
+    "color_sextet"
+  ]
+}

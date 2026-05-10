@@ -1,0 +1,58 @@
+{
+  "id": "bohmian_mechanics",
+  "name": "Bohmian mechanics (pilot-wave theory)",
+  "aliases": [
+    "de Broglie-Bohm theory",
+    "pilot-wave interpretation",
+    "hidden-variable QM"
+  ],
+  "type": "dynamical",
+  "summary": "Augments the wave function psi with definite particle positions Q evolving via a guidance equation dQ/dt = (hbar/m) Im(grad psi / psi). The wave function evolves unitarily by Schrodinger; particles always have definite positions. Reproduces standard quantum predictions (including Bell-inequality violations, by being explicitly non-local). Avoids the measurement problem because positions are always definite.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "quantum_measurement_problem",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Particle positions are always definite, so 'measurement' just reveals pre-existing values. Non-locality is explicit (guidance depends on positions of all particles instantaneously) but reproduces all standard QM predictions. Faces difficulties extending to relativistic QFT and to spin/identical-particle systems."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "definite particle positions Q (in addition to wave function)"
+    ],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "Adds the position trajectories as ontology beyond standard QM but requires no new free parameters."
+  },
+  "structural_features": [
+    "definite_positions",
+    "explicit_non_locality",
+    "guidance_equation",
+    "no_collapse"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "many_worlds_everett"
+  ],
+  "status": "niche",
+  "history": "Bohm (1952), 'A suggested interpretation of the quantum theory in terms of \"hidden\" variables', Phys. Rev. 85, 166 and 180. Predates Bell's theorem (1964); Bell explicitly cites Bohm as motivation. Continues active development in foundations community; relativistic generalisations (Durr-Goldstein-Tumulka-Zanghi 2014) ongoing.",
+  "references": [
+    {
+      "citation": "Bohm, 'A suggested interpretation of the quantum theory in terms of \"hidden\" variables. I', Phys. Rev. 85, 166 (1952)",
+      "doi": "10.1103/PhysRev.85.166"
+    },
+    {
+      "citation": "Bohm, 'A suggested interpretation of the quantum theory in terms of \"hidden\" variables. II', Phys. Rev. 85, 180 (1952)",
+      "doi": "10.1103/PhysRev.85.180"
+    }
+  ],
+  "tags": [
+    "quantum_foundations",
+    "bohmian",
+    "pilot_wave",
+    "hidden_variables",
+    "interpretation"
+  ]
+}
