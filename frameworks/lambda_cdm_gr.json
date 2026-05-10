@@ -133,5 +133,6 @@
       "reference": "Particle Data Group, 'Neutrino Properties' review, Phys. Rev. D 110, 030001 (2024)"
     }
   },
+  "composes_mechanisms": [],
   "tags": ["baseline", "concordance", "gr", "standard_model", "lambda_cdm"]
 }

@@ -1,0 +1,50 @@
+{
+  "id": "wimp_thermal_freezeout",
+  "name": "Thermal WIMP freeze-out",
+  "aliases": ["WIMP miracle"],
+  "type": "dynamical",
+  "summary": "A weakly interacting massive particle in thermal equilibrium with the early universe annihilates via electroweak-strength couplings; equilibrium freezes out when annihilation rate falls below Hubble rate. For sigma_v ~ 3e-26 cm^3/s and m_X ~ 100 GeV - few TeV, the relic abundance lands on the observed Omega_DM h^2 ~ 0.12 (the 'WIMP miracle').",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "The WIMP miracle is a numerical coincidence; many BSM frameworks (MSSM, composite Higgs, IDM) produce viable WIMP DM candidates. Direct-detection nulls (LZ, XENONnT) have squeezed canonical thermal WIMP parameter space, especially for spin-independent cross-sections."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "Spin-independent cross-section for ~30 GeV WIMP bounded < 2e-47 cm^2; vanilla thermal Higgs-portal WIMPs largely excluded."
+    },
+    {
+      "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
+      "effect": "near_bound",
+      "note": "Fermi dwarf-galaxy bounds rule out thermal WIMPs below ~100 GeV in s-wave annihilation channels."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["WIMP X (specific identity model-dependent: neutralino, scalar singlet, vector-like fermion)"],
+    "new_scales": ["m_X ~ 10 GeV - few TeV"],
+    "new_symmetries": ["stabilising Z_2 (R-parity, dark parity) or accidental"],
+    "new_parameters_count": 3,
+    "note": "Mass, coupling, and stabilisation; specific UV completions add more."
+  },
+  "structural_features": ["thermal_equilibrium", "freeze_out", "z2_stabilisation", "weak_scale"],
+  "composes_with": ["mssm", "twin_higgs", "composite_higgs"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Lee-Weinberg bound (1977); 'WIMP miracle' nomenclature in 1990s. Dominant DM paradigm 1990s-2010s; LHC and direct-detection nulls have shifted attention to lighter (sub-GeV) and ultralight DM.",
+  "references": [
+    {
+      "citation": "Lee and Weinberg, 'Cosmological lower bound on heavy-neutrino masses', PRL 39, 165 (1977)",
+      "doi": "10.1103/PhysRevLett.39.165"
+    },
+    {
+      "citation": "Bertone, Hooper, Silk, 'Particle dark matter: evidence, candidates and constraints', Phys. Rep. 405, 279 (2005)",
+      "arxiv": "hep-ph/0404175"
+    }
+  ],
+  "tags": ["dark_matter", "wimp", "thermal_freezeout"]
+}

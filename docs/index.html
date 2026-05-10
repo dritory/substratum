@@ -22,7 +22,8 @@
     <nav class="counts" aria-label="catalog size">
       <span><b id="count-tensions">…</b><small>open tensions</small></span>
       <span><b id="count-benchmarks">…</b><small>benchmark constraints</small></span>
-      <span><b id="count-domains">…</b><small>domains</small></span>
+      <span><b id="count-puzzles">…</b><small>puzzles</small></span>
+      <span><b id="count-mechanisms">…</b><small>mechanisms</small></span>
     </nav>
   </div>
 </header>
@@ -31,6 +32,7 @@
   <button role="tab" data-view="tensions" class="tab active">Tensions over time</button>
   <button role="tab" data-view="landscape" class="tab">Length–energy landscape</button>
   <button role="tab" data-view="benchmarks" class="tab">Benchmark catalog</button>
+  <button role="tab" data-view="dotalign" class="tab">Dot alignment</button>
   <button role="tab" data-view="browse" class="tab">Browse all</button>
 </nav>
 
@@ -80,6 +82,41 @@
       <div id="chart-bench-kind" class="chart"></div>
       <div id="chart-bench-evaluator" class="chart"></div>
     </div>
+  </section>
+
+  <section id="view-dotalign" class="view" hidden>
+    <header class="view-head">
+      <h2>Puzzles ↔ mechanisms — bipartite alignment</h2>
+      <p>Naturalness puzzles on the left; proposed mechanisms on the right.
+         Each line is a claim that a mechanism addresses a puzzle. Line color
+         encodes the role (<span style="color:#6dc197">solves</span> /
+         <span style="color:#7fb1e1">explains pattern</span> /
+         <span style="color:#e0a04a">ameliorates</span> /
+         <span style="color:#9ea3b3">requires</span>); opacity follows the
+         confidence label. Marker size on each side is the node's degree —
+         large puzzles are convergent battlegrounds, large mechanisms are
+         dot-aligning candidates worth taking seriously.</p>
+    </header>
+    <div id="chart-bipartite" class="chart very-tall"></div>
+
+    <header class="view-head" style="margin-top:2rem;">
+      <h2>Compression scores</h2>
+      <p>For each mechanism: <code>compression = (puzzles closed) / (free
+         parameters introduced)</code>. Higher is better — a mechanism that
+         closes many puzzles with few new parameters is more compressive,
+         the operational form of "explains everything AND simplifies."
+         Bar color shows mechanism type; markers flag mainstream/niche
+         status.</p>
+    </header>
+    <div id="chart-compression" class="chart tall"></div>
+
+    <header class="view-head" style="margin-top:2rem;">
+      <h2>Convergent puzzles</h2>
+      <p>How many distinct mechanisms claim each puzzle. High-degree puzzles
+         are the active battlegrounds where compression-superior proposals
+         would carry strong evidential weight.</p>
+    </header>
+    <div id="chart-convergent" class="chart"></div>
   </section>
 
   <section id="view-browse" class="view" hidden>

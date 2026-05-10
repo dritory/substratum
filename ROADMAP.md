@@ -25,7 +25,7 @@ problems.
 
 ## Status
 
-### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 12 mechanisms)
+### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 35 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -118,13 +118,24 @@ problems.
   `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
   `gauge_coupling_unification`
 
-**Mechanisms (12, new layer):**
+**Mechanisms (35, new layer):**
 - Strong-CP: `peccei_quinn_axion`, `nelson_barr`
-- Flavor: `froggatt_nielsen`
-- Neutrino mass + BAU: `seesaw_type_i`, `leptogenesis`
-- Hierarchy: `mssm`, `twin_higgs`, `relaxion`
-- Cosmological constant: `anthropic_landscape`, `sequestering`,
-  `unimodular_gravity`, `quintessence`
+- Flavor: `froggatt_nielsen`, `modular_flavor_symmetry`,
+  `a4_family_symmetry`, `partial_compositeness`,
+  `minimal_flavor_violation`
+- Neutrino mass: `seesaw_type_i`, `seesaw_type_ii`, `seesaw_type_iii`,
+  `inverse_seesaw`
+- Baryogenesis: `leptogenesis`, `electroweak_baryogenesis`,
+  `affleck_dine_baryogenesis`, `gut_baryogenesis`
+- Hierarchy: `mssm`, `twin_higgs`, `relaxion`, `composite_higgs`,
+  `large_extra_dimensions_add`, `warped_extra_dimensions_rs`,
+  `nnaturalness`
+- Dark matter: `wimp_thermal_freezeout`, `asymmetric_dark_matter`,
+  `ultralight_scalar_dm`, `sterile_neutrino_dm`
+- Unification: `su5_minimal_gut`, `so10_gut`, `pati_salam`
+- Cosmological constant / modified gravity: `anthropic_landscape`,
+  `sequestering`, `unimodular_gravity`, `quintessence`,
+  `dgp_braneworld`, `asymptotic_safety_gravity`
 
 ### Recently populated
 
@@ -170,6 +181,28 @@ the next batch (none yet written; pull requests welcome):
   Planck + ACT (currently in cmb_acoustic_peak_structure)
 - `super_k_atmospheric_lorentz` — atmospheric-neutrino LIV bounds
   complementary to `lorentz_electron_sme`
+
+## Future research questions
+
+These are deferred research-grade investigations that the catalog enables
+but does not itself perform. Listed for orientation, not as near-term
+work items.
+
+- **Graph mining for non-obvious alignments.** Once the mechanism
+  catalog is sufficiently dense (~50+ entries across all puzzles),
+  search for the smallest mechanism subset that closes the most
+  puzzles, and identify recurring `structural_features` combinations
+  among high-degree mechanisms. The goal is to surface latent
+  unification clues that no single subfield would notice. Speculative;
+  success would mean re-discovering known clusters (SUSY-GUT,
+  axion+seesaw+leptogenesis) plus identifying at least one
+  non-obvious composition.
+- **Cross-mechanism conflict detection.** Beyond the explicit
+  `excludes` field, detect implicit conflicts via shared field content,
+  scale clashes, or contradictory predictions on the same benchmark.
+- **Bayesian compression weighting.** Replace the simple
+  puzzles_closed / parameters_introduced ratio with a posterior
+  weighting that accounts for confidence labels and benchmark coverage.
 
 ## How to contribute
 

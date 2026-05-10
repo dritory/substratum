@@ -1,0 +1,63 @@
+{
+  "id": "so10_gut",
+  "name": "SO(10) GUT",
+  "aliases": ["minimal SO(10)"],
+  "type": "uv_completion",
+  "summary": "Embeds the SM into SO(10), unifying all SM fermions of one generation (plus a right-handed neutrino) into a single 16-dimensional spinor representation. Naturally accommodates seesaw-scale Majorana neutrinos and contains B-L as a gauge symmetry. Provides a UV embedding for type-I seesaw + leptogenesis with reduced free parameters.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "SUSY-SO(10) gives clean coupling unification; non-SUSY SO(10) with intermediate left-right symmetric step at ~10^12 GeV also works."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Right-handed neutrino is automatically present in 16; intermediate B-L breaking sets the seesaw scale."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "SU(5)-like Yukawa relations extended to neutrino sector; minimal SO(10) with type-I+II seesaw fits all fermion masses with ~12 parameters."
+    },
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides natural setting for leptogenesis with M_R fixed by intermediate symmetry breaking."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "Dimension-6 operators predict p -> e+ pi^0 at level ~10^33-10^35 yr, partially overlapping with Super-K and Hyper-K target sensitivity."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["SO(10) gauge bosons", "16-Higgs (or 126-Higgs for B-L breaking)"],
+    "new_scales": ["M_GUT ~ 10^16 GeV", "intermediate B-L scale ~ 10^12 GeV (non-SUSY variants)"],
+    "new_symmetries": ["SO(10) gauge", "automatic B-L"],
+    "new_parameters_count": 8,
+    "note": "GUT scale, intermediate scales, Higgs sector, Yukawa structure."
+  },
+  "structural_features": ["unification", "matter_in_single_irrep", "automatic_b_l", "right_handed_neutrino"],
+  "composes_with": ["mssm", "seesaw_type_i", "seesaw_type_ii", "leptogenesis"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Fritzsch-Minkowski (1975); Georgi (1975). Active research direction: minimal SO(10) Yukawa fits (Joshipura-Patel and others) test specific predictions of fermion mass relations including theta_13.",
+  "references": [
+    {
+      "citation": "Fritzsch and Minkowski, 'Unified interactions of leptons and hadrons', Annals Phys. 93, 193 (1975)",
+      "doi": "10.1016/0003-4916(75)90211-0"
+    }
+  ],
+  "tags": ["gut", "unification", "so10", "b_l"]
+}

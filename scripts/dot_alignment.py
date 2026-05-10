@@ -238,7 +238,47 @@ def render_dependencies(mechanisms: dict) -> list[str]:
     return lines
 
 
-def render(puzzles: dict, mechanisms: dict, benchmarks: dict) -> str:
+def render_frameworks(frameworks: dict, mechanisms: dict, puzzles: dict) -> list[str]:
+    lines = ["## Frameworks: composed mechanisms\n"]
+    if not frameworks:
+        lines.append("_(no frameworks/ entries.)_\n")
+        return lines
+    lines.append(
+        "Each framework declares the mechanisms it composes. Total puzzle "
+        "coverage and parameter cost are the union/sum across composed "
+        "mechanisms; a framework that closes more puzzles per total parameter "
+        "is more compressive.\n"
+    )
+    lines.append("| framework | composes | puzzles closed | total params | compression |")
+    lines.append("|---|---|---|---|---|")
+    rows = []
+    for fid, fw in frameworks.items():
+        composed = fw.get("composes_mechanisms", [])
+        puzzle_set: set[str] = set()
+        params = 0
+        for mid in composed:
+            m = mechanisms.get(mid)
+            if not m:
+                continue
+            for e in m.get("addresses_puzzles", []):
+                if e.get("role") in CLOSING_ROLES:
+                    puzzle_set.add(e["puzzle_id"])
+            params += int(m.get("introduces", {}).get("new_parameters_count", 0))
+        compression = len(puzzle_set) / max(params, 1)
+        rows.append((compression, fid, fw, composed, puzzle_set, params))
+    rows.sort(key=lambda r: -r[0])
+    for compression, fid, fw, composed, puzzle_set, params in rows:
+        composed_str = ", ".join(f"`{m}`" for m in composed) or "(none)"
+        puzzles_str = ", ".join(f"`{p}`" for p in sorted(puzzle_set)) or "(none)"
+        lines.append(
+            f"| `{fid}` | {composed_str} | {len(puzzle_set)}: {puzzles_str} | "
+            f"{params} | {compression:.3f} |"
+        )
+    lines.append("")
+    return lines
+
+
+def render(puzzles: dict, mechanisms: dict, benchmarks: dict, frameworks: dict) -> str:
     lines = ["# Dot-alignment report\n"]
     lines.append(
         f"**Puzzles**: {len(puzzles)} | **Mechanisms**: {len(mechanisms)} | "
@@ -257,6 +297,7 @@ def render(puzzles: dict, mechanisms: dict, benchmarks: dict) -> str:
     lines += render_dependencies(mechanisms)
     lines += render_violations(mechanisms)
     lines += render_structural_clusters(mechanisms)
+    lines += render_frameworks(frameworks, mechanisms, puzzles)
     return "\n".join(lines) + "\n"
 
 
@@ -268,10 +309,11 @@ def main(argv: list[str]) -> int:
     puzzles = load_dir("puzzles")
     mechanisms = load_dir("mechanisms")
     benchmarks = load_dir("benchmarks")
+    frameworks = load_dir("frameworks")
     if not puzzles or not mechanisms:
         print("puzzles/ or mechanisms/ is empty; nothing to align.", file=sys.stderr)
         return 1
-    report = render(puzzles, mechanisms, benchmarks)
+    report = render(puzzles, mechanisms, benchmarks, frameworks)
     if args.output:
         args.output.write_text(report)
         print(f"wrote {args.output}", file=sys.stderr)

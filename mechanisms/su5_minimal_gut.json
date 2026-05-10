@@ -1,0 +1,47 @@
+{
+  "id": "su5_minimal_gut",
+  "name": "Minimal SU(5) GUT",
+  "aliases": ["Georgi-Glashow SU(5)"],
+  "type": "uv_completion",
+  "summary": "Embeds SU(3) x SU(2) x U(1) into a single SU(5) gauge group at high energy ~ 10^15 GeV. SM matter fits into 10 + 5-bar of SU(5); spontaneous breaking via 24-Higgs gives SM gauge structure at low energies. The minimal nonsupersymmetric version is excluded by proton-decay searches; SUSY-SU(5) and split versions remain viable.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Non-SUSY SU(5) running misses unification by ~few sigma; SUSY-SU(5) closes it. Listed as ameliorates with disfavored confidence for the minimal version."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Quark and charged-lepton masses are related at the GUT scale (m_b = m_tau, m_s = m_mu / 3, m_d = 3 m_e at unification); partial success for third generation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "violates",
+      "note": "Minimal non-SUSY SU(5) predicts p -> e+ pi^0 lifetime ~ 10^31 - 10^32 yr, well below Super-K's 10^34 yr bound. Excluded."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["SU(5) gauge bosons (X, Y leptoquarks)", "24 of Higgs"],
+    "new_scales": ["M_GUT ~ 10^15 GeV"],
+    "new_symmetries": ["SU(5) gauge"],
+    "new_parameters_count": 3,
+    "note": "GUT scale, 24-Higgs potential parameters, doublet-triplet splitting parameter."
+  },
+  "structural_features": ["unification", "leptoquarks", "matter_in_smaller_reps"],
+  "composes_with": ["mssm", "seesaw_type_iii"],
+  "excludes": [],
+  "status": "historical",
+  "history": "Georgi-Glashow (1974). Excluded by IMB and Super-K proton-decay searches by ~1990s. SUSY-SU(5) (Dimopoulos-Raby-Wilczek 1981) is the surviving version, currently constrained by Super-K dimension-5 operator searches.",
+  "references": [
+    {
+      "citation": "Georgi and Glashow, 'Unity of all elementary-particle forces', PRL 32, 438 (1974)",
+      "doi": "10.1103/PhysRevLett.32.438"
+    }
+  ],
+  "tags": ["gut", "unification", "su5"]
+}

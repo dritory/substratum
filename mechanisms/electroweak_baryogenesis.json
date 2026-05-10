@@ -1,0 +1,59 @@
+{
+  "id": "electroweak_baryogenesis",
+  "name": "Electroweak baryogenesis",
+  "aliases": ["EWBG"],
+  "type": "dynamical",
+  "summary": "Generates baryon asymmetry during a strong first-order electroweak phase transition: bubble walls separate broken and unbroken phases; CP-violating reflection of particles off the walls plus EW sphaleron processes in the unbroken phase produce a net baryon number that is preserved in the broken phase. Requires extension of the SM scalar sector since the SM Higgs gives only a crossover.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Requires both a strongly first-order EWPT (extended scalar sector: 2HDM, MSSM with light stop, singlet extensions) and additional CP violation beyond CKM. Current LHC constraints have squeezed but not closed the parameter space."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "electron_edm_jila",
+      "effect": "near_bound",
+      "note": "New CP-violating phases generate electron and quark EDMs at one or two loops; viable EWBG parameter space is sharply constrained by JILA / ACME bounds."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound"
+    },
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Singlet extensions generate Higgs portal mixing; couplings deviate from SM at the few-percent level."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "predicts_signal",
+      "note": "Strong first-order PT generates a stochastic GW background at mHz-Hz frequencies; LISA / DECIGO targets."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["extended scalar sector (2HDM, singlet, MSSM stop)", "new CP-violating couplings"],
+    "new_scales": ["EWPT scale ~ v ~ 246 GeV"],
+    "new_symmetries": [],
+    "new_parameters_count": 5,
+    "note": "Scalar potential parameters + new CP-violating phases."
+  },
+  "structural_features": ["first_order_phase_transition", "out_of_equilibrium", "extended_scalars", "sphaleron_conversion"],
+  "composes_with": ["mssm", "twin_higgs", "composite_higgs"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Sakharov conditions (1967); Kuzmin-Rubakov-Shaposhnikov sphaleron analysis (1985). Pure SM EWBG ruled out by m_H > 75 GeV (no first-order PT). Active research: 2HDM-EWBG, MSSM-EWBG (largely killed by LHC), singlet-extended EWBG.",
+  "references": [
+    {
+      "citation": "Kuzmin, Rubakov, Shaposhnikov, 'On the anomalous electroweak baryon-number nonconservation in the early universe', Phys. Lett. B 155, 36 (1985)",
+      "doi": "10.1016/0370-2693(85)91028-7"
+    },
+    {
+      "citation": "Morrissey and Ramsey-Musolf, 'Electroweak baryogenesis', New J. Phys. 14, 125003 (2012)",
+      "arxiv": "1206.2942"
+    }
+  ],
+  "tags": ["baryogenesis", "phase_transition", "cp_violation"]
+}

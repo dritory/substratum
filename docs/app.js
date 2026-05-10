@@ -119,12 +119,10 @@ async function main() {
   // header counts
   document.getElementById("count-tensions").textContent = bundle.counts.tensions;
   document.getElementById("count-benchmarks").textContent = bundle.counts.benchmarks;
-  const allDomains = new Set([
-    ...bundle.facets.tension_domains,
-    ...bundle.facets.benchmark_kinds.map(() => "_"),
-  ]);
-  document.getElementById("count-domains").textContent =
-    bundle.facets.tension_domains.length;
+  const puzN = document.getElementById("count-puzzles");
+  if (puzN) puzN.textContent = bundle.counts.puzzles ?? 0;
+  const mechN = document.getElementById("count-mechanisms");
+  if (mechN) mechN.textContent = bundle.counts.mechanisms ?? 0;
   document.getElementById("generated-at").textContent =
     new Date(bundle.generated_at).toLocaleString();
 
@@ -132,6 +130,7 @@ async function main() {
   renderTensionsView(bundle);
   renderLandscape(bundle);
   renderBenchmarkCharts(bundle);
+  renderDotAlignment(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
 
@@ -504,6 +503,287 @@ function buildLandscapeHover(p) {
 
 /* ---------- benchmark charts ---------- */
 
+/* ---------- dot-alignment view ---------- */
+
+const ROLE_COLOR = {
+  solves: "#6dc197",
+  explains_pattern: "#7fb1e1",
+  ameliorates: "#e0a04a",
+  requires: "#9ea3b3",
+};
+
+const CONFIDENCE_OPACITY = {
+  established: 0.95,
+  proposed: 0.65,
+  contested: 0.40,
+  disfavored: 0.22,
+};
+
+const MECH_TYPE_COLOR = {
+  symmetry: "#7fb1e1",
+  dynamical: "#e0a04a",
+  anthropic: "#9ea3b3",
+  topological: "#b69adf",
+  uv_completion: "#6dc197",
+  composite: "#d77ea1",
+  geometric: "#82b9d4",
+};
+
+function renderDotAlignment(bundle) {
+  const puzzles = bundle.puzzles || [];
+  const mechanisms = bundle.mechanisms || [];
+  const edges = bundle.alignment_edges || [];
+  if (!puzzles.length || !mechanisms.length) return;
+
+  const mechDegree = new Map();
+  for (const e of edges) {
+    if (e.role === "requires") continue;
+    mechDegree.set(e.mechanism_id, (mechDegree.get(e.mechanism_id) || 0) + 1);
+  }
+
+  // Order puzzles by degree desc; mechanisms by puzzles addressed desc
+  const puzzlesSorted = [...puzzles].sort((a, b) => (b._degree || 0) - (a._degree || 0));
+  const mechsSorted = [...mechanisms].sort(
+    (a, b) => (mechDegree.get(b.id) || 0) - (mechDegree.get(a.id) || 0)
+  );
+
+  const puzY = new Map(puzzlesSorted.map((p, i) => [p.id, puzzlesSorted.length - i]));
+  const mechY = new Map(mechsSorted.map((m, i) => [m.id, mechsSorted.length - i]));
+
+  // Edge traces — one trace per role for legend toggling
+  const traces = [];
+  const roles = ["solves", "explains_pattern", "ameliorates", "requires"];
+  for (const role of roles) {
+    const xs = [];
+    const ys = [];
+    const subEdges = edges.filter((e) => e.role === role);
+    for (const e of subEdges) {
+      const yp = puzY.get(e.puzzle_id);
+      const ym = mechY.get(e.mechanism_id);
+      if (yp == null || ym == null) continue;
+      xs.push(0, 1, null);
+      ys.push(yp, ym, null);
+    }
+    if (xs.length === 0) continue;
+    traces.push({
+      x: xs,
+      y: ys,
+      mode: "lines",
+      type: "scatter",
+      name: role.replace("_", " "),
+      line: { color: ROLE_COLOR[role], width: 1.4 },
+      opacity: 0.55,
+      hoverinfo: "skip",
+      showlegend: true,
+    });
+  }
+
+  // Puzzle markers
+  const pSizes = puzzlesSorted.map((p) => 12 + 5 * Math.sqrt(p._degree || 0));
+  traces.push({
+    x: puzzlesSorted.map(() => 0),
+    y: puzzlesSorted.map((p) => puzY.get(p.id)),
+    text: puzzlesSorted.map((p) => p.id),
+    hovertext: puzzlesSorted.map((p) =>
+      `<b>${escapeHtml(p.name)}</b><br>id: <code>${p.id}</code><br>` +
+      `kind: ${p.kind}<br>` +
+      `addressed by ${p._degree || 0} mechanisms<br>` +
+      truncate(escapeHtml(p.summary || ""), 220)
+    ),
+    customdata: puzzlesSorted.map((p) => p.id),
+    mode: "markers+text",
+    type: "scatter",
+    name: "puzzles",
+    marker: {
+      symbol: "circle",
+      size: pSizes,
+      color: "#d4b974",
+      line: { width: 1.4, color: THEME.ink },
+    },
+    textposition: "middle left",
+    textfont: { family: FONT_MONO, size: 11, color: THEME.ink },
+    hovertemplate: "%{hovertext}<extra></extra>",
+    showlegend: false,
+  });
+
+  // Mechanism markers
+  const mSizes = mechsSorted.map((m) => 8 + 4 * Math.sqrt(mechDegree.get(m.id) || 0));
+  traces.push({
+    x: mechsSorted.map(() => 1),
+    y: mechsSorted.map((m) => mechY.get(m.id)),
+    text: mechsSorted.map((m) => m.id),
+    hovertext: mechsSorted.map((m) =>
+      `<b>${escapeHtml(m.name)}</b><br>id: <code>${m.id}</code><br>` +
+      `type: ${m.type} | status: ${m.status}<br>` +
+      `addresses ${mechDegree.get(m.id) || 0} puzzles | params: ${m._params_count} | ` +
+      `compression: ${(m._compression || 0).toFixed(2)}<br>` +
+      truncate(escapeHtml(m.summary || ""), 240)
+    ),
+    customdata: mechsSorted.map((m) => m.id),
+    mode: "markers+text",
+    type: "scatter",
+    name: "mechanisms",
+    marker: {
+      symbol: "square",
+      size: mSizes,
+      color: mechsSorted.map((m) => MECH_TYPE_COLOR[m.type] || "#888"),
+      line: { width: 1.2, color: THEME.marker_edge },
+    },
+    textposition: "middle right",
+    textfont: { family: FONT_MONO, size: 11, color: THEME.ink_soft },
+    hovertemplate: "%{hovertext}<extra></extra>",
+    showlegend: false,
+  });
+
+  Plotly.newPlot(
+    "chart-bipartite",
+    traces,
+    {
+      margin: { l: 220, r: 240, t: 16, b: 40 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        showgrid: false,
+        zeroline: false,
+        showticklabels: false,
+        range: [-0.05, 1.05],
+        fixedrange: true,
+      },
+      yaxis: {
+        showgrid: false,
+        zeroline: false,
+        showticklabels: false,
+        range: [
+          0,
+          Math.max(puzzlesSorted.length, mechsSorted.length) + 1,
+        ],
+      },
+      legend: {
+        orientation: "h",
+        x: 0.5,
+        xanchor: "center",
+        y: -0.04,
+        bgcolor: "rgba(0,0,0,0)",
+        font: { size: 11 },
+      },
+      hoverlabel: { font: { family: FONT_MONO, size: 11 }, align: "left" },
+      annotations: [
+        {
+          x: 0, y: puzzlesSorted.length + 0.6,
+          xref: "x", yref: "y",
+          text: "<b>puzzles</b>", showarrow: false,
+          font: { color: THEME.ink, size: 13 },
+        },
+        {
+          x: 1, y: mechsSorted.length + 0.6,
+          xref: "x", yref: "y",
+          text: "<b>mechanisms</b>", showarrow: false,
+          font: { color: THEME.ink, size: 13 },
+        },
+      ],
+    },
+    PLOTLY_BASE
+  );
+
+  // click handler -> detail panel
+  document.getElementById("chart-bipartite").on("plotly_click", (ev) => {
+    const id = ev.points[0]?.customdata;
+    if (!id) return;
+    const entry = puzzles.find((p) => p.id === id) || mechanisms.find((m) => m.id === id);
+    if (entry) {
+      const layer = puzzles.includes(entry) ? "puzzle" : "mechanism";
+      const enrich = { ...entry, _layer: layer };
+      // reuse the browse panel to show detail; create one inline if not present
+      let panel = document.getElementById("dotalign-detail");
+      if (!panel) {
+        panel = el("aside", { id: "dotalign-detail", class: "detail-panel", hidden: true });
+        document.getElementById("view-dotalign").appendChild(panel);
+      }
+      showDetail(enrich, "dotalign-detail");
+    }
+  });
+
+  // Compression bar chart
+  const mechByCompression = [...mechanisms].sort((a, b) => (b._compression || 0) - (a._compression || 0));
+  Plotly.newPlot(
+    "chart-compression",
+    [
+      {
+        type: "bar",
+        orientation: "h",
+        x: mechByCompression.map((m) => m._compression || 0),
+        y: mechByCompression.map((m) => m.id),
+        text: mechByCompression.map(
+          (m) =>
+            `${m._puzzles_closed} closed / ${m._params_count} params | ` +
+            `type ${m.type} | status ${m.status}`
+        ),
+        marker: {
+          color: mechByCompression.map((m) => MECH_TYPE_COLOR[m.type] || "#888"),
+          line: { width: 0.8, color: THEME.marker_edge },
+        },
+        hovertemplate: "<b>%{y}</b><br>compression %{x:.3f}<br>%{text}<extra></extra>",
+      },
+    ],
+    {
+      margin: { l: 200, r: 30, t: 16, b: 50 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        title: { text: "compression = puzzles closed / parameters introduced" },
+        gridcolor: THEME.grid,
+        zeroline: false,
+      },
+      yaxis: {
+        autorange: "reversed",
+        gridcolor: THEME.grid_soft,
+        tickfont: { family: FONT_MONO, size: 11 },
+      },
+    },
+    PLOTLY_BASE
+  );
+
+  // Convergent puzzles chart
+  const puzByDegree = [...puzzles].sort((a, b) => (b._degree || 0) - (a._degree || 0));
+  Plotly.newPlot(
+    "chart-convergent",
+    [
+      {
+        type: "bar",
+        orientation: "h",
+        x: puzByDegree.map((p) => p._degree || 0),
+        y: puzByDegree.map((p) => p.id),
+        text: puzByDegree.map((p) => `kind: ${p.kind}`),
+        marker: {
+          color: "#d4b974",
+          line: { width: 0.8, color: THEME.marker_edge },
+        },
+        hovertemplate: "<b>%{y}</b><br>%{x} mechanisms<br>%{text}<extra></extra>",
+      },
+    ],
+    {
+      margin: { l: 240, r: 30, t: 16, b: 50 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        title: { text: "number of mechanisms addressing the puzzle" },
+        gridcolor: THEME.grid,
+        zeroline: false,
+        dtick: 1,
+      },
+      yaxis: {
+        autorange: "reversed",
+        gridcolor: THEME.grid_soft,
+        tickfont: { family: FONT_MONO, size: 11 },
+      },
+    },
+    PLOTLY_BASE
+  );
+}
+
 function renderBenchmarkCharts(bundle) {
   const byKind = countBy(bundle.benchmarks, (b) => b.kind);
   const byEval = countBy(bundle.benchmarks, (b) => b._evaluator_status || "(none)");
@@ -781,7 +1061,12 @@ function showDetail(entry, panelId) {
   const panel = document.getElementById(panelId);
   panel.innerHTML = "";
 
-  const sourceFolder = entry._layer === "tension" ? "data" : "benchmarks";
+  const sourceFolder = (
+    entry._layer === "tension" ? "data" :
+    entry._layer === "puzzle" ? "puzzles" :
+    entry._layer === "mechanism" ? "mechanisms" :
+    "benchmarks"
+  );
   const sourceUrl = `${REPO_BLOB}/${sourceFolder}/${entry.id}.json`;
 
   panel.appendChild(

@@ -1,0 +1,54 @@
+{
+  "id": "inverse_seesaw",
+  "name": "Inverse seesaw",
+  "aliases": ["Mohapatra-Valle inverse seesaw", "low-scale seesaw"],
+  "type": "uv_completion",
+  "summary": "Adds two singlet fermions per generation (N_R, S) with Dirac mass m_D N H L between L and N_R, Dirac mass M between N_R and S, and small Majorana mass mu_S for S. Light neutrino masses m_nu ~ (m_D / M)^2 * mu_S; M can be at the TeV scale because suppression comes from the small lepton-number-breaking parameter mu_S, making the seesaw testable at colliders.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Tradeoff vs. type-I: M can be at TeV (testable) but at the cost of an additional small parameter mu_S. The smallness of mu_S is technically natural ('t Hooft) since it breaks lepton number."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_mass_scale_seesaw",
+      "effect": "predicts_signal"
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "near_bound",
+      "note": "Pseudo-Dirac structure suppresses 0nubb relative to canonical seesaw; searches in inverted-hierarchy m_betabeta region are key tests."
+    },
+    {
+      "benchmark_id": "mu_e_conversion_sindrum",
+      "effect": "predicts_signal",
+      "note": "Heavy-light mixing |U|^2 ~ m_D^2 / M^2 ~ 10^{-3} for TeV-scale M produces observable LFV in current and next-generation experiments."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["right-handed neutrinos N_R", "additional singlets S"],
+    "new_scales": ["M ~ TeV (heavy Dirac scale)", "mu_S ~ keV (lepton-number breaking)"],
+    "new_symmetries": ["approximate lepton number (broken by mu_S)"],
+    "new_parameters_count": 4,
+    "note": "Three Dirac mass scales, three Majorana parameters mu_S, mixing matrix; the testable window is the M ~ TeV regime."
+  },
+  "structural_features": ["pseudo_dirac", "lepton_number_violation", "low_scale", "technically_natural"],
+  "composes_with": ["leptogenesis"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Mohapatra-Valle (1986); Bernabeu-Pilaftsis-Schechter-Valle (1987). Revived as a testable seesaw scenario through 2010s; ATLAS/CMS direct searches for heavy neutral leptons constrain the parameter space.",
+  "references": [
+    {
+      "citation": "Mohapatra and Valle, 'Neutrino mass and baryon-number nonconservation in superstring models', Phys. Rev. D 34, 1642 (1986)",
+      "doi": "10.1103/PhysRevD.34.1642"
+    }
+  ],
+  "tags": ["neutrinos", "seesaw", "low_scale", "pseudo_dirac"]
+}

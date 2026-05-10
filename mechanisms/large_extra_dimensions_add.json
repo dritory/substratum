@@ -1,0 +1,45 @@
+{
+  "id": "large_extra_dimensions_add",
+  "name": "Large extra dimensions (ADD)",
+  "aliases": ["ADD", "Arkani-Hamed-Dimopoulos-Dvali"],
+  "type": "geometric",
+  "summary": "n large flat extra dimensions of size R compactified on a torus. Gravity propagates in the bulk while SM fields are confined to a 3+1-dimensional brane. The fundamental gravity scale M_* ~ TeV is related to the apparent 4D Planck scale by M_Pl^2 = M_*^{n+2} R^n; for n>=2 and R between sub-mm and TeV^{-1}, the hierarchy is geometric rather than dynamical.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Replaces the m_W/M_Pl hierarchy with a (R * M_*)^n hierarchy; the scales still need explanation, but the puzzle is reformulated rather than solved. Strongly constrained by LHC missing-energy searches and astrophysical bounds (SN1987A energy loss, neutron-star excess heating) for n=2."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "inverse_square_law_short_distance",
+      "effect": "near_bound",
+      "note": "Newtonian gravity becomes (4+n)-D below R; sub-mm tests (Eot-Wash) bound R for n=2 to <~50 microns."
+    },
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["KK graviton tower"],
+    "new_scales": ["M_* ~ TeV (fundamental gravity scale)", "R ~ 10^{-19+30/n} m"],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Number n of extra dimensions, compactification radius R, and brane tension."
+  },
+  "structural_features": ["extra_dimensions", "geometric_hierarchy", "kk_tower", "brane_localization"],
+  "composes_with": [],
+  "excludes": ["mssm", "twin_higgs"],
+  "status": "disfavored",
+  "history": "ADD (1998) opened large-extra-dimension phenomenology. LHC missing-energy searches and astrophysical constraints have pushed n=2 viable parameter to M_* > ~5 TeV; n=3 less constrained but still squeezed.",
+  "references": [
+    {
+      "citation": "Arkani-Hamed, Dimopoulos, Dvali, 'The hierarchy problem and new dimensions at a millimeter', Phys. Lett. B 429, 263 (1998)",
+      "arxiv": "hep-ph/9803315"
+    }
+  ],
+  "tags": ["hierarchy", "extra_dimensions", "geometric"]
+}

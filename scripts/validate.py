@@ -97,11 +97,13 @@ def cross_check_tension_links() -> list[str]:
 
 
 def cross_check_framework_predictions() -> list[str]:
-    """Verify every prediction key in frameworks/ resolves to a benchmark."""
+    """Verify framework prediction keys resolve to benchmarks and composes_mechanisms resolve to mechanisms."""
     fw_dir = ROOT / "frameworks"
     if not fw_dir.exists():
         return []
     bench_ids = {p.stem for p in (ROOT / "benchmarks").glob("*.json")}
+    mech_dir = ROOT / "mechanisms"
+    mech_ids = {p.stem for p in mech_dir.glob("*.json")} if mech_dir.exists() else set()
     msgs = []
     for path in fw_dir.glob("*.json"):
         try:
@@ -109,12 +111,13 @@ def cross_check_framework_predictions() -> list[str]:
                 entry = json.load(f)
         except json.JSONDecodeError:
             continue
+        rel = path.relative_to(ROOT)
         for ref in entry.get("predictions", {}):
             if ref not in bench_ids:
-                msgs.append(
-                    f"{path.relative_to(ROOT)}: predictions references "
-                    f"unknown benchmark {ref!r}"
-                )
+                msgs.append(f"{rel}: predictions references unknown benchmark {ref!r}")
+        for ref in entry.get("composes_mechanisms", []):
+            if ref not in mech_ids:
+                msgs.append(f"{rel}: composes_mechanisms references unknown mechanism {ref!r}")
     return msgs
 
 

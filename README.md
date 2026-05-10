@@ -23,13 +23,15 @@ The repository has four parallel layers:
   measurement disagreements; they are unexplained numbers and patterns
   that the standard frameworks expose without resolving.
 - **`mechanisms/`** — proposed structural answers to one or more puzzles
-  (Peccei-Quinn axion, type-I seesaw, Froggatt-Nielsen, MSSM, twin
-  Higgs, relaxion, leptogenesis, anthropic landscape, sequestering,
-  unimodular gravity, quintessence, Nelson-Barr). Each mechanism declares
-  which puzzles it addresses and with what role (`solves`,
-  `ameliorates`, `explains_pattern`, `requires`), which benchmarks it
-  touches and with what effect (`respects`, `near_bound`, `violates`,
-  `predicts_signal`), and how many new free parameters it introduces.
+  (Peccei-Quinn axion, the three seesaw types, Froggatt-Nielsen, modular
+  flavor symmetry, MSSM, twin Higgs, composite Higgs, RS / ADD,
+  leptogenesis, electroweak baryogenesis, anthropic landscape, SU(5) /
+  SO(10) / Pati-Salam GUTs, asymptotic-safety gravity, …). Each
+  mechanism declares which puzzles it addresses and with what role
+  (`solves`, `ameliorates`, `explains_pattern`, `requires`), which
+  benchmarks it touches and with what effect (`respects`, `near_bound`,
+  `violates`, `predicts_signal`), and how many new free parameters it
+  introduces.
 
 Together: tensions tell you where the current models break; benchmarks tell
 you what the next model has to look like; puzzles say what the next model

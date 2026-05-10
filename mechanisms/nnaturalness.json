@@ -1,0 +1,45 @@
+{
+  "id": "nnaturalness",
+  "name": "N-naturalness",
+  "aliases": ["multiverse-on-a-brane", "Arkani-Hamed N-copies"],
+  "type": "composite",
+  "summary": "Postulate N copies of the Standard Model with Higgs mass-squareds spread over a range; only the copy with the smallest positive m_H^2 reheats efficiently after inflation, becoming our visible sector. Provides a mechanism for the EW hierarchy without low-scale new physics, by selecting the most-tuned sector cosmologically.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Reduces tuning to ~1/N rather than M_Planck^2/m_H^2; for N ~ 10^{16} the hierarchy is explained without TeV-scale partners."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "n_eff_combined_cmb_bbn",
+      "effect": "near_bound",
+      "note": "Other reheated sectors contribute to N_eff; viable variants require asymmetric reheating or specific decay channels."
+    },
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["N - 1 copies of the full SM"],
+    "new_scales": ["reheaton mass ~ m_H", "Higgs mass-squared spacing"],
+    "new_symmetries": ["Z_N permutation (broken by reheaton couplings)"],
+    "new_parameters_count": 4,
+    "note": "Reheaton coupling, mass distribution width, total N, and inflationary scale."
+  },
+  "structural_features": ["sector_replication", "cosmological_selection", "discrete_symmetry", "neutral_naturalness"],
+  "composes_with": [],
+  "excludes": ["mssm", "twin_higgs", "relaxion"],
+  "status": "niche",
+  "history": "Arkani-Hamed, Cohen, D'Agnolo, Hook, Kim, Pinner (2016). Builds on neutral-naturalness ideas (twin Higgs) by replacing two sectors with N >> 1 sectors and a cosmological selection mechanism.",
+  "references": [
+    {
+      "citation": "Arkani-Hamed, Cohen, D'Agnolo, Hook, Kim, Pinner, 'Solving the hierarchy problem at reheating with a large number of degrees of freedom', PRL 117, 251801 (2016)",
+      "arxiv": "1607.06821"
+    }
+  ],
+  "tags": ["hierarchy", "neutral_naturalness", "cosmological_selection"]
+}

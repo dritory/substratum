@@ -17,8 +17,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 BENCH_DIR = ROOT / "benchmarks"
+PUZZLE_DIR = ROOT / "puzzles"
+MECH_DIR = ROOT / "mechanisms"
+FRAMEWORK_DIR = ROOT / "frameworks"
 OUT_DIR = ROOT / "docs"
 OUT_FILE = OUT_DIR / "data.json"
+
+CLOSING_ROLES = {"solves", "explains_pattern"}
 
 NUM_RE = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
 RANGE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*[-–]\s*(\d+(?:\.\d+)?)\s*(?:sigma|σ)?")
@@ -94,6 +99,8 @@ def derive_benchmark(entry: dict) -> dict:
 
 def load_dir(path: Path) -> list[dict]:
     out = []
+    if not path.exists():
+        return out
     for p in sorted(path.glob("*.json")):
         with p.open() as f:
             try:
@@ -104,9 +111,69 @@ def load_dir(path: Path) -> list[dict]:
     return out
 
 
+def derive_alignment(puzzles: list[dict], mechanisms: list[dict], frameworks: list[dict]) -> dict:
+    """Compute compression scores and edge lists for the dot-alignment view."""
+    edges = []
+    puzzle_degree: dict[str, int] = {p["id"]: 0 for p in puzzles}
+    for m in mechanisms:
+        addressed = m.get("addresses_puzzles", []) or []
+        closed = sum(1 for e in addressed if e.get("role") in CLOSING_ROLES)
+        params = max(int((m.get("introduces") or {}).get("new_parameters_count", 0)), 1)
+        m["_puzzles_closed"] = closed
+        m["_puzzles_addressed"] = len([e for e in addressed if e.get("role") != "requires"])
+        m["_params_count"] = (m.get("introduces") or {}).get("new_parameters_count", 0)
+        m["_compression"] = closed / params
+        m["_violates"] = [
+            e["benchmark_id"]
+            for e in (m.get("touches_benchmarks") or [])
+            if e.get("effect") == "violates"
+        ]
+        for e in addressed:
+            pid = e.get("puzzle_id")
+            if pid is None:
+                continue
+            edges.append({
+                "mechanism_id": m["id"],
+                "puzzle_id": pid,
+                "role": e.get("role"),
+                "confidence": e.get("confidence"),
+                "note": e.get("note", ""),
+            })
+            if e.get("role") != "requires":
+                puzzle_degree[pid] = puzzle_degree.get(pid, 0) + 1
+    for p in puzzles:
+        p["_degree"] = puzzle_degree.get(p["id"], 0)
+
+    # framework composition: union of puzzles closed by composed mechanisms
+    mech_by_id = {m["id"]: m for m in mechanisms}
+    for fw in frameworks:
+        composed = fw.get("composes_mechanisms", []) or []
+        puzzles_closed: set[str] = set()
+        params_total = 0
+        for mid in composed:
+            mm = mech_by_id.get(mid)
+            if mm is None:
+                continue
+            for e in mm.get("addresses_puzzles", []) or []:
+                if e.get("role") in CLOSING_ROLES:
+                    puzzles_closed.add(e["puzzle_id"])
+            params_total += int((mm.get("introduces") or {}).get("new_parameters_count", 0))
+        fw["_composed_puzzles_closed"] = sorted(puzzles_closed)
+        fw["_composed_params"] = params_total
+        fw["_composed_compression"] = (
+            len(puzzles_closed) / max(params_total, 1)
+        )
+
+    return {"edges": edges}
+
+
 def main() -> int:
     tensions = [derive_tension(e) for e in load_dir(DATA_DIR)]
     benchmarks = [derive_benchmark(e) for e in load_dir(BENCH_DIR)]
+    puzzles = load_dir(PUZZLE_DIR)
+    mechanisms = load_dir(MECH_DIR)
+    frameworks = load_dir(FRAMEWORK_DIR)
+    alignment = derive_alignment(puzzles, mechanisms, frameworks)
 
     domains_tension = sorted({e.get("domain") for e in tensions if e.get("domain")})
     domains_bench_kinds = sorted({e.get("kind") for e in benchmarks if e.get("kind")})
@@ -114,21 +181,30 @@ def main() -> int:
         {e["_evaluator_status"] for e in benchmarks if e.get("_evaluator_status")}
     )
     statuses = sorted({e.get("status") for e in tensions if e.get("status")})
+    mechanism_types = sorted({m.get("type") for m in mechanisms if m.get("type")})
 
     bundle = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "counts": {
             "tensions": len(tensions),
             "benchmarks": len(benchmarks),
+            "puzzles": len(puzzles),
+            "mechanisms": len(mechanisms),
+            "frameworks": len(frameworks),
         },
         "facets": {
             "tension_domains": domains_tension,
             "tension_statuses": statuses,
             "benchmark_kinds": domains_bench_kinds,
             "benchmark_evaluator_statuses": evaluator_statuses,
+            "mechanism_types": mechanism_types,
         },
         "tensions": tensions,
         "benchmarks": benchmarks,
+        "puzzles": puzzles,
+        "mechanisms": mechanisms,
+        "frameworks": frameworks,
+        "alignment_edges": alignment["edges"],
     }
 
     OUT_DIR.mkdir(exist_ok=True)
@@ -136,7 +212,9 @@ def main() -> int:
         json.dump(bundle, f, indent=2, sort_keys=False)
     print(
         f"wrote {OUT_FILE.relative_to(ROOT)}: "
-        f"{len(tensions)} tensions, {len(benchmarks)} benchmarks"
+        f"{len(tensions)} tensions, {len(benchmarks)} benchmarks, "
+        f"{len(puzzles)} puzzles, {len(mechanisms)} mechanisms, "
+        f"{len(frameworks)} frameworks, {len(alignment['edges'])} edges"
     )
     return 0
 
