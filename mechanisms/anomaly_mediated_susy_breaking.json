@@ -1,0 +1,60 @@
+{
+  "id": "anomaly_mediated_susy_breaking",
+  "name": "Anomaly-mediated SUSY breaking (AMSB)",
+  "aliases": ["AMSB", "Randall-Sundrum sequestering"],
+  "type": "dynamical",
+  "summary": "Mediates SUSY breaking from a hidden sector to the visible sector through the super-Weyl (conformal) anomaly. SUSY-breaking sector is sequestered on a separate brane, and gaugino / scalar masses arise at one loop from the conformal anomaly. Produces a distinctive spectrum dominated by wino LSP and degenerate sleptons, with a wide gravitino-LSP mass gap.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "requires",
+      "confidence": "established",
+      "note": "Implementation choice within MSSM: requires SUSY to address the hierarchy problem. Provides a specific mechanism for soft-SUSY-breaking parameters."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Wino-LSP DM in AMSB has well-defined mass (~ 2.7-3 TeV for thermal abundance) and annihilation cross-section; Fermi-LAT dwarf and HESS galactic-center constraints exclude or constrain wide windows."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
+      "effect": "near_bound",
+      "note": "Sommerfeld-enhanced wino annihilation to W+ W- gives sharp gamma-ray signals; Fermi-LAT and HESS bounds disfavour thermal wino DM at ~3 TeV in much of the parameter space."
+    },
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "near_bound",
+      "note": "Slepton-chargino loops contribute to (g-2)_mu at levels comparable to MSSM more generally; AMSB's degenerate slepton spectrum gives somewhat suppressed contributions."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["sequestering / conformal scale"],
+    "new_symmetries": [],
+    "new_parameters_count": 4,
+    "note": "Builds on MSSM; new parameters are the gravitino mass m_3/2 (~ 30-100 TeV) and tan(beta), with scalar/gaugino masses determined by anomalous dimensions."
+  },
+  "structural_features": ["sequestered_breaking", "anomaly_mediation", "conformal_anomaly", "wino_lsp"],
+  "composes_with": ["mssm"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Randall and Sundrum (1998), 'Out of this world supersymmetry breaking', Nucl. Phys. B 557, 79; Giudice, Luty, Murayama, Rattazzi (1998), 'Gaugino mass without singlets', JHEP 12, 027. Active phenomenology through 2000s-2010s; pure-AMSB tachyonic-slepton problem requires UV modifications.",
+  "references": [
+    {
+      "citation": "Randall and Sundrum, 'Out of this world supersymmetry breaking', Nucl. Phys. B 557, 79 (1999)",
+      "arxiv": "hep-th/9810155"
+    },
+    {
+      "citation": "Giudice, Luty, Murayama, Rattazzi, 'Gaugino mass without singlets', JHEP 12, 027 (1998)",
+      "arxiv": "hep-ph/9810442"
+    }
+  ],
+  "tags": ["susy", "amsb", "sequestered", "wino_dark_matter"]
+}

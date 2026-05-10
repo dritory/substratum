@@ -1,0 +1,49 @@
+{
+  "id": "super_wimp_gravitino",
+  "name": "Super-WIMP / gravitino dark matter",
+  "aliases": ["gravitino DM", "super-WIMP dark matter"],
+  "type": "dynamical",
+  "summary": "The gravitino (spin-3/2 superpartner of the graviton) is the LSP, with mass set by the SUSY-breaking scale. The next-to-lightest superpartner (NLSP) decays slowly into the gravitino + SM particle, populating the DM relic. Super-weak gravitational coupling (1/M_Pl) makes the gravitino effectively non-thermal; abundance is set by NLSP freeze-out + decay or by thermal scattering in the early universe.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Naturally light DM candidate (keV-GeV) consistent with super-WIMP scaling; relic abundance Omega_DM ~ (m_3/2 / 1 keV)(T_R / 10^9 GeV) sets reheating-temperature constraints. BBN bounds on NLSP decays exclude regions but leave keV-MeV gravitino windows."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "bbn_light_element_abundances",
+      "effect": "near_bound",
+      "note": "Late NLSP decays inject electromagnetic energy / mesons during BBN; tight bounds on tau_NLSP > 10^4 s and EM energy injection."
+    },
+    {
+      "benchmark_id": "sum_neutrino_masses_cosmology",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["gravitino mass m_3/2 ~ keV - TeV"],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Builds on SUSY framework. New free parameters are m_3/2 and reheating temperature T_R."
+  },
+  "structural_features": ["super_wimp", "non_thermal_relic", "gravitational_coupling", "lsp"],
+  "composes_with": ["mssm", "gauge_mediated_susy_breaking"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Pagels and Primack (1982), 'Supersymmetry, cosmology, and new physics at TeraElectronvolt energies', Phys. Rev. Lett. 48, 223 — first proposed gravitino DM. Subsequently developed in GMSB and AMSB frameworks; modern bounds from BBN + CMB constrain reheating temperature.",
+  "references": [
+    {
+      "citation": "Pagels and Primack, 'Supersymmetry, cosmology, and new physics at TeraElectronvolt energies', Phys. Rev. Lett. 48, 223 (1982)",
+      "doi": "10.1103/PhysRevLett.48.223"
+    }
+  ],
+  "tags": ["dark_matter", "susy", "gravitino", "super_wimp", "non_thermal"]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "starobinsky_inflation",
+  "name": "Starobinsky R + R^2 inflation",
+  "aliases": ["R-squared inflation", "Starobinsky model"],
+  "type": "geometric",
+  "summary": "Adds a curvature-squared term to the Einstein-Hilbert action: S = (M_Pl^2/2) integral d^4x sqrt(-g) (R + R^2/(6 M^2)). At high curvature the R^2 term dominates and drives an inflationary de Sitter epoch; quantum-induced trace anomaly contributions provided the original motivation. Reformulated in the Einstein frame, the model becomes a single-field inflaton with a specific plateau potential.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "established",
+      "note": "Predicts n_s = 1 - 2/N ~ 0.965 and r = 12/N^2 ~ 0.003 for N ~ 55 e-folds, in excellent agreement with Planck + BICEP/Keck and squarely within reach of CMB-S4 and LiteBIRD."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "predicts_signal",
+      "note": "r ~ 12/N^2 ~ 0.003 for N=55; below current upper bound r < 0.036 but above LiteBIRD / CMB-S4 sensitivity ~ 0.001. Discovering r in this range is the cleanest test."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Predicts n_s ~ 0.965 in the observed range and a specific running of the spectral index alpha_s ~ -2/N^2."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["effective scalar (the scalaron) from the R^2 term in the Einstein frame"],
+    "new_scales": ["M ~ 10^13 GeV (sets inflation scale)"],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Single new dimensional parameter M. The number of e-folds N is set by post-inflation reheating physics."
+  },
+  "structural_features": ["modified_geometry", "single_field_inflation", "plateau_potential", "scalaron"],
+  "composes_with": ["seesaw_type_i", "leptogenesis"],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Starobinsky (1980), 'A new type of isotropic cosmological models without singularity', Phys. Lett. B 91, 99-102 — predates Guth's inflation framework but is often retroactively counted as the first inflationary model. Re-popularised after Planck 2013 ruled out simpler chaotic-inflation models with V ~ phi^n; Starobinsky's predictions sit at the centre of the observed (n_s, r) plane.",
+  "references": [
+    {
+      "citation": "Starobinsky, 'A new type of isotropic cosmological models without singularity', Phys. Lett. B 91, 99 (1980)",
+      "doi": "10.1016/0370-2693(80)90670-X"
+    },
+    {
+      "citation": "Mukhanov and Chibisov, 'Quantum fluctuations and a nonsingular universe', JETP Lett. 33, 532 (1981)"
+    }
+  ],
+  "tags": ["inflation", "cosmology", "modified_gravity", "scalaron"]
+}

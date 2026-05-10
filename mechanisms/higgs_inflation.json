@@ -1,0 +1,51 @@
+{
+  "id": "higgs_inflation",
+  "name": "Higgs inflation",
+  "aliases": ["Bezrukov-Shaposhnikov inflation", "non-minimally coupled Higgs"],
+  "type": "dynamical",
+  "summary": "The Standard Model Higgs boson, with a large non-minimal coupling xi (h^dagger h) R to spacetime curvature, drives inflation at large field values. No new fields beyond the SM are required. The non-minimal coupling flattens the effective potential at high field values, giving a slow-roll plateau predicting n_s ~ 0.97 and r ~ 0.003.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Reproduces observed n_s and predicts small r similar to Starobinsky. Tree-level unitarity issues at scales below M_Pl/xi (Burgess-Patel-Trott 2009; Barbon-Espinosa 2009) and sensitivity to Higgs vacuum stability at high field values are open issues."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects",
+      "note": "Non-minimal coupling does not affect electroweak-scale Higgs phenomenology measurably; xi ~ 10^4 is irrelevant for collider observables."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "predicts_signal",
+      "note": "r ~ 0.003 - 0.005 depending on reheating, in CMB-S4 / LiteBIRD reach."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "n_s ~ 0.967 for N = 60 e-folds, in good agreement with Planck."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["non-minimal coupling xi ~ 10^4"],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Single new dimensionless parameter xi; minimal in the sense that no new fields are added."
+  },
+  "structural_features": ["non_minimal_coupling", "single_field_inflation", "plateau_potential", "minimal_extension"],
+  "composes_with": ["seesaw_type_i"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Bezrukov and Shaposhnikov (2008), 'The Standard Model Higgs boson as the inflaton', Phys. Lett. B 659, 703, arXiv:0710.3755. Critiques on tree-level unitarity (Burgess-Patel-Trott 2009; Barbon-Espinosa 2009) and Higgs vacuum stability (Bezrukov-Magnin-Shaposhnikov 2008) constrain viable parameter space. Critical-point variants (Bezrukov-Shaposhnikov 2014) lower the required xi.",
+  "references": [
+    {
+      "citation": "Bezrukov and Shaposhnikov, 'The Standard Model Higgs boson as the inflaton', Phys. Lett. B 659, 703 (2008)",
+      "arxiv": "0710.3755"
+    }
+  ],
+  "tags": ["inflation", "higgs", "non_minimal_coupling", "minimal_extension"]
+}

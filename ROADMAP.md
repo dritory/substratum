@@ -25,7 +25,7 @@ problems.
 
 ## Status
 
-### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 42 mechanisms)
+### Populated (75 benchmark entries, 5 data entries, 10 puzzles, 53 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -118,23 +118,35 @@ problems.
   `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
   `gauge_coupling_unification`
 
-**Mechanisms (42, new layer):**
+**Puzzles (10, new layer):**
+- `cosmological_constant_smallness`, `gauge_hierarchy_problem`,
+  `strong_cp_problem`, `flavor_mass_hierarchy`, `ckm_mixing_pattern`,
+  `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
+  `gauge_coupling_unification`, `inflation_initial_conditions`
+
+**Mechanisms (53, new layer):**
 - Strong-CP: `peccei_quinn_axion`, `nelson_barr`,
   `babu_mohapatra_parity`
 - Flavor: `froggatt_nielsen`, `modular_flavor_symmetry`,
   `a4_family_symmetry`, `partial_compositeness`,
   `minimal_flavor_violation`
 - Neutrino mass: `seesaw_type_i`, `seesaw_type_ii`, `seesaw_type_iii`,
-  `inverse_seesaw`
+  `inverse_seesaw`, `zee_radiative_neutrino_mass`,
+  `scotogenic_neutrino_dm`
 - Baryogenesis: `leptogenesis`, `electroweak_baryogenesis`,
   `affleck_dine_baryogenesis`, `gut_baryogenesis`
 - Hierarchy: `mssm`, `twin_higgs`, `relaxion`, `composite_higgs`,
   `large_extra_dimensions_add`, `warped_extra_dimensions_rs`,
-  `nnaturalness`, `coleman_weinberg_radiative`
+  `nnaturalness`, `coleman_weinberg_radiative`, `little_higgs`,
+  `technicolor`
+- SUSY mediation: `anomaly_mediated_susy_breaking`,
+  `gauge_mediated_susy_breaking`
 - Dark matter: `wimp_thermal_freezeout`, `asymmetric_dark_matter`,
   `ultralight_scalar_dm`, `sterile_neutrino_dm`,
   `higgs_portal_scalar_dm`, `mirror_dark_matter`,
-  `wimpless_dark_matter`
+  `wimpless_dark_matter`, `kaluza_klein_dark_matter`,
+  `dark_photon_portal`, `super_wimp_gravitino`
+- Inflation: `starobinsky_inflation`, `higgs_inflation`
 - Unification / UV completion: `su5_minimal_gut`, `so10_gut`,
   `pati_salam`, `heterotic_string_compactification`
 - Cosmological constant / modified gravity: `anthropic_landscape`,
