@@ -1,0 +1,46 @@
+{
+  "id": "natural_inflation",
+  "name": "Natural inflation",
+  "aliases": ["pseudo-Nambu-Goldstone-boson inflation", "axion inflation"],
+  "type": "dynamical",
+  "summary": "Inflation driven by a pseudo-Nambu-Goldstone boson (axion-like) field with a periodic potential V(phi) = Lambda^4 (1 - cos(phi/f)). The shift symmetry phi -> phi + const is broken only by the cosine term, naturally protecting the slow-roll potential against radiative corrections. Successful slow-roll requires f >~ M_Pl, which makes the model suspect from the weak-gravity-conjecture perspective.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Predicts r ~ 0.05-0.13 for f ~ M_Pl - 5 M_Pl; current Planck + BICEP/Keck bounds r < 0.036 substantially exclude single-axion natural inflation. Aligned / N-flation extensions with f_eff > M_Pl still struggle with weak-gravity-conjecture pressure."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "violates",
+      "note": "Single-axion natural inflation with f ~ M_Pl predicts r ~ 0.07-0.13, ruled out by BICEP/Keck. Aligned-axion variants survive in narrow windows."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Predicts n_s ~ 0.95-0.97 for N=60 e-folds in the surviving parameter space."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["inflaton axion phi"],
+    "new_scales": ["axion decay constant f ~ M_Pl", "explicit symmetry-breaking scale Lambda ~ M_GUT"],
+    "new_symmetries": ["approximate shift symmetry phi -> phi + const"],
+    "new_parameters_count": 2,
+    "note": "f and Lambda set the potential shape; protected by the shift symmetry."
+  },
+  "structural_features": ["pseudo_goldstone", "shift_symmetry", "axion_inflation", "trans_planckian_field"],
+  "composes_with": ["string_axiverse", "peccei_quinn_axion"],
+  "excludes": [],
+  "status": "disfavored",
+  "history": "Freese, Frieman, Olinto (1990), 'Natural inflation with pseudo Nambu-Goldstone bosons', Phys. Rev. Lett. 65, 3233. Aligned natural inflation (Kim-Nilles-Peloso 2004) and N-flation (Dimopoulos-Kachru-McGreevy-Wacker 2008) effectively raise the decay constant; BICEP/Keck has substantially constrained the framework, with weak-gravity-conjecture arguments adding theoretical pressure.",
+  "references": [
+    {
+      "citation": "Freese, Frieman, Olinto, 'Natural inflation with pseudo Nambu-Goldstone bosons', Phys. Rev. Lett. 65, 3233 (1990)",
+      "doi": "10.1103/PhysRevLett.65.3233"
+    }
+  ],
+  "tags": ["inflation", "axion", "natural_inflation", "shift_symmetry"]
+}

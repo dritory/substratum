@@ -1,0 +1,56 @@
+{
+  "id": "clockwork_mechanism",
+  "name": "Clockwork mechanism",
+  "aliases": ["Giudice-McCullough clockwork", "discrete clockwork"],
+  "type": "dynamical",
+  "summary": "Generates exponentially small effective couplings from O(1) fundamental couplings using a chain of N fields connected with universal nearest-neighbour couplings q. The lightest mode has an exponentially suppressed coupling to a localised endpoint, producing apparently 'finely-tuned' small numbers without small fundamental parameters. Applies to scalars, fermions, gauge bosons, and gravitons; provides a flexible framework for Higgs naturalness, axions, neutrino masses, and small mixing angles.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "In the continuum-clockwork limit, the framework becomes equivalent to a linear-dilaton extra dimension and offers a natural-coupling solution to the Higgs hierarchy problem distinct from supersymmetry, compositeness, or extra dimensions in the usual sense."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Small Dirac neutrino masses without Majorana sector: clockwork suppression on a clockwork chain produces y_nu ~ q^N from O(1) Yukawa couplings."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Continuum clockwork with TeV-scale resonances predicts O(few %) coupling deviations testable at HL-LHC."
+    },
+    {
+      "benchmark_id": "axion_haloscope_admx",
+      "effect": "predicts_signal",
+      "note": "Clockwork-axion variants predict QCD axion with relaxed photon coupling g_a gamma, in haloscope-sensitivity windows."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["chain of N copies of a field with nearest-neighbour couplings"],
+    "new_scales": ["clockwork lattice scale and N (chain length)"],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Three new free parameters: chain length N, lattice spacing / cutoff, q (the universal coupling parameter)."
+  },
+  "structural_features": ["lattice_field_chain", "exponential_suppression", "linear_dilaton_dual", "no_small_fundamental_parameters"],
+  "composes_with": ["peccei_quinn_axion", "seesaw_type_i", "froggatt_nielsen"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Choi-Kim (2014) and Kaplan-Rattazzi (2015) introduced 'clockwork axion' constructions. Giudice and McCullough (2016), 'A Clockwork Theory', JHEP 02, 036 (2017), arXiv:1610.07962, generalised to a unified framework for scalars, fermions, gauge bosons, and gravitons. Active model-building activity 2016-present.",
+  "references": [
+    {
+      "citation": "Giudice and McCullough, 'A Clockwork Theory', JHEP 02, 036 (2017)",
+      "arxiv": "1610.07962"
+    },
+    {
+      "citation": "Choi and Kim, 'Comment on \"Aligned natural inflation in supergravity\"', PLB 745, 105 (2015)",
+      "arxiv": "1410.7762"
+    }
+  ],
+  "tags": ["hierarchy", "clockwork", "exponential_suppression", "lattice"]
+}
