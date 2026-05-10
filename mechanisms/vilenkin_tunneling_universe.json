@@ -1,0 +1,39 @@
+{
+  "id": "vilenkin_tunneling_universe",
+  "name": "Vilenkin tunneling universe",
+  "aliases": ["universe from nothing", "tunneling wave function"],
+  "type": "geometric",
+  "summary": "Proposes that the universe is created by quantum tunneling from a state of zero spatial size into a de Sitter space. The tunneling is described by a Hawking-Moss / de Sitter instanton, after which the universe evolves along the lines of inflationary cosmology. Avoids both a big-bang singularity and an arbitrary specification of initial conditions; the boundary condition is that the tunneling wave function is outgoing only.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Combined with inflation, removes the need to specify pre-inflationary initial conditions. Contested because the tunneling boundary condition is mathematically ambiguous (Vilenkin's outgoing-mode prescription vs Hartle-Hawking no-boundary proposal give different probability distributions for inflationary initial conditions)."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Boundary-condition prescription on the wave function of the universe."
+  },
+  "structural_features": ["quantum_cosmology", "wave_function_universe", "tunneling_boundary_condition", "no_singularity"],
+  "composes_with": ["new_inflation", "starobinsky_inflation"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Vilenkin (1982), 'Creation of universes from nothing', Phys. Lett. B 117, 25 — first proposal. Vilenkin (1983), 'Birth of inflationary universes', Phys. Rev. D 27, 2848 — refined formulation. Hartle-Hawking 'no-boundary' wave function (1983) is the main competitor. Quantum-cosmology debate continues without empirical discrimination.",
+  "references": [
+    {
+      "citation": "Vilenkin, 'Creation of universes from nothing', Phys. Lett. B 117, 25 (1982)",
+      "doi": "10.1016/0370-2693(82)90866-8"
+    },
+    {
+      "citation": "Vilenkin, 'Birth of inflationary universes', Phys. Rev. D 27, 2848 (1983)",
+      "doi": "10.1103/PhysRevD.27.2848"
+    }
+  ],
+  "tags": ["quantum_cosmology", "initial_conditions", "tunneling", "wave_function"]
+}

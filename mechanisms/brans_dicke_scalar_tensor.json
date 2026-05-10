@@ -1,0 +1,50 @@
+{
+  "id": "brans_dicke_scalar_tensor",
+  "name": "Brans-Dicke scalar-tensor gravity",
+  "aliases": ["Jordan-Brans-Dicke theory", "scalar-tensor gravity"],
+  "type": "geometric",
+  "summary": "Replaces Newton's constant G by the inverse of a dynamical scalar field phi, giving a scalar-tensor theory of gravity inspired by Mach's principle. The single dimensionless parameter omega controls the deviation from GR; observational tests (Cassini Shapiro delay, lunar laser ranging) push omega > ~40000, recovering GR very closely. Foundational for all subsequent scalar-tensor gravity, Horndeski, and beyond.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Generalisations (Brans-Dicke + potential, scalar-tensor cosmology) accommodate dark energy via slow-roll of phi; specific Lambda value not derived. Modern late-time-acceleration scalar-tensor theories descend from Brans-Dicke."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "Cassini Shapiro delay, LLR, binary-pulsar PPK tests bound omega > 40000 (PPN gamma - 1 < 2.3e-5), forcing the theory into the GR-like regime."
+    },
+    {
+      "benchmark_id": "binary_pulsar_psr_b1913_16",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects",
+      "note": "Pure Brans-Dicke has c_GW = c by construction (only the scalar mode propagates differently); graviton speed bound respected automatically."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["scalar field phi (with phi ~ 1/G)"],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Single dimensionless parameter omega (with omega -> infty recovering GR)."
+  },
+  "structural_features": ["scalar_tensor", "varying_g", "machian", "ppn_extension"],
+  "composes_with": [],
+  "excludes": [],
+  "status": "historical",
+  "history": "Brans and Dicke (1961), 'Mach's principle and a relativistic theory of gravitation', Phys. Rev. 124, 925. Foundational scalar-tensor theory; superseded for late-time cosmology by Horndeski and beyond-Horndeski theories, but observationally still constrained as a benchmark alternative to GR. Cassini 2003 (Bertotti-Iess-Tortora) gave the tightest omega > 4e4 bound.",
+  "references": [
+    {
+      "citation": "Brans and Dicke, 'Mach's principle and a relativistic theory of gravitation', Phys. Rev. 124, 925 (1961)",
+      "doi": "10.1103/PhysRev.124.925"
+    }
+  ],
+  "tags": ["modified_gravity", "scalar_tensor", "brans_dicke", "machian"]
+}
