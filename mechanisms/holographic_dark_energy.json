@@ -1,0 +1,49 @@
+{
+  "id": "holographic_dark_energy",
+  "name": "Holographic dark energy",
+  "aliases": ["Cohen-Kaplan-Nelson", "CKN bound dark energy"],
+  "type": "geometric",
+  "summary": "Imposes a UV-IR connection from black-hole physics: in a region of size L, the maximum entropy of a quantum field theory respecting gravity is set by the area in Planck units (the holographic bound). For the observed universe at the Hubble scale, this caps the vacuum energy density at rho_DE ~ M_Pl^2 / L^2 ~ M_Pl^2 H^2. With L ~ Hubble radius, this naturally reproduces rho_DE ~ (meV)^4 today.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Reframes the puzzle: the question is no longer 'why is rho_Lambda small' but 'why is the appropriate IR scale L the Hubble radius'. Choices of L (Hubble, future event horizon, particle horizon) yield different cosmologies; only some reproduce late-time acceleration without instabilities."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "predicts_signal",
+      "note": "Holographic DE with future-event-horizon IR cutoff predicts a time-varying w(z); compared against DESI Y1 BAO + SN, current data weakly prefer evolving DE which is consistent with this class of models."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["IR cutoff length L (model choice: Hubble, future event horizon, particle horizon)"],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Holographic constant c (O(1)) and IR cutoff choice; no fundamental new fields, just a UV-IR consistency relation."
+  },
+  "structural_features": ["holographic_bound", "uv_ir_connection", "no_fundamental_fields"],
+  "composes_with": [],
+  "excludes": ["quintessence"],
+  "status": "niche",
+  "history": "Cohen, Kaplan, Nelson (1999), 'Effective Field Theory, Black Holes, and the Cosmological Constant', PRL 82, 4971, arXiv:hep-th/9803132 — proposed the UV-IR mixing argument from black-hole entropy bounds. Holographic dark-energy cosmology developed by Li (2004, hep-th/0403127) and many follow-ups. Active in the 2010s-2020s as a candidate explanation for DESI's hint of evolving dark energy.",
+  "references": [
+    {
+      "citation": "Cohen, Kaplan, Nelson, 'Effective Field Theory, Black Holes, and the Cosmological Constant', PRL 82, 4971 (1999)",
+      "arxiv": "hep-th/9803132"
+    },
+    {
+      "citation": "Li, 'A model of holographic dark energy', Phys. Lett. B 603, 1 (2004)",
+      "arxiv": "hep-th/0403127"
+    }
+  ],
+  "tags": ["dark_energy", "holographic", "uv_ir_mixing"]
+}

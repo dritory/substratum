@@ -41,14 +41,14 @@
   "composes_with": ["seesaw_type_i", "peccei_quinn_axion"],
   "excludes": ["mssm"],
   "status": "niche",
-  "history": "Chacko, Goh, Harnik (2006). Fraternal Twin Higgs (Craig, Knapen, Longhitano 2014) addresses cosmological problems by removing twin light fermions. Active research direction in 2015-present.",
+  "history": "Chacko, Goh, Harnik (2006). Orbifold Higgs / neutral naturalness systematics (Craig, Knapen, Longhi 2014, arXiv:1410.6808) generalised the construction; Fraternal Twin Higgs (Craig, Katz, Strassler, Sundrum 2015, arXiv:1501.05310) addresses cosmological problems by removing twin light fermions. Active research direction in 2015-present.",
   "references": [
     {
       "citation": "Chacko, Goh, Harnik, 'The Twin Higgs: Natural electroweak breaking from mirror symmetry', PRL 96, 231802 (2006)",
       "arxiv": "hep-ph/0506256"
     },
     {
-      "citation": "Craig, Knapen, Longhitano, 'A Cornucopia of Compelling Cosmological Compositeness' (2014)",
+      "citation": "Craig, Knapen, Longhi, 'Neutral Naturalness from the Orbifold Higgs', JHEP 03 (2015) 097",
       "arxiv": "1410.6808"
     }
   ],

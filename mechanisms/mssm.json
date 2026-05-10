@@ -49,7 +49,7 @@
     {
       "benchmark_id": "dm_direct_detection_lz",
       "effect": "near_bound",
-      "note": "LZ constrains spin-independent neutralino-nucleon cross-sections to <2e-47 cm^2 at ~30 GeV; viable MSSM neutralino DM remaining is mostly bino-like with coannihilation."
+      "note": "LZ 2024 (4.2 tonne-yr) constrains spin-independent neutralino-nucleon cross-sections to <9.2e-48 cm^2 at the most-sensitive m_chi ~ 36 GeV; viable MSSM neutralino DM remaining is mostly bino-like with coannihilation, well-tempered, or focus-point regions."
     },
     {
       "benchmark_id": "proton_decay_lifetime",

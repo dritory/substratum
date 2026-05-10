@@ -1,0 +1,55 @@
+{
+  "id": "mirror_dark_matter",
+  "name": "Mirror dark matter",
+  "aliases": ["mirror sector", "shadow world"],
+  "type": "symmetry",
+  "summary": "Postulates an exact (or near-exact) duplicate of the Standard Model with an unbroken Z_2 mirror symmetry, interacting with our sector only via gravity and (in some variants) photon-mirror-photon kinetic mixing. Mirror baryons constitute the dark matter; the mirror QCD scale, electroweak scale, and structure-formation properties are inherited from the SM. Distinct from twin Higgs in that mirror DM doesn't address the hierarchy problem on its own.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Naturally produces a dark sector with self-interactions and structure formation similar to baryons; explains the cosmic coincidence Omega_DM/Omega_b ~ 5 if the mirror sector is slightly cooler. Cosmological constraints (BBN N_eff, CMB) require asymmetric reheating."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "n_eff_combined_cmb_bbn",
+      "effect": "near_bound",
+      "note": "Naive mirror model with equal SM and mirror temperatures violates Delta N_eff ~ 0.3 bound; viable mirror DM requires asymmetric inflaton decay or a temperature ratio < 0.5."
+    },
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "predicts_signal",
+      "note": "Mirror photon - SM photon kinetic mixing epsilon ~ 10^-9 - 10^-8 produces a small dark-matter coupling to ordinary matter; targeted by direct-detection experiments at low recoil energies."
+    },
+    {
+      "benchmark_id": "sidm_self_interaction_clusters",
+      "effect": "near_bound",
+      "note": "Mirror baryons self-interact via mirror QCD/EM with sigma/m comparable to ordinary baryon-baryon scattering at small velocities; cluster-merger bounds are non-trivial."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["full SM mirror copy"],
+    "new_scales": ["temperature ratio T'/T < 0.5 (asymmetric reheating)", "kinetic mixing epsilon ~ 10^-9"],
+    "new_symmetries": ["Z_2 mirror"],
+    "new_parameters_count": 3,
+    "note": "Z_2 fixes most parameters as twins of SM. New free parameters: temperature ratio, kinetic mixing, and any explicit Z_2 breaking."
+  },
+  "structural_features": ["mirror_sector", "discrete_symmetry", "z2_stabilisation", "kinetic_mixing"],
+  "composes_with": ["seesaw_type_i"],
+  "excludes": ["twin_higgs"],
+  "status": "niche",
+  "history": "Lee and Yang (1956) speculated about mirror parity; modern mirror dark matter framework developed by Foot, Lew, Volkas (1991); systematic phenomenology by Foot in the 2000s. Foot (2004) 'Experimental Implications of Mirror Matter-Type Dark Matter', IJMPA 19, 3807, summarises the framework. Mirror DM revives periodically in light of small-scale structure and direct-detection anomalies.",
+  "references": [
+    {
+      "citation": "Foot, Lew, Volkas, 'A model with fundamental improper space-time symmetries', Phys. Lett. B 272, 67 (1991)",
+      "doi": "10.1016/0370-2693(91)91013-L"
+    },
+    {
+      "citation": "Foot, 'Experimental implications of mirror matter-type dark matter', Int. J. Mod. Phys. A 19, 3807 (2004)",
+      "doi": "10.1142/S0217751X04020087"
+    }
+  ],
+  "tags": ["dark_matter", "mirror_sector", "discrete_symmetry"]
+}

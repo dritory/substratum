@@ -1,0 +1,57 @@
+{
+  "id": "heterotic_string_compactification",
+  "name": "Heterotic string compactification",
+  "aliases": ["E8 x E8 heterotic on Calabi-Yau", "Calabi-Yau compactification"],
+  "type": "uv_completion",
+  "summary": "Compactify the 10D E8 x E8 heterotic string on a 6D Calabi-Yau manifold with SU(3) holonomy. The condition of unbroken N=1 supersymmetry in 4D forces this geometry; the resulting 4D effective theory has E6 x E8' gauge symmetry and naturally contains SM-like fermion generations. Provides a UV-complete origin for gauge unification, supersymmetry, and (depending on the manifold) flavor structure.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "All gauge couplings descend from a single 10D string coupling; tree-level unification at the string scale ~ 10^17-18 GeV. Loop and threshold corrections are model-dependent."
+    },
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "Requires SUSY in the 4D effective theory; the hierarchy problem is then handed to the SUSY sector. Embeds in MSSM-like or split-SUSY phenomenology."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Yukawa couplings descend from intersection numbers and Calabi-Yau topology; specific compactifications produce realistic mass hierarchies, but the choice of CY is not unique (landscape problem)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "String-scale dimension-6 operators produce p -> e+ pi^0 at rates 10^32-10^36 yr depending on compactification; partial overlap with Super-K/Hyper-K reach."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["string excitations (massive at M_s)", "compactification moduli", "gauge superfields in 4D N=1 multiplets"],
+    "new_scales": ["string scale M_s ~ 10^17-18 GeV", "compactification scale R_CY ~ 1/M_s"],
+    "new_symmetries": ["10D N=1 SUSY broken to 4D N=1 by Calabi-Yau", "E6 (or smaller after Wilson lines)"],
+    "new_parameters_count": 8,
+    "note": "Choice of Calabi-Yau (one of ~10^4 known constructions or 10^500 more general flux vacua), string coupling, moduli VEVs. The 'landscape' is what makes this hard to falsify."
+  },
+  "structural_features": ["uv_completion", "extra_dimensions", "calabi_yau", "supersymmetry", "landscape"],
+  "composes_with": ["mssm", "anthropic_landscape"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Candelas, Horowitz, Strominger, Witten (1985), 'Vacuum Configurations for Superstrings', Nucl. Phys. B 258, 46 — the canonical paper that established Calabi-Yau compactification as the route from 10D heterotic strings to 4D N=1 SUSY phenomenology. Subsequent decades developed orbifold, smooth-CY, and free-fermionic constructions; the 'string landscape' problem (10^500 vacua) emerged from systematic surveys of flux compactifications.",
+  "references": [
+    {
+      "citation": "Candelas, Horowitz, Strominger, Witten, 'Vacuum Configurations for Superstrings', Nucl. Phys. B 258, 46 (1985)",
+      "doi": "10.1016/0550-3213(85)90602-9"
+    }
+  ],
+  "tags": ["string_theory", "uv_completion", "extra_dimensions", "supersymmetry"]
+}

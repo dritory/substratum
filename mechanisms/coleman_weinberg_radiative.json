@@ -1,0 +1,49 @@
+{
+  "id": "coleman_weinberg_radiative",
+  "name": "Coleman-Weinberg radiative symmetry breaking",
+  "aliases": ["CW mechanism", "classically conformal SM", "Bardeen conformal naturalness"],
+  "type": "dynamical",
+  "summary": "The Higgs (or analogous scalar) has a vanishing tree-level mass parameter; electroweak symmetry breaking is driven entirely by radiative corrections to the effective potential, generating a mass scale via dimensional transmutation. In the classically scale-invariant variant, the absence of a mass term is protected by classical conformal symmetry, removing the quadratic-divergence form of the hierarchy problem (Bardeen's argument).",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "If one takes Bardeen's argument seriously, the absence of a fundamental mass term in a classically conformal SM means quadratic divergences are an artefact of the cutoff regulator; the surviving naturalness question is the multiplicative running of dimensionless couplings. Embedding requires extra scalars or a richer symmetry-breaking sector since pure SM Coleman-Weinberg is excluded by m_H."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Classically scale-invariant extensions typically need additional scalars to drive symmetry breaking; their mixing with the Higgs predicts O(few %) coupling deviations within HL-LHC reach."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "predicts_signal",
+      "note": "Strong first-order EW phase transition in many CW-extended models predicts a stochastic GW background at LISA-relevant frequencies."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["additional scalar(s) to drive radiative breaking (singlet, U(1)_B-L scalar, etc.)"],
+    "new_scales": ["dimensional-transmutation scale ~ EW (set by RG running)"],
+    "new_symmetries": ["classical scale invariance (anomalous)"],
+    "new_parameters_count": 3,
+    "note": "New scalar masses and quartic couplings; the EW scale itself is no longer a free parameter but generated dynamically."
+  },
+  "structural_features": ["classical_conformal", "dimensional_transmutation", "rg_driven", "no_quadratic_divergence"],
+  "composes_with": ["seesaw_type_i", "leptogenesis"],
+  "excludes": [],
+  "status": "niche",
+  "history": "Coleman and Weinberg (1973) 'Radiative Corrections as the Origin of Spontaneous Symmetry Breaking', Phys. Rev. D 7, 1888 — introduced the mechanism for scalar QED. Bardeen (1995, FERMILAB-CONF-95-391-T) argued that classical scale invariance softens the hierarchy problem in the SM. Modern revivals (Foot, Kobakhidze, McDonald, Volkas; Iso-Okada-Orikasa) study scalar extensions that realise EW breaking radiatively.",
+  "references": [
+    {
+      "citation": "Coleman and Weinberg, 'Radiative Corrections as the Origin of Spontaneous Symmetry Breaking', Phys. Rev. D 7, 1888 (1973)",
+      "doi": "10.1103/PhysRevD.7.1888"
+    },
+    {
+      "citation": "Bardeen, 'On Naturalness in the Standard Model', FERMILAB-CONF-95-391-T (1995)"
+    }
+  ],
+  "tags": ["hierarchy", "conformal", "radiative", "ewsb"]
+}

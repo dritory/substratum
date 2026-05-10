@@ -1,0 +1,49 @@
+{
+  "id": "babu_mohapatra_parity",
+  "name": "Babu-Mohapatra parity solution to strong CP",
+  "aliases": ["softly broken parity", "left-right parity solution"],
+  "type": "symmetry",
+  "summary": "Solves the strong-CP problem by promoting parity to an exact symmetry of the underlying theory, broken only spontaneously or softly. Above the parity-breaking scale theta = 0 by symmetry. After parity breaking, theta_eff is generated only through CP-violating operators in the mass matrices and stays naturally small. A common realisation lives within left-right symmetric models with a generalised seesaw for quark masses.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "theta_eff vanishes up to one-loop in the minimal Babu-Mohapatra construction; radiative regeneration at higher orders has to be checked model by model. Modern analyses (e.g., de Vries et al. 2021, arXiv:2109.01630) test how robust the cancellation is across realistic constructions."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "strong_cp_theta_qcd",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound",
+      "note": "Loop-induced contributions to theta_eff and quark chromo-EDMs sit close to current bounds; nEDM upgrades will further constrain or rule out specific implementations."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["right-handed quarks (in left-right framework)", "additional Higgs structure to break parity"],
+    "new_scales": ["parity breaking scale ~ 10^4 - 10^11 GeV"],
+    "new_symmetries": ["left-right parity (broken spontaneously or softly)"],
+    "new_parameters_count": 4,
+    "note": "Parity-breaking scale and Higgs sector parameters; the structural role of the symmetry constrains what would otherwise be many free parameters."
+  },
+  "structural_features": ["discrete_symmetry", "left_right_symmetric", "spontaneous_breaking", "no_axion"],
+  "composes_with": ["pati_salam", "so10_gut"],
+  "excludes": ["peccei_quinn_axion", "nelson_barr"],
+  "status": "niche",
+  "history": "Babu and Mohapatra (1989); 'A Solution to the Strong CP Problem Without an Axion', Phys. Rev. D 41, 1286 (1990). Periodically revived; the 2021 analysis of de Vries-Murgui-Stoffer-Walker-Loud (arXiv:2109.01630) tested the robustness of minimal parity solutions and found them tightly constrained but not closed.",
+  "references": [
+    {
+      "citation": "Babu and Mohapatra, 'A Solution to the Strong CP Problem Without an Axion', Phys. Rev. D 41, 1286 (1990)",
+      "doi": "10.1103/PhysRevD.41.1286"
+    },
+    {
+      "citation": "de Vries, Murgui, Stoffer, Walker-Loud, 'Do Minimal Parity Solutions to the Strong CP Problem Work?' (2021)",
+      "arxiv": "2109.01630"
+    }
+  ],
+  "tags": ["strong_cp", "parity", "left_right_symmetric", "no_axion"]
+}

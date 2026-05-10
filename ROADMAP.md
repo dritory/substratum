@@ -25,7 +25,7 @@ problems.
 
 ## Status
 
-### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 35 mechanisms)
+### Populated (75 benchmark entries, 5 data entries, 9 puzzles, 42 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -118,8 +118,9 @@ problems.
   `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
   `gauge_coupling_unification`
 
-**Mechanisms (35, new layer):**
-- Strong-CP: `peccei_quinn_axion`, `nelson_barr`
+**Mechanisms (42, new layer):**
+- Strong-CP: `peccei_quinn_axion`, `nelson_barr`,
+  `babu_mohapatra_parity`
 - Flavor: `froggatt_nielsen`, `modular_flavor_symmetry`,
   `a4_family_symmetry`, `partial_compositeness`,
   `minimal_flavor_violation`
@@ -129,13 +130,20 @@ problems.
   `affleck_dine_baryogenesis`, `gut_baryogenesis`
 - Hierarchy: `mssm`, `twin_higgs`, `relaxion`, `composite_higgs`,
   `large_extra_dimensions_add`, `warped_extra_dimensions_rs`,
-  `nnaturalness`
+  `nnaturalness`, `coleman_weinberg_radiative`
 - Dark matter: `wimp_thermal_freezeout`, `asymmetric_dark_matter`,
-  `ultralight_scalar_dm`, `sterile_neutrino_dm`
-- Unification: `su5_minimal_gut`, `so10_gut`, `pati_salam`
+  `ultralight_scalar_dm`, `sterile_neutrino_dm`,
+  `higgs_portal_scalar_dm`, `mirror_dark_matter`,
+  `wimpless_dark_matter`
+- Unification / UV completion: `su5_minimal_gut`, `so10_gut`,
+  `pati_salam`, `heterotic_string_compactification`
 - Cosmological constant / modified gravity: `anthropic_landscape`,
   `sequestering`, `unimodular_gravity`, `quintessence`,
-  `dgp_braneworld`, `asymptotic_safety_gravity`
+  `dgp_braneworld`, `asymptotic_safety_gravity`,
+  `holographic_dark_energy`
+
+All citations verified against primary literature via direct
+WebSearch lookup against arXiv / journal abstracts.
 
 ### Recently populated
 

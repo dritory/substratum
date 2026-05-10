@@ -16,7 +16,7 @@
     {
       "benchmark_id": "dm_direct_detection_lz",
       "effect": "near_bound",
-      "note": "Spin-independent cross-section for ~30 GeV WIMP bounded < 2e-47 cm^2; vanilla thermal Higgs-portal WIMPs largely excluded."
+      "note": "LZ 2024 spin-independent cross-section bounded < 9.2e-48 cm^2 at m_chi ~ 36 GeV (PRL); vanilla thermal Higgs-portal WIMPs largely excluded above 9 GeV/c^2."
     },
     {
       "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
