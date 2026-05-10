@@ -48,6 +48,26 @@ const STATUS_COLOR = {
   watching:    "#7fb1e1",
 };
 
+const VERDICT_COLOR = {
+  pass:         "#6dc197",
+  fail:         "#d96a6a",
+  contested:    "#d4b974",
+  inapplicable: "#82b9d4",
+  open:         "#3a4257",
+  no_evaluator: "#2a3142",
+};
+
+const VERDICT_ORDER = ["pass", "fail", "contested", "inapplicable", "open", "no_evaluator"];
+
+const VERDICT_LABEL = {
+  pass:         "pass",
+  fail:         "fail",
+  contested:    "contested",
+  inapplicable: "n/a",
+  open:         "open (no prediction)",
+  no_evaluator: "no evaluator",
+};
+
 const PLOTLY_BASE = {
   displaylogo: false,
   responsive: true,
@@ -119,10 +139,8 @@ async function main() {
   // header counts
   document.getElementById("count-tensions").textContent = bundle.counts.tensions;
   document.getElementById("count-benchmarks").textContent = bundle.counts.benchmarks;
-  const puzN = document.getElementById("count-puzzles");
-  if (puzN) puzN.textContent = bundle.counts.puzzles ?? 0;
-  const mechN = document.getElementById("count-mechanisms");
-  if (mechN) mechN.textContent = bundle.counts.mechanisms ?? 0;
+  document.getElementById("count-frameworks").textContent =
+    bundle.counts.frameworks ?? 0;
   document.getElementById("generated-at").textContent =
     new Date(bundle.generated_at).toLocaleString();
 
@@ -130,7 +148,7 @@ async function main() {
   renderTensionsView(bundle);
   renderLandscape(bundle);
   renderBenchmarkCharts(bundle);
-  renderDotAlignment(bundle);
+  renderEvaluation(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
 
@@ -503,287 +521,6 @@ function buildLandscapeHover(p) {
 
 /* ---------- benchmark charts ---------- */
 
-/* ---------- dot-alignment view ---------- */
-
-const ROLE_COLOR = {
-  solves: "#6dc197",
-  explains_pattern: "#7fb1e1",
-  ameliorates: "#e0a04a",
-  requires: "#9ea3b3",
-};
-
-const CONFIDENCE_OPACITY = {
-  established: 0.95,
-  proposed: 0.65,
-  contested: 0.40,
-  disfavored: 0.22,
-};
-
-const MECH_TYPE_COLOR = {
-  symmetry: "#7fb1e1",
-  dynamical: "#e0a04a",
-  anthropic: "#9ea3b3",
-  topological: "#b69adf",
-  uv_completion: "#6dc197",
-  composite: "#d77ea1",
-  geometric: "#82b9d4",
-};
-
-function renderDotAlignment(bundle) {
-  const puzzles = bundle.puzzles || [];
-  const mechanisms = bundle.mechanisms || [];
-  const edges = bundle.alignment_edges || [];
-  if (!puzzles.length || !mechanisms.length) return;
-
-  const mechDegree = new Map();
-  for (const e of edges) {
-    if (e.role === "requires") continue;
-    mechDegree.set(e.mechanism_id, (mechDegree.get(e.mechanism_id) || 0) + 1);
-  }
-
-  // Order puzzles by degree desc; mechanisms by puzzles addressed desc
-  const puzzlesSorted = [...puzzles].sort((a, b) => (b._degree || 0) - (a._degree || 0));
-  const mechsSorted = [...mechanisms].sort(
-    (a, b) => (mechDegree.get(b.id) || 0) - (mechDegree.get(a.id) || 0)
-  );
-
-  const puzY = new Map(puzzlesSorted.map((p, i) => [p.id, puzzlesSorted.length - i]));
-  const mechY = new Map(mechsSorted.map((m, i) => [m.id, mechsSorted.length - i]));
-
-  // Edge traces — one trace per role for legend toggling
-  const traces = [];
-  const roles = ["solves", "explains_pattern", "ameliorates", "requires"];
-  for (const role of roles) {
-    const xs = [];
-    const ys = [];
-    const subEdges = edges.filter((e) => e.role === role);
-    for (const e of subEdges) {
-      const yp = puzY.get(e.puzzle_id);
-      const ym = mechY.get(e.mechanism_id);
-      if (yp == null || ym == null) continue;
-      xs.push(0, 1, null);
-      ys.push(yp, ym, null);
-    }
-    if (xs.length === 0) continue;
-    traces.push({
-      x: xs,
-      y: ys,
-      mode: "lines",
-      type: "scatter",
-      name: role.replace("_", " "),
-      line: { color: ROLE_COLOR[role], width: 1.4 },
-      opacity: 0.55,
-      hoverinfo: "skip",
-      showlegend: true,
-    });
-  }
-
-  // Puzzle markers
-  const pSizes = puzzlesSorted.map((p) => 12 + 5 * Math.sqrt(p._degree || 0));
-  traces.push({
-    x: puzzlesSorted.map(() => 0),
-    y: puzzlesSorted.map((p) => puzY.get(p.id)),
-    text: puzzlesSorted.map((p) => p.id),
-    hovertext: puzzlesSorted.map((p) =>
-      `<b>${escapeHtml(p.name)}</b><br>id: <code>${p.id}</code><br>` +
-      `kind: ${p.kind}<br>` +
-      `addressed by ${p._degree || 0} mechanisms<br>` +
-      truncate(escapeHtml(p.summary || ""), 220)
-    ),
-    customdata: puzzlesSorted.map((p) => p.id),
-    mode: "markers+text",
-    type: "scatter",
-    name: "puzzles",
-    marker: {
-      symbol: "circle",
-      size: pSizes,
-      color: "#d4b974",
-      line: { width: 1.4, color: THEME.ink },
-    },
-    textposition: "middle left",
-    textfont: { family: FONT_MONO, size: 11, color: THEME.ink },
-    hovertemplate: "%{hovertext}<extra></extra>",
-    showlegend: false,
-  });
-
-  // Mechanism markers
-  const mSizes = mechsSorted.map((m) => 8 + 4 * Math.sqrt(mechDegree.get(m.id) || 0));
-  traces.push({
-    x: mechsSorted.map(() => 1),
-    y: mechsSorted.map((m) => mechY.get(m.id)),
-    text: mechsSorted.map((m) => m.id),
-    hovertext: mechsSorted.map((m) =>
-      `<b>${escapeHtml(m.name)}</b><br>id: <code>${m.id}</code><br>` +
-      `type: ${m.type} | status: ${m.status}<br>` +
-      `addresses ${mechDegree.get(m.id) || 0} puzzles | params: ${m._params_count} | ` +
-      `compression: ${(m._compression || 0).toFixed(2)}<br>` +
-      truncate(escapeHtml(m.summary || ""), 240)
-    ),
-    customdata: mechsSorted.map((m) => m.id),
-    mode: "markers+text",
-    type: "scatter",
-    name: "mechanisms",
-    marker: {
-      symbol: "square",
-      size: mSizes,
-      color: mechsSorted.map((m) => MECH_TYPE_COLOR[m.type] || "#888"),
-      line: { width: 1.2, color: THEME.marker_edge },
-    },
-    textposition: "middle right",
-    textfont: { family: FONT_MONO, size: 11, color: THEME.ink_soft },
-    hovertemplate: "%{hovertext}<extra></extra>",
-    showlegend: false,
-  });
-
-  Plotly.newPlot(
-    "chart-bipartite",
-    traces,
-    {
-      margin: { l: 220, r: 240, t: 16, b: 40 },
-      paper_bgcolor: THEME.paper,
-      plot_bgcolor: THEME.plot,
-      font: { family: FONT_BODY, size: 12, color: THEME.ink },
-      xaxis: {
-        showgrid: false,
-        zeroline: false,
-        showticklabels: false,
-        range: [-0.05, 1.05],
-        fixedrange: true,
-      },
-      yaxis: {
-        showgrid: false,
-        zeroline: false,
-        showticklabels: false,
-        range: [
-          0,
-          Math.max(puzzlesSorted.length, mechsSorted.length) + 1,
-        ],
-      },
-      legend: {
-        orientation: "h",
-        x: 0.5,
-        xanchor: "center",
-        y: -0.04,
-        bgcolor: "rgba(0,0,0,0)",
-        font: { size: 11 },
-      },
-      hoverlabel: { font: { family: FONT_MONO, size: 11 }, align: "left" },
-      annotations: [
-        {
-          x: 0, y: puzzlesSorted.length + 0.6,
-          xref: "x", yref: "y",
-          text: "<b>puzzles</b>", showarrow: false,
-          font: { color: THEME.ink, size: 13 },
-        },
-        {
-          x: 1, y: mechsSorted.length + 0.6,
-          xref: "x", yref: "y",
-          text: "<b>mechanisms</b>", showarrow: false,
-          font: { color: THEME.ink, size: 13 },
-        },
-      ],
-    },
-    PLOTLY_BASE
-  );
-
-  // click handler -> detail panel
-  document.getElementById("chart-bipartite").on("plotly_click", (ev) => {
-    const id = ev.points[0]?.customdata;
-    if (!id) return;
-    const entry = puzzles.find((p) => p.id === id) || mechanisms.find((m) => m.id === id);
-    if (entry) {
-      const layer = puzzles.includes(entry) ? "puzzle" : "mechanism";
-      const enrich = { ...entry, _layer: layer };
-      // reuse the browse panel to show detail; create one inline if not present
-      let panel = document.getElementById("dotalign-detail");
-      if (!panel) {
-        panel = el("aside", { id: "dotalign-detail", class: "detail-panel", hidden: true });
-        document.getElementById("view-dotalign").appendChild(panel);
-      }
-      showDetail(enrich, "dotalign-detail");
-    }
-  });
-
-  // Compression bar chart
-  const mechByCompression = [...mechanisms].sort((a, b) => (b._compression || 0) - (a._compression || 0));
-  Plotly.newPlot(
-    "chart-compression",
-    [
-      {
-        type: "bar",
-        orientation: "h",
-        x: mechByCompression.map((m) => m._compression || 0),
-        y: mechByCompression.map((m) => m.id),
-        text: mechByCompression.map(
-          (m) =>
-            `${m._puzzles_closed} closed / ${m._params_count} params | ` +
-            `type ${m.type} | status ${m.status}`
-        ),
-        marker: {
-          color: mechByCompression.map((m) => MECH_TYPE_COLOR[m.type] || "#888"),
-          line: { width: 0.8, color: THEME.marker_edge },
-        },
-        hovertemplate: "<b>%{y}</b><br>compression %{x:.3f}<br>%{text}<extra></extra>",
-      },
-    ],
-    {
-      margin: { l: 200, r: 30, t: 16, b: 50 },
-      paper_bgcolor: THEME.paper,
-      plot_bgcolor: THEME.plot,
-      font: { family: FONT_BODY, size: 12, color: THEME.ink },
-      xaxis: {
-        title: { text: "compression = puzzles closed / parameters introduced" },
-        gridcolor: THEME.grid,
-        zeroline: false,
-      },
-      yaxis: {
-        autorange: "reversed",
-        gridcolor: THEME.grid_soft,
-        tickfont: { family: FONT_MONO, size: 11 },
-      },
-    },
-    PLOTLY_BASE
-  );
-
-  // Convergent puzzles chart
-  const puzByDegree = [...puzzles].sort((a, b) => (b._degree || 0) - (a._degree || 0));
-  Plotly.newPlot(
-    "chart-convergent",
-    [
-      {
-        type: "bar",
-        orientation: "h",
-        x: puzByDegree.map((p) => p._degree || 0),
-        y: puzByDegree.map((p) => p.id),
-        text: puzByDegree.map((p) => `kind: ${p.kind}`),
-        marker: {
-          color: "#d4b974",
-          line: { width: 0.8, color: THEME.marker_edge },
-        },
-        hovertemplate: "<b>%{y}</b><br>%{x} mechanisms<br>%{text}<extra></extra>",
-      },
-    ],
-    {
-      margin: { l: 240, r: 30, t: 16, b: 50 },
-      paper_bgcolor: THEME.paper,
-      plot_bgcolor: THEME.plot,
-      font: { family: FONT_BODY, size: 12, color: THEME.ink },
-      xaxis: {
-        title: { text: "number of mechanisms addressing the puzzle" },
-        gridcolor: THEME.grid,
-        zeroline: false,
-        dtick: 1,
-      },
-      yaxis: {
-        autorange: "reversed",
-        gridcolor: THEME.grid_soft,
-        tickfont: { family: FONT_MONO, size: 11 },
-      },
-    },
-    PLOTLY_BASE
-  );
-}
-
 function renderBenchmarkCharts(bundle) {
   const byKind = countBy(bundle.benchmarks, (b) => b.kind);
   const byEval = countBy(bundle.benchmarks, (b) => b._evaluator_status || "(none)");
@@ -843,6 +580,516 @@ function renderBenchmarkCharts(bundle) {
     },
     PLOTLY_BASE
   );
+}
+
+/* ---------- evaluation ---------- */
+
+function renderEvaluation(bundle) {
+  const matrix = document.getElementById("verdict-matrix");
+  const tallyEl = document.getElementById("chart-eval-tally");
+  const legendEl = document.getElementById("verdict-legend");
+
+  if (!bundle.evaluation || !bundle.evaluation.frameworks?.length) {
+    matrix.innerHTML =
+      '<div class="matrix-empty">' +
+      "No evaluation data was bundled — add a framework JSON to <code>frameworks/</code> " +
+      "and rerun <code>scripts/build_site.py</code>." +
+      "</div>";
+    tallyEl.innerHTML = "";
+    return;
+  }
+
+  // legend
+  legendEl.innerHTML = "";
+  for (const status of VERDICT_ORDER) {
+    legendEl.appendChild(
+      el(
+        "span",
+        {
+          class: "sw",
+          style: `--swatch:${VERDICT_COLOR[status]}`,
+        },
+        VERDICT_LABEL[status]
+      )
+    );
+  }
+
+  const frameworks = bundle.evaluation.frameworks;
+  const verdicts = bundle.evaluation.verdicts;
+
+  // index verdicts by (framework_id, benchmark_id)
+  const verdictMap = new Map();
+  for (const v of verdicts) {
+    verdictMap.set(`${v.framework_id}|${v.benchmark_id}`, v);
+  }
+
+  // benchmarks ordered by pass-rate ascending? actually we want easy on
+  // the left, hard on the right per the copy. compute pass fraction:
+  const benchOrder = bundle.benchmarks
+    .map((b) => {
+      let total = 0;
+      let pass = 0;
+      for (const fw of frameworks) {
+        const v = verdictMap.get(`${fw.id}|${b.id}`);
+        if (!v) continue;
+        if (v.status === "open") continue; // unscored doesn't count toward difficulty
+        total += 1;
+        if (v.status === "pass" || v.status === "inapplicable") pass += 1;
+      }
+      return {
+        id: b.id,
+        name: b.name,
+        kind: b.kind,
+        passFrac: total ? pass / total : 1.0,
+        scored: total,
+      };
+    })
+    .sort((a, b) => b.passFrac - a.passFrac || a.name.localeCompare(b.name));
+
+  renderTallyChart(frameworks, tallyEl);
+  renderCoverage(frameworks, bundle, verdictMap);
+  renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+
+  document
+    .getElementById("eval-hide-open")
+    .addEventListener("change", () => {
+      renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+    });
+}
+
+function renderTallyChart(frameworks, el) {
+  const traces = VERDICT_ORDER.map((status) => ({
+    name: VERDICT_LABEL[status],
+    x: frameworks.map((fw) => fw.tally?.[status] || 0),
+    y: frameworks.map((fw) => fw.name),
+    type: "bar",
+    orientation: "h",
+    marker: { color: VERDICT_COLOR[status] },
+    hovertemplate: `${VERDICT_LABEL[status]}: %{x}<extra>%{y}</extra>`,
+  }));
+
+  Plotly.newPlot(
+    el,
+    traces,
+    {
+      barmode: "stack",
+      margin: { l: 200, r: 30, t: 12, b: 36 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        gridcolor: THEME.grid,
+        title: { text: "benchmarks", font: { size: 11 } },
+      },
+      yaxis: {
+        automargin: true,
+        tickfont: { family: FONT_BODY, size: 12 },
+      },
+      legend: {
+        orientation: "h",
+        y: -0.22,
+        x: 0,
+        bgcolor: "rgba(0,0,0,0)",
+        font: { size: 11 },
+      },
+      hoverlabel: { font: { family: FONT_MONO, size: 12 } },
+    },
+    PLOTLY_BASE
+  );
+}
+
+function renderCoverage(frameworks, bundle, verdictMap) {
+  const grid = document.getElementById("grid-eval-coverage");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  // group benchmarks by category, in the bundle's facet order
+  const categories = bundle.facets.benchmark_categories || [];
+  const labels = bundle.facets.category_labels || {};
+  const byCategory = {};
+  for (const cat of categories) byCategory[cat] = [];
+  for (const b of bundle.benchmarks) {
+    const cat = b._category || "uncategorized";
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(b);
+  }
+
+  // Categories are rendered in the same order on every card so visual
+  // comparison framework-vs-framework lines up by row. Order is fixed by
+  // total benchmarks descending — the broadest physics areas at the top.
+  const categoryOrder = [...categories].sort(
+    (a, b) => (byCategory[b]?.length || 0) - (byCategory[a]?.length || 0)
+  );
+  // Pad labels to the same character count so the mono-font y-axis ticks
+  // visually left-align across rows (and across cards).
+  const labelWidth = Math.max(
+    ...categoryOrder.map((c) => (labels[c] || c).length)
+  );
+  const NBSP = " ";
+  const padLabel = (s) => s + NBSP.repeat(Math.max(0, labelWidth - s.length));
+
+  for (const fw of frameworks) {
+    // tally per category
+    const rows = categoryOrder.map((cat) => {
+      const counts = { pass: 0, fail: 0, contested: 0, inapplicable: 0, open: 0, no_evaluator: 0 };
+      let total = 0;
+      for (const b of byCategory[cat] || []) {
+        const v = verdictMap.get(`${fw.id}|${b.id}`);
+        const status = v ? v.status : "open";
+        counts[status] = (counts[status] || 0) + 1;
+        total += 1;
+      }
+      const open = counts.open + counts.no_evaluator;
+      return { cat, label: padLabel(labels[cat] || cat), counts, total, open };
+    });
+
+    const cardId = `coverage-${fw.id}`;
+    const card = el(
+      "div",
+      { class: "coverage-card" },
+      el("h4", {}, fw.name),
+      el("div", { class: "chart", id: cardId })
+    );
+    grid.appendChild(card);
+
+    const yLabels = rows.map((r) => r.label);
+    const traces = VERDICT_ORDER.map((status) => ({
+      name: VERDICT_LABEL[status],
+      x: rows.map((r) => r.counts[status] || 0),
+      y: yLabels,
+      type: "bar",
+      orientation: "h",
+      marker: { color: VERDICT_COLOR[status] },
+      hovertemplate:
+        `<b>%{y}</b><br>${VERDICT_LABEL[status]}: %{x}<extra></extra>`,
+    }));
+
+    Plotly.newPlot(
+      cardId,
+      traces,
+      {
+        barmode: "stack",
+        margin: { l: 130, r: 24, t: 8, b: 36 },
+        paper_bgcolor: THEME.paper,
+        plot_bgcolor: THEME.plot,
+        font: { family: FONT_BODY, size: 11, color: THEME.ink },
+        xaxis: {
+          gridcolor: THEME.grid,
+          title: { text: "benchmarks", font: { size: 10 } },
+          dtick: 1,
+        },
+        yaxis: {
+          automargin: true,
+          tickfont: { family: FONT_MONO, size: 11, color: THEME.ink_soft },
+          autorange: "reversed",
+          // Identical category order across cards (set explicitly so Plotly
+          // doesn't reorder when traces happen to be empty in some columns).
+          categoryorder: "array",
+          categoryarray: rows.map((r) => r.label),
+        },
+        showlegend: false,
+        hoverlabel: { font: { family: FONT_MONO, size: 11 } },
+      },
+      PLOTLY_BASE
+    );
+  }
+}
+
+function renderMatrix(frameworks, benchOrder, verdictMap, bundle, root) {
+  const hideOpen = document.getElementById("eval-hide-open")?.checked;
+  const cols = hideOpen
+    ? benchOrder.filter((b) => {
+        // keep if any framework has a non-open verdict for this benchmark
+        return frameworks.some((fw) => {
+          const v = verdictMap.get(`${fw.id}|${b.id}`);
+          return v && v.status !== "open";
+        });
+      })
+    : benchOrder;
+
+  root.innerHTML = "";
+  if (!cols.length) {
+    root.appendChild(
+      el(
+        "div",
+        { class: "matrix-empty" },
+        "No benchmarks to show with current filters."
+      )
+    );
+    return;
+  }
+
+  const grid = el("div", {
+    class: "matrix-grid",
+    style: `grid-template-columns: minmax(220px, 320px) repeat(${cols.length}, 18px); grid-template-rows: 9rem repeat(${frameworks.length}, 22px);`,
+  });
+
+  // header row: top-left empty (sticky corner), then column labels
+  grid.appendChild(el("div", { class: "matrix-corner" }, ""));
+  for (const b of cols) {
+    grid.appendChild(
+      el(
+        "div",
+        {
+          class: "matrix-col-label",
+          title: `${b.name} — ${(b.passFrac * 100).toFixed(0)}% pass-rate`,
+          on: {
+            click: () => {
+              const bench = bundle.benchmarks.find((x) => x.id === b.id);
+              if (bench) showDetail(bench, "evaluation-detail");
+            },
+          },
+        },
+        b.name
+      )
+    );
+  }
+
+  // data rows
+  for (const fw of frameworks) {
+    grid.appendChild(
+      el(
+        "div",
+        {
+          class: "matrix-row-label",
+          on: {
+            click: () => showFrameworkDetail(fw, bundle),
+          },
+        },
+        fw.name
+      )
+    );
+    for (const b of cols) {
+      const v = verdictMap.get(`${fw.id}|${b.id}`);
+      const status = v ? v.status : "open";
+      const cell = el("div", {
+        class: "matrix-cell",
+        "data-status": status,
+        title: `${fw.name} × ${b.name}\n${VERDICT_LABEL[status]}${
+          v && v.score != null ? ` (score ${v.score.toFixed(2)})` : ""
+        }${v && v.note ? `\n${v.note}` : ""}`,
+        on: {
+          click: () => showVerdictDetail(v, fw, b, bundle),
+        },
+      });
+      grid.appendChild(cell);
+    }
+  }
+
+  root.appendChild(grid);
+}
+
+function showVerdictDetail(verdict, fwSummary, benchSummary, bundle) {
+  // Build a synthetic detail entry combining verdict + framework + benchmark.
+  const benchFull = bundle.benchmarks.find((b) => b.id === benchSummary.id);
+  const status = verdict?.status || "open";
+  const panel = document.getElementById("evaluation-detail");
+  panel.innerHTML = "";
+
+  panel.appendChild(
+    el(
+      "header",
+      {},
+      el("h3", {}, `${fwSummary.name}  ×  ${benchSummary.name}`),
+      el(
+        "button",
+        {
+          class: "close",
+          "aria-label": "close",
+          on: { click: () => panel.setAttribute("hidden", "") },
+        },
+        "×"
+      )
+    )
+  );
+
+  const statusBadge = el(
+    "span",
+    {
+      class: "pill",
+      style: `background:${VERDICT_COLOR[status]};color:#0a0d12;font-weight:600`,
+    },
+    VERDICT_LABEL[status]
+  );
+  const pills = el("div", { style: "margin-bottom:0.6rem" });
+  pills.appendChild(statusBadge);
+  if (verdict?.score != null) {
+    pills.appendChild(
+      el("span", { class: "pill" }, `score ${verdict.score.toFixed(3)}`)
+    );
+  }
+  if (verdict?.kind) pills.appendChild(el("span", { class: "pill" }, "kind: " + verdict.kind));
+  panel.appendChild(pills);
+
+  if (verdict?.note) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Verdict note"),
+        el("p", {}, verdict.note)
+      )
+    );
+  }
+
+  if (verdict?.value !== undefined && verdict?.value !== null) {
+    const v = verdict;
+    const valueLine = `${v.value}${v.uncertainty != null ? " ± " + v.uncertainty : ""}${v.units ? " " + v.units : ""}`;
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Framework prediction"),
+        el("p", { class: "mono" }, valueLine),
+        v.reference ? el("p", { style: "color:var(--ink-faint);font-size:0.85rem" }, v.reference) : null
+      )
+    );
+  }
+
+  if (benchFull?.requirement) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Benchmark requirement"),
+        el("p", {}, benchFull.requirement)
+      )
+    );
+  }
+  if (benchFull?.procedural?.bound_in_parameterization) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Bound"),
+        el("p", { class: "mono" }, benchFull.procedural.bound_in_parameterization)
+      )
+    );
+  }
+
+  panel.appendChild(
+    el(
+      "section",
+      {},
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/frameworks/${fwSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `frameworks/${fwSummary.id}.json →`
+      ),
+      el("br", {}),
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/benchmarks/${benchSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `benchmarks/${benchSummary.id}.json →`
+      )
+    )
+  );
+
+  panel.removeAttribute("hidden");
+}
+
+function showFrameworkDetail(fwSummary, bundle) {
+  const panel = document.getElementById("evaluation-detail");
+  panel.innerHTML = "";
+
+  panel.appendChild(
+    el(
+      "header",
+      {},
+      el("h3", {}, fwSummary.name),
+      el(
+        "button",
+        {
+          class: "close",
+          "aria-label": "close",
+          on: { click: () => panel.setAttribute("hidden", "") },
+        },
+        "×"
+      )
+    )
+  );
+
+  // tally pills
+  const pills = el("div", { style: "margin-bottom:0.6rem" });
+  for (const status of VERDICT_ORDER) {
+    const n = fwSummary.tally?.[status] || 0;
+    if (!n) continue;
+    pills.appendChild(
+      el(
+        "span",
+        {
+          class: "pill",
+          style: `background:${VERDICT_COLOR[status]};color:#0a0d12;font-weight:600`,
+        },
+        `${n} ${VERDICT_LABEL[status]}`
+      )
+    );
+  }
+  panel.appendChild(pills);
+
+  if (fwSummary.summary) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Summary"),
+        el("p", {}, fwSummary.summary)
+      )
+    );
+  }
+
+  if (fwSummary.lineage?.length) {
+    const ul = el("ul", {});
+    for (const r of fwSummary.lineage) {
+      const arxiv = r.arxiv ? ` arXiv:${r.arxiv}` : "";
+      const doi = r.doi ? ` doi:${r.doi}` : "";
+      ul.appendChild(el("li", {}, (r.citation || "") + arxiv + doi));
+    }
+    panel.appendChild(
+      el("section", {}, el("h4", {}, "Lineage"), ul)
+    );
+  }
+
+  if (fwSummary.tags?.length) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Tags"),
+        el(
+          "div",
+          {},
+          ...fwSummary.tags.map((t) => el("span", { class: "pill" }, t))
+        )
+      )
+    );
+  }
+
+  panel.appendChild(
+    el(
+      "section",
+      {},
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/frameworks/${fwSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `frameworks/${fwSummary.id}.json →`
+      )
+    )
+  );
+
+  panel.removeAttribute("hidden");
 }
 
 /* ---------- browse ---------- */
@@ -1001,6 +1248,8 @@ function entryMatches(e) {
       e.id,
       e.name,
       (e.tags || []).join(" "),
+      e._category,
+      e._category_label,
       e.summary || "",
       e.requirement || "",
       e.observable && e.observable.symbol,
@@ -1061,12 +1310,7 @@ function showDetail(entry, panelId) {
   const panel = document.getElementById(panelId);
   panel.innerHTML = "";
 
-  const sourceFolder = (
-    entry._layer === "tension" ? "data" :
-    entry._layer === "puzzle" ? "puzzles" :
-    entry._layer === "mechanism" ? "mechanisms" :
-    "benchmarks"
-  );
+  const sourceFolder = entry._layer === "tension" ? "data" : "benchmarks";
   const sourceUrl = `${REPO_BLOB}/${sourceFolder}/${entry.id}.json`;
 
   panel.appendChild(

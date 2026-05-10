@@ -72,6 +72,54 @@ def score_one(benchmark: dict, framework: dict) -> Verdict:
     return evaluator(benchmark, prediction)
 
 
+def compute_verdicts(
+    frameworks: list[dict], benchmarks: dict[str, dict]
+) -> dict:
+    """Score every (framework, benchmark) pair and return a structured payload.
+
+    Shape:
+      {
+        "frameworks": [{"id", "name", "summary", "lineage", "tags", "tally": {...}}, ...],
+        "verdicts":   [{"framework_id", "benchmark_id", "status", "score", "note", "reference", "kind"}, ...]
+      }
+    """
+    fw_records: list[dict] = []
+    verdicts: list[dict] = []
+
+    for fw in frameworks:
+        tally: dict[str, int] = {}
+        for bench_id, bench in benchmarks.items():
+            v = score_one(bench, fw)
+            tally[v.status] = tally.get(v.status, 0) + 1
+            pred = (fw.get("predictions") or {}).get(bench_id) or {}
+            verdicts.append(
+                {
+                    "framework_id": fw["id"],
+                    "benchmark_id": bench_id,
+                    "status": v.status,
+                    "score": v.score,
+                    "note": v.note,
+                    "kind": pred.get("kind"),
+                    "value": pred.get("value"),
+                    "uncertainty": pred.get("uncertainty"),
+                    "units": pred.get("units"),
+                    "reference": pred.get("reference"),
+                }
+            )
+        fw_records.append(
+            {
+                "id": fw["id"],
+                "name": fw["name"],
+                "summary": fw.get("summary", ""),
+                "lineage": fw.get("lineage", []),
+                "tags": fw.get("tags", []),
+                "tally": tally,
+            }
+        )
+
+    return {"frameworks": fw_records, "verdicts": verdicts}
+
+
 def render(frameworks: list[dict], benchmarks: dict[str, dict]) -> str:
     lines: list[str] = []
     lines.append("# Framework scoring report\n")
@@ -103,7 +151,8 @@ def render(frameworks: list[dict], benchmarks: dict[str, dict]) -> str:
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("frameworks", nargs="*", help="framework ids to score (default: all)")
-    parser.add_argument("--output", "-o", type=Path, help="write report to file instead of stdout")
+    parser.add_argument("--output", "-o", type=Path, help="write markdown report to file instead of stdout")
+    parser.add_argument("--json", type=Path, help="write structured JSON report to this path")
     args = parser.parse_args(argv[1:])
 
     frameworks = collect_frameworks(args.frameworks)
@@ -111,12 +160,17 @@ def main(argv: list[str]) -> int:
         print("no frameworks found", file=sys.stderr)
         return 1
     benchmarks = collect_benchmarks()
-    report = render(frameworks, benchmarks)
 
+    if args.json:
+        payload = compute_verdicts(frameworks, benchmarks)
+        args.json.write_text(json.dumps(payload, indent=2))
+        print(f"wrote {args.json}", file=sys.stderr)
+
+    report = render(frameworks, benchmarks)
     if args.output:
         args.output.write_text(report)
         print(f"wrote {args.output}", file=sys.stderr)
-    else:
+    elif not args.json:
         sys.stdout.write(report)
     return 0
 

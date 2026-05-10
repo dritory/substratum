@@ -3,19 +3,19 @@
   "name": "CPT test from K0 - K0_bar mass difference",
   "kind": "principle_invariance",
   "principle": "cpt",
-  "requirement": "Any candidate framework must respect CPT symmetry to the precision set by the upper bound on the mass difference between the neutral kaon and its antiparticle: |m_{K^0} - m_{K^0_bar}| / m_{K^0} < 6 x 10^-19 (PDG, derived from KLOE and CPLEAR analyses). This is one of the most stringent CPT tests in any system.",
+  "requirement": "Any candidate framework must respect CPT symmetry to the precision set by the upper bound on the mass difference between the neutral kaon and its antiparticle: |m_{K^0} - m_{K^0_bar}| < 4.8 x 10^-19 GeV (95% CL, PDG, derived from CPLEAR + KLOE semileptonic-asymmetry analyses assuming CPT violation enters via the mass matrix only). This is one of the most stringent CPT tests in any system; expressed dimensionlessly, |Delta m / m_K| < 9.6 x 10^-19 (m_K = 0.4977 GeV).",
   "regime": {
     "length_m": 4e-16,
     "energy_ev": 498000000.0,
     "description": "Neutral kaon system; CPT-violating mass splitting would induce specific CP-asymmetries in K_S - K_L oscillation."
   },
   "current_bound": {
-    "value": 6e-19,
+    "value": 4.8e-19,
     "uncertainty": null,
-    "units": "fractional mass difference (dimensionless)",
+    "units": "GeV (absolute upper bound on |m_K0 - m_K0bar|)",
     "experiment": "KLOE + CPLEAR analyses of CP-violating asymmetries in semileptonic K decays",
     "year": 2024,
-    "reference": "Particle Data Group, 'Review of Particle Physics', 2024; CPLEAR Collaboration, PLB 444, 52 (1998); KLOE Collaboration, JHEP 09, 028 (2006)",
+    "reference": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024); CPLEAR Collaboration, 'T-violation and CPT-tests in kaons', PLB 444, 52 (1998); KLOE Collaboration, 'Test of CPT and Lorentz symmetry in entangled neutral kaons with the KLOE experiment', PLB 730, 89 (2014), arXiv:1312.6818",
     "confidence_level": "95% CL"
   },
   "what_it_excludes": "Any framework that violates CPT (e.g., spontaneous CPT breaking in string theory, certain Lorentz-violating extensions) must keep the CPT-violating mass shift below 10^-19. Combined with antihydrogen 1S-2S, neutral B mass differences, and electron g-factor matching to positron, builds a sweeping cross-particle CPT test.",
@@ -36,11 +36,15 @@
     {
       "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)",
       "url": "https://pdg.lbl.gov/",
-      "doi": "10.1093/ptep/ptae060"
+      "doi": "10.1093/ptep/ptae163"
     },
     {
-      "citation": "CPLEAR Collaboration, 'Search for CP, T and CPT violation in K0 - K0_bar oscillations', PLB 444, 52 (1998)",
+      "citation": "CPLEAR Collaboration, Angelopoulos et al., 'T-violation and CPT-tests in neutral-kaon decays', PLB 444, 52 (1998)",
       "doi": "10.1016/S0370-2693(98)01356-2"
+    },
+    {
+      "citation": "KLOE Collaboration, Babusci et al., 'Test of CPT and Lorentz symmetry in entangled neutral kaons with the KLOE experiment', PLB 730, 89 (2014)",
+      "arxiv": "1312.6818"
     },
     {
       "citation": "Kostelecky, 'Sensitivity of CPT tests with neutral mesons', PRD 64, 076001 (2001)",

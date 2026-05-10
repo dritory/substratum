@@ -17,13 +17,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 BENCH_DIR = ROOT / "benchmarks"
-PUZZLE_DIR = ROOT / "puzzles"
-MECH_DIR = ROOT / "mechanisms"
-FRAMEWORK_DIR = ROOT / "frameworks"
+FW_DIR = ROOT / "frameworks"
 OUT_DIR = ROOT / "docs"
 OUT_FILE = OUT_DIR / "data.json"
 
-CLOSING_ROLES = {"solves", "explains_pattern"}
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 NUM_RE = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
 RANGE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*[-–]\s*(\d+(?:\.\d+)?)\s*(?:sigma|σ)?")
@@ -88,19 +87,125 @@ def derive_tension(entry: dict) -> dict:
     return entry
 
 
+# Tag-to-category map. Order matters: the first matching category wins,
+# so place more-specific buckets above more-general ones (e.g. "neutrino"
+# before "flavor_cp" so a flavor-conserving neutrino oscillation entry
+# lands as 'neutrino' rather than 'flavor_cp').
+CATEGORY_RULES = [
+    ("meta", {"meta", "constraint_set", "tensions", "tension"}),
+    ("lorentz_cpt", {"lorentz", "sme", "cpt"}),
+    ("gravity", {
+        "gravity", "gravitational_waves", "ppn", "ppk",
+        "equivalence_principle", "frame_dragging", "fifth_force",
+        "shapiro_delay", "strong_field", "strong_field_gravity",
+        "massive_gravity", "primordial_gw", "dispersion",
+        "dipolar_radiation", "gyroscope", "extra_dimensions", "yukawa",
+        "short_range_force", "casimir", "polarization",
+    }),
+    ("qcd_hadronic", {
+        "qcd", "lattice_qcd", "lattice", "hadron_spectrum", "nucleon",
+        "strong_cp", "nuclear_eos", "nuclear",
+    }),
+    ("cosmology", {
+        "cosmology", "cmb", "bbn", "lambda_cdm", "n_eff", "early_universe",
+        "inflation", "lyman_alpha", "lss", "structure_growth",
+        "redshift_distortions", "spectral_distortion", "dark_energy",
+        "energy_injection", "light_relics", "cmb_damping_tail", "bao",
+        "statistical_isotropy", "cosmic_strings", "small_scale", "lithium",
+        "b_mode",
+    }),
+    ("neutrino", {
+        "neutrino", "neutrinos", "pmns", "oscillation", "msw",
+        "double_beta_decay", "majorana", "lepton_number_violation",
+        "tritium", "sno", "borexino", "matter_effect",
+        "flavor_conversion",
+    }),
+    ("flavor_cp", {
+        "flavor", "cp_violation", "b_meson", "kaon", "fcnc", "lfu",
+        "lepton_universality", "ckm", "v_ud", "kaon_mixing",
+        "d_meson_mixing", "epsilon_k", "weak_decay", "weak_effective_theory",
+        "rare_decay", "radiative_decay", "leptoquark", "mixing",
+        "edm", "clfv", "lfv", "lepton_flavor",
+        "comagnetometer",
+    }),
+    ("electroweak_higgs", {
+        "electroweak", "oblique", "higgs", "smeft", "lhc", "z_prime",
+        "charged_higgs", "susy", "gut", "wilson_coefficient",
+        "baryon_number", "parity_violation", "super_kamiokande",
+    }),
+    ("qed_atomic", {
+        "qed", "anomalous_moment", "lamb_shift", "atomic_physics",
+        "spectroscopy", "hvp", "bound_state", "qed_vacuum", "muonic_atom",
+        "proton_radius", "atomic_clocks", "alpha_variation", "dilaton",
+        "alpha_determination",
+    }),
+    # dark_sector is intentionally below the physics-discipline buckets:
+    # an EP test or a strong-CP entry is more naturally 'gravity' or 'qcd'
+    # even when its dark-sector tag is present. Axion is omitted from
+    # dark_sector keys for the same reason — it slots into qcd_hadronic
+    # (strong CP) or flavor_cp (axion-mediated EDM) when those signals
+    # are present, and still hits dark_sector here when only dark-matter
+    # keys remain (e.g. axion_haloscope_admx via dark_matter+haloscope).
+    ("dark_sector", {
+        "dark_matter", "dark_photon", "dark_sector", "hidden_sector",
+        "haloscope", "helioscope", "ultralight_dark_matter",
+        "warm_dark_matter", "kinetic_mixing", "wimp", "xenon",
+        "indirect_detection", "direct_detection", "sidm", "self_interaction",
+        "primordial_black_holes", "microlensing", "mond", "fermi_lat",
+        "modified_gravity",
+    }),
+    ("astrophysics", {
+        "astrophysics", "neutron_stars", "helioseismology", "sun", "solar",
+        "gzk", "uhecr", "auger", "telescope_array", "smbh", "pulsar",
+        "pulsar_timing", "grb", "stellar_physics", "neutron",
+    }),
+]
+
+CATEGORY_LABEL = {
+    "gravity":           "gravity & GW",
+    "cosmology":         "cosmology",
+    "dark_sector":       "dark sector",
+    "flavor_cp":         "flavor & CP",
+    "neutrino":          "neutrinos",
+    "electroweak_higgs": "EW / Higgs",
+    "qcd_hadronic":      "QCD / hadronic",
+    "qed_atomic":        "QED / atomic / clocks",
+    "lorentz_cpt":       "Lorentz / CPT",
+    "astrophysics":      "astrophysics",
+    "meta":              "meta",
+    "uncategorized":     "uncategorized",
+}
+
+CATEGORY_ORDER = [
+    "gravity", "cosmology", "dark_sector", "flavor_cp", "neutrino",
+    "electroweak_higgs", "qcd_hadronic", "qed_atomic", "lorentz_cpt",
+    "astrophysics", "meta", "uncategorized",
+]
+
+
+def categorize(entry: dict) -> str:
+    tags = set(entry.get("tags") or [])
+    if not tags:
+        return "uncategorized"
+    for cat, keys in CATEGORY_RULES:
+        if tags & keys:
+            return cat
+    return "uncategorized"
+
+
 def derive_benchmark(entry: dict) -> dict:
     regime = entry.get("regime") or {}
     entry["_length_m"] = regime.get("length_m")
     entry["_energy_ev"] = regime.get("energy_ev")
     entry["_evaluator_status"] = (entry.get("procedural") or {}).get("evaluator_status")
+    entry["_category"] = categorize(entry)
+    entry["_category_label"] = CATEGORY_LABEL.get(entry["_category"], entry["_category"])
     entry["_layer"] = "benchmark"
     return entry
 
 
 def load_dir(path: Path) -> list[dict]:
     out = []
-    if not path.exists():
-        return out
     for p in sorted(path.glob("*.json")):
         with p.open() as f:
             try:
@@ -111,69 +216,38 @@ def load_dir(path: Path) -> list[dict]:
     return out
 
 
-def derive_alignment(puzzles: list[dict], mechanisms: list[dict], frameworks: list[dict]) -> dict:
-    """Compute compression scores and edge lists for the dot-alignment view."""
-    edges = []
-    puzzle_degree: dict[str, int] = {p["id"]: 0 for p in puzzles}
-    for m in mechanisms:
-        addressed = m.get("addresses_puzzles", []) or []
-        closed = sum(1 for e in addressed if e.get("role") in CLOSING_ROLES)
-        params = max(int((m.get("introduces") or {}).get("new_parameters_count", 0)), 1)
-        m["_puzzles_closed"] = closed
-        m["_puzzles_addressed"] = len([e for e in addressed if e.get("role") != "requires"])
-        m["_params_count"] = (m.get("introduces") or {}).get("new_parameters_count", 0)
-        m["_compression"] = closed / params
-        m["_violates"] = [
-            e["benchmark_id"]
-            for e in (m.get("touches_benchmarks") or [])
-            if e.get("effect") == "violates"
-        ]
-        for e in addressed:
-            pid = e.get("puzzle_id")
-            if pid is None:
-                continue
-            edges.append({
-                "mechanism_id": m["id"],
-                "puzzle_id": pid,
-                "role": e.get("role"),
-                "confidence": e.get("confidence"),
-                "note": e.get("note", ""),
-            })
-            if e.get("role") != "requires":
-                puzzle_degree[pid] = puzzle_degree.get(pid, 0) + 1
-    for p in puzzles:
-        p["_degree"] = puzzle_degree.get(p["id"], 0)
+def compute_evaluation(benchmarks: list[dict]) -> dict | None:
+    """Run scripts.score.compute_verdicts if frameworks/ has any entries.
 
-    # framework composition: union of puzzles closed by composed mechanisms
-    mech_by_id = {m["id"]: m for m in mechanisms}
-    for fw in frameworks:
-        composed = fw.get("composes_mechanisms", []) or []
-        puzzles_closed: set[str] = set()
-        params_total = 0
-        for mid in composed:
-            mm = mech_by_id.get(mid)
-            if mm is None:
-                continue
-            for e in mm.get("addresses_puzzles", []) or []:
-                if e.get("role") in CLOSING_ROLES:
-                    puzzles_closed.add(e["puzzle_id"])
-            params_total += int((mm.get("introduces") or {}).get("new_parameters_count", 0))
-        fw["_composed_puzzles_closed"] = sorted(puzzles_closed)
-        fw["_composed_params"] = params_total
-        fw["_composed_compression"] = (
-            len(puzzles_closed) / max(params_total, 1)
-        )
+    Tolerates evaluator import errors so the site still builds when an
+    evaluator module is broken.
+    """
+    if not FW_DIR.exists():
+        return None
+    fw_paths = sorted(FW_DIR.glob("*.json"))
+    if not fw_paths:
+        return None
+    try:
+        from scripts.score import compute_verdicts
+    except Exception as e:  # pragma: no cover
+        print(f"warning: could not import score.compute_verdicts: {e}", file=sys.stderr)
+        return None
 
-    return {"edges": edges}
+    frameworks = []
+    for p in fw_paths:
+        with p.open() as f:
+            frameworks.append(json.load(f))
+    bench_map = {b["id"]: b for b in benchmarks}
+    try:
+        return compute_verdicts(frameworks, bench_map)
+    except Exception as e:  # pragma: no cover
+        print(f"warning: scoring raised: {e}", file=sys.stderr)
+        return None
 
 
 def main() -> int:
     tensions = [derive_tension(e) for e in load_dir(DATA_DIR)]
     benchmarks = [derive_benchmark(e) for e in load_dir(BENCH_DIR)]
-    puzzles = load_dir(PUZZLE_DIR)
-    mechanisms = load_dir(MECH_DIR)
-    frameworks = load_dir(FRAMEWORK_DIR)
-    alignment = derive_alignment(puzzles, mechanisms, frameworks)
 
     domains_tension = sorted({e.get("domain") for e in tensions if e.get("domain")})
     domains_bench_kinds = sorted({e.get("kind") for e in benchmarks if e.get("kind")})
@@ -181,40 +255,47 @@ def main() -> int:
         {e["_evaluator_status"] for e in benchmarks if e.get("_evaluator_status")}
     )
     statuses = sorted({e.get("status") for e in tensions if e.get("status")})
-    mechanism_types = sorted({m.get("type") for m in mechanisms if m.get("type")})
+
+    evaluation = compute_evaluation(benchmarks)
+    verdict_statuses = sorted(
+        {v["status"] for v in (evaluation or {}).get("verdicts", [])}
+    )
+
+    used_categories = sorted(
+        {b["_category"] for b in benchmarks if b.get("_category")},
+        key=lambda c: (CATEGORY_ORDER.index(c) if c in CATEGORY_ORDER else 999, c),
+    )
 
     bundle = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "counts": {
             "tensions": len(tensions),
             "benchmarks": len(benchmarks),
-            "puzzles": len(puzzles),
-            "mechanisms": len(mechanisms),
-            "frameworks": len(frameworks),
+            "frameworks": len((evaluation or {}).get("frameworks", [])),
         },
         "facets": {
             "tension_domains": domains_tension,
             "tension_statuses": statuses,
             "benchmark_kinds": domains_bench_kinds,
             "benchmark_evaluator_statuses": evaluator_statuses,
-            "mechanism_types": mechanism_types,
+            "verdict_statuses": verdict_statuses,
+            "benchmark_categories": used_categories,
+            "category_labels": {c: CATEGORY_LABEL[c] for c in used_categories},
         },
         "tensions": tensions,
         "benchmarks": benchmarks,
-        "puzzles": puzzles,
-        "mechanisms": mechanisms,
-        "frameworks": frameworks,
-        "alignment_edges": alignment["edges"],
+        "evaluation": evaluation,
     }
 
     OUT_DIR.mkdir(exist_ok=True)
     with OUT_FILE.open("w") as f:
         json.dump(bundle, f, indent=2, sort_keys=False)
+    n_fw = bundle["counts"]["frameworks"]
+    n_verdicts = len((evaluation or {}).get("verdicts", []))
     print(
         f"wrote {OUT_FILE.relative_to(ROOT)}: "
         f"{len(tensions)} tensions, {len(benchmarks)} benchmarks, "
-        f"{len(puzzles)} puzzles, {len(mechanisms)} mechanisms, "
-        f"{len(frameworks)} frameworks, {len(alignment['edges'])} edges"
+        f"{n_fw} frameworks ({n_verdicts} verdicts)"
     )
     return 0
 

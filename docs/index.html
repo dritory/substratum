@@ -22,8 +22,7 @@
     <nav class="counts" aria-label="catalog size">
       <span><b id="count-tensions">…</b><small>open tensions</small></span>
       <span><b id="count-benchmarks">…</b><small>benchmark constraints</small></span>
-      <span><b id="count-puzzles">…</b><small>puzzles</small></span>
-      <span><b id="count-mechanisms">…</b><small>mechanisms</small></span>
+      <span><b id="count-frameworks">…</b><small>frameworks scored</small></span>
     </nav>
   </div>
 </header>
@@ -32,7 +31,7 @@
   <button role="tab" data-view="tensions" class="tab active">Tensions over time</button>
   <button role="tab" data-view="landscape" class="tab">Length–energy landscape</button>
   <button role="tab" data-view="benchmarks" class="tab">Benchmark catalog</button>
-  <button role="tab" data-view="dotalign" class="tab">Dot alignment</button>
+  <button role="tab" data-view="evaluation" class="tab">Framework evaluation</button>
   <button role="tab" data-view="browse" class="tab">Browse all</button>
 </nav>
 
@@ -84,39 +83,50 @@
     </div>
   </section>
 
-  <section id="view-dotalign" class="view" hidden>
+  <section id="view-evaluation" class="view" hidden>
     <header class="view-head">
-      <h2>Puzzles ↔ mechanisms — bipartite alignment</h2>
-      <p>Naturalness puzzles on the left; proposed mechanisms on the right.
-         Each line is a claim that a mechanism addresses a puzzle. Line color
-         encodes the role (<span style="color:#6dc197">solves</span> /
-         <span style="color:#7fb1e1">explains pattern</span> /
-         <span style="color:#e0a04a">ameliorates</span> /
-         <span style="color:#9ea3b3">requires</span>); opacity follows the
-         confidence label. Marker size on each side is the node's degree —
-         large puzzles are convergent battlegrounds, large mechanisms are
-         dot-aligning candidates worth taking seriously.</p>
+      <h2>Framework evaluation</h2>
+      <p>Every framework in <code>frameworks/</code> scored against every
+         benchmark in <code>benchmarks/</code>. The verdict comes from the
+         per-benchmark evaluator under <code>evaluators/</code>: a closed-form
+         compare for trivial bounds, an N-σ check for measurements with
+         uncertainties, or <em>open</em> when the framework supplies no
+         prediction. Hover any cell for the verdict note and the prediction
+         that produced it.</p>
     </header>
-    <div id="chart-bipartite" class="chart very-tall"></div>
 
-    <header class="view-head" style="margin-top:2rem;">
-      <h2>Compression scores</h2>
-      <p>For each mechanism: <code>compression = (puzzles closed) / (free
-         parameters introduced)</code>. Higher is better — a mechanism that
-         closes many puzzles with few new parameters is more compressive,
-         the operational form of "explains everything AND simplifies."
-         Bar color shows mechanism type; markers flag mainstream/niche
-         status.</p>
-    </header>
-    <div id="chart-compression" class="chart tall"></div>
+    <div class="legend" id="verdict-legend"></div>
 
-    <header class="view-head" style="margin-top:2rem;">
-      <h2>Convergent puzzles</h2>
-      <p>How many distinct mechanisms claim each puzzle. High-degree puzzles
-         are the active battlegrounds where compression-superior proposals
-         would carry strong evidential weight.</p>
+    <header class="view-head" style="margin-top:1.4rem;">
+      <h3 class="sub">Per-framework tally</h3>
+      <p>Stacked counts of how each framework's predictions land. <em>Open</em>
+         cells are unscored, not failed — a framework that has not yet supplied
+         a prediction cannot be falsified by the benchmark, only ignored by it.</p>
     </header>
-    <div id="chart-convergent" class="chart"></div>
+    <div id="chart-eval-tally" class="chart"></div>
+
+    <header class="view-head" style="margin-top:1.4rem;">
+      <h3 class="sub">Coverage by physics category</h3>
+      <p>Where each framework actually says something, and where it stays
+         silent. Categories sorted by how many benchmarks the framework leaves
+         <em>open</em> — the long bars at the top are the physics areas the
+         framework currently doesn't address.</p>
+    </header>
+    <div id="grid-eval-coverage" class="grid-coverage"></div>
+
+    <header class="view-head" style="margin-top:1.4rem;">
+      <h3 class="sub">Verdict matrix</h3>
+      <p>Rows are frameworks, columns are benchmarks (sorted by the fraction of
+         frameworks that pass them — left columns are easy benchmarks that most
+         frameworks clear, right columns are discriminating ones).</p>
+    </header>
+    <div class="eval-controls">
+      <label class="eval-toggle">
+        <input type="checkbox" id="eval-hide-open"> hide <code>open</code> columns
+      </label>
+    </div>
+    <div id="verdict-matrix" class="verdict-matrix"></div>
+    <aside id="evaluation-detail" class="detail-panel" hidden></aside>
   </section>
 
   <section id="view-browse" class="view" hidden>

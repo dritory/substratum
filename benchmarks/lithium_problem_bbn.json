@@ -2,14 +2,14 @@
   "id": "lithium_problem_bbn",
   "name": "Cosmological lithium-7 problem",
   "kind": "cosmological_observable",
-  "requirement": "Any candidate framework should account for the persistent ~3-4 sigma discrepancy between the BBN-predicted primordial ^7Li abundance and the value inferred from spectroscopy of metal-poor halo stars. Standard BBN with the Planck-determined baryon density predicts ^7Li/H ~ (4.7 +/- 0.7) x 10^-10, while the Spite-plateau measurement gives ^7Li/H ~ (1.6 +/- 0.3) x 10^-10. The ratio is about a factor of 3.",
+  "requirement": "Any candidate framework should account for the persistent ~3-4 sigma discrepancy between the BBN-predicted primordial ^7Li abundance and the value inferred from spectroscopy of metal-poor halo stars. Standard BBN with the Planck-determined baryon density predicts ^7Li/H ~ (4.96 +/- 0.70) x 10^-10, while the Spite-plateau measurement gives ^7Li/H ~ (1.6 +/- 0.3) x 10^-10. The ratio is about a factor of 3.",
   "regime": {
     "length_m": null,
     "energy_ev": 1e6,
     "description": "BBN epoch (T ~ 30-100 keV) for production; metal-poor halo stars (Pop II, [Fe/H] < -1.5) for observed value."
   },
   "current_bound": {
-    "value": "BBN prediction: ^7Li/H = (4.7 +/- 0.7) x 10^-10; Observed (Spite plateau): (1.6 +/- 0.3) x 10^-10",
+    "value": "BBN prediction: ^7Li/H = (4.96 +/- 0.70) x 10^-10; Observed (Spite plateau): (1.6 +/- 0.3) x 10^-10",
     "uncertainty": null,
     "units": "abundance ratio (dimensionless)",
     "experiment": "Spectroscopy of metal-poor halo stars (Sbordone et al. 2010 and updates)",

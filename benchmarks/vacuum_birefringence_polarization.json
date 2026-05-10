@@ -3,19 +3,19 @@
   "name": "Vacuum birefringence from astrophysical polarization",
   "kind": "principle_invariance",
   "principle": "lorentz_invariance",
-  "requirement": "Any candidate framework must respect the absence of significant vacuum birefringence in photon propagation, as constrained by polarization observations of distant astrophysical sources. Linear polarization of gamma-ray bursts and active galactic nuclei sets bounds on CPT-odd Lorentz-violating photon couplings (k_AF) at |k_AF| < 10^-43 GeV.",
+  "requirement": "Any candidate framework must respect the absence of significant vacuum birefringence in photon propagation, as constrained by polarization observations of distant astrophysical sources. Linear polarization of distant radio galaxies, AGN, and gamma-ray bursts sets bounds on the CPT-odd Lorentz-violating photon coupling (k_AF) at |k_AF^kappa| < ~10^-42 GeV (Carroll-Field-Jackiw original analysis, refined in Kostelecky-Mewes 2002). Individual sky-direction-projected components in the Kostelecky-Russell SME data tables are bounded at the 10^-43 GeV level in some directions; for the dimensionless CPT-even photon coefficients (k_F), the strongest bounds reach |k_F| < 10^-37 from GRB polarimetry.",
   "regime": {
     "length_m": 1e26,
     "energy_ev": 1e3,
     "description": "Cosmological photon propagation distances; from radio polarimetry of AGN to optical polarization of GRBs."
   },
   "current_bound": {
-    "value": "|k_AF| < 1e-43 GeV; CPT-even coefficients |(k_F)| < 10^-37 to 10^-32 depending on direction",
+    "value": "|k_AF^kappa| < ~10^-42 GeV (CPT-odd, distant radio-galaxy polarization, Carroll-Field-Jackiw 1990); component-by-component bounds in the SME data tables reach 10^-43 GeV in some sky directions. CPT-even coefficients |(k_F)| < 10^-37 (GRB polarimetry, Kostelecky-Mewes 2006).",
     "uncertainty": null,
-    "units": "GeV (k_AF); dimensionless (k_F)",
-    "experiment": "Polarization measurements of high-redshift sources (AGN, GRBs) collated in Kostelecky-Russell SME data tables",
-    "year": 2008,
-    "reference": "Kostelecky and Mewes, 'Astrophysical Tests of Lorentz and CPT Violation with Photons', ApJ 689, L1 (2008), arXiv:0809.2846; Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', RMP 83, 11 (2011), updated annually at arXiv:0801.0287",
+    "units": "GeV (k_AF, mass dimension 1); dimensionless (k_F, mass dimension 0)",
+    "experiment": "Polarization measurements of high-redshift sources (radio galaxies, AGN, GRBs) collated in Kostelecky-Russell SME data tables",
+    "year": 2024,
+    "reference": "Carroll, Field, Jackiw, 'Limits on a Lorentz and Parity Violating Modification of Electrodynamics', PRD 41, 1231 (1990); Kostelecky and Mewes, 'Sensitive Polarimetric Search for Relativity Violations in Gamma-Ray Bursts', PRL 97, 140401 (2006), arXiv:hep-ph/0607084; Kostelecky and Russell, 'Data Tables for Lorentz and CPT Violation', RMP 83, 11 (2011), updated annually at arXiv:0801.0287",
     "confidence_level": "varies; 95% CL typical"
   },
   "what_it_excludes": "Astrophysical polarization complements GRB-dispersion bounds (lorentz_invariance_photon entry) by constraining different SME coefficients. Vacuum birefringence would rotate polarization position angles in an energy-dependent way; the absence of such effects in distant sources rules out CPT-violating photon couplings at the 10^-43 GeV level.",
@@ -26,7 +26,7 @@
       "summary": "Modifications of Maxwell equations parameterized by (k_AF), (k_F). Vacuum birefringence enters through the CPT-even tensor's parity-odd components."
     },
     "predicted_observable": "Energy-dependent polarization rotation phi(E) = (k_AF)^0 * L * E for CPT-odd; energy-dependent ellipticity for CPT-even effects.",
-    "bound_in_parameterization": "|k_AF^kappa| < 10^-43 GeV. Direction-dependent coefficients tabulated in arXiv:0801.0287.",
+    "bound_in_parameterization": "|k_AF^kappa| < ~10^-42 GeV (canonical Carroll-Field-Jackiw bound from radio-galaxy polarization); 10^-43 GeV in some sky directions per the SME data tables. Dimensionless k_F coefficients < 10^-37 from GRB polarimetry.",
     "framework_inputs": [
       "Modified photon dispersion / propagation derived from the framework's effective electromagnetic Lagrangian.",
       "Decomposition into SME coefficients via standard formulas."
@@ -34,6 +34,14 @@
     "evaluator_status": "tractable"
   },
   "primary_references": [
+    {
+      "citation": "Carroll, Field, Jackiw, 'Limits on a Lorentz and parity violating modification of electrodynamics', PRD 41, 1231 (1990)",
+      "doi": "10.1103/PhysRevD.41.1231"
+    },
+    {
+      "citation": "Kostelecky and Mewes, 'Sensitive Polarimetric Search for Relativity Violations in Gamma-Ray Bursts', PRL 97, 140401 (2006)",
+      "arxiv": "hep-ph/0607084"
+    },
     {
       "citation": "Kostelecky and Mewes, 'Astrophysical Tests of Lorentz and CPT Violation with Photons', ApJ 689, L1 (2008)",
       "arxiv": "0809.2846"

@@ -36,6 +36,13 @@
   --eval-requires_simulation:  #e0a04a;
   --eval-requires_lattice:     #d77ea1;
   --eval-research_problem:     #9ea3b3;
+  /* verdict palette for the evaluation matrix */
+  --verdict-pass:         #6dc197;
+  --verdict-fail:         #d96a6a;
+  --verdict-contested:    #d4b974;
+  --verdict-inapplicable: #82b9d4;
+  --verdict-open:         #3a4257;
+  --verdict-no_evaluator: #2a3142;
 }
 
 * { box-sizing: border-box; }
@@ -374,6 +381,150 @@ code, .mono {
   background: var(--rule-soft);
   color: var(--ink);
   margin-right: 0.3rem;
+}
+
+/* ---------- evaluation matrix ---------- */
+.legend {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+.legend .sw {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: "JetBrains Mono", monospace; font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.legend .sw::before {
+  content: "";
+  display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 2px;
+  border: 1px solid var(--rule);
+  background: var(--swatch, var(--rule-soft));
+}
+
+.view-head h3.sub {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+  color: var(--ink);
+}
+
+.eval-controls {
+  margin: 0.3rem 0 0.7rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.eval-toggle {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.85rem; color: var(--ink-soft);
+  cursor: pointer;
+}
+.eval-toggle input { cursor: pointer; }
+
+.verdict-matrix {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.4rem 0.4rem 0.4rem 0;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.matrix-grid {
+  display: grid;
+  gap: 2px;
+  align-items: center;
+}
+.matrix-row-label {
+  position: sticky; left: 0;
+  padding: 0.2rem 0.7rem 0.2rem 0.6rem;
+  background: var(--bg-elev);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-right: 1px solid var(--rule-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+  z-index: 3;
+  cursor: pointer;
+}
+.matrix-corner {
+  position: sticky; left: 0; top: 0;
+  background: var(--bg-elev);
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  z-index: 4;
+}
+.matrix-col-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 9rem;
+  padding: 0.3rem 0;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.matrix-col-label:hover { color: var(--ink); }
+.matrix-cell {
+  width: 18px; height: 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  background: var(--cell, var(--verdict-open));
+  border: 1px solid transparent;
+}
+.matrix-cell:hover {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+  z-index: 5;
+}
+.matrix-cell[data-status="pass"]         { background: var(--verdict-pass); }
+.matrix-cell[data-status="fail"]         { background: var(--verdict-fail); }
+.matrix-cell[data-status="contested"]    { background: var(--verdict-contested); }
+.matrix-cell[data-status="inapplicable"] { background: var(--verdict-inapplicable); }
+.matrix-cell[data-status="open"]         { background: var(--verdict-open); }
+.matrix-cell[data-status="no_evaluator"] {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--verdict-no_evaluator) 0 4px,
+    var(--rule-soft) 4px 8px
+  );
+}
+
+.matrix-empty {
+  padding: 1.4rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.grid-coverage {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  min-width: 0;
+}
+.coverage-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.9rem 1rem 0.6rem;
+  min-width: 0;
+}
+.coverage-card h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.coverage-card .chart {
+  border: 0; padding: 0; min-height: 320px;
 }
 
 /* ---------- footer ---------- */

@@ -10,12 +10,12 @@
     "description": "Earth-Moon scale and stellar-binary scale; SEP test sensitivity grows with the gravitational self-energy of the test body."
   },
   "current_bound": {
-    "value": "eta_N = (-0.2 +/- 1.1) x 10^-13 (PSR J0337+1715); |eta_N| < 4.4 x 10^-4 (LLR)",
+    "value": "Delta_acc = (+0.5 +/- 1.8) x 10^-6 (PSR J0337+1715, Voisin 2020), implying |eta_N| < ~2 x 10^-5 after dividing by Delta(E_grav/Mc^2) ~ 0.15 between the neutron star and inner white dwarf; Delta_acc / Earth-Moon = (-0.8 +/- 1.3) x 10^-13 from LLR (Williams 2012), implying |eta_N| < 4.4 x 10^-4 after dividing by Delta(E_grav/Mc^2) ~ 4.4 x 10^-10",
     "uncertainty": null,
-    "units": "Nordtvedt parameter eta_N (dimensionless)",
+    "units": "Delta_acc = fractional acceleration difference (dimensionless); eta_N = Nordtvedt parameter (dimensionless)",
     "experiment": "Lunar Laser Ranging + millisecond pulsar PSR J0337+1715",
-    "year": 2018,
-    "reference": "Archibald et al., 'Universality of free fall from the orbital motion of a pulsar in a stellar triple system', Nature 559, 73 (2018), arXiv:1807.02059; Williams, Turyshev, Boggs, CQG 29, 184004 (2012), arXiv:1203.2150",
+    "year": 2020,
+    "reference": "Voisin et al., 'An improved test of the strong equivalence principle with the pulsar in a triple star system', A&A 638, A24 (2020), arXiv:2005.01388; Archibald et al., Nature 559, 73 (2018), arXiv:1807.02059; Williams, Turyshev, Boggs, CQG 29, 184004 (2012), arXiv:1203.2150",
     "confidence_level": "95% CL"
   },
   "what_it_excludes": "Many alternative theories of gravity (Brans-Dicke-style scalar-tensor with low Brans-Dicke parameter omega, f(R) without screening) predict eta_N > 0 at observable levels. The PSR J0337+1715 bound is six orders of magnitude tighter than LLR for gravitational self-energy ratios characteristic of neutron stars.",
@@ -26,7 +26,7 @@
       "summary": "SEP violation makes a body's gravitational mass m_g differ from its inertial mass m_i by a factor depending on its gravitational self-energy: m_g / m_i = 1 + eta_N (E_grav / m_i c^2)."
     },
     "predicted_observable": "Differential acceleration of a self-gravitating body in an external field, proportional to eta_N times its fractional gravitational self-energy.",
-    "bound_in_parameterization": "|eta_N| < ~3 x 10^-13 (PSR J0337+1715, dominant); |eta_N| < 4.4 x 10^-4 (LLR).",
+    "bound_in_parameterization": "|eta_N| < ~2 x 10^-5 (PSR J0337+1715 via Voisin 2020 Delta_acc bound, dominant for strong-field SEP); |eta_N| < 4.4 x 10^-4 (LLR, weak-field).",
     "framework_inputs": [
       "If the framework predicts SEP violation, compute eta_N either from the PPN parameter combination above, or directly from the dependence of the framework's gravitational self-energy contribution on the external potential."
     ],
