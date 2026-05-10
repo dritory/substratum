@@ -1,0 +1,65 @@
+{
+  "id": "pmns_lepton_mixing_pattern",
+  "name": "PMNS mixing-pattern puzzle (lepton anarchy vs CKM hierarchy)",
+  "aliases": [
+    "neutrino mixing structure",
+    "quark-lepton complementarity"
+  ],
+  "kind": "pattern",
+  "summary": "The lepton mixing matrix (PMNS) has two large mixing angles (theta_12 ~ 33deg, theta_23 ~ 49deg) and a sizeable theta_13 ~ 8.6deg, in stark contrast with the small-and-hierarchical CKM mixing in the quark sector (lambda ~ 0.22). The qualitative difference between quark and lepton mixing demands a distinct flavor mechanism for leptons; tribimaximal patterns and modular flavor symmetries try to capture the structure but the physical origin of large lepton mixing is unsettled.",
+  "characteristic_numbers": [
+    {
+      "symbol": "sin^2(theta_12)",
+      "value": "0.303",
+      "expected": "small (analogous to lambda^2 ~ 0.05 in CKM)",
+      "note": "Solar mixing angle, much larger than the analogous CKM Cabibbo angle."
+    },
+    {
+      "symbol": "sin^2(theta_23)",
+      "value": "0.572",
+      "expected": "small in analogy with V_cb",
+      "note": "Atmospheric mixing near maximal (45deg)."
+    },
+    {
+      "symbol": "sin^2(theta_13)",
+      "value": "0.0223",
+      "expected": "0 (tribimaximal) or small (analogue of V_ub)",
+      "note": "Daya Bay 2012 / RENO 2012 confirmed theta_13 sizable, killed exact tribimaximal."
+    },
+    {
+      "symbol": "theta_C + theta_12",
+      "value": "13deg + 33deg = 46deg ~ pi/4",
+      "expected": "no SM relation",
+      "note": "Quark-lepton complementarity: the sum of Cabibbo angle and solar mixing is suspiciously close to pi/4. May be coincidence or hint at GUT-scale relation."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "neutrino_oscillation_pmns",
+    "neutrinoless_double_beta_decay"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Why the qualitative difference between quark and lepton mixing? Possibilities: (a) anarchic Yukawas in the neutrino sector + Majorana mass (Hall-Murayama-Weiner 2000, 'anarchy'); (b) discrete flavor symmetries (A4, S4, modular) producing tribimaximal-like patterns at leading order; (c) GUT-scale quark-lepton complementarity. None is established."
+    }
+  ],
+  "history": "Quark mixing measured in the 1970s-80s; lepton mixing established with Super-Kamiokande (atmospheric, 1998) and SNO (solar, 2001). theta_13 measured to be sizable by Daya Bay (2012, arXiv:1203.1669) and RENO (2012, arXiv:1204.0626). Anarchy proposal: Hall, Murayama, Weiner (2000), 'Neutrino mass anarchy', Phys. Rev. Lett. 84, 2572, arXiv:hep-ph/9911341. Quark-lepton complementarity: Smirnov (2004, arXiv:hep-ph/0402264).",
+  "references": [
+    {
+      "citation": "Daya Bay Collaboration, 'Observation of electron-antineutrino disappearance at Daya Bay', Phys. Rev. Lett. 108, 171803 (2012)",
+      "arxiv": "1203.1669"
+    },
+    {
+      "citation": "Hall, Murayama, Weiner, 'Neutrino mass anarchy', Phys. Rev. Lett. 84, 2572 (2000)",
+      "arxiv": "hep-ph/9911341"
+    }
+  ],
+  "tags": [
+    "pattern",
+    "flavor",
+    "pmns",
+    "neutrino_mixing"
+  ]
+}

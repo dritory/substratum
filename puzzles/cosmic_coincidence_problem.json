@@ -1,0 +1,59 @@
+{
+  "id": "cosmic_coincidence_problem",
+  "name": "Cosmic coincidence problem",
+  "aliases": [
+    "why-now problem",
+    "Omega_DE / Omega_matter coincidence"
+  ],
+  "kind": "coincidence",
+  "summary": "Dark energy density rho_DE ~ rho_matter today, even though they evolve very differently with redshift (rho_matter ~ a^-3, rho_DE ~ const for Lambda). Through almost all of cosmic history the two densities differ by many orders of magnitude; only a narrow window around z ~ 0 has rho_DE / rho_matter ~ O(1). 'Why now' is the puzzle: the observer-relevant epoch is the unique one where the two are comparable.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Omega_DE / Omega_matter (today)",
+      "value": "0.7 / 0.3 ~ 2.3",
+      "expected": "anywhere from 10^120 to 10^-120 across cosmic history",
+      "note": "Today's coincidence Omega_DE ~ Omega_matter is unique to a narrow z window."
+    },
+    {
+      "symbol": "Omega_DM / Omega_b",
+      "value": "5.4",
+      "expected": "no SM relation between dark and baryonic densities",
+      "note": "Sub-puzzle: dark and baryonic matter densities are also within a factor of six despite (presumably) very different origins."
+    }
+  ],
+  "data_links": [
+    "cosmological_constant"
+  ],
+  "benchmark_links": [
+    "cmb_acoustic_peak_structure",
+    "large_scale_structure_galaxy_power_spectrum"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "'Why now' requires either (a) a tracker / scaling solution where DE tracks matter (quintessence with appropriate potential, k-essence), (b) anthropic selection where observers can only emerge in the era when structure forms, or (c) some deeper dynamical link between the two sectors. None is established."
+    }
+  ],
+  "history": "Articulated explicitly in the late 1990s after the 1998 acceleration discovery. Steinhardt (1997, 'Quintessential cosmology') framed the problem; Carroll (2001), 'The cosmological constant', Living Reviews in Relativity 4, 1, gives a comprehensive review. Tracker quintessence (Zlatev-Wang-Steinhardt 1999) and anthropic arguments (Weinberg 1987) are the leading proposed resolutions.",
+  "references": [
+    {
+      "citation": "Carroll, 'The cosmological constant', Living Reviews in Relativity 4, 1 (2001)",
+      "arxiv": "astro-ph/0004075"
+    },
+    {
+      "citation": "Zlatev, Wang, Steinhardt, 'Quintessence, cosmic coincidence, and the cosmological constant', Phys. Rev. Lett. 82, 896 (1999)",
+      "arxiv": "astro-ph/9807002"
+    },
+    {
+      "citation": "Weinberg, 'Anthropic bound on the cosmological constant', Phys. Rev. Lett. 59, 2607 (1987)",
+      "doi": "10.1103/PhysRevLett.59.2607"
+    }
+  ],
+  "tags": [
+    "coincidence",
+    "cosmology",
+    "dark_energy",
+    "why_now"
+  ]
+}

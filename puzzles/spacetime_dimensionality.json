@@ -1,0 +1,43 @@
+{
+  "id": "spacetime_dimensionality",
+  "name": "Dimensionality of spacetime (3+1)",
+  "aliases": [
+    "why 3+1 dimensions",
+    "Tegmark dimensionality"
+  ],
+  "kind": "consistency",
+  "summary": "Why does observed spacetime have exactly three spatial dimensions and one time dimension? Tegmark (1997) showed that any combination other than 3+1 leads to either non-hyperbolic (unpredictable) physics, no stable atoms, or no stable orbits — providing an anthropic argument for 3+1. String theory typically requires 9+1 or 10+1 dimensions and posits that the extras are compactified or warped to invisibility. The 'why 3+1' question is the choice between anthropic selection and a dynamical compactification mechanism.",
+  "characteristic_numbers": [
+    {
+      "symbol": "(d_space, d_time)",
+      "value": "(3, 1)",
+      "expected": "d > 3 + extra dimensions in string / KK theory",
+      "note": "String theory natively lives in 9+1 (superstrings) or 10+1 (M-theory); compactification produces 4D effective physics. Pure SM + GR has no reason to pick (3, 1)."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "inverse_square_law_short_distance",
+    "casimir_force_precision"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Anthropic arguments (Tegmark 1997) suggest 3+1 is selected because other dimensionalities don't admit observers. UV completions (string theory + compactification, ADD, RS, dark dimension) provide dynamical answers but require selecting a compactification."
+    }
+  ],
+  "history": "Discussed since Ehrenfest (1917) noted no stable orbits for d > 3. Tegmark (1997), 'On the dimensionality of spacetime', Class. Quantum Grav. 14, L69, arXiv:gr-qc/9702052, gave a comprehensive anthropic analysis covering hyperbolicity, atom stability, and orbit stability. String compactifications (Calabi-Yau, flux, dark dimension) are the primary dynamical alternatives.",
+  "references": [
+    {
+      "citation": "Tegmark, 'On the dimensionality of spacetime', Class. Quantum Grav. 14, L69 (1997)",
+      "arxiv": "gr-qc/9702052"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "dimensionality",
+    "anthropic",
+    "string_theory"
+  ]
+}

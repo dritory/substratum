@@ -1,0 +1,52 @@
+{
+  "id": "three_generations_problem",
+  "name": "Three fermion generations",
+  "aliases": [
+    "family replication",
+    "why three generations"
+  ],
+  "kind": "pattern",
+  "summary": "The Standard Model contains exactly three copies (generations) of fermions with identical gauge quantum numbers but different masses spanning many orders of magnitude. The number of light active neutrino species is measured to be N_nu = 2.984 +/- 0.008 from the invisible Z width at LEP. The SM has no principle that picks three: any number of replicas would be consistent with anomaly cancellation. Why three is one of the sharpest structural puzzles in particle physics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "N_gen",
+      "value": "3",
+      "expected": "no SM principle picks any value",
+      "note": "Established by Z lineshape at LEP: N_nu = 2.984 +/- 0.008 (ALEPH-DELPHI-L3-OPAL-SLD 2006). Constrains active neutrinos with m < M_Z/2; new chiral generations are also strongly disfavoured by Higgs production cross-section measurements."
+    },
+    {
+      "symbol": "m_top / m_up",
+      "value": "8e4",
+      "expected": "O(1) within a generation",
+      "gap_log10": 4.9,
+      "note": "Mass spread across generations is enormous; pattern resists any 'natural' origin in pure SM."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Three is unexplained by any SM principle. Family-replication motivates flavor symmetries (Froggatt-Nielsen, A4, S4, modular), GUT embeddings (16 of SO(10) per family), or string-compactification topology (Calabi-Yau Euler number). None has uniquely selected the number 3."
+    }
+  ],
+  "history": "Number-of-generations question debated since the discovery of the muon ('who ordered that?', Rabi). LEP1 (1989-1995) determined N_nu = 3 from Z lineshape; combined LEP-SLD analysis published as ALEPH-DELPHI-L3-OPAL-SLD-LEP-SLD Working Group, 'Precision electroweak measurements on the Z resonance', Phys. Rep. 427, 257 (2006). Modern flavor-model-building tries to derive 3 from string topology or family symmetries; no consensus.",
+  "references": [
+    {
+      "citation": "ALEPH-DELPHI-L3-OPAL-SLD-LEP-SLD Working Group, 'Precision electroweak measurements on the Z resonance', Phys. Rep. 427, 257 (2006)",
+      "arxiv": "hep-ex/0509008"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)",
+      "doi": "10.1093/ptep/ptae163",
+      "url": "https://pdg.lbl.gov/"
+    }
+  ],
+  "tags": [
+    "pattern",
+    "flavor",
+    "family_replication",
+    "structural"
+  ]
+}
