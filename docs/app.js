@@ -48,6 +48,26 @@ const STATUS_COLOR = {
   watching:    "#7fb1e1",
 };
 
+const VERDICT_COLOR = {
+  pass:         "#6dc197",
+  fail:         "#d96a6a",
+  contested:    "#d4b974",
+  inapplicable: "#82b9d4",
+  open:         "#3a4257",
+  no_evaluator: "#2a3142",
+};
+
+const VERDICT_ORDER = ["pass", "fail", "contested", "inapplicable", "open", "no_evaluator"];
+
+const VERDICT_LABEL = {
+  pass:         "pass",
+  fail:         "fail",
+  contested:    "contested",
+  inapplicable: "n/a",
+  open:         "open (no prediction)",
+  no_evaluator: "no evaluator",
+};
+
 const PLOTLY_BASE = {
   displaylogo: false,
   responsive: true,
@@ -119,12 +139,8 @@ async function main() {
   // header counts
   document.getElementById("count-tensions").textContent = bundle.counts.tensions;
   document.getElementById("count-benchmarks").textContent = bundle.counts.benchmarks;
-  const allDomains = new Set([
-    ...bundle.facets.tension_domains,
-    ...bundle.facets.benchmark_kinds.map(() => "_"),
-  ]);
-  document.getElementById("count-domains").textContent =
-    bundle.facets.tension_domains.length;
+  document.getElementById("count-frameworks").textContent =
+    bundle.counts.frameworks ?? 0;
   document.getElementById("generated-at").textContent =
     new Date(bundle.generated_at).toLocaleString();
 
@@ -132,6 +148,7 @@ async function main() {
   renderTensionsView(bundle);
   renderLandscape(bundle);
   renderBenchmarkCharts(bundle);
+  renderEvaluation(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
 
@@ -565,6 +582,516 @@ function renderBenchmarkCharts(bundle) {
   );
 }
 
+/* ---------- evaluation ---------- */
+
+function renderEvaluation(bundle) {
+  const matrix = document.getElementById("verdict-matrix");
+  const tallyEl = document.getElementById("chart-eval-tally");
+  const legendEl = document.getElementById("verdict-legend");
+
+  if (!bundle.evaluation || !bundle.evaluation.frameworks?.length) {
+    matrix.innerHTML =
+      '<div class="matrix-empty">' +
+      "No evaluation data was bundled — add a framework JSON to <code>frameworks/</code> " +
+      "and rerun <code>scripts/build_site.py</code>." +
+      "</div>";
+    tallyEl.innerHTML = "";
+    return;
+  }
+
+  // legend
+  legendEl.innerHTML = "";
+  for (const status of VERDICT_ORDER) {
+    legendEl.appendChild(
+      el(
+        "span",
+        {
+          class: "sw",
+          style: `--swatch:${VERDICT_COLOR[status]}`,
+        },
+        VERDICT_LABEL[status]
+      )
+    );
+  }
+
+  const frameworks = bundle.evaluation.frameworks;
+  const verdicts = bundle.evaluation.verdicts;
+
+  // index verdicts by (framework_id, benchmark_id)
+  const verdictMap = new Map();
+  for (const v of verdicts) {
+    verdictMap.set(`${v.framework_id}|${v.benchmark_id}`, v);
+  }
+
+  // benchmarks ordered by pass-rate ascending? actually we want easy on
+  // the left, hard on the right per the copy. compute pass fraction:
+  const benchOrder = bundle.benchmarks
+    .map((b) => {
+      let total = 0;
+      let pass = 0;
+      for (const fw of frameworks) {
+        const v = verdictMap.get(`${fw.id}|${b.id}`);
+        if (!v) continue;
+        if (v.status === "open") continue; // unscored doesn't count toward difficulty
+        total += 1;
+        if (v.status === "pass" || v.status === "inapplicable") pass += 1;
+      }
+      return {
+        id: b.id,
+        name: b.name,
+        kind: b.kind,
+        passFrac: total ? pass / total : 1.0,
+        scored: total,
+      };
+    })
+    .sort((a, b) => b.passFrac - a.passFrac || a.name.localeCompare(b.name));
+
+  renderTallyChart(frameworks, tallyEl);
+  renderCoverage(frameworks, bundle, verdictMap);
+  renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+
+  document
+    .getElementById("eval-hide-open")
+    .addEventListener("change", () => {
+      renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+    });
+}
+
+function renderTallyChart(frameworks, el) {
+  const traces = VERDICT_ORDER.map((status) => ({
+    name: VERDICT_LABEL[status],
+    x: frameworks.map((fw) => fw.tally?.[status] || 0),
+    y: frameworks.map((fw) => fw.name),
+    type: "bar",
+    orientation: "h",
+    marker: { color: VERDICT_COLOR[status] },
+    hovertemplate: `${VERDICT_LABEL[status]}: %{x}<extra>%{y}</extra>`,
+  }));
+
+  Plotly.newPlot(
+    el,
+    traces,
+    {
+      barmode: "stack",
+      margin: { l: 200, r: 30, t: 12, b: 36 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        gridcolor: THEME.grid,
+        title: { text: "benchmarks", font: { size: 11 } },
+      },
+      yaxis: {
+        automargin: true,
+        tickfont: { family: FONT_BODY, size: 12 },
+      },
+      legend: {
+        orientation: "h",
+        y: -0.22,
+        x: 0,
+        bgcolor: "rgba(0,0,0,0)",
+        font: { size: 11 },
+      },
+      hoverlabel: { font: { family: FONT_MONO, size: 12 } },
+    },
+    PLOTLY_BASE
+  );
+}
+
+function renderCoverage(frameworks, bundle, verdictMap) {
+  const grid = document.getElementById("grid-eval-coverage");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  // group benchmarks by category, in the bundle's facet order
+  const categories = bundle.facets.benchmark_categories || [];
+  const labels = bundle.facets.category_labels || {};
+  const byCategory = {};
+  for (const cat of categories) byCategory[cat] = [];
+  for (const b of bundle.benchmarks) {
+    const cat = b._category || "uncategorized";
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(b);
+  }
+
+  // Categories are rendered in the same order on every card so visual
+  // comparison framework-vs-framework lines up by row. Order is fixed by
+  // total benchmarks descending — the broadest physics areas at the top.
+  const categoryOrder = [...categories].sort(
+    (a, b) => (byCategory[b]?.length || 0) - (byCategory[a]?.length || 0)
+  );
+  // Pad labels to the same character count so the mono-font y-axis ticks
+  // visually left-align across rows (and across cards).
+  const labelWidth = Math.max(
+    ...categoryOrder.map((c) => (labels[c] || c).length)
+  );
+  const NBSP = " ";
+  const padLabel = (s) => s + NBSP.repeat(Math.max(0, labelWidth - s.length));
+
+  for (const fw of frameworks) {
+    // tally per category
+    const rows = categoryOrder.map((cat) => {
+      const counts = { pass: 0, fail: 0, contested: 0, inapplicable: 0, open: 0, no_evaluator: 0 };
+      let total = 0;
+      for (const b of byCategory[cat] || []) {
+        const v = verdictMap.get(`${fw.id}|${b.id}`);
+        const status = v ? v.status : "open";
+        counts[status] = (counts[status] || 0) + 1;
+        total += 1;
+      }
+      const open = counts.open + counts.no_evaluator;
+      return { cat, label: padLabel(labels[cat] || cat), counts, total, open };
+    });
+
+    const cardId = `coverage-${fw.id}`;
+    const card = el(
+      "div",
+      { class: "coverage-card" },
+      el("h4", {}, fw.name),
+      el("div", { class: "chart", id: cardId })
+    );
+    grid.appendChild(card);
+
+    const yLabels = rows.map((r) => r.label);
+    const traces = VERDICT_ORDER.map((status) => ({
+      name: VERDICT_LABEL[status],
+      x: rows.map((r) => r.counts[status] || 0),
+      y: yLabels,
+      type: "bar",
+      orientation: "h",
+      marker: { color: VERDICT_COLOR[status] },
+      hovertemplate:
+        `<b>%{y}</b><br>${VERDICT_LABEL[status]}: %{x}<extra></extra>`,
+    }));
+
+    Plotly.newPlot(
+      cardId,
+      traces,
+      {
+        barmode: "stack",
+        margin: { l: 130, r: 24, t: 8, b: 36 },
+        paper_bgcolor: THEME.paper,
+        plot_bgcolor: THEME.plot,
+        font: { family: FONT_BODY, size: 11, color: THEME.ink },
+        xaxis: {
+          gridcolor: THEME.grid,
+          title: { text: "benchmarks", font: { size: 10 } },
+          dtick: 1,
+        },
+        yaxis: {
+          automargin: true,
+          tickfont: { family: FONT_MONO, size: 11, color: THEME.ink_soft },
+          autorange: "reversed",
+          // Identical category order across cards (set explicitly so Plotly
+          // doesn't reorder when traces happen to be empty in some columns).
+          categoryorder: "array",
+          categoryarray: rows.map((r) => r.label),
+        },
+        showlegend: false,
+        hoverlabel: { font: { family: FONT_MONO, size: 11 } },
+      },
+      PLOTLY_BASE
+    );
+  }
+}
+
+function renderMatrix(frameworks, benchOrder, verdictMap, bundle, root) {
+  const hideOpen = document.getElementById("eval-hide-open")?.checked;
+  const cols = hideOpen
+    ? benchOrder.filter((b) => {
+        // keep if any framework has a non-open verdict for this benchmark
+        return frameworks.some((fw) => {
+          const v = verdictMap.get(`${fw.id}|${b.id}`);
+          return v && v.status !== "open";
+        });
+      })
+    : benchOrder;
+
+  root.innerHTML = "";
+  if (!cols.length) {
+    root.appendChild(
+      el(
+        "div",
+        { class: "matrix-empty" },
+        "No benchmarks to show with current filters."
+      )
+    );
+    return;
+  }
+
+  const grid = el("div", {
+    class: "matrix-grid",
+    style: `grid-template-columns: minmax(220px, 320px) repeat(${cols.length}, 18px); grid-template-rows: 9rem repeat(${frameworks.length}, 22px);`,
+  });
+
+  // header row: top-left empty (sticky corner), then column labels
+  grid.appendChild(el("div", { class: "matrix-corner" }, ""));
+  for (const b of cols) {
+    grid.appendChild(
+      el(
+        "div",
+        {
+          class: "matrix-col-label",
+          title: `${b.name} — ${(b.passFrac * 100).toFixed(0)}% pass-rate`,
+          on: {
+            click: () => {
+              const bench = bundle.benchmarks.find((x) => x.id === b.id);
+              if (bench) showDetail(bench, "evaluation-detail");
+            },
+          },
+        },
+        b.name
+      )
+    );
+  }
+
+  // data rows
+  for (const fw of frameworks) {
+    grid.appendChild(
+      el(
+        "div",
+        {
+          class: "matrix-row-label",
+          on: {
+            click: () => showFrameworkDetail(fw, bundle),
+          },
+        },
+        fw.name
+      )
+    );
+    for (const b of cols) {
+      const v = verdictMap.get(`${fw.id}|${b.id}`);
+      const status = v ? v.status : "open";
+      const cell = el("div", {
+        class: "matrix-cell",
+        "data-status": status,
+        title: `${fw.name} × ${b.name}\n${VERDICT_LABEL[status]}${
+          v && v.score != null ? ` (score ${v.score.toFixed(2)})` : ""
+        }${v && v.note ? `\n${v.note}` : ""}`,
+        on: {
+          click: () => showVerdictDetail(v, fw, b, bundle),
+        },
+      });
+      grid.appendChild(cell);
+    }
+  }
+
+  root.appendChild(grid);
+}
+
+function showVerdictDetail(verdict, fwSummary, benchSummary, bundle) {
+  // Build a synthetic detail entry combining verdict + framework + benchmark.
+  const benchFull = bundle.benchmarks.find((b) => b.id === benchSummary.id);
+  const status = verdict?.status || "open";
+  const panel = document.getElementById("evaluation-detail");
+  panel.innerHTML = "";
+
+  panel.appendChild(
+    el(
+      "header",
+      {},
+      el("h3", {}, `${fwSummary.name}  ×  ${benchSummary.name}`),
+      el(
+        "button",
+        {
+          class: "close",
+          "aria-label": "close",
+          on: { click: () => panel.setAttribute("hidden", "") },
+        },
+        "×"
+      )
+    )
+  );
+
+  const statusBadge = el(
+    "span",
+    {
+      class: "pill",
+      style: `background:${VERDICT_COLOR[status]};color:#0a0d12;font-weight:600`,
+    },
+    VERDICT_LABEL[status]
+  );
+  const pills = el("div", { style: "margin-bottom:0.6rem" });
+  pills.appendChild(statusBadge);
+  if (verdict?.score != null) {
+    pills.appendChild(
+      el("span", { class: "pill" }, `score ${verdict.score.toFixed(3)}`)
+    );
+  }
+  if (verdict?.kind) pills.appendChild(el("span", { class: "pill" }, "kind: " + verdict.kind));
+  panel.appendChild(pills);
+
+  if (verdict?.note) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Verdict note"),
+        el("p", {}, verdict.note)
+      )
+    );
+  }
+
+  if (verdict?.value !== undefined && verdict?.value !== null) {
+    const v = verdict;
+    const valueLine = `${v.value}${v.uncertainty != null ? " ± " + v.uncertainty : ""}${v.units ? " " + v.units : ""}`;
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Framework prediction"),
+        el("p", { class: "mono" }, valueLine),
+        v.reference ? el("p", { style: "color:var(--ink-faint);font-size:0.85rem" }, v.reference) : null
+      )
+    );
+  }
+
+  if (benchFull?.requirement) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Benchmark requirement"),
+        el("p", {}, benchFull.requirement)
+      )
+    );
+  }
+  if (benchFull?.procedural?.bound_in_parameterization) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Bound"),
+        el("p", { class: "mono" }, benchFull.procedural.bound_in_parameterization)
+      )
+    );
+  }
+
+  panel.appendChild(
+    el(
+      "section",
+      {},
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/frameworks/${fwSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `frameworks/${fwSummary.id}.json →`
+      ),
+      el("br", {}),
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/benchmarks/${benchSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `benchmarks/${benchSummary.id}.json →`
+      )
+    )
+  );
+
+  panel.removeAttribute("hidden");
+}
+
+function showFrameworkDetail(fwSummary, bundle) {
+  const panel = document.getElementById("evaluation-detail");
+  panel.innerHTML = "";
+
+  panel.appendChild(
+    el(
+      "header",
+      {},
+      el("h3", {}, fwSummary.name),
+      el(
+        "button",
+        {
+          class: "close",
+          "aria-label": "close",
+          on: { click: () => panel.setAttribute("hidden", "") },
+        },
+        "×"
+      )
+    )
+  );
+
+  // tally pills
+  const pills = el("div", { style: "margin-bottom:0.6rem" });
+  for (const status of VERDICT_ORDER) {
+    const n = fwSummary.tally?.[status] || 0;
+    if (!n) continue;
+    pills.appendChild(
+      el(
+        "span",
+        {
+          class: "pill",
+          style: `background:${VERDICT_COLOR[status]};color:#0a0d12;font-weight:600`,
+        },
+        `${n} ${VERDICT_LABEL[status]}`
+      )
+    );
+  }
+  panel.appendChild(pills);
+
+  if (fwSummary.summary) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Summary"),
+        el("p", {}, fwSummary.summary)
+      )
+    );
+  }
+
+  if (fwSummary.lineage?.length) {
+    const ul = el("ul", {});
+    for (const r of fwSummary.lineage) {
+      const arxiv = r.arxiv ? ` arXiv:${r.arxiv}` : "";
+      const doi = r.doi ? ` doi:${r.doi}` : "";
+      ul.appendChild(el("li", {}, (r.citation || "") + arxiv + doi));
+    }
+    panel.appendChild(
+      el("section", {}, el("h4", {}, "Lineage"), ul)
+    );
+  }
+
+  if (fwSummary.tags?.length) {
+    panel.appendChild(
+      el(
+        "section",
+        {},
+        el("h4", {}, "Tags"),
+        el(
+          "div",
+          {},
+          ...fwSummary.tags.map((t) => el("span", { class: "pill" }, t))
+        )
+      )
+    );
+  }
+
+  panel.appendChild(
+    el(
+      "section",
+      {},
+      el(
+        "a",
+        {
+          href: `${REPO_BLOB}/frameworks/${fwSummary.id}.json`,
+          target: "_blank",
+          rel: "noopener",
+        },
+        `frameworks/${fwSummary.id}.json →`
+      )
+    )
+  );
+
+  panel.removeAttribute("hidden");
+}
+
 /* ---------- browse ---------- */
 
 const FILTER_STATE = {
@@ -721,6 +1248,8 @@ function entryMatches(e) {
       e.id,
       e.name,
       (e.tags || []).join(" "),
+      e._category,
+      e._category_label,
       e.summary || "",
       e.requirement || "",
       e.observable && e.observable.symbol,
