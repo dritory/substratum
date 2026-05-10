@@ -1,0 +1,79 @@
+{
+  "id": "axiogenesis",
+  "name": "Axiogenesis",
+  "aliases": [
+    "Co-Harigaya axiogenesis",
+    "axion-rotation baryogenesis"
+  ],
+  "type": "dynamical",
+  "summary": "Generates the baryon asymmetry from the rotation of the QCD axion (or PQ-charged complex scalar) in the early universe. PQ symmetry is explicitly broken by higher-dimensional operators or thermal effects, inducing rotation; the rotational asymmetry of the PQ charge is then converted to baryon asymmetry via QCD and electroweak sphaleron transitions. Connects axion DM and BAU through the same dynamical field.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 10^-10 for axion decay constants f_a ~ 10^8 - 10^11 GeV with explicit PQ-breaking operators. Predicts a smaller-than-canonical f_a window and connects to LHC searches for new PQ-charged states."
+    },
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "requires",
+      "confidence": "established"
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Same axion field that drives BAU is the DM candidate; abundance follows from misalignment + kinetic-misalignment mechanisms."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "axion_haloscope_admx",
+      "effect": "predicts_signal",
+      "note": "Predicts a narrower f_a window than vanilla axion DM; ADMX-class haloscopes sensitive."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "PQ-charged complex scalar with explicit-breaking operators"
+    ],
+    "new_scales": [
+      "PQ scale f_a ~ 10^8 - 10^11 GeV",
+      "explicit-PQ-breaking scale"
+    ],
+    "new_symmetries": [
+      "approximate U(1)_PQ"
+    ],
+    "new_parameters_count": 3,
+    "note": "Builds on PQ axion. New parameters: PQ-breaking operator coefficients, initial-condition phase."
+  },
+  "structural_features": [
+    "axion_rotation",
+    "pq_breaking",
+    "sphaleron_conversion",
+    "linked_dm_bau"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "string_axiverse"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Co and Harigaya (2019), 'Axiogenesis', Phys. Rev. Lett. 124, 111602 (2020), arXiv:1910.02080. Active model-building and phenomenology 2020-present, including lepto-axiogenesis and heavy-QCD-axion variants.",
+  "references": [
+    {
+      "citation": "Co and Harigaya, 'Axiogenesis', Phys. Rev. Lett. 124, 111602 (2020)",
+      "arxiv": "1910.02080"
+    }
+  ],
+  "tags": [
+    "axion",
+    "baryogenesis",
+    "pq_rotation",
+    "dark_matter"
+  ]
+}

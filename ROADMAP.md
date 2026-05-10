@@ -25,7 +25,7 @@ problems.
 
 ## Status
 
-### Populated (75 benchmark entries, 5 data entries, 12 puzzles, 100 mechanisms)
+### Populated (75 benchmark entries, 5 data entries, 12 puzzles, 107 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)

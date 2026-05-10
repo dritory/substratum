@@ -1,0 +1,64 @@
+{
+  "id": "primordial_magnetogenesis",
+  "name": "Primordial magnetogenesis (Turner-Widrow)",
+  "aliases": [
+    "inflationary magnetogenesis",
+    "Turner-Widrow magnetic fields"
+  ],
+  "type": "dynamical",
+  "summary": "Large-scale (Mpc-Gpc) cosmological magnetic fields are produced during inflation by breaking the conformal invariance of electromagnetism, e.g., through couplings of the gauge field to the inflaton or curvature. Provides the seed fields needed to explain galactic and intergalactic magnetic fields without astrophysical dynamo-only origins. Field strengths and coherence lengths are model-dependent; observational evidence of intergalactic magnetic fields would constrain the inflationary coupling.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Doesn't address the canonical horizon/flatness/structure trio but provides a natural inflationary origin for primordial magnetic fields, an otherwise-unexplained cosmic structure feature."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects",
+      "note": "Magnetic fields with B < 1 nG at recombination respect Planck CMB constraints."
+    },
+    {
+      "benchmark_id": "cmb_blackbody_firas",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "magnetogenesis-coupling scale"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Conformal-symmetry-breaking coupling and inflationary scale."
+  },
+  "structural_features": [
+    "inflationary_seed",
+    "conformal_breaking",
+    "primordial_b_field",
+    "no_new_fields"
+  ],
+  "composes_with": [
+    "starobinsky_inflation",
+    "higgs_inflation",
+    "new_inflation"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Turner and Widrow (1988), 'Inflation-produced, large-scale magnetic fields', Phys. Rev. D 37, 2743 — proposed inflationary magnetogenesis with conformal-invariance-breaking couplings. Extensive follow-up exploring specific couplings and observational constraints; Fermi-LAT TeV blazar observations have provided indirect evidence for intergalactic magnetic fields at the 10^-15 G level, plausibly primordial.",
+  "references": [
+    {
+      "citation": "Turner and Widrow, 'Inflation-produced, large-scale magnetic fields', Phys. Rev. D 37, 2743 (1988)",
+      "doi": "10.1103/PhysRevD.37.2743"
+    }
+  ],
+  "tags": [
+    "magnetogenesis",
+    "inflation",
+    "primordial_fields",
+    "cosmology"
+  ]
+}

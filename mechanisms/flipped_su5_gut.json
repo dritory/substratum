@@ -1,0 +1,78 @@
+{
+  "id": "flipped_su5_gut",
+  "name": "Flipped SU(5)",
+  "aliases": [
+    "SU(5) x U(1) flipped",
+    "supersymmetric flipped SU(5)"
+  ],
+  "type": "uv_completion",
+  "summary": "Variant of SU(5) GUT with the SM hypercharge embedded as a linear combination of SU(5)-internal U(1) and an additional external U(1)_X. The 'flipping' interchanges up- and down-type fermion roles in the SU(5) representations; each SM generation lives in (10, 1/2) + (5-bar, -3/2) + (1, 5/2) of SU(5) x U(1)_X. Naturally arises in heterotic-string compactifications and avoids the doublet-triplet splitting problem of minimal SU(5).",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Gauge couplings unify at M_GUT ~ 10^16 GeV with SUSY content; the U(1)_X factor adds flexibility relative to minimal SU(5)."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Right-handed neutrinos sit naturally in the 10 + 5-bar; type-I seesaw at intermediate scales follows."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "respects",
+      "note": "Flipped SU(5) suppresses the dominant p -> e+ pi^0 channel by group-theoretic factors; predicts longer lifetimes than minimal SUSY-SU(5) and thus easier consistency with Super-K bounds."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "additional U(1)_X gauge boson",
+      "GUT-scale Higgs multiplets"
+    ],
+    "new_scales": [
+      "M_GUT ~ 10^16 GeV",
+      "M_X intermediate"
+    ],
+    "new_symmetries": [
+      "SU(5) x U(1)_X"
+    ],
+    "new_parameters_count": 5,
+    "note": "Two gauge couplings, GUT-Higgs sector, intermediate breaking scales."
+  },
+  "structural_features": [
+    "flipped_embedding",
+    "external_u1",
+    "missing_doublet_mechanism",
+    "string_inspired"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "mssm",
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "su5_minimal_gut",
+    "so10_gut",
+    "pati_salam",
+    "trinification_su3_cubed",
+    "e6_gut"
+  ],
+  "status": "niche",
+  "history": "Barr (1982) introduced flipped SU(5). Antoniadis, Ellis, Hagelin, Nanopoulos (1987), 'Supersymmetric flipped SU(5) revitalized', Phys. Lett. B 194, 231 — modern supersymmetric formulation. Modern revival as a string-inspired GUT alternative; specific predictions for proton decay channels distinguish from minimal SU(5).",
+  "references": [
+    {
+      "citation": "Antoniadis, Ellis, Hagelin, Nanopoulos, 'Supersymmetric flipped SU(5) revitalized', Phys. Lett. B 194, 231 (1987)",
+      "doi": "10.1016/0370-2693(87)90533-8"
+    }
+  ],
+  "tags": [
+    "gut",
+    "flipped_su5",
+    "u1_x",
+    "string_inspired"
+  ]
+}

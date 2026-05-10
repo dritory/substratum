@@ -1,0 +1,78 @@
+{
+  "id": "resonant_leptogenesis",
+  "name": "Resonant leptogenesis",
+  "aliases": [
+    "Pilaftsis resonant CP",
+    "low-scale leptogenesis"
+  ],
+  "type": "dynamical",
+  "summary": "Lowers the leptogenesis scale from the Davidson-Ibarra bound (M_R > 10^9 GeV) down to the TeV regime by exploiting CP-asymmetry resonant enhancement when two heavy Majorana neutrinos are nearly degenerate (mass splitting ~ width). The resonance amplifies the CP asymmetry by orders of magnitude, allowing TeV-scale leptogenesis testable at colliders.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 6e-10 with M_R ~ TeV when two Majorana neutrinos are tuned to mass-degeneracy at the level of their decay width. The fine-tuning is what's costed in the compression score; the mechanism otherwise inherits seesaw structure."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "requires",
+      "confidence": "established",
+      "note": "Builds on type-I seesaw with TeV-scale heavy Majorana neutrinos."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "TeV-scale heavy neutrinos generate mu -> e gamma at observable rates if mixings are sizable; current MEG bound BR < 4.2e-13 constrains parameter space."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "TeV heavy Majorana neutrinos contribute to 0nubb via short-range exchange; KamLAND-Zen sensitive."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "M_R ~ TeV (collider-accessible)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Builds on seesaw_type_i. New parameters: degeneracy splitting, CP phase, M_R scale."
+  },
+  "structural_features": [
+    "resonant_enhancement",
+    "low_scale_seesaw",
+    "near_degenerate_majorana",
+    "tev_baryogenesis"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Pilaftsis (1997), 'CP violation and baryogenesis due to heavy Majorana neutrinos', Phys. Rev. D 56, 5431, arXiv:hep-ph/9707235. Pilaftsis-Underwood (2003), 'Resonant leptogenesis', arXiv:hep-ph/0309342, refined the formalism. Active research target as a TeV-scale leptogenesis alternative to high-scale.",
+  "references": [
+    {
+      "citation": "Pilaftsis, 'CP violation and baryogenesis due to heavy Majorana neutrinos', Phys. Rev. D 56, 5431 (1997)",
+      "arxiv": "hep-ph/9707235"
+    },
+    {
+      "citation": "Pilaftsis and Underwood, 'Resonant leptogenesis', Nucl. Phys. B 692, 303 (2004)",
+      "arxiv": "hep-ph/0309342"
+    }
+  ],
+  "tags": [
+    "leptogenesis",
+    "baryogenesis",
+    "tev_scale",
+    "resonant"
+  ]
+}
