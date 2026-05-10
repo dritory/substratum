@@ -1,0 +1,64 @@
+{
+  "id": "two_higgs_doublet",
+  "name": "Two Higgs doublet model (2HDM)",
+  "aliases": ["2HDM", "T.D. Lee model"],
+  "type": "dynamical",
+  "summary": "Extends the SM scalar sector with a second SU(2)_L doublet, giving 5 physical Higgs bosons (h, H, A, H+, H-) and additional CP-violating phases. The minimal renormalisable extension that admits spontaneous CP violation. Realises naturally in supersymmetric models (MSSM Higgs sector) and underlies many BSM constructions of electroweak baryogenesis and flavour physics.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides additional CP-violating phases needed for electroweak baryogenesis and a strongly first-order phase transition in parts of parameter space. Combined with Sakharov sphalerons, can produce BAU at the EW transition."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Decoupling limit reproduces SM Higgs couplings at the few-percent level; LHC Run 3 measurements constrain m_H, tan(beta) parameter space."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound",
+      "note": "CP-violating 2HDM phases generate two-loop EDMs (Barr-Zee); current nEDM and electron-EDM bounds constrain CP-violating couplings."
+    },
+    {
+      "benchmark_id": "electron_edm_jila",
+      "effect": "near_bound"
+    },
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "predicts_signal",
+      "note": "Two-loop Higgs/heavy-pseudoscalar contributions to (g-2)_mu can accommodate the FNAL+BNL anomaly for specific tan(beta) and Higgs masses."
+    },
+    {
+      "benchmark_id": "b_to_s_gamma_inclusive",
+      "effect": "near_bound",
+      "note": "Charged Higgs contributions to b -> s gamma are tightly constrained: 2HDM-II gives m_H+ > 580 GeV (BMix global fit)."
+    }
+  ],
+  "introduces": {
+    "new_fields": ["second Higgs doublet H_2"],
+    "new_scales": ["heavy Higgs mass scale m_A, m_H, m_H+ ~ 100 GeV - few TeV"],
+    "new_symmetries": ["Z_2 (in Type-I, Type-II, lepton-specific, flipped 2HDMs)"],
+    "new_parameters_count": 7,
+    "note": "Higgs potential parameters: two VEVs (tan beta), four physical mass eigenstates, mixing angle alpha, Z_2-breaking lambda_5 / m_12^2."
+  },
+  "structural_features": ["extended_higgs_sector", "two_higgs_doublet", "ew_baryogenesis_friendly", "z2_yukawa_structure"],
+  "composes_with": ["mssm", "electroweak_baryogenesis", "babu_mohapatra_parity"],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Lee (1973), 'A theory of spontaneous T violation', Phys. Rev. D 8, 1226. Embedded in SUSY (Fayet 1976; Inoue-Kakuto-Komatsu-Takeshita 1982). Comprehensive 2HDM review (Branco-Ferreira-Lavoura-Rebelo-Sher-Silva 2011). LHC searches and EDM bounds drive the parameter-space exclusion.",
+  "references": [
+    {
+      "citation": "Lee, 'A theory of spontaneous T violation', Phys. Rev. D 8, 1226 (1973)",
+      "doi": "10.1103/PhysRevD.8.1226"
+    },
+    {
+      "citation": "Branco, Ferreira, Lavoura, Rebelo, Sher, Silva, 'Theory and phenomenology of two-Higgs-doublet models', Phys. Rep. 516, 1 (2012)",
+      "arxiv": "1106.0034"
+    }
+  ],
+  "tags": ["higgs", "2hdm", "ew_baryogenesis", "extended_scalar"]
+}

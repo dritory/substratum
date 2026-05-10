@@ -1,0 +1,39 @@
+{
+  "id": "vacuum_metastability",
+  "name": "Higgs vacuum (meta)stability",
+  "aliases": ["electroweak vacuum stability", "near-criticality"],
+  "kind": "coincidence",
+  "summary": "Renormalisation-group running of the Higgs quartic coupling lambda(mu) under SM dynamics drives lambda below zero around mu ~ 10^10 GeV (driven primarily by the top Yukawa). This means the SM vacuum is metastable on a timescale much longer than the age of the universe but not absolutely stable. The Higgs and top masses sit remarkably close to the boundary between stability and instability — a striking near-criticality coincidence.",
+  "characteristic_numbers": [
+    {
+      "symbol": "scale at which lambda(mu) = 0",
+      "value": "~10^{10} GeV",
+      "expected": "no SM principle setting this",
+      "gap_log10": null,
+      "note": "For m_H = 125 GeV and m_t = 173 GeV, NNLO running puts the zero-crossing of lambda near the GUT scale, with stability excluded at ~98% CL (Degrassi et al. 2012, arXiv:1205.6497)."
+    },
+    {
+      "symbol": "tunneling lifetime tau",
+      "value": "~10^{600} years",
+      "expected": "any positive time would suffice anthropically",
+      "note": "Vastly longer than the cosmological age, so the metastability is not in tension with our existence. The puzzle is the near-coincidence with the stability boundary, not the tunneling rate itself."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": ["higgs_couplings_lhc"],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "The closeness of lambda to zero at high scale resembles other naturalness puzzles where SM parameters take 'critical' values. Suggests either (a) high-scale new physics aligning lambda(M_Pl) ~ 0, or (b) anthropic / multiverse selection."
+    }
+  ],
+  "history": "Cabibbo, Maiani, Parisi, Petronzio (1979) raised stability concern. Quantitative NNLO analysis by Degrassi-Di Vita-Elias-Miro-Espinosa-Giudice-Isidori-Strumia (2012, arXiv:1205.6497). Bezrukov-Magnin-Shaposhnikov (2008) tied to Higgs inflation. Active since the Higgs discovery in 2012 fixed lambda at low energy.",
+  "references": [
+    {
+      "citation": "Degrassi, Di Vita, Elias-Miro, Espinosa, Giudice, Isidori, Strumia, 'Higgs mass and vacuum stability in the Standard Model at NNLO', JHEP 08, 098 (2012)",
+      "arxiv": "1205.6497"
+    }
+  ],
+  "tags": ["coincidence", "higgs", "vacuum_stability", "near_criticality"]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "black_hole_information",
+  "name": "Black hole information paradox",
+  "aliases": ["Hawking information paradox", "BH unitarity"],
+  "kind": "consistency",
+  "summary": "Hawking radiation, computed semi-classically, is exactly thermal — independent of the matter that fell in. Taken at face value, this means information about the infalling state is destroyed when the black hole evaporates, in contradiction with quantum-mechanical unitarity. The puzzle is now widely viewed as a constraint on quantum gravity rather than evidence against unitarity, and recent work on the Page curve in semi-classical gravity has provided a computational handle without resolving the underlying microphysics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "S_BH (Bekenstein-Hawking entropy)",
+      "value": "A / (4 G hbar)",
+      "expected": "no first-principles QM derivation outside specific contexts",
+      "note": "BH entropy / area law is the central quantitative target. String theory (Strominger-Vafa 1996) reproduces it for extremal BPS black holes; the generic case is open."
+    },
+    {
+      "symbol": "Page time",
+      "value": "t_Page ~ S_BH / (k_B T_H)",
+      "expected": "decreasing entanglement entropy at this time required for unitarity",
+      "note": "Until the Page time, von Neumann entropy of Hawking radiation rises; after, it must decrease for unitarity to hold. Recent work (Penington 2019; Almheiri et al. 2019) reproduces the Page curve from semi-classical gravity with quantum-extremal surfaces."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "unitarity",
+      "status": "would_violate",
+      "note": "Strict thermality of Hawking radiation would break QM unitarity. Almost all current research assumes unitarity holds and looks for the missing physics (firewalls, soft hair, replica wormholes, ER=EPR)."
+    },
+    {
+      "principle": "locality",
+      "status": "would_violate",
+      "note": "Recovering information at infinity requires non-local effects of some form (e.g. ER=EPR, replica wormholes), in tension with low-energy local effective field theory."
+    }
+  ],
+  "history": "Hawking (1975) computed thermal radiation, sharpening the puzzle. Page (1993) formulated the entropy-curve constraint for unitary evolution. Strominger-Vafa (1996) reproduced S_BH for extremal BPS black holes from string-theory state counting. Replica-wormhole / quantum-extremal-surface program (Penington 2019; Almheiri-Engelhardt-Marolf-Maxfield 2019) reproduces the Page curve in JT gravity. Microscopic resolution for non-extremal black holes remains open.",
+  "references": [
+    {
+      "citation": "Hawking, 'Particle Creation by Black Holes', Comm. Math. Phys. 43, 199 (1975)",
+      "doi": "10.1007/BF02345020"
+    },
+    {
+      "citation": "Page, 'Information in black hole radiation', Phys. Rev. Lett. 71, 3743 (1993)"
+    }
+  ],
+  "tags": ["quantum_gravity", "black_holes", "unitarity", "information_paradox"]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "e6_gut",
+  "name": "E6 grand unified theory",
+  "aliases": ["E6 GUT", "exceptional GUT"],
+  "type": "uv_completion",
+  "summary": "Embeds the Standard Model gauge group in the exceptional Lie group E6, providing a unified framework for all SM gauge interactions plus additional matter. Each fermion family fits into a 27-dimensional representation, producing two extra heavy quark-doublet partners and additional neutral leptons per family. Naturally arises in heterotic string compactifications on Calabi-Yau manifolds.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Gauge couplings unify cleanly under E6 only with matter content beyond minimal SM (typically requires SUSY); pure SM running into E6 misses unification. Predicts proton decay at long lifetimes and dark-matter candidates among extra light states."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "27 contains an SM-singlet neutrino per family that can serve as the right-handed neutrino in the type-I seesaw, with M_R set by the GUT-scale physics."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "E6 GUT predicts dimension-6 p -> e+ pi^0 at rates near Super-K bounds for M_GUT ~ 10^16 GeV; Hyper-K reach will further constrain or detect."
+    },
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": ["additional matter beyond SM 16-plet (one E6 27 contains 27 chiral fermions per family)"],
+    "new_scales": ["M_GUT ~ 10^16 GeV"],
+    "new_symmetries": ["E6 gauge symmetry"],
+    "new_parameters_count": 5,
+    "note": "GUT scale, GUT gauge coupling, family structure, soft / breaking parameters, intermediate-scale matter."
+  },
+  "structural_features": ["exceptional_group", "grand_unification", "27_representation", "string_inspired"],
+  "composes_with": ["heterotic_string_compactification", "seesaw_type_i", "mssm"],
+  "excludes": ["su5_minimal_gut", "so10_gut"],
+  "status": "niche",
+  "history": "Gursey, Ramond, Sikivie (1976), 'A universal gauge theory model based on E6', Phys. Lett. B 60, 177. Re-emerged in heterotic string contexts (Candelas-Horowitz-Strominger-Witten 1985); the 27 representation aligns naturally with Calabi-Yau matter content. Moderate phenomenological activity through 1990s-2000s, mostly tied to specific string constructions.",
+  "references": [
+    {
+      "citation": "Gursey, Ramond, Sikivie, 'A universal gauge theory model based on E6', Phys. Lett. B 60, 177 (1976)",
+      "doi": "10.1016/0370-2693(76)90417-2"
+    }
+  ],
+  "tags": ["gut", "e6", "exceptional_group", "string_inspired"]
+}
