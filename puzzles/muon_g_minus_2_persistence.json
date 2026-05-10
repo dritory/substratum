@@ -1,0 +1,57 @@
+{
+  "id": "muon_g_minus_2_persistence",
+  "name": "Muon g-2 anomaly persistence",
+  "aliases": [
+    "muon anomalous magnetic moment tension",
+    "FNAL g-2 vs SM"
+  ],
+  "kind": "naturalness",
+  "summary": "The combined BNL+Fermilab world-average muon anomalous magnetic moment a_mu(exp) = 116,592,059(22) x 10^-11 sits ~5 sigma above the Muon g-2 Theory Initiative 2020 Standard Model prediction (data-driven HVP). Lattice QCD predictions for the hadronic vacuum polarisation (BMW 2020 and follow-ups) sit much higher than the data-driven HVP, in tension with the latter at ~4 sigma. Whether the anomaly is real new physics or an artifact of the data-driven HVP determination is unresolved, and constitutes one of the most consequential data tensions in particle physics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "a_mu(exp)",
+      "value": "116,592,059(22)e-11",
+      "expected": "matches a_mu(SM)",
+      "note": "Fermilab+BNL 2023 world average, 0.19 ppm precision. Updated Run 2/3 result reaches 0.20 ppm precision per experiment."
+    },
+    {
+      "symbol": "Delta a_mu (data-driven WP2020 HVP)",
+      "value": "249(48)e-11",
+      "expected": "0",
+      "note": "5.1 sigma deviation from Muon g-2 Theory Initiative 2020 prediction."
+    },
+    {
+      "symbol": "Delta a_mu (BMW lattice HVP)",
+      "value": "~30-50e-11",
+      "expected": "0",
+      "note": "Only ~1 sigma deviation if lattice HVP is correct - shifts the puzzle from 'new physics' to 'which HVP is right'."
+    }
+  ],
+  "data_links": [
+    "muon_g_minus_2"
+  ],
+  "benchmark_links": [
+    "muon_anomalous_magnetic_moment"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "If real new physics, points to scalar leptoquarks, vector-like leptons, or specific 2HDM/MSSM scenarios contributing at a_mu ~ 250e-11 level. Many such models are tightly constrained by EW precision and LHC. Resolving lattice-vs-data-driven HVP tension is now the dominant question."
+    }
+  ],
+  "history": "BNL E821 (2006): a_mu measured to 0.54 ppm, ~3 sigma above SM. Fermilab g-2 Run 1 (2021, arXiv:2104.03281): confirmed BNL value, world average 4.2 sigma. Fermilab Run 2/3 (2023, arXiv:2308.06230): improved to 0.20 ppm, 5+ sigma vs WP2020. Final Run 1+2+3 combined result (2025) reaches 0.13 ppm. BMW lattice 2020 (arXiv:2002.12347) created the lattice-vs-data-driven HVP problem.",
+  "references": [
+    {
+      "citation": "Fermilab Muon g-2 Collaboration, 'Measurement of the positive muon anomalous magnetic moment to 0.20 ppm', Phys. Rev. Lett. 131, 161802 (2023)",
+      "arxiv": "2308.06230"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "muon_g_minus_2",
+    "hvp",
+    "data_tension",
+    "lepton_universality"
+  ]
+}

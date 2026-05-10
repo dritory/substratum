@@ -1,0 +1,78 @@
+{
+  "id": "lmu_ltau_gauged",
+  "name": "Gauged L_mu - L_tau symmetry",
+  "aliases": [
+    "He-Joshi-Lew-Volkas Z'",
+    "muon-tau lepton-number gauge boson"
+  ],
+  "type": "symmetry",
+  "summary": "Gauges the anomaly-free difference of muon and tau lepton numbers (L_mu - L_tau). The associated Z' boson couples only to muons, taus, and the second/third-generation neutrinos at tree level (anomaly-free within SM particle content). Distinguishes lepton flavours and provides natural contributions to (g-2)_mu without conflicting with electron-sector precision tests. Heavily studied as a leading framework for the muon-magnetic-moment anomaly.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "muon_g_minus_2_persistence",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Z' loop contributes a positive Delta a_mu ~ 250e-11 for M_Z' ~ 10-100 MeV and g' ~ 10^-4 - 10^-3, matching the WP2020-vs-experiment anomaly. Narrow surviving parameter space after neutrino-trident (CCFR) bounds and Borexino solar-neutrino constraints."
+    },
+    {
+      "puzzle_id": "pmns_lepton_mixing_pattern",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Predicts a mu-tau-symmetric neutrino mass matrix at leading order (sin^2 theta_23 = 1/2, theta_13 = 0 before breaking); deviations from maximal atmospheric mixing reflect L_mu - L_tau-breaking corrections."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "muon_anomalous_magnetic_moment",
+      "effect": "predicts_signal",
+      "note": "Z' loop contribution can saturate Delta a_mu ~ 250e-11; targeted by direct searches at NA64-mu (CERN), Mu3e, FASER."
+    },
+    {
+      "benchmark_id": "tau_lepton_universality",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "predicts_signal",
+      "note": "Predicts narrow window of long-range neutrino-matter interactions detectable at DUNE and JUNO."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "U(1)_{L_mu - L_tau} gauge boson Z'"
+    ],
+    "new_scales": [
+      "M_Z' ~ 10 MeV - few GeV (for g-2_mu fit)"
+    ],
+    "new_symmetries": [
+      "U(1)_{L_mu - L_tau} gauge"
+    ],
+    "new_parameters_count": 2,
+    "note": "Z' mass M_Z' and gauge coupling g'."
+  },
+  "structural_features": [
+    "anomaly_free_z_prime",
+    "lepton_flavor_universality_breaking",
+    "mu_tau_symmetric_neutrino_mass",
+    "mev_scale_mediator"
+  ],
+  "composes_with": [
+    "dark_photon_portal"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "He, Joshi, Lew, Volkas (1991), 'Simplest Z' model', Phys. Rev. D 44, 2118. Revived in 2010s as a flagship g-2_mu interpretation. Heeck-Rodejohann (2011, arXiv:1107.5238) systematic phenomenology. NA64-mu, FASER, MuSIC actively searching the surviving parameter window.",
+  "references": [
+    {
+      "citation": "He, Joshi, Lew, Volkas, 'Simplest Z' model', Phys. Rev. D 44, 2118 (1991)",
+      "doi": "10.1103/PhysRevD.44.2118"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "z_prime",
+    "muon_g_minus_2",
+    "anomaly_free_u1",
+    "neutrino_mixing"
+  ]
+}

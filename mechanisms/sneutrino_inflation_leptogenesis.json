@@ -1,0 +1,74 @@
+{
+  "id": "sneutrino_inflation_leptogenesis",
+  "name": "Sneutrino chaotic inflation + leptogenesis",
+  "aliases": [
+    "Murayama-Suzuki-Yanagida-Yokoyama sneutrino inflation"
+  ],
+  "type": "dynamical",
+  "summary": "The right-handed sneutrino (scalar superpartner of N_R) serves as both the inflaton (driving chaotic inflation via its mass term) and the source of leptogenesis through its decays at the end of inflation. CP-violating decays produce a lepton asymmetry that is converted to baryon asymmetry by sphalerons. Connects inflation, neutrino masses, and BAU through a single field.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Right-handed sneutrino with V ~ (1/2) M_R^2 |~N|^2 drives chaotic inflation for M_R ~ 10^13 GeV. Predicts n_s ~ 0.96 and r ~ 0.1; BICEP/Keck has substantially pressed the chaotic-inflation r prediction."
+    },
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Inflaton (sneutrino) decays after inflation produce a lepton asymmetry; reproduces eta ~ 10^-10 for natural CP phases and M_R ~ 10^13 GeV. Davidson-Ibarra bound is comfortably satisfied."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "requires",
+      "confidence": "established"
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "near_bound",
+      "note": "Quadratic-potential chaotic-inflation prediction r ~ 0.13 is in tension with BICEP/Keck r < 0.036. Variants with shallower potentials (V ~ phi^{2/3} or near-plateau) survive."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "M_R_inflaton ~ 10^13 GeV"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Builds on seesaw + MSSM. New parameters: lightest right-handed sneutrino mass, CP phases."
+  },
+  "structural_features": [
+    "sneutrino_inflaton",
+    "linked_inflation_leptogenesis",
+    "right_handed_partner",
+    "single_field_origin"
+  ],
+  "composes_with": [
+    "mssm",
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Murayama, Suzuki, Yanagida, Yokoyama (1993), 'Chaotic inflation and baryogenesis by right-handed sneutrinos', Phys. Rev. Lett. 70, 1912. Variants with deformed potentials (Ellis-Garcia-Nanopoulos-Olive 2017) address the BICEP/Keck pressure.",
+  "references": [
+    {
+      "citation": "Murayama, Suzuki, Yanagida, Yokoyama, 'Chaotic inflation and baryogenesis by right-handed sneutrinos', Phys. Rev. Lett. 70, 1912 (1993)",
+      "doi": "10.1103/PhysRevLett.70.1912"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "leptogenesis",
+    "sneutrino",
+    "linked_origin"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "hilltop_inflation",
+  "name": "Hilltop inflation",
+  "aliases": [
+    "Boubekeur-Lyth small-field inflation",
+    "near-maximum inflaton"
+  ],
+  "type": "dynamical",
+  "summary": "Slow-roll inflation occurs near a local maximum of the inflaton potential, where the field rolls slowly downhill. The 'hilltop' class is the generic small-field inflation regime: inflaton excursions stay sub-Planckian, predictions are r << 0.01 (tiny tensor-to-scalar ratio), and n_s ~ 0.95-0.97 emerges from slow-roll near the maximum. Easily accommodates Planck + BICEP/Keck data; the small field range avoids weak-gravity-conjecture concerns that beset large-field models.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Predicts r ~ 10^-4 - 10^-3 (well below current bounds), n_s ~ 0.96. Initial conditions question is sharper than for large-field models since the inflaton must start near the top of the potential, but anthropic / eternal-inflation arguments restore generic-initial-condition viability."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects",
+      "note": "Generic prediction r < 0.002 for monotonically-steepening potential, below LiteBIRD / CMB-S4 sensitivity in most parameter space."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "n_s = 1 - 2/(p N) for V ~ V_0 (1 - (phi/mu)^p); specific small-field potentials match Planck."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "inflaton on a hilltop potential"
+    ],
+    "new_scales": [
+      "V_0^{1/4} ~ 10^15 GeV (hilltop height)",
+      "mu (field range, sub-Planckian)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Hilltop height V_0, scale mu, power p in V ~ V_0(1 - (phi/mu)^p)."
+  },
+  "structural_features": [
+    "small_field_inflation",
+    "near_maximum_slow_roll",
+    "tiny_tensor_to_scalar",
+    "sub_planckian_range"
+  ],
+  "composes_with": [
+    "warm_inflation",
+    "alpha_attractors_inflation"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Boubekeur and Lyth (2005), 'Hilltop inflation', JCAP 07, 010, arXiv:hep-ph/0502047 — defined and analysed the small-field hilltop class. Among the leading inflationary frameworks consistent with Planck + BICEP/Keck data; weak-gravity-conjecture pressure is minimal.",
+  "references": [
+    {
+      "citation": "Boubekeur and Lyth, 'Hilltop inflation', JCAP 07, 010 (2005)",
+      "arxiv": "hep-ph/0502047"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "hilltop",
+    "small_field",
+    "slow_roll"
+  ]
+}

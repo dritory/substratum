@@ -1,0 +1,52 @@
+{
+  "id": "b_anomalies_r_d_star",
+  "name": "R(D*) charged-current B-anomaly",
+  "aliases": [
+    "R(D) anomaly",
+    "B -> D* tau nu vs B -> D* mu nu"
+  ],
+  "kind": "naturalness",
+  "summary": "The lepton-flavor-universality ratios R(D) and R(D*), where R(X) = BR(B -> X tau nu) / BR(B -> X mu nu), are measured by BaBar, Belle, Belle II, and LHCb to lie ~3.2 sigma above SM predictions. The charged-current process B -> D(*) tau nu would be modified at this level by a tree-level W' or scalar leptoquark coupling preferentially to the third lepton generation. The neutral-current R(K) anomaly resolved in 2022 (LHCb 2103.11769), but R(D*) tension remains, providing one of the cleanest flavor-physics data tensions.",
+  "characteristic_numbers": [
+    {
+      "symbol": "R(D) HFLAV 2023",
+      "value": "0.357",
+      "uncertainty": "0.029",
+      "expected": "0.298 +/- 0.003 (SM)",
+      "note": "Average over BaBar, Belle, LHCb."
+    },
+    {
+      "symbol": "R(D*) HFLAV 2023",
+      "value": "0.284",
+      "uncertainty": "0.012",
+      "expected": "0.254 +/- 0.005 (SM)",
+      "note": "Combined deviation in (R(D), R(D*)) plane is ~3.2 sigma above SM."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "r_d_star_charged_current",
+    "r_k_lepton_universality"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "If real, requires new physics at ~ TeV with tau-vs-light-lepton non-universality. Scalar (S1, R2) or vector (U1) leptoquark models can fit, but face stringent LHC + flavor + EW-precision bounds. The LHCb-2024 R(D*) update is consistent with the anomaly. Active experimental program at Belle II + LHCb."
+    }
+  ],
+  "history": "BaBar 2012 (arXiv:1205.5442) first hint of R(D*) excess. Belle 2017 (arXiv:1612.00529) confirmed; LHCb 2022-2023 added new measurements. HFLAV 2023 average: 3.2 sigma. R(K) anomaly was resolved in 2022 (LHCb arXiv:2212.09153), strengthening focus on charged-current side. Active interpretation programs: Crivellin-D'Ambrosio-Heeck-Hofer; Buttazzo-Greljo-Isidori-Marzocca minimal-leptoquark fits.",
+  "references": [
+    {
+      "citation": "HFLAV Collaboration, 'Averages of b-hadron, c-hadron, and tau-lepton properties as of 2021', Phys. Rev. D 107, 052008 (2023)",
+      "arxiv": "2206.07501"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "b_anomalies",
+    "lepton_universality",
+    "leptoquark",
+    "data_tension"
+  ]
+}
