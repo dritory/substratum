@@ -1,0 +1,53 @@
+{
+  "id": "loop_quantum_gravity",
+  "name": "Loop quantum gravity",
+  "aliases": ["LQG", "Ashtekar-Rovelli-Smolin LQG"],
+  "type": "uv_completion",
+  "summary": "Quantises GR using Ashtekar's connection variables and a loop / spin-network basis. Predicts discrete eigenvalues for area and volume operators at the Planck scale. Background-independent and non-perturbative, in contrast to perturbative string theory; spin-foam dynamics provides a path-integral formulation. Active programs include LQC (loop quantum cosmology) for early-universe and black-hole singularity resolution.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "LQG must produce GR with a small Lambda in the semiclassical limit; specific predictions for Lambda are not derived from first principles. Listed for graph completeness as a candidate quantum-gravity framework."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "lorentz_invariance_photon",
+      "effect": "near_bound",
+      "note": "Some LQG-inspired phenomenology predicts modified dispersion relations at Planck-scale energies; constraints from GRB and SME bounds are increasingly tight."
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["Planck length / quantum geometry"],
+    "new_symmetries": ["SU(2) gauge symmetry of Ashtekar connection variables"],
+    "new_parameters_count": 1,
+    "note": "Immirzi parameter (dimensionless O(1) coefficient setting the area gap)."
+  },
+  "structural_features": ["background_independent", "non_perturbative_qg", "discrete_geometry", "spin_networks"],
+  "composes_with": [],
+  "excludes": [],
+  "status": "niche",
+  "history": "Ashtekar (1986), 'New variables for classical and quantum gravity', PRL 57, 2244 — connection variables. Rovelli, Smolin (1990), 'Loop space representation of quantum general relativity', Nucl. Phys. B 331, 80. Spin-foam dynamics (Reisenberger-Rovelli, Engle-Pereira-Rovelli-Livine through 2000s-2010s).",
+  "references": [
+    {
+      "citation": "Ashtekar, 'New variables for classical and quantum gravity', Phys. Rev. Lett. 57, 2244 (1986)",
+      "doi": "10.1103/PhysRevLett.57.2244"
+    },
+    {
+      "citation": "Rovelli and Smolin, 'Loop space representation of quantum general relativity', Nucl. Phys. B 331, 80 (1990)",
+      "doi": "10.1016/0550-3213(90)90019-A"
+    }
+  ],
+  "tags": ["quantum_gravity", "lqg", "background_independent"]
+}

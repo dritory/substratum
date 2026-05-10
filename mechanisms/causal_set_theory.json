@@ -1,0 +1,48 @@
+{
+  "id": "causal_set_theory",
+  "name": "Causal set theory",
+  "aliases": ["CST", "Sorkin causal sets"],
+  "type": "uv_completion",
+  "summary": "Postulates that spacetime at the fundamental level is a discrete partial order — a 'causal set' — in which each element is an event and the partial order encodes causal relations. The continuum spacetime of GR emerges as an approximation in the large-N limit. Provides a Lorentz-invariant discreteness (no preferred frame) and gives an heuristic explanation for the small cosmological constant via 'fluctuating Lambda' arguments.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Sorkin's prediction of a fluctuating Lambda ~ 1/sqrt(N) where N is the spacetime volume in fundamental units gives Lambda ~ H_0^2 today, in remarkable agreement with the observed value. This is one of the most quantitative 'predictions' of any quantum-gravity approach for Lambda."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "lorentz_invariance_photon",
+      "effect": "respects",
+      "note": "Discrete CST preserves Lorentz invariance because the discreteness is set by Poisson sprinkling, which is invariant in distribution under Lorentz transformations. This distinguishes CST from many other discrete-spacetime approaches."
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["fundamental discreteness scale ~ Planck length"],
+    "new_symmetries": ["partial-order causality"],
+    "new_parameters_count": 1,
+    "note": "Discreteness scale (typically Planck-scale); the dynamics requires choosing a sum-over-causal-sets prescription."
+  },
+  "structural_features": ["discrete_spacetime", "lorentz_invariant_discreteness", "partial_order", "fluctuating_lambda"],
+  "composes_with": [],
+  "excludes": [],
+  "status": "niche",
+  "history": "Bombelli, Lee, Meyer, Sorkin (1987), 'Space-time as a causal set', Phys. Rev. Lett. 59, 521. Sorkin's everpresent-Lambda prediction (1990s-2000s) gives Lambda ~ 1/sqrt(N) ~ H_0^2 with no free parameter at the order-of-magnitude level. Active small-community research with periodic phenomenological proposals.",
+  "references": [
+    {
+      "citation": "Bombelli, Lee, Meyer, Sorkin, 'Space-time as a causal set', Phys. Rev. Lett. 59, 521 (1987)",
+      "doi": "10.1103/PhysRevLett.59.521"
+    },
+    {
+      "citation": "Surya, 'The causal set approach to quantum gravity', Living Reviews in Relativity 22, 5 (2019)"
+    }
+  ],
+  "tags": ["quantum_gravity", "discrete_spacetime", "causal_sets"]
+}

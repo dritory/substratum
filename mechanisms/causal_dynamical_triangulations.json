@@ -1,0 +1,49 @@
+{
+  "id": "causal_dynamical_triangulations",
+  "name": "Causal dynamical triangulations",
+  "aliases": ["CDT", "lattice quantum gravity"],
+  "type": "uv_completion",
+  "summary": "A non-perturbative lattice approach to quantum gravity in which spacetime is built from elementary 4-simplices respecting causal structure. Numerical simulations of the path integral over causal triangulations show that a 4-dimensional macroscopic spacetime emerges dynamically, with a phase diagram including a 'physical' region resembling de Sitter geometry at large scales.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "CDT requires a positive cosmological constant in its bare action to produce the de-Sitter-like emergent geometry; this is an input rather than a derivation. Spectral dimension running from 4 (large) to 2 (Planck) is a robust prediction; possible cosmological signatures speculative."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "lorentz_invariance_photon",
+      "effect": "respects",
+      "note": "Continuous symmetries should emerge in the continuum limit; explicit Planck-scale Lorentz violation not predicted."
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["lattice spacing (UV cutoff)", "bare cosmological constant"],
+    "new_symmetries": ["foliation structure preserving causal order"],
+    "new_parameters_count": 3,
+    "note": "Bare Newton's G, bare Lambda, asymmetry parameter alpha between space-like and time-like edges."
+  },
+  "structural_features": ["lattice_quantum_gravity", "non_perturbative_qg", "causal_structure", "spectral_dimension_running"],
+  "composes_with": [],
+  "excludes": [],
+  "status": "niche",
+  "history": "Ambjorn, Loll (1998) introduced causal triangulations. Ambjorn, Jurkiewicz, Loll (2004), 'Emergence of a 4D world from causal quantum gravity', PRL 93, 131301, arXiv:hep-th/0404156 — demonstrated 4D emergent spacetime numerically. Spectral-dimension running (Ambjorn-Jurkiewicz-Loll 2005, hep-th/0505113) suggested dimensional reduction at Planck scale. Active small-community research with steady numerical progress.",
+  "references": [
+    {
+      "citation": "Ambjorn, Jurkiewicz, Loll, 'Emergence of a 4D world from causal quantum gravity', Phys. Rev. Lett. 93, 131301 (2004)",
+      "arxiv": "hep-th/0404156"
+    },
+    {
+      "citation": "Loll, 'Quantum gravity from causal dynamical triangulations: a review', Class. Quantum Grav. 37, 013002 (2020)",
+      "arxiv": "1905.08669"
+    }
+  ],
+  "tags": ["quantum_gravity", "cdt", "lattice", "non_perturbative"]
+}

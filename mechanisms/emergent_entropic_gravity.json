@@ -1,0 +1,61 @@
+{
+  "id": "emergent_entropic_gravity",
+  "name": "Emergent entropic gravity",
+  "aliases": ["Verlinde gravity", "entropic gravity"],
+  "type": "geometric",
+  "summary": "Argues that gravity is not a fundamental interaction but emerges from a holographic / entropic principle: changes in entropy associated with the position of matter near a holographic screen give rise to an effective force that reproduces Newton's law. Verlinde's later 'emergent gravity' (2016) extends to galactic scales and aims to reproduce galactic rotation curves without dark matter via dark-energy-induced entropy displacement.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Verlinde's 2016 emergent-gravity proposal predicts galactic rotation curves and the Tully-Fisher relation without DM by tying galactic dynamics to dark-energy-induced entropy. Cluster lensing and the bullet-cluster collision are challenges; current data disfavor as a complete DM replacement."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Ties dark energy and gravity to the same emergent entropic principle; no specific derivation of Lambda value. More a re-framing than a quantitative prediction."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "bullet_cluster_lensing_offset",
+      "effect": "violates",
+      "note": "Pure entropic gravity (without separate DM) cannot reproduce the spatial offset between baryonic and lensing centers in the Bullet Cluster - same problem as MOND."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "violates",
+      "note": "Without cold collisionless DM, the height ratios of acoustic peaks in the CMB cannot be reproduced; entropic gravity does not provide the required pre-recombination perturbation evolution."
+    },
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "By construction reproduces Newton/Einstein gravity in the appropriate limit."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": ["holographic / Hubble scale"],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "No new fundamental fields; one parameter relating dark-energy entropy to dark-matter-like effective force."
+  },
+  "structural_features": ["emergent_gravity", "entropic_force", "holographic", "no_dark_matter"],
+  "composes_with": [],
+  "excludes": [],
+  "status": "disfavored",
+  "history": "Verlinde (2010), 'On the origin of gravity and the laws of Newton', JHEP 04, 029 (2011), arXiv:1001.0785 - founding paper. Verlinde (2016), 'Emergent gravity and the dark universe', SciPost Phys. 2, 016, arXiv:1611.02269 - extension to dark sector. Cluster-lensing and CMB tests have substantially constrained the framework.",
+  "references": [
+    {
+      "citation": "Verlinde, 'On the origin of gravity and the laws of Newton', JHEP 04, 029 (2011)",
+      "arxiv": "1001.0785"
+    },
+    {
+      "citation": "Verlinde, 'Emergent gravity and the dark universe', SciPost Phys. 2, 016 (2017)",
+      "arxiv": "1611.02269"
+    }
+  ],
+  "tags": ["emergent_gravity", "modified_gravity", "holographic", "speculative"]
+}
