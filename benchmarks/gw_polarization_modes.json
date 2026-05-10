@@ -5,7 +5,7 @@
   "principle": "lorentz_invariance",
   "requirement": "Any candidate framework must predict that gravitational waves carry primarily the two transverse-traceless tensor polarizations (+ and x) of GR, not pure scalar (breathing or longitudinal) or pure vector modes. The Bayesian comparison from GW170814 (a three-detector event) strongly favors pure tensor over pure scalar (Bayes factor > 200) and pure vector (Bayes factor > 1000).",
   "regime": {
-    "length_m": 1e25,
+    "length_m": 1e+25,
     "energy_ev": 4e-13,
     "description": "GW propagation from binary black hole mergers at hundreds of Mpc."
   },
@@ -38,8 +38,15 @@
       "arxiv": "1709.09660"
     },
     {
-      "citation": "Eardley, Lee, Lightman, 'Gravitational-Wave Observations as a Tool for Testing Relativistic Gravity', PRL 30, 884 (1973)"
+      "citation": "Eardley, Lee, Lightman, 'Gravitational-Wave Observations as a Tool for Testing Relativistic Gravity', PRL 30, 884 (1973)",
+      "doi": "10.1103/PhysRevLett.30.884",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevLett.30.884"
     }
   ],
-  "tags": ["gravity", "gravitational_waves", "polarization", "modified_gravity"]
+  "tags": [
+    "gravity",
+    "gravitational_waves",
+    "polarization",
+    "modified_gravity"
+  ]
 }

@@ -1,7 +1,10 @@
 {
   "id": "coleman_false_vacuum",
   "name": "Coleman false-vacuum decay",
-  "aliases": ["bounce solution", "Coleman-de Luccia tunneling"],
+  "aliases": [
+    "bounce solution",
+    "Coleman-de Luccia tunneling"
+  ],
   "type": "dynamical",
   "summary": "Quantum-mechanical bubble nucleation through tunneling in field theory: a metastable 'false vacuum' decays via O(4)-symmetric instanton ('bounce') solutions. Coleman's semiclassical formula computes the decay rate per unit volume Gamma/V ~ A exp(-S_E/hbar) from the Euclidean action of the bounce. Foundational for understanding cosmological vacuum-stability tunneling; the gravitational generalisation (Coleman-de Luccia 1980) handles spacetime curvature.",
   "addresses_puzzles": [
@@ -29,11 +32,18 @@
     "new_parameters_count": 0,
     "note": "A computational technique within QFT, not a new physical mechanism. Listed for graph completeness because it is what defines the vacuum-metastability puzzle's quantitative content."
   },
-  "structural_features": ["instanton", "tunneling", "bubble_nucleation", "no_new_fields"],
-  "composes_with": ["higgs_vacuum_stabiliser"],
+  "structural_features": [
+    "instanton",
+    "tunneling",
+    "bubble_nucleation",
+    "no_new_fields"
+  ],
+  "composes_with": [
+    "higgs_vacuum_stabiliser"
+  ],
   "excludes": [],
-  "status": "mainstream",
-  "history": "Coleman (1977), 'Fate of the false vacuum: semiclassical theory', Phys. Rev. D 15, 2929 (with erratum PRD 16, 1248). Callan and Coleman (1977), 'Fate of the false vacuum II: first quantum corrections', PRD 16, 1762. Coleman and de Luccia (1980), 'Gravitational effects on and of vacuum decay', PRD 21, 3305 — included gravity. Standard tool ever since for inflationary cosmology, EW vacuum stability, and string-landscape tunneling.",
+  "status": "niche",
+  "history": "Coleman (1977), 'Fate of the false vacuum: semiclassical theory', Phys. Rev. D 15, 2929 (with erratum PRD 16, 1248). Callan and Coleman (1977), 'Fate of the false vacuum II: first quantum corrections', PRD 16, 1762. Coleman and de Luccia (1980), 'Gravitational effects on and of vacuum decay', PRD 21, 3305 \u2014 included gravity. Standard tool ever since for inflationary cosmology, EW vacuum stability, and string-landscape tunneling.",
   "references": [
     {
       "citation": "Coleman, 'Fate of the false vacuum: semiclassical theory', Phys. Rev. D 15, 2929 (1977)",
@@ -44,5 +54,10 @@
       "doi": "10.1103/PhysRevD.21.3305"
     }
   ],
-  "tags": ["vacuum_decay", "tunneling", "instanton", "semiclassical_qft"]
+  "tags": [
+    "vacuum_decay",
+    "tunneling",
+    "instanton",
+    "semiclassical_qft"
+  ]
 }

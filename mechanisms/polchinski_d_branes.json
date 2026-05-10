@@ -1,7 +1,10 @@
 {
   "id": "polchinski_d_branes",
   "name": "D-branes (Polchinski)",
-  "aliases": ["Dirichlet branes", "RR-charged D-branes"],
+  "aliases": [
+    "Dirichlet branes",
+    "RR-charged D-branes"
+  ],
   "type": "uv_completion",
   "summary": "D-branes are extended objects in string theory defined by mixed Dirichlet-Neumann boundary conditions on open-string endpoints. Polchinski (1995) showed they carry a complete set of electric and magnetic Ramond-Ramond charges, are intrinsic to type II string theory, and are required by string duality. Provided the long-missing carriers of RR charges and revolutionised string theory by enabling explicit microscopic constructions of black-hole states (Strominger-Vafa), gauge/gravity duality (AdS/CFT), and braneworld phenomenology.",
   "addresses_puzzles": [
@@ -26,22 +29,45 @@
     }
   ],
   "introduces": {
-    "new_fields": ["D-brane worldvolume gauge fields", "open-string excitations on D-branes"],
-    "new_scales": ["string scale", "compactification volume"],
-    "new_symmetries": ["worldvolume gauge symmetry on each D-brane stack"],
+    "new_fields": [
+      "D-brane worldvolume gauge fields",
+      "open-string excitations on D-branes"
+    ],
+    "new_scales": [
+      "string scale",
+      "compactification volume"
+    ],
+    "new_symmetries": [
+      "worldvolume gauge symmetry on each D-brane stack"
+    ],
     "new_parameters_count": 4,
     "note": "Compactification choice, brane configuration, fluxes, and string coupling determine the 4D phenomenology."
   },
-  "structural_features": ["string_theoretic", "extended_objects", "rr_charged", "open_string_endpoints"],
-  "composes_with": ["heterotic_string_compactification", "ads_cft_holography", "strominger_vafa_microstates", "warped_extra_dimensions_rs"],
+  "structural_features": [
+    "string_theoretic",
+    "extended_objects",
+    "rr_charged",
+    "open_string_endpoints"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "ads_cft_holography",
+    "strominger_vafa_microstates",
+    "warped_extra_dimensions_rs"
+  ],
   "excludes": [],
-  "status": "mainstream",
-  "history": "Polchinski (1995), 'Dirichlet-Branes and Ramond-Ramond Charges', Phys. Rev. Lett. 75, 4724, arXiv:hep-th/9510017 — established D-branes as the carriers of RR charges. Triggered the second superstring revolution; underlies AdS/CFT (Maldacena 1997), explicit black-hole microstate counting (Strominger-Vafa 1996), brane-world phenomenology (RS, ADD), and the modern string-landscape program.",
+  "status": "niche",
+  "history": "Polchinski (1995), 'Dirichlet-Branes and Ramond-Ramond Charges', Phys. Rev. Lett. 75, 4724, arXiv:hep-th/9510017 \u2014 established D-branes as the carriers of RR charges. Triggered the second superstring revolution; underlies AdS/CFT (Maldacena 1997), explicit black-hole microstate counting (Strominger-Vafa 1996), brane-world phenomenology (RS, ADD), and the modern string-landscape program.",
   "references": [
     {
       "citation": "Polchinski, 'Dirichlet-Branes and Ramond-Ramond Charges', Phys. Rev. Lett. 75, 4724 (1995)",
       "arxiv": "hep-th/9510017"
     }
   ],
-  "tags": ["string_theory", "d_branes", "extended_objects", "uv_completion"]
+  "tags": [
+    "string_theory",
+    "d_branes",
+    "extended_objects",
+    "uv_completion"
+  ]
 }

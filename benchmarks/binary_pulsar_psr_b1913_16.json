@@ -4,7 +4,7 @@
   "kind": "precision_test",
   "requirement": "Any candidate framework must reproduce the observed orbital period decay of the Hulse-Taylor binary pulsar PSR B1913+16, which agrees with General Relativity's quadrupole gravitational-wave emission formula. The measured P_b dot, after subtracting the Galactic-acceleration kinematic correction, agrees with the GR prediction to (0.997 +/- 0.002).",
   "regime": {
-    "length_m": 2e9,
+    "length_m": 2000000000.0,
     "energy_ev": null,
     "description": "Compact binary with two ~1.4 M_sun neutron stars, orbital period ~7.75 hours, eccentricity ~0.617. Weak-field external regime; strong-field internal."
   },
@@ -37,8 +37,16 @@
       "arxiv": "1606.02744"
     },
     {
-      "citation": "Hulse and Taylor, 'Discovery of a pulsar in a binary system', ApJL 195, L51 (1975)"
+      "citation": "Hulse and Taylor, 'Discovery of a pulsar in a binary system', ApJL 195, L51 (1975)",
+      "doi": "10.1086/181708",
+      "url": "https://doi.org/10.1086/181708"
     }
   ],
-  "tags": ["gravity", "pulsar", "gravitational_waves", "ppk", "dipolar_radiation"]
+  "tags": [
+    "gravity",
+    "pulsar",
+    "gravitational_waves",
+    "ppk",
+    "dipolar_radiation"
+  ]
 }

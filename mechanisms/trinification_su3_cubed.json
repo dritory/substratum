@@ -1,7 +1,10 @@
 {
   "id": "trinification_su3_cubed",
   "name": "Trinification (SU(3)^3 GUT)",
-  "aliases": ["trinification", "SU(3)_C x SU(3)_L x SU(3)_R"],
+  "aliases": [
+    "trinification",
+    "SU(3)_C x SU(3)_L x SU(3)_R"
+  ],
   "type": "uv_completion",
   "summary": "Embeds the SM gauge group in SU(3)_C x SU(3)_L x SU(3)_R with a Z_3 symmetry permuting the three SU(3) factors. Each generation fits into the (3, 3, 1) + (3-bar, 1, 3) + (1, 3, 3-bar) representation (27 of E6 broken). Produces gauge coupling unification at the GUT scale, predicts vector-like leptons and a richer Higgs sector, and naturally suppresses proton decay by additional global symmetries.",
   "addresses_puzzles": [
@@ -26,21 +29,49 @@
     }
   ],
   "introduces": {
-    "new_fields": ["additional matter beyond SM 16-plet (full 27 of E6 per family)", "SU(3)_R gauge bosons", "new Higgs multiplets"],
-    "new_scales": ["M_GUT ~ 10^15-10^16 GeV", "intermediate breaking scales"],
-    "new_symmetries": ["SU(3)_C x SU(3)_L x SU(3)_R x Z_3"],
+    "new_fields": [
+      "additional matter beyond SM 16-plet (full 27 of E6 per family)",
+      "SU(3)_R gauge bosons",
+      "new Higgs multiplets"
+    ],
+    "new_scales": [
+      "M_GUT ~ 10^15-10^16 GeV",
+      "intermediate breaking scales"
+    ],
+    "new_symmetries": [
+      "SU(3)_C x SU(3)_L x SU(3)_R x Z_3"
+    ],
     "new_parameters_count": 5,
     "note": "Three gauge couplings (Z_3-equal at GUT scale), Higgs and Yukawa structure, intermediate-scale physics."
   },
-  "structural_features": ["grand_unification", "su3_cubed", "z3_symmetry", "vector_like_matter"],
-  "composes_with": ["e6_gut", "heterotic_string_compactification", "seesaw_type_i"],
-  "excludes": ["su5_minimal_gut", "so10_gut", "pati_salam"],
+  "structural_features": [
+    "grand_unification",
+    "su3_cubed",
+    "z3_symmetry",
+    "vector_like_matter"
+  ],
+  "composes_with": [
+    "e6_gut",
+    "heterotic_string_compactification",
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "su5_minimal_gut",
+    "so10_gut",
+    "pati_salam"
+  ],
   "status": "niche",
   "history": "de Rujula, Georgi, Glashow (1984), 'Trinification of all elementary particle forces', presented at the Fifth Workshop on Grand Unification (Brown University), in K. Kang, H. Fried, P. Frampton (eds.), 'Fifth Workshop on Grand Unification', World Scientific, Singapore (1984). Active modern variants connect to E6 GUT and B-anomaly model-building.",
   "references": [
     {
-      "citation": "de Rujula, Georgi, Glashow, 'Trinification of all elementary particle forces', in 'Fifth Workshop on Grand Unification' (eds. Kang, Fried, Frampton), World Scientific, Singapore (1984)"
+      "citation": "de Rujula, Georgi, Glashow, 'Trinification of all elementary particle forces', in 'Fifth Workshop on Grand Unification' (eds. Kang, Fried, Frampton), World Scientific, Singapore (1984)",
+      "url": "https://inspirehep.net/literature/15889"
     }
   ],
-  "tags": ["gut", "trinification", "su3_cubed", "z3_symmetry"]
+  "tags": [
+    "gut",
+    "trinification",
+    "su3_cubed",
+    "z3_symmetry"
+  ]
 }

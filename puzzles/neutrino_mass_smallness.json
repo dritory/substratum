@@ -18,7 +18,12 @@
       "gap_log10": -6
     }
   ],
-  "benchmark_links": ["katrin_neutrino_mass", "sum_neutrino_masses_cosmology", "neutrinoless_double_beta_decay", "neutrino_oscillation_pmns"],
+  "benchmark_links": [
+    "katrin_neutrino_mass",
+    "sum_neutrino_masses_cosmology",
+    "neutrinoless_double_beta_decay",
+    "neutrino_oscillation_pmns"
+  ],
   "principles_stressed": [
     {
       "principle": "naturalness",
@@ -33,11 +38,18 @@
       "doi": "10.1016/0370-2693(77)90435-X"
     },
     {
-      "citation": "Yanagida, 'Horizontal symmetry and masses of neutrinos', Conf. Proc. C7902131, 95 (1979)"
+      "citation": "Yanagida, 'Horizontal symmetry and masses of neutrinos', Conf. Proc. C7902131, 95 (1979)",
+      "url": "https://inspirehep.net/literature/143150"
     },
     {
-      "citation": "Gell-Mann, Ramond, Slansky, 'Complex spinors and unified theories' (1979), in Supergravity, ed. P. van Nieuwenhuizen and D. Z. Freedman"
+      "citation": "Gell-Mann, Ramond, Slansky, 'Complex spinors and unified theories' (1979), in Supergravity, ed. P. van Nieuwenhuizen and D. Z. Freedman",
+      "url": "https://inspirehep.net/literature/9686"
     }
   ],
-  "tags": ["naturalness", "neutrinos", "seesaw", "majorana"]
+  "tags": [
+    "naturalness",
+    "neutrinos",
+    "seesaw",
+    "majorana"
+  ]
 }

@@ -1,7 +1,10 @@
 {
   "id": "dark_photon_portal",
   "name": "Dark photon kinetic-mixing portal",
-  "aliases": ["Holdom portal", "U(1)' kinetic mixing"],
+  "aliases": [
+    "Holdom portal",
+    "U(1)' kinetic mixing"
+  ],
   "type": "dynamical",
   "summary": "Adds a hidden-sector U(1)' gauge boson (the dark photon A') that mixes with SM hypercharge through a renormalisable kinetic-mixing term -(epsilon/2) F^{Y mu nu} F'_{mu nu}. The dark photon mediates a small SM-hidden-sector coupling proportional to epsilon ~ 10^-9 - 10^-3, providing a generic portal to a dark sector that may itself host dark-matter candidates.",
   "addresses_puzzles": [
@@ -29,16 +32,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["dark photon A' (massive U(1)' gauge boson)"],
-    "new_scales": ["m_A' (free parameter, MeV - TeV)"],
-    "new_symmetries": ["dark U(1)' (broken or unbroken)"],
+    "new_fields": [
+      "dark photon A' (massive U(1)' gauge boson)"
+    ],
+    "new_scales": [
+      "m_A' (free parameter, MeV - TeV)"
+    ],
+    "new_symmetries": [
+      "dark U(1)' (broken or unbroken)"
+    ],
     "new_parameters_count": 2,
     "note": "Kinetic mixing parameter epsilon and dark-photon mass m_A'. Dark-sector content (DM mass, couplings) adds further parameters when specified."
   },
-  "structural_features": ["kinetic_mixing", "hidden_sector", "renormalisable_portal", "u1_extension"],
-  "composes_with": ["wimpless_dark_matter", "asymmetric_dark_matter", "mirror_dark_matter"],
+  "structural_features": [
+    "kinetic_mixing",
+    "hidden_sector",
+    "renormalisable_portal",
+    "u1_extension"
+  ],
+  "composes_with": [
+    "wimpless_dark_matter",
+    "asymmetric_dark_matter",
+    "mirror_dark_matter"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Holdom (1986), 'Two U(1)'s and epsilon charge shifts', Phys. Lett. B 166, 196. Revived in the 2000s as the simplest renormalisable hidden-sector portal; extensive low-energy and beam-dump experimental program 2010s-present.",
   "references": [
     {
@@ -50,5 +68,10 @@
       "arxiv": "0811.1030"
     }
   ],
-  "tags": ["dark_matter", "kinetic_mixing", "hidden_sector", "portal"]
+  "tags": [
+    "dark_matter",
+    "kinetic_mixing",
+    "hidden_sector",
+    "portal"
+  ]
 }

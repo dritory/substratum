@@ -1,7 +1,10 @@
 {
   "id": "strominger_vafa_microstates",
   "name": "String-theoretic black hole microstate counting",
-  "aliases": ["Strominger-Vafa BH entropy", "BPS state counting"],
+  "aliases": [
+    "Strominger-Vafa BH entropy",
+    "BPS state counting"
+  ],
   "type": "uv_completion",
   "summary": "For extremal supersymmetric (BPS) black holes in 4D and 5D string compactifications, count the number of bound states of D-branes carrying the same charges. The logarithm of this microstate count exactly reproduces the Bekenstein-Hawking entropy A / (4 G_N) at leading order, showing that the entropy has an explicit microscopic origin in stringy degrees of freedom for this class of black holes.",
   "addresses_puzzles": [
@@ -9,7 +12,7 @@
       "puzzle_id": "black_hole_information",
       "role": "ameliorates",
       "confidence": "established",
-      "note": "Provides a microscopic origin for BH entropy in the BPS case; demonstrates that the relevant degrees of freedom exist in string theory. The information paradox is reformulated rather than directly resolved — for non-extremal evaporating BHs, microscopic dynamics is harder."
+      "note": "Provides a microscopic origin for BH entropy in the BPS case; demonstrates that the relevant degrees of freedom exist in string theory. The information paradox is reformulated rather than directly resolved \u2014 for non-extremal evaporating BHs, microscopic dynamics is harder."
     }
   ],
   "touches_benchmarks": [
@@ -19,16 +22,32 @@
     }
   ],
   "introduces": {
-    "new_fields": ["string-theory bulk content; D-brane states"],
-    "new_scales": ["string scale", "compactification scales"],
-    "new_symmetries": ["supersymmetry (for BPS protection)", "string theory gauge symmetries"],
+    "new_fields": [
+      "string-theory bulk content; D-brane states"
+    ],
+    "new_scales": [
+      "string scale",
+      "compactification scales"
+    ],
+    "new_symmetries": [
+      "supersymmetry (for BPS protection)",
+      "string theory gauge symmetries"
+    ],
     "new_parameters_count": 4,
     "note": "Compactification choice, D-brane charges, string coupling, BPS charges. Heavily constrained by SUSY."
   },
-  "structural_features": ["d_brane_microstates", "bps_protection", "entropy_counting", "string_theoretic"],
-  "composes_with": ["heterotic_string_compactification", "ads_cft_holography"],
+  "structural_features": [
+    "d_brane_microstates",
+    "bps_protection",
+    "entropy_counting",
+    "string_theoretic"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "ads_cft_holography"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Strominger and Vafa (1996), 'Microscopic origin of the Bekenstein-Hawking entropy', Phys. Lett. B 379, 99, arXiv:hep-th/9601029. Generalised through 1996-2000 to broader BPS settings; remains the canonical microscopic explanation of BH entropy in supersymmetric string vacua.",
   "references": [
     {
@@ -36,5 +55,10 @@
       "arxiv": "hep-th/9601029"
     }
   ],
-  "tags": ["black_holes", "string_theory", "bps_states", "entropy"]
+  "tags": [
+    "black_holes",
+    "string_theory",
+    "bps_states",
+    "entropy"
+  ]
 }

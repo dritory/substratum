@@ -186,17 +186,23 @@ module in CLASS / CAMB / PArthENoPE / GARSTEC.
    networks, modified gravity) can be discussed *without* being mixed
    into the rigorous data layer.
 
-## Validation
+## Validation and audit
+
+Three layers run in CI on every push and pull request:
 
 ```bash
-python scripts/validate.py
+python scripts/validate.py         # schema + cross-references
+python scripts/check_citations.py  # arXiv author-text consistency
+python scripts/audit.py            # consistency auditor
 ```
 
-Validates every file in `data/`, `benchmarks/`, `frameworks/`,
-`puzzles/`, and `mechanisms/` against their schemas and cross-checks
-that every reference (tension link, framework prediction, puzzle data
-link, mechanism puzzle/benchmark/composes-with edge, data
-mechanism/puzzle link) resolves.
+The auditor catches status-label inconsistencies, mainstream-status
+mechanisms that don't close any puzzle, references missing arxiv/doi/
+url, contradictions between `composes_with` and `excludes`, and bound
+values quoted in mechanism notes that disagree with the source
+benchmark by more than a factor of two. See
+[AUDIT.md](AUDIT.md) for the audit protocol, the queue of claims
+needing physicist review, and the history of caught-and-fixed errors.
 
 ## Dot-alignment report
 

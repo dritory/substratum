@@ -16,7 +16,7 @@
     {
       "benchmark_id": "lyman_alpha_forest_small_scale_power",
       "effect": "near_bound",
-      "note": "Fuzzy DM with m < ~2e-21 eV suppresses small-scale power below observed level; m > 2e-21 eV is the conservative bound."
+      "note": "Distinct from the WDM thermal-mass bound stored as the benchmark current_bound (5.3 keV). For ultralight bosonic DM (fuzzy regime), Iršič et al. 2017 (arXiv:1703.04683) give the conservative bound m_ULDM > ~2e-21 eV from XQ-100 + HIRES/MIKE quasar spectra. The two limits constrain different DM particle classes and are not directly interchangeable."
     },
     {
       "benchmark_id": "axion_haloscope_admx",

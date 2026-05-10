@@ -1,7 +1,11 @@
 {
   "id": "dynamical_susy_breaking",
   "name": "Dynamical supersymmetry breaking",
-  "aliases": ["DSB", "Affleck-Dine-Seiberg DSB", "non-perturbative SUSY breaking"],
+  "aliases": [
+    "DSB",
+    "Affleck-Dine-Seiberg DSB",
+    "non-perturbative SUSY breaking"
+  ],
   "type": "dynamical",
   "summary": "Supersymmetry is broken non-perturbatively by strong-gauge-dynamics effects in a hidden sector, generating the SUSY-breaking scale dynamically via dimensional transmutation rather than introducing it by hand. Naturally produces an exponentially small SUSY-breaking scale (Lambda_SUSY ~ M_Pl exp(-c/g^2)) without fine-tuning. Provides a UV-clean origin for the soft masses transmitted to the visible sector through gauge or gravity mediation.",
   "addresses_puzzles": [
@@ -23,17 +27,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["hidden-sector strongly-coupled gauge theory + matter"],
-    "new_scales": ["DSB confinement scale Lambda_DSB ~ TeV - 10^9 GeV"],
+    "new_fields": [
+      "hidden-sector strongly-coupled gauge theory + matter"
+    ],
+    "new_scales": [
+      "DSB confinement scale Lambda_DSB ~ TeV - 10^9 GeV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Hidden gauge group, matter content, and one mass scale. The exponential-suppression structure means this scale is naturally small without fine-tuning."
   },
-  "structural_features": ["dimensional_transmutation", "non_perturbative", "hidden_sector", "exponential_suppression"],
-  "composes_with": ["mssm", "gauge_mediated_susy_breaking", "anomaly_mediated_susy_breaking", "wess_zumino_supersymmetry"],
+  "structural_features": [
+    "dimensional_transmutation",
+    "non_perturbative",
+    "hidden_sector",
+    "exponential_suppression"
+  ],
+  "composes_with": [
+    "mssm",
+    "gauge_mediated_susy_breaking",
+    "anomaly_mediated_susy_breaking",
+    "wess_zumino_supersymmetry"
+  ],
   "excludes": [],
-  "status": "mainstream",
-  "history": "Witten (1981), 'Dynamical breaking of supersymmetry', Nucl. Phys. B 188, 513 — first DSB construction. Affleck, Dine, Seiberg (1985), 'Dynamical supersymmetry breaking in four dimensions and its phenomenological implications', Nucl. Phys. B 256, 557 — comprehensive program for DSB phenomenology. Intriligator-Seiberg-Shih (2006, arXiv:hep-th/0602239) revived DSB through metastable vacua. Foundational for all SUSY-breaking-mediation mechanisms.",
+  "status": "niche",
+  "history": "Witten (1981), 'Dynamical breaking of supersymmetry', Nucl. Phys. B 188, 513 \u2014 first DSB construction. Affleck, Dine, Seiberg (1985), 'Dynamical supersymmetry breaking in four dimensions and its phenomenological implications', Nucl. Phys. B 256, 557 \u2014 comprehensive program for DSB phenomenology. Intriligator-Seiberg-Shih (2006, arXiv:hep-th/0602239) revived DSB through metastable vacua. Foundational for all SUSY-breaking-mediation mechanisms.",
   "references": [
     {
       "citation": "Witten, 'Dynamical breaking of supersymmetry', Nucl. Phys. B 188, 513 (1981)",
@@ -44,5 +62,10 @@
       "doi": "10.1016/0550-3213(85)90408-0"
     }
   ],
-  "tags": ["supersymmetry", "dsb", "non_perturbative", "dimensional_transmutation"]
+  "tags": [
+    "supersymmetry",
+    "dsb",
+    "non_perturbative",
+    "dimensional_transmutation"
+  ]
 }

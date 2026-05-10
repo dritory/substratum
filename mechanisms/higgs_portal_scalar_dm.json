@@ -1,7 +1,10 @@
 {
   "id": "higgs_portal_scalar_dm",
   "name": "Higgs-portal scalar dark matter",
-  "aliases": ["singlet scalar DM", "scalar phantom DM"],
+  "aliases": [
+    "singlet scalar DM",
+    "scalar phantom DM"
+  ],
   "type": "dynamical",
   "summary": "The minimal renormalisable extension of the SM that produces a stable dark matter candidate: a real (or complex) singlet scalar S protected by Z_2, coupling to the SM only through |H|^2 |S|^2. Three new parameters set DM mass, self-coupling, and Higgs-portal coupling lambda; thermal freeze-out determines lambda once the relic abundance is fixed.",
   "addresses_puzzles": [
@@ -25,16 +28,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["real or complex scalar singlet S"],
-    "new_scales": ["m_S (free parameter, GeV - TeV scale)"],
-    "new_symmetries": ["dark Z_2 stabilising S"],
+    "new_fields": [
+      "real or complex scalar singlet S"
+    ],
+    "new_scales": [
+      "m_S (free parameter, GeV - TeV scale)"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising S"
+    ],
     "new_parameters_count": 3,
     "note": "Mass m_S, self-coupling, and Higgs-portal coupling lambda; relic abundance fixes one combination."
   },
-  "structural_features": ["singlet_extension", "z2_stabilisation", "higgs_portal", "minimal_renormalizable"],
-  "composes_with": ["coleman_weinberg_radiative", "electroweak_baryogenesis"],
+  "structural_features": [
+    "singlet_extension",
+    "z2_stabilisation",
+    "higgs_portal",
+    "minimal_renormalizable"
+  ],
+  "composes_with": [
+    "coleman_weinberg_radiative",
+    "electroweak_baryogenesis"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Silveira and Zee (1985), 'Scalar phantoms', Phys. Lett. B 161, 136. McDonald (1994, hep-ph/9305312) systematic analysis. Burgess, Pospelov, ter Veldhuis (2001), 'The minimal model of nonbaryonic dark matter: a singlet scalar', Nucl. Phys. B 619, 709. Active LHC + direct detection target through 2010s-2020s.",
   "references": [
     {
@@ -46,5 +63,10 @@
       "doi": "10.1016/S0550-3213(01)00513-2"
     }
   ],
-  "tags": ["dark_matter", "higgs_portal", "singlet_scalar", "thermal"]
+  "tags": [
+    "dark_matter",
+    "higgs_portal",
+    "singlet_scalar",
+    "thermal"
+  ]
 }

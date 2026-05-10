@@ -1,7 +1,10 @@
 {
   "id": "simp_dark_matter",
   "name": "Strongly interacting massive particle (SIMP) dark matter",
-  "aliases": ["SIMP miracle", "3->2 freeze-out"],
+  "aliases": [
+    "SIMP miracle",
+    "3->2 freeze-out"
+  ],
   "type": "dynamical",
   "summary": "Sub-GeV dark-matter relic abundance is set by 3->2 number-changing self-annihilation in a strongly-coupled hidden sector, instead of the standard 2->2 freeze-out. The required cross sections sigma_{3->2} ~ alpha_eff^3 / m_chi^5 are naturally produced by strong dynamics with confinement scale Lambda ~ m_chi. Provides a natural setting for sub-GeV thermal DM and self-interacting DM with sigma/m ~ 1 cm^2/g relevant to small-scale structure puzzles.",
   "addresses_puzzles": [
@@ -30,16 +33,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["strongly-coupled hidden sector (e.g., dark mesons / dark baryons)"],
-    "new_scales": ["dark confinement scale Lambda_dark ~ MeV - GeV"],
-    "new_symmetries": ["dark gauge SU(N) confining"],
+    "new_fields": [
+      "strongly-coupled hidden sector (e.g., dark mesons / dark baryons)"
+    ],
+    "new_scales": [
+      "dark confinement scale Lambda_dark ~ MeV - GeV"
+    ],
+    "new_symmetries": [
+      "dark gauge SU(N) confining"
+    ],
     "new_parameters_count": 4,
     "note": "Dark confinement scale, dark coupling, kinetic-mixing portal to SM, hidden-sector fermion content."
   },
-  "structural_features": ["hidden_sector", "strong_dynamics", "3_to_2_annihilation", "sub_gev_dark_matter", "self_interacting"],
-  "composes_with": ["dark_photon_portal"],
+  "structural_features": [
+    "hidden_sector",
+    "strong_dynamics",
+    "3_to_2_annihilation",
+    "sub_gev_dark_matter",
+    "self_interacting"
+  ],
+  "composes_with": [
+    "dark_photon_portal"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Hochberg, Kuflik, Volansky, Wacker (2014), 'The SIMP Miracle', Phys. Rev. Lett. 113, 171301, arXiv:1402.5143. Active research program through 2010s-2020s targeting sub-GeV thermal DM with low-energy direct-detection (SuperCDMS, SENSEI, DAMIC) and kinetic-mixing portal experiments.",
   "references": [
     {
@@ -47,5 +64,11 @@
       "arxiv": "1402.5143"
     }
   ],
-  "tags": ["dark_matter", "simp", "strong_dynamics", "sub_gev", "self_interacting"]
+  "tags": [
+    "dark_matter",
+    "simp",
+    "strong_dynamics",
+    "sub_gev",
+    "self_interacting"
+  ]
 }

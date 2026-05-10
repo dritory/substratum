@@ -1,7 +1,10 @@
 {
   "id": "two_higgs_doublet",
   "name": "Two Higgs doublet model (2HDM)",
-  "aliases": ["2HDM", "T.D. Lee model"],
+  "aliases": [
+    "2HDM",
+    "T.D. Lee model"
+  ],
   "type": "dynamical",
   "summary": "Extends the SM scalar sector with a second SU(2)_L doublet, giving 5 physical Higgs bosons (h, H, A, H+, H-) and additional CP-violating phases. The minimal renormalisable extension that admits spontaneous CP violation. Realises naturally in supersymmetric models (MSSM Higgs sector) and underlies many BSM constructions of electroweak baryogenesis and flavour physics.",
   "addresses_puzzles": [
@@ -39,16 +42,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["second Higgs doublet H_2"],
-    "new_scales": ["heavy Higgs mass scale m_A, m_H, m_H+ ~ 100 GeV - few TeV"],
-    "new_symmetries": ["Z_2 (in Type-I, Type-II, lepton-specific, flipped 2HDMs)"],
+    "new_fields": [
+      "second Higgs doublet H_2"
+    ],
+    "new_scales": [
+      "heavy Higgs mass scale m_A, m_H, m_H+ ~ 100 GeV - few TeV"
+    ],
+    "new_symmetries": [
+      "Z_2 (in Type-I, Type-II, lepton-specific, flipped 2HDMs)"
+    ],
     "new_parameters_count": 7,
     "note": "Higgs potential parameters: two VEVs (tan beta), four physical mass eigenstates, mixing angle alpha, Z_2-breaking lambda_5 / m_12^2."
   },
-  "structural_features": ["extended_higgs_sector", "two_higgs_doublet", "ew_baryogenesis_friendly", "z2_yukawa_structure"],
-  "composes_with": ["mssm", "electroweak_baryogenesis", "babu_mohapatra_parity"],
+  "structural_features": [
+    "extended_higgs_sector",
+    "two_higgs_doublet",
+    "ew_baryogenesis_friendly",
+    "z2_yukawa_structure"
+  ],
+  "composes_with": [
+    "mssm",
+    "electroweak_baryogenesis",
+    "babu_mohapatra_parity"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Lee (1973), 'A theory of spontaneous T violation', Phys. Rev. D 8, 1226. Embedded in SUSY (Fayet 1976; Inoue-Kakuto-Komatsu-Takeshita 1982). Comprehensive 2HDM review (Branco-Ferreira-Lavoura-Rebelo-Sher-Silva 2011). LHC searches and EDM bounds drive the parameter-space exclusion.",
   "references": [
     {
@@ -60,5 +78,10 @@
       "arxiv": "1106.0034"
     }
   ],
-  "tags": ["higgs", "2hdm", "ew_baryogenesis", "extended_scalar"]
+  "tags": [
+    "higgs",
+    "2hdm",
+    "ew_baryogenesis",
+    "extended_scalar"
+  ]
 }

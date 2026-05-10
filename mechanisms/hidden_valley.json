@@ -1,9 +1,12 @@
 {
   "id": "hidden_valley",
   "name": "Hidden valley",
-  "aliases": ["hidden sector", "Strassler-Zurek hidden valley"],
+  "aliases": [
+    "hidden sector",
+    "Strassler-Zurek hidden valley"
+  ],
   "type": "dynamical",
-  "summary": "Postulates a new confining gauge sector ('hidden valley') connected to the Standard Model only via massive mediators (Z' or messengers) at the TeV scale. Bound states of the hidden sector — light, electrically neutral, possibly long-lived — can be produced at the LHC through the heavy mediator and produce displaced-vertex / lepton-jet / soft-bomb signatures. A natural framework for a wide range of dark-sector and DM phenomenologies.",
+  "summary": "Postulates a new confining gauge sector ('hidden valley') connected to the Standard Model only via massive mediators (Z' or messengers) at the TeV scale. Bound states of the hidden sector \u2014 light, electrically neutral, possibly long-lived \u2014 can be produced at the LHC through the heavy mediator and produce displaced-vertex / lepton-jet / soft-bomb signatures. A natural framework for a wide range of dark-sector and DM phenomenologies.",
   "addresses_puzzles": [
     {
       "puzzle_id": "dark_matter_identity",
@@ -29,16 +32,32 @@
     }
   ],
   "introduces": {
-    "new_fields": ["hidden-sector gauge group SU(N)_hv", "hidden-sector matter (quarks/scalars)", "heavy mediator (Z' or scalar)"],
-    "new_scales": ["hidden confinement scale Lambda_hv ~ GeV-TeV", "mediator mass M_med ~ TeV"],
-    "new_symmetries": ["hidden gauge symmetry SU(N)_hv"],
+    "new_fields": [
+      "hidden-sector gauge group SU(N)_hv",
+      "hidden-sector matter (quarks/scalars)",
+      "heavy mediator (Z' or scalar)"
+    ],
+    "new_scales": [
+      "hidden confinement scale Lambda_hv ~ GeV-TeV",
+      "mediator mass M_med ~ TeV"
+    ],
+    "new_symmetries": [
+      "hidden gauge symmetry SU(N)_hv"
+    ],
     "new_parameters_count": 5,
     "note": "Hidden gauge group, confinement scale, mediator mass and coupling, hidden-matter content and masses."
   },
-  "structural_features": ["hidden_sector", "confining_dynamics", "displaced_vertices", "tev_mediator"],
-  "composes_with": ["dark_photon_portal"],
+  "structural_features": [
+    "hidden_sector",
+    "confining_dynamics",
+    "displaced_vertices",
+    "tev_mediator"
+  ],
+  "composes_with": [
+    "dark_photon_portal"
+  ],
   "excludes": [],
-  "status": "mainstream",
+  "status": "niche",
   "history": "Strassler and Zurek (2006), 'Echoes of a Hidden Valley at Hadron Colliders', Phys. Lett. B 651, 374, arXiv:hep-ph/0604261. Defined a broad framework that subsequent dark-sector models populate; LHC searches for displaced vertices, lepton jets, and emerging jets are active and produce world-leading bounds.",
   "references": [
     {
@@ -46,5 +65,10 @@
       "arxiv": "hep-ph/0604261"
     }
   ],
-  "tags": ["hidden_sector", "dark_matter", "lhc", "confining"]
+  "tags": [
+    "hidden_sector",
+    "dark_matter",
+    "lhc",
+    "confining"
+  ]
 }

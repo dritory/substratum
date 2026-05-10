@@ -4,8 +4,8 @@
   "kind": "precision_test",
   "requirement": "Any candidate framework must reproduce the measured solar electron-neutrino survival probability P_ee(E) across the full pp-chain energy range (pp at ~0.1 MeV through 8B at ~10 MeV), including the characteristic MSW transition: low-energy vacuum-dominated regime with P_ee ~ 1 - sin^2(2 theta_12)/2 ~ 0.55, high-energy matter-dominated (adiabatic) regime with P_ee ~ sin^2(theta_12) ~ 0.30, and the rising 'upturn' through 1-5 MeV. The Borexino spectroscopic measurements of pp, 7Be, pep, 8B, and CNO solar-neutrino fluxes plus the SNO neutral-current 8B flux establish the MSW-LMA solution at >5 sigma over a vacuum-only oscillation, fixing Delta m^2_21 = (7.42 +/- 0.21) x 10^-5 eV^2 and sin^2(theta_12) = 0.304 +/- 0.012 (NuFIT 6.0).",
   "regime": {
-    "length_m": 1.5e11,
-    "energy_ev": 1e7,
+    "length_m": 150000000000.0,
+    "energy_ev": 10000000.0,
     "description": "Solar core (rho ~ 150 g/cm^3, electron density n_e ~ 6 x 10^25 cm^-3) to vacuum propagation over 1 AU. Adiabatic resonance at the layer where 2 sqrt(2) G_F n_e E = Delta m^2_21 cos(2 theta_12); for the high-energy 8B neutrinos (E ~ 10 MeV, taken as the characteristic energy) this layer lies in the radiative core. Full energy range probed: ~0.1 MeV (pp) to ~15 MeV (hep tail)."
   },
   "current_bound": {
@@ -57,8 +57,17 @@
       "doi": "10.1103/PhysRevD.17.2369"
     },
     {
-      "citation": "Mikheev and Smirnov, 'Resonance enhancement of oscillations in matter and solar neutrino spectroscopy', Sov. J. Nucl. Phys. 42, 913 (1985)"
+      "citation": "Mikheev and Smirnov, 'Resonance enhancement of oscillations in matter and solar neutrino spectroscopy', Sov. J. Nucl. Phys. 42, 913 (1985)",
+      "url": "https://inspirehep.net/literature/228000"
     }
   ],
-  "tags": ["neutrino", "msw", "solar", "matter_effect", "flavor_conversion", "borexino", "sno"]
+  "tags": [
+    "neutrino",
+    "msw",
+    "solar",
+    "matter_effect",
+    "flavor_conversion",
+    "borexino",
+    "sno"
+  ]
 }

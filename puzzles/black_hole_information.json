@@ -1,9 +1,12 @@
 {
   "id": "black_hole_information",
   "name": "Black hole information paradox",
-  "aliases": ["Hawking information paradox", "BH unitarity"],
+  "aliases": [
+    "Hawking information paradox",
+    "BH unitarity"
+  ],
   "kind": "consistency",
-  "summary": "Hawking radiation, computed semi-classically, is exactly thermal — independent of the matter that fell in. Taken at face value, this means information about the infalling state is destroyed when the black hole evaporates, in contradiction with quantum-mechanical unitarity. The puzzle is now widely viewed as a constraint on quantum gravity rather than evidence against unitarity, and recent work on the Page curve in semi-classical gravity has provided a computational handle without resolving the underlying microphysics.",
+  "summary": "Hawking radiation, computed semi-classically, is exactly thermal \u2014 independent of the matter that fell in. Taken at face value, this means information about the infalling state is destroyed when the black hole evaporates, in contradiction with quantum-mechanical unitarity. The puzzle is now widely viewed as a constraint on quantum gravity rather than evidence against unitarity, and recent work on the Page curve in semi-classical gravity has provided a computational handle without resolving the underlying microphysics.",
   "characteristic_numbers": [
     {
       "symbol": "S_BH (Bekenstein-Hawking entropy)",
@@ -39,8 +42,15 @@
       "doi": "10.1007/BF02345020"
     },
     {
-      "citation": "Page, 'Information in black hole radiation', Phys. Rev. Lett. 71, 3743 (1993)"
+      "citation": "Page, 'Information in black hole radiation', Phys. Rev. Lett. 71, 3743 (1993)",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevLett.71.3743",
+      "doi": "10.1103/PhysRevLett.71.3743"
     }
   ],
-  "tags": ["quantum_gravity", "black_holes", "unitarity", "information_paradox"]
+  "tags": [
+    "quantum_gravity",
+    "black_holes",
+    "unitarity",
+    "information_paradox"
+  ]
 }
