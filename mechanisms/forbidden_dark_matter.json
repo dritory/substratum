@@ -1,0 +1,81 @@
+{
+  "id": "forbidden_dark_matter",
+  "name": "Forbidden dark matter",
+  "aliases": [
+    "D'Agnolo-Ruderman forbidden DM",
+    "DM annihilation into heavier states"
+  ],
+  "type": "dynamical",
+  "summary": "Thermal-relic dark matter that annihilates into states *heavier* than itself in the early universe, when residual thermal energy allows the energetically-forbidden channel. The Boltzmann-suppressed cross section sigma_eff ~ e^{-Delta m / T} gives an exponential separation between DM mass and weak scale, naturally producing keV-GeV thermal DM. Annihilations turn off at late times because the heavier final states become inaccessible, evading CMB-recombination bounds on energy injection.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Reproduces Omega_DM h^2 ~ 0.12 across keV - weak scales with a single small mass splitting Delta m / m_chi ~ few. Generic prediction: DM annihilates into a slightly-heavier mediator (dark photon, dark Higgs); large DM self-interactions and exponentially-suppressed late-time annihilation distinguish the framework from vanilla WIMPs."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
+      "effect": "respects",
+      "note": "Late-time annihilation cross-section is exponentially suppressed (vs. early-universe value), so dwarf gamma-ray and CMB-recombination bounds are evaded."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "Direct detection depends on the mediator structure; forbidden-DM with dark-photon mediator predicts a narrow band testable at SuperCDMS and SENSEI for sub-GeV masses."
+    },
+    {
+      "benchmark_id": "sidm_self_interaction_clusters",
+      "effect": "near_bound",
+      "note": "Large DM self-interactions through the heavier mediator can saturate cluster-merger bounds in part of the parameter space."
+    },
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "predicts_signal",
+      "note": "Forbidden-DM with dark-photon final state predicts kinetic-mixing-driven signals at NA64, BaBar, Belle II."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "DM particle chi",
+      "slightly heavier final-state mediator (dark photon / dark Higgs)"
+    ],
+    "new_scales": [
+      "m_chi ~ keV - GeV",
+      "Delta m / m_chi ~ 0.1-1"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising chi"
+    ],
+    "new_parameters_count": 3,
+    "note": "DM mass, mass splitting to mediator, coupling. Relic abundance fixes one combination."
+  },
+  "structural_features": [
+    "thermal_relic",
+    "boltzmann_suppression",
+    "exponential_mass_separation",
+    "late_time_annihilation_suppressed"
+  ],
+  "composes_with": [
+    "dark_photon_portal",
+    "simp_dark_matter",
+    "wimpless_dark_matter"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "D'Agnolo and Ruderman (2015), 'Light dark matter from forbidden channels', Phys. Rev. Lett. 115, 061301, arXiv:1505.07107. Active sub-GeV-DM research target through 2010s-2020s; cannibal, coannihilation, and forbidden-co-decay variants extend the framework.",
+  "references": [
+    {
+      "citation": "D'Agnolo and Ruderman, 'Light dark matter from forbidden channels', Phys. Rev. Lett. 115, 061301 (2015)",
+      "arxiv": "1505.07107"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "forbidden_dm",
+    "sub_gev",
+    "thermal_relic"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "kklt_moduli_stabilisation",
+  "name": "KKLT moduli stabilisation",
+  "aliases": [
+    "Kachru-Kallosh-Linde-Trivedi",
+    "metastable de Sitter from string flux"
+  ],
+  "type": "uv_completion",
+  "summary": "Constructs metastable de Sitter vacua in type IIB string theory by combining: (i) flux compactifications that fix all complex-structure moduli and the dilaton, (ii) non-perturbative effects (Euclidean D3-instantons or gaugino condensation on D7s) that fix the Kahler modulus into a supersymmetric AdS vacuum, (iii) anti-D3 branes at the tip of a warped throat that uplift the AdS vacuum to a metastable dS vacuum. Provides the explicit string-landscape backbone for anthropic explanations of Lambda.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "KKLT-type constructions populate the string landscape with ~10^500 metastable dS vacua spanning a near-continuum of Lambda values; combined with eternal inflation + anthropic selection, this is the canonical answer for why Lambda lands in the meV-scale window. Status `contested` because de-Sitter swampland conjectures (Obied-Ooguri-Spodyneiko-Vafa 2018) challenge the construction's existence; counter-arguments persist."
+    },
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "KKLT provides the UV completion in which inflationary scenarios (including eternal inflation populating the landscape) become well-defined; specific inflaton constructions (KKLMMT 2003) sit inside the framework."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "complex-structure and Kahler moduli",
+      "anti-D3 branes"
+    ],
+    "new_scales": [
+      "compactification volume",
+      "warped-throat hierarchy"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 5,
+    "note": "Flux quantum numbers (discrete), warped-throat geometry, instanton-correction scale, uplift parameter. The discrete flux landscape gives the large vacuum count."
+  },
+  "structural_features": [
+    "flux_compactification",
+    "non_perturbative_moduli_fixing",
+    "anti_d3_uplift",
+    "string_landscape",
+    "metastable_de_sitter"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "polchinski_d_branes",
+    "anthropic_landscape",
+    "linde_eternal_inflation"
+  ],
+  "excludes": [
+    "swampland_de_sitter"
+  ],
+  "status": "niche",
+  "history": "Kachru, Kallosh, Linde, Trivedi (2003), 'de Sitter vacua in string theory', Phys. Rev. D 68, 046005, arXiv:hep-th/0301240. KKLMMT 2003 (Kachru-Kallosh-Linde-Maldacena-McAllister-Trivedi, arXiv:hep-th/0308055) provided the explicit brane-inflation embedding. The construction underlies modern landscape phenomenology; under sustained challenge from the swampland program (Obied-Ooguri-Spodyneiko-Vafa 2018) and Bena-Grana-Kovensky-Retolaza-style critiques.",
+  "references": [
+    {
+      "citation": "Kachru, Kallosh, Linde, Trivedi, 'de Sitter vacua in string theory', Phys. Rev. D 68, 046005 (2003)",
+      "arxiv": "hep-th/0301240"
+    }
+  ],
+  "tags": [
+    "string_theory",
+    "landscape",
+    "moduli_stabilisation",
+    "metastable_ds",
+    "uv_completion"
+  ]
+}
