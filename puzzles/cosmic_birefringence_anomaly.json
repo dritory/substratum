@@ -1,0 +1,59 @@
+{
+  "id": "cosmic_birefringence_anomaly",
+  "name": "Cosmic birefringence anomaly",
+  "aliases": [
+    "CMB polarization rotation",
+    "Minami-Komatsu beta"
+  ],
+  "kind": "naturalness",
+  "summary": "Re-analysis of Planck 2018 polarization data (Minami-Komatsu 2020) found evidence for a uniform rotation of CMB polarization by beta = 0.35 +/- 0.14 degrees, excluding zero at 99.2% C.L. (later updated to 2.4 sigma with full WMAP+Planck data in 2022). Such a rotation - 'cosmic birefringence' - would violate parity and is naturally produced by ultralight axion-like-particle dark matter or dark energy coupling to the photon field via the Chern-Simons term. If confirmed, the first non-gravitational signature of axion-like physics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "beta (Planck 2018, M-K 2020)",
+      "value": "0.35",
+      "uncertainty": "0.14",
+      "units": "degrees",
+      "expected": "0 (no parity violation)",
+      "note": "Excludes 0 at 99.2% C.L. (2.4 sigma) after marginalizing over instrument-calibration angle via dust-cross-correlation method."
+    },
+    {
+      "symbol": "beta (Planck + WMAP, Eskilt 2022)",
+      "value": "0.34",
+      "uncertainty": "0.09",
+      "units": "degrees",
+      "expected": "0 (no parity violation)",
+      "note": "Combined WMAP+Planck analysis (Eskilt-Komatsu 2022, arXiv:2205.13962) reaches 3.6 sigma. Updated 2023+ analyses sustain the signal at ~3 sigma."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "cmb_large_scale_anomalies",
+    "lorentz_invariance_photon",
+    "vacuum_birefringence_polarization"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "cpt",
+      "status": "stresses",
+      "note": "Uniform polarization rotation requires P (parity) violation in cosmology - either explicit (Chern-Simons coupling F F-dual) or spontaneous via axion-like-particle background. If confirmed, the strongest hint of cosmological CPT-related new physics."
+    }
+  ],
+  "history": "Theoretical framework: Carroll, Field, Jackiw (1990), 'Limits on a Lorentz and parity violating modification of electrodynamics', PRD 41, 1231. Minami-Komatsu (2020), 'New extraction of the cosmic birefringence from the Planck 2018 polarization data', PRL 125, 221301, arXiv:2011.11254. Eskilt-Komatsu (2022), PRD 106, 063503, arXiv:2205.13962. Active follow-up with ACT, SPT, LiteBIRD planned for definitive measurement.",
+  "references": [
+    {
+      "citation": "Minami and Komatsu, 'New extraction of the cosmic birefringence from the Planck 2018 polarization data', Phys. Rev. Lett. 125, 221301 (2020)",
+      "arxiv": "2011.11254"
+    },
+    {
+      "citation": "Carroll, Field, Jackiw, 'Limits on a Lorentz and parity violating modification of electrodynamics', Phys. Rev. D 41, 1231 (1990)",
+      "doi": "10.1103/PhysRevD.41.1231"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "cmb",
+    "polarization",
+    "parity_violation",
+    "axion"
+  ]
+}

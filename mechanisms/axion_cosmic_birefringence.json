@@ -1,0 +1,88 @@
+{
+  "id": "axion_cosmic_birefringence",
+  "name": "Axion-induced cosmic birefringence",
+  "aliases": [
+    "ALP photon coupling rotation",
+    "Carroll-Field-Jackiw birefringence"
+  ],
+  "type": "dynamical",
+  "summary": "An axion-like field a coupled to electromagnetism through (a/f_a) F F-tilde (Chern-Simons term) causes left- and right-circular polarisations of light to propagate at slightly different speeds. CMB photons travelling from last scattering to today accumulate a polarisation rotation angle beta = (g_a gamma / 2) [a(today) - a(LSS)]. If beta = 0.3 degrees is real (Minami-Komatsu / Eskilt-Komatsu measurements), the axion field has slowly evolved by Delta a / f_a ~ 0.01 since recombination - consistent with ultralight dark energy or dark matter ALPs.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmic_birefringence_anomaly",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Predicts beta in observed range for ULDM ALP (m_a ~ 10^-32 - 10^-28 eV) with f_a ~ M_Pl. Specific m_a determined by ALP-mass / Hubble-rate ratio: if m_a ~ H_0, the field is slowly rolling now; if m_a > H_0, oscillation washes out static beta but leaves an oscillation signature."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "ULDM ALP can simultaneously constitute fuzzy DM and source cosmic birefringence; links two otherwise-independent anomalies."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "If the ALP is quintessence-like (still rolling today), the birefringence is sensitive to its potential and field range. Quintessence + ALP-photon coupling links cosmic acceleration and CMB birefringence in one field."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "vacuum_birefringence_polarization",
+      "effect": "predicts_signal"
+    },
+    {
+      "benchmark_id": "cmb_large_scale_anomalies",
+      "effect": "predicts_signal",
+      "note": "Predicts specific frequency-independent rotation that matches Minami-Komatsu / Eskilt-Komatsu measurement; future LiteBIRD + CMB-S4 sensitive to anisotropic-birefringence signatures."
+    },
+    {
+      "benchmark_id": "alpha_variation_atomic_clocks",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "ultralight axion-like field a"
+    ],
+    "new_scales": [
+      "m_a ~ 10^-32 - 10^-28 eV",
+      "g_a gamma f_a ~ 1 (dimensionless)"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry"
+    ],
+    "new_parameters_count": 3,
+    "note": "ALP mass, photon-coupling strength, initial field value. Connects to existing string-axiverse model space."
+  },
+  "structural_features": [
+    "chern_simons_coupling",
+    "parity_violation",
+    "alp_dark_sector",
+    "cmb_rotation"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "string_axiverse",
+    "ultralight_scalar_dm",
+    "quintessence",
+    "alp_dark_matter_haloscope"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Carroll, Field, Jackiw (1990), 'Limits on a Lorentz and parity violating modification of electrodynamics', Phys. Rev. D 41, 1231 - first identified the F F-dual rotation mechanism. Minami-Komatsu (2020) measurement renewed phenomenological interest. Modern ALP-birefringence model-building: Fujita-Murai-Nakatsuka-Tsujikawa (2020), arXiv:2008.02473; Choi et al. (2021).",
+  "references": [
+    {
+      "citation": "Carroll, Field, Jackiw, 'Limits on a Lorentz and parity violating modification of electrodynamics', Phys. Rev. D 41, 1231 (1990)",
+      "doi": "10.1103/PhysRevD.41.1231"
+    }
+  ],
+  "tags": [
+    "axion",
+    "birefringence",
+    "parity_violation",
+    "alp",
+    "cmb"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ghirardi_rimini_weber",
+  "name": "GRW objective collapse",
+  "aliases": [
+    "Ghirardi-Rimini-Weber spontaneous localization",
+    "objective collapse model"
+  ],
+  "type": "dynamical",
+  "summary": "Modifies the Schrodinger equation by adding stochastic spontaneous-collapse events that localize wave functions at random times with rate lambda ~ 10^-16 s^-1 and localization width sigma ~ 10^-7 m. For single particles, deviations from standard QM are negligible. For macroscopic objects (N ~ 10^23 particles), collapse rates are amplified by N, producing classical localized behaviour on perceptible timescales. Solves the measurement problem by making collapse an objective dynamical process, not a measurement postulate.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "quantum_measurement_problem",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Stochastic non-unitary dynamics produces unique outcomes without measurement postulate. Testable: predicts spontaneous emission of soft X-rays from charged particles (constrained by X-ray-quiet experiments, see Donadi et al. 2021 arXiv:2111.03831, which pressured original GRW parameters). Modified by CSL (continuous spontaneous localisation, Pearle 1989) and gravitationally-induced collapse (Penrose 1996, Diosi 1989)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "collapse rate lambda ~ 10^-17 s^-1",
+      "localisation width sigma ~ 10^-7 m"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Two new universal constants (lambda, sigma) - the most-constrained-by-experiment of all interpretation-modifying QM proposals."
+  },
+  "structural_features": [
+    "stochastic_dynamics",
+    "objective_collapse",
+    "non_linear",
+    "n_amplification"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "many_worlds_everett",
+    "bohmian_mechanics"
+  ],
+  "status": "niche",
+  "history": "Ghirardi, Rimini, Weber (1986), 'Unified dynamics for microscopic and macroscopic systems', Phys. Rev. D 34, 470. Generalised to CSL (Continuous Spontaneous Localisation): Pearle (1989); Bassi-Ghirardi (2003). Modern X-ray tests have pressed lambda below the original GRW value; Donadi-Bassi et al. (2021), arXiv:2111.03831 - 'Underground test of gravity-related wave function collapse' - excludes the simplest gravitational-collapse parameters.",
+  "references": [
+    {
+      "citation": "Ghirardi, Rimini, Weber, 'Unified dynamics for microscopic and macroscopic systems', Phys. Rev. D 34, 470 (1986)",
+      "doi": "10.1103/PhysRevD.34.470"
+    }
+  ],
+  "tags": [
+    "quantum_foundations",
+    "objective_collapse",
+    "grw",
+    "spontaneous_localisation"
+  ]
+}

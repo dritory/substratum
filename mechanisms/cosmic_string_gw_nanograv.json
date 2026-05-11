@@ -1,0 +1,68 @@
+{
+  "id": "cosmic_string_gw_nanograv",
+  "name": "Cosmic-string GW interpretation of NANOGrav signal",
+  "aliases": [
+    "PTA cosmic strings",
+    "metastable cosmic strings"
+  ],
+  "type": "topological",
+  "summary": "Cosmic strings formed in early-universe symmetry breaking radiate gravitational waves through cusps and kinks on cosmic-string loops; the resulting stochastic background can extend from nanohertz to LIGO-band. A cosmic-string tension G mu ~ 10^-11 - 10^-10 produces a PTA-detectable signal that competes with the SMBHB interpretation of NANOGrav 15-yr. Distinguished from SMBHB by spectral shape (cosmic strings give nearly scale-free spectrum) and anisotropy (cosmic-string signal is highly isotropic).",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "nanograv_pta_gw_background",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Cosmic-string tension G mu ~ 10^-10 produces stochastic GW background consistent with NANOGrav amplitude. Spectral index for cusp+kink radiation is closer to f^0 than SMBHB f^-2/3; current NANOGrav posterior accommodates both. Metastable cosmic strings (those that decay via monopole pair-production) give modified spectrum that fits NANOGrav better."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "pulsar_timing_array_gw_background",
+      "effect": "predicts_signal",
+      "note": "Predicted amplitude in NANOGrav-favored range for G mu ~ 10^-11 - 10^-10. CMB-S4 constraints (G mu < 10^-7) easily satisfied."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects",
+      "note": "CMB anisotropy from cosmic strings at G mu < 10^-7 is subdominant to inflationary perturbations."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "U(1) gauge field producing cosmic strings"
+    ],
+    "new_scales": [
+      "string-formation scale ~ 10^14 GeV (for G mu ~ 10^-10)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Single new free parameter: string tension G mu, set by the U(1)-breaking scale."
+  },
+  "structural_features": [
+    "topological_defect",
+    "stochastic_gw_source",
+    "scale_free_spectrum",
+    "high_isotropy"
+  ],
+  "composes_with": [
+    "cosmic_strings_topological",
+    "su5_minimal_gut",
+    "pati_salam"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Cosmic-string GW from cusps/kinks: Vilenkin (1981); modern numerical work Blanco-Pillado-Olum-Shlaer (2014). NANOGrav interpretation: Ellis, Lewicki (2021, arXiv:2009.06555), 'Cosmic string interpretation of NANOGrav pulsar timing data'. Metastable-string variant: Buchmuller, Domcke, Murayama, Schmitz (2020), arXiv:1908.03227. Competing with SMBHB interpretation for the 2023 signal.",
+  "references": [
+    {
+      "citation": "Ellis and Lewicki, 'Cosmic string interpretation of NANOGrav pulsar timing data', Phys. Rev. Lett. 126, 041304 (2021)",
+      "arxiv": "2009.06555"
+    }
+  ],
+  "tags": [
+    "gravitational_waves",
+    "cosmic_strings",
+    "topological_defects",
+    "pta",
+    "nanograv"
+  ]
+}

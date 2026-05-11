@@ -1,0 +1,58 @@
+{
+  "id": "consistent_histories",
+  "name": "Consistent histories (Griffiths-Omnès-Gell-Mann-Hartle)",
+  "aliases": [
+    "decoherent histories",
+    "Griffiths CH interpretation"
+  ],
+  "type": "symmetry",
+  "summary": "Reformulates quantum mechanics in terms of probabilities for sequences of events ('histories'), subject to a 'consistency' (decoherence) condition that classical-style probability rules apply. Eliminates the measurement postulate by treating measurement as just one type of physical history. Compatible with unitary evolution + decoherence; gives the same predictions as standard QM but provides a logical framework for talking about closed quantum systems without observers.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "quantum_measurement_problem",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Provides a logical framework where probabilities over histories satisfy classical rules when the consistency condition holds. Doesn't pick a unique history; in this sense closer to many-worlds (all consistent histories happen) than to objective collapse (one history is selected). Decoherence is the mechanism that makes histories classical-like."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "Reformulation of QM with no new physics; uses standard unitary evolution + decoherence."
+  },
+  "structural_features": [
+    "history_framework",
+    "consistency_condition",
+    "no_collapse",
+    "decoherence_based"
+  ],
+  "composes_with": [
+    "decoherence_einselection",
+    "many_worlds_everett"
+  ],
+  "excludes": [
+    "ghirardi_rimini_weber"
+  ],
+  "status": "niche",
+  "history": "Griffiths (1984), 'Consistent histories and the interpretation of quantum mechanics', J. Stat. Phys. 36, 219. Omnès (1988, 1992) developed logical formulation. Gell-Mann and Hartle (1990, 1993) generalised to 'decoherent histories' applicable to closed cosmological systems. Comprehensive review: Griffiths (2002), 'Consistent Quantum Theory', Cambridge UP.",
+  "references": [
+    {
+      "citation": "Griffiths, 'Consistent histories and the interpretation of quantum mechanics', J. Stat. Phys. 36, 219 (1984)",
+      "doi": "10.1007/BF01015734"
+    },
+    {
+      "citation": "Gell-Mann and Hartle, 'Classical equations for quantum systems', Phys. Rev. D 47, 3345 (1993)",
+      "doi": "10.1103/PhysRevD.47.3345",
+      "arxiv": "gr-qc/9210010"
+    }
+  ],
+  "tags": [
+    "quantum_foundations",
+    "consistent_histories",
+    "decoherent_histories",
+    "no_collapse"
+  ]
+}

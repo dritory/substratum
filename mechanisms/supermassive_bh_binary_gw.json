@@ -1,0 +1,62 @@
+{
+  "id": "supermassive_bh_binary_gw",
+  "name": "Supermassive black-hole binary GW background",
+  "aliases": [
+    "SMBHB stochastic background",
+    "astrophysical PTA signal"
+  ],
+  "type": "dynamical",
+  "summary": "Mergers of supermassive black-hole binaries (M ~ 10^8-10^10 M_sun) formed during galaxy mergers radiate gravitational waves over Myr-Gyr inspiral times. The cosmological population produces a stochastic GW background at nanohertz frequencies with characteristic strain h_c(f) ~ A f^-2/3 and amplitude A ~ 1-3e-15 at f=1/yr - precisely matching the NANOGrav 15-yr signal. This is the canonical (astrophysical) explanation for the PTA detection.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "nanograv_pta_gw_background",
+      "role": "solves",
+      "confidence": "established",
+      "note": "Strain amplitude 1-3e-15 at 1/yr and f^-2/3 spectral index match NANOGrav 15-yr posterior. Anisotropy measurements (currently insufficient) and individual-source resolution (with longer time series) would confirm SMBHB origin definitively. Major remaining uncertainty: efficient binary hardening past parsec scales ('final-parsec problem')."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "pulsar_timing_array_gw_background",
+      "effect": "predicts_signal",
+      "note": "Predicted A ~ 1-3e-15 (depending on SMBHB merger-rate density and final-parsec efficiency) matches NANOGrav 2.4+0.7-0.6 e-15."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "SMBHB merger-rate density",
+      "binary hardening timescale"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "No new physics; uses GR + standard galaxy-merger / SMBHB dynamics. Two effective parameters (merger rate, hardening efficiency) are astrophysical inputs."
+  },
+  "structural_features": [
+    "astrophysical_background",
+    "no_new_physics",
+    "general_relativity_only",
+    "nanohertz_gw"
+  ],
+  "composes_with": [],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Begelman, Blandford, Rees (1980), 'Massive black hole binaries in active galactic nuclei', Nature 287, 307 - foundational. Modern population synthesis: Sesana, Vecchio, Colacino (2008) systematic calculation. PTA-detection-driven refinement: Burke-Spolaor et al. (2019), 'The astrophysics of nanohertz gravitational waves', A&A Rev. 27, 5, arXiv:1811.08826. Identified as best-fit source by NANOGrav, EPTA, PPTA 2023.",
+  "references": [
+    {
+      "citation": "Begelman, Blandford, Rees, 'Massive black hole binaries in active galactic nuclei', Nature 287, 307 (1980)",
+      "doi": "10.1038/287307a0"
+    },
+    {
+      "citation": "Burke-Spolaor et al., 'The astrophysics of nanohertz gravitational waves', Astron. Astrophys. Rev. 27, 5 (2019)",
+      "arxiv": "1811.08826"
+    }
+  ],
+  "tags": [
+    "gravitational_waves",
+    "pulsar_timing",
+    "smbhb",
+    "astrophysical",
+    "no_new_physics"
+  ]
+}
