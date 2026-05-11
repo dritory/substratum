@@ -1,0 +1,69 @@
+{
+  "id": "dark_matter_decay_pevatron",
+  "name": "Heavy dark matter decay (PeV neutrino source)",
+  "aliases": [
+    "decaying superheavy DM",
+    "PeV DM -> nu nu"
+  ],
+  "type": "dynamical",
+  "summary": "Superheavy dark matter (m_DM ~ 10^6 - 10^10 GeV) decaying with lifetime tau_DM ~ 10^28 s through dimension-six SM-suppressed operators (e.g., L L H H or L H sigma_mu nu) produces a diffuse high-energy neutrino flux that can account for a significant fraction of IceCube's observed astrophysical neutrino background. The decay channel chi -> nu nu produces a hard line plus cascade neutrinos; decay through L L H H produces a softer spectrum. Distinguishable from astrophysical sources by isotropy and from heavy-DM annihilation by the lifetime scaling (annihilation requires extremely small sigma v).",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "icecube_astrophysical_neutrino_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Lifetime constraints from IceCube cascade-data analyses: tau_DM > 10^28 s for m_DM ~ 100 TeV - 10 PeV through visible channels. A subdominant DM-decay contribution (~10-30% of diffuse flux) is allowed; full attribution requires fine-tuned spectral fit. Bhattacharya et al. (2019, arXiv:1903.12623) and Esmaili-Serpico (2013, arXiv:1308.1105) provide updated bounds."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Superheavy DM produced via gravitational pair-production at the end of inflation (Kolb-Long 1998) or through curvaton-like inflaton couplings. Doesn't require thermal equilibrium; relic abundance set by post-inflationary entropy dilution."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "superheavy fermionic or scalar dark matter chi"
+    ],
+    "new_scales": [
+      "m_DM ~ 10^6 - 10^10 GeV (PeV-EeV)",
+      "decay operator scale Lambda ~ 10^16 GeV"
+    ],
+    "new_symmetries": [
+      "approximate Z_2 stabilisation, broken at dimension >= 5"
+    ],
+    "new_parameters_count": 3,
+    "note": "DM mass, operator coefficient (sets lifetime), branching fractions to nu/charged-lepton/hadron channels."
+  },
+  "structural_features": [
+    "superheavy_dm",
+    "decaying_dm",
+    "neutrino_source",
+    "non_thermal_production"
+  ],
+  "composes_with": [
+    "wimpzilla_superheavy_dm",
+    "seesaw_type_i"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Berezinsky, Kachelriess, Vilenkin (1997), 'Ultrahigh energy cosmic rays without GZK cutoff', PRL 79, 4302 - first DM-decay UHECR proposal. IceCube-era reincarnation: Feldstein-Kusenko-Matsumoto-Yanagida (2013, arXiv:1303.7320), Esmaili-Serpico (2013, arXiv:1308.1105). Updated post-IceCube-10yr: Bhattacharya, Esmaili, Palomares-Ruiz, Sarcevic (2019, arXiv:1903.12623).",
+  "references": [
+    {
+      "citation": "Esmaili and Serpico, 'Are IceCube neutrinos unveiling PeV-scale decaying dark matter?', JCAP 11, 054 (2013)",
+      "arxiv": "1308.1105"
+    },
+    {
+      "citation": "Berezinsky, Kachelriess, Vilenkin, 'Ultrahigh energy cosmic rays without GZK cutoff', Phys. Rev. Lett. 79, 4302 (1997)",
+      "arxiv": "astro-ph/9708217"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "decaying_dm",
+    "neutrino",
+    "superheavy",
+    "icecube"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "icecube_astrophysical_neutrino_origin",
+  "name": "IceCube astrophysical neutrino source origin",
+  "aliases": [
+    "high-energy astrophysical neutrinos",
+    "PeV neutrino sources"
+  ],
+  "kind": "naturalness",
+  "summary": "IceCube has observed a diffuse flux of astrophysical neutrinos from TeV to PeV energies (E^2 phi ~ 10^-8 GeV/cm^2/s/sr), but only two point sources are confirmed: blazar TXS 0506+056 (2018, Science 361, 147 - associated with a flaring blazar) and Seyfert NGC 1068 (2022, Science 378, 538 - 4.2 sigma). The bulk of the diffuse flux remains unattributed - the expected populations of starburst galaxies, AGN, and cosmic-ray-reservoir galaxy clusters individually under-account, and no anisotropy correlates with any cataloged source class. Either the cosmic-ray acceleration physics produces neutrinos more efficiently than gamma-rays (the 'multi-messenger gap'), or there exists an unexpected neutrino emitter population.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Diffuse flux at 100 TeV",
+      "value": "~1.5e-18",
+      "units": "GeV^-1 cm^-2 s^-1 sr^-1",
+      "expected": "predicted from gamma-ray-traced source populations",
+      "note": "Observed flux at ~100 TeV (per-flavor); fit by single power-law with spectral index ~2.5. IceCube 9.5-yr HESE arXiv:2011.03545."
+    },
+    {
+      "symbol": "Source-population accounting deficit",
+      "value": "~70%",
+      "expected": "<20% (within multi-messenger gamma-source budget)",
+      "note": "Adding all known/expected blazar + starburst + AGN contributions accounts for at most ~30% of the observed diffuse flux. Origin of the rest unidentified."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Beyond-SM interpretations include heavy dark-matter decay (m_DM ~ TeV-PeV, tau ~ 10^28 s), Lorentz-invariance violation at the Planck scale modifying neutrino dispersion, and sterile-neutrino oscillation-induced spectral features. Standard-astrophysics explanations (e.g., 'hidden' cosmic-ray accelerators) are simpler but require missing physics about source environments."
+    }
+  ],
+  "history": "First astrophysical-flux evidence: IceCube 2013, Science 342, 1242856 (HESE 2-yr). PeV cascade events 'Bert' and 'Ernie' 2012. Glashow resonance event 2021 (Nature 591, 220). TXS 0506+056 multimessenger campaign 2018 (Science 361, 147 and 361, 146). NGC 1068 evidence 2022 (Science 378, 538). Galactic-plane neutrino emission detected 2023 (Science 380, 1338).",
+  "references": [
+    {
+      "citation": "IceCube Collaboration, 'Neutrino emission from the direction of the blazar TXS 0506+056 prior to the IceCube-170922A alert', Science 361, 147 (2018)",
+      "doi": "10.1126/science.aat2890"
+    },
+    {
+      "citation": "IceCube Collaboration, 'Evidence for neutrino emission from the nearby active galaxy NGC 1068', Science 378, 538 (2022)",
+      "doi": "10.1126/science.abg3395"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "neutrino",
+    "high_energy_astrophysics",
+    "data_tension",
+    "multimessenger"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "higgs_portal_vector_dm",
+  "name": "Vector Higgs-portal dark matter",
+  "aliases": [
+    "vector boson dark matter via Higgs",
+    "V-Higgs portal"
+  ],
+  "type": "dynamical",
+  "summary": "A new dark gauge boson V_mu (Abelian or hidden non-Abelian) couples to the SM Higgs through the gauge-invariant operator lambda_v |H|^2 V_mu V^mu. Vector mass m_V emerges from electroweak-vev contribution m_V^2 = lambda_v v^2 + m_V,0^2, and Higgs-portal couplings drive thermal freeze-out giving correct relic abundance Omega_V h^2 ~ 0.12 for m_V ~ 0.1-1 TeV with lambda_v ~ 0.01-0.1. Predicts Higgs invisible decay h -> V V if m_V < m_h/2 and direct-detection cross-section sigma_SI ~ 10^-46 cm^2 for m_V ~ 100 GeV. LZ 2024 direct-detection bounds exclude a swath of (lambda_v, m_V) space; m_V ~ 60-65 GeV (near m_h/2 resonance dip) survives.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Standard thermal-WIMP-via-Higgs-portal with vector mediator instead of scalar (higgs_portal_scalar_dm). Direct-detection bound from LZ 2024 (sigma_SI < 9.2e-48 cm^2 at 30 GeV) excludes most of the natural parameter space; survives in resonant region m_V ~ m_h/2 and in heavy-mass tail m_V > 1 TeV."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "Most natural parameter space excluded; survives in resonant (m_V ~ m_h/2 ~ 62 GeV) and heavy (m_V > TeV) regions."
+    },
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "predicts_signal",
+      "note": "Higgs invisible decay BR(h -> VV) ~ 5-10% if kinematically open; constrains lambda_v through Higgs coupling fits and invisible-width searches."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "dark vector V_mu"
+    ],
+    "new_scales": [
+      "m_V ~ 60 GeV - few TeV",
+      "portal coupling lambda_v ~ 0.001 - 0.1"
+    ],
+    "new_symmetries": [
+      "hidden U(1) or non-Abelian gauge symmetry",
+      "Z_2 stabilising V"
+    ],
+    "new_parameters_count": 2,
+    "note": "Vector mass and Higgs-portal coupling; or equivalently, gauge coupling and dark-Higgs vev if V acquires mass via dark Higgs mechanism."
+  },
+  "structural_features": [
+    "higgs_portal",
+    "vector_dm",
+    "thermal_freezeout",
+    "z2_stabilised"
+  ],
+  "composes_with": [
+    "wimp_thermal_freezeout",
+    "hidden_valley",
+    "dark_photon_portal"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Hambye (2009), 'Hidden vector dark matter', JHEP 01, 028, arXiv:0811.0172 - foundational. Vector Higgs-portal analyses: Lebedev, Lee, Mambrini (2012), 'Vector Higgs-portal dark matter and the invisible Higgs', Phys. Lett. B 707, 570, arXiv:1111.4482. Yaguna (2009); Djouadi-Falkowski-Mambrini-Quevillon (2013), arXiv:1205.3169. Updated LZ-constraint analyses: Arcadi-Djouadi-Raidal (2020, arXiv:2105.00010).",
+  "references": [
+    {
+      "citation": "Hambye, 'Hidden vector dark matter', JHEP 01, 028 (2009)",
+      "arxiv": "0811.0172"
+    },
+    {
+      "citation": "Lebedev, Lee, Mambrini, 'Vector Higgs-portal dark matter and the invisible Higgs', Phys. Lett. B 707, 570 (2012)",
+      "arxiv": "1111.4482"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "higgs_portal",
+    "vector_boson",
+    "wimp"
+  ]
+}

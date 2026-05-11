@@ -1,0 +1,60 @@
+{
+  "id": "witten_effect_dyon",
+  "name": "Witten effect (theta-induced monopole electric charge)",
+  "aliases": [
+    "Witten dyon",
+    "theta-vacuum dyon charge"
+  ],
+  "type": "symmetry",
+  "summary": "Witten (1979) showed that in a non-Abelian gauge theory with vacuum angle theta, a magnetic monopole of magnetic charge g acquires an electric charge q = -e theta / (2 pi) (in addition to integer charges from CP-symmetric quantization). The result links the QCD-vacuum theta angle to fractional electric charges on grand-unified-theory monopoles, and provides a window into axion-monopole interactions: as the axion field a relaxes, the induced electric charge oscillates, leading to phenomenologically detectable axion-monopole dynamics. Underlies modern monopole-search strategies and the 'monopole-induced axion energy loss' bound on axion-monopole coupling.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Provides a separate observational handle on theta_QCD: monopoles (if they exist) would carry electric charge q = -e theta / (2 pi). Combined with bounds on millicharged-monopole abundances, this gives an independent (though loose) bound on theta. Theoretical relevance > experimental relevance currently."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "strong_cp_theta_qcd",
+      "effect": "respects",
+      "note": "The Witten effect is consistent with theta < 10^-10 from neutron-EDM bounds; monopole-induced electric charges would be ~ 10^-11 e for GUT monopoles, far below current detection thresholds."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "No new parameters - a derived consequence of the theta-vacuum structure of non-Abelian gauge theory. Predicts a relationship q = -e theta / (2 pi) for magnetic monopoles."
+  },
+  "structural_features": [
+    "theta_vacuum",
+    "monopole_dyon",
+    "non_perturbative_charge",
+    "topological"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "su5_minimal_gut",
+    "so10_gut",
+    "string_axiverse"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Witten (1979), 'Dyons of charge e theta / 2 pi', Phys. Lett. B 86, 283. Foundational result interpreted in many GUT and string-theoretic contexts. Modern axion-monopole literature: Fischler-Giedt-Tabakov (1988); Sokolov-Ringwald (2022, arXiv:2205.02605) for axion-monopole oscillation in laboratory contexts.",
+  "references": [
+    {
+      "citation": "Witten, 'Dyons of charge e theta / 2 pi', Phys. Lett. B 86, 283 (1979)",
+      "doi": "10.1016/0370-2693(79)90838-4"
+    }
+  ],
+  "tags": [
+    "topological",
+    "monopole",
+    "theta_vacuum",
+    "axion",
+    "dyon"
+  ]
+}

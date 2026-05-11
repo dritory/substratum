@@ -1,0 +1,71 @@
+{
+  "id": "sphaleron_b_plus_l_violation",
+  "name": "Electroweak sphaleron B+L violation",
+  "aliases": [
+    "Klinkhamer-Manton sphaleron",
+    "SM anomalous B+L violation"
+  ],
+  "type": "symmetry",
+  "summary": "The Standard Model SU(2)_L weak gauge sector has an Adler-Bell-Jackiw anomaly: the baryon-plus-lepton current B+L is not conserved (while B-L is). At zero temperature this violation is exponentially suppressed (rate ~ exp(-16 pi^2 / g^2) ~ 10^-165). Above the electroweak phase transition (T > 100 GeV) the sphaleron - the energy-9 TeV saddle-point between adjacent gauge vacua identified by Klinkhamer and Manton (1984) - is freely traversable and B+L is in thermal equilibrium. Sphalerons play a central role in all electroweak baryogenesis scenarios and in converting any primordial B-L asymmetry into the observed baryon asymmetry through leptogenesis.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Any mechanism producing the baryon asymmetry must either (a) occur at T < T_EW and bypass sphalerons (e.g., Affleck-Dine), or (b) produce B-L at T > T_EW which sphalerons convert to a baryon excess in the ratio B = (28/79) * (B-L) (Khlebnikov-Shaposhnikov 1988). Sphaleron rate Gamma_sph ~ 25 alpha_W^5 T^4 in the symmetric phase decouples at T_EW; freeze-out condition selects which scenarios work."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "respects",
+      "note": "Sphaleron B+L violation does not mediate p -> e+ pi^0 at low energy; that requires GUT-scale processes. SM-only proton lifetime > 10^150 yr from sphaleron tunneling at T=0."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "E_sph ~ 9 TeV (sphaleron energy at T=0)",
+      "T_EW ~ 130 GeV (sphaleron decoupling)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "No new parameters - sphalerons are an exact SM consequence of the weak SU(2) anomaly. Computed entirely from SM input (g_W, M_W, m_h)."
+  },
+  "structural_features": [
+    "anomaly_induced",
+    "non_perturbative",
+    "thermal_b_plus_l",
+    "saddle_point_solution"
+  ],
+  "composes_with": [
+    "leptogenesis",
+    "electroweak_baryogenesis",
+    "seesaw_type_i",
+    "ars_leptogenesis"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "B+L anomaly: 't Hooft (1976) PRL 37, 8 - 'Symmetry breaking through Bell-Jackiw anomalies'. Sphaleron solution: Klinkhamer and Manton (1984) Phys. Rev. D 30, 2212. Thermal rate computation: Kuzmin-Rubakov-Shaposhnikov (1985) PLB 155, 36. Modern lattice rate: Moore (2000) hep-ph/0001274.",
+  "references": [
+    {
+      "citation": "Klinkhamer and Manton, 'A saddle point solution in the Weinberg-Salam theory', Phys. Rev. D 30, 2212 (1984)",
+      "doi": "10.1103/PhysRevD.30.2212"
+    },
+    {
+      "citation": "'t Hooft, 'Symmetry breaking through Bell-Jackiw anomalies', Phys. Rev. Lett. 37, 8 (1976)",
+      "doi": "10.1103/PhysRevLett.37.8"
+    },
+    {
+      "citation": "Kuzmin, Rubakov, Shaposhnikov, 'On anomalous electroweak baryon-number non-conservation in the early universe', Phys. Lett. B 155, 36 (1985)",
+      "doi": "10.1016/0370-2693(85)91028-7"
+    }
+  ],
+  "tags": [
+    "anomaly",
+    "sphaleron",
+    "b_plus_l",
+    "electroweak",
+    "baryogenesis"
+  ]
+}
