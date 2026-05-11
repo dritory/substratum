@@ -138,9 +138,9 @@ def render(frameworks: list[dict], benchmarks: dict[str, dict]) -> str:
             v = score_one(bench, fw)
             tally[v.status] = tally.get(v.status, 0) + 1
             score = "" if v.score is None else f"{v.score:.3f}"
+            note = v.note.replace("|", "\\|")
             lines.append(
-                f"| `{bench_id}` | {STATUS_GLYPH[v.status]} | {score} | "
-                f"{v.note.replace('|', '\\|')} |"
+                f"| `{bench_id}` | {STATUS_GLYPH[v.status]} | {score} | {note} |"
             )
         summary = ", ".join(f"{STATUS_GLYPH[k]} {v}" for k, v in sorted(tally.items()))
         lines.append(f"\n**Tally:** {summary}\n")
