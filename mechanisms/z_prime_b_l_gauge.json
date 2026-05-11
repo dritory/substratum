@@ -1,0 +1,79 @@
+{
+  "id": "z_prime_b_l_gauge",
+  "name": "Z' boson from gauged B-L",
+  "aliases": [
+    "U(1)_B-L gauge extension",
+    "B-L Z prime"
+  ],
+  "type": "symmetry",
+  "summary": "Gauging the global B-L symmetry of the Standard Model (anomaly-free with three right-handed neutrinos) introduces a new neutral Z' boson coupling proportionally to (B-L) charge. The gauge symmetry is broken at scale v_BL through a SM-singlet scalar phi_BL with B-L charge -2 (giving right-handed Majorana masses M_R = y_N v_BL / sqrt(2) and Z' mass m_Z' = 2 g_BL v_BL). Naturally embeds the seesaw mechanism (M_R from spontaneous B-L breaking) and provides a Z' search channel at LHC. Anomaly-cancellation forces three right-handed neutrinos and links neutrino masses and Z' phenomenology.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Right-handed-neutrino Majorana masses arise from spontaneous B-L breaking; gives seesaw scale M_R ~ v_BL naturally. Z' mass and M_R linked via single vev v_BL."
+    },
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "B-L conservation in the gauged U(1)_B-L symmetric phase means sphaleron washout preserves B-L; leptogenesis from N decays naturally produces a B-L asymmetry above v_BL that sphalerons convert to baryon asymmetry."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Right-handed Majorana neutrinos with mass M_R from B-L breaking contribute to m_betabeta; KamLAND-Zen and future ton-scale 0nubb experiments probe the seesaw parameter space."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "Z' gauge boson",
+      "B-L Higgs phi_BL",
+      "three right-handed neutrinos N_R^i (anomaly cancellation)"
+    ],
+    "new_scales": [
+      "v_BL ~ 1 TeV - 10^14 GeV",
+      "m_Z' = 2 g_BL v_BL"
+    ],
+    "new_symmetries": [
+      "gauged U(1)_B-L"
+    ],
+    "new_parameters_count": 3,
+    "note": "Gauge coupling g_BL, B-L Higgs vev v_BL, and right-handed Yukawa coupling y_N (which sets seesaw mass)."
+  },
+  "structural_features": [
+    "gauged_b_minus_l",
+    "z_prime_boson",
+    "anomaly_cancellation",
+    "seesaw_embedding"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "leptogenesis",
+    "so10_gut",
+    "pati_salam"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Davidson (1979) and Marshak-Mohapatra (1980), PLB 91, 222 - first proposals for U(1)_B-L gauge. Mohapatra-Marshak (1980), 'Local B-L symmetry of electroweak interactions, Majorana neutrinos, and neutron oscillations', PRL 44, 1316 - linked to neutrino-Majorana masses. Modern Z'-B-L phenomenology: Basso, Belyaev, Moretti, Shepherd-Themistocleous (2010), arXiv:1002.3586.",
+  "references": [
+    {
+      "citation": "Mohapatra and Marshak, 'Local B-L symmetry of electroweak interactions, Majorana neutrinos, and neutron oscillations', Phys. Rev. Lett. 44, 1316 (1980)",
+      "doi": "10.1103/PhysRevLett.44.1316"
+    },
+    {
+      "citation": "Basso, Belyaev, Moretti, Shepherd-Themistocleous, 'Phenomenology of the minimal B-L extension of the Standard Model: Z' and neutrinos', Phys. Rev. D 80, 055030 (2009)",
+      "arxiv": "0812.4313"
+    }
+  ],
+  "tags": [
+    "gauge_extension",
+    "z_prime",
+    "b_minus_l",
+    "neutrino_mass",
+    "seesaw"
+  ]
+}

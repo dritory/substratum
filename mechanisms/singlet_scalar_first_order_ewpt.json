@@ -1,0 +1,76 @@
+{
+  "id": "singlet_scalar_first_order_ewpt",
+  "name": "Singlet-scalar extension for first-order electroweak phase transition",
+  "aliases": [
+    "xSM",
+    "scalar singlet baryogenesis"
+  ],
+  "type": "dynamical",
+  "summary": "Adding a real (or complex) gauge-singlet scalar S to the SM, coupling to the Higgs through |H|^2 S^2 and other gauge-invariant operators, can strengthen the electroweak phase transition into a strong first-order transition for portal coupling lambda_HS ~ 0.5-2 and singlet mass m_S ~ 100-300 GeV. Provides the departure-from-equilibrium condition required for electroweak baryogenesis with the observed m_h = 125 GeV. Predicts characteristic LHC signatures: Higgs di-Higgs (hh) production enhancement, modified h -> ZZ/gamma gamma branching ratios, and (if S is light) singlet-pair production through Higgs portal.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "strong_first_order_ewpt_absence",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Lattice studies (Niemi-Schicho-Tenkanen 2021, arXiv:2103.07467) show that two-step phase transitions in xSM with one-loop-corrected Coleman-Weinberg potential give v(T_c)/T_c > 1 over a broad parameter window. LHC reach (di-Higgs and singlet searches) probes the surviving regions."
+    },
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides the SFOPT precondition for EWBG; needs additional CP violation in extended Higgs/Yukawa sector to actually produce eta_B. Together with two-Higgs-doublet CP phases or composite-Higgs CP, viable EWBG model."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "predicts_signal",
+      "note": "Modifies Higgs self-coupling lambda_hhh by O(1) (relevant for HL-LHC and future di-Higgs measurements). Higgs-singlet mixing modifies single-Higgs couplings at O(0.1)."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "real or complex SM-singlet scalar S"
+    ],
+    "new_scales": [
+      "m_S ~ 100-400 GeV",
+      "portal coupling lambda_HS ~ 0.5-2"
+    ],
+    "new_symmetries": [
+      "optional Z_2 (S -> -S) for DM stability"
+    ],
+    "new_parameters_count": 3,
+    "note": "Singlet mass, portal coupling lambda_HS, and singlet self-coupling lambda_S. Z_2 version (lambda_HS odd-coupling forbidden) can simultaneously serve as DM."
+  },
+  "structural_features": [
+    "scalar_singlet_extension",
+    "higgs_portal",
+    "two_step_phase_transition",
+    "ewbg_compatible"
+  ],
+  "composes_with": [
+    "electroweak_baryogenesis",
+    "higgs_portal_scalar_dm",
+    "sphaleron_b_plus_l_violation"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Choi-Volkas (1993), 'A polynomial scalar potential leading to electroweak baryogenesis', PLB 317, 385. Profumo-Ramsey-Musolf-Shaughnessy (2007), 'Singlet Higgs phenomenology and the electroweak phase transition', arXiv:0705.2425 - benchmark phenomenology. Lattice update: Niemi, Schicho, Tenkanen (2021), 'Singlet-assisted electroweak phase transition at two loops', PRD 103, 115035, arXiv:2103.07467.",
+  "references": [
+    {
+      "citation": "Profumo, Ramsey-Musolf, Shaughnessy, 'Singlet Higgs phenomenology and the electroweak phase transition', JHEP 08, 010 (2007)",
+      "arxiv": "0705.2425"
+    },
+    {
+      "citation": "Niemi, Schicho, Tenkanen, 'Singlet-assisted electroweak phase transition at two loops', Phys. Rev. D 103, 115035 (2021)",
+      "arxiv": "2103.07467"
+    }
+  ],
+  "tags": [
+    "electroweak",
+    "phase_transition",
+    "baryogenesis",
+    "scalar_singlet",
+    "xsm"
+  ]
+}

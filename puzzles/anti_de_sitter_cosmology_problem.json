@@ -1,0 +1,49 @@
+{
+  "id": "anti_de_sitter_cosmology_problem",
+  "name": "AdS holography vs cosmological-de Sitter universe",
+  "aliases": [
+    "de Sitter holography problem",
+    "Maldacena duality and our universe"
+  ],
+  "kind": "consistency",
+  "summary": "The AdS/CFT correspondence (Maldacena 1997) is a non-perturbatively well-defined quantum-gravity-in-asymptotically-AdS framework; we live in an asymptotically de Sitter universe (Lambda > 0). No analogous boundary-CFT construction exists for de Sitter. The dS/CFT proposals (Strominger 2001) require a Euclidean-CFT-on-spatial-infinity dual, which has not been concretely realized in a top-down construction. Swampland-conjecture pressure (Obied-Ooguri-Spodyneiko-Vafa 2018, arXiv:1806.08362) suggests metastable de Sitter may not exist in consistent quantum gravity at all - if true, our observed Lambda > 0 universe needs a quintessence-like description, not a cosmological constant.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Lambda (observed)",
+      "value": "1.1e-52",
+      "units": "m^-2",
+      "expected": "0 (per swampland conjecture) or 1/M_pl^2 (naive QG)",
+      "gap_log10": -120,
+      "note": "Same value as in cosmological_constant_smallness, but here flagged as a *consistency* problem - the issue is not just the size but whether dS makes sense in quantum gravity at all."
+    }
+  ],
+  "data_links": [
+    "cosmological_constant"
+  ],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "background_independence",
+      "status": "tests",
+      "note": "AdS/CFT presupposes a non-dynamical AdS boundary at infinity; an analogous structure for dS would be a spacelike boundary in the infinite future ('I^+'). The conceptual structure of QG-in-dS - which Hilbert space, which observables, which boundary conditions - remains debated. Causal patches (Banks-Fischler) suggest a finite-dimensional Hilbert space; static-patch holography would replace global by observer-dependent QG."
+    }
+  ],
+  "history": "Maldacena (1997) AdS/CFT correspondence. Strominger (2001), 'The dS/CFT correspondence', JHEP 10, 034, hep-th/0106113. Banks-Fischler (2001), 'M-theory observables for cosmological space-times', hep-th/0102077. de Sitter conjecture: Obied, Ooguri, Spodyneiko, Vafa (2018), arXiv:1806.08362. Static-patch holography revival: Susskind 2021, Chandra-Penington-Witten 2023.",
+  "references": [
+    {
+      "citation": "Strominger, 'The dS/CFT correspondence', JHEP 10, 034 (2001)",
+      "arxiv": "hep-th/0106113"
+    },
+    {
+      "citation": "Obied, Ooguri, Spodyneiko, Vafa, 'De Sitter Space and the Swampland', arXiv:1806.08362 (2018)",
+      "arxiv": "1806.08362"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "holography",
+    "de_sitter",
+    "swampland",
+    "quantum_gravity"
+  ]
+}
