@@ -134,19 +134,23 @@
 
   <section id="view-alignment" class="view" hidden>
     <header class="view-head">
-      <h2>Puzzle ↔ mechanism dot alignment</h2>
-      <p>The catalog as a bipartite graph: every <em>puzzle</em> (column)
-         and every <em>mechanism</em> (row) the catalog tracks, with an
-         edge if the mechanism is encoded as addressing the puzzle.
-         Cell colour encodes the strength of the claim
-         (<span style="color:#1f6feb"><b>solves</b></span> &middot;
-          <span style="color:#7c3aed"><b>explains pattern</b></span> &middot;
-          <span style="color:#0a8754">ameliorates</span> &middot;
-          <span style="color:#a06900">requires</span>).
-         Mechanisms with no addressed-puzzles are hidden; mechanisms are
-         sorted by puzzles closed then by total puzzles addressed.</p>
+      <h2>Puzzle ↔ mechanism network</h2>
+      <p>The catalog as a bipartite graph: every <em>puzzle</em>
+         (▣ squares, coloured by <code>kind</code>) and every
+         <em>mechanism</em> (● circles, coloured by <code>type</code>),
+         with a line for each <code>addresses_puzzles</code> edge.
+         Force-directed layout (Fruchterman&ndash;Reingold) pulls
+         strongly-connected pairs together; high-degree mechanisms drift
+         to the centre, single-puzzle mechanisms fan out as leaves.
+         Edge colour is the role:
+         <span style="color:#1f6feb"><b>solves</b></span> &middot;
+         <span style="color:#7c3aed"><b>explains pattern</b></span> &middot;
+         <span style="color:#0a8754">ameliorates</span> &middot;
+         <span style="color:#a06900">requires</span>.
+         Click any legend item to toggle that mechanism type or puzzle
+         kind; hover a node for its summary.</p>
     </header>
-    <div id="chart-alignment-matrix" class="chart very-tall"></div>
+    <div id="chart-alignment-network" class="chart very-tall"></div>
 
     <header class="view-head" style="margin-top:2rem;">
       <h2>Compression vs coverage</h2>
@@ -155,20 +159,28 @@
          <em>y</em> = puzzles closed (<code>solves</code> or
          <code>explains_pattern</code>).
          The dashed lines are constant-compression rays.
-         Top-left is the dot-alignment sweet spot — many puzzles closed
-         with few parameters. Marker colour encodes status.</p>
+         Top-left is the dot-alignment sweet spot &mdash; many puzzles
+         closed with few parameters. Marker colour encodes status.</p>
     </header>
     <div id="chart-alignment-compression" class="chart tall"></div>
 
     <header class="view-head" style="margin-top:2rem;">
-      <h2>Convergent puzzles</h2>
-      <p>How many distinct mechanisms claim to address each puzzle.
-         A high bar means the puzzle is an active battleground; the
-         <em>solve-edge density</em> sublabel shows what fraction of those
-         mechanisms claim <code>solves</code> or <code>explains_pattern</code>
-         (vs <code>ameliorates</code>/<code>requires</code>).</p>
+      <h2>Attention vs progress</h2>
+      <p>Every puzzle as a point:
+         <em>x</em> = how many mechanisms address it,
+         <em>y</em> = fraction of those that claim to <code>solve</code>
+         or <code>explain_pattern</code> (rather than just
+         <code>ameliorate</code>).
+         Colour encodes puzzle <code>kind</code>. Four quadrants tell the
+         story directly: <i>quiet victories</i> (top-left, e.g.
+         <code>black_hole_information</code>); <i>the active
+         battleground</i> (top-right, flavor and neutrino patterns);
+         <i>attention without progress</i> (bottom-right, where the
+         hierarchy and cosmological-constant problems live); and
+         <i>under-targeted</i> (bottom-left, the long tail of recent
+         data anomalies awaiting mechanisms).</p>
     </header>
-    <div id="chart-alignment-convergence" class="chart tall"></div>
+    <div id="chart-alignment-progress" class="chart tall"></div>
   </section>
 
   <section id="view-browse" class="view" hidden>

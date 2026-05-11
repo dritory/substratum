@@ -9,6 +9,8 @@ of truth remains the per-entry JSON files; this script is a build step.
 from __future__ import annotations
 
 import json
+import math
+import random
 import re
 import sys
 from datetime import datetime, timezone
@@ -249,10 +251,92 @@ def compute_evaluation(benchmarks: list[dict]) -> dict | None:
         return None
 
 
+def fruchterman_reingold(
+    nodes: list[str],
+    edges: list[tuple[str, str]],
+    *,
+    iterations: int = 200,
+    seed: int = 1729,
+    width: float = 2.0,
+) -> dict[str, list[float]]:
+    """Compute a Fruchterman-Reingold spring layout for a small graph.
+
+    Pure Python, no deps. ~200 nodes converges in <1s. Returns
+    {node_id: [x, y]} with coordinates roughly in [-width/2, width/2].
+    """
+    rng = random.Random(seed)
+    n = len(nodes)
+    if n == 0:
+        return {}
+    pos = {v: [rng.uniform(-width / 2, width / 2),
+               rng.uniform(-width / 2, width / 2)] for v in nodes}
+    if not edges:
+        return pos
+
+    area = width * width
+    k = math.sqrt(area / n)  # natural edge length
+    t = width / 4.0          # initial temperature (max displacement)
+    cooling = t / iterations
+
+    for _ in range(iterations):
+        disp = {v: [0.0, 0.0] for v in nodes}
+
+        # repulsive forces — O(n^2). For n <= 200 this is fine.
+        keys = nodes
+        for i in range(n):
+            vi = keys[i]
+            pxi, pyi = pos[vi]
+            for j in range(i + 1, n):
+                vj = keys[j]
+                dx = pxi - pos[vj][0]
+                dy = pyi - pos[vj][1]
+                d2 = dx * dx + dy * dy
+                if d2 < 1e-6:
+                    dx, dy = rng.uniform(-0.01, 0.01), rng.uniform(-0.01, 0.01)
+                    d2 = dx * dx + dy * dy + 1e-6
+                d = math.sqrt(d2)
+                f = (k * k) / d
+                ux, uy = dx / d, dy / d
+                disp[vi][0] += ux * f
+                disp[vi][1] += uy * f
+                disp[vj][0] -= ux * f
+                disp[vj][1] -= uy * f
+
+        # attractive forces along edges
+        for u, v in edges:
+            if u not in pos or v not in pos:
+                continue
+            dx = pos[u][0] - pos[v][0]
+            dy = pos[u][1] - pos[v][1]
+            d = math.sqrt(dx * dx + dy * dy) + 1e-9
+            f = (d * d) / k
+            ux, uy = dx / d, dy / d
+            disp[u][0] -= ux * f
+            disp[u][1] -= uy * f
+            disp[v][0] += ux * f
+            disp[v][1] += uy * f
+
+        # apply, cooled and clamped to the frame
+        for v in nodes:
+            dx, dy = disp[v]
+            d = math.sqrt(dx * dx + dy * dy) + 1e-9
+            step = min(d, t)
+            pos[v][0] += (dx / d) * step
+            pos[v][1] += (dy / d) * step
+            half = width / 2
+            pos[v][0] = max(-half, min(half, pos[v][0]))
+            pos[v][1] = max(-half, min(half, pos[v][1]))
+
+        t = max(t - cooling, cooling)
+
+    return pos
+
+
 def derive_alignment(puzzles: list[dict], mechanisms: list[dict]) -> dict:
     """Build the bipartite-graph payload consumed by the alignment view."""
     puzzle_index = {p["id"]: i for i, p in enumerate(puzzles)}
     edges = []
+    closing_per_puzzle: dict[str, int] = {pid: 0 for pid in puzzle_index}
     for mech in mechanisms:
         closed = 0
         for edge in mech.get("addresses_puzzles", []) or []:
@@ -266,6 +350,8 @@ def derive_alignment(puzzles: list[dict], mechanisms: list[dict]) -> dict:
                     "confidence": edge.get("confidence"),
                     "note": edge.get("note", ""),
                 })
+                if role in CLOSING_ROLES:
+                    closing_per_puzzle[pid] += 1
             if role in CLOSING_ROLES:
                 closed += 1
         params = int((mech.get("introduces") or {}).get("new_parameters_count", 1) or 1)
@@ -274,14 +360,40 @@ def derive_alignment(puzzles: list[dict], mechanisms: list[dict]) -> dict:
         mech["_params"] = params
         mech["_compression"] = closed / max(params, 1)
 
-    # per-puzzle convergence count
+    # per-puzzle convergence count and closure fraction
     convergence = {pid: 0 for pid in puzzle_index}
     for e in edges:
         convergence[e["puzzle_id"]] += 1
     for p in puzzles:
-        p["_mechanisms_addressing"] = convergence.get(p["id"], 0)
+        total = convergence.get(p["id"], 0)
+        closing = closing_per_puzzle.get(p["id"], 0)
+        p["_mechanisms_addressing"] = total
+        p["_mechanisms_closing"] = closing
+        p["_closure_fraction"] = (closing / total) if total > 0 else 0.0
 
-    return {"edges": edges}
+    # Spring layout for the bipartite network. Node keys are namespaced so
+    # the JS can tell puzzle nodes from mechanism nodes by prefix.
+    node_ids = [f"puzzle:{p['id']}" for p in puzzles] + \
+               [f"mechanism:{m['id']}" for m in mechanisms]
+    layout_edges = [
+        (f"mechanism:{e['mechanism_id']}", f"puzzle:{e['puzzle_id']}")
+        for e in edges
+    ]
+    layout_iters = 200
+    layout_seed = 1729
+    positions = fruchterman_reingold(
+        node_ids, layout_edges, iterations=layout_iters, seed=layout_seed
+    )
+
+    return {
+        "edges": edges,
+        "positions": positions,
+        "layout_meta": {
+            "algorithm": "fruchterman_reingold",
+            "iterations": layout_iters,
+            "seed": layout_seed,
+        },
+    }
 
 
 def main() -> int:
