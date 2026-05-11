@@ -1,0 +1,46 @@
+{
+  "id": "mssm_so10_seesaw_leptogenesis",
+  "name": "MSSM + SO(10) GUT + type-I seesaw + thermal leptogenesis (KKLT stabilisation)",
+  "summary": "Classification: KNOWN PROGRAM. The canonical SUSY-GUT-string framework pursued from the 1980s through ~2010, before LHC null results eroded weak-scale SUSY. SO(10) unifies one SM family + N_R in the spinor 16, automatically giving the type-I seesaw with M_R near the GUT scale. Thermal leptogenesis via decay of the lightest N_R produces the baryon asymmetry through the sphaleron-converted L -> B route. MSSM provides gauge-coupling unification at M_GUT ~ 2x10^16 GeV and a neutralino LSP (if R-parity is conserved). KKLT-style moduli stabilisation embeds this in a string-landscape vacuum so the cosmological constant is selected anthropically. Listed here as the high-water mark of the 'unified BSM' program, with the explicit acknowledgement that LHC has pushed superpartners above ~1-2 TeV and the proton-decay bound on minimal SU(5) is in tension.",
+  "lineage": [
+    {
+      "citation": "Mohapatra and Senjanovic, 'Neutrino Mass and Spontaneous Parity Nonconservation', PRL 44, 912 (1980)",
+      "doi": "10.1103/PhysRevLett.44.912"
+    },
+    {
+      "citation": "Fukugita and Yanagida, 'Baryogenesis without grand unification', PLB 174, 45 (1986)",
+      "doi": "10.1016/0370-2693(86)91126-3"
+    },
+    {
+      "citation": "Buchmuller, Di Bari, Plumacher, 'Leptogenesis for pedestrians', Annals Phys. 315, 305 (2005)",
+      "arxiv": "hep-ph/0401240"
+    },
+    {
+      "citation": "Kachru, Kallosh, Linde, Trivedi, 'de Sitter vacua in string theory', PRD 68, 046005 (2003)",
+      "arxiv": "hep-th/0301240"
+    },
+    {
+      "citation": "Raby, 'Grand Unified Theories', in Particle Data Group review (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "mssm",
+    "so10_gut",
+    "seesaw_type_i",
+    "leptogenesis",
+    "kklt_moduli_stabilisation",
+    "sphaleron_b_plus_l_violation",
+    "wimp_thermal_freezeout"
+  ],
+  "tags": [
+    "susy",
+    "gut",
+    "seesaw",
+    "leptogenesis",
+    "string_landscape",
+    "known_program",
+    "post_lhc_pressured"
+  ]
+}

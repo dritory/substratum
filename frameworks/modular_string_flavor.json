@@ -1,0 +1,43 @@
+{
+  "id": "modular_string_flavor",
+  "name": "Modular flavor symmetry + string axiverse + KKLT moduli + type-I seesaw",
+  "summary": "Classification: POSSIBLY NOVEL COMPOSITION. Surfaced by the catalog's never-composed-but-compatible pair analysis: modular_flavor_symmetry and string_axiverse share both `string_modulus` field content and the puzzle `flavor_mass_hierarchy`, but no canonical framework name composes them. The idea is to use the modulus tau of a finite modular group (level N <= 5 covers existing flavor models) as both the source of Yukawa structure (via modular forms) AND as one of the axiverse fields after compactification, with KKLT-style stabilisation pinning tau near a CP-conserving fixed point. The shared tau is the cross-bridge: it explains lepton mixing (modular flavor) and contributes to the axion pool (axiverse) simultaneously. Type-I seesaw provides the neutrino mass scale; CP violation comes from tau being off the fixed point at the level demanded by leptogenesis data. The composition is not (to our knowledge) a named program in the literature, though papers by Feruglio, Kobayashi, and collaborators since 2017 have explored individual edges of this graph. Listed here as the catalog's own discovery output — the framework that the search loop surfaces but no review article we know of has assembled.",
+  "lineage": [
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?', in 'From My Vast Repertoire... Guido Altarelli's Legacy' (2019)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Kobayashi, Tanaka, Tatsuishi, 'Neutrino mixing from finite modular groups', PRD 98, 016004 (2018)",
+      "arxiv": "1803.10391"
+    },
+    {
+      "citation": "Arvanitaki, Dimopoulos, Dubovsky, Kaloper, March-Russell, 'String Axiverse', PRD 81, 123530 (2010)",
+      "arxiv": "0905.4720"
+    },
+    {
+      "citation": "Kachru, Kallosh, Linde, Trivedi, 'de Sitter vacua in string theory', PRD 68, 046005 (2003)",
+      "arxiv": "hep-th/0301240"
+    },
+    {
+      "citation": "Ding, King, 'Neutrino mass and mixing with modular symmetry', Rept. Prog. Phys. 87, 084201 (2024)",
+      "arxiv": "2311.09282"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "modular_flavor_symmetry",
+    "string_axiverse",
+    "kklt_moduli_stabilisation",
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
+  "tags": [
+    "modular_flavor",
+    "axiverse",
+    "string_landscape",
+    "seesaw",
+    "possibly_novel",
+    "discovery_output"
+  ]
+}
