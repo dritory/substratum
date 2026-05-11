@@ -38,6 +38,7 @@
     "general_relativity_only",
     "nanohertz_gw"
   ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [],
   "status": "mainstream",

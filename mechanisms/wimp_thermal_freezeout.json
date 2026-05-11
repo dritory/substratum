@@ -1,7 +1,9 @@
 {
   "id": "wimp_thermal_freezeout",
   "name": "Thermal WIMP freeze-out",
-  "aliases": ["WIMP miracle"],
+  "aliases": [
+    "WIMP miracle"
+  ],
   "type": "dynamical",
   "summary": "A weakly interacting massive particle in thermal equilibrium with the early universe annihilates via electroweak-strength couplings; equilibrium freezes out when annihilation rate falls below Hubble rate. For sigma_v ~ 3e-26 cm^3/s and m_X ~ 100 GeV - few TeV, the relic abundance lands on the observed Omega_DM h^2 ~ 0.12 (the 'WIMP miracle').",
   "addresses_puzzles": [
@@ -25,14 +27,34 @@
     }
   ],
   "introduces": {
-    "new_fields": ["WIMP X (specific identity model-dependent: neutralino, scalar singlet, vector-like fermion)"],
-    "new_scales": ["m_X ~ 10 GeV - few TeV"],
-    "new_symmetries": ["stabilising Z_2 (R-parity, dark parity) or accidental"],
+    "new_fields": [
+      "WIMP X (specific identity model-dependent: neutralino, scalar singlet, vector-like fermion)"
+    ],
+    "new_scales": [
+      "m_X ~ 10 GeV - few TeV"
+    ],
+    "new_symmetries": [
+      "stabilising Z_2 (R-parity, dark parity) or accidental"
+    ],
     "new_parameters_count": 3,
     "note": "Mass, coupling, and stabilisation; specific UV completions add more."
   },
-  "structural_features": ["thermal_equilibrium", "freeze_out", "z2_stabilisation", "weak_scale"],
-  "composes_with": ["mssm", "twin_higgs", "composite_higgs"],
+  "structural_features": [
+    "thermal_equilibrium",
+    "freeze_out",
+    "z2_stabilisation",
+    "weak_scale"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar",
+    "susy_fermion_partners",
+    "vectorlike_lepton"
+  ],
+  "composes_with": [
+    "mssm",
+    "twin_higgs",
+    "composite_higgs"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Lee-Weinberg bound (1977); 'WIMP miracle' nomenclature in 1990s. Dominant DM paradigm 1990s-2010s; LHC and direct-detection nulls have shifted attention to lighter (sub-GeV) and ultralight DM.",
@@ -46,5 +68,9 @@
       "arxiv": "hep-ph/0404175"
     }
   ],
-  "tags": ["dark_matter", "wimp", "thermal_freezeout"]
+  "tags": [
+    "dark_matter",
+    "wimp",
+    "thermal_freezeout"
+  ]
 }

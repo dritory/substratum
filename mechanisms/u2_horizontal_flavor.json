@@ -1,7 +1,10 @@
 {
   "id": "u2_horizontal_flavor",
   "name": "U(2) horizontal flavor symmetry",
-  "aliases": ["U(2) flavor", "Pomarol-Tommasini horizontal symmetry"],
+  "aliases": [
+    "U(2) flavor",
+    "Pomarol-Tommasini horizontal symmetry"
+  ],
   "type": "symmetry",
   "summary": "Approximate U(2) symmetry acting on the first two fermion generations, with the third generation a singlet. Naturally produces the observed fermion-mass hierarchy (m_t >> m_c >> m_u) and the small mixing of the third generation with the lighter ones (V_ub, V_cb << 1) without a fully hierarchical Froggatt-Nielsen charge structure. In SUSY contexts, also suppresses flavor-changing neutral currents from squark mixing (the SUSY flavor problem).",
   "addresses_puzzles": [
@@ -31,14 +34,29 @@
     }
   ],
   "introduces": {
-    "new_fields": ["U(2) breaking spurions (small flavour-violating VEVs)"],
-    "new_scales": ["flavor breaking scale Lambda_F"],
-    "new_symmetries": ["U(2) horizontal acting on first two generations"],
+    "new_fields": [
+      "U(2) breaking spurions (small flavour-violating VEVs)"
+    ],
+    "new_scales": [
+      "flavor breaking scale Lambda_F"
+    ],
+    "new_symmetries": [
+      "U(2) horizontal acting on first two generations"
+    ],
     "new_parameters_count": 3,
     "note": "U(2) breaking pattern (small parameter epsilon ~ 0.05 for second-third generation, epsilon' ~ 0.005 for first-second) and Lambda_F."
   },
-  "structural_features": ["horizontal_symmetry", "third_generation_singlet", "minimal_flavour_violation", "spurion"],
-  "composes_with": ["mssm", "minimal_flavor_violation"],
+  "structural_features": [
+    "horizontal_symmetry",
+    "third_generation_singlet",
+    "minimal_flavour_violation",
+    "spurion"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "mssm",
+    "minimal_flavor_violation"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Barbieri, Hall, Raby (1995); Barbieri-Hall, 'Squark and slepton mass relations from grand unified flavor symmetries' (Nucl. Phys. B 449, 437 (1995)). Pomarol and Tommasini (1996), 'Horizontal symmetries for the supersymmetric flavor problem', Nucl. Phys. B 466, 3, arXiv:hep-ph/9507462. Modern U(2)^3 extensions (Barbieri-Buttazzo-Sala-Straub 2011) for B-anomaly model-building.",
@@ -52,5 +70,10 @@
       "arxiv": "1203.4218"
     }
   ],
-  "tags": ["flavor", "u2", "horizontal_symmetry", "susy_flavor"]
+  "tags": [
+    "flavor",
+    "u2",
+    "horizontal_symmetry",
+    "susy_flavor"
+  ]
 }

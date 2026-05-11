@@ -1,7 +1,10 @@
 {
   "id": "mssm",
   "name": "Minimal Supersymmetric Standard Model",
-  "aliases": ["MSSM", "low-scale SUSY"],
+  "aliases": [
+    "MSSM",
+    "low-scale SUSY"
+  ],
   "type": "symmetry",
   "summary": "A spacetime supersymmetry between bosons and fermions, broken at a scale near the electroweak scale, gives the Higgs mass technical naturalness through cancellation of quadratic divergences between SM particles and their superpartners. With R-parity, the lightest superpartner is a stable dark-matter candidate. Gauge couplings unify cleanly under MSSM running. LHC null results have pushed the natural SUSY scale above ~1-2 TeV, eroding but not eliminating the framework.",
   "addresses_puzzles": [
@@ -58,15 +61,41 @@
     }
   ],
   "introduces": {
-    "new_fields": ["full set of superpartners (squarks, sleptons, gauginos, higgsinos)", "two Higgs doublets H_u, H_d"],
-    "new_scales": ["M_SUSY ~ 0.1 - 10 TeV"],
-    "new_symmetries": ["N=1 spacetime supersymmetry (broken)", "R-parity (Z_2)"],
+    "new_fields": [
+      "full set of superpartners (squarks, sleptons, gauginos, higgsinos)",
+      "two Higgs doublets H_u, H_d"
+    ],
+    "new_scales": [
+      "M_SUSY ~ 0.1 - 10 TeV"
+    ],
+    "new_symmetries": [
+      "N=1 spacetime supersymmetry (broken)",
+      "R-parity (Z_2)"
+    ],
     "new_parameters_count": 105,
     "note": "The full unconstrained MSSM has 105 parameters beyond the SM (Haber 1997). Constrained models (mSUGRA/CMSSM) reduce this to ~5, but at the cost of theoretical assumptions. We use the unconstrained count for the compression denominator; this is precisely why MSSM is becoming hard to motivate post-LHC."
   },
-  "structural_features": ["spacetime_symmetry", "extra_doublet", "lsp_dark_matter", "soft_breaking", "r_parity"],
-  "composes_with": ["seesaw_type_i", "leptogenesis", "froggatt_nielsen", "peccei_quinn_axion"],
-  "excludes": ["twin_higgs"],
+  "structural_features": [
+    "spacetime_symmetry",
+    "extra_doublet",
+    "lsp_dark_matter",
+    "soft_breaking",
+    "r_parity"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "leptogenesis",
+    "froggatt_nielsen",
+    "peccei_quinn_axion"
+  ],
+  "excludes": [
+    "twin_higgs"
+  ],
   "status": "niche",
   "history": "Wess-Zumino (1974); Dimopoulos-Georgi (1981) MSSM; Dimopoulos-Raby-Wilczek (1981) gauge unification. Dominant BSM paradigm 1985-2015. Post-LHC Run 1+2 nulls (2012-2018) demoted from 'mainstream' to 'niche' for low-scale natural SUSY; high-scale (PeV) and split SUSY remain.",
   "references": [
@@ -79,5 +108,10 @@
       "arxiv": "hep-ph/9709450"
     }
   ],
-  "tags": ["supersymmetry", "hierarchy", "dark_matter", "gut"]
+  "tags": [
+    "supersymmetry",
+    "hierarchy",
+    "dark_matter",
+    "gut"
+  ]
 }

@@ -52,6 +52,9 @@
     "flavon_alignment",
     "permutation_symmetry"
   ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
   "composes_with": [
     "a4_family_symmetry",
     "modular_flavor_symmetry",

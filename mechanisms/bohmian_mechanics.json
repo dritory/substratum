@@ -32,6 +32,7 @@
     "guidance_equation",
     "no_collapse"
   ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [
     "many_worlds_everett"

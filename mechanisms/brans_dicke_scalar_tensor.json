@@ -1,7 +1,10 @@
 {
   "id": "brans_dicke_scalar_tensor",
   "name": "Brans-Dicke scalar-tensor gravity",
-  "aliases": ["Jordan-Brans-Dicke theory", "scalar-tensor gravity"],
+  "aliases": [
+    "Jordan-Brans-Dicke theory",
+    "scalar-tensor gravity"
+  ],
   "type": "geometric",
   "summary": "Replaces Newton's constant G by the inverse of a dynamical scalar field phi, giving a scalar-tensor theory of gravity inspired by Mach's principle. The single dimensionless parameter omega controls the deviation from GR; observational tests (Cassini Shapiro delay, lunar laser ranging) push omega > ~40000, recovering GR very closely. Foundational for all subsequent scalar-tensor gravity, Horndeski, and beyond.",
   "addresses_puzzles": [
@@ -29,13 +32,23 @@
     }
   ],
   "introduces": {
-    "new_fields": ["scalar field phi (with phi ~ 1/G)"],
+    "new_fields": [
+      "scalar field phi (with phi ~ 1/G)"
+    ],
     "new_scales": [],
     "new_symmetries": [],
     "new_parameters_count": 1,
     "note": "Single dimensionless parameter omega (with omega -> infty recovering GR)."
   },
-  "structural_features": ["scalar_tensor", "varying_g", "machian", "ppn_extension"],
+  "structural_features": [
+    "scalar_tensor",
+    "varying_g",
+    "machian",
+    "ppn_extension"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "historical",
@@ -46,5 +59,10 @@
       "doi": "10.1103/PhysRev.124.925"
     }
   ],
-  "tags": ["modified_gravity", "scalar_tensor", "brans_dicke", "machian"]
+  "tags": [
+    "modified_gravity",
+    "scalar_tensor",
+    "brans_dicke",
+    "machian"
+  ]
 }

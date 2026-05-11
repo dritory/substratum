@@ -1,7 +1,9 @@
 {
   "id": "affleck_dine_baryogenesis",
   "name": "Affleck-Dine baryogenesis",
-  "aliases": ["AD baryogenesis"],
+  "aliases": [
+    "AD baryogenesis"
+  ],
   "type": "dynamical",
   "summary": "A scalar field carrying baryon or lepton number (often a SUSY flat direction) is displaced from the origin during inflation. As the field rolls, CP-violating dynamics in the potential produce a coherent baryon (or lepton) number that is later transferred to the SM via field decay. Naturally accommodates large initial asymmetries; the produced eta is highly model-dependent.",
   "addresses_puzzles": [
@@ -25,14 +27,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["AD scalar (SUSY flat direction or analogous BSM scalar)"],
-    "new_scales": ["initial AD field value", "decay/oscillation scale"],
-    "new_symmetries": ["lifted approximate U(1)_B or U(1)_L"],
+    "new_fields": [
+      "AD scalar (SUSY flat direction or analogous BSM scalar)"
+    ],
+    "new_scales": [
+      "initial AD field value",
+      "decay/oscillation scale"
+    ],
+    "new_symmetries": [
+      "lifted approximate U(1)_B or U(1)_L"
+    ],
     "new_parameters_count": 4,
     "note": "Scalar potential parameters + initial conditions; large model dependence."
   },
-  "structural_features": ["scalar_condensate", "out_of_equilibrium", "q_ball_formation", "susy_flat_direction"],
-  "composes_with": ["mssm"],
+  "structural_features": [
+    "scalar_condensate",
+    "out_of_equilibrium",
+    "q_ball_formation",
+    "susy_flat_direction"
+  ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Affleck and Dine (1985). Detailed Q-ball cosmology developed by Kusenko (1997). Active in SUSY-friendly cosmology contexts; constraints come from cosmology (gravitino problem, Q-ball decay phenomenology) rather than collider physics.",
@@ -46,5 +65,10 @@
       "arxiv": "hep-ph/0303065"
     }
   ],
-  "tags": ["baryogenesis", "susy", "scalar_condensate", "q_balls"]
+  "tags": [
+    "baryogenesis",
+    "susy",
+    "scalar_condensate",
+    "q_balls"
+  ]
 }

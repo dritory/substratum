@@ -1,7 +1,9 @@
 {
   "id": "dgp_braneworld",
   "name": "DGP braneworld",
-  "aliases": ["Dvali-Gabadadze-Porrati"],
+  "aliases": [
+    "Dvali-Gabadadze-Porrati"
+  ],
   "type": "geometric",
   "summary": "Modifies gravity in the infrared rather than the UV: 4D gravity is induced on a 3-brane embedded in a 5D bulk with infinite extra dimension. Gravity transitions from 4D at sub-crossover scales r << r_c to 5D at super-crossover scales r >> r_c, with r_c ~ Hubble radius. Late-time cosmic acceleration arises geometrically from the 5D leakage rather than from a vacuum-energy term.",
   "addresses_puzzles": [
@@ -30,13 +32,26 @@
     }
   ],
   "introduces": {
-    "new_fields": ["bulk graviton + brane-induced 4D graviton"],
-    "new_scales": ["crossover scale r_c ~ Hubble radius"],
+    "new_fields": [
+      "bulk graviton + brane-induced 4D graviton"
+    ],
+    "new_scales": [
+      "crossover scale r_c ~ Hubble radius"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 2,
     "note": "5D Planck mass + 4D Planck mass ratio sets r_c."
   },
-  "structural_features": ["braneworld", "ir_modified_gravity", "vainshtein_screening", "extra_dimensions"],
+  "structural_features": [
+    "braneworld",
+    "ir_modified_gravity",
+    "vainshtein_screening",
+    "extra_dimensions"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "massive_graviton"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "disfavored",
@@ -47,5 +62,10 @@
       "arxiv": "hep-th/0005016"
     }
   ],
-  "tags": ["modified_gravity", "braneworld", "extra_dimensions", "ir_modification"]
+  "tags": [
+    "modified_gravity",
+    "braneworld",
+    "extra_dimensions",
+    "ir_modification"
+  ]
 }

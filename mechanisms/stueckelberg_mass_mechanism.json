@@ -33,6 +33,9 @@
     "abelian_only",
     "no_higgs_required"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson"
+  ],
   "composes_with": [
     "dark_photon_portal",
     "hidden_valley",

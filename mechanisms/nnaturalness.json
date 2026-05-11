@@ -1,7 +1,10 @@
 {
   "id": "nnaturalness",
   "name": "N-naturalness",
-  "aliases": ["multiverse-on-a-brane", "Arkani-Hamed N-copies"],
+  "aliases": [
+    "multiverse-on-a-brane",
+    "Arkani-Hamed N-copies"
+  ],
   "type": "composite",
   "summary": "Postulate N copies of the Standard Model with Higgs mass-squareds spread over a range; only the copy with the smallest positive m_H^2 reheats efficiently after inflation, becoming our visible sector. Provides a mechanism for the EW hierarchy without low-scale new physics, by selecting the most-tuned sector cosmologically.",
   "addresses_puzzles": [
@@ -24,15 +27,34 @@
     }
   ],
   "introduces": {
-    "new_fields": ["N - 1 copies of the full SM"],
-    "new_scales": ["reheaton mass ~ m_H", "Higgs mass-squared spacing"],
-    "new_symmetries": ["Z_N permutation (broken by reheaton couplings)"],
+    "new_fields": [
+      "N - 1 copies of the full SM"
+    ],
+    "new_scales": [
+      "reheaton mass ~ m_H",
+      "Higgs mass-squared spacing"
+    ],
+    "new_symmetries": [
+      "Z_N permutation (broken by reheaton couplings)"
+    ],
     "new_parameters_count": 4,
     "note": "Reheaton coupling, mass distribution width, total N, and inflationary scale."
   },
-  "structural_features": ["sector_replication", "cosmological_selection", "discrete_symmetry", "neutral_naturalness"],
+  "structural_features": [
+    "sector_replication",
+    "cosmological_selection",
+    "discrete_symmetry",
+    "neutral_naturalness"
+  ],
+  "field_tags": [
+    "mirror_sm_fermions"
+  ],
   "composes_with": [],
-  "excludes": ["mssm", "twin_higgs", "relaxion"],
+  "excludes": [
+    "mssm",
+    "twin_higgs",
+    "relaxion"
+  ],
   "status": "niche",
   "history": "Arkani-Hamed, Cohen, D'Agnolo, Hook, Kim, Pinner (2016). Builds on neutral-naturalness ideas (twin Higgs) by replacing two sectors with N >> 1 sectors and a cosmological selection mechanism.",
   "references": [
@@ -41,5 +63,9 @@
       "arxiv": "1607.06821"
     }
   ],
-  "tags": ["hierarchy", "neutral_naturalness", "cosmological_selection"]
+  "tags": [
+    "hierarchy",
+    "neutral_naturalness",
+    "cosmological_selection"
+  ]
 }

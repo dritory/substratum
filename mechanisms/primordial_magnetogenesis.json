@@ -41,6 +41,7 @@
     "primordial_b_field",
     "no_new_fields"
   ],
+  "field_tags": [],
   "composes_with": [
     "starobinsky_inflation",
     "higgs_inflation",
@@ -48,7 +49,7 @@
   ],
   "excludes": [],
   "status": "niche",
-  "history": "Turner and Widrow (1988), 'Inflation-produced, large-scale magnetic fields', Phys. Rev. D 37, 2743 — proposed inflationary magnetogenesis with conformal-invariance-breaking couplings. Extensive follow-up exploring specific couplings and observational constraints; Fermi-LAT TeV blazar observations have provided indirect evidence for intergalactic magnetic fields at the 10^-15 G level, plausibly primordial.",
+  "history": "Turner and Widrow (1988), 'Inflation-produced, large-scale magnetic fields', Phys. Rev. D 37, 2743 \u2014 proposed inflationary magnetogenesis with conformal-invariance-breaking couplings. Extensive follow-up exploring specific couplings and observational constraints; Fermi-LAT TeV blazar observations have provided indirect evidence for intergalactic magnetic fields at the 10^-15 G level, plausibly primordial.",
   "references": [
     {
       "citation": "Turner and Widrow, 'Inflation-produced, large-scale magnetic fields', Phys. Rev. D 37, 2743 (1988)",

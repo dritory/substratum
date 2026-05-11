@@ -52,6 +52,9 @@
     "monochromatic_gamma_signal",
     "ns_stability_constraint"
   ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "disfavored",

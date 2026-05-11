@@ -61,6 +61,12 @@
     "ultralight_scalars",
     "shift_symmetry"
   ],
+  "field_tags": [
+    "qcd_anomalous_pseudoscalar",
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "ultralight_scalar_dm",

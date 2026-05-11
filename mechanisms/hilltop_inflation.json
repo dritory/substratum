@@ -45,13 +45,16 @@
     "tiny_tensor_to_scalar",
     "sub_planckian_range"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "warm_inflation",
     "alpha_attractors_inflation"
   ],
   "excludes": [],
   "status": "mainstream",
-  "history": "Boubekeur and Lyth (2005), 'Hilltop inflation', JCAP 07, 010, arXiv:hep-ph/0502047 — defined and analysed the small-field hilltop class. Among the leading inflationary frameworks consistent with Planck + BICEP/Keck data; weak-gravity-conjecture pressure is minimal.",
+  "history": "Boubekeur and Lyth (2005), 'Hilltop inflation', JCAP 07, 010, arXiv:hep-ph/0502047 \u2014 defined and analysed the small-field hilltop class. Among the leading inflationary frameworks consistent with Planck + BICEP/Keck data; weak-gravity-conjecture pressure is minimal.",
   "references": [
     {
       "citation": "Boubekeur and Lyth, 'Hilltop inflation', JCAP 07, 010 (2005)",

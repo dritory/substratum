@@ -1,7 +1,10 @@
 {
   "id": "a4_family_symmetry",
   "name": "A4 family symmetry",
-  "aliases": ["A_4 lepton flavor", "tetrahedral flavor symmetry"],
+  "aliases": [
+    "A_4 lepton flavor",
+    "tetrahedral flavor symmetry"
+  ],
   "type": "symmetry",
   "summary": "Discrete non-abelian flavor symmetry A_4 (the tetrahedral group) under which the three lepton families are arranged in a 3-dimensional irreducible representation. Particular vacuum alignments of A_4-charged flavons reproduce tribimaximal or related PMNS mixing patterns close to observation.",
   "addresses_puzzles": [
@@ -25,14 +28,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["multiple flavon scalars (in A_4 representations)"],
-    "new_scales": ["flavon VEV scale ~ 10^{12-14} GeV"],
-    "new_symmetries": ["A_4 (alternating group on 4 elements)"],
+    "new_fields": [
+      "multiple flavon scalars (in A_4 representations)"
+    ],
+    "new_scales": [
+      "flavon VEV scale ~ 10^{12-14} GeV"
+    ],
+    "new_symmetries": [
+      "A_4 (alternating group on 4 elements)"
+    ],
     "new_parameters_count": 5,
     "note": "Multiple flavon VEVs and alignment parameters; vacuum alignment is the central technical challenge."
   },
-  "structural_features": ["discrete_symmetry", "non_abelian", "flavon", "vacuum_alignment"],
-  "composes_with": ["seesaw_type_i", "seesaw_type_ii"],
+  "structural_features": [
+    "discrete_symmetry",
+    "non_abelian",
+    "flavon",
+    "vacuum_alignment"
+  ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "seesaw_type_ii"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Ma-Rajasekaran (2001) introduced A_4 for lepton mixing. Tribimaximal mixing (Harrison-Perkins-Scott 2002) was a target prediction; non-zero theta_13 measured by Daya Bay/RENO/Double Chooz (2012) required corrections. Many variants (S_4, A_5, Delta(27)) explored.",
@@ -46,5 +66,10 @@
       "arxiv": "1002.0211"
     }
   ],
-  "tags": ["flavor", "discrete_symmetry", "lepton_mixing", "tribimaximal"]
+  "tags": [
+    "flavor",
+    "discrete_symmetry",
+    "lepton_mixing",
+    "tribimaximal"
+  ]
 }

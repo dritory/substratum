@@ -1,7 +1,9 @@
 {
   "id": "pati_salam",
   "name": "Pati-Salam unification",
-  "aliases": ["SU(4) x SU(2)_L x SU(2)_R"],
+  "aliases": [
+    "SU(4) x SU(2)_L x SU(2)_R"
+  ],
   "type": "uv_completion",
   "summary": "Partial unification: leptons are treated as the fourth color of SU(4) (Pati-Salam), and the SM SU(2)_L is mirrored by SU(2)_R that gauges right-handed isospin. Includes B-L as a gauge symmetry; right-handed neutrinos and parity restoration emerge automatically. Often a stepping stone within SO(10) breaking chains.",
   "addresses_puzzles": [
@@ -31,14 +33,37 @@
     }
   ],
   "introduces": {
-    "new_fields": ["SU(4) x SU(2)_R gauge bosons (W_R, leptoquarks)"],
-    "new_scales": ["SU(2)_R breaking ~ TeV - 10^4 TeV", "SU(4) breaking >~ 10^6 GeV"],
-    "new_symmetries": ["SU(4) (color + lepton number)", "SU(2)_R", "left-right parity"],
+    "new_fields": [
+      "SU(4) x SU(2)_R gauge bosons (W_R, leptoquarks)"
+    ],
+    "new_scales": [
+      "SU(2)_R breaking ~ TeV - 10^4 TeV",
+      "SU(4) breaking >~ 10^6 GeV"
+    ],
+    "new_symmetries": [
+      "SU(4) (color + lepton number)",
+      "SU(2)_R",
+      "left-right parity"
+    ],
     "new_parameters_count": 5,
     "note": "Gauge breaking scales + Higgs sector parameters."
   },
-  "structural_features": ["partial_unification", "left_right_symmetric", "leptoquark", "parity_restoration"],
-  "composes_with": ["so10_gut", "seesaw_type_i", "nelson_barr"],
+  "structural_features": [
+    "partial_unification",
+    "left_right_symmetric",
+    "leptoquark",
+    "parity_restoration"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion",
+    "gut_x_y_bosons",
+    "left_right_gauge_bosons"
+  ],
+  "composes_with": [
+    "so10_gut",
+    "seesaw_type_i",
+    "nelson_barr"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Pati-Salam (1974). Independently relevant as the L-R symmetric extension of the SM; embedded in SO(10) -> Pati-Salam -> SM breaking chains. Modern phenomenology focuses on TeV-scale W_R searches at LHC (CMS, ATLAS).",
@@ -48,5 +73,9 @@
       "doi": "10.1103/PhysRevD.10.275"
     }
   ],
-  "tags": ["unification", "pati_salam", "left_right_symmetric"]
+  "tags": [
+    "unification",
+    "pati_salam",
+    "left_right_symmetric"
+  ]
 }

@@ -43,6 +43,7 @@
     "no_inflation",
     "no_singularity"
   ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [
     "starobinsky_inflation",

@@ -63,6 +63,12 @@
     "extended_higgs_sector",
     "singlino_lsp"
   ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "electroweak_singlet_complex_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
   "composes_with": [
     "mssm",
     "wess_zumino_supersymmetry",

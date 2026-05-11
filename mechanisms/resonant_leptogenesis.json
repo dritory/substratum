@@ -52,6 +52,9 @@
     "near_degenerate_majorana",
     "tev_baryogenesis"
   ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
   "composes_with": [
     "seesaw_type_i",
     "leptogenesis"

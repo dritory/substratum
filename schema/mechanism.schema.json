@@ -4,7 +4,7 @@
   "title": "Proposed Mechanism",
   "description": "A structural proposal that addresses one or more puzzles. Mechanisms are smaller units than full frameworks: a candidate framework typically composes several mechanisms. Each mechanism declares which puzzles it addresses, which benchmarks it touches, and what new structure it introduces. Compression score = puzzles_closed / parameters_introduced surfaces high-leverage proposals.",
   "type": "object",
-  "required": ["id", "name", "type", "summary", "addresses_puzzles", "introduces", "status", "references"],
+  "required": ["id", "name", "type", "summary", "addresses_puzzles", "introduces", "field_tags", "status", "references"],
   "properties": {
     "id": {
       "type": "string",
@@ -104,6 +104,45 @@
       "type": "array",
       "items": { "type": "string" },
       "description": "Free-tag array used for clustering. Examples: 'discrete_symmetry', 'global_symmetry', 'scalar_at_intermediate_scale', 'extra_dimensions', 'mirror_sector', 'majorana_mass', 'topological_term'."
+    },
+    "field_tags": {
+      "type": "array",
+      "description": "Controlled vocabulary describing which kinds of new spacetime-field content this mechanism introduces. Used for shared-content queries across mechanisms. Tag = what the field IS, not what job it does in this mechanism (e.g. an axion-like inflaton gets 'qcd_blind_pseudoscalar', not a separate inflaton tag). Empty array means 'no new spacetime fields' (e.g. anthropic landscape, three-generations anomaly-cancellation arguments).",
+      "items": {
+        "type": "string",
+        "enum": [
+          "gauge_singlet_majorana_fermion",
+          "gauge_singlet_dirac_fermion",
+          "electroweak_triplet_fermion",
+          "vectorlike_quark",
+          "vectorlike_lepton",
+          "mirror_sm_fermions",
+          "kk_tower_fermions",
+          "susy_fermion_partners",
+          "electroweak_singlet_real_scalar",
+          "electroweak_singlet_complex_scalar",
+          "electroweak_doublet_scalar",
+          "electroweak_triplet_scalar",
+          "qcd_anomalous_pseudoscalar",
+          "qcd_blind_pseudoscalar",
+          "string_modulus",
+          "susy_scalar_partners",
+          "extra_u1_gauge_boson",
+          "dark_photon",
+          "left_right_gauge_bosons",
+          "gut_x_y_bosons",
+          "non_abelian_dark_gauge_sector",
+          "kk_tower_gauge_bosons",
+          "massive_graviton",
+          "extra_metric_or_connection",
+          "kk_tower_gravitons",
+          "extra_spatial_dimensions",
+          "string_theoretic_background",
+          "cosmological_landscape",
+          "primordial_black_hole_population"
+        ]
+      },
+      "uniqueItems": true
     },
     "composes_with": {
       "type": "array",

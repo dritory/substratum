@@ -1,7 +1,10 @@
 {
   "id": "chaotic_inflation",
   "name": "Chaotic inflation",
-  "aliases": ["large-field inflation", "Linde chaotic inflation"],
+  "aliases": [
+    "large-field inflation",
+    "Linde chaotic inflation"
+  ],
   "type": "dynamical",
   "summary": "Inflation begins from generic chaotic initial conditions in which the inflaton field takes an arbitrary large value at the Planck scale; for a wide class of polynomial potentials V(phi) = lambda phi^n, slow-roll inflation occurs simply because phi >> M_Pl. Solves the initial-conditions problem of new inflation by not requiring a special low-entropy starting state.",
   "addresses_puzzles": [
@@ -25,22 +28,37 @@
     }
   ],
   "introduces": {
-    "new_fields": ["inflaton phi"],
-    "new_scales": ["m ~ 10^13 GeV (for quadratic potential to give Planck-scale CMB amplitude)"],
+    "new_fields": [
+      "inflaton phi"
+    ],
+    "new_scales": [
+      "m ~ 10^13 GeV (for quadratic potential to give Planck-scale CMB amplitude)"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 2,
     "note": "Inflaton mass / coupling and number of e-folds (set by reheating)."
   },
-  "structural_features": ["large_field_inflation", "polynomial_potential", "trans_planckian_field_excursion"],
+  "structural_features": [
+    "large_field_inflation",
+    "polynomial_potential",
+    "trans_planckian_field_excursion"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "disfavored",
-  "history": "Linde (1983), 'Chaotic inflation', Phys. Lett. B 129, 177-181 — proposed the scenario, including its insensitivity to initial conditions. m^2 phi^2 chaotic inflation was the dominant simple model through the 2000s; ruled out by Planck + BICEP/Keck post-2014.",
+  "history": "Linde (1983), 'Chaotic inflation', Phys. Lett. B 129, 177-181 \u2014 proposed the scenario, including its insensitivity to initial conditions. m^2 phi^2 chaotic inflation was the dominant simple model through the 2000s; ruled out by Planck + BICEP/Keck post-2014.",
   "references": [
     {
       "citation": "Linde, 'Chaotic inflation', Phys. Lett. B 129, 177 (1983)",
       "doi": "10.1016/0370-2693(83)90837-7"
     }
   ],
-  "tags": ["inflation", "cosmology", "large_field"]
+  "tags": [
+    "inflation",
+    "cosmology",
+    "large_field"
+  ]
 }

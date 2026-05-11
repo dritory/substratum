@@ -38,6 +38,7 @@
     "observer_dependent",
     "double_scaled_syk"
   ],
+  "field_tags": [],
   "composes_with": [
     "holographic_principle",
     "ads_cft_holography",

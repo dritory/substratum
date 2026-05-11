@@ -1,7 +1,10 @@
 {
   "id": "technicolor",
   "name": "Technicolor",
-  "aliases": ["dynamical electroweak symmetry breaking", "TC"],
+  "aliases": [
+    "dynamical electroweak symmetry breaking",
+    "TC"
+  ],
   "type": "composite",
   "summary": "Replaces the elementary Higgs scalar with a new strongly-coupled gauge sector ('technicolor') whose chiral condensate spontaneously breaks SU(2) x U(1). The W and Z masses come from the eaten technipions; the Higgs scalar is a composite resonance. Eliminates the hierarchy problem by removing fundamental scalars altogether but struggles with fermion mass generation (extended technicolor, walking technicolor) and electroweak precision (S parameter).",
   "addresses_puzzles": [
@@ -30,15 +33,35 @@
     }
   ],
   "introduces": {
-    "new_fields": ["technifermions Q (charged under technicolor SU(N)_TC)", "extended technicolor gauge bosons (in ETC variants)"],
-    "new_scales": ["Lambda_TC ~ 1 TeV (chiral condensate scale)", "Lambda_ETC ~ 10^3 - 10^4 TeV (for fermion masses)"],
-    "new_symmetries": ["new gauge symmetry SU(N)_TC", "approximate chiral SU(N)_L x SU(N)_R"],
+    "new_fields": [
+      "technifermions Q (charged under technicolor SU(N)_TC)",
+      "extended technicolor gauge bosons (in ETC variants)"
+    ],
+    "new_scales": [
+      "Lambda_TC ~ 1 TeV (chiral condensate scale)",
+      "Lambda_ETC ~ 10^3 - 10^4 TeV (for fermion masses)"
+    ],
+    "new_symmetries": [
+      "new gauge symmetry SU(N)_TC",
+      "approximate chiral SU(N)_L x SU(N)_R"
+    ],
     "new_parameters_count": 6,
     "note": "TC gauge group, condensate scale, ETC scale and structure for fermion masses, walking dynamics parameters."
   },
-  "structural_features": ["composite_higgs", "dynamical_condensate", "no_fundamental_scalars", "strong_dynamics"],
+  "structural_features": [
+    "composite_higgs",
+    "dynamical_condensate",
+    "no_fundamental_scalars",
+    "strong_dynamics"
+  ],
+  "field_tags": [
+    "non_abelian_dark_gauge_sector"
+  ],
   "composes_with": [],
-  "excludes": ["mssm", "twin_higgs"],
+  "excludes": [
+    "mssm",
+    "twin_higgs"
+  ],
   "status": "historical",
   "history": "Susskind (1979), 'Dynamics of spontaneous symmetry breaking in the Weinberg-Salam theory', Phys. Rev. D 20, 2619; Weinberg (1979), 'Implications of dynamical symmetry breaking', Phys. Rev. D 19, 1277. Extended technicolor for fermion masses (Dimopoulos-Susskind 1979). LHC's discovery of a 125 GeV SM-like Higgs in 2012 retired vanilla technicolor as a leading framework; walking and conformal variants and partial-compositeness descendants continue.",
   "references": [
@@ -51,5 +74,10 @@
       "doi": "10.1103/PhysRevD.19.1277"
     }
   ],
-  "tags": ["hierarchy", "composite", "strong_dynamics", "no_fundamental_scalars"]
+  "tags": [
+    "hierarchy",
+    "composite",
+    "strong_dynamics",
+    "no_fundamental_scalars"
+  ]
 }

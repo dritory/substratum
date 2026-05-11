@@ -1,7 +1,10 @@
 {
   "id": "scotogenic_neutrino_dm",
   "name": "Scotogenic neutrino mass + dark matter",
-  "aliases": ["Ma scotogenic", "radiative seesaw with dark matter"],
+  "aliases": [
+    "Ma scotogenic",
+    "radiative seesaw with dark matter"
+  ],
   "type": "symmetry",
   "summary": "Generates Majorana neutrino masses radiatively at one loop through a Z_2-odd inert scalar doublet and right-handed neutrinos. The lightest Z_2-odd state is automatically stable and serves as dark matter. Explains both the smallness of neutrino mass (loop suppression replaces the high seesaw scale) and the existence of dark matter in a single minimal extension.",
   "addresses_puzzles": [
@@ -40,22 +43,47 @@
     }
   ],
   "introduces": {
-    "new_fields": ["inert scalar doublet eta (Z_2-odd)", "right-handed neutrinos N_i (Z_2-odd)"],
-    "new_scales": ["M_eta ~ 100 GeV - few TeV (collider-accessible)", "M_R ~ 100 GeV - 10 TeV"],
-    "new_symmetries": ["dark Z_2 stabilising both eta and N_i"],
+    "new_fields": [
+      "inert scalar doublet eta (Z_2-odd)",
+      "right-handed neutrinos N_i (Z_2-odd)"
+    ],
+    "new_scales": [
+      "M_eta ~ 100 GeV - few TeV (collider-accessible)",
+      "M_R ~ 100 GeV - 10 TeV"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising both eta and N_i"
+    ],
     "new_parameters_count": 6,
     "note": "Inert-doublet potential parameters, right-handed neutrino masses, and Yukawa structure to fit oscillation data."
   },
-  "structural_features": ["dark_z2", "inert_doublet", "radiative_neutrino_mass", "low_scale_seesaw"],
-  "composes_with": ["leptogenesis"],
+  "structural_features": [
+    "dark_z2",
+    "inert_doublet",
+    "radiative_neutrino_mass",
+    "low_scale_seesaw"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis"
+  ],
   "excludes": [],
   "status": "mainstream",
-  "history": "Ma (2006), 'Verifiable radiative seesaw mechanism of neutrino mass and dark matter', Phys. Rev. D 73, 077301, arXiv:hep-ph/0601225 — coined 'scotogenic' (from skotos = darkness). Active phenomenological development through 2010s-2020s.",
+  "history": "Ma (2006), 'Verifiable radiative seesaw mechanism of neutrino mass and dark matter', Phys. Rev. D 73, 077301, arXiv:hep-ph/0601225 \u2014 coined 'scotogenic' (from skotos = darkness). Active phenomenological development through 2010s-2020s.",
   "references": [
     {
       "citation": "Ma, 'Verifiable radiative seesaw mechanism of neutrino mass and dark matter', Phys. Rev. D 73, 077301 (2006)",
       "arxiv": "hep-ph/0601225"
     }
   ],
-  "tags": ["neutrinos", "dark_matter", "radiative", "z2_stabilisation", "scotogenic"]
+  "tags": [
+    "neutrinos",
+    "dark_matter",
+    "radiative",
+    "z2_stabilisation",
+    "scotogenic"
+  ]
 }

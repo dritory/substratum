@@ -1,7 +1,9 @@
 {
   "id": "asymmetric_dark_matter",
   "name": "Asymmetric dark matter",
-  "aliases": ["ADM"],
+  "aliases": [
+    "ADM"
+  ],
   "type": "dynamical",
   "summary": "Dark matter carries a conserved 'dark baryon number' analogous to baryon number. A primordial asymmetry in the dark sector, related to the visible baryon asymmetry, sets the relic abundance via annihilation of the symmetric component leaving only the asymmetric residue. Naturally explains the cosmic coincidence Omega_DM / Omega_b ~ 5: if asymmetries are similar, m_DM / m_proton ~ 5.",
   "addresses_puzzles": [
@@ -26,14 +28,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["asymmetric DM particle (often Dirac fermion)"],
-    "new_scales": ["m_DM ~ few GeV"],
-    "new_symmetries": ["dark baryon number U(1)_DB"],
+    "new_fields": [
+      "asymmetric DM particle (often Dirac fermion)"
+    ],
+    "new_scales": [
+      "m_DM ~ few GeV"
+    ],
+    "new_symmetries": [
+      "dark baryon number U(1)_DB"
+    ],
     "new_parameters_count": 4,
     "note": "DM mass, asymmetry, sharing mechanism with visible sector, symmetric-component annihilation cross-section."
   },
-  "structural_features": ["dark_baryon_number", "shared_asymmetry", "cosmic_coincidence"],
-  "composes_with": ["leptogenesis", "affleck_dine_baryogenesis"],
+  "structural_features": [
+    "dark_baryon_number",
+    "shared_asymmetry",
+    "cosmic_coincidence"
+  ],
+  "field_tags": [
+    "gauge_singlet_dirac_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis",
+    "affleck_dine_baryogenesis"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Nussinov (1985) for DM ~ pi-related mass; Kaplan-Luty-Zurek (2009) modern treatment. Active in the past decade as direct-detection bounds push canonical WIMP scenarios.",
@@ -47,5 +65,9 @@
       "arxiv": "1305.4939"
     }
   ],
-  "tags": ["dark_matter", "asymmetric", "cosmic_coincidence"]
+  "tags": [
+    "dark_matter",
+    "asymmetric",
+    "cosmic_coincidence"
+  ]
 }

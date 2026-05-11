@@ -1,7 +1,11 @@
 {
   "id": "ultralight_scalar_dm",
   "name": "Ultralight scalar dark matter",
-  "aliases": ["fuzzy DM", "wave DM", "ULDM"],
+  "aliases": [
+    "fuzzy DM",
+    "wave DM",
+    "ULDM"
+  ],
   "type": "dynamical",
   "summary": "Dark matter is a coherent oscillation of an ultralight scalar field (m ~ 10^-22 - 10^-18 eV) that behaves classically on galactic scales. The de Broglie wavelength at galactic velocities is kpc-scale for m ~ 10^-22 eV, smearing out small-scale structure and addressing claimed discrepancies (cusp/core, missing satellites). Includes axion-like particles in the sub-eV range.",
   "addresses_puzzles": [
@@ -16,7 +20,7 @@
     {
       "benchmark_id": "lyman_alpha_forest_small_scale_power",
       "effect": "near_bound",
-      "note": "Distinct from the WDM thermal-mass bound stored as the benchmark current_bound (5.3 keV). For ultralight bosonic DM (fuzzy regime), Iršič et al. 2017 (arXiv:1703.04683) give the conservative bound m_ULDM > ~2e-21 eV from XQ-100 + HIRES/MIKE quasar spectra. The two limits constrain different DM particle classes and are not directly interchangeable."
+      "note": "Distinct from the WDM thermal-mass bound stored as the benchmark current_bound (5.3 keV). For ultralight bosonic DM (fuzzy regime), Ir\u0161i\u010d et al. 2017 (arXiv:1703.04683) give the conservative bound m_ULDM > ~2e-21 eV from XQ-100 + HIRES/MIKE quasar spectra. The two limits constrain different DM particle classes and are not directly interchangeable."
     },
     {
       "benchmark_id": "axion_haloscope_admx",
@@ -30,26 +34,50 @@
     }
   ],
   "introduces": {
-    "new_fields": ["ultralight scalar phi"],
-    "new_scales": ["m_phi ~ 10^{-22} - sub-eV", "f_phi (decay constant)"],
-    "new_symmetries": ["approximate shift symmetry"],
+    "new_fields": [
+      "ultralight scalar phi"
+    ],
+    "new_scales": [
+      "m_phi ~ 10^{-22} - sub-eV",
+      "f_phi (decay constant)"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry"
+    ],
     "new_parameters_count": 3,
     "note": "Mass, decay constant, initial misalignment angle."
   },
-  "structural_features": ["ultralight_scalar", "shift_symmetry", "wave_dark_matter", "coherent_oscillation"],
-  "composes_with": ["peccei_quinn_axion"],
-  "excludes": ["wimp_thermal_freezeout"],
+  "structural_features": [
+    "ultralight_scalar",
+    "shift_symmetry",
+    "wave_dark_matter",
+    "coherent_oscillation"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion"
+  ],
+  "excludes": [
+    "wimp_thermal_freezeout"
+  ],
   "status": "niche",
-  "history": "Hu-Barkana-Gruzinov (2000) introduced fuzzy DM; renewed interest 2010s with high-resolution simulations and ALP cosmology. Tight Lyman-alpha bounds (Iršič et al. 2017) constrain the lightest fuzzy regime.",
+  "history": "Hu-Barkana-Gruzinov (2000) introduced fuzzy DM; renewed interest 2010s with high-resolution simulations and ALP cosmology. Tight Lyman-alpha bounds (Ir\u0161i\u010d et al. 2017) constrain the lightest fuzzy regime.",
   "references": [
     {
       "citation": "Hu, Barkana, Gruzinov, 'Cold and Fuzzy Dark Matter' (also: 'Fuzzy Cold Dark Matter: The Wave Properties of Ultralight Particles'), PRL 85, 1158 (2000)",
       "arxiv": "astro-ph/0003365"
     },
     {
-      "citation": "Iršič et al., 'First constraints on fuzzy dark matter from Lyman-alpha forest data and hydrodynamical simulations', PRL 119, 031302 (2017)",
+      "citation": "Ir\u0161i\u010d et al., 'First constraints on fuzzy dark matter from Lyman-alpha forest data and hydrodynamical simulations', PRL 119, 031302 (2017)",
       "arxiv": "1703.04683"
     }
   ],
-  "tags": ["dark_matter", "ultralight", "axion_like", "wave_dm"]
+  "tags": [
+    "dark_matter",
+    "ultralight",
+    "axion_like",
+    "wave_dm"
+  ]
 }

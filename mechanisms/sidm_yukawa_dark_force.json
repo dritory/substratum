@@ -55,6 +55,10 @@
     "velocity_dependent",
     "sommerfeld_enhanced"
   ],
+  "field_tags": [
+    "dark_photon",
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "self_interacting_dm_yukawa",
     "dark_photon_portal",

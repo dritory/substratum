@@ -1,6 +1,6 @@
 {
   "id": "consistent_histories",
-  "name": "Consistent histories (Griffiths-Omnès-Gell-Mann-Hartle)",
+  "name": "Consistent histories (Griffiths-Omn\u00e8s-Gell-Mann-Hartle)",
   "aliases": [
     "decoherent histories",
     "Griffiths CH interpretation"
@@ -29,6 +29,7 @@
     "no_collapse",
     "decoherence_based"
   ],
+  "field_tags": [],
   "composes_with": [
     "decoherence_einselection",
     "many_worlds_everett"
@@ -37,7 +38,7 @@
     "ghirardi_rimini_weber"
   ],
   "status": "niche",
-  "history": "Griffiths (1984), 'Consistent histories and the interpretation of quantum mechanics', J. Stat. Phys. 36, 219. Omnès (1988, 1992) developed logical formulation. Gell-Mann and Hartle (1990, 1993) generalised to 'decoherent histories' applicable to closed cosmological systems. Comprehensive review: Griffiths (2002), 'Consistent Quantum Theory', Cambridge UP.",
+  "history": "Griffiths (1984), 'Consistent histories and the interpretation of quantum mechanics', J. Stat. Phys. 36, 219. Omn\u00e8s (1988, 1992) developed logical formulation. Gell-Mann and Hartle (1990, 1993) generalised to 'decoherent histories' applicable to closed cosmological systems. Comprehensive review: Griffiths (2002), 'Consistent Quantum Theory', Cambridge UP.",
   "references": [
     {
       "citation": "Griffiths, 'Consistent histories and the interpretation of quantum mechanics', J. Stat. Phys. 36, 219 (1984)",

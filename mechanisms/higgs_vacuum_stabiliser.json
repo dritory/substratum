@@ -1,7 +1,10 @@
 {
   "id": "higgs_vacuum_stabiliser",
   "name": "Higgs vacuum stabiliser (extra scalar)",
-  "aliases": ["scalar stabilisation of EW vacuum", "vacuum-stability extension"],
+  "aliases": [
+    "scalar stabilisation of EW vacuum",
+    "vacuum-stability extension"
+  ],
   "type": "dynamical",
   "summary": "Adds a singlet (or doublet) scalar coupled to the Higgs through a portal |H|^2 |S|^2 with positive coupling. The threshold correction at the new scalar's mass scale shifts lambda(mu) up, preventing the SM Higgs quartic from running negative at high scales. The same scalar can simultaneously serve as dark matter (Higgs-portal scalar DM mechanism), giving a unified target for vacuum-stability-driven extensions.",
   "addresses_puzzles": [
@@ -31,14 +34,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["singlet (or doublet) scalar S"],
-    "new_scales": ["m_S ~ TeV - PeV"],
-    "new_symmetries": ["dark Z_2 (if S is DM)"],
+    "new_fields": [
+      "singlet (or doublet) scalar S"
+    ],
+    "new_scales": [
+      "m_S ~ TeV - PeV"
+    ],
+    "new_symmetries": [
+      "dark Z_2 (if S is DM)"
+    ],
     "new_parameters_count": 3,
     "note": "Scalar mass, portal coupling lambda_HS, scalar self-coupling."
   },
-  "structural_features": ["higgs_portal", "rg_threshold_correction", "stabilised_vacuum"],
-  "composes_with": ["higgs_portal_scalar_dm", "coleman_weinberg_radiative"],
+  "structural_features": [
+    "higgs_portal",
+    "rg_threshold_correction",
+    "stabilised_vacuum"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "higgs_portal_scalar_dm",
+    "coleman_weinberg_radiative"
+  ],
   "excludes": [],
   "status": "mainstream",
   "history": "Threshold corrections to lambda from scalar singlets in vacuum-stability context studied through 2010s (Elias-Miro-Espinosa-Giudice-Lee-Strumia 2012, arXiv:1203.0237; many follow-ups). Direct application to DM stabilisation links to the Higgs-portal scalar DM literature.",
@@ -48,5 +67,10 @@
       "arxiv": "1203.0237"
     }
   ],
-  "tags": ["vacuum_stability", "higgs_portal", "scalar", "rg_threshold"]
+  "tags": [
+    "vacuum_stability",
+    "higgs_portal",
+    "scalar",
+    "rg_threshold"
+  ]
 }

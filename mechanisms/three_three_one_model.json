@@ -59,6 +59,9 @@
     "vector_like_exotics",
     "doubly_charged_gauge"
   ],
+  "field_tags": [
+    "vectorlike_quark"
+  ],
   "composes_with": [
     "froggatt_nielsen",
     "seesaw_type_i"

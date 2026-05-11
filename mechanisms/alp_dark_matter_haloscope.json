@@ -6,7 +6,7 @@
     "ALP misalignment DM"
   ],
   "type": "dynamical",
-  "summary": "Generic axion-like particles (ALPs) — pseudo-scalars with coupling g_a-gamma to two photons, not necessarily the QCD axion — produced via misalignment and constituting the dark matter. Distinct from the QCD axion in that the mass and photon coupling are independent parameters. The string axiverse generically predicts a tower of ALPs spanning many decades in mass; haloscope experiments (ADMX, HAYSTAC, ABRACADABRA, DMRadio) target specific (m_a, g_agamma) windows.",
+  "summary": "Generic axion-like particles (ALPs) \u2014 pseudo-scalars with coupling g_a-gamma to two photons, not necessarily the QCD axion \u2014 produced via misalignment and constituting the dark matter. Distinct from the QCD axion in that the mass and photon coupling are independent parameters. The string axiverse generically predicts a tower of ALPs spanning many decades in mass; haloscope experiments (ADMX, HAYSTAC, ABRACADABRA, DMRadio) target specific (m_a, g_agamma) windows.",
   "addresses_puzzles": [
     {
       "puzzle_id": "dark_matter_identity",
@@ -46,6 +46,9 @@
     "misalignment_production",
     "narrow_line_signal",
     "decoupled_mass_and_coupling"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
   ],
   "composes_with": [
     "peccei_quinn_axion",

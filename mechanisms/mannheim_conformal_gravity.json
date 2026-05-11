@@ -55,6 +55,7 @@
     "no_dark_matter",
     "weyl_tensor_action"
   ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [
     "wimp_thermal_freezeout",

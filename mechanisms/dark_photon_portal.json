@@ -50,6 +50,9 @@
     "renormalisable_portal",
     "u1_extension"
   ],
+  "field_tags": [
+    "dark_photon"
+  ],
   "composes_with": [
     "wimpless_dark_matter",
     "asymmetric_dark_matter",

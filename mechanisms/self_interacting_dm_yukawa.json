@@ -59,6 +59,10 @@
     "velocity_dependent_cross_section",
     "sommerfeld_enhancement"
   ],
+  "field_tags": [
+    "dark_photon",
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "dark_photon_portal",
     "wimp_thermal_freezeout"

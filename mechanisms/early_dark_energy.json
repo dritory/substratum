@@ -54,6 +54,9 @@
     "matter_radiation_equality_epoch",
     "h0_tension_target"
   ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
   "composes_with": [
     "quintessence",
     "string_axiverse"

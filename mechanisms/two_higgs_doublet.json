@@ -60,6 +60,9 @@
     "ew_baryogenesis_friendly",
     "z2_yukawa_structure"
   ],
+  "field_tags": [
+    "electroweak_doublet_scalar"
+  ],
   "composes_with": [
     "mssm",
     "electroweak_baryogenesis",

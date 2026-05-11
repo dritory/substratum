@@ -42,6 +42,7 @@
     "neutrino_source",
     "non_thermal_production"
   ],
+  "field_tags": [],
   "composes_with": [
     "wimpzilla_superheavy_dm",
     "seesaw_type_i"

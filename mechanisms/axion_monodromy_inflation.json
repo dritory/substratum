@@ -12,7 +12,7 @@
       "puzzle_id": "inflation_initial_conditions",
       "role": "solves",
       "confidence": "contested",
-      "note": "Predicts r ~ 0.04-0.07 for nil-manifold (phi^{2/3}) potential or r ~ 0.05 for axion-monodromy (phi) — currently constrained by BICEP/Keck (r < 0.036). Tension with weak-gravity conjecture: the trans-Planckian field excursion may put the construction in the swampland, currently debated."
+      "note": "Predicts r ~ 0.04-0.07 for nil-manifold (phi^{2/3}) potential or r ~ 0.05 for axion-monodromy (phi) \u2014 currently constrained by BICEP/Keck (r < 0.036). Tension with weak-gravity conjecture: the trans-Planckian field excursion may put the construction in the swampland, currently debated."
     }
   ],
   "touches_benchmarks": [
@@ -46,6 +46,11 @@
     "monodromy",
     "axion_inflation",
     "trans_planckian_field"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background"
   ],
   "composes_with": [
     "polchinski_d_branes",

@@ -1,7 +1,10 @@
 {
   "id": "peccei_quinn_axion",
   "name": "Peccei-Quinn axion",
-  "aliases": ["QCD axion", "PQ mechanism"],
+  "aliases": [
+    "QCD axion",
+    "PQ mechanism"
+  ],
   "type": "symmetry",
   "summary": "A new spontaneously broken global U(1)_PQ chiral symmetry, anomalous under QCD, dynamically relaxes the strong-CP angle to zero. The pseudo-Goldstone boson of the broken symmetry is the axion, with mass m_a ~ Lambda_QCD^2 / f_a set by the symmetry-breaking scale. Cold-axion populations from the misalignment mechanism can also constitute the dark matter.",
   "addresses_puzzles": [
@@ -36,15 +39,39 @@
     }
   ],
   "introduces": {
-    "new_fields": ["axion a (pseudo-scalar)", "PQ-charged heavy fermion (KSVZ) or extra Higgs doublet (DFSZ)"],
-    "new_scales": ["f_a ~ 10^8 - 10^12 GeV (allowed window)"],
-    "new_symmetries": ["U(1)_PQ (global, anomalous, spontaneously broken)"],
+    "new_fields": [
+      "axion a (pseudo-scalar)",
+      "PQ-charged heavy fermion (KSVZ) or extra Higgs doublet (DFSZ)"
+    ],
+    "new_scales": [
+      "f_a ~ 10^8 - 10^12 GeV (allowed window)"
+    ],
+    "new_symmetries": [
+      "U(1)_PQ (global, anomalous, spontaneously broken)"
+    ],
     "new_parameters_count": 2,
     "note": "f_a is the dominant new parameter; the axion mass is then derived. KSVZ adds one heavy-fermion mass; DFSZ adds the second Higgs sector with its own potential, modestly increasing the count."
   },
-  "structural_features": ["global_symmetry", "anomaly_matching", "topological_term", "pseudo_goldstone", "scalar_at_intermediate_scale"],
-  "composes_with": ["seesaw_type_i", "froggatt_nielsen", "mssm"],
-  "excludes": ["nelson_barr"],
+  "structural_features": [
+    "global_symmetry",
+    "anomaly_matching",
+    "topological_term",
+    "pseudo_goldstone",
+    "scalar_at_intermediate_scale"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "electroweak_singlet_complex_scalar",
+    "qcd_anomalous_pseudoscalar"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "froggatt_nielsen",
+    "mssm"
+  ],
+  "excludes": [
+    "nelson_barr"
+  ],
   "status": "mainstream",
   "history": "Peccei-Quinn (1977); axion identified by Wilczek (1978) and Weinberg (1978). KSVZ (1979) and DFSZ (1980, 1981) variants. Astrophysical constraints (SN1987A, horizontal branch stars) excluded f_a < ~10^8 GeV. ADMX has been searching the QCD-axion window since the 2000s.",
   "references": [
@@ -61,5 +88,9 @@
       "doi": "10.1103/PhysRevLett.40.279"
     }
   ],
-  "tags": ["axion", "strong_cp", "dark_matter"]
+  "tags": [
+    "axion",
+    "strong_cp",
+    "dark_matter"
+  ]
 }

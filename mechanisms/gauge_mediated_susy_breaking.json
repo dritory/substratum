@@ -1,7 +1,10 @@
 {
   "id": "gauge_mediated_susy_breaking",
   "name": "Gauge-mediated SUSY breaking (GMSB)",
-  "aliases": ["GMSB", "Dine-Fischler gauge mediation"],
+  "aliases": [
+    "GMSB",
+    "Dine-Fischler gauge mediation"
+  ],
   "type": "dynamical",
   "summary": "Mediates SUSY breaking from a hidden sector to the visible sector via SM gauge interactions. Messenger fields charged under both the SUSY-breaking sector and the SM transmit soft masses to MSSM scalars and gauginos at one and two loops. Predicts a flavor-blind soft spectrum (no SUSY flavor problem) and a very light gravitino LSP.",
   "addresses_puzzles": [
@@ -35,14 +38,33 @@
     }
   ],
   "introduces": {
-    "new_fields": ["messenger fields (typically a 5+5bar of SU(5))", "SUSY-breaking sector singlet X with <X> + theta^2 <F_X>"],
-    "new_scales": ["messenger mass M_mess ~ 10^4 - 10^16 GeV", "SUSY-breaking F-term <F_X>"],
+    "new_fields": [
+      "messenger fields (typically a 5+5bar of SU(5))",
+      "SUSY-breaking sector singlet X with <X> + theta^2 <F_X>"
+    ],
+    "new_scales": [
+      "messenger mass M_mess ~ 10^4 - 10^16 GeV",
+      "SUSY-breaking F-term <F_X>"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 4,
     "note": "Messenger mass, SUSY-breaking scale, number of messenger generations, tan(beta). Flavor structure is fixed by gauge invariance."
   },
-  "structural_features": ["gauge_mediation", "messenger_sector", "flavor_blind", "gravitino_lsp"],
-  "composes_with": ["mssm"],
+  "structural_features": [
+    "gauge_mediation",
+    "messenger_sector",
+    "flavor_blind",
+    "gravitino_lsp"
+  ],
+  "field_tags": [
+    "susy_fermion_partners",
+    "susy_scalar_partners",
+    "vectorlike_lepton",
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Dine and Fischler (1982), 'A phenomenological model of particle physics based on supersymmetry', Phys. Lett. B 110, 227 - one of the foundational gauge-mediation papers. Modern formulation by Dine-Nelson (1993, 1995) and Dine-Nelson-Nir-Shirman (1996). Active LHC phenomenology of long-lived NLSP / prompt photon signatures.",
@@ -56,5 +78,11 @@
       "arxiv": "hep-ph/9507378"
     }
   ],
-  "tags": ["susy", "gmsb", "gauge_mediation", "flavor_blind", "gravitino_lsp"]
+  "tags": [
+    "susy",
+    "gmsb",
+    "gauge_mediation",
+    "flavor_blind",
+    "gravitino_lsp"
+  ]
 }

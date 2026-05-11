@@ -57,12 +57,15 @@
     "pati_salam_embedding",
     "tev_scale_uv"
   ],
+  "field_tags": [
+    "gut_x_y_bosons"
+  ],
   "composes_with": [
     "pati_salam"
   ],
   "excludes": [],
   "status": "mainstream",
-  "history": "Bauer-Neubert (2015, arXiv:1511.01900) early scalar LQ fit. Buttazzo-Greljo-Isidori-Marzocca (2017, arXiv:1706.07808), 'B-physics anomalies: a guide to combined explanations', JHEP 11, 044 — minimal U1 fit. Active phenomenological / LHC programme.",
+  "history": "Bauer-Neubert (2015, arXiv:1511.01900) early scalar LQ fit. Buttazzo-Greljo-Isidori-Marzocca (2017, arXiv:1706.07808), 'B-physics anomalies: a guide to combined explanations', JHEP 11, 044 \u2014 minimal U1 fit. Active phenomenological / LHC programme.",
   "references": [
     {
       "citation": "Buttazzo, Greljo, Isidori, Marzocca, 'B-physics anomalies: a guide to combined explanations', JHEP 11, 044 (2017)",

@@ -58,6 +58,10 @@
     "linked_dm_bau",
     "collider_testable"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar",
+    "gauge_singlet_dirac_fermion"
+  ],
   "composes_with": [
     "dark_photon_portal"
   ],

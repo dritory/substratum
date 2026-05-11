@@ -44,6 +44,9 @@
     "scale_free_spectrum",
     "high_isotropy"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson"
+  ],
   "composes_with": [
     "cosmic_strings_topological",
     "su5_minimal_gut",

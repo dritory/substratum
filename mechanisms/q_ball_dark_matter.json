@@ -1,9 +1,12 @@
 {
   "id": "q_ball_dark_matter",
   "name": "Q-ball (non-topological soliton) dark matter",
-  "aliases": ["SUSY Q-ball", "Affleck-Dine Q-ball"],
+  "aliases": [
+    "SUSY Q-ball",
+    "Affleck-Dine Q-ball"
+  ],
   "type": "topological",
-  "summary": "Supersymmetric extensions of the Standard Model generically allow stable non-topological solitons — Q-balls — carrying conserved charge (baryon, lepton, or other U(1)) and stabilised by the structure of the scalar potential. Q-balls form copiously in the early universe via Affleck-Dine fragmentation along flat directions and can constitute dark matter while simultaneously generating the baryon asymmetry.",
+  "summary": "Supersymmetric extensions of the Standard Model generically allow stable non-topological solitons \u2014 Q-balls \u2014 carrying conserved charge (baryon, lepton, or other U(1)) and stabilised by the structure of the scalar potential. Q-balls form copiously in the early universe via Affleck-Dine fragmentation along flat directions and can constitute dark matter while simultaneously generating the baryon asymmetry.",
   "addresses_puzzles": [
     {
       "puzzle_id": "dark_matter_identity",
@@ -31,13 +34,28 @@
   ],
   "introduces": {
     "new_fields": [],
-    "new_scales": ["Q-ball formation scale ~ inflaton VEV / MSSM flat direction"],
-    "new_symmetries": ["U(1) charge conservation (baryon or lepton number)"],
+    "new_scales": [
+      "Q-ball formation scale ~ inflaton VEV / MSSM flat direction"
+    ],
+    "new_symmetries": [
+      "U(1) charge conservation (baryon or lepton number)"
+    ],
     "new_parameters_count": 3,
     "note": "Builds on MSSM. Free parameters are the Affleck-Dine field initial conditions, Q-ball charge distribution, and SUSY-breaking soft mass."
   },
-  "structural_features": ["non_topological_soliton", "macroscopic_dark_matter", "ad_field_fragmentation", "charged_soliton"],
-  "composes_with": ["mssm", "affleck_dine_baryogenesis"],
+  "structural_features": [
+    "non_topological_soliton",
+    "macroscopic_dark_matter",
+    "ad_field_fragmentation",
+    "charged_soliton"
+  ],
+  "field_tags": [
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "mssm",
+    "affleck_dine_baryogenesis"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Coleman (1985) introduced Q-balls as non-topological solitons. Kusenko (1997), 'Q-Ball as Dark Matter', PLB 405, 108. Kusenko, Shaposhnikov (1998), 'Supersymmetric Q-balls as dark matter', Phys. Lett. B 418, 46, arXiv:hep-ph/9709492. Detailed phenomenology developed through 2000s; remains a viable alternative to particle DM.",
@@ -47,5 +65,10 @@
       "arxiv": "hep-ph/9709492"
     }
   ],
-  "tags": ["dark_matter", "q_ball", "soliton", "supersymmetry"]
+  "tags": [
+    "dark_matter",
+    "q_ball",
+    "soliton",
+    "supersymmetry"
+  ]
 }

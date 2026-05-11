@@ -50,6 +50,10 @@
     "anomaly_cancellation",
     "seesaw_embedding"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson",
+    "gauge_singlet_majorana_fermion"
+  ],
   "composes_with": [
     "seesaw_type_i",
     "leptogenesis",

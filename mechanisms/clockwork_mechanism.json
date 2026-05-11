@@ -1,7 +1,10 @@
 {
   "id": "clockwork_mechanism",
   "name": "Clockwork mechanism",
-  "aliases": ["Giudice-McCullough clockwork", "discrete clockwork"],
+  "aliases": [
+    "Giudice-McCullough clockwork",
+    "discrete clockwork"
+  ],
   "type": "dynamical",
   "summary": "Generates exponentially small effective couplings from O(1) fundamental couplings using a chain of N fields connected with universal nearest-neighbour couplings q. The lightest mode has an exponentially suppressed coupling to a localised endpoint, producing apparently 'finely-tuned' small numbers without small fundamental parameters. Applies to scalars, fermions, gauge bosons, and gravitons; provides a flexible framework for Higgs naturalness, axions, neutrino masses, and small mixing angles.",
   "addresses_puzzles": [
@@ -31,14 +34,28 @@
     }
   ],
   "introduces": {
-    "new_fields": ["chain of N copies of a field with nearest-neighbour couplings"],
-    "new_scales": ["clockwork lattice scale and N (chain length)"],
+    "new_fields": [
+      "chain of N copies of a field with nearest-neighbour couplings"
+    ],
+    "new_scales": [
+      "clockwork lattice scale and N (chain length)"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Three new free parameters: chain length N, lattice spacing / cutoff, q (the universal coupling parameter)."
   },
-  "structural_features": ["lattice_field_chain", "exponential_suppression", "linear_dilaton_dual", "no_small_fundamental_parameters"],
-  "composes_with": ["peccei_quinn_axion", "seesaw_type_i", "froggatt_nielsen"],
+  "structural_features": [
+    "lattice_field_chain",
+    "exponential_suppression",
+    "linear_dilaton_dual",
+    "no_small_fundamental_parameters"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "seesaw_type_i",
+    "froggatt_nielsen"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Choi-Kim (2014) and Kaplan-Rattazzi (2015) introduced 'clockwork axion' constructions. Giudice and McCullough (2016), 'A Clockwork Theory', JHEP 02, 036 (2017), arXiv:1610.07962, generalised to a unified framework for scalars, fermions, gauge bosons, and gravitons. Active model-building activity 2016-present.",
@@ -52,5 +69,10 @@
       "arxiv": "1410.7762"
     }
   ],
-  "tags": ["hierarchy", "clockwork", "exponential_suppression", "lattice"]
+  "tags": [
+    "hierarchy",
+    "clockwork",
+    "exponential_suppression",
+    "lattice"
+  ]
 }

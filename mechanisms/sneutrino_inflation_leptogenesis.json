@@ -51,6 +51,9 @@
     "right_handed_partner",
     "single_field_origin"
   ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
   "composes_with": [
     "mssm",
     "seesaw_type_i",

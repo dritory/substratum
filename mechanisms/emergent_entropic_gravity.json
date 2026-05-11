@@ -1,7 +1,10 @@
 {
   "id": "emergent_entropic_gravity",
   "name": "Emergent entropic gravity",
-  "aliases": ["Verlinde gravity", "entropic gravity"],
+  "aliases": [
+    "Verlinde gravity",
+    "entropic gravity"
+  ],
   "type": "geometric",
   "summary": "Argues that gravity is not a fundamental interaction but emerges from a holographic / entropic principle: changes in entropy associated with the position of matter near a holographic screen give rise to an effective force that reproduces Newton's law. Verlinde's later 'emergent gravity' (2016) extends to galactic scales and aims to reproduce galactic rotation curves without dark matter via dark-energy-induced entropy displacement.",
   "addresses_puzzles": [
@@ -37,12 +40,20 @@
   ],
   "introduces": {
     "new_fields": [],
-    "new_scales": ["holographic / Hubble scale"],
+    "new_scales": [
+      "holographic / Hubble scale"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 1,
     "note": "No new fundamental fields; one parameter relating dark-energy entropy to dark-matter-like effective force."
   },
-  "structural_features": ["emergent_gravity", "entropic_force", "holographic", "no_dark_matter"],
+  "structural_features": [
+    "emergent_gravity",
+    "entropic_force",
+    "holographic",
+    "no_dark_matter"
+  ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [],
   "status": "disfavored",
@@ -57,5 +68,10 @@
       "arxiv": "1611.02269"
     }
   ],
-  "tags": ["emergent_gravity", "modified_gravity", "holographic", "speculative"]
+  "tags": [
+    "emergent_gravity",
+    "modified_gravity",
+    "holographic",
+    "speculative"
+  ]
 }

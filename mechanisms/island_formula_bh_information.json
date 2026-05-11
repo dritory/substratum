@@ -1,9 +1,13 @@
 {
   "id": "island_formula_bh_information",
   "name": "Island formula / quantum extremal surfaces",
-  "aliases": ["Page curve from semi-classical gravity", "QES prescription", "replica wormhole"],
+  "aliases": [
+    "Page curve from semi-classical gravity",
+    "QES prescription",
+    "replica wormhole"
+  ],
   "type": "uv_completion",
-  "summary": "Recent semi-classical gravity calculations show that the entanglement entropy of Hawking radiation follows the unitary Page curve when one includes 'islands' — disconnected regions inside the black hole that the radiation knows about via quantum extremal surface prescriptions. Replica wormholes in the gravitational path integral provide the underlying microscopic mechanism. Reproduces the Page curve in JT gravity coupled to matter without invoking firewalls or new principles.",
+  "summary": "Recent semi-classical gravity calculations show that the entanglement entropy of Hawking radiation follows the unitary Page curve when one includes 'islands' \u2014 disconnected regions inside the black hole that the radiation knows about via quantum extremal surface prescriptions. Replica wormholes in the gravitational path integral provide the underlying microscopic mechanism. Reproduces the Page curve in JT gravity coupled to matter without invoking firewalls or new principles.",
   "addresses_puzzles": [
     {
       "puzzle_id": "black_hole_information",
@@ -23,10 +27,19 @@
     "new_scales": [],
     "new_symmetries": [],
     "new_parameters_count": 0,
-    "note": "Builds on existing gravity + QFT framework; the 'island' / QES prescription is a derivation, not a new postulate. Compression score is essentially infinite — closes a major puzzle with no new free parameters."
+    "note": "Builds on existing gravity + QFT framework; the 'island' / QES prescription is a derivation, not a new postulate. Compression score is essentially infinite \u2014 closes a major puzzle with no new free parameters."
   },
-  "structural_features": ["quantum_extremal_surface", "replica_wormhole", "entanglement_wedge", "no_new_physics"],
-  "composes_with": ["ads_cft_holography", "strominger_vafa_microstates"],
+  "structural_features": [
+    "quantum_extremal_surface",
+    "replica_wormhole",
+    "entanglement_wedge",
+    "no_new_physics"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "ads_cft_holography",
+    "strominger_vafa_microstates"
+  ],
   "excludes": [],
   "status": "mainstream",
   "history": "Penington (2019), 'Entanglement Wedge Reconstruction and the Information Paradox', JHEP 09, 002 (2020), arXiv:1905.08255. Almheiri, Engelhardt, Marolf, Maxfield (2019), 'The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole', JHEP 12, 063, arXiv:1905.08762. Replica-wormhole derivation: Almheiri, Hartman, Maldacena, Shaghoulian, Tajdini (2019, arXiv:1911.12333) and Penington, Shenker, Stanford, Yang (2019, arXiv:1911.11977). One of the most active areas in quantum gravity 2019-present.",
@@ -40,5 +53,11 @@
       "arxiv": "1905.08762"
     }
   ],
-  "tags": ["black_holes", "quantum_gravity", "page_curve", "qes", "replica_wormhole"]
+  "tags": [
+    "black_holes",
+    "quantum_gravity",
+    "page_curve",
+    "qes",
+    "replica_wormhole"
+  ]
 }

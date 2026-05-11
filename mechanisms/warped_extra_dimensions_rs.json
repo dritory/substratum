@@ -1,7 +1,11 @@
 {
   "id": "warped_extra_dimensions_rs",
   "name": "Warped extra dimensions (Randall-Sundrum)",
-  "aliases": ["RS", "RS1", "warped compactification"],
+  "aliases": [
+    "RS",
+    "RS1",
+    "warped compactification"
+  ],
   "type": "geometric",
   "summary": "A single extra dimension between two 3-branes with negative bulk cosmological constant. The metric is exponentially warped along the extra dimension, so the Planck scale on the UV brane redshifts to TeV on the IR brane. Generates the EW/Planck hierarchy from an O(1) ratio of brane separations through exponential warp.",
   "addresses_puzzles": [
@@ -34,15 +38,42 @@
     }
   ],
   "introduces": {
-    "new_fields": ["KK gravitons", "KK gauge bosons", "bulk fermions"],
-    "new_scales": ["k ~ M_Planck (5D AdS curvature)", "1/r_c ~ TeV (IR brane scale)"],
-    "new_symmetries": ["AdS isometries (warp generates 4D conformal-like structure on IR brane)"],
+    "new_fields": [
+      "KK gravitons",
+      "KK gauge bosons",
+      "bulk fermions"
+    ],
+    "new_scales": [
+      "k ~ M_Planck (5D AdS curvature)",
+      "1/r_c ~ TeV (IR brane scale)"
+    ],
+    "new_symmetries": [
+      "AdS isometries (warp generates 4D conformal-like structure on IR brane)"
+    ],
     "new_parameters_count": 5,
     "note": "AdS curvature, brane separation, modulus potential parameters, bulk fermion localization parameters."
   },
-  "structural_features": ["extra_dimensions", "warped_metric", "brane_localization", "kk_tower", "ads_cft_dual"],
-  "composes_with": ["partial_compositeness"],
-  "excludes": ["mssm", "twin_higgs", "large_extra_dimensions_add"],
+  "structural_features": [
+    "extra_dimensions",
+    "warped_metric",
+    "brane_localization",
+    "kk_tower",
+    "ads_cft_dual"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "kk_tower_fermions",
+    "kk_tower_gauge_bosons",
+    "kk_tower_gravitons"
+  ],
+  "composes_with": [
+    "partial_compositeness"
+  ],
+  "excludes": [
+    "mssm",
+    "twin_higgs",
+    "large_extra_dimensions_add"
+  ],
   "status": "niche",
   "history": "Randall-Sundrum I and II (1999). RS1 with bulk SM fields (~2003) connected the warped scenario to flavor physics through bulk localization; AdS/CFT duality maps RS to 4D composite-Higgs scenarios.",
   "references": [
@@ -55,5 +86,10 @@
       "arxiv": "hep-ph/0412089"
     }
   ],
-  "tags": ["hierarchy", "extra_dimensions", "ads_cft", "flavor"]
+  "tags": [
+    "hierarchy",
+    "extra_dimensions",
+    "ads_cft",
+    "flavor"
+  ]
 }

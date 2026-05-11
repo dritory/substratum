@@ -1,7 +1,10 @@
 {
   "id": "horava_lifshitz_gravity",
   "name": "Horava-Lifshitz gravity",
-  "aliases": ["Lifshitz-point gravity", "anisotropic-scaling gravity"],
+  "aliases": [
+    "Lifshitz-point gravity",
+    "anisotropic-scaling gravity"
+  ],
   "type": "geometric",
   "summary": "Modifies general relativity at short distances by introducing anisotropic scaling between space and time (dynamical critical exponent z=3 in 3+1D), making the theory power-counting renormalisable. The relativistic z=1 limit emerges in the IR, recovering GR at long distances. Effective speed of light, Newton constant, and cosmological constant are all relevant deformations of the deeply nonrelativistic z=3 theory.",
   "addresses_puzzles": [
@@ -31,12 +34,24 @@
   ],
   "introduces": {
     "new_fields": [],
-    "new_scales": ["Lifshitz scale (Planck-scale by default)"],
-    "new_symmetries": ["foliation-preserving diffeomorphisms (instead of full diffeomorphisms)"],
+    "new_scales": [
+      "Lifshitz scale (Planck-scale by default)"
+    ],
+    "new_symmetries": [
+      "foliation-preserving diffeomorphisms (instead of full diffeomorphisms)"
+    ],
     "new_parameters_count": 6,
     "note": "Lifshitz scale plus several couplings of higher-derivative spatial-curvature operators."
   },
-  "structural_features": ["anisotropic_scaling", "lorentz_violation", "renormalisable_gravity", "foliation_diffeomorphisms"],
+  "structural_features": [
+    "anisotropic_scaling",
+    "lorentz_violation",
+    "renormalisable_gravity",
+    "foliation_diffeomorphisms"
+  ],
+  "field_tags": [
+    "extra_metric_or_connection"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "niche",
@@ -47,5 +62,10 @@
       "arxiv": "0901.3775"
     }
   ],
-  "tags": ["modified_gravity", "lifshitz", "lorentz_violation", "renormalisable_gravity"]
+  "tags": [
+    "modified_gravity",
+    "lifshitz",
+    "lorentz_violation",
+    "renormalisable_gravity"
+  ]
 }

@@ -56,6 +56,9 @@
     "mu_tau_symmetric_neutrino_mass",
     "mev_scale_mediator"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson"
+  ],
   "composes_with": [
     "dark_photon_portal"
   ],

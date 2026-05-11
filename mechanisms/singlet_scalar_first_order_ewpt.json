@@ -48,6 +48,10 @@
     "two_step_phase_transition",
     "ewbg_compatible"
   ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar",
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "electroweak_baryogenesis",
     "higgs_portal_scalar_dm",

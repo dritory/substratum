@@ -1,7 +1,10 @@
 {
   "id": "anthropic_landscape",
   "name": "Anthropic landscape",
-  "aliases": ["string landscape", "multiverse selection"],
+  "aliases": [
+    "string landscape",
+    "multiverse selection"
+  ],
   "type": "anthropic",
   "summary": "The cosmological constant (and other parameters) are environmentally selected from a vast distribution of metastable vacua in a multiverse. Small positive Lambda is anthropically required for galaxy formation (Weinberg's bound rho_Lambda < ~100 * rho_matter at structure formation). The framework derives nothing from first principles; it explains why Lambda is in the observed range without explaining why it has any specific value.",
   "addresses_puzzles": [
@@ -26,8 +29,18 @@
     "new_parameters_count": 1,
     "note": "Treated as a single 'selection' parameter for compression purposes; in practice the framework introduces no specific new fields but presupposes a UV completion (e.g., string theory) with a vast vacuum landscape."
   },
-  "structural_features": ["selection", "multiverse", "no_first_principles"],
-  "composes_with": ["sequestering", "unimodular_gravity"],
+  "structural_features": [
+    "selection",
+    "multiverse",
+    "no_first_principles"
+  ],
+  "field_tags": [
+    "cosmological_landscape"
+  ],
+  "composes_with": [
+    "sequestering",
+    "unimodular_gravity"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Anthropic argument for a small Lambda: Weinberg (1987). String-theory landscape: Bousso-Polchinski (2000), Susskind (2003). Active controversy: critics argue it is unfalsifiable; defenders argue it is the only known framework consistent with observed naturalness violations.",
@@ -41,5 +54,10 @@
       "arxiv": "hep-th/0004134"
     }
   ],
-  "tags": ["anthropic", "multiverse", "cosmological_constant", "landscape"]
+  "tags": [
+    "anthropic",
+    "multiverse",
+    "cosmological_constant",
+    "landscape"
+  ]
 }

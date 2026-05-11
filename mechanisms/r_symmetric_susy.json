@@ -58,6 +58,11 @@
     "supersoft",
     "flavor_blind_natural"
   ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
   "composes_with": [
     "mssm",
     "wess_zumino_supersymmetry",
@@ -65,7 +70,7 @@
   ],
   "excludes": [],
   "status": "niche",
-  "history": "Hall-Randall (1991) early R-symmetric SUSY. Fox-Nelson-Weiner (2002, hep-ph/0206096) Dirac gauginos. Kribs, Poppitz, Weiner (2007), 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008), arXiv:0712.2039 — modern MRSSM framework. Active LHC phenomenology of Dirac-gaugino signatures (squarks decaying via Dirac higgsino + chiral adjoints).",
+  "history": "Hall-Randall (1991) early R-symmetric SUSY. Fox-Nelson-Weiner (2002, hep-ph/0206096) Dirac gauginos. Kribs, Poppitz, Weiner (2007), 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008), arXiv:0712.2039 \u2014 modern MRSSM framework. Active LHC phenomenology of Dirac-gaugino signatures (squarks decaying via Dirac higgsino + chiral adjoints).",
   "references": [
     {
       "citation": "Kribs, Poppitz, Weiner, 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008)",

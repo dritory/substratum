@@ -1,7 +1,10 @@
 {
   "id": "k_essence_dark_energy",
   "name": "k-essence dark energy",
-  "aliases": ["k-inflation", "kinetic-essence"],
+  "aliases": [
+    "k-inflation",
+    "kinetic-essence"
+  ],
   "type": "dynamical",
   "summary": "Dark energy driven by a scalar field with non-canonical kinetic terms: L = p(phi, X) where X = (1/2)(d phi)^2. The non-trivial dependence on X allows attractor solutions in which the field tracks the dominant fluid (matter, radiation) and only emerges as dark energy near the matter-radiation transition. The 'why now' problem of dark-energy onset is addressed dynamically without anthropic input.",
   "addresses_puzzles": [
@@ -24,22 +27,43 @@
     }
   ],
   "introduces": {
-    "new_fields": ["k-essence scalar phi"],
-    "new_scales": ["potential / kinetic scale ~ meV"],
+    "new_fields": [
+      "k-essence scalar phi"
+    ],
+    "new_scales": [
+      "potential / kinetic scale ~ meV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Functional form of p(phi, X) (typically two-parameter family) plus initial conditions."
   },
-  "structural_features": ["non_canonical_kinetic", "tracker_solution", "ultralight_scalar", "why_now_addressed"],
-  "composes_with": ["sequestering"],
-  "excludes": ["quintessence"],
+  "structural_features": [
+    "non_canonical_kinetic",
+    "tracker_solution",
+    "ultralight_scalar",
+    "why_now_addressed"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "sequestering"
+  ],
+  "excludes": [
+    "quintessence"
+  ],
   "status": "niche",
-  "history": "Armendariz-Picon, Damour, Mukhanov (1999) introduced k-inflation. Armendariz-Picon, Mukhanov, Steinhardt (2000), 'A dynamical solution to the problem of a small cosmological constant and late-time cosmic acceleration', PRL 85, 4438, arXiv:astro-ph/0004134 — applied to dark energy. Active phenomenology in growth-of-structure and ISW data through 2010s-2020s; DESI Y1 evolving-DE hint compatible with k-essence.",
+  "history": "Armendariz-Picon, Damour, Mukhanov (1999) introduced k-inflation. Armendariz-Picon, Mukhanov, Steinhardt (2000), 'A dynamical solution to the problem of a small cosmological constant and late-time cosmic acceleration', PRL 85, 4438, arXiv:astro-ph/0004134 \u2014 applied to dark energy. Active phenomenology in growth-of-structure and ISW data through 2010s-2020s; DESI Y1 evolving-DE hint compatible with k-essence.",
   "references": [
     {
       "citation": "Armendariz-Picon, Mukhanov, Steinhardt, 'A dynamical solution to the problem of a small cosmological constant and late-time cosmic acceleration', PRL 85, 4438 (2000)",
       "arxiv": "astro-ph/0004134"
     }
   ],
-  "tags": ["dark_energy", "k_essence", "non_canonical_scalar", "tracker"]
+  "tags": [
+    "dark_energy",
+    "k_essence",
+    "non_canonical_scalar",
+    "tracker"
+  ]
 }

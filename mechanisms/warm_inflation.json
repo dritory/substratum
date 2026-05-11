@@ -44,13 +44,16 @@
     "no_reheating",
     "fluctuation_dissipation"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "starobinsky_inflation",
     "hilltop_inflation"
   ],
   "excludes": [],
   "status": "niche",
-  "history": "Berera (1995), 'Warm inflation', Phys. Rev. Lett. 75, 3218 — established framework. Modern realisations: warm little inflaton (Bastero-Gil, Berera 2018+). Connections to swampland conjectures: thermal equilibrium can help satisfy trans-Planckian conjecture constraints.",
+  "history": "Berera (1995), 'Warm inflation', Phys. Rev. Lett. 75, 3218 \u2014 established framework. Modern realisations: warm little inflaton (Bastero-Gil, Berera 2018+). Connections to swampland conjectures: thermal equilibrium can help satisfy trans-Planckian conjecture constraints.",
   "references": [
     {
       "citation": "Berera, 'Warm inflation', Phys. Rev. Lett. 75, 3218 (1995)",

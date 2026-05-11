@@ -1,9 +1,12 @@
 {
   "id": "twin_higgs",
   "name": "Twin Higgs",
-  "aliases": ["mirror twin Higgs", "neutral naturalness"],
+  "aliases": [
+    "mirror twin Higgs",
+    "neutral naturalness"
+  ],
   "type": "symmetry",
-  "summary": "A Z_2 mirror symmetry exchanges the SM with a 'twin' SM. The Higgs becomes a pseudo-Goldstone boson of an approximate global SU(4) under which the Z_2 acts; one-loop quadratic corrections to the visible Higgs mass cancel against twin-sector loops. The twin partners are SM gauge singlets, evading direct LHC constraints — 'neutral naturalness'.",
+  "summary": "A Z_2 mirror symmetry exchanges the SM with a 'twin' SM. The Higgs becomes a pseudo-Goldstone boson of an approximate global SU(4) under which the Z_2 acts; one-loop quadratic corrections to the visible Higgs mass cancel against twin-sector loops. The twin partners are SM gauge singlets, evading direct LHC constraints \u2014 'neutral naturalness'.",
   "addresses_puzzles": [
     {
       "puzzle_id": "gauge_hierarchy_problem",
@@ -31,15 +34,36 @@
     }
   ],
   "introduces": {
-    "new_fields": ["full mirror SM sector (twin quarks, leptons, gauge bosons, Higgs)"],
-    "new_scales": ["f ~ 1 TeV (Z_2-breaking scale)"],
-    "new_symmetries": ["Z_2 mirror symmetry", "approximate SU(4) global"],
+    "new_fields": [
+      "full mirror SM sector (twin quarks, leptons, gauge bosons, Higgs)"
+    ],
+    "new_scales": [
+      "f ~ 1 TeV (Z_2-breaking scale)"
+    ],
+    "new_symmetries": [
+      "Z_2 mirror symmetry",
+      "approximate SU(4) global"
+    ],
     "new_parameters_count": 5,
     "note": "Z_2 fixes most parameters to be twins of SM parameters; the new free inputs are the breaking scale f, the explicit Z_2 breaking, and a small handful of scalar-potential terms."
   },
-  "structural_features": ["mirror_sector", "discrete_symmetry", "global_symmetry", "neutral_naturalness", "pseudo_goldstone"],
-  "composes_with": ["seesaw_type_i", "peccei_quinn_axion"],
-  "excludes": ["mssm"],
+  "structural_features": [
+    "mirror_sector",
+    "discrete_symmetry",
+    "global_symmetry",
+    "neutral_naturalness",
+    "pseudo_goldstone"
+  ],
+  "field_tags": [
+    "mirror_sm_fermions"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "peccei_quinn_axion"
+  ],
+  "excludes": [
+    "mssm"
+  ],
   "status": "niche",
   "history": "Chacko, Goh, Harnik (2006). Orbifold Higgs / neutral naturalness systematics (Craig, Knapen, Longhi 2014, arXiv:1410.6808) generalised the construction; Fraternal Twin Higgs (Craig, Katz, Strassler, Sundrum 2015, arXiv:1501.05310) addresses cosmological problems by removing twin light fermions. Active research direction in 2015-present.",
   "references": [
@@ -52,5 +76,9 @@
       "arxiv": "1410.6808"
     }
   ],
-  "tags": ["hierarchy", "mirror_sector", "neutral_naturalness"]
+  "tags": [
+    "hierarchy",
+    "mirror_sector",
+    "neutral_naturalness"
+  ]
 }

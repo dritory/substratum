@@ -42,6 +42,7 @@
     "boundary_encoding",
     "uv_ir_constraint"
   ],
+  "field_tags": [],
   "composes_with": [
     "ads_cft_holography",
     "strominger_vafa_microstates",

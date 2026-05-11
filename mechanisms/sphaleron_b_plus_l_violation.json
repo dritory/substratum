@@ -38,6 +38,7 @@
     "thermal_b_plus_l",
     "saddle_point_solution"
   ],
+  "field_tags": [],
   "composes_with": [
     "leptogenesis",
     "electroweak_baryogenesis",

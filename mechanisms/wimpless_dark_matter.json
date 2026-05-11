@@ -1,9 +1,12 @@
 {
   "id": "wimpless_dark_matter",
   "name": "WIMPless dark matter",
-  "aliases": ["WIMPless miracle", "Feng-Kumar dark matter"],
+  "aliases": [
+    "WIMPless miracle",
+    "Feng-Kumar dark matter"
+  ],
   "type": "dynamical",
-  "summary": "A class of models — emerging naturally from gauge-mediated SUSY breaking — in which dark matter has the correct thermal relic density without weak-scale mass or weak interactions. The mass m_X and coupling g_X scale together so that g_X^4/m_X^2 ~ G_F^2 m_W^2, reproducing the WIMP miracle for any (m_X, g_X) along the curve. Allows DM masses from 10 MeV to 10 TeV.",
+  "summary": "A class of models \u2014 emerging naturally from gauge-mediated SUSY breaking \u2014 in which dark matter has the correct thermal relic density without weak-scale mass or weak interactions. The mass m_X and coupling g_X scale together so that g_X^4/m_X^2 ~ G_F^2 m_W^2, reproducing the WIMP miracle for any (m_X, g_X) along the curve. Allows DM masses from 10 MeV to 10 TeV.",
   "addresses_puzzles": [
     {
       "puzzle_id": "dark_matter_identity",
@@ -25,14 +28,32 @@
     }
   ],
   "introduces": {
-    "new_fields": ["hidden-sector fermion or scalar X", "mediator (dark photon or dark Higgs)"],
-    "new_scales": ["m_X ~ 10 MeV - 10 TeV", "mediator mass m_med"],
-    "new_symmetries": ["dark gauge or global symmetry stabilising X"],
+    "new_fields": [
+      "hidden-sector fermion or scalar X",
+      "mediator (dark photon or dark Higgs)"
+    ],
+    "new_scales": [
+      "m_X ~ 10 MeV - 10 TeV",
+      "mediator mass m_med"
+    ],
+    "new_symmetries": [
+      "dark gauge or global symmetry stabilising X"
+    ],
     "new_parameters_count": 4,
     "note": "DM mass, mediator mass, hidden coupling, kinetic mixing."
   },
-  "structural_features": ["hidden_sector", "thermal_freeze_out", "scaling_relation", "mediator"],
-  "composes_with": ["mssm"],
+  "structural_features": [
+    "hidden_sector",
+    "thermal_freeze_out",
+    "scaling_relation",
+    "mediator"
+  ],
+  "field_tags": [
+    "dark_photon"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Feng and Kumar (2008), 'The WIMPless Miracle: Dark-Matter Particles without Weak-Scale Masses or Weak Interactions', PRL 101, 231301, arXiv:0803.4196. Generalised the WIMP-miracle reasoning beyond the EW scale; led directly to systematic studies of sub-GeV thermal DM through 2010s-2020s.",
@@ -42,5 +63,10 @@
       "arxiv": "0803.4196"
     }
   ],
-  "tags": ["dark_matter", "hidden_sector", "wimpless", "thermal"]
+  "tags": [
+    "dark_matter",
+    "hidden_sector",
+    "wimpless",
+    "thermal"
+  ]
 }

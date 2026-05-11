@@ -51,6 +51,7 @@
     "ir_dominated",
     "calculable_yield"
   ],
+  "field_tags": [],
   "composes_with": [
     "dark_photon_portal",
     "sterile_neutrino_dm",

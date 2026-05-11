@@ -46,6 +46,9 @@
     "color_sextet_diquark",
     "n_nbar_signal"
   ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
   "composes_with": [
     "pati_salam",
     "so10_gut"

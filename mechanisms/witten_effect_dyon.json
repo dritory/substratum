@@ -35,6 +35,7 @@
     "non_perturbative_charge",
     "topological"
   ],
+  "field_tags": [],
   "composes_with": [
     "peccei_quinn_axion",
     "su5_minimal_gut",

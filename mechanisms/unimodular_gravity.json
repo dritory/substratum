@@ -21,12 +21,22 @@
   "introduces": {
     "new_fields": [],
     "new_scales": [],
-    "new_symmetries": ["volume-preserving diffeomorphisms (instead of full diffeomorphisms)"],
+    "new_symmetries": [
+      "volume-preserving diffeomorphisms (instead of full diffeomorphisms)"
+    ],
     "new_parameters_count": 1,
     "note": "An integration constant takes the role of Lambda; not a fundamental free parameter in the Lagrangian sense."
   },
-  "structural_features": ["modified_geometry", "constrained_variation", "boundary_condition"],
-  "composes_with": ["anthropic_landscape", "sequestering"],
+  "structural_features": [
+    "modified_geometry",
+    "constrained_variation",
+    "boundary_condition"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "anthropic_landscape",
+    "sequestering"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Einstein (1919) formulated unimodular gravity. Discussed by Weinberg (1989) and Henneaux-Teitelboim (1989) as a partial response to the cosmological-constant problem. Quantum versions explored by Smolin and others.",
@@ -40,5 +50,9 @@
       "doi": "10.1016/0370-2693(89)91251-3"
     }
   ],
-  "tags": ["cosmological_constant", "modified_gravity", "geometric"]
+  "tags": [
+    "cosmological_constant",
+    "modified_gravity",
+    "geometric"
+  ]
 }

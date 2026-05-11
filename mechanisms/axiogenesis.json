@@ -57,6 +57,9 @@
     "sphaleron_conversion",
     "linked_dm_bau"
   ],
+  "field_tags": [
+    "qcd_anomalous_pseudoscalar"
+  ],
   "composes_with": [
     "peccei_quinn_axion",
     "string_axiverse"

@@ -1,7 +1,10 @@
 {
   "id": "composite_higgs",
   "name": "Composite Higgs",
-  "aliases": ["pseudo-Goldstone composite Higgs", "MCHM"],
+  "aliases": [
+    "pseudo-Goldstone composite Higgs",
+    "MCHM"
+  ],
   "type": "composite",
   "summary": "The Higgs is a pseudo-Nambu-Goldstone boson of a spontaneously broken global symmetry of a new strongly coupled sector. The breaking pattern (e.g., SO(5) -> SO(4) in the Minimal Composite Higgs Model, MCHM5) protects m_H from quadratic divergences below the compositeness scale Lambda ~ few TeV.",
   "addresses_puzzles": [
@@ -25,15 +28,35 @@
     }
   ],
   "introduces": {
-    "new_fields": ["composite resonances (vector, scalar, fermion partners)"],
-    "new_scales": ["f ~ 1 TeV (Goldstone decay constant)", "Lambda ~ 4 pi f (compositeness scale)"],
-    "new_symmetries": ["global SO(5) (or larger) spontaneously broken to SO(4)"],
+    "new_fields": [
+      "composite resonances (vector, scalar, fermion partners)"
+    ],
+    "new_scales": [
+      "f ~ 1 TeV (Goldstone decay constant)",
+      "Lambda ~ 4 pi f (compositeness scale)"
+    ],
+    "new_symmetries": [
+      "global SO(5) (or larger) spontaneously broken to SO(4)"
+    ],
     "new_parameters_count": 6,
     "note": "Form factor parameters, top-partner mass, and small explicit-breaking terms."
   },
-  "structural_features": ["compositeness", "pseudo_goldstone", "global_symmetry", "strong_dynamics"],
-  "composes_with": ["partial_compositeness", "seesaw_type_i"],
-  "excludes": ["mssm"],
+  "structural_features": [
+    "compositeness",
+    "pseudo_goldstone",
+    "global_symmetry",
+    "strong_dynamics"
+  ],
+  "field_tags": [
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "partial_compositeness",
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "mssm"
+  ],
   "status": "niche",
   "history": "Kaplan-Georgi (1984) original construction; Agashe-Contino-Pomarol (2005) MCHM5 holographic realization. Active LHC search target via top partners and resonance-pair production.",
   "references": [
@@ -46,5 +69,9 @@
       "arxiv": "hep-ph/0412089"
     }
   ],
-  "tags": ["hierarchy", "composite", "pseudo_goldstone"]
+  "tags": [
+    "hierarchy",
+    "composite",
+    "pseudo_goldstone"
+  ]
 }

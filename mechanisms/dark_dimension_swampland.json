@@ -1,7 +1,10 @@
 {
   "id": "dark_dimension_swampland",
   "name": "Dark dimension (Montero-Vafa-Valenzuela)",
-  "aliases": ["mesoscopic extra dimension", "MVV dark dimension"],
+  "aliases": [
+    "mesoscopic extra dimension",
+    "MVV dark dimension"
+  ],
   "type": "uv_completion",
   "summary": "A swampland-motivated proposal that a single mesoscopic extra dimension of size L ~ 10^-6 m exists, populated by a tower of light Kaluza-Klein gravitons. The dark dimension's size is tied to the smallness of the cosmological constant via the distance / duality conjecture; the KK tower provides a natural dark-matter candidate (KK gravitons) and predicts deviations from inverse-square gravity at sub-mm scales.",
   "addresses_puzzles": [
@@ -41,14 +44,32 @@
     }
   ],
   "introduces": {
-    "new_fields": ["KK tower of gravitons + bulk fermions"],
-    "new_scales": ["dark dimension size L ~ 10^-6 m", "5D Planck scale ~ 10^9-10^10 GeV"],
+    "new_fields": [
+      "KK tower of gravitons + bulk fermions"
+    ],
+    "new_scales": [
+      "dark dimension size L ~ 10^-6 m",
+      "5D Planck scale ~ 10^9-10^10 GeV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 2,
     "note": "Dimension size and 5D Planck scale; both fixed by the distance-conjecture relation to Lambda."
   },
-  "structural_features": ["extra_dimension", "swampland_distance_conjecture", "kk_tower", "mesoscopic_compactification"],
-  "composes_with": ["swampland_de_sitter", "heterotic_string_compactification"],
+  "structural_features": [
+    "extra_dimension",
+    "swampland_distance_conjecture",
+    "kk_tower",
+    "mesoscopic_compactification"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "kk_tower_fermions",
+    "kk_tower_gravitons"
+  ],
+  "composes_with": [
+    "swampland_de_sitter",
+    "heterotic_string_compactification"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Montero, Vafa, Valenzuela (2022), 'The Dark Dimension and the Swampland', JHEP 02, 022 (2023), arXiv:2205.12293. Gonzalo, Montero, Obied, Vafa (2022), 'Dark dimension gravitons as dark matter', JHEP 11, 109 (2023), arXiv:2209.09249. Active research program connecting string-theory swampland conjectures to phenomenology.",
@@ -58,5 +79,11 @@
       "arxiv": "2205.12293"
     }
   ],
-  "tags": ["swampland", "extra_dimension", "dark_matter", "cosmological_constant", "kk_gravitons"]
+  "tags": [
+    "swampland",
+    "extra_dimension",
+    "dark_matter",
+    "cosmological_constant",
+    "kk_gravitons"
+  ]
 }

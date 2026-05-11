@@ -42,13 +42,14 @@
     "low_direct_detection_natural",
     "lz_escape"
   ],
+  "field_tags": [],
   "composes_with": [
     "mssm",
     "wimp_thermal_freezeout"
   ],
   "excludes": [],
   "status": "niche",
-  "history": "Griest and Seckel (1991), 'Three exceptions in the calculation of relic abundances', Phys. Rev. D 43, 3191 — established the framework. Extensively used in MSSM dark-matter phenomenology (Edsjo-Gondolo 1997; modern MicrOMEGAs / DarkSUSY codes implement coannihilation by default).",
+  "history": "Griest and Seckel (1991), 'Three exceptions in the calculation of relic abundances', Phys. Rev. D 43, 3191 \u2014 established the framework. Extensively used in MSSM dark-matter phenomenology (Edsjo-Gondolo 1997; modern MicrOMEGAs / DarkSUSY codes implement coannihilation by default).",
   "references": [
     {
       "citation": "Griest and Seckel, 'Three exceptions in the calculation of relic abundances', Phys. Rev. D 43, 3191 (1991)",

@@ -1,7 +1,9 @@
 {
   "id": "seesaw_type_i",
   "name": "Type-I seesaw",
-  "aliases": ["right-handed neutrino seesaw"],
+  "aliases": [
+    "right-handed neutrino seesaw"
+  ],
   "type": "uv_completion",
   "summary": "Adds heavy right-handed neutrinos N_R with Majorana mass M_R >> v. Block-diagonalising the resulting 6x6 mass matrix yields light neutrino masses m_nu ~ y_nu^2 v^2 / M_R, naturally tiny for M_R near the GUT scale. The mechanism turns the neutrino-mass smallness from a Yukawa fine-tuning into a high-scale mass-ratio puzzle with a clear UV interpretation.",
   "addresses_puzzles": [
@@ -37,14 +39,29 @@
     }
   ],
   "introduces": {
-    "new_fields": ["right-handed neutrinos N_R (typically three)"],
-    "new_scales": ["M_R ~ 10^9 - 10^14 GeV"],
+    "new_fields": [
+      "right-handed neutrinos N_R (typically three)"
+    ],
+    "new_scales": [
+      "M_R ~ 10^9 - 10^14 GeV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Three Majorana mass eigenvalues plus a complex 3x3 Yukawa matrix; with PMNS observables most parameters are fitted to data, leaving ~3 free scales (the M_R hierarchy)."
   },
-  "structural_features": ["majorana_mass", "high_scale", "lepton_number_violation"],
-  "composes_with": ["leptogenesis", "froggatt_nielsen", "mssm"],
+  "structural_features": [
+    "majorana_mass",
+    "high_scale",
+    "lepton_number_violation"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis",
+    "froggatt_nielsen",
+    "mssm"
+  ],
   "excludes": [],
   "status": "mainstream",
   "history": "Minkowski (1977); Yanagida (1979); Gell-Mann, Ramond, Slansky (1979); Mohapatra and Senjanovic (1980). Type-II (scalar triplet) and type-III (fermion triplet) variants followed. The seesaw is the textbook explanation; its high-scale character makes direct verification difficult, but neutrinoless double beta decay and leptogenesis provide indirect probes.",
@@ -58,5 +75,9 @@
       "doi": "10.1103/PhysRevLett.44.912"
     }
   ],
-  "tags": ["seesaw", "neutrinos", "majorana"]
+  "tags": [
+    "seesaw",
+    "neutrinos",
+    "majorana"
+  ]
 }

@@ -1,7 +1,10 @@
 {
   "id": "inverse_seesaw",
   "name": "Inverse seesaw",
-  "aliases": ["Mohapatra-Valle inverse seesaw", "low-scale seesaw"],
+  "aliases": [
+    "Mohapatra-Valle inverse seesaw",
+    "low-scale seesaw"
+  ],
   "type": "uv_completion",
   "summary": "Adds two singlet fermions per generation (N_R, S) with Dirac mass m_D N H L between L and N_R, Dirac mass M between N_R and S, and small Majorana mass mu_S for S. Light neutrino masses m_nu ~ (m_D / M)^2 * mu_S; M can be at the TeV scale because suppression comes from the small lepton-number-breaking parameter mu_S, making the seesaw testable at colliders.",
   "addresses_puzzles": [
@@ -33,14 +36,33 @@
     }
   ],
   "introduces": {
-    "new_fields": ["right-handed neutrinos N_R", "additional singlets S"],
-    "new_scales": ["M ~ TeV (heavy Dirac scale)", "mu_S ~ keV (lepton-number breaking)"],
-    "new_symmetries": ["approximate lepton number (broken by mu_S)"],
+    "new_fields": [
+      "right-handed neutrinos N_R",
+      "additional singlets S"
+    ],
+    "new_scales": [
+      "M ~ TeV (heavy Dirac scale)",
+      "mu_S ~ keV (lepton-number breaking)"
+    ],
+    "new_symmetries": [
+      "approximate lepton number (broken by mu_S)"
+    ],
     "new_parameters_count": 4,
     "note": "Three Dirac mass scales, three Majorana parameters mu_S, mixing matrix; the testable window is the M ~ TeV regime."
   },
-  "structural_features": ["pseudo_dirac", "lepton_number_violation", "low_scale", "technically_natural"],
-  "composes_with": ["leptogenesis"],
+  "structural_features": [
+    "pseudo_dirac",
+    "lepton_number_violation",
+    "low_scale",
+    "technically_natural"
+  ],
+  "field_tags": [
+    "gauge_singlet_dirac_fermion",
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Mohapatra-Valle (1986); Bernabeu-Pilaftsis-Schechter-Valle (1987). Revived as a testable seesaw scenario through 2010s; ATLAS/CMS direct searches for heavy neutral leptons constrain the parameter space.",
@@ -50,5 +72,10 @@
       "doi": "10.1103/PhysRevD.34.1642"
     }
   ],
-  "tags": ["neutrinos", "seesaw", "low_scale", "pseudo_dirac"]
+  "tags": [
+    "neutrinos",
+    "seesaw",
+    "low_scale",
+    "pseudo_dirac"
+  ]
 }

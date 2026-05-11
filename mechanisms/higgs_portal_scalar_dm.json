@@ -46,6 +46,9 @@
     "higgs_portal",
     "minimal_renormalizable"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "coleman_weinberg_radiative",
     "electroweak_baryogenesis"

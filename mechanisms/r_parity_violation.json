@@ -1,7 +1,10 @@
 {
   "id": "r_parity_violation",
   "name": "R-parity-violating SUSY",
-  "aliases": ["RPV", "explicit R-parity breaking"],
+  "aliases": [
+    "RPV",
+    "explicit R-parity breaking"
+  ],
   "type": "symmetry",
   "summary": "Drops the R-parity assumption from MSSM, allowing renormalisable lepton-number- and baryon-number-violating couplings W = lambda L L E + lambda' L Q D + lambda'' U D D + mu L H_u. Permits the LSP to decay (so it's no longer a DM candidate), enables fast proton decay unless one of B or L violation is forbidden, and produces distinctive collider signatures.",
   "addresses_puzzles": [
@@ -32,12 +35,26 @@
   "introduces": {
     "new_fields": [],
     "new_scales": [],
-    "new_symmetries": ["broken R-parity (or surviving baryon triality / lepton triality)"],
+    "new_symmetries": [
+      "broken R-parity (or surviving baryon triality / lepton triality)"
+    ],
     "new_parameters_count": 49,
-    "note": "Builds on MSSM. Adds 9 trilinear lambda + 27 lambda' + 9 lambda'' + 3 bilinear mu_i, plus their soft-breaking partners — the most parameter-heavy SUSY extension."
+    "note": "Builds on MSSM. Adds 9 trilinear lambda + 27 lambda' + 9 lambda'' + 3 bilinear mu_i, plus their soft-breaking partners \u2014 the most parameter-heavy SUSY extension."
   },
-  "structural_features": ["broken_r_parity", "lepton_number_violation", "baryon_number_violation", "lsp_decay"],
-  "composes_with": ["mssm"],
+  "structural_features": [
+    "broken_r_parity",
+    "lepton_number_violation",
+    "baryon_number_violation",
+    "lsp_decay"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Hall and Suzuki (1984), 'Explicit R-parity breaking in supersymmetric models', Nucl. Phys. B 231, 419. Aulakh-Mohapatra spontaneous R-parity violation (1982). Distinguishing collider signatures (multi-leptons, displaced vertices) made RPV a focus of LHC searches; current bounds are stringent but not closed.",
@@ -47,5 +64,11 @@
       "doi": "10.1016/0550-3213(84)90513-3"
     }
   ],
-  "tags": ["susy", "rpv", "r_parity_violation", "lepton_number", "baryon_number"]
+  "tags": [
+    "susy",
+    "rpv",
+    "r_parity_violation",
+    "lepton_number",
+    "baryon_number"
+  ]
 }

@@ -1,7 +1,9 @@
 {
   "id": "electroweak_baryogenesis",
   "name": "Electroweak baryogenesis",
-  "aliases": ["EWBG"],
+  "aliases": [
+    "EWBG"
+  ],
   "type": "dynamical",
   "summary": "Generates baryon asymmetry during a strong first-order electroweak phase transition: bubble walls separate broken and unbroken phases; CP-violating reflection of particles off the walls plus EW sphaleron processes in the unbroken phase produce a net baryon number that is preserved in the broken phase. Requires extension of the SM scalar sector since the SM Higgs gives only a crossover.",
   "addresses_puzzles": [
@@ -34,14 +36,32 @@
     }
   ],
   "introduces": {
-    "new_fields": ["extended scalar sector (2HDM, singlet, MSSM stop)", "new CP-violating couplings"],
-    "new_scales": ["EWPT scale ~ v ~ 246 GeV"],
+    "new_fields": [
+      "extended scalar sector (2HDM, singlet, MSSM stop)",
+      "new CP-violating couplings"
+    ],
+    "new_scales": [
+      "EWPT scale ~ v ~ 246 GeV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 5,
     "note": "Scalar potential parameters + new CP-violating phases."
   },
-  "structural_features": ["first_order_phase_transition", "out_of_equilibrium", "extended_scalars", "sphaleron_conversion"],
-  "composes_with": ["mssm", "twin_higgs", "composite_higgs"],
+  "structural_features": [
+    "first_order_phase_transition",
+    "out_of_equilibrium",
+    "extended_scalars",
+    "sphaleron_conversion"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "mssm",
+    "twin_higgs",
+    "composite_higgs"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Sakharov conditions (1967); Kuzmin-Rubakov-Shaposhnikov sphaleron analysis (1985). Pure SM EWBG ruled out by m_H > 75 GeV (no first-order PT). Active research: 2HDM-EWBG, MSSM-EWBG (largely killed by LHC), singlet-extended EWBG.",
@@ -55,5 +75,9 @@
       "arxiv": "1206.2942"
     }
   ],
-  "tags": ["baryogenesis", "phase_transition", "cp_violation"]
+  "tags": [
+    "baryogenesis",
+    "phase_transition",
+    "cp_violation"
+  ]
 }

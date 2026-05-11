@@ -51,6 +51,14 @@
     "kodaira_singularity_gauge",
     "f_theory_gut"
   ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "gut_x_y_bosons",
+    "kk_tower_fermions",
+    "kk_tower_gauge_bosons",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "kklt_moduli_stabilisation",

@@ -49,6 +49,10 @@
     "missing_doublet_mechanism",
     "string_inspired"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson",
+    "gut_x_y_bosons"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "mssm",
@@ -62,7 +66,7 @@
     "e6_gut"
   ],
   "status": "niche",
-  "history": "Barr (1982) introduced flipped SU(5). Antoniadis, Ellis, Hagelin, Nanopoulos (1987), 'Supersymmetric flipped SU(5) revitalized', Phys. Lett. B 194, 231 — modern supersymmetric formulation. Modern revival as a string-inspired GUT alternative; specific predictions for proton decay channels distinguish from minimal SU(5).",
+  "history": "Barr (1982) introduced flipped SU(5). Antoniadis, Ellis, Hagelin, Nanopoulos (1987), 'Supersymmetric flipped SU(5) revitalized', Phys. Lett. B 194, 231 \u2014 modern supersymmetric formulation. Modern revival as a string-inspired GUT alternative; specific predictions for proton decay channels distinguish from minimal SU(5).",
   "references": [
     {
       "citation": "Antoniadis, Ellis, Hagelin, Nanopoulos, 'Supersymmetric flipped SU(5) revitalized', Phys. Lett. B 194, 231 (1987)",

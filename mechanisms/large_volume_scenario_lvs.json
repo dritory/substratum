@@ -48,6 +48,14 @@
     "swiss_cheese_geometry",
     "exponential_hierarchy"
   ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
   "composes_with": [
     "kklt_moduli_stabilisation",
     "heterotic_string_compactification",

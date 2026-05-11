@@ -50,6 +50,12 @@
     "z3_symmetry",
     "vector_like_matter"
   ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion",
+    "gut_x_y_bosons",
+    "vectorlike_lepton",
+    "vectorlike_quark"
+  ],
   "composes_with": [
     "e6_gut",
     "heterotic_string_compactification",

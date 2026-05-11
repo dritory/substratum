@@ -51,6 +51,10 @@
     "graviton_superpartner",
     "no_quadratic_divergence"
   ],
+  "field_tags": [
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
   "composes_with": [
     "mssm",
     "gauge_mediated_susy_breaking",

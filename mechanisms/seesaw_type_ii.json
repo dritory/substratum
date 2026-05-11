@@ -1,7 +1,9 @@
 {
   "id": "seesaw_type_ii",
   "name": "Type-II seesaw",
-  "aliases": ["scalar triplet seesaw"],
+  "aliases": [
+    "scalar triplet seesaw"
+  ],
   "type": "uv_completion",
   "summary": "Adds a heavy SU(2) scalar triplet Delta with hypercharge Y=1 that couples to lepton doublets. The triplet's small VEV v_Delta = mu * v^2 / M_Delta^2 generates Majorana masses for active neutrinos directly: m_nu = Y_Delta * v_Delta. Naturally tiny v_Delta from the seesaw structure of the triplet potential.",
   "addresses_puzzles": [
@@ -32,14 +34,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["scalar triplet Delta = (Delta^++, Delta^+, Delta^0)"],
-    "new_scales": ["M_Delta ~ TeV - 10^14 GeV", "trilinear coupling mu"],
+    "new_fields": [
+      "scalar triplet Delta = (Delta^++, Delta^+, Delta^0)"
+    ],
+    "new_scales": [
+      "M_Delta ~ TeV - 10^14 GeV",
+      "trilinear coupling mu"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 4,
     "note": "Triplet mass, trilinear coupling mu (lepton-number-violating), Yukawa matrix Y_Delta."
   },
-  "structural_features": ["majorana_mass", "scalar_triplet", "lepton_number_violation", "doubly_charged"],
-  "composes_with": ["leptogenesis", "modular_flavor_symmetry", "a4_family_symmetry"],
+  "structural_features": [
+    "majorana_mass",
+    "scalar_triplet",
+    "lepton_number_violation",
+    "doubly_charged"
+  ],
+  "field_tags": [
+    "electroweak_triplet_scalar"
+  ],
+  "composes_with": [
+    "leptogenesis",
+    "modular_flavor_symmetry",
+    "a4_family_symmetry"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Magg-Wetterich (1980); Schechter-Valle (1980); Mohapatra-Senjanovic (1981) introduced triplet seesaw. Colider-scale variants studied since the 1990s; LHC searches for doubly-charged Higgs are direct probes.",
@@ -53,5 +72,10 @@
       "doi": "10.1103/PhysRevD.23.165"
     }
   ],
-  "tags": ["neutrinos", "seesaw", "majorana", "scalar_triplet"]
+  "tags": [
+    "neutrinos",
+    "seesaw",
+    "majorana",
+    "scalar_triplet"
+  ]
 }

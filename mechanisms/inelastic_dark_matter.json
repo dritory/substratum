@@ -49,6 +49,10 @@
     "annual_modulation",
     "mediator_required"
   ],
+  "field_tags": [
+    "dark_photon",
+    "gauge_singlet_dirac_fermion"
+  ],
   "composes_with": [
     "dark_photon_portal"
   ],

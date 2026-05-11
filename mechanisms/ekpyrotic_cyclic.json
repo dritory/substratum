@@ -1,7 +1,10 @@
 {
   "id": "ekpyrotic_cyclic",
   "name": "Ekpyrotic / cyclic universe",
-  "aliases": ["colliding-brane cosmology", "Steinhardt-Turok cyclic universe"],
+  "aliases": [
+    "colliding-brane cosmology",
+    "Steinhardt-Turok cyclic universe"
+  ],
   "type": "geometric",
   "summary": "Replaces inflation with a slow contracting phase preceding the hot Big Bang. In heterotic M-theory, a 5D bulk separates two parallel 4D branes; a slow approach and collision of these branes generates the hot Big Bang. The contracting phase produces a near-scale-invariant perturbation spectrum without exponential expansion, addressing the horizon and flatness problems differently from inflation.",
   "addresses_puzzles": [
@@ -25,15 +28,37 @@
     }
   ],
   "introduces": {
-    "new_fields": ["bulk scalar field (brane separation modulus)", "moduli describing brane geometry"],
-    "new_scales": ["string scale / brane tension"],
+    "new_fields": [
+      "bulk scalar field (brane separation modulus)",
+      "moduli describing brane geometry"
+    ],
+    "new_scales": [
+      "string scale / brane tension"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 4,
     "note": "Brane potential, ekpyrotic energy scale, bounce physics, perturbation generation parameters."
   },
-  "structural_features": ["braneworld", "contracting_phase", "no_inflation", "cyclic_cosmology"],
-  "composes_with": ["heterotic_string_compactification"],
-  "excludes": ["starobinsky_inflation", "higgs_inflation", "new_inflation", "chaotic_inflation"],
+  "structural_features": [
+    "braneworld",
+    "contracting_phase",
+    "no_inflation",
+    "cyclic_cosmology"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification"
+  ],
+  "excludes": [
+    "starobinsky_inflation",
+    "higgs_inflation",
+    "new_inflation",
+    "chaotic_inflation"
+  ],
   "status": "niche",
   "history": "Khoury, Ovrut, Steinhardt, Turok (2001), 'The Ekpyrotic Universe: Colliding Branes and the Origin of the Hot Big Bang', PRD 64, 123522, arXiv:hep-th/0103239. Cyclic-universe extension by Steinhardt-Turok (2002). Active competitor to inflation in cosmology debates; observational distinguishability remains the key open question.",
   "references": [
@@ -42,5 +67,10 @@
       "arxiv": "hep-th/0103239"
     }
   ],
-  "tags": ["cosmology", "branes", "cyclic", "non_inflationary"]
+  "tags": [
+    "cosmology",
+    "branes",
+    "cyclic",
+    "non_inflationary"
+  ]
 }

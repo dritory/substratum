@@ -1,7 +1,10 @@
 {
   "id": "little_higgs",
   "name": "Little Higgs",
-  "aliases": ["dimensional deconstruction", "Littlest Higgs"],
+  "aliases": [
+    "dimensional deconstruction",
+    "Littlest Higgs"
+  ],
   "type": "symmetry",
   "summary": "The Higgs is a pseudo-Nambu-Goldstone boson of an enlarged global symmetry, broken collectively by two sets of interactions such that no single coupling generates a quadratically divergent Higgs mass at one loop. The 'collective symmetry breaking' suppresses radiative corrections to the Higgs mass to two loops, raising the natural cutoff to ~10 TeV without supersymmetry. Distinct from twin Higgs in not requiring a Z_2 sector.",
   "addresses_puzzles": [
@@ -29,17 +32,42 @@
     }
   ],
   "introduces": {
-    "new_fields": ["heavy top-partners T", "extended scalar sector", "heavy gauge bosons W' Z'"],
-    "new_scales": ["f ~ 1-3 TeV (Goldstone decay constant)"],
-    "new_symmetries": ["enlarged global symmetry (e.g., SU(5) -> SO(5) in Littlest Higgs)", "T-parity (in T-parity variants)"],
+    "new_fields": [
+      "heavy top-partners T",
+      "extended scalar sector",
+      "heavy gauge bosons W' Z'"
+    ],
+    "new_scales": [
+      "f ~ 1-3 TeV (Goldstone decay constant)"
+    ],
+    "new_symmetries": [
+      "enlarged global symmetry (e.g., SU(5) -> SO(5) in Littlest Higgs)",
+      "T-parity (in T-parity variants)"
+    ],
     "new_parameters_count": 6,
     "note": "Decay constant f, gauge and Yukawa couplings of the heavy sector, T-parity assignments."
   },
-  "structural_features": ["pseudo_goldstone", "collective_symmetry_breaking", "global_symmetry", "top_partner"],
-  "composes_with": ["seesaw_type_i"],
-  "excludes": ["mssm", "twin_higgs", "technicolor"],
+  "structural_features": [
+    "pseudo_goldstone",
+    "collective_symmetry_breaking",
+    "global_symmetry",
+    "top_partner"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "extra_u1_gauge_boson",
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "mssm",
+    "twin_higgs",
+    "technicolor"
+  ],
   "status": "niche",
-  "history": "Arkani-Hamed, Cohen, Georgi (2001), 'Electroweak symmetry breaking from dimensional deconstruction', Phys. Lett. B 513, 232, arXiv:hep-ph/0105239 — initiated the framework. Arkani-Hamed-Cohen-Katz-Nelson (2002), 'The Littlest Higgs', JHEP 07, 034, arXiv:hep-ph/0206021 — minimal explicit model. T-parity variants (Cheng-Low 2003, 2004) produce DM candidates and improve EWPT consistency.",
+  "history": "Arkani-Hamed, Cohen, Georgi (2001), 'Electroweak symmetry breaking from dimensional deconstruction', Phys. Lett. B 513, 232, arXiv:hep-ph/0105239 \u2014 initiated the framework. Arkani-Hamed-Cohen-Katz-Nelson (2002), 'The Littlest Higgs', JHEP 07, 034, arXiv:hep-ph/0206021 \u2014 minimal explicit model. T-parity variants (Cheng-Low 2003, 2004) produce DM candidates and improve EWPT consistency.",
   "references": [
     {
       "citation": "Arkani-Hamed, Cohen, Georgi, 'Electroweak symmetry breaking from dimensional deconstruction', Phys. Lett. B 513, 232 (2001)",
@@ -50,5 +78,10 @@
       "arxiv": "hep-ph/0206021"
     }
   ],
-  "tags": ["hierarchy", "pseudo_goldstone", "collective_breaking", "top_partner"]
+  "tags": [
+    "hierarchy",
+    "pseudo_goldstone",
+    "collective_breaking",
+    "top_partner"
+  ]
 }

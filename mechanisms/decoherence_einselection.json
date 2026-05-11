@@ -31,6 +31,7 @@
     "classical_emergence",
     "interpretation_neutral"
   ],
+  "field_tags": [],
   "composes_with": [
     "many_worlds_everett",
     "bohmian_mechanics"

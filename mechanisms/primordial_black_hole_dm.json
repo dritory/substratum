@@ -44,6 +44,9 @@
     "primordial_collapse",
     "asteroid_mass_window"
   ],
+  "field_tags": [
+    "primordial_black_hole_population"
+  ],
   "composes_with": [
     "axion_monodromy_inflation",
     "hilltop_inflation",

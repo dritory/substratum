@@ -36,6 +36,7 @@
     "branching",
     "decoherence_required"
   ],
+  "field_tags": [],
   "composes_with": [
     "decoherence_einselection",
     "linde_eternal_inflation"

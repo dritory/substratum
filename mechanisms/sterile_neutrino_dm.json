@@ -1,7 +1,10 @@
 {
   "id": "sterile_neutrino_dm",
   "name": "Sterile-neutrino dark matter",
-  "aliases": ["keV warm DM", "Dodelson-Widrow / Shi-Fuller"],
+  "aliases": [
+    "keV warm DM",
+    "Dodelson-Widrow / Shi-Fuller"
+  ],
   "type": "dynamical",
   "summary": "A keV-scale sterile neutrino N produced via active-sterile mixing in the early universe (Dodelson-Widrow) or resonant lepton-asymmetry-driven production (Shi-Fuller). Decays N -> nu + gamma at observable X-ray energies; also acts as warm DM, free-streaming on small scales. The scenario directly connects DM to neutrino-mass physics.",
   "addresses_puzzles": [
@@ -26,14 +29,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["sterile neutrino N (keV-scale)"],
-    "new_scales": ["m_N ~ keV", "active-sterile mixing |U|^2 ~ 10^{-11}"],
+    "new_fields": [
+      "sterile neutrino N (keV-scale)"
+    ],
+    "new_scales": [
+      "m_N ~ keV",
+      "active-sterile mixing |U|^2 ~ 10^{-11}"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 2,
     "note": "Sterile mass and mixing; production mechanism (DW vs SF) adds lepton-asymmetry parameter."
   },
-  "structural_features": ["right_handed_neutrino", "warm_dm", "active_sterile_mixing", "x_ray_decay"],
-  "composes_with": ["seesaw_type_i", "leptogenesis"],
+  "structural_features": [
+    "right_handed_neutrino",
+    "warm_dm",
+    "active_sterile_mixing",
+    "x_ray_decay"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Dodelson-Widrow (1994) production via mixing. Shi-Fuller (1999) resonant production. nuMSM framework (Asaka-Shaposhnikov 2005) embeds keV DM in a consistent low-scale seesaw. Active in cosmology + X-ray astronomy.",
@@ -47,5 +66,9 @@
       "arxiv": "hep-ph/0505013"
     }
   ],
-  "tags": ["dark_matter", "sterile_neutrino", "warm_dm"]
+  "tags": [
+    "dark_matter",
+    "sterile_neutrino",
+    "warm_dm"
+  ]
 }

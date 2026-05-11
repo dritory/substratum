@@ -36,6 +36,9 @@
     "effective_chemical_potential",
     "no_explicit_cp_violation"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "sphaleron_b_plus_l_violation",
     "quintessence",

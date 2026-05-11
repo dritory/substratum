@@ -37,6 +37,7 @@
     "non_linear",
     "n_amplification"
   ],
+  "field_tags": [],
   "composes_with": [],
   "excludes": [
     "many_worlds_everett",

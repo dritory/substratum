@@ -1,7 +1,9 @@
 {
   "id": "relaxion",
   "name": "Relaxion",
-  "aliases": ["cosmological relaxation"],
+  "aliases": [
+    "cosmological relaxation"
+  ],
   "type": "dynamical",
   "summary": "A slowly-rolling scalar field (the relaxion) scans the Higgs mass through cosmological evolution. As the relaxion rolls, the effective Higgs mass-squared decreases past zero; once electroweak symmetry breaks, the Higgs VEV backreacts on the relaxion potential and stops the roll. The mechanism explains the smallness of m_H without new physics at the EW scale.",
   "addresses_puzzles": [
@@ -24,15 +26,37 @@
     }
   ],
   "introduces": {
-    "new_fields": ["relaxion phi (axion-like scalar)", "auxiliary new strong sector to generate backreaction"],
-    "new_scales": ["f_relaxion ~ M_GUT or higher", "Lambda_backreaction (model-dependent)"],
-    "new_symmetries": ["approximate shift symmetry (broken)"],
+    "new_fields": [
+      "relaxion phi (axion-like scalar)",
+      "auxiliary new strong sector to generate backreaction"
+    ],
+    "new_scales": [
+      "f_relaxion ~ M_GUT or higher",
+      "Lambda_backreaction (model-dependent)"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry (broken)"
+    ],
     "new_parameters_count": 4,
     "note": "Scalar potential slope, backreaction scale, initial conditions, and inflationary scale during the scan."
   },
-  "structural_features": ["pseudo_goldstone", "shift_symmetry", "inflationary_epoch", "backreaction"],
-  "composes_with": ["peccei_quinn_axion", "seesaw_type_i"],
-  "excludes": ["mssm", "twin_higgs"],
+  "structural_features": [
+    "pseudo_goldstone",
+    "shift_symmetry",
+    "inflationary_epoch",
+    "backreaction"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "mssm",
+    "twin_higgs"
+  ],
   "status": "niche",
   "history": "Graham, Kaplan, Rajendran (2015). Variants with QCD or non-QCD backreaction proliferated through 2016-2018; cosmological consistency (overproduction of inflationary perturbations, baryogenesis compatibility) is the leading concern.",
   "references": [
@@ -41,5 +65,10 @@
       "arxiv": "1504.07551"
     }
   ],
-  "tags": ["hierarchy", "relaxation", "cosmological", "axion_like"]
+  "tags": [
+    "hierarchy",
+    "relaxation",
+    "cosmological",
+    "axion_like"
+  ]
 }

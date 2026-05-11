@@ -1,7 +1,10 @@
 {
   "id": "galileon_modified_gravity",
   "name": "Galileon modified gravity",
-  "aliases": ["Galileon", "Nicolis-Rattazzi-Trincherini Galileon"],
+  "aliases": [
+    "Galileon",
+    "Nicolis-Rattazzi-Trincherini Galileon"
+  ],
   "type": "dynamical",
   "summary": "Effective field theory of a scalar pi with derivative self-interactions invariant under an internal Galilean symmetry (pi -> pi + b_mu x^mu + c). The symmetry restricts the allowed terms to five 'Galileons' that yield non-linearities without ghost instabilities. Originated as the 4D effective theory of the DGP braneworld brane-bending mode; provides a consistent IR modification of gravity producing self-acceleration via Vainshtein-screened scalar dynamics.",
   "addresses_puzzles": [
@@ -30,22 +33,43 @@
     }
   ],
   "introduces": {
-    "new_fields": ["Galileon scalar pi"],
-    "new_scales": ["strong-coupling scale Lambda_3 ~ (M_Pl H_0^2)^(1/3) ~ 1000 km^-1"],
-    "new_symmetries": ["Galilean symmetry pi -> pi + b_mu x^mu + c"],
+    "new_fields": [
+      "Galileon scalar pi"
+    ],
+    "new_scales": [
+      "strong-coupling scale Lambda_3 ~ (M_Pl H_0^2)^(1/3) ~ 1000 km^-1"
+    ],
+    "new_symmetries": [
+      "Galilean symmetry pi -> pi + b_mu x^mu + c"
+    ],
     "new_parameters_count": 5,
     "note": "Five Galileon coupling constants (one per term). The symmetry severely restricts the form."
   },
-  "structural_features": ["galilean_symmetry", "vainshtein_screening", "derivative_couplings", "self_acceleration"],
-  "composes_with": ["dgp_braneworld"],
+  "structural_features": [
+    "galilean_symmetry",
+    "vainshtein_screening",
+    "derivative_couplings",
+    "self_acceleration"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "dgp_braneworld"
+  ],
   "excludes": [],
   "status": "disfavored",
-  "history": "Nicolis, Rattazzi, Trincherini (2008), 'The Galileon as a local modification of gravity', Phys. Rev. D 79, 064036, arXiv:0811.2197 — distilled the 4D EFT structure from DGP. Generalised Galileon / Horndeski (Deffayet-Esposito-Farese-Vikman 2009; Horndeski 1974 rediscovered). GW170817 (2017) ruled out the simplest derivative-tensor Horndeski models that predict c_GW != c.",
+  "history": "Nicolis, Rattazzi, Trincherini (2008), 'The Galileon as a local modification of gravity', Phys. Rev. D 79, 064036, arXiv:0811.2197 \u2014 distilled the 4D EFT structure from DGP. Generalised Galileon / Horndeski (Deffayet-Esposito-Farese-Vikman 2009; Horndeski 1974 rediscovered). GW170817 (2017) ruled out the simplest derivative-tensor Horndeski models that predict c_GW != c.",
   "references": [
     {
       "citation": "Nicolis, Rattazzi, Trincherini, 'The Galileon as a local modification of gravity', Phys. Rev. D 79, 064036 (2009)",
       "arxiv": "0811.2197"
     }
   ],
-  "tags": ["modified_gravity", "galileon", "scalar_tensor", "vainshtein"]
+  "tags": [
+    "modified_gravity",
+    "galileon",
+    "scalar_tensor",
+    "vainshtein"
+  ]
 }

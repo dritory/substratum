@@ -1,7 +1,9 @@
 {
   "id": "gut_baryogenesis",
   "name": "GUT baryogenesis",
-  "aliases": ["heavy boson decay baryogenesis"],
+  "aliases": [
+    "heavy boson decay baryogenesis"
+  ],
   "type": "dynamical",
   "summary": "Heavy gauge or Higgs bosons of a grand unified theory (X, Y bosons of SU(5); leptoquarks of SO(10)) decay out of equilibrium with B-violating, CP-violating amplitudes. The resulting baryon asymmetry survives if the decay temperature is below the mass scale and EW sphalerons do not erase it (typically requires non-zero B-L).",
   "addresses_puzzles": [
@@ -26,8 +28,19 @@
     "new_parameters_count": 2,
     "note": "Building on a GUT framework (which provides the X/Y bosons), GUT baryogenesis adds CP-violating phases in the heavy decay vertices."
   },
-  "structural_features": ["out_of_equilibrium", "high_scale_cp", "b_violation", "gut_phenomenology"],
-  "composes_with": ["su5_minimal_gut", "so10_gut"],
+  "structural_features": [
+    "out_of_equilibrium",
+    "high_scale_cp",
+    "b_violation",
+    "gut_phenomenology"
+  ],
+  "field_tags": [
+    "gut_x_y_bosons"
+  ],
+  "composes_with": [
+    "su5_minimal_gut",
+    "so10_gut"
+  ],
   "excludes": [],
   "status": "historical",
   "history": "Sakharov (1967) framing; Yoshimura (1978), Toussaint et al. (1979) implemented in SU(5). Largely supplanted by leptogenesis (1986). Modern relevance: SO(10) GUTs with built-in B-L can revive a GUT-baryogenesis scenario.",
@@ -41,5 +54,9 @@
       "doi": "10.1103/PhysRevD.19.1036"
     }
   ],
-  "tags": ["baryogenesis", "gut", "high_scale"]
+  "tags": [
+    "baryogenesis",
+    "gut",
+    "high_scale"
+  ]
 }

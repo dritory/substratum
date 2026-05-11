@@ -1,7 +1,10 @@
 {
   "id": "leptogenesis",
   "name": "Leptogenesis",
-  "aliases": ["thermal leptogenesis", "Fukugita-Yanagida"],
+  "aliases": [
+    "thermal leptogenesis",
+    "Fukugita-Yanagida"
+  ],
   "type": "dynamical",
   "summary": "Heavy right-handed neutrinos decay out of equilibrium with CP-violating asymmetries, generating a lepton asymmetry that is partially converted to a baryon asymmetry by SM electroweak sphalerons. Builds directly on the type-I seesaw: the same heavy Majorana sector that explains light neutrino masses also generates BAU.",
   "addresses_puzzles": [
@@ -36,8 +39,19 @@
     "new_parameters_count": 2,
     "note": "Building on seesaw, leptogenesis introduces no new fields. The asymmetry depends on CP phases in the heavy-neutrino Yukawa matrix; counting them as ~2 new effectively-free parameters captures the additional information needed."
   },
-  "structural_features": ["out_of_equilibrium", "high_scale_cp", "sphaleron_conversion", "lepton_number_violation"],
-  "composes_with": ["seesaw_type_i", "mssm"],
+  "structural_features": [
+    "out_of_equilibrium",
+    "high_scale_cp",
+    "sphaleron_conversion",
+    "lepton_number_violation"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "mssm"
+  ],
   "excludes": [],
   "status": "mainstream",
   "history": "Fukugita and Yanagida (1986). Davidson-Ibarra bound on lightest M_R (2002). Buchmuller-Di Bari-Plumacher boltzmann analysis through the 2000s. Resonant leptogenesis (Pilaftsis-Underwood) lowers the scale.",
@@ -51,5 +65,10 @@
       "arxiv": "hep-ph/0202239"
     }
   ],
-  "tags": ["baryogenesis", "leptogenesis", "cp_violation", "seesaw"]
+  "tags": [
+    "baryogenesis",
+    "leptogenesis",
+    "cp_violation",
+    "seesaw"
+  ]
 }

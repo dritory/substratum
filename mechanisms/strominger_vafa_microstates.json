@@ -42,6 +42,9 @@
     "entropy_counting",
     "string_theoretic"
   ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "ads_cft_holography"

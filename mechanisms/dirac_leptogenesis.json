@@ -11,7 +11,7 @@
       "puzzle_id": "baryon_asymmetry",
       "role": "solves",
       "confidence": "proposed",
-      "note": "Reproduces eta ~ 10^-10 for heavy Yukawa-decaying particles in the 10^9-10^15 GeV range. Predicts Dirac (not Majorana) neutrinos — falsifiable by 0nubb non-detection at sensitivities reaching the inverted-hierarchy floor."
+      "note": "Reproduces eta ~ 10^-10 for heavy Yukawa-decaying particles in the 10^9-10^15 GeV range. Predicts Dirac (not Majorana) neutrinos \u2014 falsifiable by 0nubb non-detection at sensitivities reaching the inverted-hierarchy floor."
     },
     {
       "puzzle_id": "neutrino_mass_smallness",
@@ -24,7 +24,7 @@
     {
       "benchmark_id": "neutrinoless_double_beta_decay",
       "effect": "predicts_signal",
-      "note": "Predicts NULL result for 0nubb at all sensitivities — neutrinos are Dirac, not Majorana. Future experiments KamLAND-Zen, LEGEND, nEXO can falsify by detecting 0nubb."
+      "note": "Predicts NULL result for 0nubb at all sensitivities \u2014 neutrinos are Dirac, not Majorana. Future experiments KamLAND-Zen, LEGEND, nEXO can falsify by detecting 0nubb."
     },
     {
       "benchmark_id": "katrin_neutrino_mass",
@@ -51,12 +51,15 @@
     "out_of_equilibrium_decay",
     "sphaleron_conversion"
   ],
+  "field_tags": [
+    "gauge_singlet_dirac_fermion"
+  ],
   "composes_with": [],
   "excludes": [
     "leptogenesis"
   ],
   "status": "niche",
-  "history": "Dick, Lindner, Ratz, Wright (1999) introduced Dirac leptogenesis. Murayama and Pierce (2002), 'Realistic Dirac Leptogenesis', Phys. Rev. Lett. 89, 271601, arXiv:hep-ph/0206177 — concrete realistic model. Active small-community follow-up; experimentally distinguished from Majorana leptogenesis by 0nubb null result.",
+  "history": "Dick, Lindner, Ratz, Wright (1999) introduced Dirac leptogenesis. Murayama and Pierce (2002), 'Realistic Dirac Leptogenesis', Phys. Rev. Lett. 89, 271601, arXiv:hep-ph/0206177 \u2014 concrete realistic model. Active small-community follow-up; experimentally distinguished from Majorana leptogenesis by 0nubb null result.",
   "references": [
     {
       "citation": "Murayama and Pierce, 'Realistic Dirac leptogenesis', Phys. Rev. Lett. 89, 271601 (2002)",

@@ -1,7 +1,10 @@
 {
   "id": "cosmic_strings_topological",
   "name": "Cosmic strings (topological)",
-  "aliases": ["Kibble cosmic strings", "topological-defect strings"],
+  "aliases": [
+    "Kibble cosmic strings",
+    "topological-defect strings"
+  ],
   "type": "topological",
   "summary": "One-dimensional topological defects formed during cosmological phase transitions when a U(1) symmetry breaks (or its discrete subgroup of higher-rank symmetries). Strings have tension G mu ~ (M_GUT/M_Pl)^2 ~ 10^-6 for GUT-scale strings. Produce stochastic GW backgrounds, lensing arcs, and CMB temperature discontinuities. Can also seed structure formation, though at currently-allowed tensions they contribute < few % of structure power.",
   "addresses_puzzles": [
@@ -29,17 +32,33 @@
     }
   ],
   "introduces": {
-    "new_fields": ["U(1) gauge field that becomes a string after symmetry breaking"],
-    "new_scales": ["string-formation scale ~ symmetry-breaking VEV"],
+    "new_fields": [
+      "U(1) gauge field that becomes a string after symmetry breaking"
+    ],
+    "new_scales": [
+      "string-formation scale ~ symmetry-breaking VEV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 1,
     "note": "Single new free parameter is the string tension G mu, set by the symmetry-breaking scale."
   },
-  "structural_features": ["topological_defect", "one_dimensional_defect", "u1_breaking", "stochastic_gw_source"],
-  "composes_with": ["su5_minimal_gut", "pati_salam", "so10_gut"],
+  "structural_features": [
+    "topological_defect",
+    "one_dimensional_defect",
+    "u1_breaking",
+    "stochastic_gw_source"
+  ],
+  "field_tags": [
+    "extra_u1_gauge_boson"
+  ],
+  "composes_with": [
+    "su5_minimal_gut",
+    "pati_salam",
+    "so10_gut"
+  ],
   "excludes": [],
   "status": "niche",
-  "history": "Kibble (1976), 'Topology of cosmic domains and strings', J. Phys. A 9, 1387 — established formation criteria for topological defects in early-universe cosmology. Vilenkin (1985) review systematised cosmological consequences. Active research target for pulsar-timing arrays and CMB-S4.",
+  "history": "Kibble (1976), 'Topology of cosmic domains and strings', J. Phys. A 9, 1387 \u2014 established formation criteria for topological defects in early-universe cosmology. Vilenkin (1985) review systematised cosmological consequences. Active research target for pulsar-timing arrays and CMB-S4.",
   "references": [
     {
       "citation": "Kibble, 'Topology of cosmic domains and strings', J. Phys. A 9, 1387 (1976)",
@@ -50,5 +69,10 @@
       "doi": "10.1016/0370-1573(85)90033-X"
     }
   ],
-  "tags": ["topological_defect", "cosmic_strings", "early_universe", "gravitational_waves"]
+  "tags": [
+    "topological_defect",
+    "cosmic_strings",
+    "early_universe",
+    "gravitational_waves"
+  ]
 }

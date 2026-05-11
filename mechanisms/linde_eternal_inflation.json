@@ -44,6 +44,9 @@
     "fractal_structure",
     "stochastic_inflation"
   ],
+  "field_tags": [
+    "cosmological_landscape"
+  ],
   "composes_with": [
     "chaotic_inflation",
     "new_inflation",

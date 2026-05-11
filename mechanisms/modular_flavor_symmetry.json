@@ -1,7 +1,9 @@
 {
   "id": "modular_flavor_symmetry",
   "name": "Modular flavor symmetry",
-  "aliases": ["modular invariance flavor"],
+  "aliases": [
+    "modular invariance flavor"
+  ],
   "type": "symmetry",
   "summary": "Yukawa couplings are modular forms of weight k under a finite modular group Gamma_N (e.g., A_4, S_4, A_5). The single complex modulus tau provides a small expansion parameter; modular weights play the role of FN charges but are constrained by modular invariance, producing predictive Yukawa structures with fewer free parameters than abelian Froggatt-Nielsen.",
   "addresses_puzzles": [
@@ -38,14 +40,31 @@
     }
   ],
   "introduces": {
-    "new_fields": ["modulus tau (complex scalar)"],
-    "new_scales": ["modular VEV scale"],
-    "new_symmetries": ["finite modular group Gamma_N (A_4, S_4, A_5, ...)"],
+    "new_fields": [
+      "modulus tau (complex scalar)"
+    ],
+    "new_scales": [
+      "modular VEV scale"
+    ],
+    "new_symmetries": [
+      "finite modular group Gamma_N (A_4, S_4, A_5, ...)"
+    ],
     "new_parameters_count": 3,
     "note": "Modulus VEV (Re tau, Im tau), overall Yukawa scale; modular forms then largely fix the structure."
   },
-  "structural_features": ["discrete_symmetry", "modular_invariance", "non_abelian", "single_modulus"],
-  "composes_with": ["seesaw_type_i", "seesaw_type_ii"],
+  "structural_features": [
+    "discrete_symmetry",
+    "modular_invariance",
+    "non_abelian",
+    "single_modulus"
+  ],
+  "field_tags": [
+    "string_modulus"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "seesaw_type_ii"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Feruglio (2017) introduced modular flavor symmetries from string-inspired considerations. Extensive systematic studies of A_4, S_4, A_5 modular models for both quark and lepton sectors followed (Kobayashi-Nilles-Saga-Tanimoto 2018-2020).",
@@ -59,5 +78,9 @@
       "arxiv": "1803.10391"
     }
   ],
-  "tags": ["flavor", "modular", "discrete_symmetry"]
+  "tags": [
+    "flavor",
+    "modular",
+    "discrete_symmetry"
+  ]
 }

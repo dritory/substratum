@@ -44,6 +44,9 @@
     "plateau_potential",
     "scalaron"
   ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "seesaw_type_i",
     "leptogenesis"

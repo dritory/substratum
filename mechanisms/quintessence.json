@@ -1,7 +1,10 @@
 {
   "id": "quintessence",
   "name": "Quintessence (dynamical dark energy)",
-  "aliases": ["dynamical dark energy", "w0-wa CDM"],
+  "aliases": [
+    "dynamical dark energy",
+    "w0-wa CDM"
+  ],
   "type": "dynamical",
   "summary": "Replaces a true cosmological constant with a slowly-evolving scalar field whose potential drives present-day cosmic acceleration. The equation-of-state w(z) deviates from -1, allowing tests against w_0-w_a CDM. DESI Y1 BAO + Type-Ia SN data show a ~2-3 sigma preference for w_0 > -1, w_a < 0, hinting at evolving dark energy.",
   "addresses_puzzles": [
@@ -24,14 +27,29 @@
     }
   ],
   "introduces": {
-    "new_fields": ["quintessence scalar phi"],
-    "new_scales": ["m_phi ~ H_0 ~ 10^-33 eV (ultralight)"],
-    "new_symmetries": ["approximate shift symmetry to protect mass"],
+    "new_fields": [
+      "quintessence scalar phi"
+    ],
+    "new_scales": [
+      "m_phi ~ H_0 ~ 10^-33 eV (ultralight)"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry to protect mass"
+    ],
     "new_parameters_count": 3,
     "note": "Potential shape (e.g., V_0, alpha for inverse-power-law), initial field value, and field mass."
   },
-  "structural_features": ["ultralight_scalar", "shift_symmetry", "late_time_dynamics"],
-  "composes_with": ["sequestering"],
+  "structural_features": [
+    "ultralight_scalar",
+    "shift_symmetry",
+    "late_time_dynamics"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "sequestering"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Ratra and Peebles (1988); Caldwell, Dave, Steinhardt (1998). DESI Y1 (2024) provided the first hint of dynamical dark energy in BAO+SN combinations; Pantheon+, Union3, and DES-SN5YR sample choice significantly affects the strength of the preference.",
@@ -49,5 +67,9 @@
       "arxiv": "2404.03002"
     }
   ],
-  "tags": ["dark_energy", "quintessence", "cosmological_constant"]
+  "tags": [
+    "dark_energy",
+    "quintessence",
+    "cosmological_constant"
+  ]
 }

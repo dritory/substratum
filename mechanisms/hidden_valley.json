@@ -53,6 +53,10 @@
     "displaced_vertices",
     "tev_mediator"
   ],
+  "field_tags": [
+    "extra_u1_gauge_boson",
+    "non_abelian_dark_gauge_sector"
+  ],
   "composes_with": [
     "dark_photon_portal"
   ],

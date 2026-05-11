@@ -45,6 +45,7 @@
     "no_singularity",
     "minisuperspace_quantization"
   ],
+  "field_tags": [],
   "composes_with": [
     "loop_quantum_gravity"
   ],

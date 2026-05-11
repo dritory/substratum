@@ -1,7 +1,9 @@
 {
   "id": "sequestering",
   "name": "Vacuum-energy sequestering",
-  "aliases": ["Kaloper-Padilla sequestering"],
+  "aliases": [
+    "Kaloper-Padilla sequestering"
+  ],
   "type": "dynamical",
   "summary": "Couples the QFT vacuum energy to a global modulus that enforces cancellation against the historic average of trace contributions over the cosmological history. Separates 'particle physics' vacuum energy from 'gravitating' vacuum energy without demanding fine-tuning of the renormalized Lambda.",
   "addresses_puzzles": [
@@ -23,14 +25,30 @@
     }
   ],
   "introduces": {
-    "new_fields": ["global lagrange-multiplier modulus"],
-    "new_scales": ["cosmological-history-averaged trace scale"],
-    "new_symmetries": ["a global rescaling acting on the metric and Planck mass"],
+    "new_fields": [
+      "global lagrange-multiplier modulus"
+    ],
+    "new_scales": [
+      "cosmological-history-averaged trace scale"
+    ],
+    "new_symmetries": [
+      "a global rescaling acting on the metric and Planck mass"
+    ],
     "new_parameters_count": 2,
     "note": "Coupling and effective UV cutoff for the trace integration; the framework is engineered to be insensitive to QFT vacuum-energy radiative corrections."
   },
-  "structural_features": ["global_modulus", "non_local", "cosmological_history"],
-  "composes_with": ["anthropic_landscape", "unimodular_gravity"],
+  "structural_features": [
+    "global_modulus",
+    "non_local",
+    "cosmological_history"
+  ],
+  "field_tags": [
+    "string_modulus"
+  ],
+  "composes_with": [
+    "anthropic_landscape",
+    "unimodular_gravity"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Kaloper and Padilla (2014) introduced the local sequestering construction. Manifestly local 'monodromy' versions (2016) addressed objections. Distinct from older vacuum-energy cancellation mechanisms (e.g., Tseytlin) by its use of cosmological-history averaging.",
@@ -40,5 +58,9 @@
       "arxiv": "1309.6562"
     }
   ],
-  "tags": ["cosmological_constant", "modulus", "non_local"]
+  "tags": [
+    "cosmological_constant",
+    "modulus",
+    "non_local"
+  ]
 }

@@ -1,7 +1,10 @@
 {
   "id": "new_inflation",
   "name": "New inflation",
-  "aliases": ["slow-roll inflation", "Linde-Albrecht-Steinhardt inflation"],
+  "aliases": [
+    "slow-roll inflation",
+    "Linde-Albrecht-Steinhardt inflation"
+  ],
   "type": "dynamical",
   "summary": "An inflaton scalar slowly rolls down a near-flat potential plateau, producing exponential expansion that solves the horizon, flatness, and monopole problems while generating a near-scale-invariant spectrum of primordial perturbations. Replaces Guth's original 'old inflation' (which never gracefully exits) with a slow-roll mechanism that exits inflation smoothly through reheating.",
   "addresses_puzzles": [
@@ -29,17 +32,28 @@
     }
   ],
   "introduces": {
-    "new_fields": ["inflaton scalar phi"],
-    "new_scales": ["V_0^{1/4} ~ 10^16 GeV (inflation energy scale)"],
+    "new_fields": [
+      "inflaton scalar phi"
+    ],
+    "new_scales": [
+      "V_0^{1/4} ~ 10^16 GeV (inflation energy scale)"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Inflaton potential parameters and reheating physics."
   },
-  "structural_features": ["single_field_inflation", "slow_roll", "scalar_potential"],
+  "structural_features": [
+    "single_field_inflation",
+    "slow_roll",
+    "scalar_potential"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "historical",
-  "history": "Linde (1982), 'A new inflationary universe scenario', PLB 108, 389; Albrecht and Steinhardt (1982), 'Cosmology for grand unified theories with radiatively induced symmetry breaking', PRL 48, 1220 — independently proposed slow-roll inflation as an improvement over Guth's 1981 first-order phase-transition inflation. Specific new-inflation potentials are now disfavored, but the slow-roll paradigm remains universal.",
+  "history": "Linde (1982), 'A new inflationary universe scenario', PLB 108, 389; Albrecht and Steinhardt (1982), 'Cosmology for grand unified theories with radiatively induced symmetry breaking', PRL 48, 1220 \u2014 independently proposed slow-roll inflation as an improvement over Guth's 1981 first-order phase-transition inflation. Specific new-inflation potentials are now disfavored, but the slow-roll paradigm remains universal.",
   "references": [
     {
       "citation": "Linde, 'A new inflationary universe scenario', Phys. Lett. B 108, 389 (1982)",
@@ -50,5 +64,9 @@
       "doi": "10.1103/PhysRevLett.48.1220"
     }
   ],
-  "tags": ["inflation", "cosmology", "slow_roll"]
+  "tags": [
+    "inflation",
+    "cosmology",
+    "slow_roll"
+  ]
 }

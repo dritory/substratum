@@ -49,6 +49,9 @@
     "rr_charged",
     "open_string_endpoints"
   ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "ads_cft_holography",

@@ -1,7 +1,9 @@
 {
   "id": "zee_radiative_neutrino_mass",
   "name": "Zee model (radiative neutrino mass)",
-  "aliases": ["Zee one-loop neutrino mass"],
+  "aliases": [
+    "Zee one-loop neutrino mass"
+  ],
   "type": "symmetry",
   "summary": "Generates Majorana neutrino masses at one loop via a charged scalar singlet h^+ and an extra Higgs doublet. Lepton-number-violating couplings combine with the Yukawa hierarchy to produce m_nu ~ (1/16 pi^2) (m_e m_tau / m_h^2) v^2 / Lambda, giving naturally tiny neutrino masses without a heavy seesaw scale. The original 1980 model is now largely excluded by oscillation data, but extensions remain viable.",
   "addresses_puzzles": [
@@ -29,13 +31,28 @@
     }
   ],
   "introduces": {
-    "new_fields": ["charged scalar singlet h^+", "second Higgs doublet"],
-    "new_scales": ["m_h+ ~ TeV (collider-accessible)"],
-    "new_symmetries": ["broken lepton number"],
+    "new_fields": [
+      "charged scalar singlet h^+",
+      "second Higgs doublet"
+    ],
+    "new_scales": [
+      "m_h+ ~ TeV (collider-accessible)"
+    ],
+    "new_symmetries": [
+      "broken lepton number"
+    ],
     "new_parameters_count": 5,
     "note": "Charged-scalar mass, mixing in two-doublet sector, and lepton-flavor structure of the antisymmetric f_ij Yukawa coupling."
   },
-  "structural_features": ["radiative_neutrino_mass", "two_higgs_doublet", "charged_scalar", "lepton_number_violation"],
+  "structural_features": [
+    "radiative_neutrino_mass",
+    "two_higgs_doublet",
+    "charged_scalar",
+    "lepton_number_violation"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar"
+  ],
   "composes_with": [],
   "excludes": [],
   "status": "niche",
@@ -50,5 +67,9 @@
       "doi": "10.1016/0370-2693(88)91584-5"
     }
   ],
-  "tags": ["neutrinos", "radiative_neutrino_mass", "charged_scalar"]
+  "tags": [
+    "neutrinos",
+    "radiative_neutrino_mass",
+    "charged_scalar"
+  ]
 }

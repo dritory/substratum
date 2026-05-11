@@ -43,6 +43,9 @@
     "hidden_sector",
     "exponential_suppression"
   ],
+  "field_tags": [
+    "non_abelian_dark_gauge_sector"
+  ],
   "composes_with": [
     "mssm",
     "gauge_mediated_susy_breaking",

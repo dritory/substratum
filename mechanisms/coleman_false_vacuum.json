@@ -38,6 +38,7 @@
     "bubble_nucleation",
     "no_new_fields"
   ],
+  "field_tags": [],
   "composes_with": [
     "higgs_vacuum_stabiliser"
   ],

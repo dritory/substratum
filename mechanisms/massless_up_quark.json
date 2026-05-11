@@ -1,7 +1,9 @@
 {
   "id": "massless_up_quark",
   "name": "Massless up quark (historical strong-CP solution)",
-  "aliases": ["m_u = 0 strong-CP solution"],
+  "aliases": [
+    "m_u = 0 strong-CP solution"
+  ],
   "type": "symmetry",
   "summary": "Historical proposal that the bare up-quark mass is zero, with the apparent non-zero physical up-mass arising from QCD instanton-induced 't Hooft vertices (the Kaplan-Manohar ambiguity). A vanishing bare m_u eliminates the QCD theta angle as a physical parameter, automatically solving the strong-CP problem without an axion. Lattice QCD has now ruled out this solution.",
   "addresses_puzzles": [
@@ -9,7 +11,7 @@
       "puzzle_id": "strong_cp_problem",
       "role": "solves",
       "confidence": "disfavored",
-      "note": "Conceptually elegant — m_u = 0 makes theta unphysical via the chiral rotation. Excluded by lattice QCD: Alexandrou et al. (2020), arXiv:2002.07802, 'Ruling Out the Massless Up-Quark Solution to the Strong CP Problem by Computing the Topological Mass Contribution with Lattice QCD', PRL 125, 232001. Listed for graph completeness."
+      "note": "Conceptually elegant \u2014 m_u = 0 makes theta unphysical via the chiral rotation. Excluded by lattice QCD: Alexandrou et al. (2020), arXiv:2002.07802, 'Ruling Out the Massless Up-Quark Solution to the Strong CP Problem by Computing the Topological Mass Contribution with Lattice QCD', PRL 125, 232001. Listed for graph completeness."
     }
   ],
   "touches_benchmarks": [
@@ -27,15 +29,26 @@
   "introduces": {
     "new_fields": [],
     "new_scales": [],
-    "new_symmetries": ["axial U(1)_A acting on up quark"],
+    "new_symmetries": [
+      "axial U(1)_A acting on up quark"
+    ],
     "new_parameters_count": 0,
     "note": "Conceptually parameter-free: removes one parameter (theta) by setting another (m_u) to zero. But m_u != 0 is now established empirically."
   },
-  "structural_features": ["chiral_symmetry", "no_new_fields", "historical_proposal"],
+  "structural_features": [
+    "chiral_symmetry",
+    "no_new_fields",
+    "historical_proposal"
+  ],
+  "field_tags": [],
   "composes_with": [],
-  "excludes": ["peccei_quinn_axion", "nelson_barr", "babu_mohapatra_parity"],
+  "excludes": [
+    "peccei_quinn_axion",
+    "nelson_barr",
+    "babu_mohapatra_parity"
+  ],
   "status": "historical",
-  "history": "Discussed since the 1970s in various forms. Kaplan and Manohar (1986), 'Current-mass ratios of the light quarks', Phys. Rev. Lett. 56, 2004 — pointed out the ambiguity in extracting bare m_u from chiral Lagrangian observables. Definitively excluded by Alexandrou-Athenodorou-Cichy-Constantinou-Hadjiyiannakou-Jansen-Kostrzewa-Petros-Steffens-Stylianou-Urbach (2020), arXiv:2002.07802.",
+  "history": "Discussed since the 1970s in various forms. Kaplan and Manohar (1986), 'Current-mass ratios of the light quarks', Phys. Rev. Lett. 56, 2004 \u2014 pointed out the ambiguity in extracting bare m_u from chiral Lagrangian observables. Definitively excluded by Alexandrou-Athenodorou-Cichy-Constantinou-Hadjiyiannakou-Jansen-Kostrzewa-Petros-Steffens-Stylianou-Urbach (2020), arXiv:2002.07802.",
   "references": [
     {
       "citation": "Kaplan and Manohar, 'Current-mass ratios of the light quarks', Phys. Rev. Lett. 56, 2004 (1986)",
@@ -46,5 +59,10 @@
       "arxiv": "2002.07802"
     }
   ],
-  "tags": ["strong_cp", "historical", "ruled_out", "qcd"]
+  "tags": [
+    "strong_cp",
+    "historical",
+    "ruled_out",
+    "qcd"
+  ]
 }

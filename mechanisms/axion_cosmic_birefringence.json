@@ -62,6 +62,9 @@
     "alp_dark_sector",
     "cmb_rotation"
   ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
   "composes_with": [
     "peccei_quinn_axion",
     "string_axiverse",

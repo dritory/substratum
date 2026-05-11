@@ -50,6 +50,9 @@
     "out_of_equilibrium_oscillation",
     "low_scale_baryogenesis"
   ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
   "composes_with": [
     "seesaw_type_i",
     "sterile_neutrino_dm"

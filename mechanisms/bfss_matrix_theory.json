@@ -43,6 +43,9 @@
     "infinite_momentum_frame",
     "non_perturbative_m_theory"
   ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
   "composes_with": [
     "polchinski_d_branes",
     "ads_cft_holography",

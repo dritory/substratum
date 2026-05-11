@@ -40,6 +40,7 @@
     "high_scale_b_violation",
     "expansion_driven"
   ],
+  "field_tags": [],
   "composes_with": [
     "su5_minimal_gut",
     "so10_gut"

@@ -1,7 +1,9 @@
 {
   "id": "seesaw_type_iii",
   "name": "Type-III seesaw",
-  "aliases": ["fermion triplet seesaw"],
+  "aliases": [
+    "fermion triplet seesaw"
+  ],
   "type": "uv_completion",
   "summary": "Adds heavy SU(2) fermion triplets Sigma with Y=0 (analogous to Wino) that couple to lepton doublets via Yukawa. Block-diagonalisation gives m_nu = -m_D^T M_Sigma^{-1} m_D, structurally identical to type-I but with charged components Sigma^+ that produce distinctive LHC signatures.",
   "addresses_puzzles": [
@@ -27,14 +29,28 @@
     }
   ],
   "introduces": {
-    "new_fields": ["fermion triplets Sigma = (Sigma^+, Sigma^0, Sigma^-)"],
-    "new_scales": ["M_Sigma ~ TeV - 10^14 GeV"],
+    "new_fields": [
+      "fermion triplets Sigma = (Sigma^+, Sigma^0, Sigma^-)"
+    ],
+    "new_scales": [
+      "M_Sigma ~ TeV - 10^14 GeV"
+    ],
     "new_symmetries": [],
     "new_parameters_count": 3,
     "note": "Triplet mass and Yukawa matrix Y_Sigma."
   },
-  "structural_features": ["majorana_mass", "fermion_triplet", "charged_partners"],
-  "composes_with": ["leptogenesis", "su5_minimal_gut"],
+  "structural_features": [
+    "majorana_mass",
+    "fermion_triplet",
+    "charged_partners"
+  ],
+  "field_tags": [
+    "electroweak_triplet_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis",
+    "su5_minimal_gut"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Foot-Lew-He-Joshi (1989). LHC searches for heavy charged leptons constrain low-scale type-III; high-scale variants embed naturally in SO(10) GUTs (with Sigma in 24 of SU(5)).",
@@ -44,5 +60,10 @@
       "doi": "10.1007/BF01415558"
     }
   ],
-  "tags": ["neutrinos", "seesaw", "majorana", "fermion_triplet"]
+  "tags": [
+    "neutrinos",
+    "seesaw",
+    "majorana",
+    "fermion_triplet"
+  ]
 }

@@ -48,6 +48,7 @@
     "global_symmetry",
     "model_independent"
   ],
+  "field_tags": [],
   "composes_with": [
     "mssm",
     "composite_higgs",

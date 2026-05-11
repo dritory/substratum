@@ -58,6 +58,10 @@
     "exponential_mass_separation",
     "late_time_annihilation_suppressed"
   ],
+  "field_tags": [
+    "dark_photon",
+    "electroweak_singlet_real_scalar"
+  ],
   "composes_with": [
     "dark_photon_portal",
     "simp_dark_matter",

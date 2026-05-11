@@ -69,6 +69,9 @@
     "anthropic_higgs_mass",
     "thermal_neutralino_dm"
   ],
+  "field_tags": [
+    "susy_fermion_partners"
+  ],
   "composes_with": [
     "mssm",
     "anomaly_mediated_susy_breaking",

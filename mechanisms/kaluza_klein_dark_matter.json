@@ -1,7 +1,10 @@
 {
   "id": "kaluza_klein_dark_matter",
   "name": "Kaluza-Klein dark matter",
-  "aliases": ["UED dark matter", "lightest Kaluza-Klein particle"],
+  "aliases": [
+    "UED dark matter",
+    "lightest Kaluza-Klein particle"
+  ],
   "type": "geometric",
   "summary": "In universal-extra-dimensions (UED) models, all SM fields propagate in compact extra dimensions of size ~ TeV^-1. Momentum conservation in the extra dimensions, broken to a residual KK parity by orbifold boundary conditions, makes the lightest KK mode (LKP - typically the first KK photon B^(1)) absolutely stable. Provides a thermal WIMP DM candidate with mass ~ 1 TeV and unique collider signatures.",
   "addresses_puzzles": [
@@ -30,14 +33,33 @@
     }
   ],
   "introduces": {
-    "new_fields": ["KK towers of all SM fields"],
-    "new_scales": ["1/R ~ 1 TeV (extra-dimension compactification)"],
-    "new_symmetries": ["KK parity (residual of momentum conservation in compact dimension)"],
+    "new_fields": [
+      "KK towers of all SM fields"
+    ],
+    "new_scales": [
+      "1/R ~ 1 TeV (extra-dimension compactification)"
+    ],
+    "new_symmetries": [
+      "KK parity (residual of momentum conservation in compact dimension)"
+    ],
     "new_parameters_count": 3,
     "note": "Compactification scale 1/R, number of extra dimensions, brane-localised kinetic terms (radiative corrections)."
   },
-  "structural_features": ["extra_dimensions", "kk_parity", "thermal_freeze_out", "tev_scale"],
-  "composes_with": ["large_extra_dimensions_add"],
+  "structural_features": [
+    "extra_dimensions",
+    "kk_parity",
+    "thermal_freeze_out",
+    "tev_scale"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "kk_tower_fermions",
+    "kk_tower_gauge_bosons",
+    "kk_tower_gravitons"
+  ],
+  "composes_with": [
+    "large_extra_dimensions_add"
+  ],
   "excludes": [],
   "status": "niche",
   "history": "Servant and Tait (2002), 'Is the lightest Kaluza-Klein particle a viable dark matter candidate?', arXiv:hep-ph/0206071, published Nucl. Phys. B 650 (2003) 391. Subsequent decade of UED phenomenology; LHC squeezed 1/R bound to >~ 1 TeV, narrowing the relic-abundance window.",
@@ -47,5 +69,10 @@
       "arxiv": "hep-ph/0206071"
     }
   ],
-  "tags": ["dark_matter", "extra_dimensions", "kaluza_klein", "thermal"]
+  "tags": [
+    "dark_matter",
+    "extra_dimensions",
+    "kaluza_klein",
+    "thermal"
+  ]
 }

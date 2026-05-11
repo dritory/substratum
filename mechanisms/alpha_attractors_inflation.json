@@ -6,7 +6,7 @@
     "conformal attractor inflation"
   ],
   "type": "geometric",
-  "summary": "A class of inflation models with spontaneously broken conformal symmetry on the inflaton's Kahler manifold. The single parameter alpha controls the curvature of the moduli space; small alpha (large negative curvature) produces an attractor regime where slow-roll predictions are insensitive to potential details. Predicts n_s = 1 - 2/N and r = 12 alpha / N^2 — for alpha ~ 1 and N ~ 60 e-folds this gives r ~ 0.003, the same region of (n_s, r) as Starobinsky inflation.",
+  "summary": "A class of inflation models with spontaneously broken conformal symmetry on the inflaton's Kahler manifold. The single parameter alpha controls the curvature of the moduli space; small alpha (large negative curvature) produces an attractor regime where slow-roll predictions are insensitive to potential details. Predicts n_s = 1 - 2/N and r = 12 alpha / N^2 \u2014 for alpha ~ 1 and N ~ 60 e-folds this gives r ~ 0.003, the same region of (n_s, r) as Starobinsky inflation.",
   "addresses_puzzles": [
     {
       "puzzle_id": "inflation_initial_conditions",
@@ -45,6 +45,9 @@
     "conformal_symmetry",
     "attractor_regime",
     "plateau_potential"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
   ],
   "composes_with": [
     "starobinsky_inflation",

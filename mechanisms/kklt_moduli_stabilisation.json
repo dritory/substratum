@@ -42,6 +42,14 @@
     "string_landscape",
     "metastable_de_sitter"
   ],
+  "field_tags": [
+    "cosmological_landscape",
+    "extra_spatial_dimensions",
+    "string_modulus",
+    "string_theoretic_background",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
   "composes_with": [
     "heterotic_string_compactification",
     "polchinski_d_branes",

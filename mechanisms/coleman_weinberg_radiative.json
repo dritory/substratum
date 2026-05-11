@@ -47,6 +47,10 @@
     "rg_driven",
     "no_quadratic_divergence"
   ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar",
+    "extra_u1_gauge_boson"
+  ],
   "composes_with": [
     "seesaw_type_i",
     "leptogenesis"

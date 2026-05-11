@@ -48,6 +48,9 @@
     "lower_f_a_window",
     "axiogenesis_compatible"
   ],
+  "field_tags": [
+    "qcd_anomalous_pseudoscalar"
+  ],
   "composes_with": [
     "peccei_quinn_axion",
     "axiogenesis",
