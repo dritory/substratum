@@ -23,6 +23,8 @@
       <span><b id="count-tensions">…</b><small>open tensions</small></span>
       <span><b id="count-benchmarks">…</b><small>benchmark constraints</small></span>
       <span><b id="count-frameworks">…</b><small>frameworks scored</small></span>
+      <span><b id="count-puzzles">…</b><small>naturalness puzzles</small></span>
+      <span><b id="count-mechanisms">…</b><small>proposed mechanisms</small></span>
     </nav>
   </div>
 </header>
@@ -32,6 +34,7 @@
   <button role="tab" data-view="landscape" class="tab">Length–energy landscape</button>
   <button role="tab" data-view="benchmarks" class="tab">Benchmark catalog</button>
   <button role="tab" data-view="evaluation" class="tab">Framework evaluation</button>
+  <button role="tab" data-view="alignment" class="tab">Dot alignment</button>
   <button role="tab" data-view="browse" class="tab">Browse all</button>
 </nav>
 
@@ -127,6 +130,45 @@
     </div>
     <div id="verdict-matrix" class="verdict-matrix"></div>
     <aside id="evaluation-detail" class="detail-panel" hidden></aside>
+  </section>
+
+  <section id="view-alignment" class="view" hidden>
+    <header class="view-head">
+      <h2>Puzzle ↔ mechanism dot alignment</h2>
+      <p>The catalog as a bipartite graph: every <em>puzzle</em> (column)
+         and every <em>mechanism</em> (row) the catalog tracks, with an
+         edge if the mechanism is encoded as addressing the puzzle.
+         Cell colour encodes the strength of the claim
+         (<span style="color:#1f6feb"><b>solves</b></span> &middot;
+          <span style="color:#7c3aed"><b>explains pattern</b></span> &middot;
+          <span style="color:#0a8754">ameliorates</span> &middot;
+          <span style="color:#a06900">requires</span>).
+         Mechanisms with no addressed-puzzles are hidden; mechanisms are
+         sorted by puzzles closed then by total puzzles addressed.</p>
+    </header>
+    <div id="chart-alignment-matrix" class="chart very-tall"></div>
+
+    <header class="view-head" style="margin-top:2rem;">
+      <h2>Compression vs coverage</h2>
+      <p>For every mechanism with at least one closed puzzle:
+         <em>x</em> = new free parameters introduced,
+         <em>y</em> = puzzles closed (<code>solves</code> or
+         <code>explains_pattern</code>).
+         The dashed lines are constant-compression rays.
+         Top-left is the dot-alignment sweet spot — many puzzles closed
+         with few parameters. Marker colour encodes status.</p>
+    </header>
+    <div id="chart-alignment-compression" class="chart tall"></div>
+
+    <header class="view-head" style="margin-top:2rem;">
+      <h2>Convergent puzzles</h2>
+      <p>How many distinct mechanisms claim to address each puzzle.
+         A high bar means the puzzle is an active battleground; the
+         <em>solve-edge density</em> sublabel shows what fraction of those
+         mechanisms claim <code>solves</code> or <code>explains_pattern</code>
+         (vs <code>ameliorates</code>/<code>requires</code>).</p>
+    </header>
+    <div id="chart-alignment-convergence" class="chart tall"></div>
   </section>
 
   <section id="view-browse" class="view" hidden>

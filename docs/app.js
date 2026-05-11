@@ -144,11 +144,19 @@ async function main() {
   document.getElementById("generated-at").textContent =
     new Date(bundle.generated_at).toLocaleString();
 
+  // Optional header counts — only populate if the placeholder exists in
+  // the current build of index.html.
+  const pz = document.getElementById("count-puzzles");
+  if (pz) pz.textContent = bundle.counts.puzzles ?? 0;
+  const mz = document.getElementById("count-mechanisms");
+  if (mz) mz.textContent = bundle.counts.mechanisms ?? 0;
+
   setupTabs();
   renderTensionsView(bundle);
   renderLandscape(bundle);
   renderBenchmarkCharts(bundle);
   renderEvaluation(bundle);
+  renderAlignment(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
 
@@ -1090,6 +1098,313 @@ function showFrameworkDetail(fwSummary, bundle) {
   );
 
   panel.removeAttribute("hidden");
+}
+
+/* ---------- alignment (puzzles x mechanisms) ---------- */
+
+const ROLE_COLOR = {
+  solves:           "#1f6feb",
+  explains_pattern: "#7c3aed",
+  ameliorates:      "#0a8754",
+  requires:         "#a06900",
+};
+const ROLE_LABEL = {
+  solves:           "solves",
+  explains_pattern: "explains pattern",
+  ameliorates:      "ameliorates",
+  requires:         "requires",
+};
+const ROLE_VALUE = {
+  // numeric encoding for the heatmap z-axis. The exact numbers are
+  // arbitrary; Plotly maps them to a discrete colorscale below.
+  solves:           4,
+  explains_pattern: 3,
+  ameliorates:      2,
+  requires:         1,
+};
+const STATUS_COLOR_ALIGN = {
+  mainstream: "#1f6feb",
+  niche:      "#7c3aed",
+  historical: "#6b7180",
+  disfavored: "#b54848",
+};
+
+function renderAlignment(bundle) {
+  const puzzles = bundle.puzzles || [];
+  const mechs = bundle.mechanisms || [];
+  const edges = (bundle.alignment && bundle.alignment.edges) || [];
+  if (!puzzles.length || !mechs.length) return;
+
+  const matrixEl = document.getElementById("chart-alignment-matrix");
+  const compEl   = document.getElementById("chart-alignment-compression");
+  const convEl   = document.getElementById("chart-alignment-convergence");
+  if (!matrixEl || !compEl || !convEl) return;
+
+  // --- shared indexing -----------------------------------------------------
+
+  // mechanism -> {puzzle -> edge}
+  const byMech = new Map();
+  for (const e of edges) {
+    if (!byMech.has(e.mechanism_id)) byMech.set(e.mechanism_id, new Map());
+    byMech.get(e.mechanism_id).set(e.puzzle_id, e);
+  }
+
+  // keep only mechanisms that touch >= 1 puzzle (otherwise the matrix has
+  // hundreds of empty rows that drown the signal).
+  const mechsWithEdges = mechs.filter((m) => byMech.has(m.id));
+
+  // sort mechanisms: puzzles closed desc, then total addressed desc, then id
+  const mechRows = [...mechsWithEdges].sort((a, b) => {
+    const ac = a._puzzles_closed ?? 0;
+    const bc = b._puzzles_closed ?? 0;
+    if (bc !== ac) return bc - ac;
+    const aa = a._puzzles_addressed ?? 0;
+    const ba = b._puzzles_addressed ?? 0;
+    if (ba !== aa) return ba - aa;
+    return a.id.localeCompare(b.id);
+  });
+
+  // sort puzzles by attention (most-targeted first)
+  const puzzleCols = [...puzzles].sort((a, b) => {
+    const ad = a._mechanisms_addressing ?? 0;
+    const bd = b._mechanisms_addressing ?? 0;
+    if (bd !== ad) return bd - ad;
+    return a.id.localeCompare(b.id);
+  });
+
+  renderAlignmentMatrix(matrixEl, mechRows, puzzleCols, byMech);
+  renderAlignmentCompression(compEl, mechs);
+  renderAlignmentConvergence(convEl, puzzles, edges);
+}
+
+function renderAlignmentMatrix(node, mechRows, puzzleCols, byMech) {
+  const mechIds   = mechRows.map((m) => m.id);
+  const puzzleIds = puzzleCols.map((p) => p.id);
+
+  // z matrix: rows = mechanisms, cols = puzzles. Empty cell = null so
+  // Plotly leaves it the background colour.
+  const z = mechRows.map((m) => {
+    const row = byMech.get(m.id) || new Map();
+    return puzzleCols.map((p) => {
+      const e = row.get(p.id);
+      return e ? (ROLE_VALUE[e.role] ?? 0) : null;
+    });
+  });
+
+  // build hover text per cell
+  const hovertext = mechRows.map((m) => {
+    const row = byMech.get(m.id) || new Map();
+    return puzzleCols.map((p) => {
+      const e = row.get(p.id);
+      if (!e) return "";
+      const note = (e.note || "").replace(/\s+/g, " ").slice(0, 220);
+      return `<b>${m.id}</b> &rarr; <b>${p.id}</b><br>` +
+             `role: ${ROLE_LABEL[e.role] || e.role}<br>` +
+             `confidence: ${e.confidence || "(unset)"}` +
+             (note ? `<br><i>${note}${note.length === 220 ? "&hellip;" : ""}</i>` : "");
+    });
+  });
+
+  // Discrete colorscale matching ROLE_VALUE.
+  // Plotly wants a normalized [0,1] colorscale; we step it.
+  const colorscale = [
+    [0.00, ROLE_COLOR.requires],
+    [0.25, ROLE_COLOR.requires],
+    [0.25, ROLE_COLOR.ameliorates],
+    [0.50, ROLE_COLOR.ameliorates],
+    [0.50, ROLE_COLOR.explains_pattern],
+    [0.75, ROLE_COLOR.explains_pattern],
+    [0.75, ROLE_COLOR.solves],
+    [1.00, ROLE_COLOR.solves],
+  ];
+
+  const trace = {
+    type: "heatmap",
+    x: puzzleIds,
+    y: mechIds,
+    z: z,
+    text: hovertext,
+    hovertemplate: "%{text}<extra></extra>",
+    xgap: 1,
+    ygap: 1,
+    zmin: 1,
+    zmax: 4,
+    colorscale: colorscale,
+    showscale: false,
+  };
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_MONO, color: THEME.ink, size: 10 },
+    margin: { l: 220, r: 20, t: 30, b: 200 },
+    height: Math.max(560, mechIds.length * 12 + 240),
+    xaxis: {
+      side: "bottom",
+      tickangle: -55,
+      tickfont: { size: 10, color: THEME.ink_soft },
+      automargin: false,
+      showgrid: false,
+      zeroline: false,
+    },
+    yaxis: {
+      autorange: "reversed",
+      tickfont: { size: 9, color: THEME.ink_soft },
+      automargin: false,
+      showgrid: false,
+      zeroline: false,
+    },
+  };
+
+  Plotly.newPlot(node, [trace], layout, { displaylogo: false, responsive: true });
+}
+
+function renderAlignmentCompression(node, mechs) {
+  // x: params, y: puzzles closed, marker: status, size: degree
+  const withClose = mechs.filter((m) => (m._puzzles_closed || 0) > 0);
+
+  // group by status for colored traces
+  const byStatus = new Map();
+  for (const m of withClose) {
+    const s = m.status || "unknown";
+    if (!byStatus.has(s)) byStatus.set(s, []);
+    byStatus.get(s).push(m);
+  }
+
+  const traces = [];
+  for (const [status, list] of byStatus) {
+    traces.push({
+      type: "scatter",
+      mode: "markers",
+      name: status,
+      x: list.map((m) => m._params || 0),
+      y: list.map((m) => m._puzzles_closed || 0),
+      text: list.map((m) =>
+        `<b>${m.id}</b><br>` +
+        `status: ${m.status}<br>` +
+        `closed: ${m._puzzles_closed}/${m._puzzles_addressed} edges<br>` +
+        `params: ${m._params}<br>` +
+        `compression: ${(m._compression || 0).toFixed(2)}`
+      ),
+      hovertemplate: "%{text}<extra></extra>",
+      marker: {
+        size: list.map((m) => 8 + 3 * (m._puzzles_addressed || 1)),
+        color: STATUS_COLOR_ALIGN[status] || THEME.ink_soft,
+        line: { color: THEME.marker_edge, width: 1 },
+        opacity: 0.85,
+      },
+    });
+  }
+
+  // constant-compression reference lines (y = c * x for c = 0.5, 1, 2)
+  const xs = [0.5, 8];
+  for (const c of [0.5, 1.0, 2.0]) {
+    traces.push({
+      type: "scatter",
+      mode: "lines",
+      x: xs,
+      y: xs.map((x) => c * x),
+      hoverinfo: "skip",
+      showlegend: false,
+      line: { color: THEME.grid, width: 1, dash: "dot" },
+    });
+  }
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_BODY, color: THEME.ink, size: 12 },
+    margin: { l: 60, r: 30, t: 30, b: 50 },
+    height: 460,
+    xaxis: {
+      title: { text: "new parameters introduced", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+    },
+    yaxis: {
+      title: { text: "puzzles closed (solves + explains_pattern)", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+      dtick: 1,
+    },
+    legend: { font: { color: THEME.ink_soft, size: 11 }, bgcolor: "rgba(0,0,0,0)" },
+    annotations: [
+      { x: 8, y: 0.5 * 8, text: "c=0.5", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+      { x: 6,   y: 1.0 * 6,   text: "c=1.0", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+      { x: 3,   y: 2.0 * 3,   text: "c=2.0", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+    ],
+  };
+
+  Plotly.newPlot(node, traces, layout, { displaylogo: false, responsive: true });
+}
+
+function renderAlignmentConvergence(node, puzzles, edges) {
+  // count mechanisms per puzzle, split by closing-role vs ameliorates/requires
+  const counts = new Map(); // puzzle_id -> {closing, weak}
+  for (const e of edges) {
+    if (!counts.has(e.puzzle_id)) counts.set(e.puzzle_id, { closing: 0, weak: 0 });
+    const c = counts.get(e.puzzle_id);
+    if (e.role === "solves" || e.role === "explains_pattern") c.closing += 1;
+    else c.weak += 1;
+  }
+  const rows = puzzles
+    .map((p) => ({
+      id: p.id,
+      name: p.name,
+      closing: (counts.get(p.id) || { closing: 0 }).closing,
+      weak:    (counts.get(p.id) || { weak: 0 }).weak,
+      total:   (counts.get(p.id) || { closing: 0, weak: 0 }).closing
+              + (counts.get(p.id) || { closing: 0, weak: 0 }).weak,
+    }))
+    .filter((r) => r.total > 0)
+    .sort((a, b) => b.total - a.total);
+
+  const xs = rows.map((r) => r.id);
+  const closingTrace = {
+    type: "bar",
+    name: "solves / explains_pattern",
+    x: xs,
+    y: rows.map((r) => r.closing),
+    marker: { color: ROLE_COLOR.solves },
+    hovertemplate: "<b>%{x}</b><br>closing edges: %{y}<extra></extra>",
+  };
+  const weakTrace = {
+    type: "bar",
+    name: "ameliorates / requires",
+    x: xs,
+    y: rows.map((r) => r.weak),
+    marker: { color: ROLE_COLOR.ameliorates },
+    hovertemplate: "<b>%{x}</b><br>weak edges: %{y}<extra></extra>",
+  };
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_BODY, color: THEME.ink, size: 12 },
+    margin: { l: 50, r: 20, t: 30, b: 180 },
+    height: 460,
+    barmode: "stack",
+    xaxis: {
+      tickangle: -55,
+      tickfont: { family: FONT_MONO, size: 10, color: THEME.ink_soft },
+      automargin: false,
+      showgrid: false,
+    },
+    yaxis: {
+      title: { text: "mechanisms addressing", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      tickfont: { color: THEME.ink_soft },
+      dtick: 5,
+    },
+    legend: { orientation: "h", y: 1.10, x: 0, font: { color: THEME.ink_soft, size: 11 }, bgcolor: "rgba(0,0,0,0)" },
+  };
+
+  Plotly.newPlot(node, [closingTrace, weakTrace], layout, { displaylogo: false, responsive: true });
 }
 
 /* ---------- browse ---------- */

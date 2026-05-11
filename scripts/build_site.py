@@ -18,8 +18,12 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 BENCH_DIR = ROOT / "benchmarks"
 FW_DIR = ROOT / "frameworks"
+PUZZLE_DIR = ROOT / "puzzles"
+MECH_DIR = ROOT / "mechanisms"
 OUT_DIR = ROOT / "docs"
 OUT_FILE = OUT_DIR / "data.json"
+
+CLOSING_ROLES = {"solves", "explains_pattern"}
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -245,9 +249,47 @@ def compute_evaluation(benchmarks: list[dict]) -> dict | None:
         return None
 
 
+def derive_alignment(puzzles: list[dict], mechanisms: list[dict]) -> dict:
+    """Build the bipartite-graph payload consumed by the alignment view."""
+    puzzle_index = {p["id"]: i for i, p in enumerate(puzzles)}
+    edges = []
+    for mech in mechanisms:
+        closed = 0
+        for edge in mech.get("addresses_puzzles", []) or []:
+            pid = edge.get("puzzle_id")
+            role = edge.get("role")
+            if pid in puzzle_index:
+                edges.append({
+                    "mechanism_id": mech["id"],
+                    "puzzle_id": pid,
+                    "role": role,
+                    "confidence": edge.get("confidence"),
+                    "note": edge.get("note", ""),
+                })
+            if role in CLOSING_ROLES:
+                closed += 1
+        params = int((mech.get("introduces") or {}).get("new_parameters_count", 1) or 1)
+        mech["_puzzles_closed"] = closed
+        mech["_puzzles_addressed"] = len(mech.get("addresses_puzzles", []) or [])
+        mech["_params"] = params
+        mech["_compression"] = closed / max(params, 1)
+
+    # per-puzzle convergence count
+    convergence = {pid: 0 for pid in puzzle_index}
+    for e in edges:
+        convergence[e["puzzle_id"]] += 1
+    for p in puzzles:
+        p["_mechanisms_addressing"] = convergence.get(p["id"], 0)
+
+    return {"edges": edges}
+
+
 def main() -> int:
     tensions = [derive_tension(e) for e in load_dir(DATA_DIR)]
     benchmarks = [derive_benchmark(e) for e in load_dir(BENCH_DIR)]
+    puzzles = load_dir(PUZZLE_DIR) if PUZZLE_DIR.exists() else []
+    mechanisms = load_dir(MECH_DIR) if MECH_DIR.exists() else []
+    alignment = derive_alignment(puzzles, mechanisms)
 
     domains_tension = sorted({e.get("domain") for e in tensions if e.get("domain")})
     domains_bench_kinds = sorted({e.get("kind") for e in benchmarks if e.get("kind")})
@@ -272,6 +314,8 @@ def main() -> int:
             "tensions": len(tensions),
             "benchmarks": len(benchmarks),
             "frameworks": len((evaluation or {}).get("frameworks", [])),
+            "puzzles": len(puzzles),
+            "mechanisms": len(mechanisms),
         },
         "facets": {
             "tension_domains": domains_tension,
@@ -285,6 +329,9 @@ def main() -> int:
         "tensions": tensions,
         "benchmarks": benchmarks,
         "evaluation": evaluation,
+        "puzzles": puzzles,
+        "mechanisms": mechanisms,
+        "alignment": alignment,
     }
 
     OUT_DIR.mkdir(exist_ok=True)
@@ -295,7 +342,9 @@ def main() -> int:
     print(
         f"wrote {OUT_FILE.relative_to(ROOT)}: "
         f"{len(tensions)} tensions, {len(benchmarks)} benchmarks, "
-        f"{n_fw} frameworks ({n_verdicts} verdicts)"
+        f"{n_fw} frameworks ({n_verdicts} verdicts), "
+        f"{len(puzzles)} puzzles, {len(mechanisms)} mechanisms, "
+        f"{len(alignment['edges'])} alignment edges"
     )
     return 0
 
