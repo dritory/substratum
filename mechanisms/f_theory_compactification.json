@@ -31,6 +31,18 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "F-theory is naturally 12D, with 8 dimensions compactified on an elliptic Calabi-Yau fourfold; the surviving 4D is a feature of the geometry."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "F-theory on an elliptic Calabi-Yau fourfold is a non-perturbative formulation of Type IIB string theory that is a candidate UV completion of GR + the SM (Vafa 1996; Donagi-Wijnholt 2008; Weigand 2018 review)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa couplings in F-theory GUTs are computed from intersection numbers of matter curves on the GUT divisor; the parameter count is reduced to a small number of geometric inputs (Heckman 2010; Marsano-Saulina-Schafer-Nameki 2009)."
     }
   ],
   "touches_benchmarks": [],

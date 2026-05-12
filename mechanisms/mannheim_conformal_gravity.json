@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Conformal invariance forbids a cosmological-constant term in the Lagrangian; an effective cosmological scale emerges from the global potential term. Specific Lambda value not derived."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Weyl-tensor-squared action is power-counting renormalisable but introduces ghosts; matter-sector reconciliation unsettled (Mannheim 2012)."
     }
   ],
   "touches_benchmarks": [

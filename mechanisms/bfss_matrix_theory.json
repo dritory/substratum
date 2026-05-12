@@ -14,6 +14,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Provides a non-perturbative definition of M-theory in which BH states are constructible as matrix-model configurations; the matrix model is unitary by construction, so BH evaporation preserves information. Generalisation to asymptotically-flat 4D BHs remains an active research goal."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Conjectured non-perturbative definition of M-theory as the N -> infinity limit of supersymmetric matrix quantum mechanics in the infinite-momentum frame (Banks-Fischler-Shenker-Susskind 1997)."
     }
   ],
   "touches_benchmarks": [

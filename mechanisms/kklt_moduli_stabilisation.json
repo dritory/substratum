@@ -19,6 +19,12 @@
       "role": "requires",
       "confidence": "proposed",
       "note": "KKLT provides the UV completion in which inflationary scenarios (including eternal inflation populating the landscape) become well-defined; specific inflaton constructions (KKLMMT 2003) sit inside the framework."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Vacuum selection from a finite (but large) set of flux choices and non-perturbative stabilisations; parameters become geometric and discrete rather than continuous (Kachru-Kallosh-Linde-Trivedi 2003)."
     }
   ],
   "touches_benchmarks": [],

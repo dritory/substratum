@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Right-handed neutrinos sit naturally in the 10 + 5-bar; type-I seesaw at intermediate scales follows."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Alternative SU(5) embedding with hypercharge generator outside SU(5); different Yukawa relations than minimal SU(5) (Barr 1982)."
     }
   ],
   "touches_benchmarks": [

@@ -37,6 +37,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Tegmark's argument: stable orbits require d=3 (Bertrand's theorem), and life requires stable orbits. Observers exist only in 3+1, selecting the dimensionality anthropically."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Selection across a multiverse of vacua: parameters are not derived but observed values are conditioned on observers existing; explains some parameters (Lambda, m_H) at the cost of giving up predictive uniqueness (Weinberg 1987; Susskind 2003)."
     }
   ],
   "touches_benchmarks": [],

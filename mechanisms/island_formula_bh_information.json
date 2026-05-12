@@ -14,6 +14,12 @@
       "role": "solves",
       "confidence": "established",
       "note": "Within the controlled setting (JT gravity, asymptotically-AdS, semiclassical bulk), the information paradox is resolved: the Page curve emerges from the gravitational path integral, the radiation reconstructs the interior at late times via entanglement-wedge reconstruction. Generalisation to physical 4D evaporating black holes is in active development."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Quantum-extremal-surface + entanglement-wedge prescription yields a unitary Page curve for black-hole evaporation purely from semi-classical gravity, providing a concrete answer to the BH information paradox (Penington 2020; Almheiri-Engelhardt-Marolf-Maxfield 2020)."
     }
   ],
   "touches_benchmarks": [

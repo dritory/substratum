@@ -19,6 +19,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "V_cb ~ epsilon, V_ub ~ epsilon * epsilon' follow from U(2) breaking; reproduces Wolfenstein-like organisation."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "U(2) horizontal symmetry between the first two families reduces the number of independent Yukawa parameters via spurion-controlled breaking (Pomarol-Tommasini 1995)."
     }
   ],
   "touches_benchmarks": [

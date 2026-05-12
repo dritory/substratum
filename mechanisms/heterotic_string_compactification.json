@@ -31,6 +31,18 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Heterotic strings live in 10D; the observed 3+1 dimensions arise from compactification on a 6D internal manifold. The 4D large dimensions are selected by the choice of compactification, with 4D being singled out only via additional assumptions (e.g. anthropic)."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Heterotic E8 x E8 (or SO(32)) string compactified on Calabi-Yau is a UV-complete framework for GR + non-abelian gauge theory; the historical first viable string-TOE candidate (Candelas-Horowitz-Strominger-Witten 1985)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawas and gauge couplings in heterotic compactifications are determined by the Calabi-Yau geometry and vector bundle data, reducing free SM parameters to a finite set of topological/geometric choices (Candelas-de la Ossa et al. 1990s)."
     }
   ],
   "touches_benchmarks": [

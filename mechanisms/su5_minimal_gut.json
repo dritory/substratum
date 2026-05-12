@@ -18,6 +18,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Quark and charged-lepton masses are related at the GUT scale (m_b = m_tau, m_s = m_mu / 3, m_d = 3 m_e at unification); partial success for third generation."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "SU(5) unifies the three SM gauge couplings into one at M_GUT and predicts m_b = m_tau at the unification scale, removing 2 gauge-coupling parameters and 1 Yukawa relation (Georgi-Glashow 1974)."
     }
   ],
   "touches_benchmarks": [

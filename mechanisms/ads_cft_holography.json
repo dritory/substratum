@@ -20,6 +20,12 @@
       "role": "requires",
       "confidence": "contested",
       "note": "AdS/CFT is naturally formulated for negative Lambda; positive Lambda (de Sitter) holographic duality is not established. Listed as a UV completion that constrains the Lambda problem rather than solves it."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Provides a precise non-perturbative definition of quantum gravity in asymptotically-AdS spacetimes via a dual CFT on the boundary (Maldacena 1997). Does not directly address de Sitter or cosmological QG, but establishes that consistent non-perturbative QG exists in this regime."
     }
   ],
   "touches_benchmarks": [

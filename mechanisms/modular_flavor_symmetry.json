@@ -29,6 +29,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Specific modular weights and SL(2,Z) representations can yield charged-lepton mass ratios close to the Koide value (Q = 2/3); the formula appears as an approximate consequence rather than an exact prediction (Feruglio 2019, Penedo-Petcov 2019)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa entries are modular forms of a finite modular group at fixed weight; the number of free parameters drops from O(20) to O(few) (Feruglio 2017; Ding-King 2024 review)."
     }
   ],
   "touches_benchmarks": [

@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Ultralight ALPs in the 10^-22 - 10^-18 eV range (or QCD-axion-mass range) can be cold dark matter via misalignment; the multiplicity of the axiverse populates several DM candidates per compactification."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Axion masses, decay constants, and couplings are determined by Kahler-moduli geometry; the axion sector parameter count is geometric rather than free (Arvanitaki et al. 2010)."
     }
   ],
   "touches_benchmarks": [

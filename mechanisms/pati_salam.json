@@ -18,6 +18,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Restored parity symmetry above the breaking scale forces theta = 0; theta is regenerated only after parity breaking and remains naturally small (Babu-Mohapatra-style)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "SU(4)_C x SU(2)_L x SU(2)_R treats leptons as a fourth colour and unifies left-right gauge dynamics, constraining quark-lepton mass relations (Pati-Salam 1974)."
     }
   ],
   "touches_benchmarks": [

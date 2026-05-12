@@ -30,6 +30,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Provides natural setting for leptogenesis with M_R fixed by intermediate symmetry breaking."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "SO(10) unifies one SM family + N_R into a single 16 spinor representation, removing 2 gauge-coupling parameters and constraining all Yukawas within a family (Georgi 1975; Fritzsch-Minkowski 1975)."
     }
   ],
   "touches_benchmarks": [

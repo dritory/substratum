@@ -31,6 +31,18 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Wetterich (2018) argued that alpha at low energy is computable from the UV fixed point of gauge + gravity; the predicted value is within ~10% of 1/137 in their truncation."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Non-trivial UV fixed point of the gravitational coupling renders QG nonperturbatively renormalisable. If the conjecture holds, asymptotic safety is a complete UV completion of GR + matter (Weinberg 1979; Reuter 1998; Eichhorn 2023 review)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "If gravity has a UV fixed point that drags matter couplings, dimensionless SM couplings could be predicted from the UV (Wetterich 2018; Eichhorn-Held 2018)."
     }
   ],
   "touches_benchmarks": [

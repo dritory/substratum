@@ -1,0 +1,67 @@
+{
+  "id": "sm_free_parameters_origin",
+  "name": "Origin of the Standard Model's free parameters",
+  "aliases": [
+    "SM input parameters",
+    "why 25 parameters",
+    "Standard Model parameter problem"
+  ],
+  "kind": "pattern",
+  "summary": "The Standard Model has ~25 dimensionless or dimensionful parameters that must be supplied as inputs from experiment: 3 gauge couplings, 9 charged-fermion masses (or equivalently Yukawas), 4 CKM parameters, 4 PMNS parameters + neutrino masses, the Higgs mass and VEV, theta_QCD, and (with right-handed neutrinos) Majorana phases. The SM cannot predict any of these — they enter the Lagrangian as unconstrained constants. A theory-of-everything aspirant must derive at least some of these parameters from a smaller set of structural inputs (geometry, symmetry, dynamics) rather than postulating them. This is the aggregate version of individual value-puzzles like the Higgs mass, flavor hierarchies, and the Cabibbo angle; the question is not 'why is alpha = 1/137 specifically' but 'why must the theory take ~25 numbers as input at all'.",
+  "characteristic_numbers": [
+    {
+      "symbol": "N_params (SM with massive neutrinos)",
+      "value": 26,
+      "expected": "ideally O(few) structural inputs",
+      "note": "Counting: 3 gauge couplings + 6 quark masses + 3 charged-lepton masses + 4 CKM (3 angles + 1 phase) + 3 neutrino masses + 4 PMNS (3 angles + 1 Dirac phase) + Higgs VEV + Higgs self-coupling + theta_QCD. Adds 2 Majorana phases if neutrinos are Majorana."
+    },
+    {
+      "symbol": "N_params (SM minimal, massless nu)",
+      "value": 19,
+      "expected": "ideally O(few)",
+      "note": "Pre-2000 counting without neutrino mass: same list minus neutrino sector."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Each free parameter is a separate fine-tuning opportunity at the UV scale; the aggregate is the strongest form of 'the SM is not natural'."
+    }
+  ],
+  "history": "The parameter-counting framing dates to the discovery of the third generation (1975-1977) which fixed the SM Lagrangian's structure. Cabibbo (1963) introduced the first mixing parameter; Kobayashi-Maskawa (1973) extended to three generations + CP phase. Neutrino oscillations (1998-2001) added the PMNS sector. The 'why these numbers' framing became sharper post-LHC when no BSM derivation emerged at TeV scale. The string-landscape and anthropic-multiverse arguments (Weinberg 1987, Susskind 2003) frame the parameters as environmentally selected; competing programs aim to derive them from compactification geometry (Yukawas from intersection numbers in F-theory) or modular symmetry (Yukawas as modular forms).",
+  "references": [
+    {
+      "citation": "Donoghue, Golowich, Holstein, 'Dynamics of the Standard Model', Cambridge (2nd ed. 2014)",
+      "url": "https://www.cambridge.org/9780521768672"
+    },
+    {
+      "citation": "Burgess and Moore, 'The Standard Model: A Primer', Cambridge (2007)",
+      "url": "https://www.cambridge.org/9780521860369"
+    },
+    {
+      "citation": "Cabibbo, 'Unitary symmetry and leptonic decays', PRL 10, 531 (1963)",
+      "doi": "10.1103/PhysRevLett.10.531"
+    },
+    {
+      "citation": "Kobayashi and Maskawa, 'CP-violation in the renormalizable theory of weak interaction', Prog. Theor. Phys. 49, 652 (1973)",
+      "doi": "10.1143/PTP.49.652"
+    },
+    {
+      "citation": "Susskind, 'The anthropic landscape of string theory', in 'Universe or Multiverse?' (Cambridge 2007)",
+      "arxiv": "hep-th/0302219"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics', Phys. Rev. D 110, 030001 (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    }
+  ],
+  "tags": [
+    "pattern",
+    "free_parameters",
+    "sm_aggregate",
+    "toe_headline"
+  ]
+}

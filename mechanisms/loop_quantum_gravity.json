@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Spin-network spectral dimension calculations (Modesto 2009) suggest reduction to d_s ~ 2 at Planck scales in LQG, though full derivation requires settling the dynamics."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Background-independent canonical quantisation of GR via Ashtekar connection variables and spin-network basis; claims a complete kinematical and (in spin-foam form) dynamical framework for QG (Ashtekar 1986; Rovelli-Smolin 1995; Rovelli-Vidotto 2014)."
     }
   ],
   "touches_benchmarks": [

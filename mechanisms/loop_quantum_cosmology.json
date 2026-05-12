@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Quantum-bounce replaces the singular initial state with a smooth pre-Big-Bang phase, providing an alternative to inflationary initial conditions. Specific predictions for CMB low-multipole power and B-mode features distinguish LQC from inflation-only scenarios."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Symmetry-reduced LQG applied to FRW cosmology; resolves the Big Bang singularity via a quantum bounce but is not a complete QG framework by itself (Bojowald 2001; Ashtekar-Pawlowski-Singh 2006)."
     }
   ],
   "touches_benchmarks": [

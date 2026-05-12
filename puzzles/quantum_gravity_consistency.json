@@ -1,0 +1,82 @@
+{
+  "id": "quantum_gravity_consistency",
+  "name": "Consistent unification of general relativity and quantum field theory",
+  "aliases": [
+    "quantum gravity problem",
+    "GR-QM incompatibility",
+    "Planck-scale unification"
+  ],
+  "kind": "consistency",
+  "summary": "General relativity and quantum field theory are individually validated to extraordinary precision in their separate regimes, but become mutually incompatible at the Planck scale (Lambda_Pl ~ 10^19 GeV) where curvature and quantum fluctuations both matter. Perturbative quantisation of GR is non-renormalisable (two-loop counterterm shown by Goroff-Sagnotti 1986), and the resulting effective field theory breaks down well before the Planck scale. A theory of everything must supply a UV-complete framework that reproduces both GR and the Standard Model in their respective regimes, while resolving singularities (Big Bang, black hole interior) and the black-hole information paradox. This is the headline open problem the term 'theory of everything' was coined for.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Lambda_Planck",
+      "value": "1.22e19 GeV",
+      "expected": "scale where quantum and gravitational effects both unsuppressed",
+      "note": "Below ~ M_Pl, GR-as-EFT is consistent; above it, perturbative quantisation gives uncontrolled counterterms. The boundary is operational, not derived."
+    },
+    {
+      "symbol": "GR two-loop UV divergence coefficient",
+      "value": "209/2880 (1/8 pi^2)^2 in dimensional regularisation",
+      "expected": "0 (would-be renormalisable)",
+      "note": "Goroff-Sagnotti 1986: the (1/epsilon) pole in the two-loop effective action contains a Riemann^3 counterterm with this coefficient, proving GR is perturbatively non-renormalisable."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "graviton_speed_gw170817",
+    "graviton_mass_gw_dispersion",
+    "lorentz_invariance_photon"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "unitarity",
+      "status": "stresses",
+      "note": "Black-hole evaporation in semi-classical gravity appears to violate unitarity; resolving this requires a quantum theory of gravity. Hawking's 1976 calculation; Page-Mathur firewall and island-formula resolutions in the 2010s."
+    },
+    {
+      "principle": "background_independence",
+      "status": "stresses",
+      "note": "Perturbative QG quantises fluctuations around a fixed background, but the background itself should be dynamical in any complete theory. Different programs (LQG, CDT, causal sets) take this as foundational; string theory historically did not but has moved toward it via holography."
+    },
+    {
+      "principle": "locality",
+      "status": "stresses",
+      "note": "Holographic and entropic-gravity arguments suggest QG cannot be local in the bulk-QFT sense; the holographic principle constrains bulk d.o.f. by boundary area."
+    }
+  ],
+  "history": "DeWitt 1967 first attempted canonical quantisation of GR. 't Hooft-Veltman 1974 showed GR + scalar is non-renormalisable at one loop on-shell; Goroff-Sagnotti 1986 showed pure GR diverges at two loops. Donoghue 1994 reframed GR as an effective field theory below Lambda_Pl. String theory (1968-2000s), loop quantum gravity (1986-), causal dynamical triangulations (1998-), asymptotic safety (Weinberg 1979, Reuter 1998), causal set theory (1987-), and Horava-Lifshitz (2009) are the main programs of active research. The black hole information paradox (Hawking 1976) and the Page curve (Page 1993; island formula 2019-2020) sharpened the unitarity demand.",
+  "references": [
+    {
+      "citation": "DeWitt, 'Quantum theory of gravity. I. The canonical theory', Phys. Rev. 160, 1113 (1967)",
+      "doi": "10.1103/PhysRev.160.1113"
+    },
+    {
+      "citation": "Goroff and Sagnotti, 'The ultraviolet behavior of Einstein gravity', Nucl. Phys. B 266, 709 (1986)",
+      "doi": "10.1016/0550-3213(86)90193-8"
+    },
+    {
+      "citation": "Donoghue, 'General relativity as an effective field theory', PRD 50, 3874 (1994)",
+      "arxiv": "gr-qc/9405057"
+    },
+    {
+      "citation": "Kiefer, 'Quantum Gravity', International Series of Monographs on Physics 155, Oxford (3rd ed. 2012)",
+      "url": "https://global.oup.com/academic/product/quantum-gravity-9780199585205"
+    },
+    {
+      "citation": "Polchinski, 'String Theory', vol. 1-2, Cambridge (1998)",
+      "url": "https://www.cambridge.org/9780521672276"
+    },
+    {
+      "citation": "Rovelli and Vidotto, 'Covariant Loop Quantum Gravity', Cambridge (2014)",
+      "url": "https://www.cambridge.org/9781107069626"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "quantum_gravity",
+    "toe_headline",
+    "planck_scale",
+    "uv_completion"
+  ]
+}

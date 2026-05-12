@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Ties dark energy and gravity to the same emergent entropic principle; no specific derivation of Lambda value. More a re-framing than a quantitative prediction."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Proposes that gravity is emergent from holographic / entanglement-entropy considerations; explains universal aspects but not a complete UV framework (Verlinde 2010, 2016)."
     }
   ],
   "touches_benchmarks": [

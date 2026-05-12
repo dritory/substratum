@@ -25,6 +25,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "S_4 family models with constrained Yukawa structure produce Koide-like patterns; the formula's robustness across S_4 models is sometimes cited as evidence for the underlying symmetry."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "S_4 constraints on flavor sector reduce free PMNS parameters; argued to be the minimal non-abelian group capable of mixing (Lam 2008)."
     }
   ],
   "touches_benchmarks": [

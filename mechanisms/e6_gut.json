@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "27 contains an SM-singlet neutrino per family that can serve as the right-handed neutrino in the type-I seesaw, with M_R set by the GUT-scale physics."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "E6 contains SO(10) and adds further unification of matter; reduces the family Yukawa structure further (Gursey-Ramond-Sikivie 1976)."
     }
   ],
   "touches_benchmarks": [

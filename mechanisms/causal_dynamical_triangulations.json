@@ -25,6 +25,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "CDT simulations show that 4D spacetime emerges in the IR from a sum over discrete causal triangulations, with 4D being dynamically preferred over other dimensions (Ambjorn-Jurkiewicz-Loll 2004)."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Non-perturbative path integral over discrete causally-foliated 4D triangulations; 4D continuum emerges in the IR with d_s -> 2 in the UV. Background-independent and computationally tractable (Ambjorn-Jurkiewicz-Loll 2004)."
     }
   ],
   "touches_benchmarks": [

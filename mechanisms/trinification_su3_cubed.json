@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "27 contains an SU(2)-singlet neutrino per generation enabling type-I seesaw with M_R at intermediate scale."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "SU(3)_C x SU(3)_L x SU(3)_R unifies fermions into 27 of E_6; constrains lepton-quark Yukawa relations (de Rujula-Georgi-Glashow 1984)."
     }
   ],
   "touches_benchmarks": [

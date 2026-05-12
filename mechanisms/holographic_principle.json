@@ -19,6 +19,12 @@
       "role": "requires",
       "confidence": "proposed",
       "note": "The Cohen-Kaplan-Nelson holographic dark-energy bound (1999) is one application; deeper implications for Lambda are encoded in the de Sitter entropy bound and remain open."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "States that bulk d.o.f. of any region are bounded by the boundary area in Planck units; a universal structural constraint on QG d.o.f. ('t Hooft 1993; Susskind 1994; Bousso 1999 covariant version)."
     }
   ],
   "touches_benchmarks": [

@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "D-brane constructions of the SM (Standard Model on intersecting / magnetised branes) provide a string-theoretic UV completion in which the EW hierarchy is fixed by compactification geometry."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "D-branes extend perturbative string theory to include non-perturbative solitonic states; essential ingredient of any complete string-TOE but not the framework by itself (Polchinski 1995)."
     }
   ],
   "touches_benchmarks": [

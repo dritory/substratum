@@ -19,6 +19,12 @@
       "role": "solves",
       "confidence": "established",
       "note": "Anisotropic scaling z=3 in the UV gives spectral dimension d_s = 2 by construction; dimensional reduction is the defining feature of the model."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Anisotropic UV scaling z=3 makes gravity power-counting renormalisable at the price of breaking Lorentz invariance in the UV. Constrained but not killed by Lorentz-violation bounds (Horava 2009; Wang 2017 review)."
     }
   ],
   "touches_benchmarks": [

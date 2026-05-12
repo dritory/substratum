@@ -19,6 +19,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Wolfenstein lambda is identified with epsilon; the powers of lambda in V_us, V_cb, V_ub follow from the same integer-charge assignments."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa hierarchies are generated from integer U(1)_FN charges via flavon VEV ratios; reduces 9 charged-fermion Yukawas to O(few) charge assignments (Froggatt-Nielsen 1979)."
     }
   ],
   "touches_benchmarks": [

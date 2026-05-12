@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "A_4 with appropriate flavon vacuum alignment generates lepton mass ratios that approach the Koide value, though A_4 alone does not predict it exactly."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Non-abelian discrete A_4 flavor symmetry constrains lepton mixing to tri-bimaximal-near-mixing patterns, reducing PMNS parameter count (Altarelli-Feruglio 2005)."
     }
   ],
   "touches_benchmarks": [

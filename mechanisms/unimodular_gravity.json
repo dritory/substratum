@@ -9,6 +9,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Removes the radiative-correction component but reintroduces the 'why this value' question as a boundary condition. Does not explain why the integration constant takes the meV^4 value; relabels the puzzle rather than resolving it."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Reformulation with fixed metric determinant; addresses the cosmological-constant problem via decoupling but does not resolve the UV problem of perturbative GR (Anderson-Finkelstein 1971; Smolin 2009)."
     }
   ],
   "touches_benchmarks": [

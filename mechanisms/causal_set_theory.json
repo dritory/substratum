@@ -19,6 +19,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Discrete causal-set models exhibit Hausdorff dimension different from spectral dimension, with the spectral dimension reducing in the UV (Eichhorn-Mizera 2014)."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Discrete partial-order substrate for spacetime from which a continuum geometry emerges; background-independent and Lorentz-invariant by construction (Bombelli-Lee-Meyer-Sorkin 1987; Sorkin 2003 review)."
     }
   ],
   "touches_benchmarks": [
