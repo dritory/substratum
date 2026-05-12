@@ -23,7 +23,7 @@
     {
       "puzzle_id": "proton_radius_puzzle",
       "role": "ameliorates",
-      "confidence": "proposed",
+      "confidence": "contested",
       "note": "A gauged U(1)_{L_mu - L_tau} with M_Z' ~ 10-100 MeV and g' ~ 10^-3 contributes to muonic hydrogen Lamb shift but not electronic, naturally producing the muonic-vs-electronic r_p discrepancy (Pospelov 2010, Batell-McKeen-Pospelov 2011)."
     }
   ],

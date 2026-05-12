@@ -17,7 +17,7 @@
     {
       "puzzle_id": "dimensional_reduction_at_planck",
       "role": "solves",
-      "confidence": "proposed",
+      "confidence": "established",
       "note": "Anisotropic scaling z=3 in the UV gives spectral dimension d_s = 2 by construction; dimensional reduction is the defining feature of the model."
     }
   ],
