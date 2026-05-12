@@ -54,8 +54,18 @@
     "seesaw_type_i"
   ],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
     "mssm",
-    "twin_higgs"
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Graham, Kaplan, Rajendran (2015). Variants with QCD or non-QCD backreaction proliferated through 2016-2018; cosmological consistency (overproduction of inflationary perturbations, baryogenesis compatibility) is the leading concern.",

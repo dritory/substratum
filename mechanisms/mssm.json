@@ -31,6 +31,12 @@
       "role": "ameliorates",
       "confidence": "disfavored",
       "note": "Exact SUSY would cancel vacuum-energy contributions; broken SUSY at M_SUSY ~ TeV leaves a residual ~M_SUSY^4, which is ~10^60 too large relative to the observed Lambda. Listed for graph completeness; not a viable solution."
+    },
+    {
+      "puzzle_id": "cdf_w_mass_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Stop-sbottom splitting contributes to electroweak oblique corrections; for m_t1 << m_b1 the resulting Delta T can push M_W up by O(20-80 MeV)."
     }
   ],
   "touches_benchmarks": [
@@ -94,7 +100,15 @@
     "peccei_quinn_axion"
   ],
   "excludes": [
-    "twin_higgs"
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nnaturalness",
+    "relaxion",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Wess-Zumino (1974); Dimopoulos-Georgi (1981) MSSM; Dimopoulos-Raby-Wilczek (1981) gauge unification. Dominant BSM paradigm 1985-2015. Post-LHC Run 1+2 nulls (2012-2018) demoted from 'mainstream' to 'niche' for low-scale natural SUSY; high-scale (PeV) and split SUSY remain.",

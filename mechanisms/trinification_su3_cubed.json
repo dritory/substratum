@@ -62,9 +62,10 @@
     "seesaw_type_i"
   ],
   "excludes": [
-    "su5_minimal_gut",
+    "flipped_su5_gut",
+    "pati_salam",
     "so10_gut",
-    "pati_salam"
+    "su5_minimal_gut"
   ],
   "status": "niche",
   "history": "de Rujula, Georgi, Glashow (1984), 'Trinification of all elementary particle forces', presented at the Fifth Workshop on Grand Unification (Brown University), in K. Kang, H. Fried, P. Frampton (eds.), 'Fifth Workshop on Grand Unification', World Scientific, Singapore (1984). Active modern variants connect to E6 GUT and B-anomaly model-building.",

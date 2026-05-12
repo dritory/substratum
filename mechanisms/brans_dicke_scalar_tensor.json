@@ -50,7 +50,16 @@
     "electroweak_singlet_real_scalar"
   ],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "galileon_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "historical",
   "history": "Brans and Dicke (1961), 'Mach's principle and a relativistic theory of gravitation', Phys. Rev. 124, 925. Foundational scalar-tensor theory; superseded for late-time cosmology by Horndeski and beyond-Horndeski theories, but observationally still constrained as a benchmark alternative to GR. Cassini 2003 (Bertotti-Iess-Tortora) gave the tightest omega > 4e4 bound.",
   "references": [

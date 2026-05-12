@@ -50,8 +50,18 @@
   ],
   "composes_with": [],
   "excludes": [
+    "composite_higgs",
+    "little_higgs",
     "mssm",
-    "twin_higgs"
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
   ],
   "status": "disfavored",
   "history": "ADD (1998) opened large-extra-dimension phenomenology. LHC missing-energy searches and astrophysical constraints have pushed n=2 viable parameter to M_* > ~5 TeV; n=3 less constrained but still squeezed.",

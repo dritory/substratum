@@ -23,6 +23,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Modular A_4 / S_4 models reproduce PMNS angles and provide testable predictions for the CP phase and neutrino mass ordering."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Specific modular weights and SL(2,Z) representations can yield charged-lepton mass ratios close to the Koide value (Q = 2/3); the formula appears as an approximate consequence rather than an exact prediction (Feruglio 2019, Penedo-Petcov 2019)."
     }
   ],
   "touches_benchmarks": [

@@ -19,6 +19,18 @@
       "role": "ameliorates",
       "confidence": "established",
       "note": "Starobinsky inflation (R + R^2/M^2) is a special case of f(R) gravity that reproduces Planck observations excellently \u2014 one of the leading inflation models."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "f(R) gravity gives a time-varying effective Newton constant and effective w(z); models like Hu-Sawicki f(R) can fit DESI evolution within ~10^-2 deviations."
+    },
+    {
+      "puzzle_id": "jwst_early_massive_galaxies",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Modified-gravity scenarios with enhanced growth at z > 5 (e.g. Hu-Sawicki f(R) with |f_R0| ~ 10^-5) accelerate structure formation enough to fit JWST counts."
     }
   ],
   "touches_benchmarks": [
@@ -61,7 +73,16 @@
   "composes_with": [
     "starobinsky_inflation"
   ],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "galileon_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "niche",
   "history": "Buchdahl (1970) introduced general f(R) gravity. Starobinsky (1980) used R + R^2 for inflation. Modern late-time-acceleration f(R) (Hu-Sawicki 2007, Starobinsky 2007, Tsujikawa 2008). Comprehensive review: Sotiriou and Faraoni (2010), 'f(R) theories of gravity', Rev. Mod. Phys. 82, 451, arXiv:0805.1726.",
   "references": [

@@ -12,6 +12,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Alternative to type-I; favored when the lightest seesaw scale is testable at colliders (M_Delta ~ TeV gives observable doubly-charged Higgs signatures)."
+    },
+    {
+      "puzzle_id": "cdf_w_mass_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "The scalar triplet's mass splitting between charged states contributes directly to T, shifting M_W. Models with TeV-scale triplets can saturate the CDF anomaly."
     }
   ],
   "touches_benchmarks": [

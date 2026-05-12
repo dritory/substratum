@@ -74,7 +74,19 @@
     "wess_zumino_supersymmetry",
     "dynamical_susy_breaking"
   ],
-  "excludes": [],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
   "status": "niche",
   "history": "Originated with Fayet (1975), 'Supergauge invariant extension of the Higgs mechanism and a model for the electron and its neutrino', Nucl. Phys. B 90, 104 (singlet introduction). Modern NMSSM developed through 1990s-2000s. Comprehensive review: Ellwanger, Hugonie, Teixeira (2010), 'The next-to-minimal supersymmetric Standard Model', Phys. Rep. 496, 1, arXiv:0910.1785. Among the leading post-LHC SUSY candidates due to its relaxed Higgs-mass tuning.",
   "references": [

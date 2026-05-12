@@ -54,7 +54,16 @@
     "higgs_inflation",
     "linde_eternal_inflation"
   ],
-  "excludes": [],
+  "excludes": [
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "warm_inflation"
+  ],
   "status": "mainstream",
   "history": "Kallosh and Linde (2013), 'Universality class in conformal inflation', JCAP 07, 002, arXiv:1306.5220. Family of attractors developed in subsequent papers; supergravity embeddings (Kallosh-Linde 2013, arXiv:1311.0472) and multi-field generalisations. One of the leading inflationary frameworks pre-LiteBIRD.",
   "references": [

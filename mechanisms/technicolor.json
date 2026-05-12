@@ -59,8 +59,18 @@
   ],
   "composes_with": [],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
     "mssm",
-    "twin_higgs"
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
   ],
   "status": "historical",
   "history": "Susskind (1979), 'Dynamics of spontaneous symmetry breaking in the Weinberg-Salam theory', Phys. Rev. D 20, 2619; Weinberg (1979), 'Implications of dynamical symmetry breaking', Phys. Rev. D 19, 1277. Extended technicolor for fermion masses (Dimopoulos-Susskind 1979). LHC's discovery of a 125 GeV SM-like Higgs in 2012 retired vanilla technicolor as a leading framework; walking and conformal variants and partial-compositeness descendants continue.",

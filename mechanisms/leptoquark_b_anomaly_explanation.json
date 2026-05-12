@@ -14,6 +14,18 @@
       "role": "solves",
       "confidence": "proposed",
       "note": "TeV-scale U1 leptoquark with Wilson coefficient C_LL ~ 0.1 at the LQ scale reproduces R(D*) ~ 0.290 (vs 0.254 SM); consistent with R(K), B_s -> mu mu, B -> K^* mu mu at SM levels. LHC direct searches for pair-produced leptoquarks have closed below ~1.5 TeV; resonant searches in pp -> tau tau bound around 4-5 TeV."
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "TeV-scale leptoquarks couple e/mu/tau differently, shifting V_us extracted from Kl3 vs Kl2 and producing apparent first-row non-unitarity. Cirigliano-Crivellin-Hoferichter-Moulson (2022) showed leptoquark fits accommodate the ~3sigma anomaly."
+    },
+    {
+      "puzzle_id": "proton_radius_puzzle",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Lepton-flavor-non-universal leptoquark couplings give muon-specific contributions to the proton-muon interaction at distance scales relevant to r_p extraction."
     }
   ],
   "touches_benchmarks": [

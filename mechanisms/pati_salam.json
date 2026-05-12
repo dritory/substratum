@@ -64,7 +64,11 @@
     "seesaw_type_i",
     "nelson_barr"
   ],
-  "excludes": [],
+  "excludes": [
+    "flipped_su5_gut",
+    "su5_minimal_gut",
+    "trinification_su3_cubed"
+  ],
   "status": "niche",
   "history": "Pati-Salam (1974). Independently relevant as the L-R symmetric extension of the SM; embedded in SO(10) -> Pati-Salam -> SM breaking chains. Modern phenomenology focuses on TeV-scale W_R searches at LHC (CMS, ATLAS).",
   "references": [

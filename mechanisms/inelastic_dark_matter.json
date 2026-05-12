@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Distinct phenomenology from elastic WIMPs: kinematic threshold suppresses light-target scattering, predicts annual modulation amplitude larger than elastic case. DAMA-favoured iDM parameter space has been largely closed by CRESST and XENON, but small windows survive at sub-GeV masses."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Excited state chi* decay to chi + gamma can produce a softer galactic gamma component complementary to standard annihilation."
     }
   ],
   "touches_benchmarks": [

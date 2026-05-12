@@ -37,7 +37,16 @@
     "anthropic_landscape",
     "sequestering"
   ],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "galileon_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond"
+  ],
   "status": "niche",
   "history": "Einstein (1919) formulated unimodular gravity. Discussed by Weinberg (1989) and Henneaux-Teitelboim (1989) as a partial response to the cosmological-constant problem. Quantum versions explored by Smolin and others.",
   "references": [

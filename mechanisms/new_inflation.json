@@ -51,7 +51,19 @@
     "electroweak_singlet_real_scalar"
   ],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "historical",
   "history": "Linde (1982), 'A new inflationary universe scenario', PLB 108, 389; Albrecht and Steinhardt (1982), 'Cosmology for grand unified theories with radiatively induced symmetry breaking', PRL 48, 1220 \u2014 independently proposed slow-roll inflation as an improvement over Guth's 1981 first-order phase-transition inflation. Specific new-inflation potentials are now disfavored, but the slow-roll paradigm remains universal.",
   "references": [

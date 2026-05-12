@@ -51,6 +51,8 @@
   ],
   "composes_with": [],
   "excludes": [
+    "babu_mohapatra_parity",
+    "massless_up_quark",
     "peccei_quinn_axion"
   ],
   "status": "niche",

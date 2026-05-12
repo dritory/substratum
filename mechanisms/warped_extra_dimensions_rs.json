@@ -70,9 +70,18 @@
     "partial_compositeness"
   ],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
     "mssm",
-    "twin_higgs",
-    "large_extra_dimensions_add"
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs"
   ],
   "status": "niche",
   "history": "Randall-Sundrum I and II (1999). RS1 with bulk SM fields (~2003) connected the warped scenario to flavor physics through bulk localization; AdS/CFT duality maps RS to 4D composite-Higgs scenarios.",

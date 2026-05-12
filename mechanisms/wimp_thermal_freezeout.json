@@ -12,6 +12,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "The WIMP miracle is a numerical coincidence; many BSM frameworks (MSSM, composite Higgs, IDM) produce viable WIMP DM candidates. Direct-detection nulls (LZ, XENONnT) have squeezed canonical thermal WIMP parameter space, especially for spin-independent cross-sections."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "The original Hooper-Goodenough interpretation: chi-chi annihilation to bbbar or tau+tau- with m_chi ~ 30-50 GeV and sigma v ~ 1e-26 cm^3/s reproduces the GCE spectrum and morphology. Pulsar-population alternative remains the leading systematic."
     }
   ],
   "touches_benchmarks": [

@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Provides additional CP-violating phases needed for electroweak baryogenesis and a strongly first-order phase transition in parts of parameter space. Combined with Sakharov sphalerons, can produce BAU at the EW transition."
+    },
+    {
+      "puzzle_id": "cdf_w_mass_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Heavy charged-scalar loops contribute to the T-parameter, shifting M_W upward by O(50-100 MeV) for tan(beta) ~ 1 and m_H+ ~ TeV. Strumia (2022) showed 2HDM accommodates the CDF value within natural parameter space."
     }
   ],
   "touches_benchmarks": [

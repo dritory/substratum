@@ -51,7 +51,17 @@
     "seesaw_type_i",
     "leptogenesis"
   ],
-  "excludes": [],
+  "excludes": [
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis"
+  ],
   "status": "mainstream",
   "history": "Starobinsky (1980), 'A new type of isotropic cosmological models without singularity', Phys. Lett. B 91, 99-102 \u2014 predates Guth's inflation framework but is often retroactively counted as the first inflationary model. Re-popularised after Planck 2013 ruled out simpler chaotic-inflation models with V ~ phi^n; Starobinsky's predictions sit at the centre of the observed (n_s, r) plane.",
   "references": [

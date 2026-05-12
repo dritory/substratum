@@ -52,7 +52,17 @@
     "warm_inflation",
     "alpha_attractors_inflation"
   ],
-  "excludes": [],
+  "excludes": [
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation"
+  ],
   "status": "mainstream",
   "history": "Boubekeur and Lyth (2005), 'Hilltop inflation', JCAP 07, 010, arXiv:hep-ph/0502047 \u2014 defined and analysed the small-field hilltop class. Among the leading inflationary frameworks consistent with Planck + BICEP/Keck data; weak-gravity-conjecture pressure is minimal.",
   "references": [

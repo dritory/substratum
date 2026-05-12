@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Sorkin's prediction of a fluctuating Lambda ~ 1/sqrt(N) where N is the spacetime volume in fundamental units gives Lambda ~ H_0^2 today, in remarkable agreement with the observed value. This is one of the most quantitative 'predictions' of any quantum-gravity approach for Lambda."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Discrete causal-set models exhibit Hausdorff dimension different from spectral dimension, with the spectral dimension reducing in the UV (Eichhorn-Mizera 2014)."
     }
   ],
   "touches_benchmarks": [

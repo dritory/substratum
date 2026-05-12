@@ -19,6 +19,24 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Anthropic-Higgs arguments (Agrawal, Barr, Donoghue, Seckel 1998) suggest m_H must be near the EW scale for nuclear physics to support complex chemistry; a multiverse selection then explains the EW hierarchy similarly to Lambda."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Observers necessarily exist when Lambda is not too much greater than matter density (Weinberg 1987); the coincidence is a selection effect, not a dynamical explanation."
+    },
+    {
+      "puzzle_id": "fine_structure_constant_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tegmark (1998) showed alpha = 1/137 lies in a narrow window where stable atoms exist (alpha ~ 1 gives no stable matter, alpha << 10^-2 gives no chemistry). The specific value is selected anthropically."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tegmark's argument: stable orbits require d=3 (Bertrand's theorem), and life requires stable orbits. Observers exist only in 3+1, selecting the dimensionality anthropically."
     }
   ],
   "touches_benchmarks": [],

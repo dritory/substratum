@@ -13,6 +13,12 @@
       "role": "requires",
       "confidence": "proposed",
       "note": "LQG must produce GR with a small Lambda in the semiclassical limit; specific predictions for Lambda are not derived from first principles. Listed for graph completeness as a candidate quantum-gravity framework."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Spin-network spectral dimension calculations (Modesto 2009) suggest reduction to d_s ~ 2 at Planck scales in LQG, though full derivation requires settling the dynamics."
     }
   ],
   "touches_benchmarks": [

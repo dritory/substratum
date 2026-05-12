@@ -18,6 +18,12 @@
       "puzzle_id": "ckm_mixing_pattern",
       "role": "explains_pattern",
       "confidence": "proposed"
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Partial-compositeness mixing of SM quarks with composite vector-like partners modifies the effective CKM matrix; the size matches the Cabibbo deficit for f ~ TeV."
     }
   ],
   "touches_benchmarks": [

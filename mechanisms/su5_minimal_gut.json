@@ -53,7 +53,12 @@
     "mssm",
     "seesaw_type_iii"
   ],
-  "excludes": [],
+  "excludes": [
+    "flipped_su5_gut",
+    "pati_salam",
+    "so10_gut",
+    "trinification_su3_cubed"
+  ],
   "status": "historical",
   "history": "Georgi-Glashow (1974). Excluded by IMB and Super-K proton-decay searches by ~1990s. SUSY-SU(5) (Dimopoulos-Raby-Wilczek 1981) is the surviving version, currently constrained by Super-K dimension-5 operator searches.",
   "references": [

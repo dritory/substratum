@@ -35,6 +35,8 @@
   "field_tags": [],
   "composes_with": [],
   "excludes": [
+    "consistent_histories",
+    "ghirardi_rimini_weber",
     "many_worlds_everett"
   ],
   "status": "niche",

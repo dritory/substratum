@@ -19,6 +19,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Predicts a mu-tau-symmetric neutrino mass matrix at leading order (sin^2 theta_23 = 1/2, theta_13 = 0 before breaking); deviations from maximal atmospheric mixing reflect L_mu - L_tau-breaking corrections."
+    },
+    {
+      "puzzle_id": "proton_radius_puzzle",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "A gauged U(1)_{L_mu - L_tau} with M_Z' ~ 10-100 MeV and g' ~ 10^-3 contributes to muonic hydrogen Lamb shift but not electronic, naturally producing the muonic-vs-electronic r_p discrepancy (Pospelov 2010, Batell-McKeen-Pospelov 2011)."
     }
   ],
   "touches_benchmarks": [

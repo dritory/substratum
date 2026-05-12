@@ -70,6 +70,8 @@
     "mssm"
   ],
   "excludes": [
+    "babu_mohapatra_parity",
+    "massless_up_quark",
     "nelson_barr"
   ],
   "status": "mainstream",

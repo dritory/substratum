@@ -19,6 +19,24 @@
       "role": "requires",
       "confidence": "proposed",
       "note": "Combined with a string-theory landscape, eternal inflation populates all metastable vacua, making anthropic selection (Weinberg's bound) operationally meaningful. Anthropic landscape requires eternal inflation to make sense as a probabilistic explanation."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides the multiverse measure within which the anthropic argument is computed."
+    },
+    {
+      "puzzle_id": "fine_structure_constant_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides the multiverse measure for the anthropic argument; in eternal inflation alpha varies across bubbles and observers see the supporting subset."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides the multiverse ensemble within which the anthropic selection of d=4 operates."
     }
   ],
   "touches_benchmarks": [

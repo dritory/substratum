@@ -13,6 +13,12 @@
       "role": "solves",
       "confidence": "proposed",
       "note": "theta_eff vanishes up to one-loop in the minimal Babu-Mohapatra construction; radiative regeneration at higher orders has to be checked model by model. Modern analyses (e.g., de Vries et al. 2021, arXiv:2109.01630) test how robust the cancellation is across realistic constructions."
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Right-handed charged currents from SU(2)_R contribute to nuclear beta decay extraction of V_ud, shifting the apparent first-row sum."
     }
   ],
   "touches_benchmarks": [
@@ -55,8 +61,9 @@
     "so10_gut"
   ],
   "excludes": [
-    "peccei_quinn_axion",
-    "nelson_barr"
+    "massless_up_quark",
+    "nelson_barr",
+    "peccei_quinn_axion"
   ],
   "status": "niche",
   "history": "Babu and Mohapatra (1989); 'A Solution to the Strong CP Problem Without an Axion', Phys. Rev. D 41, 1286 (1990). Periodically revived; the 2021 analysis of de Vries-Murgui-Stoffer-Walker-Loud (arXiv:2109.01630) tested the robustness of minimal parity solutions and found them tightly constrained but not closed.",

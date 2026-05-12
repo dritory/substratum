@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Galileon self-acceleration provides cosmic acceleration without a true Lambda; specific value not derived but the framework predicts a definite (and in some cases problematic) growth-of-structure history. Cubic Galileon is largely excluded by ISW, kinetic Sunyaev-Zel'dovich, and GW170817; quartic and quintic variants narrowly survive."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Self-accelerating Galileon backgrounds produce w(z) evolving from ~ -1.1 to -0.9 over z = 0-1. Largely killed by GW170817 for the quartic Galileon but quintic-Galileon-free variants survive."
     }
   ],
   "touches_benchmarks": [
@@ -57,7 +63,15 @@
   "composes_with": [
     "dgp_braneworld"
   ],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "disfavored",
   "history": "Nicolis, Rattazzi, Trincherini (2008), 'The Galileon as a local modification of gravity', Phys. Rev. D 79, 064036, arXiv:0811.2197 \u2014 distilled the 4D EFT structure from DGP. Generalised Galileon / Horndeski (Deffayet-Esposito-Farese-Vikman 2009; Horndeski 1974 rediscovered). GW170817 (2017) ruled out the simplest derivative-tensor Horndeski models that predict c_GW != c.",
   "references": [

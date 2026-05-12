@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Hawking-evaporating light PBHs (M < 10^11 g) inject baryon-number asymmetric particles preferentially if CP-violating physics is in the spectrum (Toussaint-Treiman-Wilczek-Zee 1979); revived as 'PBH baryogenesis' (Hook 2014, arXiv:1404.0113; Hamada-Iso 2016)."
+    },
+    {
+      "puzzle_id": "jwst_early_massive_galaxies",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "PBH DM seeds early-collapse halos via Poisson clustering; for f_PBH > 1%, the boost in high-z halo number reproduces the observed JWST overabundance (Inman-Ali-Haiman 2019, Liu et al. 2022)."
     }
   ],
   "touches_benchmarks": [

@@ -13,6 +13,12 @@
       "role": "explains_pattern",
       "confidence": "proposed",
       "note": "Combined with seesaw, A_4 produces near-tribimaximal PMNS structure with corrections from flavon VEV alignment."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "A_4 with appropriate flavon vacuum alignment generates lepton mass ratios that approach the Koide value, though A_4 alone does not predict it exactly."
     }
   ],
   "touches_benchmarks": [

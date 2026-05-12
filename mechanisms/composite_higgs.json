@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Quadratic sensitivity is cut off at the compositeness scale; remaining tuning between v and f ~ 1 TeV is currently a few percent. Stronger LHC bounds on top partners and W/Z scattering are squeezing the natural region."
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Composite vector-like top partners mix with SM quarks; the same mixing that lowers M_top can shift V_us by O(0.1%)."
     }
   ],
   "touches_benchmarks": [
@@ -55,7 +61,18 @@
     "seesaw_type_i"
   ],
   "excludes": [
-    "mssm"
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Kaplan-Georgi (1984) original construction; Agashe-Contino-Pomarol (2005) MCHM5 holographic realization. Active LHC search target via top partners and resonance-pair production.",

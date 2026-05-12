@@ -35,6 +35,7 @@
     "many_worlds_everett"
   ],
   "excludes": [
+    "bohmian_mechanics",
     "ghirardi_rimini_weber"
   ],
   "status": "niche",

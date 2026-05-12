@@ -62,7 +62,18 @@
     "peccei_quinn_axion"
   ],
   "excludes": [
-    "mssm"
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Chacko, Goh, Harnik (2006). Orbifold Higgs / neutral naturalness systematics (Craig, Knapen, Longhi 2014, arXiv:1410.6808) generalised the construction; Fraternal Twin Higgs (Craig, Katz, Strassler, Sundrum 2015, arXiv:1501.05310) addresses cosmological problems by removing twin light fermions. Active research direction in 2015-present.",

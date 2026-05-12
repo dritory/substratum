@@ -57,7 +57,19 @@
     "kklt_moduli_stabilisation",
     "string_axiverse"
   ],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "disfavored",
   "history": "Silverstein and Westphal (2008), 'Monodromy in the CMB: gravity waves and string inflation', Phys. Rev. D 78, 106003, arXiv:0803.3085. McAllister-Silverstein-Westphal (2010), 'Gravity waves and linear inflation from axion monodromy', arXiv:0808.0706, generalised. Tightly constrained by BICEP/Keck post-2018 and by weak-gravity-conjecture arguments; remains a target for next-generation CMB.",
   "references": [

@@ -42,7 +42,8 @@
     "linde_eternal_inflation"
   ],
   "excludes": [
-    "bohmian_mechanics"
+    "bohmian_mechanics",
+    "ghirardi_rimini_weber"
   ],
   "status": "niche",
   "history": "Everett (1957), '\"Relative state\" formulation of quantum mechanics', Rev. Mod. Phys. 29, 454. Long-marginalised, then revived in the 1980s-90s by DeWitt, Deutsch, Wallace. Decoherence program (Zurek 1991, 2003) provides the technical machinery for branch separation. Decision-theoretic Born rule (Deutsch 1999, Wallace 2003-2010).",

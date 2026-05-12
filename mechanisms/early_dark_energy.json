@@ -19,6 +19,18 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Late-time Lambda problem unchanged. EDE adds a separate early-universe vacuum-energy episode that decays, suggesting multiple cosmologically-acting scalars rather than one Lambda."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "EDE at z ~ 3000 plus a residual at late times can mimic w(z) evolution if the late-time component has its own phase transition."
+    },
+    {
+      "puzzle_id": "jwst_early_massive_galaxies",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "EDE at z~3000 boosts the early matter-power amplitude on cluster scales, accelerating high-z galaxy assembly by O(20-30%) -- enough to bring LambdaCDM into agreement with JWST high-z stellar masses (Klypin et al. 2024)."
     }
   ],
   "touches_benchmarks": [

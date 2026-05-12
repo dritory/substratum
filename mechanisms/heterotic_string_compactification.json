@@ -25,6 +25,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Yukawa couplings descend from intersection numbers and Calabi-Yau topology; specific compactifications produce realistic mass hierarchies, but the choice of CY is not unique (landscape problem)."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Heterotic strings live in 10D; the observed 3+1 dimensions arise from compactification on a 6D internal manifold. The 4D large dimensions are selected by the choice of compactification, with 4D being singled out only via additional assumptions (e.g. anthropic)."
     }
   ],
   "touches_benchmarks": [

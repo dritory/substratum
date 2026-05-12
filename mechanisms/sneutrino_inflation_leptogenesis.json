@@ -59,7 +59,19 @@
     "seesaw_type_i",
     "leptogenesis"
   ],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "niche",
   "history": "Murayama, Suzuki, Yanagida, Yokoyama (1993), 'Chaotic inflation and baryogenesis by right-handed sneutrinos', Phys. Rev. Lett. 70, 1912. Variants with deformed potentials (Ellis-Garcia-Nanopoulos-Olive 2017) address the BICEP/Keck pressure.",
   "references": [

@@ -51,9 +51,18 @@
   ],
   "composes_with": [],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
     "mssm",
+    "nmssm",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
     "twin_higgs",
-    "relaxion"
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Arkani-Hamed, Cohen, D'Agnolo, Hook, Kim, Pinner (2016). Builds on neutral-naturalness ideas (twin Higgs) by replacing two sectors with N >> 1 sectors and a cosmological selection mechanism.",

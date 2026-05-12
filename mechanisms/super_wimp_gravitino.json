@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Naturally light DM candidate (keV-GeV) consistent with super-WIMP scaling; relic abundance Omega_DM ~ (m_3/2 / 1 keV)(T_R / 10^9 GeV) sets reheating-temperature constraints. BBN bounds on NLSP decays exclude regions but leave keV-MeV gravitino windows."
+    },
+    {
+      "puzzle_id": "lithium_bbn_puzzle",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Long-lived gravitino as super-WIMP DM: NLSP decay during BBN injects photons that destroy Li-7 in the required range. The mechanism predicts a specific correlation between Omega_DM and tau_NLSP."
     }
   ],
   "touches_benchmarks": [

@@ -75,7 +75,11 @@
     "seesaw_type_ii",
     "leptogenesis"
   ],
-  "excludes": [],
+  "excludes": [
+    "flipped_su5_gut",
+    "su5_minimal_gut",
+    "trinification_su3_cubed"
+  ],
   "status": "niche",
   "history": "Fritzsch-Minkowski (1975); Georgi (1975). Active research direction: minimal SO(10) Yukawa fits (Joshipura-Patel and others) test specific predictions of fermion mass relations including theta_13.",
   "references": [

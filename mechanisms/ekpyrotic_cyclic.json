@@ -54,10 +54,17 @@
     "heterotic_string_compactification"
   ],
   "excludes": [
-    "starobinsky_inflation",
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
     "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
     "new_inflation",
-    "chaotic_inflation"
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
   ],
   "status": "niche",
   "history": "Khoury, Ovrut, Steinhardt, Turok (2001), 'The Ekpyrotic Universe: Colliding Branes and the Origin of the Hot Big Bang', PRD 64, 123522, arXiv:hep-th/0103239. Cyclic-universe extension by Steinhardt-Turok (2002). Active competitor to inflation in cosmology debates; observational distinguishability remains the key open question.",

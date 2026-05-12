@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Gauge-mediated soft masses are flavor-blind by construction (they depend only on SM gauge quantum numbers), eliminating the SUSY flavor problem. Doesn't explain Yukawa hierarchy itself but removes one source of flavor violation."
+    },
+    {
+      "puzzle_id": "lithium_bbn_puzzle",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "GMSB with stau-NLSP: stau decays during BBN deplete Li-7 via stau-bound-state catalysis of nuclear reactions (Jedamzik 2008, Cyburt-Ellis-Fields-Olive 2010). Largely disfavored by collider stau-mass bounds but not strictly excluded."
     }
   ],
   "touches_benchmarks": [

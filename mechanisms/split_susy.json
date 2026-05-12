@@ -31,6 +31,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Explicitly abandons naturalness for the Higgs mass - relies on anthropic / landscape selection for the small electroweak scale. Trades hierarchy-naturalness fine-tuning for CC-like-tuning logic. Not all theorists accept this as 'addressing' the hierarchy problem."
+    },
+    {
+      "puzzle_id": "cdf_w_mass_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Heavy scalars decoupled but light gauginos/higgsinos contribute via T and S. Compatible with CDF for tan(beta) ~ 1 and TeV-scale chargino masses."
     }
   ],
   "touches_benchmarks": [
@@ -79,7 +85,19 @@
     "anthropic_landscape",
     "kklt_moduli_stabilisation"
   ],
-  "excludes": [],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
   "status": "niche",
   "history": "Arkani-Hamed and Dimopoulos (2004), 'Supersymmetric unification without low energy supersymmetry and signatures for fine-tuning at the LHC', JHEP 06, 073, arXiv:hep-th/0405159. Companion paper: Giudice-Romanino (2004), 'Split supersymmetry', Nucl. Phys. B 699, 65, arXiv:hep-ph/0406088. Mini-split with predicted 125 GeV Higgs from PeV scalars: Arvanitaki, Craig, Dimopoulos, Villadoro (2012), 'Mini-split', JHEP 02, 126, arXiv:1210.0555. Post-LHC analyses: Hall-Nomura (2014), Acharya et al. (2016).",
   "references": [

@@ -51,7 +51,17 @@
     "starobinsky_inflation",
     "hilltop_inflation"
   ],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis"
+  ],
   "status": "niche",
   "history": "Berera (1995), 'Warm inflation', Phys. Rev. Lett. 75, 3218 \u2014 established framework. Modern realisations: warm little inflaton (Bastero-Gil, Berera 2018+). Connections to swampland conjectures: thermal equilibrium can help satisfy trans-Planckian conjecture constraints.",
   "references": [

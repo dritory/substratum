@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "S4 representations naturally split fermions into triplets and singlets, providing texture zeros and partial-hierarchy explanations in specific models."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "S_4 family models with constrained Yukawa structure produce Koide-like patterns; the formula's robustness across S_4 models is sometimes cited as evidence for the underlying symmetry."
     }
   ],
   "touches_benchmarks": [

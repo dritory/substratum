@@ -58,9 +58,18 @@
   ],
   "composes_with": [],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
     "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
     "twin_higgs",
-    "technicolor"
+    "warped_extra_dimensions_rs"
   ],
   "status": "disfavored",
   "history": "Bardeen, Hill, Lindner (1990), 'Minimal dynamical symmetry breaking of the standard model', Phys. Rev. D 41, 1647 \u2014 original top-condensate proposal. Topcolor-assisted technicolor (Hill 1995) accommodates lighter Higgs. LHC's discovery of a SM-like 125 GeV Higgs in 2012 has substantially constrained the framework.",

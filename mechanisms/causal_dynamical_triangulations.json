@@ -13,6 +13,18 @@
       "role": "requires",
       "confidence": "proposed",
       "note": "CDT requires a positive cosmological constant in its bare action to produce the de-Sitter-like emergent geometry; this is an input rather than a derivation. Spectral dimension running from 4 (large) to 2 (Planck) is a robust prediction; possible cosmological signatures speculative."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Ambjorn-Jurkiewicz-Loll (2005) showed numerically that the spectral dimension of CDT geometries flows from d_s = 4 in the IR to d_s = 2 in the UV. This is the cleanest realization of dimensional reduction at Planck scales."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "CDT simulations show that 4D spacetime emerges in the IR from a sum over discrete causal triangulations, with 4D being dynamically preferred over other dimensions (Ambjorn-Jurkiewicz-Loll 2004)."
     }
   ],
   "touches_benchmarks": [

@@ -19,6 +19,18 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "ASG predicts the dimensionless Lambda * G_N to flow toward a fixed-point value at the UV; reproducing observed Lambda requires specific irrelevant-direction structure."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "The spectral dimension at the UV fixed point drops to d_s = 2 (Lauscher-Reuter 2005). This is a direct prediction of the asymptotic-safety scenario for quantum gravity, not put in by hand."
+    },
+    {
+      "puzzle_id": "fine_structure_constant_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Wetterich (2018) argued that alpha at low energy is computable from the UV fixed point of gauge + gravity; the predicted value is within ~10% of 1/137 in their truncation."
     }
   ],
   "touches_benchmarks": [

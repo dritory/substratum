@@ -13,6 +13,18 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Does not solve the underlying naturalness puzzle: a quintessence potential V(phi) ~ (meV)^4 still requires explanation. Trades a single fine-tuning for a family (potential shape, initial conditions, mass), but predicts testable late-time dynamics."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tracker quintessence (Zlatev-Wang-Steinhardt 1999) gives an attractor solution where the field's energy density tracks radiation/matter and only dominates at late times, with the timing tied to V'(phi) being small. The coincidence becomes a property of the potential's shape."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Rolling scalar field gives w(z) different from -1; depending on potential, w can evolve from ~-0.7 at z=1 toward -1 today (freezing models) or away from -1 (thawing models). DESI 2024 fit prefers thawing-like evolution."
     }
   ],
   "touches_benchmarks": [

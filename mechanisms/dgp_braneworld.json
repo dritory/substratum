@@ -53,7 +53,15 @@
     "massive_graviton"
   ],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "disfavored",
   "history": "Dvali-Gabadadze-Porrati (2000). Self-accelerating branch popular as a Lambda alternative through 2005-2010; ghost identification and structure-growth disfavored it. Generalised Galileon descendents inherit some features.",
   "references": [

@@ -13,6 +13,12 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Lambda emerges as a relevant coupling that flows from the UV. Specific predictions for the present-day Lambda value depend on the RG flow and choice of detailed-balance condition; not derived from first principles."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Anisotropic scaling z=3 in the UV gives spectral dimension d_s = 2 by construction; dimensional reduction is the defining feature of the model."
     }
   ],
   "touches_benchmarks": [
@@ -53,7 +59,16 @@
     "extra_metric_or_connection"
   ],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "galileon_modified_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "niche",
   "history": "Horava (2009), 'Quantum gravity at a Lifshitz point', Phys. Rev. D 79, 084008, arXiv:0901.3775. Active development through 2010s; the 'projectable' vs 'non-projectable' versions and the question of recovering full diffeomorphism invariance in the IR remain debated. GW170817 has constrained but not closed.",
   "references": [

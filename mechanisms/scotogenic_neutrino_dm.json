@@ -19,6 +19,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Z_2 stabilises the lightest Z_2-odd particle (the inert scalar or lightest right-handed neutrino) as a thermal WIMP DM candidate; relic abundance depends on portal couplings."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Z_2-odd scalar DM annihilating to leptons gives a GCE-like signal with the right normalization for m_chi ~ 40-60 GeV. Compatible with neutrino-mass closure constraints."
     }
   ],
   "touches_benchmarks": [

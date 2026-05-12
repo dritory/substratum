@@ -25,6 +25,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "DM thermal-relic in dark sector with dark photon/scalar mediator; relic abundance set by Sommerfeld-enhanced chi chi -> phi phi annihilation. Consistent with direct-detection limits via small Higgs/photon kinetic-mixing portal."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Sommerfeld enhancement from a light mediator boosts annihilation in dense halos, matching the GCE flux for m_chi ~ 100-200 GeV and m_phi ~ 100 MeV."
     }
   ],
   "touches_benchmarks": [

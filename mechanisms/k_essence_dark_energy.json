@@ -13,6 +13,18 @@
       "role": "ameliorates",
       "confidence": "contested",
       "note": "Tracker behaviour explains why dark energy is comparable to matter density at the present epoch (the 'why now' problem) without fine-tuning of initial conditions. Doesn't address the underlying smallness of the late-time vacuum energy."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "K-essence with non-canonical kinetic terms can exhibit attractor solutions for which DE/DM ratio is naturally O(1) at recent epochs (Armendariz-Picon-Mukhanov-Steinhardt 2000)."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Non-canonical kinetic term allows w(z) crossing of -1 (phantom-like) which standard quintessence cannot do, fitting DESI 2024 data more easily."
     }
   ],
   "touches_benchmarks": [

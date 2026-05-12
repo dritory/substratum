@@ -25,6 +25,12 @@
       "role": "ameliorates",
       "confidence": "proposed",
       "note": "Local F-theory GUTs achieve gauge-coupling unification through Kodaira-singularity gauge enhancement; doublet-triplet splitting and proton stability addressed by hypercharge flux mechanism (no need for missing-partner mechanism)."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "F-theory is naturally 12D, with 8 dimensions compactified on an elliptic Calabi-Yau fourfold; the surviving 4D is a feature of the geometry."
     }
   ],
   "touches_benchmarks": [],

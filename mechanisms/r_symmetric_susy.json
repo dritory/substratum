@@ -68,7 +68,19 @@
     "wess_zumino_supersymmetry",
     "dynamical_susy_breaking"
   ],
-  "excludes": [],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nmssm",
+    "nnaturalness",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
   "status": "niche",
   "history": "Hall-Randall (1991) early R-symmetric SUSY. Fox-Nelson-Weiner (2002, hep-ph/0206096) Dirac gauginos. Kribs, Poppitz, Weiner (2007), 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008), arXiv:0712.2039 \u2014 modern MRSSM framework. Active LHC phenomenology of Dirac-gaugino signatures (squarks decaying via Dirac higgsino + chiral adjoints).",
   "references": [

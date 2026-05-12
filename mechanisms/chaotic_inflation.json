@@ -47,7 +47,19 @@
     "electroweak_singlet_real_scalar"
   ],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "disfavored",
   "history": "Linde (1983), 'Chaotic inflation', Phys. Lett. B 129, 177-181 \u2014 proposed the scenario, including its insensitivity to initial conditions. m^2 phi^2 chaotic inflation was the dominant simple model through the 2000s; ruled out by Planck + BICEP/Keck post-2014.",
   "references": [

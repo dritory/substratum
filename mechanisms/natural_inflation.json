@@ -54,7 +54,19 @@
     "string_axiverse",
     "peccei_quinn_axion"
   ],
-  "excludes": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "disfavored",
   "history": "Freese, Frieman, Olinto (1990), 'Natural inflation with pseudo Nambu-Goldstone bosons', Phys. Rev. Lett. 65, 3233. Aligned natural inflation (Kim-Nilles-Peloso 2004) and N-flation (Dimopoulos-Kachru-McGreevy-Wacker 2008) effectively raise the decay constant; BICEP/Keck has substantially constrained the framework, with weak-gravity-conjecture arguments adding theoretical pressure.",
   "references": [

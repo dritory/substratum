@@ -55,7 +55,16 @@
   ],
   "field_tags": [],
   "composes_with": [],
-  "excludes": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "f_r_modified_gravity",
+    "galileon_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
   "status": "disfavored",
   "history": "Verlinde (2010), 'On the origin of gravity and the laws of Newton', JHEP 04, 029 (2011), arXiv:1001.0785 - founding paper. Verlinde (2016), 'Emergent gravity and the dark universe', SciPost Phys. 2, 016, arXiv:1611.02269 - extension to dark sector. Cluster-lensing and CMB tests have substantially constrained the framework.",
   "references": [

@@ -62,9 +62,18 @@
     "seesaw_type_i"
   ],
   "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
     "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
     "twin_higgs",
-    "technicolor"
+    "warped_extra_dimensions_rs"
   ],
   "status": "niche",
   "history": "Arkani-Hamed, Cohen, Georgi (2001), 'Electroweak symmetry breaking from dimensional deconstruction', Phys. Lett. B 513, 232, arXiv:hep-ph/0105239 \u2014 initiated the framework. Arkani-Hamed-Cohen-Katz-Nelson (2002), 'The Littlest Higgs', JHEP 07, 034, arXiv:hep-ph/0206021 \u2014 minimal explicit model. T-parity variants (Cheng-Low 2003, 2004) produce DM candidates and improve EWPT consistency.",

@@ -51,7 +51,18 @@
   "composes_with": [
     "seesaw_type_i"
   ],
-  "excludes": [],
+  "excludes": [
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
   "status": "niche",
   "history": "Bezrukov and Shaposhnikov (2008), 'The Standard Model Higgs boson as the inflaton', Phys. Lett. B 659, 703, arXiv:0710.3755. Critiques on tree-level unitarity (Burgess-Patel-Trott 2009; Barbon-Espinosa 2009) and Higgs vacuum stability (Bezrukov-Magnin-Shaposhnikov 2008) constrain viable parameter space. Critical-point variants (Bezrukov-Shaposhnikov 2014) lower the required xi.",
   "references": [
