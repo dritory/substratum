@@ -124,6 +124,33 @@ def is_feasible(comp: tuple[str, ...], mechs: dict) -> bool:
     return True
 
 
+def is_coherent(comp: tuple[str, ...], mechs: dict) -> bool:
+    """A composition is coherent if its mechanisms form a single connected
+    component when mechanisms a and b are linked iff they share at least one
+    puzzle they both address.
+
+    This is the physics-coherence filter: a 'framework' should be mechanisms
+    that talk to each other, not orthogonal stacks that happen to clear the
+    pairwise-excludes check.
+    """
+    if len(comp) <= 1:
+        return True
+    mech_puzzles = {
+        mid: {e["puzzle_id"] for e in mechs[mid].get("addresses_puzzles", [])}
+        for mid in comp
+    }
+    comp_set = set(comp)
+    visited = {comp[0]}
+    frontier = [comp[0]]
+    while frontier:
+        a = frontier.pop()
+        for b in comp_set - visited:
+            if mech_puzzles[a] & mech_puzzles[b]:
+                visited.add(b)
+                frontier.append(b)
+    return visited == comp_set
+
+
 def beam_search_pareto(mechs: dict, max_size: int = 6,
                        beam: int = 80) -> list[dict]:
     """Beam search for compositions that close many puzzles cheaply.
@@ -158,6 +185,8 @@ def beam_search_pareto(mechs: dict, max_size: int = 6,
                 if ex & comp_set:
                     continue
                 if any(mid in set(mechs[m].get("excludes", [])) for m in comp_set):
+                    continue
+                if not is_coherent(new_comp, mechs):
                     continue
                 metrics = composition_metrics(new_comp, mechs)
                 all_evaluated[new_comp] = metrics
