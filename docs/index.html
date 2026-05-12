@@ -101,6 +101,18 @@
     <div class="legend" id="verdict-legend"></div>
 
     <header class="view-head" style="margin-top:1.4rem;">
+      <h3 class="sub">Framework ledger (sorted by L1 closure breadth)</h3>
+      <p>Each row is one framework's two-axis fingerprint: the L1 column
+         shows how many puzzles its composed mechanisms claim to close
+         (<code>solves</code> or <code>explains_pattern</code>) out of 45 total;
+         the L2 column shows how many benchmarks its supplied predictions
+         currently pass out of 75 total. Sorted by L1 closure descending.
+         This is <em>not</em> a TOE leaderboard — it rewards breadth of
+         composition; whether the physics is right lives elsewhere.</p>
+    </header>
+    <div id="framework-leaderboard" class="framework-leaderboard"></div>
+
+    <header class="view-head" style="margin-top:1.4rem;">
       <h3 class="sub">Per-framework benchmark tally</h3>
       <p>Stacked counts of how each framework's predictions land against
          <code>benchmarks/</code>. <em>Open</em> cells are unscored, not failed

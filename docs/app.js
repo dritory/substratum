@@ -685,10 +685,23 @@ function renderEvaluation(bundle) {
     }
   }
 
-  renderTallyChart(frameworks, tallyEl);
-  renderPuzzleTallyChart(frameworks);
-  renderCoverage(frameworks, bundle, verdictMap);
-  renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+  // Sort frameworks by L1 closure count descending, then by L2 pass count.
+  // Puts the broadest-coverage candidates at the top of every chart so the
+  // visual reading is "this framework closes the most puzzles".
+  const frameworksByCoverage = [...frameworks].sort((a, b) => {
+    const aClosed = a.puzzle_tally?.closed || 0;
+    const bClosed = b.puzzle_tally?.closed || 0;
+    if (bClosed !== aClosed) return bClosed - aClosed;
+    const aPass = a.tally?.pass || 0;
+    const bPass = b.tally?.pass || 0;
+    return bPass - aPass;
+  });
+
+  renderFrameworkLeaderboard(frameworksByCoverage);
+  renderTallyChart(frameworksByCoverage, tallyEl);
+  renderPuzzleTallyChart(frameworksByCoverage);
+  renderCoverage(frameworksByCoverage, bundle, verdictMap);
+  renderMatrix(frameworksByCoverage, benchOrder, verdictMap, bundle, matrix);
 
   document
     .getElementById("eval-hide-open")
@@ -736,6 +749,46 @@ function renderTallyChart(frameworks, el) {
     },
     PLOTLY_BASE
   );
+}
+
+function renderFrameworkLeaderboard(frameworks) {
+  const root = document.getElementById("framework-leaderboard");
+  if (!root) return;
+  root.innerHTML = "";
+
+  const table = el("table", { class: "leaderboard-table" });
+  const thead = el("thead", {});
+  thead.appendChild(
+    el("tr", {},
+      el("th", {}, "framework"),
+      el("th", { class: "num" }, "L1 closed"),
+      el("th", { class: "num" }, "L1 partial"),
+      el("th", { class: "num" }, "L1 req. ext."),
+      el("th", { class: "num" }, "L2 pass"),
+      el("th", { class: "num" }, "L2 fail"),
+      el("th", { class: "num" }, "mechs")
+    )
+  );
+  table.appendChild(thead);
+
+  const tbody = el("tbody", {});
+  for (const fw of frameworks) {
+    const p = fw.puzzle_tally || {};
+    const t = fw.tally || {};
+    const n_mech = (fw.composes_mechanisms || []).length;
+    const row = el("tr", {},
+      el("td", {}, fw.name),
+      el("td", { class: "num l1-closed" }, String(p.closed || 0)),
+      el("td", { class: "num l1-partial" }, String(p.partial || 0)),
+      el("td", { class: "num l1-req-ext" }, String(p.requires_external || 0)),
+      el("td", { class: "num l2-pass" }, String(t.pass || 0)),
+      el("td", { class: "num l2-fail" }, String(t.fail || 0)),
+      el("td", { class: "num" }, String(n_mech))
+    );
+    tbody.appendChild(row);
+  }
+  table.appendChild(tbody);
+  root.appendChild(table);
 }
 
 function renderPuzzleTallyChart(frameworks) {
