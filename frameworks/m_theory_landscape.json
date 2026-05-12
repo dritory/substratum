@@ -1,0 +1,56 @@
+{
+  "id": "m_theory_landscape",
+  "name": "M-theory / string landscape as theory of everything",
+  "summary": "Classification: TOE-ASPIRATIONAL (canonical top-down). The flagship string-theoretic candidate for a complete theory of physics, composed of: a non-perturbative M-theory definition (BFSS matrix model), a specific compactification (F-theory on an elliptic Calabi-Yau fourfold) embedding SU(5) GUT and Standard-Model matter, KKLT moduli stabilisation giving a discretuum of metastable dS vacua, the string axiverse populating the Kahler-moduli axions, type-I seesaw with thermal leptogenesis for neutrino mass and baryogenesis, axion-monodromy inflation, WIMP dark matter, and anthropic selection across the landscape to fix the cosmological constant and other parameters. Closes the quantum-gravity-consistency puzzle via the string UV completion. The lack of testable predictions and the landscape's vacuum-counting (10^500-10^272000) are the standard criticisms. Coverage of SM-parameter-origin is partial: F-theory geometry constrains Yukawas but does not fix the vacuum.",
+  "lineage": [
+    {
+      "citation": "Witten, 'String theory dynamics in various dimensions', Nucl. Phys. B 443, 85 (1995)",
+      "arxiv": "hep-th/9503124"
+    },
+    {
+      "citation": "Banks, Fischler, Shenker, Susskind, 'M theory as a matrix model: A conjecture', PRD 55, 5112 (1997)",
+      "arxiv": "hep-th/9610043"
+    },
+    {
+      "citation": "Vafa, 'Evidence for F-theory', Nucl. Phys. B 469, 403 (1996)",
+      "arxiv": "hep-th/9602022"
+    },
+    {
+      "citation": "Kachru, Kallosh, Linde, Trivedi, 'de Sitter vacua in string theory', PRD 68, 046005 (2003)",
+      "arxiv": "hep-th/0301240"
+    },
+    {
+      "citation": "Susskind, 'The anthropic landscape of string theory' (2003)",
+      "arxiv": "hep-th/0302219"
+    },
+    {
+      "citation": "Arvanitaki, Dimopoulos, Dubovsky, Kaloper, March-Russell, 'String Axiverse', PRD 81, 123530 (2010)",
+      "arxiv": "0905.4720"
+    },
+    {
+      "citation": "Polchinski, 'String Theory', vol. 1-2, Cambridge (1998)"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "bfss_matrix_theory",
+    "f_theory_compactification",
+    "kklt_moduli_stabilisation",
+    "string_axiverse",
+    "su5_minimal_gut",
+    "seesaw_type_i",
+    "leptogenesis",
+    "axion_monodromy_inflation",
+    "anthropic_landscape",
+    "wimp_thermal_freezeout"
+  ],
+  "tags": [
+    "toe_candidate",
+    "string_theory",
+    "m_theory",
+    "landscape",
+    "anthropic",
+    "top_down",
+    "known_program"
+  ]
+}

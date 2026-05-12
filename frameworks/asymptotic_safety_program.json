@@ -1,0 +1,39 @@
+{
+  "id": "asymptotic_safety_program",
+  "name": "Asymptotic safety as theory of everything",
+  "summary": "Classification: TOE-ASPIRATIONAL (program-level, minimal composition). Quantum gravity is rendered non-perturbatively renormalisable by a non-trivial UV fixed point of the gravitational coupling (Weinberg 1979; Reuter 1998). If the fixed point also drags the SM matter sector, dimensionless SM couplings could be predicted from the UV (Wetterich 2018; Eichhorn-Held 2018), partially addressing the SM-free-parameters problem without invoking a string landscape. Frequently composed with Higgs inflation because the same gravitational running that gives the UV fixed point also affects the non-minimal Higgs-curvature coupling. Closes quantum-gravity-consistency by hypothesis; ameliorates SM-free-parameters; does not address dark matter, baryogenesis, or flavor structure within the program itself. Minimal mechanism set reflects that asymptotic safety is more a UV-completion claim than a full BSM toolbox.",
+  "lineage": [
+    {
+      "citation": "Weinberg, 'Ultraviolet divergences in quantum theories of gravitation', in 'General Relativity: An Einstein Centenary Survey' (Cambridge 1979)"
+    },
+    {
+      "citation": "Reuter, 'Nonperturbative evolution equation for quantum gravity', PRD 57, 971 (1998)",
+      "arxiv": "hep-th/9605030"
+    },
+    {
+      "citation": "Lauscher and Reuter, 'Fractal spacetime structure in asymptotically safe gravity', JHEP 0510 (2005) 050",
+      "arxiv": "hep-th/0508202"
+    },
+    {
+      "citation": "Wetterich, 'Quantum scale symmetry' (2019)",
+      "arxiv": "1901.04741"
+    },
+    {
+      "citation": "Eichhorn, 'An asymptotically safe guide to quantum gravity and matter', Front. Astron. Space Sci. 5, 47 (2019)",
+      "arxiv": "1810.07615"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "asymptotic_safety_gravity",
+    "higgs_inflation"
+  ],
+  "tags": [
+    "toe_candidate",
+    "quantum_gravity",
+    "uv_fixed_point",
+    "no_extra_dimensions",
+    "no_susy",
+    "known_program"
+  ]
+}
