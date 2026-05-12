@@ -47,6 +47,11 @@ DATASETS = [
         "dir": ROOT / "mechanisms",
         "schema": ROOT / "schema" / "mechanism.schema.json",
     },
+    {
+        "name": "discovery_gaps",
+        "dir": ROOT / "discovery_gaps",
+        "schema": ROOT / "schema" / "discovery_gap.schema.json",
+    },
 ]
 
 

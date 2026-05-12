@@ -1,0 +1,62 @@
+{
+  "id": "three_generations_origin",
+  "name": "Mechanism forcing N_families = 3 from structural inputs",
+  "target_puzzles": ["three_generations_problem"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "Multiple published programs construct compactifications that give exactly three chiral families: heterotic CY with chi/2 = 3 (Candelas-Horowitz-Strominger-Witten 1985 first showed the Euler-characteristic route works for Y(3,3)), F-theory with three-family GUT spectra from D7-brane intersection numbers (Donagi-Wijnholt 2008; Marsano-Saulina-Schafer-Nameki 2009), flipped SU(5) realizations (Ellis-Lopez-Nanopoulos 1980s-90s). The gap is open in the sense that NO such construction is unique or predictive: each gives a discrete moduli choice that happens to yield 3, but the model space contains many other choices giving 2, 4, ... families. A closing mechanism would have to either (a) derive N=3 from a non-trivial topological constraint that rules out other values, or (b) supply a selection rule (anthropic, dynamical, or symmetry-based) that singles out 3.",
+  "summary": "No framework derives N_families = 3 from structural inputs. The Standard Model takes it as a postulate; GUTs unify within a family but don't constrain the count; string compactifications can produce three-family models but cannot rule out one- or four-family models.",
+  "what_closes_it": "A mechanism that fixes N_families = 3 with no remaining degree of freedom. Candidate routes: (a) a topological constraint that selects exactly three from the spectrum of consistent compactifications (e.g. a deeper anomaly-cancellation argument beyond gauge anomaly that requires generation count to be a specific function of compactification topology); (b) a dynamical mechanism in the early universe that selects three families from a richer spectrum, perhaps by a thermal phase transition or a measure on the inflationary multiverse; (c) a symmetry-based argument where a flavor symmetry (modular or family) has exactly three irreducible representations in the SM fermion sector; (d) the anthropic route — three families is the only choice consistent with the chemistry that supports observers. (c) is the most promising near-term route given the recent modular-flavor-symmetry program: certain modular weights at level N=3 produce exactly three families by group-theoretic constraint.",
+  "current_best_verdict_across_frameworks": "untouched",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "string_theoretic_background",
+      "cosmological_landscape"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "GUT scale or higher (10^16 - 10^18 GeV). The generation count is set in compactification or by symmetry at the highest scales; low-energy mechanisms cannot change the number of chiral fermion families.",
+  "compatible_host_frameworks": [
+    "f_theory_gut_axiverse",
+    "m_theory_landscape",
+    "modular_string_flavor"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "gauge_invariance",
+      "status": "tests",
+      "note": "Anomaly cancellation in the SM works at any generation count; the gap-closer would have to add a constraint beyond gauge anomaly (e.g. a stringy tadpole condition, a modular-symmetry constraint, or a global symmetry's anomaly)."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Candelas, Horowitz, Strominger, Witten, 'Vacuum configurations for superstrings', Nucl. Phys. B 258, 46 (1985)",
+      "doi": "10.1016/0550-3213(85)90602-9"
+    },
+    {
+      "citation": "Donagi and Wijnholt, 'Model Building with F-Theory', Adv. Theor. Math. Phys. 15, 1237 (2011)",
+      "arxiv": "0802.2969"
+    },
+    {
+      "citation": "Marsano, Saulina, Schafer-Nameki, 'Compact F-theory GUTs with U(1)_PQ', JHEP 04 (2010) 095",
+      "arxiv": "0912.0272"
+    },
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?' (2017)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Ding and King, 'Neutrino mass and mixing with modular symmetry', Rept. Prog. Phys. 87, 084201 (2024)",
+      "arxiv": "2311.09282"
+    }
+  ],
+  "tags": [
+    "count_prediction",
+    "compactification_constraint",
+    "modular_symmetry_route",
+    "anthropic_alternative"
+  ]
+}
