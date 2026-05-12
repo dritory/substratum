@@ -72,16 +72,91 @@ def score_one(benchmark: dict, framework: dict) -> Verdict:
     return evaluator(benchmark, prediction)
 
 
+def derive_puzzle_verdicts(
+    frameworks: list[dict],
+    mechanisms_by_id: dict[str, dict],
+    puzzle_ids: list[str],
+) -> tuple[list[dict], dict[str, dict[str, int]]]:
+    """For each (framework, puzzle), derive the L1 verdict from composed
+    mechanisms' addresses_puzzles edges.
+
+    The verdict ladder (strongest role wins):
+        any 'solves' or 'explains_pattern'  -> 'closed'
+        else any 'ameliorates'              -> 'partial'
+        else any 'requires'                 -> 'requires_external'
+        no edges                            -> 'untouched'
+
+    Returns (verdicts_list, tallies_by_framework_id) where:
+        verdicts_list = [{framework_id, puzzle_id, verdict, contributing_mechanisms}, ...]
+        tallies_by_framework_id = {framework_id: {closed, partial, requires_external, untouched}}
+    """
+    ROLE_TO_VERDICT = {
+        "solves": "closed",
+        "explains_pattern": "closed",
+        "ameliorates": "partial",
+        "requires": "requires_external",
+    }
+    VERDICT_RANK = {
+        "closed": 3,
+        "partial": 2,
+        "requires_external": 1,
+        "untouched": 0,
+    }
+
+    verdicts: list[dict] = []
+    tallies: dict[str, dict[str, int]] = {}
+
+    for fw in frameworks:
+        fw_id = fw["id"]
+        composed = fw.get("composes_mechanisms") or []
+        tally = {"closed": 0, "partial": 0, "requires_external": 0, "untouched": 0}
+        for pid in puzzle_ids:
+            best_verdict = "untouched"
+            contributors: list[tuple[str, str]] = []  # (mech_id, role)
+            for mid in composed:
+                m = mechanisms_by_id.get(mid)
+                if m is None:
+                    continue
+                for e in m.get("addresses_puzzles", []):
+                    if e["puzzle_id"] != pid:
+                        continue
+                    v = ROLE_TO_VERDICT.get(e["role"], "untouched")
+                    if VERDICT_RANK[v] > VERDICT_RANK[best_verdict]:
+                        best_verdict = v
+                    contributors.append((mid, e["role"]))
+            tally[best_verdict] += 1
+            verdicts.append({
+                "framework_id": fw_id,
+                "puzzle_id": pid,
+                "verdict": best_verdict,
+                "contributing_mechanisms": [
+                    {"mechanism_id": m, "role": r} for m, r in contributors
+                ],
+            })
+        tallies[fw_id] = tally
+
+    return verdicts, tallies
+
+
 def compute_verdicts(
-    frameworks: list[dict], benchmarks: dict[str, dict]
+    frameworks: list[dict],
+    benchmarks: dict[str, dict],
+    mechanisms_by_id: dict[str, dict] | None = None,
+    puzzle_ids: list[str] | None = None,
 ) -> dict:
     """Score every (framework, benchmark) pair and return a structured payload.
 
     Shape:
       {
-        "frameworks": [{"id", "name", "summary", "lineage", "tags", "tally": {...}}, ...],
-        "verdicts":   [{"framework_id", "benchmark_id", "status", "score", "note", "reference", "kind"}, ...]
+        "frameworks": [{"id", "name", "summary", "lineage", "tags", "tally", "puzzle_tally"}, ...],
+        "verdicts":   [{"framework_id", "benchmark_id", "status", "score", "note", "reference", "kind"}, ...],
+        "puzzle_verdicts": [{"framework_id", "puzzle_id", "verdict", "contributing_mechanisms"}, ...]
       }
+
+    The L1 puzzle verdicts are derived from each framework's composes_mechanisms
+    using the addresses_puzzles edges of those mechanisms. Only included if
+    mechanisms_by_id and puzzle_ids are supplied; otherwise omitted for
+    backward compatibility.
     """
     fw_records: list[dict] = []
     verdicts: list[dict] = []
@@ -114,10 +189,21 @@ def compute_verdicts(
                 "lineage": fw.get("lineage", []),
                 "tags": fw.get("tags", []),
                 "tally": tally,
+                "composes_mechanisms": fw.get("composes_mechanisms") or [],
             }
         )
 
-    return {"frameworks": fw_records, "verdicts": verdicts}
+    payload: dict = {"frameworks": fw_records, "verdicts": verdicts}
+
+    if mechanisms_by_id is not None and puzzle_ids is not None:
+        puzzle_verdicts, puzzle_tallies = derive_puzzle_verdicts(
+            frameworks, mechanisms_by_id, puzzle_ids
+        )
+        payload["puzzle_verdicts"] = puzzle_verdicts
+        for rec in fw_records:
+            rec["puzzle_tally"] = puzzle_tallies.get(rec["id"], {})
+
+    return payload
 
 
 def render(frameworks: list[dict], benchmarks: dict[str, dict]) -> str:

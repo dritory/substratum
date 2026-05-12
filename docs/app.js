@@ -59,6 +59,22 @@ const VERDICT_COLOR = {
 
 const VERDICT_ORDER = ["pass", "fail", "contested", "inapplicable", "open", "no_evaluator"];
 
+const PUZZLE_VERDICT_COLOR = {
+  closed:             "#6dc197",
+  partial:            "#d4b974",
+  requires_external:  "#9683bd",
+  untouched:          "#2a3142",
+};
+
+const PUZZLE_VERDICT_ORDER = ["closed", "partial", "requires_external", "untouched"];
+
+const PUZZLE_VERDICT_LABEL = {
+  closed:             "closed",
+  partial:            "partial",
+  requires_external:  "requires external",
+  untouched:          "untouched",
+};
+
 const VERDICT_LABEL = {
   pass:         "pass",
   fail:         "fail",
@@ -654,7 +670,23 @@ function renderEvaluation(bundle) {
     })
     .sort((a, b) => b.passFrac - a.passFrac || a.name.localeCompare(b.name));
 
+  // puzzle-verdict legend (parallel to the benchmark-verdict legend)
+  const puzzleLegendEl = document.getElementById("puzzle-verdict-legend");
+  if (puzzleLegendEl) {
+    puzzleLegendEl.innerHTML = "";
+    for (const v of PUZZLE_VERDICT_ORDER) {
+      puzzleLegendEl.appendChild(
+        el(
+          "span",
+          { class: "sw", style: `--swatch:${PUZZLE_VERDICT_COLOR[v]}` },
+          PUZZLE_VERDICT_LABEL[v]
+        )
+      );
+    }
+  }
+
   renderTallyChart(frameworks, tallyEl);
+  renderPuzzleTallyChart(frameworks);
   renderCoverage(frameworks, bundle, verdictMap);
   renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
 
@@ -688,6 +720,50 @@ function renderTallyChart(frameworks, el) {
       xaxis: {
         gridcolor: THEME.grid,
         title: { text: "benchmarks", font: { size: 11 } },
+      },
+      yaxis: {
+        automargin: true,
+        tickfont: { family: FONT_BODY, size: 12 },
+      },
+      legend: {
+        orientation: "h",
+        y: -0.22,
+        x: 0,
+        bgcolor: "rgba(0,0,0,0)",
+        font: { size: 11 },
+      },
+      hoverlabel: { font: { family: FONT_MONO, size: 12 } },
+    },
+    PLOTLY_BASE
+  );
+}
+
+function renderPuzzleTallyChart(frameworks) {
+  const el = document.getElementById("chart-eval-puzzle-tally");
+  if (!el) return;
+
+  const traces = PUZZLE_VERDICT_ORDER.map((v) => ({
+    name: PUZZLE_VERDICT_LABEL[v],
+    x: frameworks.map((fw) => fw.puzzle_tally?.[v] || 0),
+    y: frameworks.map((fw) => fw.name),
+    type: "bar",
+    orientation: "h",
+    marker: { color: PUZZLE_VERDICT_COLOR[v] },
+    hovertemplate: `${PUZZLE_VERDICT_LABEL[v]}: %{x}<extra>%{y}</extra>`,
+  }));
+
+  Plotly.newPlot(
+    el,
+    traces,
+    {
+      barmode: "stack",
+      margin: { l: 200, r: 30, t: 12, b: 36 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        gridcolor: THEME.grid,
+        title: { text: "puzzles", font: { size: 11 } },
       },
       yaxis: {
         automargin: true,

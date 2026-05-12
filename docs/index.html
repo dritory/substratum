@@ -101,12 +101,28 @@
     <div class="legend" id="verdict-legend"></div>
 
     <header class="view-head" style="margin-top:1.4rem;">
-      <h3 class="sub">Per-framework tally</h3>
-      <p>Stacked counts of how each framework's predictions land. <em>Open</em>
-         cells are unscored, not failed — a framework that has not yet supplied
-         a prediction cannot be falsified by the benchmark, only ignored by it.</p>
+      <h3 class="sub">Per-framework benchmark tally</h3>
+      <p>Stacked counts of how each framework's predictions land against
+         <code>benchmarks/</code>. <em>Open</em> cells are unscored, not failed
+         — a framework that has not yet supplied a prediction cannot be
+         falsified by the benchmark, only ignored by it.</p>
     </header>
     <div id="chart-eval-tally" class="chart"></div>
+
+    <header class="view-head" style="margin-top:1.4rem;">
+      <h3 class="sub">Per-framework puzzle coverage (L1, derived)</h3>
+      <p>Each framework's verdict on every puzzle, derived from the
+         <code>addresses_puzzles</code> edges of its composed mechanisms
+         (the strongest role wins). <em>Closed</em> = at least one composed
+         mechanism declares <code>solves</code> or <code>explains_pattern</code>;
+         <em>partial</em> = only <code>ameliorates</code>; <em>requires_external</em>
+         = only <code>requires</code>, i.e. the framework depends on something
+         else to close it; <em>untouched</em> = no composed mechanism addresses
+         the puzzle at all. This is parallel to the benchmark verdicts above:
+         match-with-measurement vs. claim-with-role.</p>
+    </header>
+    <div class="legend" id="puzzle-verdict-legend"></div>
+    <div id="chart-eval-puzzle-tally" class="chart"></div>
 
     <header class="view-head" style="margin-top:1.4rem;">
       <h3 class="sub">Coverage by physics category</h3>

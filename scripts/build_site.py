@@ -222,11 +222,17 @@ def load_dir(path: Path) -> list[dict]:
     return out
 
 
-def compute_evaluation(benchmarks: list[dict]) -> dict | None:
+def compute_evaluation(
+    benchmarks: list[dict],
+    mechanisms: list[dict] | None = None,
+    puzzles: list[dict] | None = None,
+) -> dict | None:
     """Run scripts.score.compute_verdicts if frameworks/ has any entries.
 
     Tolerates evaluator import errors so the site still builds when an
-    evaluator module is broken.
+    evaluator module is broken. When mechanisms and puzzles are supplied,
+    the returned payload also carries L1 puzzle verdicts derived from each
+    framework's composes_mechanisms.
     """
     if not FW_DIR.exists():
         return None
@@ -244,8 +250,10 @@ def compute_evaluation(benchmarks: list[dict]) -> dict | None:
         with p.open() as f:
             frameworks.append(json.load(f))
     bench_map = {b["id"]: b for b in benchmarks}
+    mech_map = {m["id"]: m for m in (mechanisms or [])} or None
+    puzzle_ids = [p["id"] for p in (puzzles or [])] or None
     try:
-        return compute_verdicts(frameworks, bench_map)
+        return compute_verdicts(frameworks, bench_map, mech_map, puzzle_ids)
     except Exception as e:  # pragma: no cover
         print(f"warning: scoring raised: {e}", file=sys.stderr)
         return None
@@ -410,7 +418,7 @@ def main() -> int:
     )
     statuses = sorted({e.get("status") for e in tensions if e.get("status")})
 
-    evaluation = compute_evaluation(benchmarks)
+    evaluation = compute_evaluation(benchmarks, mechanisms, puzzles)
     verdict_statuses = sorted(
         {v["status"] for v in (evaluation or {}).get("verdicts", [])}
     )
