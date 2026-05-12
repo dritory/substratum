@@ -227,6 +227,64 @@ def beam_search_pareto(mechs: dict, max_size: int = 6,
     return pareto
 
 
+# ---------- 5. Puzzle horizon: which puzzles is the entire TOE/GUT field silent on ----------
+
+def puzzle_horizon(
+    frameworks: dict,
+    mechs: dict,
+    puzzles: dict,
+) -> list[dict]:
+    """For each puzzle, compute the strongest verdict achieved by any
+    framework's composed mechanisms. The result classifies puzzles by
+    'best collective response':
+      - closed_by_any:      at least one framework claims to close it
+      - best_partial:       no framework closes, but at least one ameliorates
+      - best_requires_external: every framework that addresses it punts
+      - untouched_by_all:   no framework even references it
+
+    The 'untouched_by_all' and 'best_requires_external' rows are the
+    catalog's contribution: puzzles where the entire current TOE/GUT
+    landscape is collectively silent, even when individual frameworks
+    address tangentially-related ones. These are the gaps where the
+    discovery search has the most room.
+    """
+    ROLE_RANK = {"solves": 4, "explains_pattern": 4, "ameliorates": 3, "requires": 2}
+    VERDICT_OF_RANK = {4: "closed", 3: "partial", 2: "requires_external", 0: "untouched"}
+
+    rows = []
+    for pid, p in puzzles.items():
+        best_rank = 0
+        best_framework = None
+        addressing_frameworks: list[str] = []
+        for fw_id, fw in frameworks.items():
+            fw_rank = 0
+            for mid in fw.get("composes_mechanisms") or []:
+                m = mechs.get(mid)
+                if not m:
+                    continue
+                for e in m.get("addresses_puzzles", []):
+                    if e["puzzle_id"] != pid:
+                        continue
+                    r = ROLE_RANK.get(e["role"], 0)
+                    if r > fw_rank:
+                        fw_rank = r
+            if fw_rank > 0:
+                addressing_frameworks.append(fw_id)
+            if fw_rank > best_rank:
+                best_rank = fw_rank
+                best_framework = fw_id
+        rows.append({
+            "puzzle_id": pid,
+            "name": p.get("name", pid),
+            "kind": p.get("kind", ""),
+            "best_verdict": VERDICT_OF_RANK.get(best_rank, "untouched"),
+            "best_framework": best_framework,
+            "n_addressing": len(addressing_frameworks),
+            "addressing_frameworks": addressing_frameworks,
+        })
+    return rows
+
+
 # ---------- 3. Field-tag clusters ----------
 
 def field_tag_clusters(mechs: dict) -> dict[str, list[str]]:
@@ -301,6 +359,7 @@ def render(mechs, puzzles, frameworks, benchmarks) -> str:
     pareto = beam_search_pareto(mechs, max_size=6, beam=80)
     clusters = field_tag_clusters(mechs)
     pairs = never_composed_compatible(mechs, frameworks)
+    horizon = puzzle_horizon(frameworks, mechs, puzzles)
 
     L: list[str] = []
     L.append("# Structural search over the catalog\n")
@@ -376,6 +435,61 @@ def render(mechs, puzzles, frameworks, benchmarks) -> str:
         pzs = ", ".join(f"`{q}`" for q in p["shared_puzzles"]) or "—"
         L.append(f"| {p['score']} | `{p['a']}` | `{p['b']}` | {tags} | {pzs} |")
     L.append(f"\n*({len(pairs)} compatible pairs total; showing top 30.)*\n")
+
+    # --- Section 5: puzzle horizon (the TOE-search-toward primitive) ---
+    L.append("## 5. Puzzle horizon: where every framework is silent\n")
+    L.append("For each puzzle, the strongest verdict any current framework "
+             "achieves via its composed mechanisms. Puzzles where the best "
+             "any framework can do is `untouched` or `requires_external` "
+             "are the catalog's research-target list: gaps where the entire "
+             "current TOE/GUT landscape is collectively silent, even when "
+             "individual frameworks address tangentially-related ones. New "
+             "mechanism design (or new framework composition) has the most "
+             "room to move the field where these rows live.\n")
+
+    tier_order = ["untouched", "requires_external", "partial", "closed"]
+    horizon_by_tier = {t: [] for t in tier_order}
+    for h in horizon:
+        horizon_by_tier[h["best_verdict"]].append(h)
+
+    untouched_all = horizon_by_tier["untouched"]
+    req_ext_best = horizon_by_tier["requires_external"]
+    partial_best = horizon_by_tier["partial"]
+    closed_any = horizon_by_tier["closed"]
+
+    L.append(f"**Untouched by every framework: {len(untouched_all)} puzzles.** "
+             "No current framework's composed mechanisms even reference these. "
+             "Either the puzzle is genuinely outside the TOE/GUT program's "
+             "scope (e.g. interpretive QM puzzles), or it's a real gap.\n")
+    if untouched_all:
+        L.append("| puzzle | kind |")
+        L.append("|---|---|")
+        for h in sorted(untouched_all, key=lambda x: x["puzzle_id"]):
+            L.append(f"| `{h['puzzle_id']}` | {h['kind']} |")
+        L.append("")
+
+    L.append(f"**Best-case requires_external: {len(req_ext_best)} puzzles.** "
+             "Every framework that addresses these only declares dependency on "
+             "something else closing them — the field collectively punts.\n")
+    if req_ext_best:
+        L.append("| puzzle | kind | addressing frameworks |")
+        L.append("|---|---|---|")
+        for h in sorted(req_ext_best, key=lambda x: x["puzzle_id"]):
+            L.append(f"| `{h['puzzle_id']}` | {h['kind']} | "
+                     f"{', '.join('`'+f+'`' for f in h['addressing_frameworks'])} |")
+        L.append("")
+
+    L.append(f"**Best-case partial: {len(partial_best)} puzzles.** "
+             "Multiple frameworks ameliorate, none claims to close.\n")
+    if partial_best:
+        L.append("| puzzle | kind | # addressing |")
+        L.append("|---|---|---:|")
+        for h in sorted(partial_best, key=lambda x: -x["n_addressing"]):
+            L.append(f"| `{h['puzzle_id']}` | {h['kind']} | {h['n_addressing']} |")
+        L.append("")
+
+    L.append(f"**Closed by at least one framework: {len(closed_any)} puzzles.** "
+             "Listed for completeness; not gaps.\n")
 
     return "\n".join(L) + "\n"
 
