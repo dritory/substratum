@@ -26,3 +26,20 @@ jobs:
 
       - name: Citation parse-check (offline)
         run: python scripts/check_citations.py --offline
+
+      - name: Consistency audit
+        run: python scripts/audit.py
+
+  citation-check-online:
+    runs-on: ubuntu-latest
+    # Online citation check runs separately because arXiv API hits are
+    # rate-limited and can be flaky; failures here are advisory rather
+    # than blocking other CI.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve arXiv citations against arXiv API
+        run: python scripts/check_citations.py --quiet

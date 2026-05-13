@@ -1,0 +1,87 @@
+{
+  "id": "anthropic_landscape",
+  "name": "Anthropic landscape",
+  "aliases": [
+    "string landscape",
+    "multiverse selection"
+  ],
+  "type": "anthropic",
+  "summary": "The cosmological constant (and other parameters) are environmentally selected from a vast distribution of metastable vacua in a multiverse. Small positive Lambda is anthropically required for galaxy formation (Weinberg's bound rho_Lambda < ~100 * rho_matter at structure formation). The framework derives nothing from first principles; it explains why Lambda is in the observed range without explaining why it has any specific value.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Solves in the sense that Lambda need not be 'naturally' small; it must only fall in an anthropic window. The trade is a sacrifice of predictivity: with ~10^500 metastable vacua, almost any low-energy phenomenology can be accommodated."
+    },
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Anthropic-Higgs arguments (Agrawal, Barr, Donoghue, Seckel 1998) suggest m_H must be near the EW scale for nuclear physics to support complex chemistry; a multiverse selection then explains the EW hierarchy similarly to Lambda."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Observers necessarily exist when Lambda is not too much greater than matter density (Weinberg 1987); the coincidence is a selection effect, not a dynamical explanation."
+    },
+    {
+      "puzzle_id": "fine_structure_constant_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tegmark (1998) showed alpha = 1/137 lies in a narrow window where stable atoms exist (alpha ~ 1 gives no stable matter, alpha << 10^-2 gives no chemistry). The specific value is selected anthropically."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tegmark's argument: stable orbits require d=3 (Bertrand's theorem), and life requires stable orbits. Observers exist only in 3+1, selecting the dimensionality anthropically."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Selection across a multiverse of vacua: parameters are not derived but observed values are conditioned on observers existing; explains some parameters (Lambda, m_H) at the cost of giving up predictive uniqueness (Weinberg 1987; Susskind 2003)."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Treated as a single 'selection' parameter for compression purposes; in practice the framework introduces no specific new fields but presupposes a UV completion (e.g., string theory) with a vast vacuum landscape."
+  },
+  "structural_features": [
+    "selection",
+    "multiverse",
+    "no_first_principles"
+  ],
+  "field_tags": [
+    "cosmological_landscape"
+  ],
+  "composes_with": [
+    "sequestering",
+    "unimodular_gravity"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Anthropic argument for a small Lambda: Weinberg (1987). String-theory landscape: Bousso-Polchinski (2000), Susskind (2003). Active controversy: critics argue it is unfalsifiable; defenders argue it is the only known framework consistent with observed naturalness violations.",
+  "references": [
+    {
+      "citation": "Weinberg, 'Anthropic bound on the cosmological constant', PRL 59, 2607 (1987)",
+      "doi": "10.1103/PhysRevLett.59.2607"
+    },
+    {
+      "citation": "Bousso and Polchinski, 'Quantization of four-form fluxes and dynamical neutralization of the cosmological constant', JHEP 06, 006 (2000)",
+      "arxiv": "hep-th/0004134"
+    }
+  ],
+  "tags": [
+    "anthropic",
+    "multiverse",
+    "cosmological_constant",
+    "landscape"
+  ]
+}

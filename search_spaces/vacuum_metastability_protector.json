@@ -1,0 +1,63 @@
+{
+  "id": "vacuum_metastability_protector",
+  "name": "Mechanism stabilising the EW vacuum against the SM near-criticality",
+  "target_puzzles": ["vacuum_metastability"],
+  "status": "drafted",
+  "closability": "contested",
+  "closability_note": "Near-criticality may be coincidence, anthropic, or structural. Could dissolve experimentally — current top-mass uncertainty straddles the stability boundary.",
+  "summary": "The SM Higgs quartic runs to a small negative value near M_Pl, leaving the EW vacuum metastable but extremely long-lived. No framework predicts why we sit so close to the stability boundary.",
+  "what_closes_it": "A mechanism that flattens lambda(M_Pl) via new high-scale physics (positive beta_lambda contributions), ties near-criticality to inflation (critical-Higgs / Bezrukov-Shaposhnikov), or supplies anthropic selection. SUSY is excluded because it removes the metastability entirely.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "electroweak_singlet_real_scalar",
+      "string_modulus",
+      "cosmological_landscape"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": [
+      "susy_scalar_partners"
+    ]
+  },
+  "scale_hint": "Planck scale (10^19 GeV). The stability boundary is set by lambda(M_Pl); the closing mechanism must operate at or near M_Pl. Note that susy_scalar_partners is excluded because SUSY removes the metastability puzzle entirely — squark/slepton contributions keep lambda positive up to M_Pl, but at the cost of decoupling from this gap.",
+  "compatible_host_frameworks": [
+    "asymptotic_safety_program",
+    "f_theory_gut_axiverse",
+    "m_theory_landscape"
+  ],
+  "blocking_mechanisms": [
+    "mssm",
+    "nmssm",
+    "split_susy"
+  ],
+  "principles_at_stake": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Near-criticality is itself either a fine-tuning or a structural prediction; the closing mechanism's stance on naturalness determines which."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Buttazzo, Degrassi, Giardino, Giudice, Sala, Salvio, Strumia, 'Investigating the near-criticality of the Higgs boson', JHEP 12 (2013) 089",
+      "arxiv": "1307.3536"
+    },
+    {
+      "citation": "Bezrukov and Shaposhnikov, 'The Standard Model Higgs boson as the inflaton', PLB 659, 703 (2008)",
+      "arxiv": "0710.3755"
+    },
+    {
+      "citation": "Bednyakov, Kniehl, Pikelner, Veretin, 'Stability of the electroweak vacuum: gauge independence and advanced precision', PRL 115, 201802 (2015)",
+      "arxiv": "1507.08833"
+    },
+    {
+      "citation": "Khoury and Steinhardt, 'Coincident inflation and the Higgs metastability puzzle' (2019)",
+      "arxiv": "1907.07685"
+    }
+  ],
+  "tags": [
+    "near_criticality",
+    "ew_vacuum",
+    "inflation_link",
+    "could_be_coincidence"
+  ]
+}

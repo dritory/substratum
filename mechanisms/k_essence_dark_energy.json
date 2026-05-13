@@ -1,0 +1,81 @@
+{
+  "id": "k_essence_dark_energy",
+  "name": "k-essence dark energy",
+  "aliases": [
+    "k-inflation",
+    "kinetic-essence"
+  ],
+  "type": "dynamical",
+  "summary": "Dark energy driven by a scalar field with non-canonical kinetic terms: L = p(phi, X) where X = (1/2)(d phi)^2. The non-trivial dependence on X allows attractor solutions in which the field tracks the dominant fluid (matter, radiation) and only emerges as dark energy near the matter-radiation transition. The 'why now' problem of dark-energy onset is addressed dynamically without anthropic input.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Tracker behaviour explains why dark energy is comparable to matter density at the present epoch (the 'why now' problem) without fine-tuning of initial conditions. Doesn't address the underlying smallness of the late-time vacuum energy."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "K-essence with non-canonical kinetic terms can exhibit attractor solutions for which DE/DM ratio is naturally O(1) at recent epochs (Armendariz-Picon-Mukhanov-Steinhardt 2000)."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Non-canonical kinetic term allows w(z) crossing of -1 (phantom-like) which standard quintessence cannot do, fitting DESI 2024 data more easily."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "predicts_signal",
+      "note": "k-essence has speed of sound c_s != 1 in general, leading to distinct clustering signatures relative to LCDM and quintessence; constrained by RSD measurements."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "k-essence scalar phi"
+    ],
+    "new_scales": [
+      "potential / kinetic scale ~ meV"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Functional form of p(phi, X) (typically two-parameter family) plus initial conditions."
+  },
+  "structural_features": [
+    "non_canonical_kinetic",
+    "tracker_solution",
+    "ultralight_scalar",
+    "why_now_addressed"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "sequestering"
+  ],
+  "excludes": [
+    "quintessence"
+  ],
+  "status": "niche",
+  "history": "Armendariz-Picon, Damour, Mukhanov (1999) introduced k-inflation. Armendariz-Picon, Mukhanov, Steinhardt (2000), 'A dynamical solution to the problem of a small cosmological constant and late-time cosmic acceleration', PRL 85, 4438, arXiv:astro-ph/0004134 \u2014 applied to dark energy. Active phenomenology in growth-of-structure and ISW data through 2010s-2020s; DESI Y1 evolving-DE hint compatible with k-essence.",
+  "references": [
+    {
+      "citation": "Armendariz-Picon, Mukhanov, Steinhardt, 'A dynamical solution to the problem of a small cosmological constant and late-time cosmic acceleration', PRL 85, 4438 (2000)",
+      "arxiv": "astro-ph/0004134"
+    }
+  ],
+  "tags": [
+    "dark_energy",
+    "k_essence",
+    "non_canonical_scalar",
+    "tracker"
+  ]
+}

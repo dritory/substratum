@@ -220,5 +220,6 @@
       "reference": "Standard Model Lagrangian (Lorentz-invariant by construction); Kostelecky and Russell, RMP 83, 11 (2011) (SME framework)"
     }
   },
+  "composes_mechanisms": [],
   "tags": ["baseline", "concordance", "gr", "standard_model", "lambda_cdm"]
 }

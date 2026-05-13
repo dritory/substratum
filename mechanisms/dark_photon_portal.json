@@ -1,0 +1,80 @@
+{
+  "id": "dark_photon_portal",
+  "name": "Dark photon kinetic-mixing portal",
+  "aliases": [
+    "Holdom portal",
+    "U(1)' kinetic mixing"
+  ],
+  "type": "dynamical",
+  "summary": "Adds a hidden-sector U(1)' gauge boson (the dark photon A') that mixes with SM hypercharge through a renormalisable kinetic-mixing term -(epsilon/2) F^{Y mu nu} F'_{mu nu}. The dark photon mediates a small SM-hidden-sector coupling proportional to epsilon ~ 10^-9 - 10^-3, providing a generic portal to a dark sector that may itself host dark-matter candidates.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Doesn't pick a DM candidate by itself but supplies the renormalisable portal between SM and a dark sector that does. Massive A' itself can be DM (longitudinal mode produced via inflationary fluctuations); fermionic chi charged under U(1)' can be the DM in 'dark sector freeze-out / freeze-in' models."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "predicts_signal",
+      "note": "Direct target of NA64, BaBar, Belle II, FASER and SHiP searches in the (m_A', epsilon) plane. Current bound epsilon < 10^-3 for m_A' ~ MeV-GeV."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "If chi is the DM and couples via A' exchange, LZ bounds constrain g_chi^2 epsilon^2 / m_A'^4."
+    },
+    {
+      "benchmark_id": "alpha_variation_atomic_clocks",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "dark photon A' (massive U(1)' gauge boson)"
+    ],
+    "new_scales": [
+      "m_A' (free parameter, MeV - TeV)"
+    ],
+    "new_symmetries": [
+      "dark U(1)' (broken or unbroken)"
+    ],
+    "new_parameters_count": 2,
+    "note": "Kinetic mixing parameter epsilon and dark-photon mass m_A'. Dark-sector content (DM mass, couplings) adds further parameters when specified."
+  },
+  "structural_features": [
+    "kinetic_mixing",
+    "hidden_sector",
+    "renormalisable_portal",
+    "u1_extension"
+  ],
+  "field_tags": [
+    "dark_photon"
+  ],
+  "composes_with": [
+    "wimpless_dark_matter",
+    "asymmetric_dark_matter",
+    "mirror_dark_matter"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Holdom (1986), 'Two U(1)'s and epsilon charge shifts', Phys. Lett. B 166, 196. Revived in the 2000s as the simplest renormalisable hidden-sector portal; extensive low-energy and beam-dump experimental program 2010s-present.",
+  "references": [
+    {
+      "citation": "Holdom, 'Two U(1)\\'s and epsilon charge shifts', Phys. Lett. B 166, 196 (1986)",
+      "doi": "10.1016/0370-2693(86)91377-8"
+    },
+    {
+      "citation": "Pospelov, 'Secluded U(1) below the weak scale', Phys. Rev. D 80, 095002 (2009)",
+      "arxiv": "0811.1030"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "kinetic_mixing",
+    "hidden_sector",
+    "portal"
+  ]
+}

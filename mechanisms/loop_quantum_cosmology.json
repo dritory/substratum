@@ -1,0 +1,77 @@
+{
+  "id": "loop_quantum_cosmology",
+  "name": "Loop quantum cosmology",
+  "aliases": [
+    "LQC",
+    "Bojowald bounce"
+  ],
+  "type": "geometric",
+  "summary": "Applies loop-quantum-gravity quantisation techniques to homogeneous-isotropic cosmological minisuperspaces. The discrete-area structure of LQG produces a quantum-bounce replacement of the Big Bang singularity: contracting universes rebound at densities of order the Planck scale and become expanding ones. Predicts modifications to the primordial power spectrum at long wavelengths and a specific bounce density.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Quantum-bounce replaces the singular initial state with a smooth pre-Big-Bang phase, providing an alternative to inflationary initial conditions. Specific predictions for CMB low-multipole power and B-mode features distinguish LQC from inflation-only scenarios."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Symmetry-reduced LQG applied to FRW cosmology; resolves the Big Bang singularity via a quantum bounce but is not a complete QG framework by itself (Bojowald 2001; Ashtekar-Pawlowski-Singh 2006)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "cmb_large_scale_anomalies",
+      "effect": "predicts_signal",
+      "note": "Pre-bounce contracting phase modifies the primordial power spectrum at the largest observable scales; could account for some low-multipole anomalies but predictions are model-dependent."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "bounce density rho_critical ~ 0.4 rho_Planck"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Bounce density (set by LQG area gap) and Barbero-Immirzi parameter."
+  },
+  "structural_features": [
+    "quantum_bounce",
+    "discrete_geometry",
+    "no_singularity",
+    "minisuperspace_quantization"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "loop_quantum_gravity"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Bojowald (2001), 'Absence of singularity in loop quantum cosmology', Phys. Rev. Lett. 86, 5227, arXiv:gr-qc/0102069. Comprehensive review: Ashtekar-Singh (2011), 'Loop quantum cosmology: a status report', Class. Quantum Grav. 28, 213001, arXiv:1108.0893. Active small-community research with steady progress on bounce phenomenology.",
+  "references": [
+    {
+      "citation": "Bojowald, 'Absence of singularity in loop quantum cosmology', Phys. Rev. Lett. 86, 5227 (2001)",
+      "arxiv": "gr-qc/0102069"
+    },
+    {
+      "citation": "Ashtekar and Singh, 'Loop quantum cosmology: a status report', Class. Quantum Grav. 28, 213001 (2011)",
+      "arxiv": "1108.0893"
+    }
+  ],
+  "tags": [
+    "quantum_gravity",
+    "loop_quantum_cosmology",
+    "bounce",
+    "no_singularity"
+  ]
+}

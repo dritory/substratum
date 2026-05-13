@@ -1,0 +1,80 @@
+{
+  "id": "inelastic_dark_matter",
+  "name": "Inelastic dark matter (Tucker-Smith-Weiner)",
+  "aliases": [
+    "iDM",
+    "off-diagonal DM scattering"
+  ],
+  "type": "dynamical",
+  "summary": "Dark matter scatters off nuclei only by simultaneously upscattering to a heavier excited state with mass splitting Delta m ~ 100 keV. Suppresses scattering on light targets (Si, Ge) relative to heavy ones (Xe, I), and predicts strong annual modulation. Originally proposed to reconcile the DAMA modulation signal with CDMS null results; subsequent direct-detection data has constrained but not closed the framework.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Distinct phenomenology from elastic WIMPs: kinematic threshold suppresses light-target scattering, predicts annual modulation amplitude larger than elastic case. DAMA-favoured iDM parameter space has been largely closed by CRESST and XENON, but small windows survive at sub-GeV masses."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Excited state chi* decay to chi + gamma can produce a softer galactic gamma component complementary to standard annihilation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "Inelastic scattering requires E_recoil >~ Delta m / 2, suppressing rates at heavy-nucleus low-recoil-energy regions where LZ is most sensitive. Most iDM parameter space is constrained but not closed."
+    },
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "predicts_signal",
+      "note": "Inelastic DM is often realised through a dark-photon mediator with small kinetic mixing; direct target of NA64 / Belle II searches."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "dark matter particle chi",
+      "nearly-degenerate excited state chi* (Delta m ~ 100 keV)",
+      "mediator (dark photon, dark Higgs)"
+    ],
+    "new_scales": [
+      "Delta m ~ 100 keV",
+      "m_chi ~ 10 GeV - TeV"
+    ],
+    "new_symmetries": [
+      "approximate Z_2 broken to off-diagonal coupling"
+    ],
+    "new_parameters_count": 4,
+    "note": "DM mass, mass splitting, mediator mass, mediator coupling."
+  },
+  "structural_features": [
+    "off_diagonal_coupling",
+    "kinematic_threshold",
+    "annual_modulation",
+    "mediator_required"
+  ],
+  "field_tags": [
+    "dark_photon",
+    "gauge_singlet_dirac_fermion"
+  ],
+  "composes_with": [
+    "dark_photon_portal"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Tucker-Smith and Weiner (2001), 'Inelastic dark matter', Phys. Rev. D 64, 043502, arXiv:hep-ph/0101138. Originally proposed to reconcile DAMA modulation with CDMS nulls; CRESST (2014) and XENON1T (2018) constraints have closed most of the originally-favoured parameter space.",
+  "references": [
+    {
+      "citation": "Tucker-Smith and Weiner, 'Inelastic dark matter', Phys. Rev. D 64, 043502 (2001)",
+      "arxiv": "hep-ph/0101138"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "inelastic",
+    "off_diagonal",
+    "annual_modulation"
+  ]
+}

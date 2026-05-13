@@ -1,0 +1,79 @@
+{
+  "id": "warm_inflation",
+  "name": "Warm inflation",
+  "aliases": [
+    "Berera warm inflation",
+    "dissipative inflation"
+  ],
+  "type": "dynamical",
+  "summary": "Inflation in which the inflaton field dissipates energy continuously into radiation throughout inflation, maintaining thermal equilibrium. Removes the standard cold-inflation requirement of a separate reheating epoch. The dissipative coupling provides thermal noise that generates curvature perturbations via fluctuation-dissipation theorem; predictions for n_s and r differ from cold inflation. Naturally avoids the eta problem of supergravity inflation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Thermal inflaton fluctuations replace quantum-vacuum fluctuations as the source of curvature perturbations. Predicts n_s ~ 0.95-0.97 and small r (in strong-dissipation regime); matches Planck data without fine-tuned cold-inflation potentials. No reheating epoch needed - dissipation populates the radiation bath during inflation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Specific thermal-noise dispersion relation modifies the curvature-perturbation power spectrum on top of slow-roll predictions; matches Planck n_s within slow-roll uncertainties."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects",
+      "note": "Strong-dissipation warm inflation gives r << 0.01 (well below current BICEP/Keck bound)."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "inflaton + light dissipation-coupled fields"
+    ],
+    "new_scales": [
+      "dissipation rate Gamma > H"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Inflaton potential, dissipation coefficient Gamma, temperature T (set by Gamma)."
+  },
+  "structural_features": [
+    "dissipative_inflaton",
+    "thermal_equilibrium",
+    "no_reheating",
+    "fluctuation_dissipation"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "starobinsky_inflation",
+    "hilltop_inflation"
+  ],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis"
+  ],
+  "status": "niche",
+  "history": "Berera (1995), 'Warm inflation', Phys. Rev. Lett. 75, 3218 \u2014 established framework. Modern realisations: warm little inflaton (Bastero-Gil, Berera 2018+). Connections to swampland conjectures: thermal equilibrium can help satisfy trans-Planckian conjecture constraints.",
+  "references": [
+    {
+      "citation": "Berera, 'Warm inflation', Phys. Rev. Lett. 75, 3218 (1995)",
+      "doi": "10.1103/PhysRevLett.75.3218"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "warm",
+    "dissipation",
+    "thermal"
+  ]
+}

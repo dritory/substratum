@@ -474,6 +474,38 @@ code, .mono {
   text-overflow: ellipsis;
 }
 .matrix-col-label:hover { color: var(--ink); }
+
+.framework-leaderboard {
+  margin: 0.4rem 0 0.6rem 0;
+  overflow-x: auto;
+}
+.leaderboard-table {
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  width: 100%;
+  max-width: 720px;
+}
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 0.32rem 0.7rem;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+.leaderboard-table th {
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+.leaderboard-table td.num,
+.leaderboard-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.leaderboard-table td.l1-closed   { color: var(--verdict-pass); font-weight: 600; }
+.leaderboard-table td.l1-partial  { color: var(--verdict-contested); }
+.leaderboard-table td.l1-req-ext  { color: #9683bd; }
+.leaderboard-table td.l2-pass     { color: var(--verdict-pass); }
+.leaderboard-table td.l2-fail     { color: var(--verdict-fail); }
 .matrix-cell {
   width: 18px; height: 22px;
   border-radius: 2px;

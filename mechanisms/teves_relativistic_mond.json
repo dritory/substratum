@@ -1,0 +1,93 @@
+{
+  "id": "teves_relativistic_mond",
+  "name": "TeVeS (Tensor-Vector-Scalar) relativistic MOND",
+  "aliases": [
+    "TeVeS",
+    "Bekenstein TeVeS"
+  ],
+  "type": "geometric",
+  "summary": "Bekenstein's relativistic completion of MOND, in which gravity is mediated by a metric, a 4-vector, and a scalar field. Reproduces MOND in the low-acceleration limit while remaining covariant and consistent with cosmological tests. Aims to replace particle dark matter with modified gravity in galaxies; passes solar-system tests by construction but struggles with cluster lensing offsets and the CMB acoustic peak structure.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Reproduces flat rotation curves and Tully-Fisher relation by construction. Strongly disfavored by Bullet Cluster, CMB, and large-scale structure data; many implementations later excluded by GW170817 (graviton speed)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "bullet_cluster_lensing_offset",
+      "effect": "violates",
+      "note": "Spatial offset between baryonic and lensing centres in the Bullet Cluster cannot be reproduced without DM; this is the canonical TeVeS-killer."
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "violates",
+      "note": "Original TeVeS predicted c_GW != c; GW170817 measurement |c_GW - c|/c < 10^-15 excludes the simplest realisations. Modified TeVeS variants compatible with c_GW = c remain niche."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "violates",
+      "note": "Without cold collisionless DM, the height ratios and locations of CMB acoustic peaks cannot be reproduced; TeVeS does not provide the required perturbation evolution."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "timelike vector field A_mu",
+      "scalar field phi"
+    ],
+    "new_scales": [
+      "MOND acceleration scale a_0 ~ 1.2e-10 m/s^2"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 4,
+    "note": "Free function shape, vector / scalar coupling, MOND scale."
+  },
+  "structural_features": [
+    "modified_gravity",
+    "no_dark_matter",
+    "tensor_vector_scalar"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar",
+    "extra_metric_or_connection"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "asymmetric_dark_matter",
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "freeze_in_dark_matter",
+    "galileon_modified_gravity",
+    "higgs_portal_scalar_dm",
+    "horava_lifshitz_gravity",
+    "kaluza_klein_dark_matter",
+    "mannheim_conformal_gravity",
+    "mirror_dark_matter",
+    "q_ball_dark_matter",
+    "simp_dark_matter",
+    "sterile_neutrino_dm",
+    "super_wimp_gravitino",
+    "ultralight_scalar_dm",
+    "unimodular_gravity",
+    "wimp_thermal_freezeout",
+    "wimpless_dark_matter"
+  ],
+  "status": "disfavored",
+  "history": "Bekenstein (2004), 'Relativistic gravitation theory for the modified Newtonian dynamics paradigm', Phys. Rev. D 70, 083509, arXiv:astro-ph/0403694 (with erratum PRD 71, 069901). Earlier MOND was proposed by Milgrom (1983); Bekenstein-Milgrom Lagrangian formulation 1984. Bullet Cluster (Clowe et al. 2006) and GW170817 substantially constrained relativistic-MOND constructions.",
+  "references": [
+    {
+      "citation": "Bekenstein, 'Relativistic gravitation theory for the modified Newtonian dynamics paradigm', Phys. Rev. D 70, 083509 (2004)",
+      "arxiv": "astro-ph/0403694"
+    }
+  ],
+  "tags": [
+    "modified_gravity",
+    "mond",
+    "teves",
+    "no_dark_matter"
+  ]
+}

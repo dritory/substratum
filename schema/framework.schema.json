@@ -65,6 +65,11 @@
         "additionalProperties": false
       }
     },
+    "composes_mechanisms": {
+      "type": "array",
+      "description": "List of mechanisms/<id> entries that this framework composes. Used to derive total puzzle coverage and parameter cost from the mechanism graph rather than restating it. Cross-checked by the validator.",
+      "items": { "type": "string" }
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" }

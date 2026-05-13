@@ -1,0 +1,62 @@
+{
+  "id": "many_worlds_everett",
+  "name": "Many-worlds (Everett relative-state)",
+  "aliases": [
+    "Everett interpretation",
+    "MWI",
+    "relative-state formulation"
+  ],
+  "type": "dynamical",
+  "summary": "Replaces the measurement postulate of orthodox quantum mechanics with strict unitary evolution of the universal wave function. Apparent measurement outcomes correspond to branches of the wave function in which the observer has perceived each result; all branches are equally real. Combined with environmental decoherence, the framework reproduces standard quantum predictions without invoking wave-function collapse.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "quantum_measurement_problem",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Removes the measurement postulate by treating observers as quantum systems. Pointer-basis selection is provided by environmental decoherence (Zurek). Probability interpretation (Born rule) requires either Deutsch-Wallace-style decision-theoretic derivation or assumed measure on branches; remains debated."
+    },
+    {
+      "puzzle_id": "arrow_of_time_initial_entropy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Eternal-inflation + many-worlds picture provides a consistent global-picture answer to where low-entropy initial states come from: most branches don't have observers; the ones that do see a low-entropy past. Doesn't fully derive but contextualises the puzzle."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "No new fields, scales, or parameters - removes a postulate (collapse) rather than adding one. Compression score effectively infinite for the measurement problem if the interpretation is accepted."
+  },
+  "structural_features": [
+    "no_collapse",
+    "universal_wave_function",
+    "branching",
+    "decoherence_required"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "decoherence_einselection",
+    "linde_eternal_inflation"
+  ],
+  "excludes": [
+    "bohmian_mechanics",
+    "ghirardi_rimini_weber"
+  ],
+  "status": "niche",
+  "history": "Everett (1957), '\"Relative state\" formulation of quantum mechanics', Rev. Mod. Phys. 29, 454. Long-marginalised, then revived in the 1980s-90s by DeWitt, Deutsch, Wallace. Decoherence program (Zurek 1991, 2003) provides the technical machinery for branch separation. Decision-theoretic Born rule (Deutsch 1999, Wallace 2003-2010).",
+  "references": [
+    {
+      "citation": "Everett, '\"Relative state\" formulation of quantum mechanics', Rev. Mod. Phys. 29, 454 (1957)",
+      "doi": "10.1103/RevModPhys.29.454"
+    }
+  ],
+  "tags": [
+    "quantum_foundations",
+    "many_worlds",
+    "no_collapse",
+    "interpretation"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "ads_cft_holography",
+  "name": "AdS/CFT correspondence (Maldacena)",
+  "aliases": [
+    "holographic duality",
+    "gauge/gravity duality",
+    "Maldacena conjecture"
+  ],
+  "type": "uv_completion",
+  "summary": "Conjectured exact equivalence between Type IIB string theory on AdS_5 x S^5 and N=4 SU(N) super-Yang-Mills theory at large N on the boundary. More generally: a duality between quantum gravity in (d+1)-dimensional anti-de Sitter space and a conformal field theory on its d-dimensional boundary. Provides the only known non-perturbative definition of quantum gravity in a class of asymptotically-AdS settings and resolves the black-hole information paradox by construction within that class.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "black_hole_information",
+      "role": "solves",
+      "confidence": "established",
+      "note": "Asymptotically-AdS black holes are dual to thermal states in a unitary CFT; information cannot be lost. AdS/CFT thus settles the information question for the AdS class of black holes, even though the explicit reconstruction of the interior remains open and the analogue for cosmological / asymptotically-flat black holes is harder."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "requires",
+      "confidence": "contested",
+      "note": "AdS/CFT is naturally formulated for negative Lambda; positive Lambda (de Sitter) holographic duality is not established. Listed as a UV completion that constrains the Lambda problem rather than solves it."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Provides a precise non-perturbative definition of quantum gravity in asymptotically-AdS spacetimes via a dual CFT on the boundary (Maldacena 1997). Does not directly address de Sitter or cosmological QG, but establishes that consistent non-perturbative QG exists in this regime."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "lattice_qcd_hadron_spectrum",
+      "effect": "predicts_signal",
+      "note": "Holographic QCD models reproduce qualitative features of the hadron spectrum (Regge trajectories, glueball mass ratios) at the 10-30% level."
+    },
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "The bulk theory is gravity (string / supergravity); GR emerges in the appropriate semiclassical limit."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "full string-theory bulk content"
+    ],
+    "new_scales": [
+      "AdS radius L_AdS related to negative Lambda; string scale"
+    ],
+    "new_symmetries": [
+      "large-N gauge symmetry on the boundary; bulk SUSY"
+    ],
+    "new_parameters_count": 3,
+    "note": "N (boundary gauge group rank), 't Hooft coupling lambda = g_YM^2 N, bulk geometry choice. The duality fixes much of the would-be free structure."
+  },
+  "structural_features": [
+    "holographic_duality",
+    "uv_complete_quantum_gravity",
+    "negative_lambda",
+    "large_n_limit"
+  ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "swampland_de_sitter"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Maldacena (1997), 'The Large N Limit of Superconformal Field Theories and Supergravity', arXiv:hep-th/9711200, Adv. Theor. Math. Phys. 2, 231 (1998). Witten (1998), 'Anti-de Sitter space and holography', arXiv:hep-th/9802150. Most cited paper in theoretical physics.",
+  "references": [
+    {
+      "citation": "Maldacena, 'The Large N Limit of Superconformal Field Theories and Supergravity', Adv. Theor. Math. Phys. 2, 231 (1998)",
+      "arxiv": "hep-th/9711200"
+    },
+    {
+      "citation": "Witten, 'Anti-de Sitter space and holography', Adv. Theor. Math. Phys. 2, 253 (1998)",
+      "arxiv": "hep-th/9802150"
+    }
+  ],
+  "tags": [
+    "string_theory",
+    "holography",
+    "ads_cft",
+    "quantum_gravity",
+    "duality"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "axion_monodromy_inflation",
+  "name": "Axion monodromy inflation",
+  "aliases": [
+    "Silverstein-Westphal monodromy",
+    "string-axion large-field inflation"
+  ],
+  "type": "dynamical",
+  "summary": "Generates a super-Planckian inflaton field range from a sub-Planckian axion decay constant by exploiting monodromy: the axion's potential is not exactly periodic but spirals through many fundamental periods, so the effective field range is N_periods x f >> M_Pl. Realises large-field inflation in controlled string-theory settings, producing observably large tensor-to-scalar ratios. Foundational for large-r inflationary phenomenology with stringy UV completion.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Predicts r ~ 0.04-0.07 for nil-manifold (phi^{2/3}) potential or r ~ 0.05 for axion-monodromy (phi) \u2014 currently constrained by BICEP/Keck (r < 0.036). Tension with weak-gravity conjecture: the trans-Planckian field excursion may put the construction in the swampland, currently debated."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "near_bound",
+      "note": "Predicted r ~ 0.04-0.07 sits right at or above the BICEP/Keck bound r < 0.036; LiteBIRD will close the parameter space."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Predicts oscillating modulations on top of the smooth power spectrum from residual axion-periodicity effects; searched for in Planck data without confirmed detection."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "string-axion inflaton (Kahler or RR origin)"
+    ],
+    "new_scales": [
+      "string scale",
+      "axion decay constant f ~ M_GUT"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry broken by monodromy"
+    ],
+    "new_parameters_count": 3,
+    "note": "Decay constant, monodromy scale, potential shape (Nil-manifold gives phi^{2/3}; axion-monodromy gives ~linear)."
+  },
+  "structural_features": [
+    "string_inflation",
+    "monodromy",
+    "axion_inflation",
+    "trans_planckian_field"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "polchinski_d_branes",
+    "kklt_moduli_stabilisation",
+    "string_axiverse"
+  ],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
+  "status": "disfavored",
+  "history": "Silverstein and Westphal (2008), 'Monodromy in the CMB: gravity waves and string inflation', Phys. Rev. D 78, 106003, arXiv:0803.3085. McAllister-Silverstein-Westphal (2010), 'Gravity waves and linear inflation from axion monodromy', arXiv:0808.0706, generalised. Tightly constrained by BICEP/Keck post-2018 and by weak-gravity-conjecture arguments; remains a target for next-generation CMB.",
+  "references": [
+    {
+      "citation": "Silverstein and Westphal, 'Monodromy in the CMB: gravity waves and string inflation', Phys. Rev. D 78, 106003 (2008)",
+      "arxiv": "0803.3085"
+    },
+    {
+      "citation": "McAllister, Silverstein, Westphal, 'Gravity waves and linear inflation from axion monodromy', Phys. Rev. D 82, 046003 (2010)",
+      "arxiv": "0808.0706"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "string_theory",
+    "axion_monodromy",
+    "large_field"
+  ]
+}

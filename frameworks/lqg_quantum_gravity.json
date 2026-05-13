@@ -1,0 +1,38 @@
+{
+  "id": "lqg_quantum_gravity",
+  "name": "Loop quantum gravity program",
+  "summary": "Classification: TOE-ASPIRATIONAL (incomplete matter sector). Background-independent canonical quantisation of GR using Ashtekar connection variables and a loop / spin-network basis, augmented by loop quantum cosmology for the early-universe regime. Predicts discrete area and volume spectra at the Planck scale and a non-singular quantum bounce replacing the Big Bang. Distinguished from string-theoretic TOE candidates by being background-independent from the start and by not requiring extra dimensions or supersymmetry. Listed here as a TOE-aspirational program with the explicit acknowledgement that LQG has no canonical matter sector: the framework as it stands closes the quantum-gravity-consistency puzzle but leaves the entire SM sector externally specified. Real LQG papers either treat matter as a Fock space on the spin-network kinematics (Thiemann) or remain agnostic; the catalog reflects this by limiting composes_mechanisms to LQG itself.",
+  "lineage": [
+    {
+      "citation": "Ashtekar, 'New variables for classical and quantum gravity', PRL 57, 2244 (1986)",
+      "doi": "10.1103/PhysRevLett.57.2244"
+    },
+    {
+      "citation": "Rovelli and Smolin, 'Spin networks and quantum gravity', PRD 52, 5743 (1995)",
+      "arxiv": "gr-qc/9505006"
+    },
+    {
+      "citation": "Bojowald, 'Absence of singularity in loop quantum cosmology', PRL 86, 5227 (2001)",
+      "arxiv": "gr-qc/0102069"
+    },
+    {
+      "citation": "Ashtekar, Pawlowski, Singh, 'Quantum nature of the big bang', PRL 96, 141301 (2006)",
+      "arxiv": "gr-qc/0602086"
+    },
+    {
+      "citation": "Rovelli and Vidotto, 'Covariant Loop Quantum Gravity', Cambridge (2014)"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "loop_quantum_gravity",
+    "loop_quantum_cosmology"
+  ],
+  "tags": [
+    "toe_candidate",
+    "quantum_gravity",
+    "background_independent",
+    "incomplete_matter_sector",
+    "known_program"
+  ]
+}

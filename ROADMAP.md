@@ -3,7 +3,9 @@
 This file tracks the constraint inventory we have populated and what
 remains. The goal is a procedural benchmark set comprehensive enough
 that any candidate unified-physics framework can be evaluated against
-it.
+it, plus a layered representation of naturalness puzzles and proposed
+mechanisms that surfaces dot-alignment across the open structural
+problems.
 
 ## Conventions
 
@@ -11,12 +13,19 @@ it.
   `benchmarks/` that validates against `schema/benchmark.schema.json`,
   cites primary literature with arXiv/DOI, and (where applicable)
   includes a `procedural` block with the canonical parameterization.
+- A puzzle is populated when it validates against
+  `schema/puzzle.schema.json` and includes characteristic numbers and
+  primary references.
+- A mechanism is populated when it validates against
+  `schema/mechanism.schema.json`, declares at least one
+  `addresses_puzzles` edge with a confidence label, and includes
+  primary references.
 - Every entry must be backed by primary references. No textbook-only
   citations.
 
 ## Status
 
-### Populated (62 benchmark entries, 5 data entries)
+### Populated (75 benchmark entries, 5 data entries, 43 puzzles, 153 mechanisms)
 
 **Gravity (10):**
 - `recover_general_relativity` (PPN, PPK, GW waveform)
@@ -98,6 +107,56 @@ it.
 **Meta (1):**
 - `address_open_tensions` (links into `data/`)
 
+**Pattern compression (3, new):**
+- `quark_mass_fn_compression` (Froggatt-Nielsen ε^q ansatz vs PDG quark masses)
+- `ckm_wolfenstein_lambda_hierarchy` (CKM organised in powers of λ ≈ 0.225)
+- `neutrino_mass_scale_seesaw` (m_ν ~ y_ν² v² / M_R compression)
+
+**Puzzles (9, new layer):**
+- `cosmological_constant_smallness`, `gauge_hierarchy_problem`,
+  `strong_cp_problem`, `flavor_mass_hierarchy`, `ckm_mixing_pattern`,
+  `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
+  `gauge_coupling_unification`
+
+**Puzzles (10, new layer):**
+- `cosmological_constant_smallness`, `gauge_hierarchy_problem`,
+  `strong_cp_problem`, `flavor_mass_hierarchy`, `ckm_mixing_pattern`,
+  `neutrino_mass_smallness`, `baryon_asymmetry`, `dark_matter_identity`,
+  `gauge_coupling_unification`, `inflation_initial_conditions`
+
+**Mechanisms (53, new layer):**
+- Strong-CP: `peccei_quinn_axion`, `nelson_barr`,
+  `babu_mohapatra_parity`
+- Flavor: `froggatt_nielsen`, `modular_flavor_symmetry`,
+  `a4_family_symmetry`, `partial_compositeness`,
+  `minimal_flavor_violation`
+- Neutrino mass: `seesaw_type_i`, `seesaw_type_ii`, `seesaw_type_iii`,
+  `inverse_seesaw`, `zee_radiative_neutrino_mass`,
+  `scotogenic_neutrino_dm`
+- Baryogenesis: `leptogenesis`, `electroweak_baryogenesis`,
+  `affleck_dine_baryogenesis`, `gut_baryogenesis`
+- Hierarchy: `mssm`, `twin_higgs`, `relaxion`, `composite_higgs`,
+  `large_extra_dimensions_add`, `warped_extra_dimensions_rs`,
+  `nnaturalness`, `coleman_weinberg_radiative`, `little_higgs`,
+  `technicolor`
+- SUSY mediation: `anomaly_mediated_susy_breaking`,
+  `gauge_mediated_susy_breaking`
+- Dark matter: `wimp_thermal_freezeout`, `asymmetric_dark_matter`,
+  `ultralight_scalar_dm`, `sterile_neutrino_dm`,
+  `higgs_portal_scalar_dm`, `mirror_dark_matter`,
+  `wimpless_dark_matter`, `kaluza_klein_dark_matter`,
+  `dark_photon_portal`, `super_wimp_gravitino`
+- Inflation: `starobinsky_inflation`, `higgs_inflation`
+- Unification / UV completion: `su5_minimal_gut`, `so10_gut`,
+  `pati_salam`, `heterotic_string_compactification`
+- Cosmological constant / modified gravity: `anthropic_landscape`,
+  `sequestering`, `unimodular_gravity`, `quintessence`,
+  `dgp_braneworld`, `asymptotic_safety_gravity`,
+  `holographic_dark_energy`
+
+All citations verified against primary literature via direct
+WebSearch lookup against arXiv / journal abstracts.
+
 ### Recently populated
 
 Previous batch (9 entries):
@@ -142,6 +201,28 @@ the next batch (none yet written; pull requests welcome):
   Planck + ACT (currently in cmb_acoustic_peak_structure)
 - `super_k_atmospheric_lorentz` — atmospheric-neutrino LIV bounds
   complementary to `lorentz_electron_sme`
+
+## Future research questions
+
+These are deferred research-grade investigations that the catalog enables
+but does not itself perform. Listed for orientation, not as near-term
+work items.
+
+- **Graph mining for non-obvious alignments.** Once the mechanism
+  catalog is sufficiently dense (~50+ entries across all puzzles),
+  search for the smallest mechanism subset that closes the most
+  puzzles, and identify recurring `structural_features` combinations
+  among high-degree mechanisms. The goal is to surface latent
+  unification clues that no single subfield would notice. Speculative;
+  success would mean re-discovering known clusters (SUSY-GUT,
+  axion+seesaw+leptogenesis) plus identifying at least one
+  non-obvious composition.
+- **Cross-mechanism conflict detection.** Beyond the explicit
+  `excludes` field, detect implicit conflicts via shared field content,
+  scale clashes, or contradictory predictions on the same benchmark.
+- **Bayesian compression weighting.** Replace the simple
+  puzzles_closed / parameters_introduced ratio with a posterior
+  weighting that accounts for confidence labels and benchmark coverage.
 
 ## How to contribute
 

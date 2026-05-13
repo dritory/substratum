@@ -1,0 +1,53 @@
+{
+  "id": "flavor_mass_hierarchy",
+  "name": "Fermion mass hierarchy",
+  "aliases": ["flavor problem", "Yukawa hierarchy"],
+  "kind": "pattern",
+  "summary": "The charged-fermion masses span six orders of magnitude (top ~ 173 GeV down to up ~ 2 MeV; tau ~ 1.78 GeV down to electron ~ 0.51 MeV) with no SM derivation. The Yukawa couplings are O(1) for the top and ~10^-6 for the up quark; this spread looks like a pattern but the SM provides no organising principle.",
+  "characteristic_numbers": [
+    {
+      "symbol": "y_t",
+      "value": "1.0",
+      "expected": "O(1)",
+      "gap_log10": 0,
+      "note": "Top Yukawa is the only natural-looking one."
+    },
+    {
+      "symbol": "y_u",
+      "value": "1.2e-5",
+      "expected": "O(1)",
+      "gap_log10": -5
+    },
+    {
+      "symbol": "y_e",
+      "value": "2.9e-6",
+      "expected": "O(1)",
+      "gap_log10": -5.5
+    },
+    {
+      "symbol": "m_top / m_up",
+      "value": "8e4",
+      "expected": "O(1)",
+      "gap_log10": 4.9
+    }
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Yukawa couplings have technical naturalness in the Standard Model in the sense that setting y_i to zero restores a chiral symmetry, so small values are not radiatively unstable. The puzzle is 'why are these the values' rather than 'why are they small'; this is closer to a pattern problem than a Higgs-style hierarchy."
+    }
+  ],
+  "history": "Recognised as a structural puzzle once the third generation was discovered. Froggatt-Nielsen (1979) proposed an abelian flavor symmetry whose integer charges reproduce the hierarchy via powers of a small expansion parameter. Modular flavor symmetries (Feruglio 2017) and family unification continue to be explored.",
+  "references": [
+    {
+      "citation": "Froggatt and Nielsen, 'Hierarchy of quark masses, Cabibbo angles and CP violation', Nucl. Phys. B 147, 277 (1979)",
+      "doi": "10.1016/0550-3213(79)90316-X"
+    },
+    {
+      "citation": "Particle Data Group, 'Review of Particle Physics' (2024)",
+      "doi": "10.1103/PhysRevD.110.030001"
+    }
+  ],
+  "tags": ["pattern", "flavor", "yukawa", "fermion_masses"]
+}

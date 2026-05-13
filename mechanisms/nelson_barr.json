@@ -1,0 +1,74 @@
+{
+  "id": "nelson_barr",
+  "name": "Nelson-Barr mechanism",
+  "aliases": [
+    "spontaneous CP violation models"
+  ],
+  "type": "symmetry",
+  "summary": "An alternative resolution of the strong-CP problem: CP is exact at tree level (so theta = 0 by symmetry), and CP is then spontaneously broken in a way that produces the CKM phase without re-introducing a tree-level theta. Heavy vector-like quarks mix with SM quarks through a CP-violating singlet sector; the resulting effective theta_eff is naturally small.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Avoids the axion; the cost is heavy vector-like quarks and tuned scalar-sector parameters to keep the radiative theta from regenerating above the experimental bound."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "strong_cp_theta_qcd",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound",
+      "note": "Generic Nelson-Barr models predict EDMs at or just below current bounds; viable parameter space is being closed by ongoing experiments."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "heavy vector-like quarks Q, Q'",
+      "CP-violating complex scalar singlet S"
+    ],
+    "new_scales": [
+      "M_Q (vector-like quark mass, ~few TeV - PeV)"
+    ],
+    "new_symmetries": [
+      "CP (exact at tree level, spontaneously broken)"
+    ],
+    "new_parameters_count": 5,
+    "note": "Vector-like quark masses, mixing matrix, scalar singlet potential, and CP-violating phase together introduce ~5 new free parameters."
+  },
+  "structural_features": [
+    "discrete_symmetry",
+    "vector_like_quarks",
+    "spontaneous_cp_violation",
+    "scalar_at_high_scale"
+  ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar",
+    "vectorlike_quark"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "babu_mohapatra_parity",
+    "massless_up_quark",
+    "peccei_quinn_axion"
+  ],
+  "status": "niche",
+  "history": "Nelson (1984) and Barr (1984) independently. Revived periodically as the axion window narrows. Modern variants address radiative stability of theta = 0 below the percent level.",
+  "references": [
+    {
+      "citation": "Nelson, 'Naturally weak CP violation', Phys. Lett. B 136, 387 (1984)",
+      "doi": "10.1016/0370-2693(84)92025-2"
+    },
+    {
+      "citation": "Barr, 'Solving the strong CP problem without the Peccei-Quinn symmetry', PRL 53, 329 (1984)",
+      "doi": "10.1103/PhysRevLett.53.329"
+    }
+  ],
+  "tags": [
+    "strong_cp",
+    "discrete_symmetry"
+  ]
+}

@@ -5,7 +5,7 @@
   "requirement": "Any candidate framework must reproduce the unitarity sum |V_ud|^2 + |V_us|^2 + |V_ub|^2 = 1 of the first row of the CKM matrix. Tension at the ~3 sigma level: |V_ud|^2 + |V_us|^2 + |V_ub|^2 - 1 = -0.0017 +/- 0.0006, with internal disagreement among different determinations of V_us and V_ud.",
   "regime": {
     "length_m": 1e-18,
-    "energy_ev": 8e10,
+    "energy_ev": 80000000000.0,
     "description": "Charged-current hadronic transitions: super-allowed nuclear beta decays (V_ud), kaon and pion semileptonic decays (V_us). Sensitive to BSM modifications of the W-quark coupling at the TeV scale."
   },
   "current_bound": {
@@ -42,8 +42,15 @@
       "arxiv": "2002.07184"
     },
     {
-      "citation": "Particle Data Group, 'Review of Particle Physics', 2024"
+      "citation": "Particle Data Group, 'Review of Particle Physics', 2024",
+      "url": "https://pdg.lbl.gov/",
+      "doi": "10.1103/PhysRevD.110.030001"
     }
   ],
-  "tags": ["flavor", "ckm", "weak_decay", "anomaly"]
+  "tags": [
+    "flavor",
+    "ckm",
+    "weak_decay",
+    "anomaly"
+  ]
 }

@@ -1,0 +1,86 @@
+{
+  "id": "primordial_black_hole_dm",
+  "name": "Primordial black hole dark matter",
+  "aliases": [
+    "PBH dark matter",
+    "Carr-Hawking PBHs"
+  ],
+  "type": "dynamical",
+  "summary": "Black holes formed in the early universe (typically during the radiation-dominated era from collapse of large-amplitude curvature perturbations) can constitute some or all of the dark matter. Allowed mass windows after combined microlensing (EROS, OGLE, Subaru HSC), CMB-distortion (Planck mu-distortion, FIRAS), dynamical (wide binaries, ultra-faint dwarfs), and gravitational-wave (LIGO/Virgo merger rate) constraints: asteroid-mass window 10^-16 - 10^-11 M_sun is the only region where PBHs can be 100% of DM; sub-percent contributions allowed in stellar-mass range relevant to LIGO/Virgo binary BH mergers. Production mechanisms include inflaton-spectrum-bump models, axion-curvaton mechanisms, and first-order phase transition bubble collisions.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "PBH in asteroid-mass window (10^17-10^22 g) consistent with 100% DM after Subaru HSC microlensing (Niikura et al. 2019 arXiv:1701.02151) and femtolensing (Katz et al. 2018). Stellar-mass PBHs (1-100 M_sun) constrained to f_PBH < 0.01 (CMB accretion + LIGO merger rate) - cannot be all DM but can contribute to LIGO mergers."
+    },
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Hawking-evaporating light PBHs (M < 10^11 g) inject baryon-number asymmetric particles preferentially if CP-violating physics is in the spectrum (Toussaint-Treiman-Wilczek-Zee 1979); revived as 'PBH baryogenesis' (Hook 2014, arXiv:1404.0113; Hamada-Iso 2016)."
+    },
+    {
+      "puzzle_id": "jwst_early_massive_galaxies",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "PBH DM seeds early-collapse halos via Poisson clustering; for f_PBH > 1%, the boost in high-z halo number reproduces the observed JWST overabundance (Inman-Ali-Haiman 2019, Liu et al. 2022)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "PBH DM does not produce direct-detection signal (no particle-nuclear cross-section). Provides a 'null channel' DM candidate consistent with all WIMP-direct-detection null results."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "PBH mass M_PBH ~ 10^15 g - 100 M_sun (broad)",
+      "PBH formation epoch z_form (set by perturbation horizon-entry)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "PBH mass M_PBH (or mass function) and fraction f_PBH = rho_PBH / rho_DM. Inflation-spectrum-bump models add inflaton-potential parameters but those are absorbed into existing inflation-mechanism counts."
+  },
+  "structural_features": [
+    "black_hole_dm",
+    "gravitational_only_coupling",
+    "primordial_collapse",
+    "asteroid_mass_window"
+  ],
+  "field_tags": [
+    "primordial_black_hole_population"
+  ],
+  "composes_with": [
+    "axion_monodromy_inflation",
+    "hilltop_inflation",
+    "starobinsky_inflation",
+    "natural_inflation"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Zeldovich-Novikov (1967) first noted PBH formation. Hawking (1971) MNRAS 152, 75. Carr-Hawking (1974), MNRAS 168, 399. Modern revival post-LIGO GW150914: Bird, Cholis, Munoz, Ali-Haimoud, Kamionkowski, Kovetz, Raccanelli, Riess (2016), 'Did LIGO detect dark matter?', PRL 116, 201301, arXiv:1603.00464. Comprehensive constraint review: Carr, Kuhnel, Sandstad (2016), PRD 94, 083504, arXiv:1607.06077; Green-Kavanagh (2021) review arXiv:2007.10722.",
+  "references": [
+    {
+      "citation": "Carr and Hawking, 'Black holes in the early universe', MNRAS 168, 399 (1974)",
+      "doi": "10.1093/mnras/168.2.399"
+    },
+    {
+      "citation": "Bird et al., 'Did LIGO detect dark matter?', Phys. Rev. Lett. 116, 201301 (2016)",
+      "arxiv": "1603.00464"
+    },
+    {
+      "citation": "Carr, Kuhnel, Sandstad, 'Primordial black holes as dark matter', Phys. Rev. D 94, 083504 (2016)",
+      "arxiv": "1607.06077"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "primordial_black_holes",
+    "gravitational",
+    "ligo",
+    "no_particle_dm"
+  ]
+}

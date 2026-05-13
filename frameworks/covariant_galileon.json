@@ -76,5 +76,6 @@
       "note": "Galileon does not address the strong CP problem; theta_QCD remains a free parameter inherited from the SM matter sector."
     }
   },
+  "composes_mechanisms": ["quintessence"],
   "tags": ["modified_gravity", "scalar_tensor", "horndeski", "dark_energy", "killed_by_gw170817"]
 }

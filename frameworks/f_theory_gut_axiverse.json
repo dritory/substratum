@@ -1,0 +1,46 @@
+{
+  "id": "f_theory_gut_axiverse",
+  "name": "F-theory GUT + string axiverse + type-I seesaw (LVS moduli)",
+  "summary": "Classification: KNOWN PROGRAM (top-down). The flagship top-down string-theoretic framework: F-theory compactified on an elliptic Calabi-Yau fourfold with 7-branes wrapping a del Pezzo surface produces an SU(5) (or SO(10)) GUT in 4D, with chiral matter from intersections and Yukawa hierarchies from local geometry. The Kahler moduli sector hosts the string axiverse — typically 10^2-10^3 ALPs spanning many decades in mass — of which one plays the role of the QCD axion solving strong CP. Large-Volume-Scenario stabilisation generates a hierarchy between the string scale and the GUT scale. Right-handed neutrinos in the 16 of SO(10) (or singlets in SU(5)) give the type-I seesaw. Distinguished from the SUSY-GUT framework by being a UV completion, not just a 4D Lagrangian: every parameter is in principle calculable from geometry. Distinguished from the bottom-up axiverse by deriving the axions from compactification rather than postulating them.",
+  "lineage": [
+    {
+      "citation": "Vafa, 'Evidence for F-theory', Nucl. Phys. B 469, 403 (1996)",
+      "arxiv": "hep-th/9602022"
+    },
+    {
+      "citation": "Donagi and Wijnholt, 'Model Building with F-Theory', Adv. Theor. Math. Phys. 15, 1237 (2011)",
+      "arxiv": "0802.2969"
+    },
+    {
+      "citation": "Beasley, Heckman, Vafa, 'GUTs and Exceptional Branes in F-theory - I, II', JHEP 01 (2009) 058, JHEP 01 (2009) 059",
+      "arxiv": "0802.3391"
+    },
+    {
+      "citation": "Arvanitaki, Dimopoulos, Dubovsky, Kaloper, March-Russell, 'String Axiverse', PRD 81, 123530 (2010)",
+      "arxiv": "0905.4720"
+    },
+    {
+      "citation": "Cicoli, Conlon, Quevedo, 'General Analysis of LARGE Volume Scenarios with String Loop Moduli Stabilisation', JHEP 0810, 105 (2008)",
+      "arxiv": "0805.1029"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "f_theory_compactification",
+    "su5_minimal_gut",
+    "peccei_quinn_axion",
+    "string_axiverse",
+    "large_volume_scenario_lvs",
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
+  "tags": [
+    "string_theory",
+    "f_theory",
+    "gut",
+    "axiverse",
+    "seesaw",
+    "top_down",
+    "known_program"
+  ]
+}

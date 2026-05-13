@@ -1,0 +1,94 @@
+{
+  "id": "sidm_yukawa_dark_force",
+  "name": "Self-interacting dark matter with Yukawa dark force",
+  "aliases": [
+    "velocity-dependent SIDM",
+    "Tulin-Yu-Zurek dark force"
+  ],
+  "type": "dynamical",
+  "summary": "Dark matter with a light mediator phi (mass m_phi << m_chi) self-scatters through a Yukawa potential V(r) = -alpha_chi exp(-m_phi r) / r. The resulting cross-section is highly velocity-dependent: rises at low v (Sommerfeld-enhanced regime), peaks at v ~ m_phi/m_chi, then falls. Naturally produces the right effective cross-section sigma/m ~ 1 cm^2/g on dwarf-galaxy scales (v ~ 30 km/s, where cores are observed) while satisfying sigma/m < 0.1 cm^2/g on cluster scales (v ~ 1500 km/s, where halos are cuspy). Single framework explains the rotation-curve-diversity problem and the cluster-vs-dwarf core-cusp transition.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_halo_diversity",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Kaplinghat-Tulin-Yu-Zurek framework with m_chi ~ 100 GeV, m_phi ~ 10 MeV, alpha_chi ~ 10^-2 fits the full diversity of dwarf-galaxy rotation curves while respecting Bullet-Cluster bound (Kamada et al. 2017, arXiv:1611.02716). Predicts characteristic core-radius / V_max scaling that LSST + JWST + ALMA can test."
+    },
+    {
+      "puzzle_id": "galactic_small_scale_structure",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Resolves both the core-cusp problem (Yukawa potential softens central density) and too-big-to-fail (cores reduce inner circular velocities). Missing satellites partly addressed; full resolution still requires baryonic physics."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "DM thermal-relic in dark sector with dark photon/scalar mediator; relic abundance set by Sommerfeld-enhanced chi chi -> phi phi annihilation. Consistent with direct-detection limits via small Higgs/photon kinetic-mixing portal."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Sommerfeld enhancement from a light mediator boosts annihilation in dense halos, matching the GCE flux for m_chi ~ 100-200 GeV and m_phi ~ 100 MeV."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_indirect_fermi_lat_dwarfs",
+      "effect": "predicts_signal",
+      "note": "Sommerfeld-enhanced annihilation in dwarfs gives boosted indirect-detection signal; constrains alpha_chi and m_phi via Fermi-LAT dwarf spheroidal observations."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "DM fermion or scalar chi",
+      "light mediator phi (scalar or vector)"
+    ],
+    "new_scales": [
+      "m_chi ~ 1 GeV - 1 TeV",
+      "m_phi ~ 1 - 100 MeV"
+    ],
+    "new_symmetries": [
+      "hidden U(1) or Z_2 stabilising chi"
+    ],
+    "new_parameters_count": 3,
+    "note": "DM mass, mediator mass, dark fine-structure constant alpha_chi."
+  },
+  "structural_features": [
+    "self_interacting_dm",
+    "yukawa_potential",
+    "velocity_dependent",
+    "sommerfeld_enhanced"
+  ],
+  "field_tags": [
+    "dark_photon",
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "self_interacting_dm_yukawa",
+    "dark_photon_portal",
+    "asymmetric_dark_matter",
+    "wimp_thermal_freezeout"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Original SIDM proposal: Spergel-Steinhardt (2000), PRL 84, 3760. Yukawa-mediated SIDM: Buckley-Fox (2010), PRD 81, 083522, arXiv:0911.3898. Tulin-Yu-Zurek (2013), 'Beyond collisionless dark matter: particle physics dynamics for dark matter halo structure', PRD 87, 115007, arXiv:1302.3898 - velocity-dependent framework. Halo-diversity application: Kamada-Kaplinghat-Pace-Yu (2017, arXiv:1611.02716).",
+  "references": [
+    {
+      "citation": "Tulin, Yu, Zurek, 'Beyond collisionless dark matter: particle physics dynamics for dark matter halo structure', Phys. Rev. D 87, 115007 (2013)",
+      "arxiv": "1302.3898"
+    },
+    {
+      "citation": "Kamada, Kaplinghat, Pace, Yu, 'Self-interacting dark matter can explain diverse galactic rotation curves', Phys. Rev. Lett. 119, 111102 (2017)",
+      "arxiv": "1611.02716"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "self_interacting",
+    "yukawa",
+    "velocity_dependent",
+    "halo_structure"
+  ]
+}

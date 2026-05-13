@@ -1,0 +1,74 @@
+{
+  "id": "leptogenesis",
+  "name": "Leptogenesis",
+  "aliases": [
+    "thermal leptogenesis",
+    "Fukugita-Yanagida"
+  ],
+  "type": "dynamical",
+  "summary": "Heavy right-handed neutrinos decay out of equilibrium with CP-violating asymmetries, generating a lepton asymmetry that is partially converted to a baryon asymmetry by SM electroweak sphalerons. Builds directly on the type-I seesaw: the same heavy Majorana sector that explains light neutrino masses also generates BAU.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 10^-9 with M_R > 10^9 GeV (Davidson-Ibarra bound) for hierarchical heavy neutrinos. Resonant leptogenesis lowers the mass scale at the cost of fine-tuning."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "requires",
+      "confidence": "established",
+      "note": "Requires the seesaw structure to exist; this edge tracks the dependency."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects",
+      "note": "High-scale CP violation does not generically pollute low-energy EDMs at observable levels."
+    },
+    {
+      "benchmark_id": "electron_edm_jila",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Building on seesaw, leptogenesis introduces no new fields. The asymmetry depends on CP phases in the heavy-neutrino Yukawa matrix; counting them as ~2 new effectively-free parameters captures the additional information needed."
+  },
+  "structural_features": [
+    "out_of_equilibrium",
+    "high_scale_cp",
+    "sphaleron_conversion",
+    "lepton_number_violation"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "mssm"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Fukugita and Yanagida (1986). Davidson-Ibarra bound on lightest M_R (2002). Buchmuller-Di Bari-Plumacher boltzmann analysis through the 2000s. Resonant leptogenesis (Pilaftsis-Underwood) lowers the scale.",
+  "references": [
+    {
+      "citation": "Fukugita and Yanagida, 'Baryogenesis without grand unification', Phys. Lett. B 174, 45 (1986)",
+      "doi": "10.1016/0370-2693(86)91126-3"
+    },
+    {
+      "citation": "Davidson and Ibarra, 'A lower bound on the right-handed neutrino mass from leptogenesis', Phys. Lett. B 535, 25 (2002)",
+      "arxiv": "hep-ph/0202239"
+    }
+  ],
+  "tags": [
+    "baryogenesis",
+    "leptogenesis",
+    "cp_violation",
+    "seesaw"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "asymptotic_safety_gravity",
+  "name": "Asymptotic safety (gravity)",
+  "aliases": [
+    "Weinberg asymptotic safety",
+    "ASG"
+  ],
+  "type": "uv_completion",
+  "summary": "Quantum gravity is rendered nonperturbatively renormalizable by a non-trivial UV fixed point of the gravitational coupling under the renormalization group. The theory has finitely many relevant directions, so high-energy predictions are set by a small number of measurements. Predicts specific values for couplings; some scenarios constrain the Higgs mass and quartic at the Planck scale.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "If gravity flows to a UV fixed point, the Higgs mass-parameter sensitivity to the UV cutoff is reorganized; the tuning is predicted to be modest if the fixed point lies in a particular regime. Highly model-dependent."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "ASG predicts the dimensionless Lambda * G_N to flow toward a fixed-point value at the UV; reproducing observed Lambda requires specific irrelevant-direction structure."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "The spectral dimension at the UV fixed point drops to d_s = 2 (Lauscher-Reuter 2005). This is a direct prediction of the asymptotic-safety scenario for quantum gravity, not put in by hand."
+    },
+    {
+      "puzzle_id": "fine_structure_constant_value",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Wetterich (2018) argued that alpha at low energy is computable from the UV fixed point of gauge + gravity; the predicted value is within ~10% of 1/137 in their truncation."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Non-trivial UV fixed point of the gravitational coupling renders QG nonperturbatively renormalisable. If the conjecture holds, asymptotic safety is a complete UV completion of GR + matter (Weinberg 1979; Reuter 1998; Eichhorn 2023 review)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "If gravity has a UV fixed point that drags matter couplings, dimensionless SM couplings could be predicted from the UV (Wetterich 2018; Eichhorn-Held 2018)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "UV fixed point at M_Planck"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Number and identity of relevant directions; predictions follow once these are fixed by data."
+  },
+  "structural_features": [
+    "non_perturbative",
+    "rg_fixed_point",
+    "uv_completion",
+    "finite_relevant_directions"
+  ],
+  "field_tags": [],
+  "composes_with": [],
+  "excludes": [],
+  "status": "niche",
+  "history": "Weinberg (1979) conjectured asymptotic safety. Reuter et al. developed the functional renormalization group framework (1998+); active research into truncation-independent fixed-point existence and matter coupling continues.",
+  "references": [
+    {
+      "citation": "Weinberg, 'Ultraviolet divergences in quantum theories of gravitation', in General Relativity: An Einstein Centenary Survey (1979)",
+      "url": "https://inspirehep.net/literature/141828"
+    },
+    {
+      "citation": "Reuter, 'Nonperturbative evolution equation for quantum gravity', Phys. Rev. D 57, 971 (1998)",
+      "arxiv": "hep-th/9605030"
+    }
+  ],
+  "tags": [
+    "quantum_gravity",
+    "asymptotic_safety",
+    "rg_flow"
+  ]
+}

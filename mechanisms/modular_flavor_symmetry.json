@@ -1,0 +1,98 @@
+{
+  "id": "modular_flavor_symmetry",
+  "name": "Modular flavor symmetry",
+  "aliases": [
+    "modular invariance flavor"
+  ],
+  "type": "symmetry",
+  "summary": "Yukawa couplings are modular forms of weight k under a finite modular group Gamma_N (e.g., A_4, S_4, A_5). The single complex modulus tau provides a small expansion parameter; modular weights play the role of FN charges but are constrained by modular invariance, producing predictive Yukawa structures with fewer free parameters than abelian Froggatt-Nielsen.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Single modulus tau replaces multiple flavon VEVs; modular forms of definite weight constrain Yukawa structure tightly."
+    },
+    {
+      "puzzle_id": "ckm_mixing_pattern",
+      "role": "explains_pattern",
+      "confidence": "proposed"
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Modular A_4 / S_4 models reproduce PMNS angles and provide testable predictions for the CP phase and neutrino mass ordering."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Specific modular weights and SL(2,Z) representations can yield charged-lepton mass ratios close to the Koide value (Q = 2/3); the formula appears as an approximate consequence rather than an exact prediction (Feruglio 2019, Penedo-Petcov 2019)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa entries are modular forms of a finite modular group at fixed weight; the number of free parameters drops from O(20) to O(few) (Feruglio 2017; Ding-King 2024 review)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "predicts_signal"
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal"
+    },
+    {
+      "benchmark_id": "ckm_wolfenstein_lambda_hierarchy",
+      "effect": "predicts_signal"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "modulus tau (complex scalar)"
+    ],
+    "new_scales": [
+      "modular VEV scale"
+    ],
+    "new_symmetries": [
+      "finite modular group Gamma_N (A_4, S_4, A_5, ...)"
+    ],
+    "new_parameters_count": 3,
+    "note": "Modulus VEV (Re tau, Im tau), overall Yukawa scale; modular forms then largely fix the structure."
+  },
+  "structural_features": [
+    "discrete_symmetry",
+    "modular_invariance",
+    "non_abelian",
+    "single_modulus"
+  ],
+  "field_tags": [
+    "string_modulus"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "seesaw_type_ii"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Feruglio (2017) introduced modular flavor symmetries from string-inspired considerations. Extensive systematic studies of A_4, S_4, A_5 modular models for both quark and lepton sectors followed (Kobayashi-Nilles-Saga-Tanimoto 2018-2020).",
+  "references": [
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?', in From My Vast Repertoire (2019)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Kobayashi, Tanaka, Tatsuishi, 'Neutrino mixing from finite modular groups', Phys. Rev. D 98, 016004 (2018)",
+      "arxiv": "1803.10391"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "modular",
+    "discrete_symmetry"
+  ]
+}

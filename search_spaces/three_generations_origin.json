@@ -1,0 +1,61 @@
+{
+  "id": "three_generations_origin",
+  "name": "Mechanism forcing N_families = 3 from structural inputs",
+  "target_puzzles": ["three_generations_problem"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "Multiple compactifications produce three families (heterotic Euler characteristic, F-theory intersection numbers, flipped SU(5)) but none is unique — each yields 3 from a discrete moduli choice that doesn't rule out 2, 4, or other counts.",
+  "summary": "No framework derives N_families = 3 from structural inputs. The SM takes it as a postulate; GUTs unify within a family; string compactifications produce three-family models without forcing N=3.",
+  "what_closes_it": "A mechanism that forces N=3 with no remaining degree of freedom: a topological constraint ruling out other values, a flavor symmetry whose representations demand three families (modular Gamma_3 at specific weight is the active route), or an environmental selection over a finite measure.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "string_theoretic_background",
+      "cosmological_landscape"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "GUT scale or higher (10^16 - 10^18 GeV). The generation count is set in compactification or by symmetry at the highest scales; low-energy mechanisms cannot change the number of chiral fermion families.",
+  "compatible_host_frameworks": [
+    "f_theory_gut_axiverse",
+    "m_theory_landscape",
+    "modular_string_flavor"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "gauge_invariance",
+      "status": "tests",
+      "note": "Anomaly cancellation in the SM works at any generation count; the gap-closer would have to add a constraint beyond gauge anomaly (e.g. a stringy tadpole condition, a modular-symmetry constraint, or a global symmetry's anomaly)."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Candelas, Horowitz, Strominger, Witten, 'Vacuum configurations for superstrings', Nucl. Phys. B 258, 46 (1985)",
+      "doi": "10.1016/0550-3213(85)90602-9"
+    },
+    {
+      "citation": "Donagi and Wijnholt, 'Model Building with F-Theory', Adv. Theor. Math. Phys. 15, 1237 (2011)",
+      "arxiv": "0802.2969"
+    },
+    {
+      "citation": "Marsano, Saulina, Schafer-Nameki, 'Compact F-theory GUTs with U(1)_PQ', JHEP 04 (2010) 095",
+      "arxiv": "0912.0272"
+    },
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?' (2017)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Ding and King, 'Neutrino mass and mixing with modular symmetry', Rept. Prog. Phys. 87, 084201 (2024)",
+      "arxiv": "2311.09282"
+    }
+  ],
+  "tags": [
+    "count_prediction",
+    "compactification_constraint",
+    "modular_symmetry_route",
+    "anthropic_alternative"
+  ]
+}

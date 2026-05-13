@@ -1,0 +1,99 @@
+{
+  "id": "r_symmetric_susy",
+  "name": "R-symmetric supersymmetry (MRSSM)",
+  "aliases": [
+    "Kribs-Poppitz-Weiner MRSSM",
+    "U(1)_R SUSY",
+    "Dirac-gaugino SUSY"
+  ],
+  "type": "symmetry",
+  "summary": "Imposes a continuous U(1)_R (or large discrete) R-symmetry on the SUSY-extended Standard Model. Forbids Majorana gaugino masses, A-terms, and the standard mu-term; gauginos become Dirac fermions (paired with new chiral 'adjoint' superfields). Suppresses SUSY flavor and CP violation by construction, allowing TeV-scale squarks with order-one flavor mixing. Provides a SUSY framework consistent with stringent EDM and FCNC bounds.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "requires",
+      "confidence": "established"
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "R-symmetry suppresses flavor mixing in the soft sector (the 'SUSY flavor problem'); allows order-one squark-flavor mixing without K-Kbar / B-Bbar / mu -> e gamma violation, making generic flavor structures compatible with experiment."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects",
+      "note": "R-symmetry forbids Majorana phases and A-term phases at leading order, suppressing SUSY EDM contributions; resolves the 'SUSY CP problem'."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "respects",
+      "note": "Flavor-blind soft masses + R-symmetry suppression keeps mu -> e gamma well below MEG bound."
+    },
+    {
+      "benchmark_id": "meson_mixing_d_k",
+      "effect": "respects",
+      "note": "Dirac gauginos suppress SUSY contributions to K-Kbar / B-Bbar mixing relative to Majorana MSSM."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "Dirac partners for gauginos (chiral adjoint superfields O, T, S)",
+      "second Higgs sector R_u, R_d to pair with H_u, H_d"
+    ],
+    "new_scales": [
+      "Dirac gaugino masses ~ TeV"
+    ],
+    "new_symmetries": [
+      "continuous U(1)_R or large discrete R-symmetry"
+    ],
+    "new_parameters_count": 8,
+    "note": "Builds on MSSM. New parameters: Dirac-gaugino masses, R-Higgs sector, mu-replacement term, additional Yukawa structure."
+  },
+  "structural_features": [
+    "r_symmetry",
+    "dirac_gauginos",
+    "supersoft",
+    "flavor_blind_natural"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "mssm",
+    "wess_zumino_supersymmetry",
+    "dynamical_susy_breaking"
+  ],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nmssm",
+    "nnaturalness",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
+  "status": "niche",
+  "history": "Hall-Randall (1991) early R-symmetric SUSY. Fox-Nelson-Weiner (2002, hep-ph/0206096) Dirac gauginos. Kribs, Poppitz, Weiner (2007), 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008), arXiv:0712.2039 \u2014 modern MRSSM framework. Active LHC phenomenology of Dirac-gaugino signatures (squarks decaying via Dirac higgsino + chiral adjoints).",
+  "references": [
+    {
+      "citation": "Kribs, Poppitz, Weiner, 'Flavor in supersymmetry with an extended R symmetry', Phys. Rev. D 78, 055010 (2008)",
+      "arxiv": "0712.2039"
+    }
+  ],
+  "tags": [
+    "supersymmetry",
+    "r_symmetry",
+    "dirac_gauginos",
+    "mrssm",
+    "flavor_blind"
+  ]
+}

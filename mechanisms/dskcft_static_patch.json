@@ -1,0 +1,68 @@
+{
+  "id": "dskcft_static_patch",
+  "name": "Static-patch holography for de Sitter",
+  "aliases": [
+    "dS static patch / DSSYK",
+    "Susskind static-patch holography"
+  ],
+  "type": "uv_completion",
+  "summary": "An alternative to global dS/CFT in which a single observer's causal diamond ('static patch') in de Sitter space is dual to a quantum-mechanical (not field-theoretic) system with finite Hilbert space dimension dim(H) ~ exp(Area_horizon / 4 G_N). Recent concrete realization: the double-scaled SYK model (DSSYK, Lin-Stanford-Maldacena 2022) appears to reproduce the dS static-patch structure exactly. Provides a candidate non-perturbative formulation of quantum gravity in de Sitter without relying on global asymptotic boundary structure. Resolves observer-dependent QG issues but requires giving up familiar tools like S-matrix and asymptotic charges.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "anti_de_sitter_cosmology_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides candidate non-perturbative QG-in-dS formulation without requiring global boundary structure. Replaces AdS-style asymptotic holography with finite-dim Hilbert space attached to observer's causal patch. Concrete DSSYK realization (arXiv:2206.14104) gives explicit dual."
+    },
+    {
+      "puzzle_id": "black_hole_information",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Static-patch / cosmological horizon shares features with BH horizon (Bekenstein-Hawking entropy, Hawking temperature T = H/2pi); same techniques apply. Suggests cosmological observer recovers information about their past via thermal patch reconstruction analogous to interior reconstruction in BH islands."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "Hubble scale H ~ 10^-33 eV (sets dS temperature T = H/2pi)",
+      "Bekenstein-Hawking entropy of cosmological horizon ~ 10^122"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "Reformulation, not new physics: takes cosmological constant Lambda as input, predicts finite-dim Hilbert space dim(H) = exp(S_BH) for an observer's static patch."
+  },
+  "structural_features": [
+    "static_patch",
+    "finite_dimensional_hilbert_space",
+    "observer_dependent",
+    "double_scaled_syk"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "holographic_principle",
+    "ads_cft_holography",
+    "island_formula_bh_information",
+    "swampland_de_sitter"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Banks-Fischler (2001), 'M-theory observables for cosmological space-times', hep-th/0102077 - early finite-dim Hilbert space proposal. Static-patch revival: Susskind (2021), 'Three lectures on complexity and black holes', arXiv:1810.11563 generalized to dS. Concrete DSSYK realization: Lin (2022), 'The bulk Hilbert space of double scaled SYK', JHEP 11, 060, arXiv:2208.07032; Susskind (2022), arXiv:2209.09999. Active research direction 2022-2025.",
+  "references": [
+    {
+      "citation": "Lin, 'The bulk Hilbert space of double scaled SYK', JHEP 11, 060 (2022)",
+      "arxiv": "2208.07032"
+    },
+    {
+      "citation": "Banks and Fischler, 'M-theory observables for cosmological space-times', arXiv:hep-th/0102077 (2001)",
+      "arxiv": "hep-th/0102077"
+    }
+  ],
+  "tags": [
+    "holography",
+    "de_sitter",
+    "static_patch",
+    "syk",
+    "quantum_gravity"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "higgs_mass_predictor",
+  "name": "Mechanism predicting m_H = 125 GeV from structural inputs",
+  "target_puzzles": ["higgs_mass_value"],
+  "status": "drafted",
+  "closability": "contested",
+  "closability_note": "Two published programs aim at it — asymptotic-safety RG flow (Shaposhnikov-Wetterich 2010 famously got ~126 GeV pre-discovery) and the anthropic argument over a multiverse measure — but neither has produced a parameter-free derivation.",
+  "summary": "No framework in the catalog derives the observed Higgs mass m_H = 125 GeV from structural inputs. The hierarchy puzzle is about smallness; this gap is about the specific value.",
+  "what_closes_it": "A mechanism that derives lambda(M_EW) from a structural UV input — a gravity-matter fixed point that drags the quartic to its observed IR value, a stringy compactification that fixes the Higgs sector via geometry, or a computable anthropic measure — rather than supplying it as a Lagrangian parameter.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "electroweak_singlet_real_scalar",
+      "string_modulus",
+      "cosmological_landscape"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "10^16 - 10^19 GeV. The Higgs mass at low energy is RG-evolved from a UV boundary condition; any structural mechanism for m_H lives at the UV scale (GUT, string, or Planck). Mechanisms operating at the EW scale itself can only redistribute fine-tuning, not predict it.",
+  "compatible_host_frameworks": [
+    "asymptotic_safety_program",
+    "f_theory_gut_axiverse",
+    "m_theory_landscape",
+    "modular_string_flavor"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "A successful Higgs-mass-predictor would convert a fine-tuning problem (the hierarchy) into a derivation, reframing what 'naturalness' means: not protection by symmetry but determination by structure."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Shaposhnikov and Wetterich, 'Asymptotic safety of gravity and the Higgs boson mass', PLB 683, 196 (2010)",
+      "arxiv": "0912.0208"
+    },
+    {
+      "citation": "Agrawal, Barr, Donoghue, Seckel, 'Anthropic considerations in multiple-domain theories and the scale of electroweak symmetry breaking', PRL 80, 1822 (1998)",
+      "arxiv": "hep-ph/9801253"
+    },
+    {
+      "citation": "Eichhorn and Held, 'Mass difference for charged quarks from asymptotically safe quantum gravity', PRL 121, 151302 (2018)",
+      "arxiv": "1803.04027"
+    },
+    {
+      "citation": "Donoghue, 'The fine-tuning problems of particle physics and anthropic mechanisms', in 'Universe or Multiverse?' (Cambridge 2007)",
+      "arxiv": "0710.4080"
+    }
+  ],
+  "tags": [
+    "value_prediction",
+    "sm_parameter",
+    "uv_completion_needed",
+    "anthropic_or_uv_or_geometric"
+  ]
+}

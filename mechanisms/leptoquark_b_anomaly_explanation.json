@@ -1,0 +1,93 @@
+{
+  "id": "leptoquark_b_anomaly_explanation",
+  "name": "Leptoquark explanation of B-anomalies",
+  "aliases": [
+    "U1 vector leptoquark",
+    "S1 + R2 scalar leptoquark",
+    "Buttazzo-Greljo-Isidori-Marzocca minimal LQ fit"
+  ],
+  "type": "uv_completion",
+  "summary": "Tree-level exchange of a TeV-scale leptoquark (vector U1 in (3, 1, 2/3) of SU(3)xSU(2)xU(1), or scalar S1 + R2) couples preferentially to third-generation fermions and produces a positive shift in R(D*) consistent with the HFLAV measurement. Vector U1 from a Pati-Salam embedding is the canonical 'minimal' fit; scalar combinations also work. Provides a UV-grounded interpretation of the B-anomaly cluster.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "b_anomalies_r_d_star",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "TeV-scale U1 leptoquark with Wilson coefficient C_LL ~ 0.1 at the LQ scale reproduces R(D*) ~ 0.290 (vs 0.254 SM); consistent with R(K), B_s -> mu mu, B -> K^* mu mu at SM levels. LHC direct searches for pair-produced leptoquarks have closed below ~1.5 TeV; resonant searches in pp -> tau tau bound around 4-5 TeV."
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "TeV-scale leptoquarks couple e/mu/tau differently, shifting V_us extracted from Kl3 vs Kl2 and producing apparent first-row non-unitarity. Cirigliano-Crivellin-Hoferichter-Moulson (2022) showed leptoquark fits accommodate the ~3sigma anomaly."
+    },
+    {
+      "puzzle_id": "proton_radius_puzzle",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Lepton-flavor-non-universal leptoquark couplings give muon-specific contributions to the proton-muon interaction at distance scales relevant to r_p extraction."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "r_d_star_charged_current",
+      "effect": "predicts_signal",
+      "note": "Predicted positive shift in R(D*) matches HFLAV 3.2 sigma anomaly."
+    },
+    {
+      "benchmark_id": "r_k_lepton_universality",
+      "effect": "respects",
+      "note": "Pure third-generation LQ doesn't disturb b -> s ll neutral-current observables (where R(K) sits at SM)."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "If leptoquark couples to all three lepton generations, mu -> e gamma loops constrain the off-diagonal Yukawa structure tightly."
+    },
+    {
+      "benchmark_id": "b_s_mixing_phase",
+      "effect": "near_bound"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "vector leptoquark U1 (3, 1, 2/3) -- from Pati-Salam SU(4)",
+      "OR scalar combination S1 (3-bar, 1, 1/3) + R2 (3, 2, 7/6)"
+    ],
+    "new_scales": [
+      "M_LQ ~ TeV - few TeV"
+    ],
+    "new_symmetries": [
+      "implicit gauge or flavor-protection structure to evade FCNC bounds"
+    ],
+    "new_parameters_count": 5,
+    "note": "Leptoquark mass and flavor-structured Yukawa couplings."
+  },
+  "structural_features": [
+    "tree_level_leptoquark",
+    "third_generation_preferred",
+    "pati_salam_embedding",
+    "tev_scale_uv"
+  ],
+  "field_tags": [
+    "gut_x_y_bosons"
+  ],
+  "composes_with": [
+    "pati_salam"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Bauer-Neubert (2015, arXiv:1511.01900) early scalar LQ fit. Buttazzo-Greljo-Isidori-Marzocca (2017, arXiv:1706.07808), 'B-physics anomalies: a guide to combined explanations', JHEP 11, 044 \u2014 minimal U1 fit. Active phenomenological / LHC programme.",
+  "references": [
+    {
+      "citation": "Buttazzo, Greljo, Isidori, Marzocca, 'B-physics anomalies: a guide to combined explanations', JHEP 11, 044 (2017)",
+      "arxiv": "1706.07808"
+    }
+  ],
+  "tags": [
+    "leptoquark",
+    "b_anomalies",
+    "r_d_star",
+    "pati_salam"
+  ]
+}

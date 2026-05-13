@@ -1,0 +1,74 @@
+{
+  "id": "swampland_de_sitter",
+  "name": "Swampland de Sitter conjecture",
+  "aliases": [
+    "dS swampland",
+    "Obied-Ooguri-Spodyneiko-Vafa conjecture"
+  ],
+  "type": "uv_completion",
+  "summary": "Conjectures that any consistent theory of quantum gravity respects |grad V| / V >= c (with c an O(1) positive constant) for all scalar potentials. This bound forbids stable de Sitter vacua, implying that the observed cosmic acceleration cannot be a true cosmological constant but must be driven by a slowly-rolling scalar (quintessence) within string theory's allowed 'landscape'.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Re-frames the problem: stable dS may not exist in the string landscape, so the question becomes 'how small can a slow-roll dark-energy field's V'/V be'. Compatible with quintessence models; in tension with Standard Model + cosmological constant being a consistent UV-complete theory."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "predicts_signal",
+      "note": "Predicts time-varying w(z) consistent with dynamical dark energy; DESI Y1 BAO + SN combinations weakly favor evolving DE in line with this picture."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "quintessence-like scalar (in string-landscape implementations)"
+    ],
+    "new_scales": [
+      "string-landscape modulus VEVs"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Conjecture parameter c (O(1)) and the slow-roll potential of the quintessence field. The conjecture is a UV-completion-level constraint, not a model-builder's free parameter."
+  },
+  "structural_features": [
+    "quantum_gravity_conjecture",
+    "string_landscape",
+    "no_de_sitter",
+    "uv_ir_constraint"
+  ],
+  "field_tags": [
+    "cosmological_landscape",
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "quintessence",
+    "anthropic_landscape",
+    "heterotic_string_compactification"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Obied, Ooguri, Spodyneiko, Vafa (2018), 'De Sitter Space and the Swampland', arXiv:1806.08362. Refined-dS conjecture (Ooguri-Palti-Shiu-Vafa 2018, arXiv:1810.05506) sharpens the formulation. Active and contested research direction in string phenomenology and cosmology.",
+  "references": [
+    {
+      "citation": "Obied, Ooguri, Spodyneiko, Vafa, 'De Sitter Space and the Swampland' (2018)",
+      "arxiv": "1806.08362"
+    },
+    {
+      "citation": "Ooguri, Palti, Shiu, Vafa, 'Distance and de Sitter Conjectures on the Swampland', Phys. Lett. B 788, 180 (2019)",
+      "arxiv": "1810.05506"
+    }
+  ],
+  "tags": [
+    "string_theory",
+    "swampland",
+    "dark_energy",
+    "quantum_gravity"
+  ]
+}

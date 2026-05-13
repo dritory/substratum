@@ -1,0 +1,46 @@
+{
+  "id": "discrete_spacetime_program",
+  "name": "Discrete-spacetime quantum gravity (CDT + causal sets + Horava-Lifshitz)",
+  "summary": "Classification: TOE-ASPIRATIONAL (research-program-level lumping). Three approaches that share the structural commitment that spacetime is fundamentally discrete (or that its continuum limit is highly non-classical) and that the spectral dimension reduces to ~2 at the Planck scale: Causal Dynamical Triangulations (Ambjorn-Jurkiewicz-Loll path integral over discrete causally-foliated 4D triangulations), causal set theory (Bombelli-Lee-Meyer-Sorkin discrete partial-order substrate), and Horava-Lifshitz gravity (anisotropic UV scaling making gravity power-counting renormalisable). Ambjorn-Goerlich-Jurkiewicz-Loll (2013) argued CDT is the path-integral version of Horava's framework, justifying the lumping. The shared phenomenological signature is dimensional reduction at the Planck scale, observable in principle via Lorentz-violation tests for the Horava sector. Closes quantum-gravity-consistency by hypothesis; addresses dimensional-reduction-at-planck strongly; has no canonical matter sector and does not address SM parameters, dark matter, or baryogenesis within the program.",
+  "lineage": [
+    {
+      "citation": "Bombelli, Lee, Meyer, Sorkin, 'Space-time as a causal set', PRL 59, 521 (1987)",
+      "doi": "10.1103/PhysRevLett.59.521"
+    },
+    {
+      "citation": "Ambjorn, Jurkiewicz, Loll, 'Reconstructing the universe', PRD 72, 064014 (2005)",
+      "arxiv": "hep-th/0505154"
+    },
+    {
+      "citation": "Ambjorn, Jurkiewicz, Loll, 'Spectral dimension of the universe', PRL 95, 171301 (2005)",
+      "arxiv": "hep-th/0505113"
+    },
+    {
+      "citation": "Horava, 'Quantum gravity at a Lifshitz point', PRD 79, 084008 (2009)",
+      "arxiv": "0901.3775"
+    },
+    {
+      "citation": "Ambjorn, Goerlich, Jurkiewicz, Loll, 'Quantum gravity via causal dynamical triangulations', in 'Springer Handbook of Spacetime' (2014)",
+      "arxiv": "1302.2173"
+    },
+    {
+      "citation": "Surya, 'The causal set approach to quantum gravity', Living Rev. Relativ. 22, 5 (2019)",
+      "arxiv": "1903.11544"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "causal_dynamical_triangulations",
+    "causal_set_theory",
+    "horava_lifshitz_gravity"
+  ],
+  "tags": [
+    "toe_candidate",
+    "quantum_gravity",
+    "discrete_spacetime",
+    "dimensional_reduction",
+    "background_independent",
+    "incomplete_matter_sector",
+    "known_program"
+  ]
+}

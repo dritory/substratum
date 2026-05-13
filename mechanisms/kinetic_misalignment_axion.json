@@ -1,0 +1,74 @@
+{
+  "id": "kinetic_misalignment_axion",
+  "name": "Kinetic misalignment (axion DM)",
+  "aliases": [
+    "Co-Hall-Harigaya KMM",
+    "axion velocity misalignment"
+  ],
+  "type": "dynamical",
+  "summary": "Variant of the standard misalignment mechanism for axion DM in which the axion field has nonzero initial velocity (rather than just nonzero initial value). The velocity arises from explicit PQ-breaking in the early universe (typically a higher-dimensional operator active at high T). Allows axion DM with much smaller decay constants f_a ~ 10^7 - 10^9 GeV than the standard window, opening new haloscope-search territory and connecting to axiogenesis.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Reproduces Omega_DM h^2 ~ 0.12 for QCD-axion masses up to ~ meV (much higher than the canonical 10 mu eV - 1 meV window of standard misalignment). Predicts axion DM in haloscope-accessible mass ranges."
+    },
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "requires",
+      "confidence": "established"
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "axion_haloscope_admx",
+      "effect": "predicts_signal",
+      "note": "Higher allowed axion mass range opens up coverage by HAYSTAC, ADMX-G2, and proposed CASPEr-type searches."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "PQ-breaking scale Lambda_PQbreak"
+    ],
+    "new_symmetries": [
+      "approximate U(1)_PQ"
+    ],
+    "new_parameters_count": 2,
+    "note": "Builds on PQ axion. New parameters: explicit-breaking operator coefficient and initial radial-mode VEV."
+  },
+  "structural_features": [
+    "axion_velocity",
+    "kinetic_initial_condition",
+    "lower_f_a_window",
+    "axiogenesis_compatible"
+  ],
+  "field_tags": [
+    "qcd_anomalous_pseudoscalar"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "axiogenesis",
+    "string_axiverse"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Co, Hall, Harigaya (2019), 'Axion kinetic misalignment mechanism', Phys. Rev. Lett. 124, 251802, arXiv:1910.14152. Connected to axiogenesis (Co-Harigaya 2020) and to axion-driven inflation. Active 2020-present; complementary haloscope-search programs target the predicted f_a range.",
+  "references": [
+    {
+      "citation": "Co, Hall, Harigaya, 'Axion kinetic misalignment mechanism', Phys. Rev. Lett. 124, 251802 (2020)",
+      "arxiv": "1910.14152"
+    }
+  ],
+  "tags": [
+    "axion",
+    "dark_matter",
+    "misalignment",
+    "kinetic_initial_condition"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "cdf_w_mass_anomaly",
+  "name": "CDF II W boson mass anomaly",
+  "aliases": [
+    "W mass tension",
+    "CDF 2022 W mass"
+  ],
+  "kind": "naturalness",
+  "summary": "The CDF II collaboration's 2022 measurement of the W boson mass (M_W = 80.4335 +/- 0.0094 GeV; Science 376, 170) is 7 sigma above the Standard Model electroweak-fit prediction (80.354 +/- 0.007 GeV) and ~3 sigma above the LHC ATLAS/CMS measurements. If real, the 70 MeV shift requires either a new heavy charged state at <~ few TeV (e.g., MSSM stops, charged Higgs in 2HDM, Z'-mixing) or a Standard Model parameter (m_t, alpha_s, M_Z) significantly off its measured value. ATLAS 2024 reanalysis (arXiv:2403.15085) finds 80.367 +/- 0.016 GeV, in agreement with the SM and in tension with CDF II - the anomaly's status is contested but not resolved.",
+  "characteristic_numbers": [
+    {
+      "symbol": "M_W (CDF II 2022)",
+      "value": "80.4335",
+      "uncertainty": "0.0094",
+      "units": "GeV",
+      "expected": "80.354 (SM electroweak fit)",
+      "gap_log10": -2.7,
+      "note": "Discrepancy ~70 MeV; ~7 sigma from SM fit, ~3 sigma from world average. Source: CDF Collaboration, Science 376, 6589 (2022), DOI 10.1126/science.abk1781."
+    },
+    {
+      "symbol": "M_W (ATLAS 2024)",
+      "value": "80.367",
+      "uncertainty": "0.016",
+      "units": "GeV",
+      "expected": "80.354 (SM)",
+      "note": "ATLAS reanalysis arXiv:2403.15085 - consistent with SM and tension with CDF II. World average therefore unresolved."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "electroweak_oblique_s_t_u"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "If CDF II is correct, requires new physics in the electroweak sector. Stops contributing ~70 MeV require m_stop ~ 0.5-1 TeV, marginally compatible with LHC bounds. 2HDM tree-level rho-parameter shift, vector-like leptons, and Z'-Z mixing all viable. If wrong, points to under-controlled hadronic systematic in CDF II PDFs."
+    }
+  ],
+  "history": "Hadronic-collider M_W measurement evolved from UA1/UA2 to Tevatron CDF/D0 (1990s-2010s) to LHC ATLAS/CMS/LHCb. CDF II 2022 - highest-statistics single measurement (8.8 million W -> e nu, mu nu events). LHCb 2022 (arXiv:2109.01113) gave 80.354 +/- 0.032 GeV. ATLAS 2024 reanalysis with improved PDFs gave 80.367 +/- 0.016 GeV. CMS expected to release competitive measurement.",
+  "references": [
+    {
+      "citation": "CDF Collaboration, 'High-precision measurement of the W boson mass with the CDF II detector', Science 376, 170 (2022)",
+      "doi": "10.1126/science.abk1781"
+    },
+    {
+      "citation": "ATLAS Collaboration, 'Measurement of the W-boson mass and width with the ATLAS detector using proton-proton collisions at sqrt(s)=7 TeV', Eur. Phys. J. C (2024)",
+      "arxiv": "2403.15085"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "electroweak",
+    "w_mass",
+    "data_tension",
+    "collider"
+  ]
+}

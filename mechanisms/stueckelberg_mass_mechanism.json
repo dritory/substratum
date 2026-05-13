@@ -1,0 +1,63 @@
+{
+  "id": "stueckelberg_mass_mechanism",
+  "name": "Stueckelberg mass mechanism for Abelian gauge bosons",
+  "aliases": [
+    "Stueckelberg U(1)",
+    "Stueckelberg mass term"
+  ],
+  "type": "symmetry",
+  "summary": "Stueckelberg (1938) showed how to give a U(1) gauge boson a mass without spontaneous symmetry breaking by introducing a Stueckelberg scalar sigma transforming non-linearly: A_mu -> A_mu + d_mu Lambda, sigma -> sigma - m Lambda. The combination D_mu sigma = d_mu sigma + m A_mu is gauge-invariant and gives the boson mass when sigma is gauge-fixed away. Unlike the Higgs mechanism, requires no physical scalar (the Stueckelberg field is purely a longitudinal mode). Renormalizable for Abelian groups; non-renormalizable for non-Abelian (resurrected only as effective theory). Standard in Z' / dark-photon model-building and in dark-sector hidden U(1)'s.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "Standard way to give mass to dark-photon mediators or Z' bosons in dark-sector model-building without requiring a hidden Higgs. Stueckelberg mass appears in many string-theory dark-sector compactifications naturally."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "Stueckelberg scalar sigma (gauge artifact, not a physical d.o.f.)"
+    ],
+    "new_scales": [
+      "gauge-boson mass m_A"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 1,
+    "note": "Single new parameter (the gauge-boson mass). The Stueckelberg scalar is not physical - it can be gauged away in unitary gauge."
+  },
+  "structural_features": [
+    "non_linear_gauge_transformation",
+    "longitudinal_mode_realisation",
+    "abelian_only",
+    "no_higgs_required"
+  ],
+  "field_tags": [
+    "extra_u1_gauge_boson"
+  ],
+  "composes_with": [
+    "dark_photon_portal",
+    "hidden_valley",
+    "kaluza_klein_dark_matter"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Stueckelberg (1938), 'Die Wechselwirkungskrafte in der Elektrodynamik und in der Feldtheorie der Kernkrafte', Helv. Phys. Acta 11, 225. Modern revival in Z'/dark-photon model-building: Kors-Nath (2004), 'A Stueckelberg extension of the standard model', PLB 586, 366, arXiv:hep-ph/0402047. Modern review: Ruegg, Ruiz-Altaba (2003), 'The Stueckelberg field', Int. J. Mod. Phys. A 19, 3265, arXiv:hep-th/0304245.",
+  "references": [
+    {
+      "citation": "Ruegg and Ruiz-Altaba, 'The Stueckelberg field', Int. J. Mod. Phys. A 19, 3265 (2004)",
+      "arxiv": "hep-th/0304245"
+    },
+    {
+      "citation": "Kors and Nath, 'A Stueckelberg extension of the standard model', Phys. Lett. B 586, 366 (2004)",
+      "arxiv": "hep-ph/0402047"
+    }
+  ],
+  "tags": [
+    "gauge_boson_mass",
+    "stueckelberg",
+    "abelian",
+    "dark_photon"
+  ]
+}

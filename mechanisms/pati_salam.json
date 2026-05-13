@@ -1,0 +1,91 @@
+{
+  "id": "pati_salam",
+  "name": "Pati-Salam unification",
+  "aliases": [
+    "SU(4) x SU(2)_L x SU(2)_R"
+  ],
+  "type": "uv_completion",
+  "summary": "Partial unification: leptons are treated as the fourth color of SU(4) (Pati-Salam), and the SM SU(2)_L is mirrored by SU(2)_R that gauges right-handed isospin. Includes B-L as a gauge symmetry; right-handed neutrinos and parity restoration emerge automatically. Often a stepping stone within SO(10) breaking chains.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Right-handed neutrinos required by SU(2)_R structure; B-L breaking at ~10^11 GeV sets seesaw scale."
+    },
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Restored parity symmetry above the breaking scale forces theta = 0; theta is regenerated only after parity breaking and remains naturally small (Babu-Mohapatra-style)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "SU(4)_C x SU(2)_L x SU(2)_R treats leptons as a fourth colour and unifies left-right gauge dynamics, constraining quark-lepton mass relations (Pati-Salam 1974)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "kaon_rare_decays_kpi_nu_nu",
+      "effect": "near_bound",
+      "note": "Leptoquark gauge bosons of SU(4) mediate K -> mu e at one-loop; bound on M_LQ > ~10^6 GeV from K_L -> mu e."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Right-handed currents enhance 0nubb relative to canonical seesaw."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "SU(4) x SU(2)_R gauge bosons (W_R, leptoquarks)"
+    ],
+    "new_scales": [
+      "SU(2)_R breaking ~ TeV - 10^4 TeV",
+      "SU(4) breaking >~ 10^6 GeV"
+    ],
+    "new_symmetries": [
+      "SU(4) (color + lepton number)",
+      "SU(2)_R",
+      "left-right parity"
+    ],
+    "new_parameters_count": 5,
+    "note": "Gauge breaking scales + Higgs sector parameters."
+  },
+  "structural_features": [
+    "partial_unification",
+    "left_right_symmetric",
+    "leptoquark",
+    "parity_restoration"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion",
+    "gut_x_y_bosons",
+    "left_right_gauge_bosons"
+  ],
+  "composes_with": [
+    "so10_gut",
+    "seesaw_type_i",
+    "nelson_barr"
+  ],
+  "excludes": [
+    "flipped_su5_gut",
+    "su5_minimal_gut",
+    "trinification_su3_cubed"
+  ],
+  "status": "niche",
+  "history": "Pati-Salam (1974). Independently relevant as the L-R symmetric extension of the SM; embedded in SO(10) -> Pati-Salam -> SM breaking chains. Modern phenomenology focuses on TeV-scale W_R searches at LHC (CMS, ATLAS).",
+  "references": [
+    {
+      "citation": "Pati and Salam, 'Lepton number as the fourth color', Phys. Rev. D 10, 275 (1974)",
+      "doi": "10.1103/PhysRevD.10.275"
+    }
+  ],
+  "tags": [
+    "unification",
+    "pati_salam",
+    "left_right_symmetric"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "alp_dark_matter_haloscope",
+  "name": "ALP dark matter (haloscope-targeted)",
+  "aliases": [
+    "axion-like particle DM",
+    "ALP misalignment DM"
+  ],
+  "type": "dynamical",
+  "summary": "Generic axion-like particles (ALPs) \u2014 pseudo-scalars with coupling g_a-gamma to two photons, not necessarily the QCD axion \u2014 produced via misalignment and constituting the dark matter. Distinct from the QCD axion in that the mass and photon coupling are independent parameters. The string axiverse generically predicts a tower of ALPs spanning many decades in mass; haloscope experiments (ADMX, HAYSTAC, ABRACADABRA, DMRadio) target specific (m_a, g_agamma) windows.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Misalignment-produced ALPs naturally saturate Omega_DM h^2 ~ 0.12 across a wide (m_a, f_a) range. Distinguished from QCD axion by lack of the m_a ~ Lambda_QCD^2 / f_a relation; m_a and g_agamma are independent free parameters covering a vast parameter space."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "axion_haloscope_admx",
+      "effect": "predicts_signal",
+      "note": "ADMX, HAYSTAC, ABRACADABRA, DMRadio, BREAD all sensitive to specific (m_a, g_agamma) regions, providing complementary haloscope coverage from neV to meV ALP masses."
+    },
+    {
+      "benchmark_id": "alpha_variation_atomic_clocks",
+      "effect": "predicts_signal",
+      "note": "ALP DM oscillation at frequency m_a/(2 pi) drives oscillating fundamental constants; precision atomic-clock comparisons (Sr/Rb, Hg+/Yb+) sensitive to ultralight-ALP (m_a < 10^-15 eV) coupling at competitive levels."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "axion-like pseudoscalar a"
+    ],
+    "new_scales": [
+      "m_a (free parameter, 10^-22 eV - meV)",
+      "decay constant f_a / coupling g_agamma"
+    ],
+    "new_symmetries": [
+      "approximate U(1) shift symmetry"
+    ],
+    "new_parameters_count": 2,
+    "note": "ALP mass and photon coupling; relic abundance is set by initial misalignment angle theta_initial (often counted as a third parameter)."
+  },
+  "structural_features": [
+    "pseudo_scalar",
+    "misalignment_production",
+    "narrow_line_signal",
+    "decoupled_mass_and_coupling"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
+  "composes_with": [
+    "peccei_quinn_axion",
+    "string_axiverse",
+    "kinetic_misalignment_axion"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Misalignment mechanism: Preskill-Wise-Wilczek (1983), Abbott-Sikivie (1983), Dine-Fischler (1983). ALP generalisation beyond QCD axion is implicit in those works. Modern haloscope program: ADMX since 1996, HAYSTAC 2017, ABRACADABRA, DMRadio. Theoretical motivation from string axiverse (Arvanitaki-Dimopoulos-Dubovsky-Kaloper-March-Russell 2009, arXiv:0905.4720) sharpened the case for non-QCD ALPs.",
+  "references": [
+    {
+      "citation": "Preskill, Wise, Wilczek, 'Cosmology of the invisible axion', Phys. Lett. B 120, 127 (1983)",
+      "doi": "10.1016/0370-2693(83)90637-8"
+    },
+    {
+      "citation": "Sikivie, 'Experimental tests of the invisible axion', Phys. Rev. Lett. 51, 1415 (1983)",
+      "doi": "10.1103/PhysRevLett.51.1415"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "alp",
+    "axion",
+    "haloscope",
+    "misalignment"
+  ]
+}

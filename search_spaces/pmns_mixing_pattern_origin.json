@@ -1,0 +1,55 @@
+{
+  "id": "pmns_mixing_pattern_origin",
+  "name": "Mechanism predicting the PMNS lepton mixing pattern from structural inputs",
+  "target_puzzles": ["pmns_lepton_mixing_pattern"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "Modular flavor at levels 3-5 (A_4, S_4, A_5) is the active program; multiple published models reproduce all 3 angles + CP phase but uniqueness is unproven.",
+  "summary": "The PMNS angles and CP phase have a specific structure (near-trimaximal atmospheric, large solar, small but nonzero reactor, CP phase ~ -90 deg) that no framework derives.",
+  "what_closes_it": "A mechanism predicting all 3 PMNS angles and the Dirac CP phase from a finite modular group + weight assignments + representation choice, with no remaining free parameters beyond an overall mass scale. Bonus if it also fixes the Majorana phases and absolute mass scale.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "gauge_singlet_majorana_fermion"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "Seesaw scale (10^9 - 10^14 GeV) for the right-handed-neutrino sector; modular vacuum value tau set at the GUT or compactification scale.",
+  "compatible_host_frameworks": [
+    "modular_string_flavor",
+    "f_theory_gut_axiverse",
+    "mssm_so10_seesaw_leptogenesis"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "PMNS mixing breaks lepton-flavor conservation in the active-neutrino sector. The closing mechanism must reproduce the observed mixing while respecting the charged-lepton-sector LFU constraints (mu -> e gamma, etc.)."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?' (2017)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Kobayashi, Tanaka, Tatsuishi, 'Neutrino mixing from finite modular groups', PRD 98, 016004 (2018)",
+      "arxiv": "1803.10391"
+    },
+    {
+      "citation": "Penedo and Petcov, 'Lepton masses and mixing from modular S_4 symmetry', Nucl. Phys. B 939, 292 (2019)",
+      "arxiv": "1806.11040"
+    },
+    {
+      "citation": "Ding and King, 'Neutrino mass and mixing with modular symmetry', Rept. Prog. Phys. 87, 084201 (2024)",
+      "arxiv": "2311.09282"
+    }
+  ],
+  "tags": [
+    "lepton_mixing",
+    "modular_symmetry_route",
+    "pattern_prediction"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "sterile_neutrino_dm",
+  "name": "Sterile-neutrino dark matter",
+  "aliases": [
+    "keV warm DM",
+    "Dodelson-Widrow / Shi-Fuller"
+  ],
+  "type": "dynamical",
+  "summary": "A keV-scale sterile neutrino N produced via active-sterile mixing in the early universe (Dodelson-Widrow) or resonant lepton-asymmetry-driven production (Shi-Fuller). Decays N -> nu + gamma at observable X-ray energies; also acts as warm DM, free-streaming on small scales. The scenario directly connects DM to neutrino-mass physics.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "X-ray constraints (NuSTAR, Chandra, XMM) and Lyman-alpha constraints have squeezed the parameter space; the 3.5 keV line in galaxy clusters (Bulbul 2014) was once a candidate signal but has not been confirmed."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Same right-handed neutrinos that participate in the seesaw can serve as keV DM in the nuMSM (neutrino minimal SM)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "lyman_alpha_forest_small_scale_power",
+      "effect": "near_bound",
+      "note": "Free-streaming smears small-scale power; pure thermal sterile DM requires m > ~5.3 keV."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "sterile neutrino N (keV-scale)"
+    ],
+    "new_scales": [
+      "m_N ~ keV",
+      "active-sterile mixing |U|^2 ~ 10^{-11}"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Sterile mass and mixing; production mechanism (DW vs SF) adds lepton-asymmetry parameter."
+  },
+  "structural_features": [
+    "right_handed_neutrino",
+    "warm_dm",
+    "active_sterile_mixing",
+    "x_ray_decay"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "leptogenesis"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Dodelson-Widrow (1994) production via mixing. Shi-Fuller (1999) resonant production. nuMSM framework (Asaka-Shaposhnikov 2005) embeds keV DM in a consistent low-scale seesaw. Active in cosmology + X-ray astronomy.",
+  "references": [
+    {
+      "citation": "Dodelson and Widrow, 'Sterile neutrinos as dark matter', PRL 72, 17 (1994)",
+      "arxiv": "hep-ph/9303287"
+    },
+    {
+      "citation": "Asaka and Shaposhnikov, 'The nuMSM, dark matter and baryon asymmetry of the universe', Phys. Lett. B 620, 17 (2005)",
+      "arxiv": "hep-ph/0505013"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "sterile_neutrino",
+    "warm_dm"
+  ]
+}

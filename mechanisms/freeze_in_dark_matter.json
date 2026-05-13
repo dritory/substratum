@@ -1,0 +1,76 @@
+{
+  "id": "freeze_in_dark_matter",
+  "name": "Freeze-in (FIMP) dark matter",
+  "aliases": [
+    "FIMP",
+    "feebly interacting massive particle"
+  ],
+  "type": "dynamical",
+  "summary": "Dark matter is produced via feeble couplings to the thermal SM bath that are too weak for it to ever reach thermal equilibrium. The relic abundance freezes in as the temperature drops below the FIMP mass and the production rate becomes Boltzmann-suppressed. The yield is IR-dominated and independent of UV physics or reheating temperature, so the mechanism is calculable from only mass and couplings.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Naturally accommodates feebly-coupled DM that evades direct-detection bounds; couplings y ~ 10^-12 - 10^-7 reproduce the observed Omega_DM. Targets sterile neutrinos, gravitinos, hidden-photon DM at low cross-sections."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "Feeble coupling means cross-sections far below LZ sensitivity; freeze-in DM is essentially invisible to current direct-detection experiments."
+    },
+    {
+      "benchmark_id": "dark_photon_kinetic_mixing",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "n_eff_combined_cmb_bbn",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "FIMP particle (any spin)",
+      "mediator coupling FIMP to SM"
+    ],
+    "new_scales": [
+      "FIMP mass m_FIMP",
+      "feeble coupling y ~ 10^-12 - 10^-7"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising FIMP"
+    ],
+    "new_parameters_count": 3,
+    "note": "FIMP mass, feeble Yukawa or kinetic-mixing coupling, mediator mass."
+  },
+  "structural_features": [
+    "feeble_coupling",
+    "non_thermal_relic",
+    "ir_dominated",
+    "calculable_yield"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "dark_photon_portal",
+    "sterile_neutrino_dm",
+    "super_wimp_gravitino"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Hall, Jedamzik, March-Russell, West (2010), 'Freeze-In Production of FIMP Dark Matter', JHEP 03, 080, arXiv:0911.1120. Generalised earlier sterile-neutrino freeze-in and gravitino-DM scenarios into a unified framework. Active phenomenology covers axion-like particles, ultralight scalars, and hidden-sector portal DM.",
+  "references": [
+    {
+      "citation": "Hall, Jedamzik, March-Russell, West, 'Freeze-In Production of FIMP Dark Matter', JHEP 03, 080 (2010)",
+      "arxiv": "0911.1120"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "fimp",
+    "freeze_in",
+    "feeble_coupling",
+    "non_thermal"
+  ]
+}

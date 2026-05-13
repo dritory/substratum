@@ -1,0 +1,75 @@
+{
+  "id": "zee_radiative_neutrino_mass",
+  "name": "Zee model (radiative neutrino mass)",
+  "aliases": [
+    "Zee one-loop neutrino mass"
+  ],
+  "type": "symmetry",
+  "summary": "Generates Majorana neutrino masses at one loop via a charged scalar singlet h^+ and an extra Higgs doublet. Lepton-number-violating couplings combine with the Yukawa hierarchy to produce m_nu ~ (1/16 pi^2) (m_e m_tau / m_h^2) v^2 / Lambda, giving naturally tiny neutrino masses without a heavy seesaw scale. The original 1980 model is now largely excluded by oscillation data, but extensions remain viable.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "contested",
+      "note": "Loop suppression gives small m_nu without a high scale; the original Zee model with two equal Higgs doublets predicts a vanishing neutrino mass matrix diagonal element which clashes with observed mixing. Zee-Babu (1988) two-loop variant and minimal-Zee with broken Le-Lmu-Ltau remain alive."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Majorana nature implies 0nubb at rates depending on the model details."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "Charged scalar exchange generates mu -> e gamma at one loop; constrained by MEG."
+    },
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "charged scalar singlet h^+",
+      "second Higgs doublet"
+    ],
+    "new_scales": [
+      "m_h+ ~ TeV (collider-accessible)"
+    ],
+    "new_symmetries": [
+      "broken lepton number"
+    ],
+    "new_parameters_count": 5,
+    "note": "Charged-scalar mass, mixing in two-doublet sector, and lepton-flavor structure of the antisymmetric f_ij Yukawa coupling."
+  },
+  "structural_features": [
+    "radiative_neutrino_mass",
+    "two_higgs_doublet",
+    "charged_scalar",
+    "lepton_number_violation"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar"
+  ],
+  "composes_with": [],
+  "excludes": [],
+  "status": "niche",
+  "history": "Zee (1980), 'A theory of lepton number violation, neutrino Majorana mass, and oscillation', Phys. Lett. B 93, 389 (with erratum PLB 95, 461). Zee-Babu two-loop extension (1988). Original equal-doublet model excluded by oscillation data; modified variants with explicit Z_2 symmetry remain viable.",
+  "references": [
+    {
+      "citation": "Zee, 'A theory of lepton number violation and neutrino Majorana masses', Phys. Lett. B 93, 389 (1980)",
+      "doi": "10.1016/0370-2693(80)90193-8"
+    },
+    {
+      "citation": "Babu, 'Model of calculable Majorana neutrino masses', Phys. Lett. B 203, 132 (1988)",
+      "doi": "10.1016/0370-2693(88)91584-5"
+    }
+  ],
+  "tags": [
+    "neutrinos",
+    "radiative_neutrino_mass",
+    "charged_scalar"
+  ]
+}

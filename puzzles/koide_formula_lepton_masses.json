@@ -1,0 +1,47 @@
+{
+  "id": "koide_formula_lepton_masses",
+  "name": "Koide formula for charged-lepton masses",
+  "aliases": [
+    "Koide relation",
+    "lepton mass 2/3 coincidence"
+  ],
+  "kind": "coincidence",
+  "summary": "The empirical relation Q = (m_e + m_mu + m_tau) / (sqrt(m_e) + sqrt(m_mu) + sqrt(m_tau))^2 = 2/3, discovered by Yoshio Koide in 1981-1983, holds to 5 significant digits using pole-mass values of the charged leptons. The relation has no derivation from any standard-model or beyond-SM framework, yet stubbornly persists as more precise lepton-mass measurements appear. It saturates the algebraic bound 1/3 <= Q <= 1 (Cauchy-Schwarz lower limit, equal-mass upper limit) at a non-trivial point. Either a profound clue to lepton-mass generation or one of the most striking numerical coincidences in physics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Q (measured)",
+      "value": "0.666661",
+      "uncertainty": "0.000007",
+      "expected": "2/3 = 0.666667 (Koide) or any value in [1/3, 1]",
+      "gap_log10": -5,
+      "note": "Computed using PDG 2024 pole masses: m_e = 0.51099895 MeV, m_mu = 105.6583755 MeV, m_tau = 1776.86 MeV. Agreement with 2/3 at parts per million."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Q = 2/3 is a measure-zero point in lepton-mass space - obtaining it from any generic Yukawa structure requires precise cancellations. Proposed origins include democratic mass matrix (M_ij = m sqrt(m_i m_j) / 3) plus a circular permutation; SU(3)_L family symmetry; preon binding-energy arguments (Foot, 1994); but no derivation reproduces the precision of the empirical fit while predicting other charged-lepton observables. Quark-mass analogues fail badly (Q_quark != 2/3)."
+    }
+  ],
+  "history": "Koide (1981), 'A new view of quark and lepton mass hierarchy', PRD 28, 252. Koide (1983), 'A fermion-boson composite model of quarks and leptons', Phys. Lett. B 120, 161. Brannen (2006) noted geometric interpretation in eigenvalue triangle. Foot (1994), 'A note on Koide's lepton mass relation', arXiv:hep-ph/9402242. Updated-precision discussions: Sumino (2008, arXiv:0812.2103); Cao-Ma (2012, arXiv:1208.4392). Status remains: empirically robust, theoretically unexplained.",
+  "references": [
+    {
+      "citation": "Koide, 'A fermion-boson composite model of quarks and leptons', Phys. Lett. B 120, 161 (1983)",
+      "doi": "10.1016/0370-2693(83)90644-5"
+    },
+    {
+      "citation": "Foot, 'A note on Koide's lepton mass relation', arXiv:hep-ph/9402242 (1994)",
+      "arxiv": "hep-ph/9402242"
+    }
+  ],
+  "tags": [
+    "coincidence",
+    "lepton_masses",
+    "pattern",
+    "koide",
+    "numerical_relation"
+  ]
+}

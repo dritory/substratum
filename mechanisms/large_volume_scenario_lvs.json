@@ -1,0 +1,82 @@
+{
+  "id": "large_volume_scenario_lvs",
+  "name": "Large Volume Scenario (LVS) moduli stabilisation",
+  "aliases": [
+    "Balasubramanian-Berglund-Conlon-Quevedo",
+    "LVS string compactification"
+  ],
+  "type": "uv_completion",
+  "summary": "An alternative to KKLT for stabilising Type IIB string compactifications: combines tree-level flux superpotential W_0, leading alpha'-corrections, and non-perturbative contributions to fix the Calabi-Yau volume V at exponentially large values V ~ exp(c/g_s) (typically 10^5 - 10^15 in string units). Naturally produces low-scale supersymmetry breaking with m_3/2 ~ M_pl / V and TeV-scale soft masses for V ~ 10^15. Generates a 'Swiss cheese' Calabi-Yau (large bulk + small blow-up cycles) and predicts characteristic moduli signatures - light axions from large cycles, heavier moduli from blow-up cycles.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "string_landscape_predictivity",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Provides explicit large family of (semi-)realistic Type IIB string vacua with non-singular moduli stabilisation, controlled corrections, and accessible phenomenology. Helps populate the landscape with concrete examples rather than abstract counting."
+    },
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "TeV-scale supersymmetry naturally emerges from exponentially large volume V ~ M_pl^2 / m_3/2^2; provides string-theoretic UV completion for low-scale SUSY without ad-hoc anthropic tuning."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Like KKLT, requires uplift to de Sitter; LVS uplift mechanisms (D-term, anti-D3-brane on the warped throat, T-brane uplift) face the same swampland-conjecture pressure. de Sitter status remains contested."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "Kahler and complex-structure moduli",
+      "axion partners of Kahler moduli"
+    ],
+    "new_scales": [
+      "string scale M_s ~ M_pl / sqrt(V) ~ 10^15 GeV (for TeV SUSY)",
+      "gravitino mass m_3/2 ~ M_pl / V"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 3,
+    "note": "Flux superpotential W_0, string coupling g_s, large-volume parameter V (these are derived from microscopic flux quanta, but free in the effective description)."
+  },
+  "structural_features": [
+    "moduli_stabilisation",
+    "large_volume",
+    "type_iib_orientifold",
+    "swiss_cheese_geometry",
+    "exponential_hierarchy"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "kklt_moduli_stabilisation",
+    "heterotic_string_compactification",
+    "string_axiverse",
+    "polchinski_d_branes",
+    "swampland_de_sitter"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Balasubramanian, Berglund, Conlon, Quevedo (2005), 'Systematics of moduli stabilisation in Calabi-Yau flux compactifications', JHEP 03, 007, arXiv:hep-th/0502058 - founding paper. Conlon-Quevedo (2006); large body of LVS phenomenology by Quevedo group, Cicoli et al. 2007-present.",
+  "references": [
+    {
+      "citation": "Balasubramanian, Berglund, Conlon, Quevedo, 'Systematics of moduli stabilisation in Calabi-Yau flux compactifications', JHEP 03, 007 (2005)",
+      "arxiv": "hep-th/0502058"
+    }
+  ],
+  "tags": [
+    "uv_completion",
+    "string_theory",
+    "moduli_stabilisation",
+    "type_iib",
+    "lvs"
+  ]
+}

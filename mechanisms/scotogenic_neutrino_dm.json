@@ -1,0 +1,95 @@
+{
+  "id": "scotogenic_neutrino_dm",
+  "name": "Scotogenic neutrino mass + dark matter",
+  "aliases": [
+    "Ma scotogenic",
+    "radiative seesaw with dark matter"
+  ],
+  "type": "symmetry",
+  "summary": "Generates Majorana neutrino masses radiatively at one loop through a Z_2-odd inert scalar doublet and right-handed neutrinos. The lightest Z_2-odd state is automatically stable and serves as dark matter. Explains both the smallness of neutrino mass (loop suppression replaces the high seesaw scale) and the existence of dark matter in a single minimal extension.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Loop factor (16 pi^2)^-1 plus Z_2-odd-scalar mass-squared difference produce m_nu ~ y^2 (Delta m^2) / (16 pi^2 M_R), giving sub-eV neutrinos with low-scale (TeV) heavy fields - testable at colliders."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Z_2 stabilises the lightest Z_2-odd particle (the inert scalar or lightest right-handed neutrino) as a thermal WIMP DM candidate; relic abundance depends on portal couplings."
+    },
+    {
+      "puzzle_id": "fermi_galactic_center_gamma_excess",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Z_2-odd scalar DM annihilating to leptons gives a GCE-like signal with the right normalization for m_chi ~ 40-60 GeV. Compatible with neutrino-mass closure constraints."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Majorana nature of neutrinos predicts 0nubb signal at experimentally accessible levels."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "TeV-scale Z_2-odd states generate mu -> e gamma at one loop; current MEG bound BR < 4.2e-13 constrains scotogenic parameter space."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "If the inert scalar is DM, Higgs-portal couplings are constrained by LZ; viable parameter space is being squeezed."
+    },
+    {
+      "benchmark_id": "katrin_neutrino_mass",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "inert scalar doublet eta (Z_2-odd)",
+      "right-handed neutrinos N_i (Z_2-odd)"
+    ],
+    "new_scales": [
+      "M_eta ~ 100 GeV - few TeV (collider-accessible)",
+      "M_R ~ 100 GeV - 10 TeV"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising both eta and N_i"
+    ],
+    "new_parameters_count": 6,
+    "note": "Inert-doublet potential parameters, right-handed neutrino masses, and Yukawa structure to fit oscillation data."
+  },
+  "structural_features": [
+    "dark_z2",
+    "inert_doublet",
+    "radiative_neutrino_mass",
+    "low_scale_seesaw"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "leptogenesis"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Ma (2006), 'Verifiable radiative seesaw mechanism of neutrino mass and dark matter', Phys. Rev. D 73, 077301, arXiv:hep-ph/0601225 \u2014 coined 'scotogenic' (from skotos = darkness). Active phenomenological development through 2010s-2020s.",
+  "references": [
+    {
+      "citation": "Ma, 'Verifiable radiative seesaw mechanism of neutrino mass and dark matter', Phys. Rev. D 73, 077301 (2006)",
+      "arxiv": "hep-ph/0601225"
+    }
+  ],
+  "tags": [
+    "neutrinos",
+    "dark_matter",
+    "radiative",
+    "z2_stabilisation",
+    "scotogenic"
+  ]
+}

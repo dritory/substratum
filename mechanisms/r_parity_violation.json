@@ -1,0 +1,74 @@
+{
+  "id": "r_parity_violation",
+  "name": "R-parity-violating SUSY",
+  "aliases": [
+    "RPV",
+    "explicit R-parity breaking"
+  ],
+  "type": "symmetry",
+  "summary": "Drops the R-parity assumption from MSSM, allowing renormalisable lepton-number- and baryon-number-violating couplings W = lambda L L E + lambda' L Q D + lambda'' U D D + mu L H_u. Permits the LSP to decay (so it's no longer a DM candidate), enables fast proton decay unless one of B or L violation is forbidden, and produces distinctive collider signatures.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Bilinear R-parity-violating term mu_i L_i H_u generates Majorana neutrino masses radiatively at tree- and loop-level without an explicit seesaw; predicts specific PMNS structure tied to the sneutrino-VEV pattern."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "violates",
+      "note": "Both B-violating and L-violating RPV couplings generate p -> e+ pi^0 / p -> K nu unless one is forbidden by symmetry; combination of lambda' lambda'' < 10^-25 required to be safe."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "Trilinear lambda couplings generate mu -> e gamma at tree level; current MEG bound BR < 4.2e-13 constrains lambda_ijk < 10^-3 for slepton masses ~ 100 GeV."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "Neutrino Majorana masses from RPV bilinear contribute to 0nubb at experimentally relevant rates."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [
+      "broken R-parity (or surviving baryon triality / lepton triality)"
+    ],
+    "new_parameters_count": 49,
+    "note": "Builds on MSSM. Adds 9 trilinear lambda + 27 lambda' + 9 lambda'' + 3 bilinear mu_i, plus their soft-breaking partners \u2014 the most parameter-heavy SUSY extension."
+  },
+  "structural_features": [
+    "broken_r_parity",
+    "lepton_number_violation",
+    "baryon_number_violation",
+    "lsp_decay"
+  ],
+  "field_tags": [
+    "electroweak_doublet_scalar",
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Hall and Suzuki (1984), 'Explicit R-parity breaking in supersymmetric models', Nucl. Phys. B 231, 419. Aulakh-Mohapatra spontaneous R-parity violation (1982). Distinguishing collider signatures (multi-leptons, displaced vertices) made RPV a focus of LHC searches; current bounds are stringent but not closed.",
+  "references": [
+    {
+      "citation": "Hall and Suzuki, 'Explicit R-parity breaking in supersymmetric models', Nucl. Phys. B 231, 419 (1984)",
+      "doi": "10.1016/0550-3213(84)90513-3"
+    }
+  ],
+  "tags": [
+    "susy",
+    "rpv",
+    "r_parity_violation",
+    "lepton_number",
+    "baryon_number"
+  ]
+}

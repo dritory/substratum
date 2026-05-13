@@ -1,0 +1,73 @@
+{
+  "id": "conformal_cyclic_cosmology",
+  "name": "Conformal cyclic cosmology",
+  "aliases": [
+    "CCC",
+    "Penrose CCC"
+  ],
+  "type": "geometric",
+  "summary": "Identifies the conformal infinity of one cosmological aeon (when all matter is gone via Hawking evaporation and dilution) with the Big Bang singularity of the next. Conformal rescaling makes the transition smooth, removing the singularity. Predicts pre-Big-Bang signatures (concentric circles in the CMB, Hawking points) from violent events in the previous aeon.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Replaces inflation with conformal smoothing across the aeon boundary. Specific predictions for CMB structure (concentric circles, 'Hawking points') have been searched for in WMAP and Planck data; claimed signals (Penrose-Gurzadyan 2010, 2018) are not statistically robust according to follow-up analyses."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_large_scale_anomalies",
+      "effect": "predicts_signal",
+      "note": "Predicts non-Gaussian features (concentric ring structures) at low multipoles tied to violent events in previous aeons. WMAP / Planck searches (Wehus-Eriksen 2010, Hajian 2010) have not confirmed CCC's claimed signals."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "conformal rescaling between aeons"
+    ],
+    "new_symmetries": [
+      "conformal invariance asymptotically"
+    ],
+    "new_parameters_count": 2,
+    "note": "Aeon-transition parameters; the framework presupposes specific late-time matter dilution and Hawking evaporation of all black holes."
+  },
+  "structural_features": [
+    "conformal_invariance",
+    "cyclic_cosmology",
+    "no_inflation",
+    "no_singularity"
+  ],
+  "field_tags": [],
+  "composes_with": [],
+  "excludes": [
+    "starobinsky_inflation",
+    "higgs_inflation",
+    "new_inflation",
+    "chaotic_inflation",
+    "ekpyrotic_cyclic"
+  ],
+  "status": "disfavored",
+  "history": "Penrose (2010), 'Cycles of Time: An Extraordinary New View of the Universe' (book) and Penrose-Gurzadyan (2010), 'Concentric circles in WMAP data may provide evidence of violent pre-Big-Bang activity', arXiv:1011.3706. CMB signal claims contested by Wehus-Eriksen, Hajian, and others. Remains an active speculative framework with a small but persistent following.",
+  "references": [
+    {
+      "citation": "Penrose, 'Cycles of Time: An Extraordinary New View of the Universe', Bodley Head (2010)",
+      "url": "https://www.penguinrandomhouse.com/books/204694/cycles-of-time-by-roger-penrose/"
+    },
+    {
+      "citation": "Gurzadyan and Penrose, 'Concentric circles in WMAP data may provide evidence of violent pre-Big-Bang activity' (2010)",
+      "arxiv": "1011.3706"
+    }
+  ],
+  "tags": [
+    "cosmology",
+    "cyclic",
+    "conformal",
+    "speculative"
+  ]
+}

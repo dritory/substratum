@@ -1,0 +1,88 @@
+{
+  "id": "partial_compositeness",
+  "name": "Partial compositeness",
+  "aliases": [
+    "Kaplan partial compositeness",
+    "linear mixing flavor"
+  ],
+  "type": "composite",
+  "summary": "SM fermions are elementary states that mix linearly with composite operators of a strongly coupled sector. Yukawa couplings emerge from the mixing strengths Lambda_L, Lambda_R rather than from fundamental Yukawas; hierarchical mixings produce hierarchical fermion masses and naturally suppress flavor-changing neutral currents.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Mixing parameter Lambda_i^L * Lambda_i^R sets m_i; small mixings give light fermions naturally. RG running enhances exponential hierarchies."
+    },
+    {
+      "puzzle_id": "ckm_mixing_pattern",
+      "role": "explains_pattern",
+      "confidence": "proposed"
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Partial-compositeness mixing of SM quarks with composite vector-like partners modifies the effective CKM matrix; the size matches the Cabibbo deficit for f ~ TeV."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "ckm_wolfenstein_lambda_hierarchy",
+      "effect": "predicts_signal"
+    },
+    {
+      "benchmark_id": "meson_mixing_d_k",
+      "effect": "near_bound",
+      "note": "Generic partial compositeness saturates K-Kbar mixing bounds; alignment mechanisms (flavor symmetries within the strong sector) are required."
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "composite-sector fermion partners (top partner, bottom partner, etc.)"
+    ],
+    "new_scales": [
+      "compositeness scale ~ TeV",
+      "mixing scales Lambda_i ~ flavor-dependent"
+    ],
+    "new_symmetries": [
+      "global symmetry of composite sector (often SO(5) or SU(2)_L x SU(2)_R)"
+    ],
+    "new_parameters_count": 7,
+    "note": "Composite sector spectrum + 6 mixing parameters (one per fermion family/chirality)."
+  },
+  "structural_features": [
+    "compositeness",
+    "linear_mixing",
+    "rg_enhancement",
+    "global_symmetry"
+  ],
+  "field_tags": [
+    "vectorlike_lepton",
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "composite_higgs",
+    "warped_extra_dimensions_rs"
+  ],
+  "excludes": [
+    "mssm"
+  ],
+  "status": "niche",
+  "history": "Kaplan (1991) introduced partial compositeness. Bridged to extra-dimensional / RS scenarios via AdS/CFT through the 2000s; modern studies focus on top partners + flavor structure within composite-Higgs UV completions.",
+  "references": [
+    {
+      "citation": "Kaplan, 'Flavor at SSC energies: A new mechanism for dynamically generated fermion masses', Nucl. Phys. B 365, 259 (1991)",
+      "doi": "10.1016/S0550-3213(05)80021-5"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "compositeness",
+    "linear_mixing"
+  ]
+}

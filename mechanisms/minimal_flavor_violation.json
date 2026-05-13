@@ -1,0 +1,72 @@
+{
+  "id": "minimal_flavor_violation",
+  "name": "Minimal flavor violation (MFV)",
+  "aliases": [
+    "MFV"
+  ],
+  "type": "symmetry",
+  "summary": "An ansatz rather than a UV theory: assume that the only source of flavor and CP violation in any BSM extension is the SM Yukawa matrices themselves, treated as spurions of the broken U(3)^5 quark/lepton flavor symmetry. Predicts that BSM flavor-violating amplitudes are proportional to the same CKM elements that govern SM amplitudes, naturally suppressing FCNCs.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Does not predict the Yukawa hierarchy from first principles; it treats the SM Yukawas as inputs and ensures BSM physics does not introduce new flavor-violating sources beyond them. Combined with a mechanism that explains the Yukawa hierarchy itself (FN, modular), MFV is a 'flavor-safe' wrapper."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "meson_mixing_d_k",
+      "effect": "respects",
+      "note": "By construction, BSM contributions to K-Kbar, B-Bbar mixing follow CKM hierarchy; consistent with measured rates without additional alignment."
+    },
+    {
+      "benchmark_id": "b_to_s_gamma_inclusive",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "epsilon_prime_over_epsilon_kaon",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "respects",
+      "note": "Lepton-sector MFV with the PMNS matrix as the only LFV source; rates are PMNS-suppressed."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [],
+    "new_symmetries": [
+      "U(3)^5 flavor symmetry (broken only by Yukawa spurions)"
+    ],
+    "new_parameters_count": 0,
+    "note": "MFV is a constraint on BSM model-building, not a new theory. It introduces no new parameters; it only restricts how new fields can couple to flavor."
+  },
+  "structural_features": [
+    "spurion_analysis",
+    "global_symmetry",
+    "model_independent"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "mssm",
+    "composite_higgs",
+    "froggatt_nielsen",
+    "modular_flavor_symmetry"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Hall-Randall (1990); Buras et al. (2000); D'Ambrosio, Giudice, Isidori, Strumia (2002) gave the modern formulation as a spurion analysis. Widely used as a bottom-up flavor consistency check in BSM physics.",
+  "references": [
+    {
+      "citation": "D'Ambrosio, Giudice, Isidori, Strumia, 'Minimal flavor violation: an effective field theory approach', Nucl. Phys. B 645, 155 (2002)",
+      "arxiv": "hep-ph/0207036"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "spurion",
+    "model_independent"
+  ]
+}

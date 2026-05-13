@@ -1,0 +1,94 @@
+{
+  "id": "s4_flavor_symmetry",
+  "name": "S4 flavor symmetry",
+  "aliases": [
+    "S4 horizontal symmetry",
+    "tribimaximal-S4 lepton flavor"
+  ],
+  "type": "symmetry",
+  "summary": "Non-abelian discrete flavor symmetry based on S4 (permutation group of 4 objects). C.S. Lam proved that S4 is the minimal finite group whose representation theory naturally produces the tribimaximal lepton-mixing pattern (theta_12 ~ 35deg, theta_13 = 0, theta_23 = 45deg) as a leading-order prediction. Deviations from tribimaximal mixing (now measured: theta_13 ~ 8.6deg) require S4-breaking corrections.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "ckm_mixing_pattern",
+      "role": "explains_pattern",
+      "confidence": "contested",
+      "note": "S4 alone gives tribimaximal mixing in the lepton sector; deviations to accommodate theta_13 > 0 require either symmetry-breaking corrections or extensions to S4 x Z_n. Quark-sector predictions are weaker."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "S4 representations naturally split fermions into triplets and singlets, providing texture zeros and partial-hierarchy explanations in specific models."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "S_4 family models with constrained Yukawa structure produce Koide-like patterns; the formula's robustness across S_4 models is sometimes cited as evidence for the underlying symmetry."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "S_4 constraints on flavor sector reduce free PMNS parameters; argued to be the minimal non-abelian group capable of mixing (Lam 2008)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "predicts_signal",
+      "note": "Leading-order tribimaximal predicts theta_13 = 0; observed theta_13 ~ 8.6deg requires S4-breaking. Modern modular-S4 variants can fit theta_13 naturally."
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "S4 sum rules constrain the Majorana phases entering m_betabeta; specific models give sharp predictions testable at KamLAND-Zen and LEGEND."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "flavon scalars in S4 representations"
+    ],
+    "new_scales": [
+      "flavor-breaking scale Lambda_F"
+    ],
+    "new_symmetries": [
+      "S4 (discrete non-abelian)"
+    ],
+    "new_parameters_count": 3,
+    "note": "Flavon VEV pattern, alignment parameters, mixing with charged leptons."
+  },
+  "structural_features": [
+    "discrete_non_abelian",
+    "tribimaximal_mixing",
+    "flavon_alignment",
+    "permutation_symmetry"
+  ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
+  "composes_with": [
+    "a4_family_symmetry",
+    "modular_flavor_symmetry",
+    "froggatt_nielsen"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Brown, Deshpande, Mahanthappa, Senjanovic (1984) early use of S4 in flavor physics. Lam (2008), 'Determining horizontal symmetry from neutrino mixing', Phys. Rev. Lett. 101, 121602, arXiv:0804.2622, proved S4 is the unique minimal group for tribimaximal. Modular-S4 variants (Penedo-Petcov 2018, arXiv:1806.11040) revive the framework after theta_13 measurement.",
+  "references": [
+    {
+      "citation": "Lam, 'Determining horizontal symmetry from neutrino mixing', Phys. Rev. Lett. 101, 121602 (2008)",
+      "arxiv": "0804.2622"
+    },
+    {
+      "citation": "Penedo and Petcov, 'Lepton masses and mixing from modular S4 symmetry', Nucl. Phys. B 939, 292 (2019)",
+      "arxiv": "1806.11040"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "s4",
+    "discrete_symmetry",
+    "tribimaximal"
+  ]
+}

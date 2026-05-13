@@ -1,0 +1,84 @@
+{
+  "id": "dbi_inflation",
+  "name": "DBI inflation",
+  "aliases": [
+    "Dirac-Born-Infeld inflation",
+    "speed-limited inflation"
+  ],
+  "type": "dynamical",
+  "summary": "Inflation driven by a D-brane moving in a warped throat of a string compactification. The brane scalar's kinetic term takes the Dirac-Born-Infeld form, imposing a speed limit on its motion analogous to the speed of light. Slow-roll inflation can occur on relatively steep potentials because the speed limit prevents fast rolling. Predicts large equilateral non-Gaussianity in the CMB, distinguishing it from canonical slow-roll inflation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "String-theoretic UV completion of inflation; replaces 'flat-potential' fine-tuning with brane-scalar speed-limit dynamics. Predicts equilateral non-Gaussianity f_NL ~ -10 to -100 \u2014 Planck has constrained but not closed."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Predicts equilateral non-Gaussianity at f_NL^equil ~ -10 to -100; Planck 2018 constrains f_NL^equil = -26 +/- 47 (1 sigma), allowing DBI in part of parameter space."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects",
+      "note": "DBI inflation typically predicts very small r ~ 10^-5 - 10^-3, below LiteBIRD / CMB-S4 sensitivity in most realisations."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "D-brane position scalar"
+    ],
+    "new_scales": [
+      "string scale",
+      "warped throat geometry"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 4,
+    "note": "Throat warp factor, D-brane charge, potential, and speed-limit parameter."
+  },
+  "structural_features": [
+    "string_inflation",
+    "non_canonical_kinetic",
+    "brane_motion",
+    "non_gaussianity"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification"
+  ],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
+  "status": "niche",
+  "history": "Silverstein and Tong (2003), 'Scalar speed limits and cosmology: acceleration from D-cceleration', Phys. Rev. D 70, 103505, arXiv:hep-th/0310221. Alishahiha-Silverstein-Tong (2004) refined inflationary phenomenology. Active interface with string-cosmology + non-Gaussianity searches.",
+  "references": [
+    {
+      "citation": "Silverstein and Tong, 'Scalar speed limits and cosmology: acceleration from D-cceleration', Phys. Rev. D 70, 103505 (2004)",
+      "arxiv": "hep-th/0310221"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "string_theory",
+    "dbi",
+    "non_gaussianity",
+    "branes"
+  ]
+}

@@ -6,7 +6,7 @@
   "requirement": "Any candidate framework must respect CPT symmetry to the precision set by the upper bound on the mass difference between the neutral kaon and its antiparticle: |m_{K^0} - m_{K^0_bar}| < 4.8 x 10^-19 GeV (95% CL, PDG, derived from CPLEAR + KLOE semileptonic-asymmetry analyses assuming CPT violation enters via the mass matrix only). This is one of the most stringent CPT tests in any system; expressed dimensionlessly, |Delta m / m_K| < 9.6 x 10^-19 (m_K = 0.4977 GeV).",
   "regime": {
     "length_m": 4e-16,
-    "energy_ev": 4.98e8,
+    "energy_ev": 498000000.0,
     "description": "Neutral kaon system; CPT-violating mass splitting would induce specific CP-asymmetries in K_S - K_L oscillation."
   },
   "current_bound": {
@@ -35,6 +35,7 @@
   "primary_references": [
     {
       "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)",
+      "url": "https://pdg.lbl.gov/",
       "doi": "10.1093/ptep/ptae163"
     },
     {
@@ -50,5 +51,10 @@
       "arxiv": "hep-ph/0104120"
     }
   ],
-  "tags": ["cpt", "kaon", "lorentz", "sme"]
+  "tags": [
+    "cpt",
+    "kaon",
+    "lorentz",
+    "sme"
+  ]
 }

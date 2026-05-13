@@ -1,0 +1,94 @@
+{
+  "id": "gauge_mediated_susy_breaking",
+  "name": "Gauge-mediated SUSY breaking (GMSB)",
+  "aliases": [
+    "GMSB",
+    "Dine-Fischler gauge mediation"
+  ],
+  "type": "dynamical",
+  "summary": "Mediates SUSY breaking from a hidden sector to the visible sector via SM gauge interactions. Messenger fields charged under both the SUSY-breaking sector and the SM transmit soft masses to MSSM scalars and gauginos at one and two loops. Predicts a flavor-blind soft spectrum (no SUSY flavor problem) and a very light gravitino LSP.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "requires",
+      "confidence": "established",
+      "note": "Implementation of MSSM SUSY-breaking mediation; addresses the hierarchy problem only via the underlying SUSY mechanism."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Gauge-mediated soft masses are flavor-blind by construction (they depend only on SM gauge quantum numbers), eliminating the SUSY flavor problem. Doesn't explain Yukawa hierarchy itself but removes one source of flavor violation."
+    },
+    {
+      "puzzle_id": "lithium_bbn_puzzle",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "GMSB with stau-NLSP: stau decays during BBN deplete Li-7 via stau-bound-state catalysis of nuclear reactions (Jedamzik 2008, Cyburt-Ellis-Fields-Olive 2010). Largely disfavored by collider stau-mass bounds but not strictly excluded."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "respects",
+      "note": "Flavor-blind mediation suppresses CP-violating phases relative to generic MSSM."
+    },
+    {
+      "benchmark_id": "meson_mixing_d_k",
+      "effect": "respects",
+      "note": "FCNCs from squark mixing are minimal due to flavor-universal soft masses."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "messenger fields (typically a 5+5bar of SU(5))",
+      "SUSY-breaking sector singlet X with <X> + theta^2 <F_X>"
+    ],
+    "new_scales": [
+      "messenger mass M_mess ~ 10^4 - 10^16 GeV",
+      "SUSY-breaking F-term <F_X>"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 4,
+    "note": "Messenger mass, SUSY-breaking scale, number of messenger generations, tan(beta). Flavor structure is fixed by gauge invariance."
+  },
+  "structural_features": [
+    "gauge_mediation",
+    "messenger_sector",
+    "flavor_blind",
+    "gravitino_lsp"
+  ],
+  "field_tags": [
+    "susy_fermion_partners",
+    "susy_scalar_partners",
+    "vectorlike_lepton",
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "mssm"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Dine and Fischler (1982), 'A phenomenological model of particle physics based on supersymmetry', Phys. Lett. B 110, 227 - one of the foundational gauge-mediation papers. Modern formulation by Dine-Nelson (1993, 1995) and Dine-Nelson-Nir-Shirman (1996). Active LHC phenomenology of long-lived NLSP / prompt photon signatures.",
+  "references": [
+    {
+      "citation": "Dine and Fischler, 'A phenomenological model of particle physics based on supersymmetry', Phys. Lett. B 110, 227 (1982)",
+      "doi": "10.1016/0370-2693(82)91241-2"
+    },
+    {
+      "citation": "Dine, Nelson, Nir, Shirman, 'New tools for low-energy dynamical supersymmetry breaking', Phys. Rev. D 53, 2658 (1996)",
+      "arxiv": "hep-ph/9507378"
+    }
+  ],
+  "tags": [
+    "susy",
+    "gmsb",
+    "gauge_mediation",
+    "flavor_blind",
+    "gravitino_lsp"
+  ]
+}

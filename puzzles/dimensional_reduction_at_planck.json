@@ -1,0 +1,53 @@
+{
+  "id": "dimensional_reduction_at_planck",
+  "name": "Dimensional reduction at the Planck scale",
+  "aliases": [
+    "spectral dimension running",
+    "Planck-scale d_s -> 2"
+  ],
+  "kind": "consistency",
+  "summary": "Multiple approaches to quantum gravity independently predict that the spectral dimension of spacetime (d_s, the dimension probed by a diffusion process) runs from d_s ~ 4 at large scales down to d_s ~ 2 near the Planck scale. Asymptotic safety (Reuter), causal dynamical triangulations (Ambjorn-Jurkiewicz-Loll 2005, arXiv:hep-th/0505113), Horava-Lifshitz gravity, and loop quantum gravity all show this behaviour. The convergence across radically different QG programs is striking — either deep, or coincidence.",
+  "characteristic_numbers": [
+    {
+      "symbol": "d_s (IR, observed)",
+      "value": "4.02 +/- 0.10",
+      "expected": "4 (classical)",
+      "note": "CDT numerical: at long distances spectral dimension matches classical 4D."
+    },
+    {
+      "symbol": "d_s (UV, predicted)",
+      "value": "~2",
+      "expected": "if classical: 4; if Planck-scale reduction: 2",
+      "note": "Asymptotic safety: d_s -> 2 exactly. CDT: 1.80 +/- 0.25. Horava-Lifshitz: 2 by construction at z=3 critical point. Robust prediction across approaches."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "lorentz_invariance_photon",
+    "graviton_speed_gw170817"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lorentz_invariance",
+      "status": "tests",
+      "note": "Some forms of dimensional reduction (Horava-Lifshitz) explicitly break Lorentz at short distances, predicting modified dispersion relations testable in GRB photon arrival times. Other forms (asymptotic safety, CDT) preserve Lorentz on average but predict scale-dependent effective metric."
+    }
+  ],
+  "history": "Ambjorn, Jurkiewicz, Loll (2005), 'Spectral dimension of the universe', Phys. Rev. Lett. 95, 171301, arXiv:hep-th/0505113 — first numerical CDT result. Lauscher-Reuter (2005) confirmed in asymptotic safety. Horava (2009) by construction. Carlip (2017, arXiv:1705.05417) systematic review: 'Why dimensional reduction?'. The convergence is conjectured to be a real feature of any consistent QG.",
+  "references": [
+    {
+      "citation": "Ambjorn, Jurkiewicz, Loll, 'Spectral dimension of the universe', Phys. Rev. Lett. 95, 171301 (2005)",
+      "arxiv": "hep-th/0505113"
+    },
+    {
+      "citation": "Carlip, 'Dimension and dimensional reduction in quantum gravity', Class. Quantum Grav. 34, 193001 (2017)",
+      "arxiv": "1705.05417"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "quantum_gravity",
+    "spectral_dimension",
+    "uv_reduction"
+  ]
+}

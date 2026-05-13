@@ -1,0 +1,89 @@
+{
+  "id": "dark_dimension_swampland",
+  "name": "Dark dimension (Montero-Vafa-Valenzuela)",
+  "aliases": [
+    "mesoscopic extra dimension",
+    "MVV dark dimension"
+  ],
+  "type": "uv_completion",
+  "summary": "A swampland-motivated proposal that a single mesoscopic extra dimension of size L ~ 10^-6 m exists, populated by a tower of light Kaluza-Klein gravitons. The dark dimension's size is tied to the smallness of the cosmological constant via the distance / duality conjecture; the KK tower provides a natural dark-matter candidate (KK gravitons) and predicts deviations from inverse-square gravity at sub-mm scales.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Distance conjecture relates the small Lambda to a long compactification length. Predicts dark dimension L ~ Lambda^(-1/4) M_Pl^(-1/2) ~ 10^-6 m, where Newtonian inverse-square law breaks down at the threshold of current short-distance gravity tests (Eot-Wash)."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "KK gravitons in the dark-dimension tower can be the dark matter; specific abundance calculation by Gonzalo-Montero-Obied-Vafa (2022, 2023) gives Omega_DM ~ 0.25 in the natural mass range."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Bulk fermions propagating in the dark dimension naturally produce small Dirac neutrino masses via volume suppression; aligns with the expected scale."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "inverse_square_law_short_distance",
+      "effect": "predicts_signal",
+      "note": "Predicted dark-dimension size ~10^-6 m sits just below current Eot-Wash sensitivity (~52 mu m); next-generation short-distance gravity experiments are direct tests."
+    },
+    {
+      "benchmark_id": "katrin_neutrino_mass",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "KK-graviton DM has gravitational coupling only; direct detection cross sections far below LZ sensitivity."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "KK tower of gravitons + bulk fermions"
+    ],
+    "new_scales": [
+      "dark dimension size L ~ 10^-6 m",
+      "5D Planck scale ~ 10^9-10^10 GeV"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Dimension size and 5D Planck scale; both fixed by the distance-conjecture relation to Lambda."
+  },
+  "structural_features": [
+    "extra_dimension",
+    "swampland_distance_conjecture",
+    "kk_tower",
+    "mesoscopic_compactification"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "kk_tower_fermions",
+    "kk_tower_gravitons"
+  ],
+  "composes_with": [
+    "swampland_de_sitter",
+    "heterotic_string_compactification"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Montero, Vafa, Valenzuela (2022), 'The Dark Dimension and the Swampland', JHEP 02, 022 (2023), arXiv:2205.12293. Gonzalo, Montero, Obied, Vafa (2022), 'Dark dimension gravitons as dark matter', JHEP 11, 109 (2023), arXiv:2209.09249. Active research program connecting string-theory swampland conjectures to phenomenology.",
+  "references": [
+    {
+      "citation": "Montero, Vafa, Valenzuela, 'The Dark Dimension and the Swampland', JHEP 02, 022 (2023)",
+      "arxiv": "2205.12293"
+    }
+  ],
+  "tags": [
+    "swampland",
+    "extra_dimension",
+    "dark_matter",
+    "cosmological_constant",
+    "kk_gravitons"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "twin_higgs",
+  "name": "Twin Higgs",
+  "aliases": [
+    "mirror twin Higgs",
+    "neutral naturalness"
+  ],
+  "type": "symmetry",
+  "summary": "A Z_2 mirror symmetry exchanges the SM with a 'twin' SM. The Higgs becomes a pseudo-Goldstone boson of an approximate global SU(4) under which the Z_2 acts; one-loop quadratic corrections to the visible Higgs mass cancel against twin-sector loops. The twin partners are SM gauge singlets, evading direct LHC constraints \u2014 'neutral naturalness'.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Cancels the dominant top-quark contribution to Higgs mass at one loop without coloured top partners. Two-loop sensitivity remains; viable parameter space requires twin sector mass scale ~ few hundred GeV."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Twin-baryons and twin-electroweak states can be cosmologically stable and gravitationally interacting; specific realisations (Fraternal Twin Higgs, Mirror Twin Higgs with asymmetric reheating) give viable DM candidates."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Mixing of the SM Higgs with the twin Higgs reduces SM-Higgs coupling strengths by a factor cos^2(theta) = v^2/f^2. Current Higgs coupling measurements bound v/f >~ 3, requiring a mild tuning."
+    },
+    {
+      "benchmark_id": "n_eff_combined_cmb_bbn",
+      "effect": "near_bound",
+      "note": "Twin photons and twin neutrinos contribute to N_eff; mirror models without asymmetric reheating violate CMB+BBN bounds, motivating asymmetric-temperature variants."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "full mirror SM sector (twin quarks, leptons, gauge bosons, Higgs)"
+    ],
+    "new_scales": [
+      "f ~ 1 TeV (Z_2-breaking scale)"
+    ],
+    "new_symmetries": [
+      "Z_2 mirror symmetry",
+      "approximate SU(4) global"
+    ],
+    "new_parameters_count": 5,
+    "note": "Z_2 fixes most parameters to be twins of SM parameters; the new free inputs are the breaking scale f, the explicit Z_2 breaking, and a small handful of scalar-potential terms."
+  },
+  "structural_features": [
+    "mirror_sector",
+    "discrete_symmetry",
+    "global_symmetry",
+    "neutral_naturalness",
+    "pseudo_goldstone"
+  ],
+  "field_tags": [
+    "mirror_sm_fermions"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "peccei_quinn_axion"
+  ],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "warped_extra_dimensions_rs"
+  ],
+  "status": "niche",
+  "history": "Chacko, Goh, Harnik (2006). Orbifold Higgs / neutral naturalness systematics (Craig, Knapen, Longhi 2014, arXiv:1410.6808) generalised the construction; Fraternal Twin Higgs (Craig, Katz, Strassler, Sundrum 2015, arXiv:1501.05310) addresses cosmological problems by removing twin light fermions. Active research direction in 2015-present.",
+  "references": [
+    {
+      "citation": "Chacko, Goh, Harnik, 'The Twin Higgs: Natural electroweak breaking from mirror symmetry', PRL 96, 231802 (2006)",
+      "arxiv": "hep-ph/0506256"
+    },
+    {
+      "citation": "Craig, Knapen, Longhi, 'Neutral Naturalness from the Orbifold Higgs', JHEP 03 (2015) 097",
+      "arxiv": "1410.6808"
+    }
+  ],
+  "tags": [
+    "hierarchy",
+    "mirror_sector",
+    "neutral_naturalness"
+  ]
+}

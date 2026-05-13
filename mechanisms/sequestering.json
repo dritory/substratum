@@ -1,0 +1,66 @@
+{
+  "id": "sequestering",
+  "name": "Vacuum-energy sequestering",
+  "aliases": [
+    "Kaloper-Padilla sequestering"
+  ],
+  "type": "dynamical",
+  "summary": "Couples the QFT vacuum energy to a global modulus that enforces cancellation against the historic average of trace contributions over the cosmological history. Separates 'particle physics' vacuum energy from 'gravitating' vacuum energy without demanding fine-tuning of the renormalized Lambda.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Removes the radiative-correction component of the cosmological-constant problem; does not explain why the residual integration constant is at meV^4. Subtle predictions for the cosmological history distinguish it from LambdaCDM in principle."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "global lagrange-multiplier modulus"
+    ],
+    "new_scales": [
+      "cosmological-history-averaged trace scale"
+    ],
+    "new_symmetries": [
+      "a global rescaling acting on the metric and Planck mass"
+    ],
+    "new_parameters_count": 2,
+    "note": "Coupling and effective UV cutoff for the trace integration; the framework is engineered to be insensitive to QFT vacuum-energy radiative corrections."
+  },
+  "structural_features": [
+    "global_modulus",
+    "non_local",
+    "cosmological_history"
+  ],
+  "field_tags": [
+    "string_modulus"
+  ],
+  "composes_with": [
+    "anthropic_landscape",
+    "unimodular_gravity"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Kaloper and Padilla (2014) introduced the local sequestering construction. Manifestly local 'monodromy' versions (2016) addressed objections. Distinct from older vacuum-energy cancellation mechanisms (e.g., Tseytlin) by its use of cosmological-history averaging.",
+  "references": [
+    {
+      "citation": "Kaloper and Padilla, 'Sequestering the standard model vacuum energy', PRL 112, 091304 (2014)",
+      "arxiv": "1309.6562"
+    }
+  ],
+  "tags": [
+    "cosmological_constant",
+    "modulus",
+    "non_local"
+  ]
+}

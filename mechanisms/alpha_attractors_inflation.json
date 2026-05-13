@@ -1,0 +1,81 @@
+{
+  "id": "alpha_attractors_inflation",
+  "name": "Alpha-attractors inflation",
+  "aliases": [
+    "Kallosh-Linde alpha-attractors",
+    "conformal attractor inflation"
+  ],
+  "type": "geometric",
+  "summary": "A class of inflation models with spontaneously broken conformal symmetry on the inflaton's Kahler manifold. The single parameter alpha controls the curvature of the moduli space; small alpha (large negative curvature) produces an attractor regime where slow-roll predictions are insensitive to potential details. Predicts n_s = 1 - 2/N and r = 12 alpha / N^2 \u2014 for alpha ~ 1 and N ~ 60 e-folds this gives r ~ 0.003, the same region of (n_s, r) as Starobinsky inflation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Predicts n_s ~ 0.965 and r in a controllable range 10^-4 - 10^-2 depending on alpha; the attractor regime makes the predictions insensitive to potential details, providing genuine universality. Squarely in the sweet spot of Planck + BICEP/Keck data."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "predicts_signal",
+      "note": "r in [10^-4, 10^-2] depending on alpha; LiteBIRD / CMB-S4 sensitivity (r ~ 10^-3) probes a large fraction of the alpha range."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "n_s = 1 - 2/N ~ 0.965 for N=55-60, in agreement with Planck."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "inflaton on a hyperbolic Kahler manifold"
+    ],
+    "new_scales": [
+      "inflation scale ~ 10^16 GeV"
+    ],
+    "new_symmetries": [
+      "spontaneously broken conformal SO(1,1)"
+    ],
+    "new_parameters_count": 1,
+    "note": "Single new parameter alpha (curvature of the Kahler manifold). Potential shape becomes irrelevant in the attractor regime."
+  },
+  "structural_features": [
+    "kahler_manifold",
+    "conformal_symmetry",
+    "attractor_regime",
+    "plateau_potential"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "starobinsky_inflation",
+    "higgs_inflation",
+    "linde_eternal_inflation"
+  ],
+  "excludes": [
+    "axion_monodromy_inflation",
+    "chaotic_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "warm_inflation"
+  ],
+  "status": "mainstream",
+  "history": "Kallosh and Linde (2013), 'Universality class in conformal inflation', JCAP 07, 002, arXiv:1306.5220. Family of attractors developed in subsequent papers; supergravity embeddings (Kallosh-Linde 2013, arXiv:1311.0472) and multi-field generalisations. One of the leading inflationary frameworks pre-LiteBIRD.",
+  "references": [
+    {
+      "citation": "Kallosh and Linde, 'Universality class in conformal inflation', JCAP 07, 002 (2013)",
+      "arxiv": "1306.5220"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "alpha_attractors",
+    "conformal_symmetry",
+    "kahler_manifold"
+  ]
+}

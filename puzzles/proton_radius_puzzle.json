@@ -1,0 +1,57 @@
+{
+  "id": "proton_radius_puzzle",
+  "name": "Proton charge radius puzzle",
+  "aliases": [
+    "muonic-hydrogen radius discrepancy",
+    "Pohl proton radius"
+  ],
+  "kind": "naturalness",
+  "summary": "The 2010 measurement of the proton charge radius via muonic-hydrogen Lamb-shift spectroscopy (Pohl et al., r_p = 0.84184(67) fm) disagreed by ~5 sigma with the CODATA value from electron-hydrogen spectroscopy and electron-proton scattering (~0.8768(69) fm). The 4% discrepancy challenged either QED theory predictions, hadronic structure modelling, or pointed at lepton-non-universal new physics. Subsequent precision e-H measurements (Beyer 2017, Bezginov 2019, Fleurbaey 2018) have largely converged on the muonic-hydrogen value, formally resolving the tension while leaving residual interpretive questions.",
+  "characteristic_numbers": [
+    {
+      "symbol": "r_p (muonic H, 2010)",
+      "value": "0.84184",
+      "expected": "0.8768 (pre-2010 CODATA from e-H)",
+      "gap_log10": null,
+      "units": "fm",
+      "note": "Pohl et al. 2010, Nature 466, 213. 5 sigma below electron-based determinations."
+    },
+    {
+      "symbol": "r_p (CODATA 2022)",
+      "value": "0.8414",
+      "expected": "convergence with muonic-H result",
+      "units": "fm",
+      "note": "Modern e-H spectroscopy (2017-2022) has shifted toward the muonic value; CODATA 2022 quotes r_p = 0.8414 fm."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "proton_radius_muonic_hydrogen",
+    "lamb_shift_qed_precision"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "Original 5 sigma discrepancy could have been interpreted as new lepton-non-universal physics (a few-MeV scalar coupling to muons but not electrons). Resolution with newer e-H measurements largely closes that channel; remaining work is to fully understand systematics."
+    }
+  ],
+  "history": "Pohl et al. (2010), 'The size of the proton', Nature 466, 213 — 5 sigma discrepancy. Antognini et al. (2013, Science 339, 417) refined the muonic-H measurement. Modern e-H measurements: Beyer et al. (2017, Science 358, 79), Bezginov et al. (2019, Science 365, 1007), Fleurbaey et al. (2018, PRL 120, 183001). 2022 CODATA largely converges on the muonic-H value.",
+  "references": [
+    {
+      "citation": "Pohl, Antognini, Nez et al., 'The size of the proton', Nature 466, 213 (2010)",
+      "doi": "10.1038/nature09250"
+    },
+    {
+      "citation": "Antognini et al., 'Proton structure from the measurement of 2S-2P transition frequencies of muonic hydrogen', Science 339, 417 (2013)",
+      "doi": "10.1126/science.1230016"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "qed",
+    "proton_radius",
+    "lepton_universality",
+    "data_tension"
+  ]
+}

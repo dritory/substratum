@@ -1,0 +1,51 @@
+{
+  "id": "nanograv_pta_gw_background",
+  "name": "NANOGrav pulsar-timing-array stochastic gravitational-wave background",
+  "aliases": [
+    "PTA stochastic GW signal",
+    "Hellings-Downs detection"
+  ],
+  "kind": "naturalness",
+  "summary": "NANOGrav's 15-year pulsar-timing data set (2023) detected a stochastic gravitational-wave background at ~3.5-4 sigma significance, with the inter-pulsar correlation pattern following Hellings-Downs as expected for a true GW background. The strain amplitude (~2.4e-15 at 1/yr) and ~ f^-2/3 spectrum are consistent with supermassive black-hole binary inspirals but also allow exotic origins (cosmic strings, first-order phase transitions, inflation tensor modes, dark-matter substructure). The puzzle is which origin the signal actually has.",
+  "characteristic_numbers": [
+    {
+      "symbol": "characteristic strain at f=1/yr",
+      "value": "2.4e-15",
+      "uncertainty": "+0.7/-0.6e-15",
+      "expected": "depends on source",
+      "note": "Median + 90% CI. f^-2/3 spectrum fit; spectral-index posterior is broad enough to admit cosmological sources alongside SMBHB."
+    },
+    {
+      "symbol": "Bayes factor (GWB vs uncorrelated)",
+      "value": "200 - 1000",
+      "expected": "no preference",
+      "note": "Strong preference for correlated GWB over independent pulsar noise."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "pulsar_timing_array_gw_background",
+    "primordial_gw_tensor_to_scalar_ratio"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "none",
+      "status": "tests",
+      "note": "Doesn't violate any principle but tests our understanding of the nanohertz universe. Astrophysical (SMBHB) and cosmological (cosmic strings, phase transitions, inflation) sources are both viable; spectral-shape and anisotropy measurements over the next 5-10 years should discriminate."
+    }
+  ],
+  "history": "Theoretical prediction of SMBHB GW background: Sesana et al. (2008); review Burke-Spolaor et al. (2019). NANOGrav 11-yr (2018) saw common-spectrum hint without Hellings-Downs. NANOGrav 12.5-yr (2020) strengthened. NANOGrav 15-yr (2023), 'Evidence for a gravitational-wave background', ApJL 951, L8, arXiv:2306.16213, achieved Hellings-Downs detection. EPTA, PPTA, CPTA simultaneously announced consistent signals.",
+  "references": [
+    {
+      "citation": "NANOGrav Collaboration (Agazie et al.), 'The NANOGrav 15-year data set: evidence for a gravitational-wave background', ApJL 951, L8 (2023)",
+      "arxiv": "2306.16213"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "gravitational_waves",
+    "pulsar_timing",
+    "nanohertz_universe",
+    "data_signal"
+  ]
+}

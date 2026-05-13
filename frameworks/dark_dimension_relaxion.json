@@ -1,0 +1,37 @@
+{
+  "id": "dark_dimension_relaxion",
+  "name": "Dark dimension swampland + relaxion + type-I seesaw",
+  "summary": "Classification: ACTIVE RECENT PROGRAM (2022+). Motivated by the swampland distance conjecture: a single extra dimension of size R ~ micrometer sets a Kaluza-Klein scale m_KK ~ R^-1 ~ 100 meV, naturally identified with the dark-energy scale (Lambda^{1/4}). KK gravitons in the dark dimension are then dark-matter candidates with mass-mixing controlled by the same scale. The relaxion is added to address the electroweak hierarchy via cosmological relaxation rather than symmetry. Bulk right-handed neutrinos in the dark dimension give the type-I seesaw with the seesaw scale geometrically explained. Distinguished from old large-extra-dimensions programs by being motivated top-down from string-theory swampland constraints, and by the parametric identification Lambda^{1/4} ~ m_KK ~ m_nu rather than independent scales. The framework is young (Montero-Vafa-Valenzuela 2022) and not yet pressured by collider data.",
+  "lineage": [
+    {
+      "citation": "Montero, Vafa, Valenzuela, 'The dark dimension and the Swampland', JHEP 02 (2023) 022",
+      "arxiv": "2205.12293"
+    },
+    {
+      "citation": "Anchordoqui, Antoniadis, Lust, 'Dark dimension, the swampland, and the origin of cosmic acceleration', PRD 107, 083530 (2023)",
+      "arxiv": "2206.07071"
+    },
+    {
+      "citation": "Gonzalo, Montero, Obied, Vafa, 'Dark dimension gravitons as dark matter', JHEP 11 (2023) 109",
+      "arxiv": "2209.09249"
+    },
+    {
+      "citation": "Graham, Kaplan, Rajendran, 'Cosmological relaxation of the electroweak scale', PRL 115, 221801 (2015)",
+      "arxiv": "1504.07551"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "dark_dimension_swampland",
+    "relaxion",
+    "seesaw_type_i"
+  ],
+  "tags": [
+    "swampland",
+    "extra_dimensions",
+    "kk_dark_matter",
+    "relaxion",
+    "seesaw",
+    "recent_program"
+  ]
+}

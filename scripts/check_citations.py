@@ -279,7 +279,13 @@ def main():
     if args.files:
         files = sorted(args.files)
     else:
-        files = sorted(glob("data/*.json") + glob("benchmarks/*.json"))
+        files = sorted(
+            glob("data/*.json")
+            + glob("benchmarks/*.json")
+            + glob("puzzles/*.json")
+            + glob("mechanisms/*.json")
+            + glob("frameworks/*.json")
+        )
 
     cache = load_cache() if not args.offline else {}
     failures = []

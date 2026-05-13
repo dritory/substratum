@@ -1,0 +1,57 @@
+{
+  "id": "baryon_asymmetry",
+  "name": "Baryon asymmetry of the universe",
+  "aliases": [
+    "matter-antimatter asymmetry",
+    "BAU"
+  ],
+  "kind": "naturalness",
+  "summary": "The observed baryon-to-photon ratio eta = n_B / n_gamma ~ 6e-10 (from BBN + CMB) requires a CP-violating, baryon-number-violating, out-of-equilibrium process in the early universe (Sakharov 1967). The SM has all three Sakharov conditions in principle (CKM CP violation, sphaleron B+L violation, electroweak phase transition) but the CP violation is too small by ~10 orders of magnitude and the EW transition is a crossover, so the SM cannot produce the observed asymmetry.",
+  "characteristic_numbers": [
+    {
+      "symbol": "eta = n_B / n_gamma",
+      "value": "6.1e-10",
+      "expected": "0 (symmetric universe) or O(1) (random)",
+      "note": "Both naive expectations are excluded; the observed small but non-zero value requires an out-of-equilibrium CP-violating mechanism beyond the SM."
+    },
+    {
+      "symbol": "delta_CP_SM (Jarlskog)",
+      "value": "3e-5",
+      "expected": "needed > 1e-5 if SM-like processes drove BAU",
+      "note": "Even if the EW transition were strongly first-order (it isn't), CKM CP violation is ~10 orders of magnitude too weak."
+    }
+  ],
+  "benchmark_links": [
+    "bbn_light_element_abundances",
+    "neutron_electric_dipole_moment",
+    "electron_edm_jila"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "cpt",
+      "status": "tests",
+      "note": "BAU forces additional sources of CP violation beyond CKM, motivating heavy-Majorana CP phases (leptogenesis), supersymmetric phases, or extended scalar sectors. (Listed under 'cpt' as the closest enum value; the puzzle stresses C and CP violation, not CPT itself.) EDM bounds constrain these strongly."
+    }
+  ],
+  "history": "Sakharov conditions formulated 1967. SM electroweak baryogenesis investigated thoroughly through the 1990s and ruled out (Higgs too heavy, EW transition is crossover). Leptogenesis (Fukugita-Yanagida 1986) emerged as the leading framework, building on the seesaw. Affleck-Dine baryogenesis is a SUSY-friendly alternative.",
+  "references": [
+    {
+      "citation": "Sakharov, 'Violation of CP invariance, C asymmetry, and baryon asymmetry of the universe', JETP Lett. 5, 24 (1967)",
+      "url": "https://inspirehep.net/literature/51345"
+    },
+    {
+      "citation": "Fukugita and Yanagida, 'Baryogenesis without grand unification', Phys. Lett. B 174, 45 (1986)",
+      "doi": "10.1016/0370-2693(86)91126-3"
+    },
+    {
+      "citation": "Particle Data Group, BBN review (2024)",
+      "url": "https://pdg.lbl.gov/"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "cosmology",
+    "cp_violation",
+    "baryogenesis"
+  ]
+}

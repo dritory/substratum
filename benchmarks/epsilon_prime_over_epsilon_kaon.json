@@ -5,12 +5,12 @@
   "requirement": "Any candidate framework must reproduce Re(epsilon'/epsilon), the parameter quantifying direct CP violation in neutral kaon decays K -> pi pi. World-average experimental value Re(epsilon'/epsilon) = (16.6 +/- 2.3) x 10^-4 (PDG 2024). Lattice-QCD SM prediction has improved to (8.2 +/- 4.2) x 10^-4 (RBC/UKQCD 2020), bringing SM and experiment into ~1.5 sigma agreement.",
   "regime": {
     "length_m": 4e-16,
-    "energy_ev": 4.98e8,
+    "energy_ev": 498000000.0,
     "description": "Neutral kaon system; direct CPV in K_L -> pi pi. Tests TeV-scale BSM CP-violating contributions to Delta S = 1 transitions."
   },
   "current_bound": {
-    "value": 16.6e-4,
-    "uncertainty": 2.3e-4,
+    "value": 0.00166,
+    "uncertainty": 0.00023,
     "units": "dimensionless",
     "experiment": "World average of NA48 and KTeV (PDG)",
     "year": 2024,
@@ -34,12 +34,19 @@
   },
   "primary_references": [
     {
-      "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)"
+      "citation": "Particle Data Group, 'Review of Particle Physics', Prog. Theor. Exp. Phys. 2024, 083C01 (2024)",
+      "url": "https://pdg.lbl.gov/",
+      "doi": "10.1093/ptep/ptae163"
     },
     {
       "citation": "Abbott et al. (RBC/UKQCD), 'Direct CP violation and the Delta I = 1/2 rule in K -> pi pi decay from the standard model', PRD 102, 054509 (2020)",
       "arxiv": "2004.09440"
     }
   ],
-  "tags": ["flavor", "kaon", "cp_violation", "lattice_qcd"]
+  "tags": [
+    "flavor",
+    "kaon",
+    "cp_violation",
+    "lattice_qcd"
+  ]
 }

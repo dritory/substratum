@@ -1,0 +1,76 @@
+{
+  "id": "ars_leptogenesis",
+  "name": "ARS leptogenesis (via sterile-neutrino oscillations)",
+  "aliases": [
+    "Akhmedov-Rubakov-Smirnov leptogenesis",
+    "baryogenesis via neutrino oscillations"
+  ],
+  "type": "dynamical",
+  "summary": "Generates the baryon asymmetry through CP-violating oscillations of GeV-scale sterile neutrinos in the early universe, rather than through their decays. The asymmetry is communicated from the singlet sector to ordinary leptons via Yukawa couplings. Realises baryogenesis at much lower scales (M_N ~ GeV) than thermal leptogenesis, making the framework directly testable at fixed-target experiments and B-factories.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 10^-10 for M_N ~ 0.1-100 GeV with mild mass-degeneracy. Underlies the nuMSM (Asaka-Shaposhnikov) which combines this BAU mechanism with sterile-neutrino DM and SM neutrino masses in one minimal extension."
+    },
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "requires",
+      "confidence": "established"
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "katrin_neutrino_mass",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutrinoless_double_beta_decay",
+      "effect": "predicts_signal",
+      "note": "GeV-scale heavy Majorana neutrinos contribute to 0nubb at experimentally accessible rates."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "M_N ~ 0.1 - 100 GeV (oscillation-friendly window)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 4,
+    "note": "Builds on seesaw with low-scale Majorana neutrinos. New parameters: heavy-neutrino masses, mixing angles, CP phases, near-degeneracy."
+  },
+  "structural_features": [
+    "neutrino_oscillation",
+    "gev_scale_seesaw",
+    "out_of_equilibrium_oscillation",
+    "low_scale_baryogenesis"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "sterile_neutrino_dm"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Akhmedov, Rubakov, Smirnov (1998), 'Baryogenesis via neutrino oscillations', Phys. Rev. Lett. 81, 1359, arXiv:hep-ph/9803255. Embedded by Asaka-Shaposhnikov (2005) into the nuMSM framework. Modern numerical studies (Ghiglieri-Laine, Eijima-Shaposhnikov-Timiryasov 2018) refine quantitative predictions; SHiP and DUNE near-detector sensitive to viable parameter space.",
+  "references": [
+    {
+      "citation": "Akhmedov, Rubakov, Smirnov, 'Baryogenesis via neutrino oscillations', Phys. Rev. Lett. 81, 1359 (1998)",
+      "arxiv": "hep-ph/9803255"
+    }
+  ],
+  "tags": [
+    "leptogenesis",
+    "baryogenesis",
+    "sterile_neutrino",
+    "oscillation",
+    "gev_scale"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "bfss_matrix_theory",
+  "name": "BFSS matrix theory (M-theory as a matrix model)",
+  "aliases": [
+    "BFSS matrix model",
+    "Banks-Fischler-Shenker-Susskind",
+    "M(atrix) theory"
+  ],
+  "type": "uv_completion",
+  "summary": "Conjectured non-perturbative definition of M-theory in the infinite-momentum frame as the N -> infinity limit of supersymmetric matrix quantum mechanics describing N D0-branes. Reproduces the full Fock space of 11-dimensional supergravity as bound states of D0-branes, and provides a non-perturbative realisation of the holographic principle. Foundational alongside AdS/CFT for the modern non-perturbative formulation of string/M-theory.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "black_hole_information",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Provides a non-perturbative definition of M-theory in which BH states are constructible as matrix-model configurations; the matrix model is unitary by construction, so BH evaporation preserves information. Generalisation to asymptotically-flat 4D BHs remains an active research goal."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Conjectured non-perturbative definition of M-theory as the N -> infinity limit of supersymmetric matrix quantum mechanics in the infinite-momentum frame (Banks-Fischler-Shenker-Susskind 1997)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "11D supergravity emerges as the IR limit; 4D GR follows from compactification."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "N x N matrices in supersymmetric matrix quantum mechanics"
+    ],
+    "new_scales": [
+      "Planck length"
+    ],
+    "new_symmetries": [
+      "U(N) gauge symmetry",
+      "16 unbroken supersymmetries"
+    ],
+    "new_parameters_count": 2,
+    "note": "Matrix size N (taken to infinity) and 't Hooft coupling. The matrix model is itself parameter-free in the N -> infinity limit."
+  },
+  "structural_features": [
+    "matrix_quantum_mechanics",
+    "d0_brane_bound_states",
+    "infinite_momentum_frame",
+    "non_perturbative_m_theory"
+  ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "polchinski_d_branes",
+    "ads_cft_holography",
+    "holographic_principle"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Banks, Fischler, Shenker, Susskind (1996), 'M theory as a matrix model: a conjecture', Phys. Rev. D 55, 5112 (1997), arXiv:hep-th/9610043. Extensive tests through the late 1990s reproduced supergravity scattering amplitudes. Less actively studied since AdS/CFT became the dominant non-perturbative tool, but provides an independent non-perturbative definition.",
+  "references": [
+    {
+      "citation": "Banks, Fischler, Shenker, Susskind, 'M theory as a matrix model: a conjecture', Phys. Rev. D 55, 5112 (1997)",
+      "arxiv": "hep-th/9610043"
+    }
+  ],
+  "tags": [
+    "string_theory",
+    "m_theory",
+    "matrix_model",
+    "non_perturbative_qg",
+    "uv_completion"
+  ]
+}

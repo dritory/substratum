@@ -1,0 +1,104 @@
+{
+  "id": "warped_extra_dimensions_rs",
+  "name": "Warped extra dimensions (Randall-Sundrum)",
+  "aliases": [
+    "RS",
+    "RS1",
+    "warped compactification"
+  ],
+  "type": "geometric",
+  "summary": "A single extra dimension between two 3-branes with negative bulk cosmological constant. The metric is exponentially warped along the extra dimension, so the Planck scale on the UV brane redshifts to TeV on the IR brane. Generates the EW/Planck hierarchy from an O(1) ratio of brane separations through exponential warp.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Exponential warp factor e^{-k*pi*r_c} ~ 10^{-16} from r_c*k ~ 11 explains the hierarchy without large numbers. Modulus stabilization (Goldberger-Wise) provides natural radius."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Bulk fermions with different localization profiles along the extra dimension generate hierarchical Yukawa couplings; bulk localization functions as a Froggatt-Nielsen-like mechanism."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound"
+    },
+    {
+      "benchmark_id": "electroweak_oblique_s_t_u",
+      "effect": "near_bound",
+      "note": "KK graviton + KK gauge boson contributions push T parameter; viable RS requires custodial symmetry in the bulk."
+    },
+    {
+      "benchmark_id": "ckm_wolfenstein_lambda_hierarchy",
+      "effect": "predicts_signal"
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "KK gravitons",
+      "KK gauge bosons",
+      "bulk fermions"
+    ],
+    "new_scales": [
+      "k ~ M_Planck (5D AdS curvature)",
+      "1/r_c ~ TeV (IR brane scale)"
+    ],
+    "new_symmetries": [
+      "AdS isometries (warp generates 4D conformal-like structure on IR brane)"
+    ],
+    "new_parameters_count": 5,
+    "note": "AdS curvature, brane separation, modulus potential parameters, bulk fermion localization parameters."
+  },
+  "structural_features": [
+    "extra_dimensions",
+    "warped_metric",
+    "brane_localization",
+    "kk_tower",
+    "ads_cft_dual"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "kk_tower_fermions",
+    "kk_tower_gauge_bosons",
+    "kk_tower_gravitons"
+  ],
+  "composes_with": [
+    "partial_compositeness"
+  ],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs"
+  ],
+  "status": "niche",
+  "history": "Randall-Sundrum I and II (1999). RS1 with bulk SM fields (~2003) connected the warped scenario to flavor physics through bulk localization; AdS/CFT duality maps RS to 4D composite-Higgs scenarios.",
+  "references": [
+    {
+      "citation": "Randall and Sundrum, 'A large mass hierarchy from a small extra dimension', PRL 83, 3370 (1999)",
+      "arxiv": "hep-ph/9905221"
+    },
+    {
+      "citation": "Agashe, Contino, Pomarol, 'The minimal composite Higgs model', Nucl. Phys. B 719, 165 (2005)",
+      "arxiv": "hep-ph/0412089"
+    }
+  ],
+  "tags": [
+    "hierarchy",
+    "extra_dimensions",
+    "ads_cft",
+    "flavor"
+  ]
+}

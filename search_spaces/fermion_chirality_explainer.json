@@ -1,0 +1,52 @@
+{
+  "id": "fermion_chirality_explainer",
+  "name": "Mechanism deriving fermion chirality from structural inputs",
+  "target_puzzles": ["fermion_chirality_origin"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "Partly definitional (chirality is needed for SM gauge anomaly cancellation) and partly deep (why isn't there a vector-like parent at the UV that breaks to chiral?). String compactifications give chiral spectra without deriving why.",
+  "summary": "The SM is chiral. No framework derives this from structural inputs — most assume it, GUTs unify within a chirality, string compactifications produce it without forcing it.",
+  "what_closes_it": "A mechanism forcing chirality from a topological invariant (F-theory intersection numbers, CY Euler characteristic) or a symmetry whose anomaly cancellation requires it, rather than observing that a chosen compactification happens to be chiral.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "string_theoretic_background",
+      "extra_spatial_dimensions"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "GUT scale or higher (10^16 - 10^19 GeV). Chirality is set at compactification or by a topological constraint at the UV; low-energy mechanisms cannot generate it from a vector-like parent without breaking gauge invariance.",
+  "compatible_host_frameworks": [
+    "f_theory_gut_axiverse",
+    "m_theory_landscape",
+    "modular_string_flavor"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "gauge_invariance",
+      "status": "tests",
+      "note": "Gauge anomaly cancellation in the SM requires the specific chiral content (Y_L + Y_R = 0 across each family). The gap-closer must respect anomaly cancellation while deriving the chirality assignment."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Candelas, Horowitz, Strominger, Witten, 'Vacuum configurations for superstrings', Nucl. Phys. B 258, 46 (1985)",
+      "doi": "10.1016/0550-3213(85)90602-9"
+    },
+    {
+      "citation": "Beasley, Heckman, Vafa, 'GUTs and Exceptional Branes in F-theory - I', JHEP 01 (2009) 058",
+      "arxiv": "0802.3391"
+    },
+    {
+      "citation": "Donagi and Wijnholt, 'Breaking GUT Groups in F-Theory', Adv. Theor. Math. Phys. 15, 1523 (2011)",
+      "arxiv": "0808.2223"
+    }
+  ],
+  "tags": [
+    "chiral_spectrum",
+    "compactification_constraint",
+    "topological_route"
+  ]
+}

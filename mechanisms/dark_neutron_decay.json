@@ -1,0 +1,78 @@
+{
+  "id": "dark_neutron_decay",
+  "name": "Dark neutron decay (Fornal-Grinstein)",
+  "aliases": [
+    "n -> chi gamma",
+    "dark decay channel"
+  ],
+  "type": "dynamical",
+  "summary": "Postulates that ~1% of free neutrons decay through an exotic channel n -> chi + photon, where chi is a dark particle with mass just below m_n - m_p ~ 1.293 MeV. Explains the ~10 s gap between bottle and beam neutron-lifetime measurements (bottle method counts surviving neutrons; beam method only counts protons in standard beta-decay, missing the exotic channel). Predicts a monochromatic gamma at E ~ 0.7-1.4 MeV from neutron decay; experimental searches have constrained but not closed the parameter space.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutron_lifetime_anomaly",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Explains the 4-sigma beam-vs-bottle discrepancy if BR(n -> chi gamma) ~ 1% and Q-value sits below the photon-energy bounds set by Tang et al. (2018) and Sun et al. (2018). Most of the original parameter space has been excluded by direct gamma-line searches and neutron-star stability arguments."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "If chi is stable and constitutes DM, requires m_chi within a narrow window (937.9 - 938.8 MeV) to avoid neutron-star instability (McKeen-Pospelov-Raj 2018, arXiv:1803.04205). Most parameter space ruled out by NS observation."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutron_lifetime_beam_vs_bottle",
+      "effect": "predicts_signal",
+      "note": "BR ~ 1% predicted to reconcile bottle and beam tau_n; direct search via monochromatic gamma."
+    },
+    {
+      "benchmark_id": "neutron_star_mass_radius",
+      "effect": "near_bound",
+      "note": "If neutron decay to dark sector is allowed, neutron stars would convert to dark matter on cosmologically short timescales unless m_chi is fine-tuned just below m_n. Tight bound from observed 2-solar-mass neutron stars."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "dark fermion chi (m ~ 938 MeV)"
+    ],
+    "new_scales": [
+      "m_chi - m_n ~ MeV"
+    ],
+    "new_symmetries": [
+      "U(1)_B-1 connecting visible and dark sectors"
+    ],
+    "new_parameters_count": 3,
+    "note": "chi mass, mediator mass, mediator coupling."
+  },
+  "structural_features": [
+    "exotic_neutron_decay",
+    "dark_baryon",
+    "monochromatic_gamma_signal",
+    "ns_stability_constraint"
+  ],
+  "field_tags": [
+    "gauge_singlet_majorana_fermion"
+  ],
+  "composes_with": [],
+  "excludes": [],
+  "status": "disfavored",
+  "history": "Fornal and Grinstein (2018), 'Dark matter interpretation of the neutron decay anomaly', Phys. Rev. Lett. 120, 191801, arXiv:1801.01124. Tang et al. (2018, PRL 121, 022505) and Sun et al. (2018, PRC 97, 052501) constrained gamma-line searches. McKeen-Pospelov-Raj (2018) excluded most via neutron-star stability. Largely retired but illustrative of a class of dark-baryon proposals.",
+  "references": [
+    {
+      "citation": "Fornal and Grinstein, 'Dark matter interpretation of the neutron decay anomaly', Phys. Rev. Lett. 120, 191801 (2018)",
+      "arxiv": "1801.01124"
+    },
+    {
+      "citation": "McKeen, Pospelov, Raj, 'Neutron stars exclude light dark baryons', Phys. Rev. Lett. 121, 061802 (2018)",
+      "arxiv": "1803.04205"
+    }
+  ],
+  "tags": [
+    "neutron",
+    "dark_matter",
+    "neutron_lifetime",
+    "exotic_decay"
+  ]
+}

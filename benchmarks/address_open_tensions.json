@@ -14,8 +14,13 @@
   "notes": "This entry is meta - it points back into data/. The list under tension_links should be kept in sync as data/ grows. A framework does not have to predict every tension to be interesting, but it must be explicit about which it is solving and which it is leaving alone.",
   "primary_references": [
     {
-      "citation": "See data/ entries for primary literature on each tension."
+      "citation": "See data/ entries for primary literature on each tension.",
+      "url": "https://github.com/dritory/substratum/tree/main/data"
     }
   ],
-  "tags": ["meta", "constraint_set", "tensions"]
+  "tags": [
+    "meta",
+    "constraint_set",
+    "tensions"
+  ]
 }

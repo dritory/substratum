@@ -59,6 +59,22 @@ const VERDICT_COLOR = {
 
 const VERDICT_ORDER = ["pass", "fail", "contested", "inapplicable", "open", "no_evaluator"];
 
+const PUZZLE_VERDICT_COLOR = {
+  closed:             "#6dc197",
+  partial:            "#d4b974",
+  requires_external:  "#9683bd",
+  untouched:          "#2a3142",
+};
+
+const PUZZLE_VERDICT_ORDER = ["closed", "partial", "requires_external", "untouched"];
+
+const PUZZLE_VERDICT_LABEL = {
+  closed:             "closed",
+  partial:            "partial",
+  requires_external:  "requires external",
+  untouched:          "untouched",
+};
+
 const VERDICT_LABEL = {
   pass:         "pass",
   fail:         "fail",
@@ -144,11 +160,19 @@ async function main() {
   document.getElementById("generated-at").textContent =
     new Date(bundle.generated_at).toLocaleString();
 
+  // Optional header counts — only populate if the placeholder exists in
+  // the current build of index.html.
+  const pz = document.getElementById("count-puzzles");
+  if (pz) pz.textContent = bundle.counts.puzzles ?? 0;
+  const mz = document.getElementById("count-mechanisms");
+  if (mz) mz.textContent = bundle.counts.mechanisms ?? 0;
+
   setupTabs();
   renderTensionsView(bundle);
   renderLandscape(bundle);
   renderBenchmarkCharts(bundle);
   renderEvaluation(bundle);
+  renderAlignment(bundle);
   renderBrowse(bundle);
   hookupKeyboard();
 
@@ -646,9 +670,38 @@ function renderEvaluation(bundle) {
     })
     .sort((a, b) => b.passFrac - a.passFrac || a.name.localeCompare(b.name));
 
-  renderTallyChart(frameworks, tallyEl);
-  renderCoverage(frameworks, bundle, verdictMap);
-  renderMatrix(frameworks, benchOrder, verdictMap, bundle, matrix);
+  // puzzle-verdict legend (parallel to the benchmark-verdict legend)
+  const puzzleLegendEl = document.getElementById("puzzle-verdict-legend");
+  if (puzzleLegendEl) {
+    puzzleLegendEl.innerHTML = "";
+    for (const v of PUZZLE_VERDICT_ORDER) {
+      puzzleLegendEl.appendChild(
+        el(
+          "span",
+          { class: "sw", style: `--swatch:${PUZZLE_VERDICT_COLOR[v]}` },
+          PUZZLE_VERDICT_LABEL[v]
+        )
+      );
+    }
+  }
+
+  // Sort frameworks by L1 closure count descending, then by L2 pass count.
+  // Puts the broadest-coverage candidates at the top of every chart so the
+  // visual reading is "this framework closes the most puzzles".
+  const frameworksByCoverage = [...frameworks].sort((a, b) => {
+    const aClosed = a.puzzle_tally?.closed || 0;
+    const bClosed = b.puzzle_tally?.closed || 0;
+    if (bClosed !== aClosed) return bClosed - aClosed;
+    const aPass = a.tally?.pass || 0;
+    const bPass = b.tally?.pass || 0;
+    return bPass - aPass;
+  });
+
+  renderFrameworkLeaderboard(frameworksByCoverage);
+  renderTallyChart(frameworksByCoverage, tallyEl);
+  renderPuzzleTallyChart(frameworksByCoverage);
+  renderCoverage(frameworksByCoverage, bundle, verdictMap);
+  renderMatrix(frameworksByCoverage, benchOrder, verdictMap, bundle, matrix);
 
   document
     .getElementById("eval-hide-open")
@@ -680,6 +733,90 @@ function renderTallyChart(frameworks, el) {
       xaxis: {
         gridcolor: THEME.grid,
         title: { text: "benchmarks", font: { size: 11 } },
+      },
+      yaxis: {
+        automargin: true,
+        tickfont: { family: FONT_BODY, size: 12 },
+      },
+      legend: {
+        orientation: "h",
+        y: -0.22,
+        x: 0,
+        bgcolor: "rgba(0,0,0,0)",
+        font: { size: 11 },
+      },
+      hoverlabel: { font: { family: FONT_MONO, size: 12 } },
+    },
+    PLOTLY_BASE
+  );
+}
+
+function renderFrameworkLeaderboard(frameworks) {
+  const root = document.getElementById("framework-leaderboard");
+  if (!root) return;
+  root.innerHTML = "";
+
+  const table = el("table", { class: "leaderboard-table" });
+  const thead = el("thead", {});
+  thead.appendChild(
+    el("tr", {},
+      el("th", {}, "framework"),
+      el("th", { class: "num" }, "L1 closed"),
+      el("th", { class: "num" }, "L1 partial"),
+      el("th", { class: "num" }, "L1 req. ext."),
+      el("th", { class: "num" }, "L2 pass"),
+      el("th", { class: "num" }, "L2 fail"),
+      el("th", { class: "num" }, "mechs")
+    )
+  );
+  table.appendChild(thead);
+
+  const tbody = el("tbody", {});
+  for (const fw of frameworks) {
+    const p = fw.puzzle_tally || {};
+    const t = fw.tally || {};
+    const n_mech = (fw.composes_mechanisms || []).length;
+    const row = el("tr", {},
+      el("td", {}, fw.name),
+      el("td", { class: "num l1-closed" }, String(p.closed || 0)),
+      el("td", { class: "num l1-partial" }, String(p.partial || 0)),
+      el("td", { class: "num l1-req-ext" }, String(p.requires_external || 0)),
+      el("td", { class: "num l2-pass" }, String(t.pass || 0)),
+      el("td", { class: "num l2-fail" }, String(t.fail || 0)),
+      el("td", { class: "num" }, String(n_mech))
+    );
+    tbody.appendChild(row);
+  }
+  table.appendChild(tbody);
+  root.appendChild(table);
+}
+
+function renderPuzzleTallyChart(frameworks) {
+  const el = document.getElementById("chart-eval-puzzle-tally");
+  if (!el) return;
+
+  const traces = PUZZLE_VERDICT_ORDER.map((v) => ({
+    name: PUZZLE_VERDICT_LABEL[v],
+    x: frameworks.map((fw) => fw.puzzle_tally?.[v] || 0),
+    y: frameworks.map((fw) => fw.name),
+    type: "bar",
+    orientation: "h",
+    marker: { color: PUZZLE_VERDICT_COLOR[v] },
+    hovertemplate: `${PUZZLE_VERDICT_LABEL[v]}: %{x}<extra>%{y}</extra>`,
+  }));
+
+  Plotly.newPlot(
+    el,
+    traces,
+    {
+      barmode: "stack",
+      margin: { l: 200, r: 30, t: 12, b: 36 },
+      paper_bgcolor: THEME.paper,
+      plot_bgcolor: THEME.plot,
+      font: { family: FONT_BODY, size: 12, color: THEME.ink },
+      xaxis: {
+        gridcolor: THEME.grid,
+        title: { text: "puzzles", font: { size: 11 } },
       },
       yaxis: {
         automargin: true,
@@ -1090,6 +1227,366 @@ function showFrameworkDetail(fwSummary, bundle) {
   );
 
   panel.removeAttribute("hidden");
+}
+
+/* ---------- alignment (puzzles x mechanisms) ---------- */
+
+const ROLE_COLOR = {
+  solves:           "#1f6feb",
+  explains_pattern: "#7c3aed",
+  ameliorates:      "#0a8754",
+  requires:         "#a06900",
+};
+const ROLE_LABEL = {
+  solves:           "solves",
+  explains_pattern: "explains pattern",
+  ameliorates:      "ameliorates",
+  requires:         "requires",
+};
+const STATUS_COLOR_ALIGN = {
+  mainstream: "#1f6feb",
+  niche:      "#7c3aed",
+  historical: "#6b7180",
+  disfavored: "#b54848",
+};
+
+// Stable palette for mechanism types and puzzle kinds, used by both the
+// network view and the attention-vs-progress scatter.
+const MECH_TYPE_COLOR = {
+  symmetry:      "#1f6feb",
+  dynamical:     "#0a8754",
+  uv_completion: "#7c3aed",
+  geometric:     "#b78628",
+  topological:   "#b54848",
+  composite:     "#0891a8",
+  anthropic:     "#6b7180",
+};
+const PUZZLE_KIND_COLOR = {
+  naturalness: "#e8a838",
+  pattern:     "#7c3aed",
+  coincidence: "#1f6feb",
+  consistency: "#0a8754",
+};
+
+function renderAlignment(bundle) {
+  const puzzles = bundle.puzzles || [];
+  const mechs = bundle.mechanisms || [];
+  const alignment = bundle.alignment || {};
+  const edges = alignment.edges || [];
+  const positions = alignment.positions || {};
+  if (!puzzles.length || !mechs.length) return;
+
+  const netEl  = document.getElementById("chart-alignment-network");
+  const compEl = document.getElementById("chart-alignment-compression");
+  const progEl = document.getElementById("chart-alignment-progress");
+  if (!netEl || !compEl || !progEl) return;
+
+  renderAlignmentNetwork(netEl, puzzles, mechs, edges, positions);
+  renderAlignmentCompression(compEl, mechs);
+  renderAlignmentProgress(progEl, puzzles);
+}
+
+function renderAlignmentNetwork(node, puzzles, mechs, edges, positions) {
+  const puzzleById = new Map(puzzles.map((p) => [p.id, p]));
+  const mechById = new Map(mechs.map((m) => [m.id, m]));
+
+  const px = (id) => (positions[`puzzle:${id}`] || [0, 0])[0];
+  const py = (id) => (positions[`puzzle:${id}`] || [0, 0])[1];
+  const mx = (id) => (positions[`mechanism:${id}`] || [0, 0])[0];
+  const my = (id) => (positions[`mechanism:${id}`] || [0, 0])[1];
+
+  // --- edge traces grouped by role ----------------------------------------
+  const roleOrder = ["solves", "explains_pattern", "ameliorates", "requires"];
+  const edgeTraces = [];
+  for (const role of roleOrder) {
+    const xs = [];
+    const ys = [];
+    let count = 0;
+    for (const e of edges) {
+      if (e.role !== role) continue;
+      if (!mechById.has(e.mechanism_id) || !puzzleById.has(e.puzzle_id)) continue;
+      xs.push(mx(e.mechanism_id), px(e.puzzle_id), null);
+      ys.push(my(e.mechanism_id), py(e.puzzle_id), null);
+      count += 1;
+    }
+    if (!count) continue;
+    edgeTraces.push({
+      type: "scattergl",
+      mode: "lines",
+      x: xs,
+      y: ys,
+      name: `${ROLE_LABEL[role]} (${count})`,
+      line: { color: ROLE_COLOR[role], width: 0.9 },
+      opacity: 0.45,
+      hoverinfo: "skip",
+      legendgroup: `role-${role}`,
+      legendgrouptitle: { text: "edge role" },
+    });
+  }
+
+  // --- puzzle node traces grouped by kind ---------------------------------
+  const kinds = Object.keys(PUZZLE_KIND_COLOR);
+  const puzzleTraces = [];
+  for (const kind of kinds) {
+    const ps = puzzles.filter((p) => (p.kind || "naturalness") === kind);
+    if (!ps.length) continue;
+    puzzleTraces.push({
+      type: "scattergl",
+      mode: "markers+text",
+      x: ps.map((p) => px(p.id)),
+      y: ps.map((p) => py(p.id)),
+      text: ps.map((p) => p.name),
+      textposition: "top center",
+      textfont: { family: FONT_BODY, size: 10, color: THEME.ink },
+      name: `puzzle: ${kind} (${ps.length})`,
+      marker: {
+        symbol: "square",
+        size: ps.map((p) => 9 + Math.min(2.0 * (p._mechanisms_addressing || 1), 22)),
+        color: PUZZLE_KIND_COLOR[kind],
+        line: { color: THEME.marker_edge, width: 1.2 },
+      },
+      hovertemplate: ps.map((p) =>
+        `<b>${p.name}</b><br>kind: ${kind}<br>` +
+        `<b>${p._mechanisms_addressing || 0}</b> mechanisms address; ` +
+        `<b>${p._mechanisms_closing || 0}</b> claim solves / explains_pattern<br>` +
+        `<i>${(p.summary || "").replace(/\s+/g, " ").slice(0, 200)}${(p.summary || "").length > 200 ? "&hellip;" : ""}</i>` +
+        `<extra></extra>`),
+      legendgroup: `puzzle-${kind}`,
+      legendgrouptitle: { text: "puzzle kind" },
+    });
+  }
+
+  // --- mechanism node traces grouped by type ------------------------------
+  const types = Object.keys(MECH_TYPE_COLOR);
+  const mechTraces = [];
+  for (const type of types) {
+    const ms = mechs.filter((m) => (m.type || "dynamical") === type);
+    if (!ms.length) continue;
+    // only label degree >= 3 mechanisms to avoid clutter
+    const labels = ms.map((m) => ((m._puzzles_addressed || 0) >= 3 ? m.id : ""));
+    mechTraces.push({
+      type: "scattergl",
+      mode: "markers+text",
+      x: ms.map((m) => mx(m.id)),
+      y: ms.map((m) => my(m.id)),
+      text: labels,
+      textposition: "bottom center",
+      textfont: { family: FONT_MONO, size: 9, color: THEME.ink_soft },
+      name: `mechanism: ${type} (${ms.length})`,
+      marker: {
+        symbol: "circle",
+        size: ms.map((m) => 7 + 2.2 * (m._puzzles_addressed || 1)),
+        color: MECH_TYPE_COLOR[type],
+        line: { color: THEME.marker_edge, width: 0.8 },
+        opacity: 0.92,
+      },
+      hovertemplate: ms.map((m) =>
+        `<b>${m.id}</b><br>type: ${type}<br>status: ${m.status || "?"}<br>` +
+        `<b>${m._puzzles_addressed || 0}</b> edges &middot; ` +
+        `<b>${m._puzzles_closed || 0}</b> closing<br>` +
+        `<i>${(m.summary || "").replace(/\s+/g, " ").slice(0, 200)}${(m.summary || "").length > 200 ? "&hellip;" : ""}</i>` +
+        `<extra></extra>`),
+      legendgroup: `mech-${type}`,
+      legendgrouptitle: { text: "mechanism type" },
+    });
+  }
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_BODY, color: THEME.ink, size: 12 },
+    margin: { l: 20, r: 20, t: 30, b: 20 },
+    height: 720,
+    showlegend: true,
+    legend: {
+      bgcolor: "rgba(0,0,0,0)",
+      font: { color: THEME.ink_soft, size: 11 },
+      itemsizing: "constant",
+    },
+    xaxis: {
+      visible: false, range: [-1.15, 1.15],
+      scaleanchor: "y", scaleratio: 1,
+    },
+    yaxis: { visible: false, range: [-1.15, 1.15] },
+    hovermode: "closest",
+  };
+
+  Plotly.newPlot(node, [...edgeTraces, ...puzzleTraces, ...mechTraces],
+                 layout, { displaylogo: false, responsive: true });
+}
+
+function renderAlignmentProgress(node, puzzles) {
+  const rows = puzzles
+    .filter((p) => (p._mechanisms_addressing || 0) > 0)
+    .map((p) => ({
+      id: p.id,
+      name: p.name,
+      kind: p.kind || "naturalness",
+      total: p._mechanisms_addressing || 0,
+      closing: p._mechanisms_closing || 0,
+      frac: p._closure_fraction || 0,
+      summary: p.summary || "",
+    }));
+
+  // group by kind for legend toggling + colour
+  const byKind = new Map();
+  for (const r of rows) {
+    if (!byKind.has(r.kind)) byKind.set(r.kind, []);
+    byKind.get(r.kind).push(r);
+  }
+
+  // decide which points get text labels: top-12 by attention, plus any
+  // outlier (closure >= 0.55 or attention >= 12) to surface the quadrant
+  // story without cluttering the centre.
+  const byAttention = [...rows].sort((a, b) => b.total - a.total);
+  const labelSet = new Set(byAttention.slice(0, 12).map((r) => r.id));
+  for (const r of rows) {
+    if (r.frac >= 0.55 || r.total >= 12) labelSet.add(r.id);
+  }
+
+  const traces = [];
+  for (const [kind, list] of byKind) {
+    traces.push({
+      type: "scatter",
+      mode: "markers+text",
+      name: kind,
+      x: list.map((r) => r.total),
+      y: list.map((r) => r.frac),
+      text: list.map((r) => (labelSet.has(r.id) ? r.name : "")),
+      textposition: "top center",
+      textfont: { family: FONT_BODY, size: 10, color: THEME.ink },
+      marker: {
+        color: PUZZLE_KIND_COLOR[kind] || THEME.ink_soft,
+        size: 13,
+        line: { color: THEME.marker_edge, width: 1.2 },
+        opacity: 0.9,
+      },
+      hovertemplate: list.map((r) =>
+        `<b>${r.name}</b><br>kind: ${kind}<br>` +
+        `<b>${r.total}</b> mechanisms address; <b>${r.closing}</b> closing ` +
+        `(${(r.frac * 100).toFixed(0)}%)<br>` +
+        `<i>${r.summary.replace(/\s+/g, " ").slice(0, 200)}${r.summary.length > 200 ? "&hellip;" : ""}</i>` +
+        `<extra></extra>`),
+    });
+  }
+
+  const xmax = Math.max(5, ...rows.map((r) => r.total));
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_BODY, color: THEME.ink, size: 12 },
+    margin: { l: 60, r: 30, t: 30, b: 50 },
+    height: 540,
+    xaxis: {
+      title: { text: "mechanisms addressing the puzzle", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+      range: [0, xmax * 1.08],
+    },
+    yaxis: {
+      title: { text: "closure fraction (solves + explains_pattern)", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+      range: [-0.05, 1.05],
+      tickformat: ".0%",
+    },
+    legend: { font: { color: THEME.ink_soft, size: 11 }, bgcolor: "rgba(0,0,0,0)" },
+    annotations: [
+      { x: 0.02, y: 0.97, xref: "paper", yref: "paper", text: "<i>quiet victories</i>",        showarrow: false, font: { color: THEME.ink_faint, size: 11 }, xanchor: "left",  yanchor: "top" },
+      { x: 0.98, y: 0.97, xref: "paper", yref: "paper", text: "<i>active battleground</i>",    showarrow: false, font: { color: THEME.ink_faint, size: 11 }, xanchor: "right", yanchor: "top" },
+      { x: 0.98, y: 0.03, xref: "paper", yref: "paper", text: "<i>attention without progress</i>", showarrow: false, font: { color: THEME.ink_faint, size: 11 }, xanchor: "right", yanchor: "bottom" },
+      { x: 0.02, y: 0.03, xref: "paper", yref: "paper", text: "<i>under-targeted</i>",         showarrow: false, font: { color: THEME.ink_faint, size: 11 }, xanchor: "left",  yanchor: "bottom" },
+    ],
+  };
+
+  Plotly.newPlot(node, traces, layout, { displaylogo: false, responsive: true });
+}
+
+function renderAlignmentCompression(node, mechs) {
+  // x: params, y: puzzles closed, marker: status, size: degree
+  const withClose = mechs.filter((m) => (m._puzzles_closed || 0) > 0);
+
+  // group by status for colored traces
+  const byStatus = new Map();
+  for (const m of withClose) {
+    const s = m.status || "unknown";
+    if (!byStatus.has(s)) byStatus.set(s, []);
+    byStatus.get(s).push(m);
+  }
+
+  const traces = [];
+  for (const [status, list] of byStatus) {
+    traces.push({
+      type: "scatter",
+      mode: "markers",
+      name: status,
+      x: list.map((m) => m._params || 0),
+      y: list.map((m) => m._puzzles_closed || 0),
+      text: list.map((m) =>
+        `<b>${m.id}</b><br>` +
+        `status: ${m.status}<br>` +
+        `closed: ${m._puzzles_closed}/${m._puzzles_addressed} edges<br>` +
+        `params: ${m._params}<br>` +
+        `compression: ${(m._compression || 0).toFixed(2)}`
+      ),
+      hovertemplate: "%{text}<extra></extra>",
+      marker: {
+        size: list.map((m) => 8 + 3 * (m._puzzles_addressed || 1)),
+        color: STATUS_COLOR_ALIGN[status] || THEME.ink_soft,
+        line: { color: THEME.marker_edge, width: 1 },
+        opacity: 0.85,
+      },
+    });
+  }
+
+  // constant-compression reference lines (y = c * x for c = 0.5, 1, 2)
+  const xs = [0.5, 8];
+  for (const c of [0.5, 1.0, 2.0]) {
+    traces.push({
+      type: "scatter",
+      mode: "lines",
+      x: xs,
+      y: xs.map((x) => c * x),
+      hoverinfo: "skip",
+      showlegend: false,
+      line: { color: THEME.grid, width: 1, dash: "dot" },
+    });
+  }
+
+  const layout = {
+    ...PLOTLY_BASE,
+    paper_bgcolor: THEME.paper,
+    plot_bgcolor:  THEME.plot,
+    font: { family: FONT_BODY, color: THEME.ink, size: 12 },
+    margin: { l: 60, r: 30, t: 30, b: 50 },
+    height: 460,
+    xaxis: {
+      title: { text: "new parameters introduced", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+    },
+    yaxis: {
+      title: { text: "puzzles closed (solves + explains_pattern)", font: { size: 12, color: THEME.ink_soft } },
+      gridcolor: THEME.grid_soft,
+      zeroline: false,
+      tickfont: { color: THEME.ink_soft },
+      dtick: 1,
+    },
+    legend: { font: { color: THEME.ink_soft, size: 11 }, bgcolor: "rgba(0,0,0,0)" },
+    annotations: [
+      { x: 8, y: 0.5 * 8, text: "c=0.5", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+      { x: 6,   y: 1.0 * 6,   text: "c=1.0", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+      { x: 3,   y: 2.0 * 3,   text: "c=2.0", showarrow: false, font: { color: THEME.ink_faint, size: 10 }, xanchor: "right", yshift: -8 },
+    ],
+  };
+
+  Plotly.newPlot(node, traces, layout, { displaylogo: false, responsive: true });
 }
 
 /* ---------- browse ---------- */

@@ -1,0 +1,124 @@
+{
+  "id": "split_susy",
+  "name": "Split supersymmetry",
+  "aliases": [
+    "Arkani-Hamed-Dimopoulos split SUSY",
+    "mini-split SUSY"
+  ],
+  "type": "uv_completion",
+  "summary": "Arkani-Hamed and Dimopoulos (2004) proposed abandoning the naturalness motivation for low-scale SUSY in favor of a heavy scalar sector (squarks, sleptons, heavy Higgses at 10^4 - 10^{16} GeV) while keeping fermionic superpartners (gauginos, Higgsinos) at the TeV scale, where they preserve gauge-coupling unification and provide a dark-matter candidate. Accepts cosmological-constant-like fine-tuning of the Higgs mass while retaining SUSY's other successes. Mini-split variants (Arvanitaki et al. 2012, arXiv:1210.0555) put scalars at 10^2-10^4 TeV (PeV scale), motivated by anomaly-mediation and consistent with the 125 GeV Higgs.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "TeV neutralino (Higgsino or wino LSP) is thermal relic with correct abundance for Higgsino mass ~ 1 TeV or wino mass ~ 2.9 TeV. Direct detection via Higgs/Z exchange suppressed in split-SUSY by mixing through heavy scalar sector; current LZ bounds compatible."
+    },
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "solves",
+      "confidence": "established",
+      "note": "Gauginos and Higgsinos at TeV scale preserve precise gauge-coupling unification at M_GUT ~ 2 x 10^16 GeV, just as in MSSM. Heavy scalars do not spoil this since they appear in complete SU(5) multiplets above their decoupling scale."
+    },
+    {
+      "puzzle_id": "vacuum_metastability",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Heavy stops above ~10 TeV stabilise the Higgs quartic from rolling to negative values, eliminating SM vacuum-instability concerns through one-loop matching at the heavy-scalar scale."
+    },
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Explicitly abandons naturalness for the Higgs mass - relies on anthropic / landscape selection for the small electroweak scale. Trades hierarchy-naturalness fine-tuning for CC-like-tuning logic. Not all theorists accept this as 'addressing' the hierarchy problem."
+    },
+    {
+      "puzzle_id": "cdf_w_mass_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Heavy scalars decoupled but light gauginos/higgsinos contribute via T and S. Compatible with CDF for tan(beta) ~ 1 and TeV-scale chargino masses."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects",
+      "note": "Heavy scalars decouple; Higgs couplings essentially SM. Below current sensitivity."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "Higgsino DM: sigma_SI ~ 10^-48 cm^2 (Higgs-exchange-loop suppressed), approaching LZ sensitivity; wino DM: sigma_SI ~ 10^-47 cm^2 (Z-exchange), within ~factor 5 of current bound. Both within reach of next-generation XENONnT / DARWIN."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "gauginos (gluino, wino, bino) at TeV scale",
+      "Higgsinos at TeV scale",
+      "scalar superpartners at >>TeV scale"
+    ],
+    "new_scales": [
+      "scalar mass scale m_S ~ 10^4 - 10^{16} GeV",
+      "gaugino mass scale M_1/2 ~ 1 TeV"
+    ],
+    "new_symmetries": [
+      "N=1 SUSY (mostly decoupled)",
+      "R-parity"
+    ],
+    "new_parameters_count": 5,
+    "note": "Scalar mass scale m_S, gaugino mass parameters M_1, M_2, M_3, mu (Higgsino mass). Far fewer free parameters than MSSM since the entire scalar sector is degenerate at m_S; flavor and CP problems automatically suppressed by decoupling."
+  },
+  "structural_features": [
+    "split_spectrum",
+    "heavy_scalars_decoupled",
+    "anomaly_mediation_compatible",
+    "anthropic_higgs_mass",
+    "thermal_neutralino_dm"
+  ],
+  "field_tags": [
+    "susy_fermion_partners"
+  ],
+  "composes_with": [
+    "mssm",
+    "anomaly_mediated_susy_breaking",
+    "wimp_thermal_freezeout",
+    "anthropic_landscape",
+    "kklt_moduli_stabilisation"
+  ],
+  "excludes": [
+    "composite_higgs",
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
+  "status": "niche",
+  "history": "Arkani-Hamed and Dimopoulos (2004), 'Supersymmetric unification without low energy supersymmetry and signatures for fine-tuning at the LHC', JHEP 06, 073, arXiv:hep-th/0405159. Companion paper: Giudice-Romanino (2004), 'Split supersymmetry', Nucl. Phys. B 699, 65, arXiv:hep-ph/0406088. Mini-split with predicted 125 GeV Higgs from PeV scalars: Arvanitaki, Craig, Dimopoulos, Villadoro (2012), 'Mini-split', JHEP 02, 126, arXiv:1210.0555. Post-LHC analyses: Hall-Nomura (2014), Acharya et al. (2016).",
+  "references": [
+    {
+      "citation": "Arkani-Hamed and Dimopoulos, 'Supersymmetric unification without low energy supersymmetry and signatures for fine-tuning at the LHC', JHEP 06, 073 (2005)",
+      "arxiv": "hep-th/0405159"
+    },
+    {
+      "citation": "Giudice and Romanino, 'Split supersymmetry', Nucl. Phys. B 699, 65 (2004)",
+      "arxiv": "hep-ph/0406088"
+    },
+    {
+      "citation": "Arvanitaki, Craig, Dimopoulos, Villadoro, 'Mini-split', JHEP 02, 126 (2013)",
+      "arxiv": "1210.0555"
+    }
+  ],
+  "tags": [
+    "uv_completion",
+    "supersymmetry",
+    "split_susy",
+    "anthropic",
+    "dark_matter"
+  ]
+}

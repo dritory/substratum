@@ -1,0 +1,46 @@
+{
+  "id": "quantum_measurement_problem",
+  "name": "Quantum measurement problem",
+  "aliases": [
+    "quantum-classical transition",
+    "measurement postulate"
+  ],
+  "kind": "consistency",
+  "summary": "Standard quantum mechanics has two distinct dynamics: unitary Schrodinger evolution between measurements, and instantaneous projection onto an eigenstate during measurement. The measurement step is a postulate rather than a derivable consequence of unitary dynamics; it raises the question of where the quantum-classical boundary lies and what selects the preferred basis ('pointer states') along which collapse occurs. The puzzle has structural implications for any theory aiming to be a complete description of physics including observers.",
+  "characteristic_numbers": [
+    {
+      "symbol": "decoherence time tau_D",
+      "value": "varies",
+      "expected": "no a-priori scale separation",
+      "note": "Environment-induced decoherence time tau_D depends on system-environment coupling; quantum coherence is lost in 10^-20 - 10^-13 s for macroscopic objects. Decoherence chooses pointer states but does not explain unique outcome."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "unitarity",
+      "status": "tests",
+      "note": "Unitary evolution alone doesn't reduce a superposition to a unique measured outcome; either an additional non-unitary postulate (Copenhagen), an environmental decoherence + many-worlds branching (Everett), an objective collapse (GRW, Penrose), or a hidden-variable + guidance equation (Bohm) is needed."
+    },
+    {
+      "principle": "locality",
+      "status": "tests",
+      "note": "Bell-inequality violations (Aspect 1982; loophole-free 2015) demonstrate quantum non-locality at correlated-measurement level. How non-locality is reconciled with relativistic causality varies by interpretation."
+    }
+  ],
+  "history": "Born (1926) interpretation of |psi|^2 as probability. Schrodinger's cat (1935). Copenhagen (Bohr-Heisenberg) vs Bohm (1952) hidden variables vs Everett (1957) relative-state. Decoherence program (Joos-Zeh 1985; Zurek 1991) shows how classical-looking outcomes emerge from environmental entanglement. Bell (1964) inequalities and Aspect (1982) experiments rule out local hidden variables. Modern resolution: decoherence + interpretation choice; no consensus.",
+  "references": [
+    {
+      "citation": "Zurek, 'Decoherence, einselection, and the quantum origins of the classical', Rev. Mod. Phys. 75, 715 (2003)",
+      "arxiv": "quant-ph/0105127"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "quantum_foundations",
+    "measurement_problem",
+    "decoherence",
+    "foundational"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "gravitational_baryogenesis",
+  "name": "Gravitational baryogenesis",
+  "aliases": [
+    "Davoudiasl-Kitano-Kribs-Murayama-Steinhardt baryogenesis"
+  ],
+  "type": "dynamical",
+  "summary": "A gravitational coupling between the derivative of the Ricci scalar dR/dt and the baryon-number current J_B^mu (term: (1/M^2) (d_mu R) J_B^mu in the action) dynamically breaks CPT in an expanding universe. Combined with B-violating interactions, drives the universe toward an equilibrium baryon asymmetry. Provides a baryogenesis mechanism that does not require Sakharov's out-of-equilibrium condition or sphalerons; works in equilibrium during radiation domination.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 6e-10 for M ~ 10^12-10^16 GeV and B-violating interactions active until T ~ 10^15 GeV. Mechanism is intrinsically gravitational - depends on dR/dt during radiation-matter transition - so the prediction is essentially fixed by the cosmological history once M is set."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "Required B-violation at high T can be tied to specific GUT-scale operators contributing to proton decay; predictions are model-dependent."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "M ~ 10^12 - 10^16 GeV (gravitational-coupling scale)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Single gravitational coupling scale M and the underlying B-violating-operator structure."
+  },
+  "structural_features": [
+    "gravity_induced_cpt_violation",
+    "no_out_of_equilibrium_needed",
+    "high_scale_b_violation",
+    "expansion_driven"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "su5_minimal_gut",
+    "so10_gut"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Davoudiasl, Kitano, Kribs, Murayama, Steinhardt (2004), 'Gravitational baryogenesis', Phys. Rev. Lett. 93, 201301, arXiv:hep-ph/0403019. Subsequent generalisations to f(R) gravity, scalar-tensor theories; review activity 2005-2020.",
+  "references": [
+    {
+      "citation": "Davoudiasl, Kitano, Kribs, Murayama, Steinhardt, 'Gravitational baryogenesis', Phys. Rev. Lett. 93, 201301 (2004)",
+      "arxiv": "hep-ph/0403019"
+    }
+  ],
+  "tags": [
+    "baryogenesis",
+    "gravitational",
+    "cpt_violation",
+    "high_scale"
+  ]
+}

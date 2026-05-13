@@ -1,0 +1,87 @@
+{
+  "id": "a4_family_symmetry",
+  "name": "A4 family symmetry",
+  "aliases": [
+    "A_4 lepton flavor",
+    "tetrahedral flavor symmetry"
+  ],
+  "type": "symmetry",
+  "summary": "Discrete non-abelian flavor symmetry A_4 (the tetrahedral group) under which the three lepton families are arranged in a 3-dimensional irreducible representation. Particular vacuum alignments of A_4-charged flavons reproduce tribimaximal or related PMNS mixing patterns close to observation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "neutrino_mass_smallness",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Combined with seesaw, A_4 produces near-tribimaximal PMNS structure with corrections from flavon VEV alignment."
+    },
+    {
+      "puzzle_id": "koide_formula_lepton_masses",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "A_4 with appropriate flavon vacuum alignment generates lepton mass ratios that approach the Koide value, though A_4 alone does not predict it exactly."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Non-abelian discrete A_4 flavor symmetry constrains lepton mixing to tri-bimaximal-near-mixing patterns, reducing PMNS parameter count (Altarelli-Feruglio 2005)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "neutrino_oscillation_pmns",
+      "effect": "predicts_signal",
+      "note": "Tribimaximal-like predictions: theta_12 ~ 35.3 degrees (sin^2 theta_12 = 1/3), theta_23 maximal, theta_13 = 0 at LO; corrections from charged-lepton sector and higher-order operators bring theta_13 to observed ~9 degrees."
+    },
+    {
+      "benchmark_id": "muon_to_electron_gamma_meg",
+      "effect": "near_bound",
+      "note": "A_4-induced charged-lepton flavor violation can saturate MEG bounds depending on flavon scale."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "multiple flavon scalars (in A_4 representations)"
+    ],
+    "new_scales": [
+      "flavon VEV scale ~ 10^{12-14} GeV"
+    ],
+    "new_symmetries": [
+      "A_4 (alternating group on 4 elements)"
+    ],
+    "new_parameters_count": 5,
+    "note": "Multiple flavon VEVs and alignment parameters; vacuum alignment is the central technical challenge."
+  },
+  "structural_features": [
+    "discrete_symmetry",
+    "non_abelian",
+    "flavon",
+    "vacuum_alignment"
+  ],
+  "field_tags": [
+    "electroweak_singlet_complex_scalar"
+  ],
+  "composes_with": [
+    "seesaw_type_i",
+    "seesaw_type_ii"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Ma-Rajasekaran (2001) introduced A_4 for lepton mixing. Tribimaximal mixing (Harrison-Perkins-Scott 2002) was a target prediction; non-zero theta_13 measured by Daya Bay/RENO/Double Chooz (2012) required corrections. Many variants (S_4, A_5, Delta(27)) explored.",
+  "references": [
+    {
+      "citation": "Ma and Rajasekaran, 'Softly broken A_4 symmetry for nearly degenerate neutrino masses', Phys. Rev. D 64, 113012 (2001)",
+      "arxiv": "hep-ph/0106291"
+    },
+    {
+      "citation": "Altarelli and Feruglio, 'Discrete flavor symmetries and models of neutrino mixing', Rev. Mod. Phys. 82, 2701 (2010)",
+      "arxiv": "1002.0211"
+    }
+  ],
+  "tags": [
+    "flavor",
+    "discrete_symmetry",
+    "lepton_mixing",
+    "tribimaximal"
+  ]
+}

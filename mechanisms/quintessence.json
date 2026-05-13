@@ -1,0 +1,87 @@
+{
+  "id": "quintessence",
+  "name": "Quintessence (dynamical dark energy)",
+  "aliases": [
+    "dynamical dark energy",
+    "w0-wa CDM"
+  ],
+  "type": "dynamical",
+  "summary": "Replaces a true cosmological constant with a slowly-evolving scalar field whose potential drives present-day cosmic acceleration. The equation-of-state w(z) deviates from -1, allowing tests against w_0-w_a CDM. DESI Y1 BAO + Type-Ia SN data show a ~2-3 sigma preference for w_0 > -1, w_a < 0, hinting at evolving dark energy.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Does not solve the underlying naturalness puzzle: a quintessence potential V(phi) ~ (meV)^4 still requires explanation. Trades a single fine-tuning for a family (potential shape, initial conditions, mass), but predicts testable late-time dynamics."
+    },
+    {
+      "puzzle_id": "cosmic_coincidence_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Tracker quintessence (Zlatev-Wang-Steinhardt 1999) gives an attractor solution where the field's energy density tracks radiation/matter and only dominates at late times, with the timing tied to V'(phi) being small. The coincidence becomes a property of the potential's shape."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Rolling scalar field gives w(z) different from -1; depending on potential, w can evolve from ~-0.7 at z=1 toward -1 today (freezing models) or away from -1 (thawing models). DESI 2024 fit prefers thawing-like evolution."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "predicts_signal",
+      "note": "Evolving w(z) leaves an imprint on growth of structure separable from a cosmological constant; DESI + DESI-2 + LSST measurements are sensitive to the predicted signal."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "quintessence scalar phi"
+    ],
+    "new_scales": [
+      "m_phi ~ H_0 ~ 10^-33 eV (ultralight)"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry to protect mass"
+    ],
+    "new_parameters_count": 3,
+    "note": "Potential shape (e.g., V_0, alpha for inverse-power-law), initial field value, and field mass."
+  },
+  "structural_features": [
+    "ultralight_scalar",
+    "shift_symmetry",
+    "late_time_dynamics"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "sequestering"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Ratra and Peebles (1988); Caldwell, Dave, Steinhardt (1998). DESI Y1 (2024) provided the first hint of dynamical dark energy in BAO+SN combinations; Pantheon+, Union3, and DES-SN5YR sample choice significantly affects the strength of the preference.",
+  "references": [
+    {
+      "citation": "Ratra and Peebles, 'Cosmological consequences of a rolling homogeneous scalar field', Phys. Rev. D 37, 3406 (1988)",
+      "doi": "10.1103/PhysRevD.37.3406"
+    },
+    {
+      "citation": "Caldwell, Dave, Steinhardt, 'Cosmological imprint of an energy component with general equation of state', PRL 80, 1582 (1998)",
+      "arxiv": "astro-ph/9708069"
+    },
+    {
+      "citation": "DESI Collaboration, 'DESI 2024 VI: Cosmological Constraints from Baryon Acoustic Oscillations', arXiv:2404.03002",
+      "arxiv": "2404.03002"
+    }
+  ],
+  "tags": [
+    "dark_energy",
+    "quintessence",
+    "cosmological_constant"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "chaotic_inflation",
+  "name": "Chaotic inflation",
+  "aliases": [
+    "large-field inflation",
+    "Linde chaotic inflation"
+  ],
+  "type": "dynamical",
+  "summary": "Inflation begins from generic chaotic initial conditions in which the inflaton field takes an arbitrary large value at the Planck scale; for a wide class of polynomial potentials V(phi) = lambda phi^n, slow-roll inflation occurs simply because phi >> M_Pl. Solves the initial-conditions problem of new inflation by not requiring a special low-entropy starting state.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "inflation_initial_conditions",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Predicts r > 0.1 for V ~ phi^2 (now excluded by BICEP/Keck) and r ~ 0.05 for V ~ phi^4/3 (alpha-attractor-like; tightly constrained but not closed). The 'chaotic' initial condition argument remains compelling but specific potentials are pressured."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "violates",
+      "note": "V = m^2 phi^2/2 chaotic inflation predicts r ~ 0.13, ruled out by BICEP/Keck r < 0.036. Lower-power variants survive in narrow windows."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Predicts n_s ~ 1 - 2/N for V ~ phi^2 with N ~ 60 e-folds, in marginal tension with Planck."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "inflaton phi"
+    ],
+    "new_scales": [
+      "m ~ 10^13 GeV (for quadratic potential to give Planck-scale CMB amplitude)"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "Inflaton mass / coupling and number of e-folds (set by reheating)."
+  },
+  "structural_features": [
+    "large_field_inflation",
+    "polynomial_potential",
+    "trans_planckian_field_excursion"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "alpha_attractors_inflation",
+    "axion_monodromy_inflation",
+    "dbi_inflation",
+    "ekpyrotic_cyclic",
+    "higgs_inflation",
+    "hilltop_inflation",
+    "natural_inflation",
+    "new_inflation",
+    "sneutrino_inflation_leptogenesis",
+    "starobinsky_inflation",
+    "warm_inflation"
+  ],
+  "status": "disfavored",
+  "history": "Linde (1983), 'Chaotic inflation', Phys. Lett. B 129, 177-181 \u2014 proposed the scenario, including its insensitivity to initial conditions. m^2 phi^2 chaotic inflation was the dominant simple model through the 2000s; ruled out by Planck + BICEP/Keck post-2014.",
+  "references": [
+    {
+      "citation": "Linde, 'Chaotic inflation', Phys. Lett. B 129, 177 (1983)",
+      "doi": "10.1016/0370-2693(83)90837-7"
+    }
+  ],
+  "tags": [
+    "inflation",
+    "cosmology",
+    "large_field"
+  ]
+}

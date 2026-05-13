@@ -1,0 +1,88 @@
+{
+  "id": "b_mesogenesis",
+  "name": "B-Mesogenesis",
+  "aliases": [
+    "Elor-Escudero-Nelson mesogenesis",
+    "baryogenesis from B mesons"
+  ],
+  "type": "dynamical",
+  "summary": "Couples baryogenesis and dark-matter production to the standard B-meson system. A long-lived heavy particle decays out of thermal equilibrium into B0 and anti-B0 mesons; the mesons oscillate (a CP-violating process measured at LHCb and Belle II) and then decay to a visible baryon plus a dark-sector anti-baryon. Total baryon number is conserved across visible + dark sectors. Directly testable through specific B-decay channels at hadron colliders and B-factories.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "baryon_asymmetry",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "Reproduces eta ~ 6e-10 for heavy-particle masses near the GeV-TeV scale and B-meson CP asymmetries within current LHCb/Belle bounds. Falsifiable: predicts BR(B0 -> baryon + dark) at the 10^-7 - 10^-4 level testable at LHCb Run 3 and Belle II."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Dark sector anti-baryon (a stable baryon-charged dark particle) constitutes the DM; abundance is linked to the BAU through the same B-decay branching ratios. Compelling for testability: the same parameters fix BAU and Omega_DM."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "b_s_mixing_phase",
+      "effect": "near_bound",
+      "note": "B-mesogenesis exploits SM B-mixing CP violation; consistent with current measurements but provides additional CP-violating phases to be searched for."
+    },
+    {
+      "benchmark_id": "b_to_s_gamma_inclusive",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "respects",
+      "note": "Dark sector anti-baryon is feebly coupled to the visible SM through B-meson decays only; direct-detection cross-section far below LZ sensitivity."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "scalar (or fermion) Phi mediator that couples to b-quark and dark baryon",
+      "dark Dirac baryon psi"
+    ],
+    "new_scales": [
+      "m_Phi ~ TeV",
+      "m_psi ~ GeV"
+    ],
+    "new_symmetries": [
+      "total baryon number U(1)_B-tot"
+    ],
+    "new_parameters_count": 4,
+    "note": "Mediator mass, dark-baryon mass, CP-violating phases, mediator-SM coupling."
+  },
+  "structural_features": [
+    "b_meson_oscillation",
+    "dark_baryon",
+    "linked_dm_bau",
+    "collider_testable"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar",
+    "gauge_singlet_dirac_fermion"
+  ],
+  "composes_with": [
+    "dark_photon_portal"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Elor, Escudero, Nelson (2018), 'Baryogenesis and dark matter from B mesons', Phys. Rev. D 99, 035031 (2019), arXiv:1810.00880. Phenomenology refined by Alonso-Alvarez-Elor-Escudero (2021, arXiv:2101.02706); LHCb and Belle II are actively pursuing the predicted B-decay channels.",
+  "references": [
+    {
+      "citation": "Elor, Escudero, Nelson, 'Baryogenesis and dark matter from B mesons', Phys. Rev. D 99, 035031 (2019)",
+      "arxiv": "1810.00880"
+    },
+    {
+      "citation": "Alonso-Alvarez, Elor, Escudero, 'Collider signals of baryogenesis and dark matter from B mesons', Phys. Rev. D 104, 035028 (2021)",
+      "arxiv": "2101.02706"
+    }
+  ],
+  "tags": [
+    "baryogenesis",
+    "dark_matter",
+    "b_mesons",
+    "linked_dm_bau",
+    "lhcb"
+  ]
+}

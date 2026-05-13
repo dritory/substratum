@@ -1,0 +1,39 @@
+{
+  "id": "twin_higgs_mirror_seesaw",
+  "name": "Twin Higgs + mirror dark matter + type-I seesaw + EW baryogenesis",
+  "summary": "Classification: KNOWN PROGRAM (recent). Addresses the post-LHC 'little hierarchy' by introducing a mirror copy of the SM related by a Z_2 symmetry; the Higgs mass-squared term sees the full symmetry and stays naturally light, while collider signatures of the partners are softened because the mirror partners carry no SM colour. The mirror sector also contains mirror baryons and mirror photons, providing a self-consistent dark-matter candidate (mirror dark matter). Right-handed neutrinos appear in both sectors via type-I seesaw, with mirror neutrinos contributing to dark radiation. Baryogenesis happens at the electroweak phase transition in the visible sector with a strong first-order transition driven by mirror-sector contributions to the Higgs effective potential. Distinguished from MSSM-based programs by being a single new sector rather than a doubled spectrum; distinguished from naive mirror-DM by tying it to the hierarchy problem.",
+  "lineage": [
+    {
+      "citation": "Chacko, Goh, Harnik, 'The Twin Higgs: natural electroweak breaking from mirror symmetry', PRL 96, 231802 (2006)",
+      "arxiv": "hep-ph/0506256"
+    },
+    {
+      "citation": "Berezhiani, Dolgov, Mohapatra, 'Asymmetric inflationary reheating and the nature of mirror universe', PLB 375, 26 (1996)",
+      "arxiv": "hep-ph/9511221"
+    },
+    {
+      "citation": "Craig, Knapen, Longhitano, 'Neutrino masses from a Twin Higgs', PRD 95, 055032 (2017)",
+      "arxiv": "1611.07977"
+    },
+    {
+      "citation": "Morrissey and Ramsey-Musolf, 'Electroweak baryogenesis', New J. Phys. 14, 125003 (2012)",
+      "arxiv": "1206.2942"
+    }
+  ],
+  "predictions": {},
+  "composes_mechanisms": [
+    "twin_higgs",
+    "mirror_dark_matter",
+    "seesaw_type_i",
+    "electroweak_baryogenesis",
+    "singlet_scalar_first_order_ewpt"
+  ],
+  "tags": [
+    "twin_higgs",
+    "mirror_sector",
+    "seesaw",
+    "ew_baryogenesis",
+    "non_susy_naturalness",
+    "known_program"
+  ]
+}

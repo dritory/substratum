@@ -1,0 +1,108 @@
+{
+  "id": "mannheim_conformal_gravity",
+  "name": "Mannheim conformal gravity",
+  "aliases": [
+    "conformal Weyl gravity",
+    "fourth-order conformal gravity"
+  ],
+  "type": "geometric",
+  "summary": "Replaces the Einstein-Hilbert action (R) with the Weyl action (C^2, the square of the Weyl tensor), giving a locally conformally invariant theory of gravity. The static, spherically symmetric exterior solution includes an additional linear-in-r potential term that has been used to attempt to fit galactic rotation curves without dark matter. Higher-derivative kinetic terms produce an extra spin-2 mode; ghost issues are addressed by Mannheim via PT-symmetric quantisation arguments.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Mannheim and O'Brien (2012) fit 111 galaxy rotation curves without DM using the conformal-gravity exterior plus a global cosmological term. Cluster lensing and the Bullet Cluster offset remain difficult; CMB acoustic-peak structure not addressed. Independent re-analyses (Hobson-Lasenby 2021, PRD 104, 064014) argue conformal gravity does not produce flat rotation curves at all."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Conformal invariance forbids a cosmological-constant term in the Lagrangian; an effective cosmological scale emerges from the global potential term. Specific Lambda value not derived."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Weyl-tensor-squared action is power-counting renormalisable but introduces ghosts; matter-sector reconciliation unsettled (Mannheim 2012)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "bullet_cluster_lensing_offset",
+      "effect": "violates",
+      "note": "Like other modified-gravity approaches, struggles with the Bullet-Cluster spatial offset between baryons and lensing peaks."
+    },
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "violates",
+      "note": "Without cold collisionless DM, the height ratios of acoustic peaks cannot be reproduced."
+    },
+    {
+      "benchmark_id": "binary_pulsar_psr_b1913_16",
+      "effect": "near_bound",
+      "note": "GW emission predictions from binary pulsars in conformal gravity have been contested in the literature; consistency with the Hulse-Taylor decay rate is not universally agreed."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "conformal scale parameter (entering the linear potential term)"
+    ],
+    "new_symmetries": [
+      "local conformal (Weyl) invariance"
+    ],
+    "new_parameters_count": 2,
+    "note": "Conformal gravity coupling and the global / cosmological term."
+  },
+  "structural_features": [
+    "conformal_invariance",
+    "fourth_order_gravity",
+    "no_dark_matter",
+    "weyl_tensor_action"
+  ],
+  "field_tags": [],
+  "composes_with": [],
+  "excludes": [
+    "asymmetric_dark_matter",
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "freeze_in_dark_matter",
+    "galileon_modified_gravity",
+    "higgs_portal_scalar_dm",
+    "horava_lifshitz_gravity",
+    "kaluza_klein_dark_matter",
+    "mirror_dark_matter",
+    "q_ball_dark_matter",
+    "simp_dark_matter",
+    "sterile_neutrino_dm",
+    "super_wimp_gravitino",
+    "teves_relativistic_mond",
+    "ultralight_scalar_dm",
+    "unimodular_gravity",
+    "wimp_thermal_freezeout",
+    "wimpless_dark_matter"
+  ],
+  "status": "disfavored",
+  "history": "Mannheim and Kazanas (1989), 'Exact vacuum solution to conformal Weyl gravity and galactic rotation curves', Astrophys. J. 342, 635. Mannheim and O'Brien (2012), 'Fitting galactic rotation curves with conformal gravity and a global quadratic potential', Phys. Rev. D 85, 124020. Periodic re-analyses (Hobson-Lasenby 2021, PRD 104, 064014) challenge the rotation-curve claims.",
+  "references": [
+    {
+      "citation": "Mannheim and Kazanas, 'Exact vacuum solution to conformal Weyl gravity and galactic rotation curves', Astrophys. J. 342, 635 (1989)",
+      "doi": "10.1086/167623"
+    },
+    {
+      "citation": "Mannheim and O'Brien, 'Fitting galactic rotation curves with conformal gravity and a global quadratic potential', Phys. Rev. D 85, 124020 (2012)",
+      "doi": "10.1103/PhysRevD.85.124020",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevD.85.124020"
+    }
+  ],
+  "tags": [
+    "modified_gravity",
+    "conformal",
+    "weyl",
+    "no_dark_matter",
+    "speculative"
+  ]
+}

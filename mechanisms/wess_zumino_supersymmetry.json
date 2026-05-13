@@ -1,0 +1,82 @@
+{
+  "id": "wess_zumino_supersymmetry",
+  "name": "Supersymmetry (Wess-Zumino algebra)",
+  "aliases": [
+    "SUSY",
+    "spacetime supersymmetry"
+  ],
+  "type": "symmetry",
+  "summary": "The foundational principle that the Poincare algebra is extended by anticommuting (fermionic) generators Q_alpha so that bosons and fermions are unified into common representations. Cancels quadratic divergences in scalar masses (the principal motivation), produces a graviton's superpartner (the gravitino), and constrains low-energy phenomenology severely. Distinct from MSSM in being the underlying symmetry rather than a specific implementation; all SUSY mechanisms in the catalog (MSSM, AMSB, GMSB, RPV, super-WIMP) build on this foundation.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Boson-fermion mass cancellation removes the quadratic divergence to scalar masses. Whether SUSY is realised at low scales (and thus addresses the EW hierarchy at observable energies) is a phenomenological question \u2014 LHC nulls have constrained low-scale realisations."
+    },
+    {
+      "puzzle_id": "vacuum_metastability",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "SUSY at sub-GUT scales protects the Higgs quartic from running negative; in supersymmetric theories the Higgs lambda is bounded from below by gauge couplings, eliminating EW vacuum metastability."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "neutron_electric_dipole_moment",
+      "effect": "near_bound",
+      "note": "Generic SUSY phases produce 1-loop EDMs at observable levels; the SUSY CP problem is the requirement that these phases be small."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "superpartner of every SM field"
+    ],
+    "new_scales": [
+      "SUSY-breaking scale (model-dependent)"
+    ],
+    "new_symmetries": [
+      "N=1 (or higher) supersymmetry"
+    ],
+    "new_parameters_count": 0,
+    "note": "SUSY as a symmetry is parameter-free; specific implementations (MSSM, NMSSM, etc.) introduce the parameters."
+  },
+  "structural_features": [
+    "spacetime_symmetry",
+    "boson_fermion_pairing",
+    "graviton_superpartner",
+    "no_quadratic_divergence"
+  ],
+  "field_tags": [
+    "susy_fermion_partners",
+    "susy_scalar_partners"
+  ],
+  "composes_with": [
+    "mssm",
+    "gauge_mediated_susy_breaking",
+    "anomaly_mediated_susy_breaking",
+    "r_parity_violation",
+    "super_wimp_gravitino",
+    "affleck_dine_baryogenesis",
+    "q_ball_dark_matter"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Wess and Zumino (1974), 'Supergauge transformations in four dimensions', Nucl. Phys. B 70, 39 \u2014 established the foundational supersymmetry algebra in 4D. Earlier work by Golfand-Likhtman (1971) and Volkov-Akulov (1972) preceded the WZ-algebra formulation. Foundational for ~50 years of BSM theory; Coleman-Mandula and Haag-Lopuszanski-Sohnius theorems show SUSY is the unique extension of Poincare allowed by S-matrix consistency.",
+  "references": [
+    {
+      "citation": "Wess and Zumino, 'Supergauge transformations in four dimensions', Nucl. Phys. B 70, 39 (1974)",
+      "doi": "10.1016/0550-3213(74)90355-1"
+    }
+  ],
+  "tags": [
+    "supersymmetry",
+    "wess_zumino_algebra",
+    "foundational",
+    "spacetime_symmetry"
+  ]
+}

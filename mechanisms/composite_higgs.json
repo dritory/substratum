@@ -1,0 +1,94 @@
+{
+  "id": "composite_higgs",
+  "name": "Composite Higgs",
+  "aliases": [
+    "pseudo-Goldstone composite Higgs",
+    "MCHM"
+  ],
+  "type": "composite",
+  "summary": "The Higgs is a pseudo-Nambu-Goldstone boson of a spontaneously broken global symmetry of a new strongly coupled sector. The breaking pattern (e.g., SO(5) -> SO(4) in the Minimal Composite Higgs Model, MCHM5) protects m_H from quadratic divergences below the compositeness scale Lambda ~ few TeV.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Quadratic sensitivity is cut off at the compositeness scale; remaining tuning between v and f ~ 1 TeV is currently a few percent. Stronger LHC bounds on top partners and W/Z scattering are squeezing the natural region."
+    },
+    {
+      "puzzle_id": "cabibbo_unitarity_anomaly",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Composite vector-like top partners mix with SM quarks; the same mixing that lowers M_top can shift V_us by O(0.1%)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Higgs couplings deviate from SM by O(v^2/f^2); current measurements require v/f < 0.3-0.4."
+    },
+    {
+      "benchmark_id": "electroweak_oblique_s_t_u",
+      "effect": "near_bound",
+      "note": "Heavy resonances contribute to S, T parameters; viable parameter space requires custodial symmetry."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "composite resonances (vector, scalar, fermion partners)"
+    ],
+    "new_scales": [
+      "f ~ 1 TeV (Goldstone decay constant)",
+      "Lambda ~ 4 pi f (compositeness scale)"
+    ],
+    "new_symmetries": [
+      "global SO(5) (or larger) spontaneously broken to SO(4)"
+    ],
+    "new_parameters_count": 6,
+    "note": "Form factor parameters, top-partner mass, and small explicit-breaking terms."
+  },
+  "structural_features": [
+    "compositeness",
+    "pseudo_goldstone",
+    "global_symmetry",
+    "strong_dynamics"
+  ],
+  "field_tags": [
+    "vectorlike_quark"
+  ],
+  "composes_with": [
+    "partial_compositeness",
+    "seesaw_type_i"
+  ],
+  "excludes": [
+    "large_extra_dimensions_add",
+    "little_higgs",
+    "mssm",
+    "nmssm",
+    "nnaturalness",
+    "r_symmetric_susy",
+    "relaxion",
+    "split_susy",
+    "technicolor",
+    "topcolor_top_condensate",
+    "twin_higgs",
+    "warped_extra_dimensions_rs"
+  ],
+  "status": "niche",
+  "history": "Kaplan-Georgi (1984) original construction; Agashe-Contino-Pomarol (2005) MCHM5 holographic realization. Active LHC search target via top partners and resonance-pair production.",
+  "references": [
+    {
+      "citation": "Kaplan and Georgi, 'SU(2) x U(1) breaking by vacuum misalignment', Phys. Lett. B 136, 183 (1984)",
+      "doi": "10.1016/0370-2693(84)91177-8"
+    },
+    {
+      "citation": "Agashe, Contino, Pomarol, 'The minimal composite Higgs model', Nucl. Phys. B 719, 165 (2005)",
+      "arxiv": "hep-ph/0412089"
+    }
+  ],
+  "tags": [
+    "hierarchy",
+    "composite",
+    "pseudo_goldstone"
+  ]
+}

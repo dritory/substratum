@@ -1,0 +1,54 @@
+{
+  "id": "decoherence_einselection",
+  "name": "Decoherence and einselection",
+  "aliases": [
+    "Zurek einselection",
+    "environment-induced superselection"
+  ],
+  "type": "dynamical",
+  "summary": "Quantum systems lose coherence rapidly through entanglement with their environment; the environment 'monitors' specific observables, dynamically selecting a preferred ('pointer') basis in which classical-looking outcomes appear. Provides the technical mechanism by which classical physics emerges from underlying quantum dynamics, without invoking wave-function collapse. Compatible with multiple interpretations (most-naturally with many-worlds), but neutral on the metaphysical interpretation question.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "quantum_measurement_problem",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Solves the 'preferred basis problem' (why classical outcomes look like position eigenstates of macroscopic objects rather than arbitrary superpositions) and explains the rapid disappearance of coherence in macroscopic systems. Doesn't address the 'unique outcome' problem - the wave function still has all branches; selecting one requires an interpretation choice."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "decoherence time tau_D ~ tau_classical * (lambda_thermal / Delta x)^2"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "Uses standard QM and standard environmental couplings; no new physics. Decoherence time is a derived quantity from system + environment Hamiltonian."
+  },
+  "structural_features": [
+    "environmental_monitoring",
+    "pointer_basis",
+    "classical_emergence",
+    "interpretation_neutral"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "many_worlds_everett",
+    "bohmian_mechanics"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Zeh (1970) early work on environment-induced classicality. Joos and Zeh (1985) calculated decoherence rates. Zurek developed the einselection program (1981, 1991). Comprehensive review: Zurek (2003), 'Decoherence, einselection, and the quantum origins of the classical', Rev. Mod. Phys. 75, 715, arXiv:quant-ph/0105127. Now standard in quantum information and foundations.",
+  "references": [
+    {
+      "citation": "Zurek, 'Decoherence, einselection, and the quantum origins of the classical', Rev. Mod. Phys. 75, 715 (2003)",
+      "arxiv": "quant-ph/0105127"
+    }
+  ],
+  "tags": [
+    "quantum_foundations",
+    "decoherence",
+    "einselection",
+    "classical_emergence"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "dgp_braneworld",
+  "name": "DGP braneworld",
+  "aliases": [
+    "Dvali-Gabadadze-Porrati"
+  ],
+  "type": "geometric",
+  "summary": "Modifies gravity in the infrared rather than the UV: 4D gravity is induced on a 3-brane embedded in a 5D bulk with infinite extra dimension. Gravity transitions from 4D at sub-crossover scales r << r_c to 5D at super-crossover scales r >> r_c, with r_c ~ Hubble radius. Late-time cosmic acceleration arises geometrically from the 5D leakage rather than from a vacuum-energy term.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "disfavored",
+      "note": "Self-accelerating branch reproduces late-time acceleration without Lambda but is plagued by ghost instabilities and is disfavored by structure-growth data."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "respects",
+      "note": "DGP predicts c_T = c at all scales; not killed by GW170817 (unlike many Horndeski models)."
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "near_bound",
+      "note": "Modified-gravity growth of structure deviates from LambdaCDM; DESI/EUCLID data constrain f sigma_8 in DGP."
+    },
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "Recovers GR in solar-system tests via Vainshtein screening below r_V."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "bulk graviton + brane-induced 4D graviton"
+    ],
+    "new_scales": [
+      "crossover scale r_c ~ Hubble radius"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 2,
+    "note": "5D Planck mass + 4D Planck mass ratio sets r_c."
+  },
+  "structural_features": [
+    "braneworld",
+    "ir_modified_gravity",
+    "vainshtein_screening",
+    "extra_dimensions"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "massive_graviton"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "horava_lifshitz_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
+  "status": "disfavored",
+  "history": "Dvali-Gabadadze-Porrati (2000). Self-accelerating branch popular as a Lambda alternative through 2005-2010; ghost identification and structure-growth disfavored it. Generalised Galileon descendents inherit some features.",
+  "references": [
+    {
+      "citation": "Dvali, Gabadadze, Porrati, '4D gravity on a brane in 5D Minkowski space', Phys. Lett. B 485, 208 (2000)",
+      "arxiv": "hep-th/0005016"
+    }
+  ],
+  "tags": [
+    "modified_gravity",
+    "braneworld",
+    "extra_dimensions",
+    "ir_modification"
+  ]
+}

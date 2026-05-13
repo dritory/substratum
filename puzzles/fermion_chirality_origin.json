@@ -1,0 +1,49 @@
+{
+  "id": "fermion_chirality_origin",
+  "name": "Origin of fermion chirality",
+  "aliases": [
+    "left-right asymmetry of SM",
+    "chiral matter content"
+  ],
+  "kind": "consistency",
+  "summary": "All Standard Model fermions are chiral: left-handed leptons and quarks form SU(2)_L doublets, right-handed ones are singlets, and Dirac mass terms are forbidden by SM gauge invariance until electroweak symmetry breaks. Chirality is a structural property — anomaly cancellation between quark and lepton hypercharges is non-trivially required for SM consistency. Why nature is chiral, why each generation has the precise hypercharges that cancel anomalies, and why right-handed neutrinos are absent from the SM, are all open structural questions.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Y(L) - 2 Y(e_R)",
+      "value": "0",
+      "expected": "non-zero would break SU(2)_L gauge invariance via anomalies",
+      "note": "Anomaly cancellation between lepton-doublet and right-handed-electron hypercharges is required by SM consistency."
+    },
+    {
+      "symbol": "(quark + lepton) U(1)_Y^3 anomaly",
+      "value": "0",
+      "expected": "non-zero would break U(1)_Y at quantum level",
+      "note": "Forces the specific hypercharge assignments {1/6, 2/3, -1/3, -1/2, -1} per generation - one of the deepest 'why these numbers' SM questions."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "recover_standard_model_precision",
+    "neutrino_oscillation_pmns"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "gauge_invariance",
+      "status": "stresses",
+      "note": "Anomaly cancellation forces the specific SM hypercharge pattern and forbids vector-like extensions that would break gauge invariance. Suggests either a GUT origin (SU(5), SO(10), Pati-Salam, E6 force the chiral structure) or a string-theoretic constraint."
+    }
+  ],
+  "history": "Recognised since the SM was constructed (Glashow-Weinberg-Salam 1961-1968). Anomaly cancellation worked out by Bouchiat-Iliopoulos-Meyer (1972), 'An anomaly-free version of Weinberg's model', PLB 38, 519. SO(10) embedding (Georgi 1975, Fritzsch-Minkowski 1975) shows all fermions in a single 16 — the natural unification. String-theoretic constraints from N=1 SUSY in 4D after Calabi-Yau compactification (Candelas-Horowitz-Strominger-Witten 1985) pick out specific chiral matter content.",
+  "references": [
+    {
+      "citation": "Bouchiat, Iliopoulos, Meyer, 'An anomaly-free version of Weinberg's model', Phys. Lett. B 38, 519 (1972)",
+      "doi": "10.1016/0370-2693(72)90532-1"
+    }
+  ],
+  "tags": [
+    "consistency",
+    "chirality",
+    "anomaly_cancellation",
+    "structural"
+  ]
+}

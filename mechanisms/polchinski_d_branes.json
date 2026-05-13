@@ -1,0 +1,82 @@
+{
+  "id": "polchinski_d_branes",
+  "name": "D-branes (Polchinski)",
+  "aliases": [
+    "Dirichlet branes",
+    "RR-charged D-branes"
+  ],
+  "type": "uv_completion",
+  "summary": "D-branes are extended objects in string theory defined by mixed Dirichlet-Neumann boundary conditions on open-string endpoints. Polchinski (1995) showed they carry a complete set of electric and magnetic Ramond-Ramond charges, are intrinsic to type II string theory, and are required by string duality. Provided the long-missing carriers of RR charges and revolutionised string theory by enabling explicit microscopic constructions of black-hole states (Strominger-Vafa), gauge/gravity duality (AdS/CFT), and braneworld phenomenology.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "black_hole_information",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "Provides the underlying microscopic objects (D-brane bound states) whose quantum-mechanical degeneracy reproduces the Bekenstein-Hawking entropy in Strominger-Vafa-type constructions. Foundational for the AdS/CFT-based resolution of BH information paradox in asymptotically-AdS settings."
+    },
+    {
+      "puzzle_id": "gauge_hierarchy_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "D-brane constructions of the SM (Standard Model on intersecting / magnetised branes) provide a string-theoretic UV completion in which the EW hierarchy is fixed by compactification geometry."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "D-branes extend perturbative string theory to include non-perturbative solitonic states; essential ingredient of any complete string-TOE but not the framework by itself (Polchinski 1995)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "proton_decay_lifetime",
+      "effect": "near_bound",
+      "note": "D-brane SM constructions typically predict dimension-6 proton decay rates near Super-K bounds for natural compactification volumes."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "D-brane worldvolume gauge fields",
+      "open-string excitations on D-branes"
+    ],
+    "new_scales": [
+      "string scale",
+      "compactification volume"
+    ],
+    "new_symmetries": [
+      "worldvolume gauge symmetry on each D-brane stack"
+    ],
+    "new_parameters_count": 4,
+    "note": "Compactification choice, brane configuration, fluxes, and string coupling determine the 4D phenomenology."
+  },
+  "structural_features": [
+    "string_theoretic",
+    "extended_objects",
+    "rr_charged",
+    "open_string_endpoints"
+  ],
+  "field_tags": [
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "ads_cft_holography",
+    "strominger_vafa_microstates",
+    "warped_extra_dimensions_rs"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Polchinski (1995), 'Dirichlet-Branes and Ramond-Ramond Charges', Phys. Rev. Lett. 75, 4724, arXiv:hep-th/9510017 \u2014 established D-branes as the carriers of RR charges. Triggered the second superstring revolution; underlies AdS/CFT (Maldacena 1997), explicit black-hole microstate counting (Strominger-Vafa 1996), brane-world phenomenology (RS, ADD), and the modern string-landscape program.",
+  "references": [
+    {
+      "citation": "Polchinski, 'Dirichlet-Branes and Ramond-Ramond Charges', Phys. Rev. Lett. 75, 4724 (1995)",
+      "arxiv": "hep-th/9510017"
+    }
+  ],
+  "tags": [
+    "string_theory",
+    "d_branes",
+    "extended_objects",
+    "uv_completion"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "lithium_bbn_puzzle",
+  "name": "Cosmological lithium problem",
+  "aliases": [
+    "Li-7 BBN problem",
+    "Spite plateau anomaly"
+  ],
+  "kind": "naturalness",
+  "summary": "Standard Big Bang Nucleosynthesis (BBN) with the CMB-determined baryon density predicts a primordial Li-7 abundance Li-7/H ~ 5e-10, but observed Li-7 abundances in old metal-poor halo stars (the 'Spite plateau') are a factor of 3-4 lower at Li-7/H ~ 1.6e-10. The discrepancy persists at ~5 sigma after improved nuclear-rate measurements; D/H and He-4 agree with BBN beautifully, isolating Li-7 as the outlier.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Li-7/H (BBN prediction)",
+      "value": "5.1e-10",
+      "expected": "matches observation",
+      "units": "dimensionless ratio",
+      "note": "BBN with Omega_b h^2 = 0.0223 (Planck) and current nuclear rates."
+    },
+    {
+      "symbol": "Li-7/H (Spite plateau observation)",
+      "value": "1.6e-10",
+      "expected": "5.1e-10",
+      "gap_log10": -0.5,
+      "note": "~3x lower than BBN prediction at >5 sigma significance after Cyburt-Fields-Olive 2008 update."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "lithium_problem_bbn",
+    "bbn_light_element_abundances"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Either (a) systematic in stellar Li depletion (turbulent mixing in old stars destroying Li), (b) systematic in BBN reaction rates (3He(α,γ)7Be cross-section), or (c) genuine new physics (decaying particles, modified expansion rate, varying constants during BBN). Decades of work have not resolved which."
+    }
+  ],
+  "history": "Spite plateau measured in 1982 (Spite & Spite). Discrepancy with BBN sharpened progressively as CMB pinned down Omega_b. Cyburt, Fields, Olive (2008), 'An update on the big bang nucleosynthesis prediction for 7Li: the problem worsens', JCAP 11, 012, arXiv:0808.2818, found the gap widening. Modern reviews: Fields (2011), 'The primordial lithium problem', Annu. Rev. Nucl. Part. Sci. 61, 47, arXiv:1203.3551.",
+  "references": [
+    {
+      "citation": "Cyburt, Fields, Olive, 'An update on the big bang nucleosynthesis prediction for 7Li: the problem worsens', JCAP 11, 012 (2008)",
+      "arxiv": "0808.2818"
+    },
+    {
+      "citation": "Fields, 'The primordial lithium problem', Annu. Rev. Nucl. Part. Sci. 61, 47 (2011)",
+      "arxiv": "1203.3551"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "bbn",
+    "lithium",
+    "early_universe",
+    "data_tension"
+  ]
+}

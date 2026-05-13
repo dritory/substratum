@@ -1,0 +1,91 @@
+{
+  "id": "early_dark_energy",
+  "name": "Early dark energy (EDE)",
+  "aliases": [
+    "Poulin-Smith-Karwal-Kamionkowski EDE",
+    "axion-like EDE"
+  ],
+  "type": "dynamical",
+  "summary": "An ultralight scalar field with mass m_phi ~ 10^-27 eV that briefly behaves as a cosmological constant near matter-radiation equality (z ~ 3500) before decaying away as ~ a^-4 or faster. The brief EDE-domination episode shrinks the sound horizon at recombination, raising the inferred H_0 from CMB data and reducing the Hubble tension from 5 sigma to ~3 sigma. Leading early-universe-side resolution of the H0 tension.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "hubble_tension_persistence",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "EDE with fraction f_EDE ~ 10% at z_critical ~ 3500 lifts H_0(CMB) from 67.4 to ~72-73, matching SH0ES. Trade-off: introduces 2-3 sigma worsening of the S8 tension (LSS clusters less than Planck-LambdaCDM predicts). Not a clean solution but the leading active proposal."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Late-time Lambda problem unchanged. EDE adds a separate early-universe vacuum-energy episode that decays, suggesting multiple cosmologically-acting scalars rather than one Lambda."
+    },
+    {
+      "puzzle_id": "dark_energy_evolution_hint",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "EDE at z ~ 3000 plus a residual at late times can mimic w(z) evolution if the late-time component has its own phase transition."
+    },
+    {
+      "puzzle_id": "jwst_early_massive_galaxies",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "EDE at z~3000 boosts the early matter-power amplitude on cluster scales, accelerating high-z galaxy assembly by O(20-30%) -- enough to bring LambdaCDM into agreement with JWST high-z stellar masses (Klypin et al. 2024)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cmb_acoustic_peak_structure",
+      "effect": "predicts_signal",
+      "note": "Modifies the acoustic-peak structure subtly; Planck + ACT + SPT can detect or exclude specific EDE potentials. Hill et al. (2020, arXiv:2003.07355) showed EDE consistent with Planck-alone but pressured by S8."
+    },
+    {
+      "benchmark_id": "large_scale_structure_galaxy_power_spectrum",
+      "effect": "near_bound",
+      "note": "Worsens S8 tension by ~2-3 sigma; full-shape galaxy power spectrum (BOSS, DESI) is the discriminating test."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "ultralight scalar phi (axion-like)"
+    ],
+    "new_scales": [
+      "m_phi ~ 10^-27 eV",
+      "f_EDE ~ 0.1 (peak DE fraction)",
+      "z_c ~ 3500"
+    ],
+    "new_symmetries": [
+      "approximate shift symmetry"
+    ],
+    "new_parameters_count": 3,
+    "note": "Mass m_phi, fraction f_EDE, critical redshift z_c (often parameterised through initial field value and potential shape)."
+  },
+  "structural_features": [
+    "transient_dark_energy",
+    "ultralight_scalar",
+    "matter_radiation_equality_epoch",
+    "h0_tension_target"
+  ],
+  "field_tags": [
+    "qcd_blind_pseudoscalar"
+  ],
+  "composes_with": [
+    "quintessence",
+    "string_axiverse"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Poulin, Smith, Karwal, Kamionkowski (2018), 'Early dark energy can resolve the Hubble tension', Phys. Rev. Lett. 122, 221301 (2019), arXiv:1811.04083. Subsequent model-building and constraints: Smith et al. 2020, Hill et al. 2020 (arXiv:2003.07355), Murgia et al. 2021. Among the leading H_0-tension resolutions as of 2024.",
+  "references": [
+    {
+      "citation": "Poulin, Smith, Karwal, Kamionkowski, 'Early dark energy can resolve the Hubble tension', Phys. Rev. Lett. 122, 221301 (2019)",
+      "arxiv": "1811.04083"
+    }
+  ],
+  "tags": [
+    "dark_energy",
+    "hubble_tension",
+    "early_universe",
+    "ultralight_scalar"
+  ]
+}

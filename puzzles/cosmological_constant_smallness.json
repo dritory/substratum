@@ -1,0 +1,45 @@
+{
+  "id": "cosmological_constant_smallness",
+  "name": "Cosmological constant smallness",
+  "aliases": ["Lambda problem", "vacuum energy problem"],
+  "kind": "naturalness",
+  "summary": "The observed cosmological constant rho_Lambda ~ (2.3 meV)^4 is enormously smaller than any natural QFT vacuum-energy estimate. No symmetry of the Standard Model coupled to gravity protects a small positive Lambda, so its smallness is a 't Hooft-naturalness puzzle of the most extreme kind known.",
+  "characteristic_numbers": [
+    {
+      "symbol": "rho_Lambda^{1/4}",
+      "value": "2.3e-3",
+      "expected": "1.2e28",
+      "gap_log10": -30,
+      "units": "eV",
+      "note": "Naive expectation uses a Planck-scale cutoff. Ratio of energy densities is ~10^120, i.e. (gap_log10 in mass)^4."
+    },
+    {
+      "symbol": "rho_Lambda^{1/4}",
+      "value": "2.3e-3",
+      "expected": "2e8",
+      "gap_log10": -11,
+      "units": "eV",
+      "note": "Cutoff at QCD scale Lambda_QCD ~ 200 MeV. Even this far softer cutoff leaves a ~10^44 hierarchy in energy density."
+    }
+  ],
+  "data_links": ["cosmological_constant"],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "The smallness of Lambda is the canonical naturalness puzzle: setting Lambda to zero does not restore any known symmetry, so technical naturalness fails."
+    }
+  ],
+  "history": "Articulated by Weinberg (1989). Cosmic acceleration discovery in 1998 (Riess, Perlmutter) confirmed Lambda is positive and tiny rather than zero. DESI Y1 (2024) shows a ~2-3 sigma preference for time-evolving dark energy that, if confirmed, deepens rather than resolves the puzzle.",
+  "references": [
+    {
+      "citation": "Weinberg, 'The cosmological constant problem', Rev. Mod. Phys. 61, 1 (1989)",
+      "doi": "10.1103/RevModPhys.61.1"
+    },
+    {
+      "citation": "Martin, 'Everything you always wanted to know about the cosmological constant problem (but were afraid to ask)', CR Physique 13, 566 (2012)",
+      "arxiv": "1205.3365"
+    }
+  ],
+  "tags": ["naturalness", "vacuum_energy", "gravity", "qft"]
+}

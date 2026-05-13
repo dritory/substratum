@@ -1,0 +1,109 @@
+{
+  "id": "f_theory_compactification",
+  "name": "F-theory compactification",
+  "aliases": [
+    "Vafa F-theory",
+    "elliptic Calabi-Yau compactification"
+  ],
+  "type": "uv_completion",
+  "summary": "F-theory (Vafa 1996) reformulates Type IIB string theory geometrically by treating the SL(2,Z) self-duality group as the diffeomorphism group of a torus fibred over the spacetime. Twelve-dimensional, with two extra dimensions on the auxiliary torus whose complex structure encodes the IIB axion-dilaton. On singular elliptic fibrations, 7-branes wrap divisors and exceptional gauge symmetries arise from Kodaira-singularity-type ADE classification. Provides a geometric framework for the most realistic local string-theoretic Standard Model constructions: F-theory GUTs (Beasley-Heckman-Vafa 2009) achieve gauge groups SU(5)/SO(10)/E_6 with three-generation matter and Yukawa hierarchies via geometric intersection patterns.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "string_landscape_predictivity",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Provides explicit large family of (semi-)realistic string vacua with controlled phenomenology. F-theory GUT constructions reproduce SU(5)/SO(10) gauge structure plus generation-three matter naturally; flux quanta count gives ~ 10^15-10^30 vacua, a more concrete landscape than abstract counting."
+    },
+    {
+      "puzzle_id": "flavor_mass_hierarchy",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa hierarchies arise from geometric overlap of matter curves; rank-one matrix structure at GUT scale broken by flux/instanton corrections gives natural Froggatt-Nielsen-like patterns. Specifically reproduces m_t / m_b ~ tan(beta) and m_u / m_c / m_t ~ 1 / lambda^2 / lambda^4 structure."
+    },
+    {
+      "puzzle_id": "gauge_coupling_unification",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Local F-theory GUTs achieve gauge-coupling unification through Kodaira-singularity gauge enhancement; doublet-triplet splitting and proton stability addressed by hypercharge flux mechanism (no need for missing-partner mechanism)."
+    },
+    {
+      "puzzle_id": "spacetime_dimensionality",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "F-theory is naturally 12D, with 8 dimensions compactified on an elliptic Calabi-Yau fourfold; the surviving 4D is a feature of the geometry."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "F-theory on an elliptic Calabi-Yau fourfold is a non-perturbative formulation of Type IIB string theory that is a candidate UV completion of GR + the SM (Vafa 1996; Donagi-Wijnholt 2008; Weigand 2018 review)."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "explains_pattern",
+      "confidence": "proposed",
+      "note": "Yukawa couplings in F-theory GUTs are computed from intersection numbers of matter curves on the GUT divisor; the parameter count is reduced to a small number of geometric inputs (Heckman 2010; Marsano-Saulina-Schafer-Nameki 2009)."
+    }
+  ],
+  "touches_benchmarks": [],
+  "introduces": {
+    "new_fields": [
+      "moduli of elliptic Calabi-Yau fourfold",
+      "7-brane gauge fields and matter",
+      "fluxes (G_4 4-form flux)"
+    ],
+    "new_scales": [
+      "compactification scale M_KK ~ 10^16 GeV (typical GUT scale)",
+      "string scale M_s near M_pl"
+    ],
+    "new_symmetries": [
+      "Type IIB SL(2,Z) duality (geometrized)"
+    ],
+    "new_parameters_count": 4,
+    "note": "Choice of elliptic fourfold, gauge-enhancement loci (matter curves), G_4 fluxes, and 7-brane configurations. Specific models reduce to a few effective parameters but the underlying choice space is the F-theory landscape."
+  },
+  "structural_features": [
+    "elliptic_fibration",
+    "twelve_dimensional",
+    "type_iib_geometrized",
+    "kodaira_singularity_gauge",
+    "f_theory_gut"
+  ],
+  "field_tags": [
+    "extra_spatial_dimensions",
+    "gut_x_y_bosons",
+    "kk_tower_fermions",
+    "kk_tower_gauge_bosons",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "kklt_moduli_stabilisation",
+    "large_volume_scenario_lvs",
+    "polchinski_d_branes",
+    "su5_minimal_gut",
+    "so10_gut",
+    "froggatt_nielsen"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Vafa (1996), 'Evidence for F-theory', Nucl. Phys. B 469, 403, arXiv:hep-th/9602022. Morrison-Vafa (1996), 'Compactifications of F-theory on Calabi-Yau threefolds I,II', hep-th/9602114 and hep-th/9603161 - geometric structure. F-theory GUTs revival: Donagi-Wijnholt (2008), arXiv:0802.2969; Beasley-Heckman-Vafa (2009), 'GUTs and Exceptional Branes in F-theory I,II', JHEP 01, 058 and 01, 059, arXiv:0802.3391 and 0806.0102. Modern reviews: Weigand (2010, arXiv:1009.3497); Heckman (2010, arXiv:1001.0577).",
+  "references": [
+    {
+      "citation": "Vafa, 'Evidence for F-theory', Nucl. Phys. B 469, 403 (1996)",
+      "arxiv": "hep-th/9602022"
+    },
+    {
+      "citation": "Beasley, Heckman, Vafa, 'GUTs and Exceptional Branes in F-theory - I', JHEP 01, 058 (2009)",
+      "arxiv": "0802.3391"
+    }
+  ],
+  "tags": [
+    "uv_completion",
+    "string_theory",
+    "f_theory",
+    "elliptic_fibration",
+    "string_gut"
+  ]
+}

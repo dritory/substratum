@@ -1,0 +1,54 @@
+{
+  "id": "koide_formula_predictor",
+  "name": "Mechanism deriving the Koide relation Q = 2/3",
+  "target_puzzles": ["koide_formula_lepton_masses"],
+  "status": "drafted",
+  "closability": "contested",
+  "closability_note": "Q = 2/3 holds to 5 decimals at the EW scale but breaks under RG running, so any derivation must explain why the IR is special. Could be coincidence rather than a derivation target.",
+  "summary": "The Koide formula Q = 2/3 holds to ~5 sigma precision at the EW scale with no published derivation.",
+  "what_closes_it": "A mechanism producing Q = 2/3 at the EW scale from a structural input: modular flavor at level 3, an RG-protected mass texture, or an SU(3) democratic mass with specific breaking. RG-fragility is the main obstacle to any UV-side argument.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "electroweak_singlet_complex_scalar"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "Low scale (~ 100 GeV - 1 TeV). The formula holds at the EW scale and breaks under RG running, so the closing mechanism must operate near the IR or be RG-protected.",
+  "compatible_host_frameworks": [
+    "modular_string_flavor",
+    "f_theory_gut_axiverse"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "naturalness",
+      "status": "contested",
+      "note": "If the formula is genuinely an accident, then 'naturalness' doesn't demand explanation. If it's a structural prediction, then any derivation that doesn't survive RG running needs an explanation for why the IR is special."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Koide, 'A fermion-boson composite model of quarks and leptons', PLB 120, 161 (1983)",
+      "doi": "10.1016/0370-2693(83)90644-5"
+    },
+    {
+      "citation": "Foot, 'A note on Koide's lepton mass relation' (1994)",
+      "arxiv": "hep-ph/9402242"
+    },
+    {
+      "citation": "Sumino, 'Family gauge symmetry as an origin of Koide's mass formula and charged lepton spectrum', JHEP 0905 (2009) 075",
+      "arxiv": "0812.2103"
+    },
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?' (2017)",
+      "arxiv": "1706.08749"
+    }
+  ],
+  "tags": [
+    "value_prediction",
+    "lepton_sector",
+    "possibly_coincidence"
+  ]
+}

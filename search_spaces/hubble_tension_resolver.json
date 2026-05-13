@@ -1,0 +1,57 @@
+{
+  "id": "hubble_tension_resolver",
+  "name": "Mechanism resolving the H0 tension between early and late universe",
+  "target_puzzles": ["hubble_tension_persistence"],
+  "status": "drafted",
+  "closability": "contested",
+  "closability_note": "Many proposals (early DE, modified recombination, decaying DM, modified gravity) but none validated; ~5 sigma tension persists after a decade. The tension could also resolve experimentally rather than via new physics.",
+  "summary": "No framework resolves the ~5 sigma H0 tension between CMB-inferred (~67 km/s/Mpc) and late-time-measured (~73 km/s/Mpc) values.",
+  "what_closes_it": "A mechanism producing a ~10% shift in either the sound horizon at recombination (early-route: EDE at z~3000, varying alpha or m_e, decaying DM) or the late-time distance ladder, while respecting BAO + SN1a + S8 + sum-m_nu constraints.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "qcd_blind_pseudoscalar",
+      "electroweak_singlet_real_scalar",
+      "dark_photon"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "Mass scale 10^-29 to 10^-27 eV for the early-DE scalar; recombination-era physics at T ~ 0.3 eV. The closing mechanism operates at z ~ 1000-10000, not at the present epoch.",
+  "compatible_host_frameworks": [
+    "lambda_cdm_gr",
+    "f_theory_gut_axiverse",
+    "modular_string_flavor",
+    "m_theory_landscape"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "An early-DE field with V ~ rho_DE at z ~ 3000 has Lambda ~ 0.3 eV decay constant — a new scale unrelated to anything else in the SM, requiring its own naturalness story."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Karwal and Kamionkowski, 'Dark energy at early times, the Hubble parameter, and the string axiverse', PRD 94, 103523 (2016)",
+      "arxiv": "1608.01309"
+    },
+    {
+      "citation": "Poulin, Smith, Karwal, Kamionkowski, 'Early dark energy can resolve the Hubble tension', PRL 122, 221301 (2019)",
+      "arxiv": "1811.04083"
+    },
+    {
+      "citation": "Hart and Chluba, 'Updated fundamental constant constraints from Planck 2018 data and possible relations to the Hubble tension', MNRAS 493, 3255 (2020)",
+      "arxiv": "1912.03986"
+    },
+    {
+      "citation": "Di Valentino et al., 'In the realm of the Hubble tension — a review of solutions', Class. Quant. Grav. 38, 153001 (2021)",
+      "arxiv": "2103.01183"
+    }
+  ],
+  "tags": [
+    "cosmological_tension",
+    "early_universe_physics",
+    "active_research"
+  ]
+}

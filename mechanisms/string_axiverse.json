@@ -1,0 +1,97 @@
+{
+  "id": "string_axiverse",
+  "name": "String axiverse",
+  "aliases": [
+    "plenitude of axions",
+    "ultralight axion-like particles"
+  ],
+  "type": "uv_completion",
+  "summary": "String compactifications generically produce hundreds of axion-like fields, populating each decade of mass from ~10^-33 eV (the Hubble scale today) up to the QCD axion's natural window. Multiple distinct ALPs arise from the topology of the extra-dimensional manifold; their masses, couplings, and abundances are calculable from the compactification data. Predicts simultaneous experimental signatures across CMB rotation, black-hole superradiance, structure formation, and direct detection.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "strong_cp_problem",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Includes a QCD axion among the many ALPs in the spectrum, but the QCD-axion mass is not specially favored by the landscape; finding it requires that one of the many ALPs lie in the 10^-12 - 10^-3 eV window."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Ultralight ALPs in the 10^-22 - 10^-18 eV range (or QCD-axion-mass range) can be cold dark matter via misalignment; the multiplicity of the axiverse populates several DM candidates per compactification."
+    },
+    {
+      "puzzle_id": "sm_free_parameters_origin",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Axion masses, decay constants, and couplings are determined by Kahler-moduli geometry; the axion sector parameter count is geometric rather than free (Arvanitaki et al. 2010)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "axion_haloscope_admx",
+      "effect": "predicts_signal",
+      "note": "QCD axion within the ADMX-sensitive window if one of the axiverse ALPs lies in the 1-100 mu eV range; haloscope searches directly target the prediction."
+    },
+    {
+      "benchmark_id": "lyman_alpha_forest_small_scale_power",
+      "effect": "near_bound",
+      "note": "Ultralight DM with m ~ 10^-22 eV suppresses small-scale power; Lyman-alpha bounds (Ir\u0161i\u010d et al. 2017) push m > 2e-21 eV, constraining axiverse DM in the fuzzy regime."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects"
+    },
+    {
+      "benchmark_id": "cmb_large_scale_anomalies",
+      "effect": "predicts_signal",
+      "note": "ALPs with m ~ 10^-33 - 10^-28 eV give a uniform rotation of the CMB polarization (cosmic birefringence) at the 0.3 deg level; recent claimed detection by Minami-Komatsu (2020) is plausibly consistent."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "multiple ALPs (10^2 - 10^3 of them)"
+    ],
+    "new_scales": [
+      "each ALP has its own decay constant f_i ~ M_GUT and mass m_i exponentially sensitive to topological data"
+    ],
+    "new_symmetries": [
+      "multiple shift symmetries (broken)"
+    ],
+    "new_parameters_count": 6,
+    "note": "Compactification topology, string scale, and a few coarse parameters control the spectrum; individual ALP masses are exponentially small and effectively scanned."
+  },
+  "structural_features": [
+    "multiple_axions",
+    "compactification_dependent",
+    "ultralight_scalars",
+    "shift_symmetry"
+  ],
+  "field_tags": [
+    "qcd_anomalous_pseudoscalar",
+    "qcd_blind_pseudoscalar",
+    "string_modulus",
+    "string_theoretic_background"
+  ],
+  "composes_with": [
+    "heterotic_string_compactification",
+    "ultralight_scalar_dm",
+    "peccei_quinn_axion"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Arvanitaki, Dimopoulos, Dubovsky, Kaloper, March-Russell (2009), 'String Axiverse', Phys. Rev. D 81, 123530, arXiv:0905.4720. Sparked active black-hole-superradiance, fuzzy-DM, cosmic-birefringence, and ALP-haloscope research programs.",
+  "references": [
+    {
+      "citation": "Arvanitaki, Dimopoulos, Dubovsky, Kaloper, March-Russell, 'String Axiverse', Phys. Rev. D 81, 123530 (2010)",
+      "arxiv": "0905.4720"
+    }
+  ],
+  "tags": [
+    "axion",
+    "string_theory",
+    "alp",
+    "ultralight",
+    "axiverse"
+  ]
+}

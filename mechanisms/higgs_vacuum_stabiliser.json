@@ -1,0 +1,76 @@
+{
+  "id": "higgs_vacuum_stabiliser",
+  "name": "Higgs vacuum stabiliser (extra scalar)",
+  "aliases": [
+    "scalar stabilisation of EW vacuum",
+    "vacuum-stability extension"
+  ],
+  "type": "dynamical",
+  "summary": "Adds a singlet (or doublet) scalar coupled to the Higgs through a portal |H|^2 |S|^2 with positive coupling. The threshold correction at the new scalar's mass scale shifts lambda(mu) up, preventing the SM Higgs quartic from running negative at high scales. The same scalar can simultaneously serve as dark matter (Higgs-portal scalar DM mechanism), giving a unified target for vacuum-stability-driven extensions.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "vacuum_metastability",
+      "role": "solves",
+      "confidence": "proposed",
+      "note": "The threshold correction Delta lambda ~ lambda_HS^2 / (16 pi^2) at the new scalar's mass shifts the running Higgs quartic; for lambda_HS ~ 0.1-1 and m_S ~ TeV-PeV, lambda(M_Pl) > 0 stabilising the EW vacuum absolutely."
+    },
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Same scalar can simultaneously play the dark-matter role with thermal freeze-out fixing the portal coupling, linking metastability and DM puzzles."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "higgs_couplings_lhc",
+      "effect": "near_bound",
+      "note": "Singlet-Higgs mixing produces O(few %) coupling deviations; HL-LHC sensitive."
+    },
+    {
+      "benchmark_id": "dm_direct_detection_lz",
+      "effect": "near_bound",
+      "note": "If the scalar is DM, LZ bounds constrain lambda_HS strongly."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "singlet (or doublet) scalar S"
+    ],
+    "new_scales": [
+      "m_S ~ TeV - PeV"
+    ],
+    "new_symmetries": [
+      "dark Z_2 (if S is DM)"
+    ],
+    "new_parameters_count": 3,
+    "note": "Scalar mass, portal coupling lambda_HS, scalar self-coupling."
+  },
+  "structural_features": [
+    "higgs_portal",
+    "rg_threshold_correction",
+    "stabilised_vacuum"
+  ],
+  "field_tags": [
+    "electroweak_singlet_real_scalar"
+  ],
+  "composes_with": [
+    "higgs_portal_scalar_dm",
+    "coleman_weinberg_radiative"
+  ],
+  "excludes": [],
+  "status": "mainstream",
+  "history": "Threshold corrections to lambda from scalar singlets in vacuum-stability context studied through 2010s (Elias-Miro-Espinosa-Giudice-Lee-Strumia 2012, arXiv:1203.0237; many follow-ups). Direct application to DM stabilisation links to the Higgs-portal scalar DM literature.",
+  "references": [
+    {
+      "citation": "Elias-Miro, Espinosa, Giudice, Lee, Strumia, 'Stabilization of the electroweak vacuum by a scalar threshold effect', JHEP 06, 031 (2012)",
+      "arxiv": "1203.0237"
+    }
+  ],
+  "tags": [
+    "vacuum_stability",
+    "higgs_portal",
+    "scalar",
+    "rg_threshold"
+  ]
+}

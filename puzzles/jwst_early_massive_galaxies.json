@@ -1,0 +1,50 @@
+{
+  "id": "jwst_early_massive_galaxies",
+  "name": "JWST early massive galaxies",
+  "aliases": [
+    "JWST z>7 tension",
+    "early-universe massive galaxy crisis"
+  ],
+  "kind": "naturalness",
+  "summary": "JWST early-release observations (2022-2023) revealed several galaxy candidates at redshifts z ~ 7-12 with apparent stellar masses M_star ~ 10^10 M_sun. Under standard LambdaCDM + 100% baryon-to-star conversion efficiency, dark-matter halos at these redshifts can only accommodate the most massive of these candidates at the very edge of allowed parameter space. Either (a) galaxy formation is more efficient than standard prescriptions, (b) the stellar-mass estimates are systematically overestimated (different IMF, dust, contamination from AGN), or (c) LambdaCDM itself is challenged at early epochs.",
+  "characteristic_numbers": [
+    {
+      "symbol": "M_star observed (z ~ 7-10)",
+      "value": "~10^10 M_sun",
+      "expected": "10^8 - 10^9 M_sun typical LambdaCDM expectation",
+      "note": "Several JWST candidates from CEERS, GLASS, COSMOS programs."
+    },
+    {
+      "symbol": "epsilon (baryon-to-star efficiency)",
+      "value": "implied 0.5-1",
+      "expected": "0.01-0.1 from LambdaCDM + feedback models",
+      "note": "Required efficiency to reproduce the most massive candidates is 5-50x higher than predictions for low-z galaxies."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "cmb_acoustic_peak_structure",
+    "large_scale_structure_galaxy_power_spectrum"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Possibilities: (a) systematic overestimate of stellar masses (top-heavy IMF, dust extinction, AGN-driven luminosity); (b) more efficient star formation in low-metallicity halos; (c) warm DM / early dark energy / modified gravity changes halo mass function at high z. Status: largely interpreted as overestimated stellar masses + efficient SF as of 2024-2025; not yet a confirmed cosmology breakdown but worth tracking."
+    }
+  ],
+  "history": "JWST CEERS (Labbé et al. 2022, arXiv:2207.12446) and GLASS-COSMOS observations triggered the crisis. Theoretical assessment: Boylan-Kolchin (2022), 'Stress testing LambdaCDM with high-redshift galaxy candidates', Nature Astron. 7, 731, arXiv:2208.01611. Follow-up spectroscopy (2023-2024) has revised some masses downward; tension softened but not eliminated.",
+  "references": [
+    {
+      "citation": "Boylan-Kolchin, 'Stress testing LambdaCDM with high-redshift galaxy candidates', Nature Astron. 7, 731 (2023)",
+      "arxiv": "2208.01611"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "jwst",
+    "early_universe",
+    "galaxy_formation",
+    "data_tension"
+  ]
+}

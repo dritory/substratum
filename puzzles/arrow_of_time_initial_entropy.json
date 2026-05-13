@@ -1,0 +1,48 @@
+{
+  "id": "arrow_of_time_initial_entropy",
+  "name": "Arrow of time / low-entropy initial state",
+  "aliases": [
+    "Penrose Weyl curvature hypothesis",
+    "thermodynamic arrow of time"
+  ],
+  "kind": "naturalness",
+  "summary": "The fundamental laws of physics (CPT, Lorentz invariance, GR + SM equations) are time-symmetric, yet the universe exhibits a strong thermodynamic arrow of time toward higher entropy. This requires the initial state of the universe to have been an exceptionally low-entropy configuration relative to the equilibrium it could have started in. Penrose estimates the prior probability of the observed Big Bang state at one part in 10^(10^123) compared to the maximum-entropy state of equivalent matter content — the most extreme fine-tuning in physics.",
+  "characteristic_numbers": [
+    {
+      "symbol": "S_initial / S_max",
+      "value": "~10^-{10^123}",
+      "expected": "O(1) for a 'typical' configuration",
+      "note": "Penrose (1989) estimate: BB initial state is exponentially-of-exponentially atypical relative to maximum-entropy equilibrium of the same total energy. The Weyl curvature was nearly zero at BB while diverging in BH singularities (where entropy is maximised)."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "cmb_blackbody_firas",
+    "cmb_acoustic_peak_structure"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "Most extreme fine-tuning known. Possible resolutions: (a) inflation provides a smoothing mechanism, but only solves the homogeneity / flatness problems, not the underlying entropy puzzle; (b) eternal inflation populates many initial conditions, with anthropic selection picking low-entropy starts; (c) Penrose's CCC posits that a previous-aeon late-time low-entropy state matches conformally to the next aeon's BB; (d) the arrow of time may be illusory or local."
+    }
+  ],
+  "history": "Boltzmann (1896) recognised the conflict. Penrose's 'Weyl curvature hypothesis' (1979 'General Relativity: An Einstein Centenary Survey'; 1989 'The Emperor's New Mind') gave the quantitative estimate and tied the puzzle to gravitational entropy. Carroll-Chen (2004), 'Spontaneous inflation and the origin of the arrow of time', arXiv:hep-th/0410270, propose an eternal-inflation answer. Foundational issue without consensus.",
+  "references": [
+    {
+      "citation": "Penrose, 'Singularities and time-asymmetry', in 'General Relativity: An Einstein Centenary Survey' (eds. Hawking, Israel), Cambridge University Press (1979)",
+      "url": "https://inspirehep.net/literature/167030"
+    },
+    {
+      "citation": "Carroll and Chen, 'Spontaneous inflation and the origin of the arrow of time' (2004)",
+      "arxiv": "hep-th/0410270"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "arrow_of_time",
+    "entropy",
+    "weyl_curvature_hypothesis",
+    "foundational"
+  ]
+}

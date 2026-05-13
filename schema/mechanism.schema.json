@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dritory/substratum/schema/mechanism.schema.json",
+  "title": "Proposed Mechanism",
+  "description": "A structural proposal that addresses one or more puzzles. Mechanisms are smaller units than full frameworks: a candidate framework typically composes several mechanisms. Each mechanism declares which puzzles it addresses, which benchmarks it touches, and what new structure it introduces. Compression score = puzzles_closed / parameters_introduced surfaces high-leverage proposals.",
+  "type": "object",
+  "required": ["id", "name", "type", "summary", "addresses_puzzles", "introduces", "field_tags", "status", "references"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Stable slug used as the filename."
+    },
+    "name": { "type": "string" },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "symmetry",
+        "dynamical",
+        "anthropic",
+        "topological",
+        "uv_completion",
+        "composite",
+        "geometric"
+      ],
+      "description": "symmetry = closes a puzzle by introducing or restoring a symmetry (PQ, family symmetries); dynamical = closes via cosmological or field-theoretic evolution (relaxion, leptogenesis); anthropic = closes via environmental selection; topological = closes via topological / vacuum-structure arguments; uv_completion = a UV theory whose IR limit produces the structure (string compactification, asymptotic safety); composite = closes by compositeness or strong dynamics (technicolor, composite Higgs); geometric = closes via geometric / extra-dimensional structure."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Plain-English description of the mechanism, 2-5 sentences."
+    },
+    "addresses_puzzles": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Edges into puzzles/. Each entry names a puzzle, the role this mechanism plays for it, and the confidence in that claim.",
+      "items": {
+        "type": "object",
+        "required": ["puzzle_id", "role", "confidence"],
+        "properties": {
+          "puzzle_id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": ["solves", "ameliorates", "explains_pattern", "requires"],
+            "description": "solves = closes the puzzle entirely if the mechanism is correct; ameliorates = softens the puzzle but leaves residual tuning; explains_pattern = produces the observed structure of values; requires = the mechanism depends on the puzzle being closed by something else (used to track dependency edges, e.g. leptogenesis requires seesaw)."
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["established", "proposed", "contested", "disfavored"]
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "touches_benchmarks": {
+      "type": "array",
+      "description": "Edges into benchmarks/. Each entry names a benchmark and how the mechanism interacts with it. Used by dot_alignment to flag mechanisms that violate established bounds.",
+      "items": {
+        "type": "object",
+        "required": ["benchmark_id", "effect"],
+        "properties": {
+          "benchmark_id": { "type": "string" },
+          "effect": {
+            "type": "string",
+            "enum": ["respects", "near_bound", "violates", "predicts_signal"],
+            "description": "respects = comfortably consistent; near_bound = saturates the current limit; violates = mechanism in its naive form is excluded; predicts_signal = mechanism predicts a specific positive signature at this benchmark (the most informative case)."
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "introduces": {
+      "type": "object",
+      "description": "What new structure the mechanism postulates. Used to compute the compression score's denominator.",
+      "required": ["new_parameters_count"],
+      "properties": {
+        "new_fields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "New fundamental fields (e.g., 'axion a', 'right-handed neutrinos N_R')."
+        },
+        "new_scales": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "New mass / energy scales (e.g., 'f_a ~ 10^9-10^12 GeV', 'M_R ~ 10^9-10^14 GeV')."
+        },
+        "new_symmetries": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "New global, gauge, or discrete symmetries (e.g., 'U(1)_PQ', 'Z_2 mirror')."
+        },
+        "new_parameters_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Approximate count of new free parameters introduced (couplings, masses, mixing angles, scales not derived from elsewhere). Used as the denominator of the compression score. Be conservative; count parameters not their fitted values."
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "structural_features": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-tag array used for clustering. Examples: 'discrete_symmetry', 'global_symmetry', 'scalar_at_intermediate_scale', 'extra_dimensions', 'mirror_sector', 'majorana_mass', 'topological_term'."
+    },
+    "field_tags": {
+      "type": "array",
+      "description": "Controlled vocabulary describing which kinds of new spacetime-field content this mechanism introduces. Used for shared-content queries across mechanisms. Tag = what the field IS, not what job it does in this mechanism (e.g. an axion-like inflaton gets 'qcd_blind_pseudoscalar', not a separate inflaton tag). Empty array means 'no new spacetime fields' (e.g. anthropic landscape, three-generations anomaly-cancellation arguments).",
+      "items": {
+        "type": "string",
+        "enum": [
+          "gauge_singlet_majorana_fermion",
+          "gauge_singlet_dirac_fermion",
+          "electroweak_triplet_fermion",
+          "vectorlike_quark",
+          "vectorlike_lepton",
+          "mirror_sm_fermions",
+          "kk_tower_fermions",
+          "susy_fermion_partners",
+          "electroweak_singlet_real_scalar",
+          "electroweak_singlet_complex_scalar",
+          "electroweak_doublet_scalar",
+          "electroweak_triplet_scalar",
+          "qcd_anomalous_pseudoscalar",
+          "qcd_blind_pseudoscalar",
+          "string_modulus",
+          "susy_scalar_partners",
+          "extra_u1_gauge_boson",
+          "dark_photon",
+          "left_right_gauge_bosons",
+          "gut_x_y_bosons",
+          "non_abelian_dark_gauge_sector",
+          "kk_tower_gauge_bosons",
+          "massive_graviton",
+          "extra_metric_or_connection",
+          "kk_tower_gravitons",
+          "extra_spatial_dimensions",
+          "string_theoretic_background",
+          "cosmological_landscape",
+          "primordial_black_hole_population"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "composes_with": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other mechanism ids this can coexist with naturally."
+    },
+    "excludes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other mechanism ids this is incompatible with (would conflict over the same puzzle or duplicate structure)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["mainstream", "niche", "historical", "disfavored"],
+      "description": "mainstream = currently a leading proposal; niche = proposed but not dominant; historical = once leading, now superseded; disfavored = empirically pressured but not strictly dead."
+    },
+    "history": {
+      "type": "string",
+      "description": "Brief sketch of when the mechanism was proposed and how its evaluation has evolved."
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["citation"],
+        "properties": {
+          "citation": { "type": "string" },
+          "doi": { "type": "string" },
+          "arxiv": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

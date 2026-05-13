@@ -1,0 +1,54 @@
+{
+  "id": "strong_first_order_ewpt_absence",
+  "name": "Absence of strong first-order electroweak phase transition",
+  "aliases": [
+    "EWPT crossover problem",
+    "no SFOPT in SM"
+  ],
+  "kind": "naturalness",
+  "summary": "Lattice calculations (Kajantie-Laine-Rummukainen-Shaposhnikov 1996; updated Csikor-Fodor-Heitger 1998) show that in the Standard Model with m_h = 125 GeV, the electroweak phase transition is a smooth crossover rather than a strong first-order transition. This means electroweak baryogenesis in the minimal SM is impossible: the third Sakharov condition (departure from equilibrium) fails. Yet we observe a baryon asymmetry. Either new bosonic degrees of freedom couple strongly to the Higgs to strengthen the transition (singlet extensions, 2HDM, MSSM stops below LEP bounds), or baryogenesis happens elsewhere (leptogenesis, Affleck-Dine, low-scale Q-ball). The transition's character is a sharp BSM-required gate.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Critical Higgs mass (SM crossover)",
+      "value": "~73",
+      "units": "GeV",
+      "expected": ">125 (current Higgs mass)",
+      "note": "Below m_h ~ 73 GeV the SM EWPT is first-order; above, crossover. With the observed m_h = 125 GeV, SM is deep in crossover regime. Lattice result: Kajantie, Laine, Rummukainen, Shaposhnikov, PRL 77, 2887 (1996); Csikor, Fodor, Heitger, PRL 82, 21 (1999)."
+    },
+    {
+      "symbol": "Sphaleron-freezeout ratio v(T_c)/T_c",
+      "value": "<1 (SM)",
+      "expected": ">1.1 (needed to preserve baryon asymmetry)",
+      "note": "For sphalerons to switch off and preserve a generated baryon asymmetry, the Higgs vev at the transition temperature must exceed T_c. SM gives v(T_c)/T_c << 1; viable BSM extensions raise it above 1."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [
+    "electroweak_oblique_s_t_u"
+  ],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Strengthening the EWPT requires new bosonic states with masses below ~few hundred GeV strongly coupled to the Higgs. Singlet scalars at S ~ 100-300 GeV or 2HDM with charged-Higgs mass ~ 200-400 GeV are the leading options - both within LHC reach. Failure to find these states would push baryogenesis to leptogenesis, Affleck-Dine, or yet-unknown high-scale mechanisms."
+    }
+  ],
+  "history": "First-order EWPT proposed as baryogenesis vehicle: Kuzmin-Rubakov-Shaposhnikov (1985). SM lattice analysis: Kajantie, Laine, Rummukainen, Shaposhnikov, 'Is there a hot electroweak phase transition at m_H >~ m_W?', PRL 77, 2887 (1996), hep-lat/9607052. Subsequent four-dimensional lattice work: Csikor, Fodor, Heitger, PRL 82, 21 (1999). Modern singlet/2HDM extensions: Cline-Lemieux (1997); Espinosa-Quiros (2007); Profumo-Ramsey-Musolf-Shaughnessy (2007), arXiv:0705.2425.",
+  "references": [
+    {
+      "citation": "Kajantie, Laine, Rummukainen, Shaposhnikov, 'Is there a hot electroweak phase transition at m_H >~ m_W?', Phys. Rev. Lett. 77, 2887 (1996)",
+      "arxiv": "hep-lat/9607052"
+    },
+    {
+      "citation": "Csikor, Fodor, Heitger, 'Endpoint of the hot electroweak phase transition', Phys. Rev. Lett. 82, 21 (1999)",
+      "arxiv": "hep-ph/9809291"
+    }
+  ],
+  "tags": [
+    "naturalness",
+    "electroweak",
+    "phase_transition",
+    "baryogenesis",
+    "lattice"
+  ]
+}

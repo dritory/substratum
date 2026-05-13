@@ -1,0 +1,77 @@
+{
+  "id": "holographic_principle",
+  "name": "Holographic principle ('t Hooft / Susskind)",
+  "aliases": [
+    "holographic conjecture",
+    "world as hologram"
+  ],
+  "type": "uv_completion",
+  "summary": "Proposes that the degrees of freedom inside any closed region of spacetime are bounded by the area of its boundary in Planck units (the Bekenstein bound), so all physical information in a (d+1)-dimensional region can be encoded on its d-dimensional boundary. Formulated quantitatively by 't Hooft (1993) and Susskind (1995); given concrete realisation by AdS/CFT (Maldacena 1997). A foundational principle constraining any consistent theory of quantum gravity.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "black_hole_information",
+      "role": "ameliorates",
+      "confidence": "established",
+      "note": "If the bulk physics is encoded on the boundary, BH information is necessarily preserved \u2014 it's stored on the horizon's 2D area. Foundational for AdS/CFT and the modern resolution of the information paradox; not by itself a microscopic resolution."
+    },
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "requires",
+      "confidence": "proposed",
+      "note": "The Cohen-Kaplan-Nelson holographic dark-energy bound (1999) is one application; deeper implications for Lambda are encoded in the de Sitter entropy bound and remain open."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "explains_pattern",
+      "confidence": "established",
+      "note": "States that bulk d.o.f. of any region are bounded by the boundary area in Planck units; a universal structural constraint on QG d.o.f. ('t Hooft 1993; Susskind 1994; Bousso 1999 covariant version)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects"
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "Planck area / Bekenstein-bound entropy density"
+    ],
+    "new_symmetries": [],
+    "new_parameters_count": 0,
+    "note": "A meta-principle constraining the structure of consistent quantum gravity, not a specific Lagrangian or set of fields."
+  },
+  "structural_features": [
+    "holographic_bound",
+    "area_law_entropy",
+    "boundary_encoding",
+    "uv_ir_constraint"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "ads_cft_holography",
+    "strominger_vafa_microstates",
+    "island_formula_bh_information",
+    "holographic_dark_energy"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "'t Hooft (1993), 'Dimensional reduction in quantum gravity', arXiv:gr-qc/9310026 \u2014 first quantitative formulation. Susskind (1995), 'The world as a hologram', J. Math. Phys. 36, 6377, arXiv:hep-th/9409089 \u2014 popularised and refined. Maldacena (1997) gave concrete realisation in AdS/CFT. Now a load-bearing principle in modern QG.",
+  "references": [
+    {
+      "citation": "'t Hooft, 'Dimensional reduction in quantum gravity' (1993)",
+      "arxiv": "gr-qc/9310026"
+    },
+    {
+      "citation": "Susskind, 'The world as a hologram', J. Math. Phys. 36, 6377 (1995)",
+      "arxiv": "hep-th/9409089"
+    }
+  ],
+  "tags": [
+    "quantum_gravity",
+    "holography",
+    "bekenstein_bound",
+    "area_law"
+  ]
+}

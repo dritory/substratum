@@ -1,0 +1,92 @@
+{
+  "id": "horava_lifshitz_gravity",
+  "name": "Horava-Lifshitz gravity",
+  "aliases": [
+    "Lifshitz-point gravity",
+    "anisotropic-scaling gravity"
+  ],
+  "type": "geometric",
+  "summary": "Modifies general relativity at short distances by introducing anisotropic scaling between space and time (dynamical critical exponent z=3 in 3+1D), making the theory power-counting renormalisable. The relativistic z=1 limit emerges in the IR, recovering GR at long distances. Effective speed of light, Newton constant, and cosmological constant are all relevant deformations of the deeply nonrelativistic z=3 theory.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "cosmological_constant_smallness",
+      "role": "ameliorates",
+      "confidence": "contested",
+      "note": "Lambda emerges as a relevant coupling that flows from the UV. Specific predictions for the present-day Lambda value depend on the RG flow and choice of detailed-balance condition; not derived from first principles."
+    },
+    {
+      "puzzle_id": "dimensional_reduction_at_planck",
+      "role": "solves",
+      "confidence": "established",
+      "note": "Anisotropic scaling z=3 in the UV gives spectral dimension d_s = 2 by construction; dimensional reduction is the defining feature of the model."
+    },
+    {
+      "puzzle_id": "quantum_gravity_consistency",
+      "role": "solves",
+      "confidence": "contested",
+      "note": "Anisotropic UV scaling z=3 makes gravity power-counting renormalisable at the price of breaking Lorentz invariance in the UV. Constrained but not killed by Lorentz-violation bounds (Horava 2009; Wang 2017 review)."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "graviton_speed_gw170817",
+      "effect": "near_bound",
+      "note": "GW propagation in Horava gravity can deviate from c at high frequency; GW170817 constrains the combination of Lifshitz parameters in the IR."
+    },
+    {
+      "benchmark_id": "lorentz_invariance_photon",
+      "effect": "near_bound",
+      "note": "Anisotropic scaling explicitly breaks Lorentz invariance at short distances; SME / GRB photon dispersion bounds constrain how short the violation scale can be."
+    },
+    {
+      "benchmark_id": "recover_general_relativity",
+      "effect": "respects",
+      "note": "Relativistic IR limit reproduces GR predictions to high precision; deviations sit at unobservably high frequencies."
+    }
+  ],
+  "introduces": {
+    "new_fields": [],
+    "new_scales": [
+      "Lifshitz scale (Planck-scale by default)"
+    ],
+    "new_symmetries": [
+      "foliation-preserving diffeomorphisms (instead of full diffeomorphisms)"
+    ],
+    "new_parameters_count": 6,
+    "note": "Lifshitz scale plus several couplings of higher-derivative spatial-curvature operators."
+  },
+  "structural_features": [
+    "anisotropic_scaling",
+    "lorentz_violation",
+    "renormalisable_gravity",
+    "foliation_diffeomorphisms"
+  ],
+  "field_tags": [
+    "extra_metric_or_connection"
+  ],
+  "composes_with": [],
+  "excludes": [
+    "brans_dicke_scalar_tensor",
+    "dgp_braneworld",
+    "emergent_entropic_gravity",
+    "f_r_modified_gravity",
+    "galileon_modified_gravity",
+    "mannheim_conformal_gravity",
+    "teves_relativistic_mond",
+    "unimodular_gravity"
+  ],
+  "status": "niche",
+  "history": "Horava (2009), 'Quantum gravity at a Lifshitz point', Phys. Rev. D 79, 084008, arXiv:0901.3775. Active development through 2010s; the 'projectable' vs 'non-projectable' versions and the question of recovering full diffeomorphism invariance in the IR remain debated. GW170817 has constrained but not closed.",
+  "references": [
+    {
+      "citation": "Horava, 'Quantum gravity at a Lifshitz point', Phys. Rev. D 79, 084008 (2009)",
+      "arxiv": "0901.3775"
+    }
+  ],
+  "tags": [
+    "modified_gravity",
+    "lifshitz",
+    "lorentz_violation",
+    "renormalisable_gravity"
+  ]
+}

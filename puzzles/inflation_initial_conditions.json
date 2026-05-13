@@ -1,0 +1,51 @@
+{
+  "id": "inflation_initial_conditions",
+  "name": "Early-universe initial conditions (horizon, flatness, structure)",
+  "aliases": ["horizon problem", "flatness problem", "homogeneity problem"],
+  "kind": "naturalness",
+  "summary": "The observed universe is homogeneous on scales that were never in causal contact under standard FRW expansion (horizon problem); spatially flat to high precision despite curvature being radiatively unstable in expansion (flatness problem); and seeded with nearly scale-invariant adiabatic perturbations of unknown origin (structure problem). Without an extra mechanism, all three coincidences require finely-tuned initial conditions at the Planck scale.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Omega_K",
+      "value": "0.000 +/- 0.005",
+      "expected": "O(1) (radiatively unstable away from 0)",
+      "gap_log10": -3,
+      "note": "Spatial curvature is observed flat to <0.5%; under FRW evolution alone, deviations grow with time, so the early universe must have been flat to ~10^60 at the Planck epoch."
+    },
+    {
+      "symbol": "delta T / T (CMB)",
+      "value": "1e-5",
+      "expected": "uncorrelated across patches outside causal horizon",
+      "gap_log10": null,
+      "note": "Patches separated by more than the recombination-era horizon are observed to have correlated temperature; they had no causal contact in standard FRW."
+    },
+    {
+      "symbol": "n_s (scalar spectral index)",
+      "value": "0.965 +/- 0.004",
+      "expected": "no preferred value without inflation",
+      "gap_log10": null,
+      "note": "Near-scale-invariance with slight red tilt, consistent with single-field slow-roll inflation."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": ["cmb_acoustic_peak_structure", "primordial_gw_tensor_to_scalar_ratio", "cmb_blackbody_firas", "cmb_large_scale_anomalies"],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "stresses",
+      "note": "The three coincidences are not separately statistically improbable; they all reflect that FRW evolution does not naturally produce the observed initial state. Inflation closes them all simultaneously — a paradigm dot-alignment example."
+    }
+  ],
+  "history": "Horizon and flatness problems articulated by Dicke and Peebles (1979) at the Einstein Centenary symposium. Inflationary cosmology proposed by Guth (1981) to address them; quickly extended to slow-roll models by Linde (1982) and Albrecht-Steinhardt (1982). Subsequent decades produced thousands of inflationary models; observational constraints (Planck, BICEP/Keck) have closed many but the framework itself remains the dominant paradigm.",
+  "references": [
+    {
+      "citation": "Guth, 'The Inflationary Universe: A Possible Solution to the Horizon and Flatness Problems', Phys. Rev. D 23, 347 (1981)",
+      "doi": "10.1103/PhysRevD.23.347"
+    },
+    {
+      "citation": "Planck Collaboration, 'Planck 2018 results. X. Constraints on inflation', A&A 641, A10 (2020)",
+      "arxiv": "1807.06211"
+    }
+  ],
+  "tags": ["inflation", "cosmology", "initial_conditions", "naturalness"]
+}

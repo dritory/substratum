@@ -1,0 +1,45 @@
+{
+  "id": "dark_matter_halo_diversity",
+  "name": "Dark-matter halo diversity problem",
+  "aliases": [
+    "rotation-curve diversity",
+    "halo diversity"
+  ],
+  "kind": "pattern",
+  "summary": "Observed galactic rotation curves show enormous diversity in inner-region behaviour at fixed maximum circular velocity V_max - some galaxies have cuspy profiles, others nearly-flat cored profiles, at the same V_max. Cold-dark-matter N-body simulations (without baryons) predict tight scatter at fixed V_max. The 'diversity problem' (Oman et al. 2015, MNRAS 452, 3650, arXiv:1504.01437) cannot be resolved by stochastic baryonic feedback alone: simulations with feedback still produce tighter scatter than observed. Either DM physics is non-cold (self-interacting, fuzzy, warm) and the diversity reflects environmental history, or baryonic feedback is more strongly history-dependent than current models predict.",
+  "characteristic_numbers": [
+    {
+      "symbol": "Inner-circular-velocity scatter at V_max = 80 km/s",
+      "value": "~30 km/s",
+      "expected": "~5 km/s (LambdaCDM N-body)",
+      "note": "Observed rotation-curve V(r=2 kpc) at V_max ~ 80 km/s varies over 30 km/s among similar-mass galaxies; pure-DM simulations predict much tighter ~5 km/s. From Oman et al. 2015 arXiv:1504.01437."
+    }
+  ],
+  "data_links": [],
+  "benchmark_links": [],
+  "principles_stressed": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "Self-interacting DM (SIDM, sigma/m ~ 1 cm^2/g) naturally produces diverse cores; ultralight (fuzzy) DM produces core-cusp via wavefunction support. Either preferred over collisionless CDM if diversity is real, but tight LSS constraints discourage both at strong levels needed."
+    }
+  ],
+  "history": "Cusp-core debate dates to 1990s (Moore 1994). Diversity problem articulated: Oman, Navarro, Fattahi, Frenk, Sawala, et al. (2015), 'The unexpected diversity of dwarf galaxy rotation curves', MNRAS 452, 3650, arXiv:1504.01437. Updated with SIDM-fit study: Kamada-Kaplinghat-Pace-Yu (2017, PRL 119, 111102, arXiv:1611.02716). Recent JWST + ALMA constraints add to the picture for high-z analogues.",
+  "references": [
+    {
+      "citation": "Oman et al., 'The unexpected diversity of dwarf galaxy rotation curves', MNRAS 452, 3650 (2015)",
+      "arxiv": "1504.01437"
+    },
+    {
+      "citation": "Kamada, Kaplinghat, Pace, Yu, 'Self-interacting dark matter can explain diverse galactic rotation curves', Phys. Rev. Lett. 119, 111102 (2017)",
+      "arxiv": "1611.02716"
+    }
+  ],
+  "tags": [
+    "pattern",
+    "dark_matter",
+    "rotation_curves",
+    "halo_structure",
+    "small_scale"
+  ]
+}

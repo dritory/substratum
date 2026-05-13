@@ -1,0 +1,72 @@
+{
+  "id": "wimpzilla_superheavy_dm",
+  "name": "WIMPzilla / superheavy dark matter",
+  "aliases": [
+    "superheavy DM",
+    "Chung-Kolb-Riotto WIMPzilla"
+  ],
+  "type": "dynamical",
+  "summary": "Stable particles with mass m_X ~ 10^11 - 10^15 GeV produced gravitationally during the inflation-to-reheating transition by the expanding background acting on vacuum quantum fluctuations of the X field. Produces relic abundance Omega_X ~ 1 quite independently of any non-gravitational interactions, provided m_X is comparable to the inflaton mass. Connects DM to inflationary physics directly.",
+  "addresses_puzzles": [
+    {
+      "puzzle_id": "dark_matter_identity",
+      "role": "ameliorates",
+      "confidence": "proposed",
+      "note": "Naturally accommodates non-thermal DM from inflation; relic abundance set by m_X / H_inf ratio rather than freeze-out cross sections. WIMPzilla DM is largely invisible to direct/indirect detection but may show up in ultra-high-energy cosmic-ray spectra if X is unstable."
+    }
+  ],
+  "touches_benchmarks": [
+    {
+      "benchmark_id": "cosmic_ray_gzk_cutoff",
+      "effect": "predicts_signal",
+      "note": "If X is metastable with lifetime ~ 10^22 yr, decays produce ultra-high-energy cosmic rays above the GZK cutoff; UHECR spectra constrain X lifetimes."
+    },
+    {
+      "benchmark_id": "primordial_gw_tensor_to_scalar_ratio",
+      "effect": "respects",
+      "note": "WIMPzilla production doesn't directly modify primordial GW spectrum; consistent with current bounds."
+    }
+  ],
+  "introduces": {
+    "new_fields": [
+      "heavy stable particle X (any spin)"
+    ],
+    "new_scales": [
+      "m_X ~ 10^11 - 10^15 GeV (set near inflaton mass)"
+    ],
+    "new_symmetries": [
+      "dark Z_2 stabilising X (or anomaly-free global U(1))"
+    ],
+    "new_parameters_count": 2,
+    "note": "X mass and (if any) lifetime; the production mechanism is fixed by inflationary physics."
+  },
+  "structural_features": [
+    "non_thermal_relic",
+    "gravitational_production",
+    "superheavy",
+    "inflation_connected"
+  ],
+  "field_tags": [],
+  "composes_with": [
+    "starobinsky_inflation",
+    "higgs_inflation",
+    "new_inflation",
+    "chaotic_inflation"
+  ],
+  "excludes": [],
+  "status": "niche",
+  "history": "Chung, Kolb, Riotto (1998), 'Superheavy dark matter', Phys. Rev. D 59, 023501, arXiv:hep-ph/9802238. Term 'WIMPzilla' coined by Kolb-Chung-Riotto (1999) AIP Conf. Proc. 484, 91. Phenomenology developed through 2000s in connection with UHECR origin questions.",
+  "references": [
+    {
+      "citation": "Chung, Kolb, Riotto, 'Superheavy dark matter', Phys. Rev. D 59, 023501 (1999)",
+      "arxiv": "hep-ph/9802238"
+    }
+  ],
+  "tags": [
+    "dark_matter",
+    "superheavy",
+    "wimpzilla",
+    "non_thermal",
+    "gravitational_production"
+  ]
+}
