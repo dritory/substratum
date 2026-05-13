@@ -4,9 +4,9 @@
   "target_puzzles": ["koide_formula_lepton_masses"],
   "status": "drafted",
   "closability": "contested",
-  "closability_note": "The Koide formula Q = (m_e + m_mu + m_tau) / (sqrt(m_e) + sqrt(m_mu) + sqrt(m_tau))^2 = 2/3 holds to 5 decimal places in the charged-lepton sector, but no convincing derivation exists. Could plausibly be a numerical coincidence rather than a deep relation — the running of charged-lepton masses from EW to high scales spoils the formula, so any 'derivation' must explain why it holds AT the EW scale specifically. Modular flavor symmetries at level 3 are the most active research direction; Koide's own democratic-mass model gives Q exactly but introduces unmotivated input choices. The gap is open in the strict sense, contested in whether closure is even desirable (vs accepting the formula as coincidence).",
-  "summary": "The Koide formula relating charged-lepton masses holds to ~5 sigma precision at the EW scale but has no derivation. No framework in the catalog claims to predict Q = 2/3.",
-  "what_closes_it": "A mechanism that derives Q = 2/3 (or whatever value the formula actually takes at the relevant scale) from a smaller set of structural inputs. Candidate routes: (a) modular flavor symmetry at level N=3 producing charged-lepton mass matrices whose eigenvalues satisfy the Koide constraint as a property of the modular forms (Koide-Yukawa relations from group theory; Feruglio-Romanino 2021 explored this direction); (b) a symmetry-protected mass texture that gives the formula as a fixed point of the RG flow; (c) a UV embedding where the formula reflects an underlying SU(3) democratic mass structure broken in a specific direction. None of these has succeeded; the formula's behaviour under running (it breaks at scales above ~1 TeV) is a significant obstacle to any derivation that invokes a high-scale structure.",
+  "closability_note": "Q = 2/3 holds to 5 decimals at the EW scale but breaks under RG running, so any derivation must explain why the IR is special. Could be coincidence rather than a derivation target.",
+  "summary": "The Koide formula Q = 2/3 holds to ~5 sigma precision at the EW scale with no published derivation.",
+  "what_closes_it": "A mechanism producing Q = 2/3 at the EW scale from a structural input: modular flavor at level 3, an RG-protected mass texture, or an SU(3) democratic mass with specific breaking. RG-fragility is the main obstacle to any UV-side argument.",
   "required_field_content": {
     "must_introduce_one_of": [
       "string_modulus",
