@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/dritory/substratum/schema/discovery_gap.schema.json",
-  "title": "Discovery Gap / Search Space",
-  "description": "A prescriptive description of where a missing mechanism would have to live to close one or more puzzles. Discovery gaps are the catalog's active face: they specify the shape of physics that should exist but doesn't (or hasn't been recorded), giving researchers a job description rather than a list of open questions. Each gap is updatable through three lifecycle stages: a mechanically scaffolded skeleton, an editorially drafted entry with literature pointers, and a reviewed entry whose closability has been assessed. When a new catalog mechanism closes the gap, the entry transitions to 'closed' with a pointer to the closing mechanism.",
+  "$id": "https://github.com/dritory/substratum/schema/search_space.schema.json",
+  "title": "Search Space",
+  "description": "A prescriptive description of where a missing mechanism would have to live to close one or more puzzles. Search spaces are the catalog's active face: they specify the shape of physics that should exist but doesn't (or hasn't been recorded), giving researchers a job description rather than a list of open questions. Each entry is updatable through three lifecycle stages: a mechanically scaffolded skeleton, an editorially drafted entry with literature pointers, and a reviewed entry whose closability has been assessed. When a new catalog mechanism closes the space, the entry transitions to 'closed' with a pointer to the closing mechanism.",
   "type": "object",
   "required": [
     "id",
@@ -47,11 +47,6 @@
     "what_closes_it": {
       "type": "string",
       "description": "Prose description of the shape a mechanism would need to have to close this gap. The most important editorial field: this is the job description for a future paper or catalog entry."
-    },
-    "current_best_verdict_across_frameworks": {
-      "type": "string",
-      "enum": ["closed", "partial", "requires_external", "untouched"],
-      "description": "Cached from scripts/search.py puzzle-horizon analysis. Indicates what the BEST any existing framework achieves on this gap's target puzzles. 'untouched' means no framework even references the puzzles; 'partial' means at most ameliorates."
     },
     "required_field_content": {
       "type": "object",

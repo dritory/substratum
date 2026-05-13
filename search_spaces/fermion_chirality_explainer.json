@@ -1,0 +1,52 @@
+{
+  "id": "fermion_chirality_explainer",
+  "name": "Mechanism deriving fermion chirality from structural inputs",
+  "target_puzzles": ["fermion_chirality_origin"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "The puzzle is partly definitional: chiral fermions ARE required for the SM's anomaly-cancelled gauge structure, so any UV completion that gives SU(3)xSU(2)xU(1) with the right matter representations explains chirality at that level. But the deeper question — why are the fermions chiral at all, why not a vector-like spectrum at some high scale that breaks to a chiral IR? — remains open. String compactifications produce chiral spectra from intersection numbers or Calabi-Yau topology, but the choice of compactification is itself unconstrained. A closing mechanism would have to derive chirality from a topological invariant or a symmetry-protection argument, not just observe that 'this compactification happens to be chiral'.",
+  "summary": "The SM is chiral (left- and right-handed fermions transform differently under SU(2)). No framework in the catalog derives this from structural inputs — most assume it, GUTs unify within a chirality but don't constrain the choice, and string compactifications produce chiral spectra without deriving why.",
+  "what_closes_it": "A mechanism that forces a chiral spectrum from a structural input — topological (an index theorem on the compactification manifold that rules out vector-like spectra), symmetry-based (a discrete symmetry whose anomaly cancellation requires chirality), or dynamical (a phase transition in the early universe that selects the chiral phase from a non-chiral parent). The F-theory route is currently strongest: intersection numbers of matter curves on the GUT divisor determine the chiral index, and consistency conditions (D7-brane tadpole cancellation, flux quantisation) impose constraints. But no published F-theory model derives the SM chiral content without input choices.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "string_theoretic_background",
+      "extra_spatial_dimensions"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "GUT scale or higher (10^16 - 10^19 GeV). Chirality is set at compactification or by a topological constraint at the UV; low-energy mechanisms cannot generate it from a vector-like parent without breaking gauge invariance.",
+  "compatible_host_frameworks": [
+    "f_theory_gut_axiverse",
+    "m_theory_landscape",
+    "modular_string_flavor"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "gauge_invariance",
+      "status": "tests",
+      "note": "Gauge anomaly cancellation in the SM requires the specific chiral content (Y_L + Y_R = 0 across each family). The gap-closer must respect anomaly cancellation while deriving the chirality assignment."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Candelas, Horowitz, Strominger, Witten, 'Vacuum configurations for superstrings', Nucl. Phys. B 258, 46 (1985)",
+      "doi": "10.1016/0550-3213(85)90602-9"
+    },
+    {
+      "citation": "Beasley, Heckman, Vafa, 'GUTs and Exceptional Branes in F-theory - I', JHEP 01 (2009) 058",
+      "arxiv": "0802.3391"
+    },
+    {
+      "citation": "Donagi and Wijnholt, 'Breaking GUT Groups in F-Theory', Adv. Theor. Math. Phys. 15, 1523 (2011)",
+      "arxiv": "0808.2223"
+    }
+  ],
+  "tags": [
+    "chiral_spectrum",
+    "compactification_constraint",
+    "topological_route"
+  ]
+}

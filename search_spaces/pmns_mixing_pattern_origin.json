@@ -1,0 +1,55 @@
+{
+  "id": "pmns_mixing_pattern_origin",
+  "name": "Mechanism predicting the PMNS lepton mixing pattern from structural inputs",
+  "target_puzzles": ["pmns_lepton_mixing_pattern"],
+  "status": "drafted",
+  "closability": "plausible",
+  "closability_note": "Modular and family symmetries (A_4, S_4, A_5, modular Gamma_N for N <= 5) explicitly predict near-tri-bimaximal or near-trimaximal mixing patterns; many models in the literature give theta_12 ~ 35 deg, theta_23 ~ 45 deg, theta_13 < 5 deg as group-theoretic outputs. The 2012 measurement of nonzero theta_13 ~ 8.5 deg killed pure tri-bimaximal, but the modular-symmetry program has adjusted: certain modular weights at level 3 give the corrected angles. The gap is plausibly closable: at least 3-4 published modular-flavor models reproduce all 6 PMNS observables (3 angles, 1 Dirac CP phase, plus mass-squared splittings) within current uncertainties. The remaining work is to show uniqueness — i.e. that the model is not just one of many parameter choices.",
+  "summary": "The PMNS mixing matrix has a specific structure (near-trimaximal in atmospheric sector, large solar angle, nonzero but small reactor angle, CP phase ~ -90 deg) that no framework in the catalog derives. Modular flavor symmetries are the most actively-explored route.",
+  "what_closes_it": "A mechanism that predicts all 3 PMNS angles and the Dirac CP phase from group-theoretic inputs — a finite modular group at level N, a set of representations, and modular weights — with no remaining free parameters beyond an overall mass scale. Candidate routes: (a) modular Gamma_3 ~ A_4 with specific weight assignments (Feruglio-Romanino 2018; Kobayashi-Tanaka-Tatsuishi 2018); (b) modular Gamma_4 ~ S_4 (Penedo-Petcov 2018); (c) modular Gamma_5 ~ A_5 (Novichkov et al. 2019). The closing mechanism would also have to predict (or at least constrain) the absolute neutrino-mass scale and the Majorana phases, which most current modular models leave as inputs. Compatibility with thermal leptogenesis adds further constraints.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "string_modulus",
+      "gauge_singlet_majorana_fermion"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "Seesaw scale (10^9 - 10^14 GeV) for the right-handed-neutrino sector; modular vacuum value tau set at the GUT or compactification scale.",
+  "compatible_host_frameworks": [
+    "modular_string_flavor",
+    "f_theory_gut_axiverse",
+    "mssm_so10_seesaw_leptogenesis"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "lepton_flavor_universality",
+      "status": "tests",
+      "note": "PMNS mixing breaks lepton-flavor conservation in the active-neutrino sector. The closing mechanism must reproduce the observed mixing while respecting the charged-lepton-sector LFU constraints (mu -> e gamma, etc.)."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Feruglio, 'Are neutrino masses modular forms?' (2017)",
+      "arxiv": "1706.08749"
+    },
+    {
+      "citation": "Kobayashi, Tanaka, Tatsuishi, 'Neutrino mixing from finite modular groups', PRD 98, 016004 (2018)",
+      "arxiv": "1803.10391"
+    },
+    {
+      "citation": "Penedo and Petcov, 'Lepton masses and mixing from modular S_4 symmetry', Nucl. Phys. B 939, 292 (2019)",
+      "arxiv": "1806.11040"
+    },
+    {
+      "citation": "Ding and King, 'Neutrino mass and mixing with modular symmetry', Rept. Prog. Phys. 87, 084201 (2024)",
+      "arxiv": "2311.09282"
+    }
+  ],
+  "tags": [
+    "lepton_mixing",
+    "modular_symmetry_route",
+    "pattern_prediction"
+  ]
+}

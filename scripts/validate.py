@@ -48,9 +48,9 @@ DATASETS = [
         "schema": ROOT / "schema" / "mechanism.schema.json",
     },
     {
-        "name": "discovery_gaps",
-        "dir": ROOT / "discovery_gaps",
-        "schema": ROOT / "schema" / "discovery_gap.schema.json",
+        "name": "search_spaces",
+        "dir": ROOT / "search_spaces",
+        "schema": ROOT / "schema" / "search_space.schema.json",
     },
 ]
 

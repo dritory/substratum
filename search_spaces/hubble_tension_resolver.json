@@ -1,0 +1,57 @@
+{
+  "id": "hubble_tension_resolver",
+  "name": "Mechanism resolving the H0 tension between early and late universe",
+  "target_puzzles": ["hubble_tension_persistence"],
+  "status": "drafted",
+  "closability": "contested",
+  "closability_note": "Many published programs aim at this (early dark energy, modified-recombination via varying alpha or m_e, decaying or interacting dark matter, modified gravity), but no single proposal has been validated. The tension could also resolve experimentally — local-distance-ladder systematics or CMB priors could be wrong. As of 2024 the tension stands at ~5 sigma between SH0ES + Cepheids and Planck + LCDM, with persistent disagreement after a decade of scrutiny. A closing mechanism must either (a) match data on BOTH sides (early and late) without breaking other observables (sum of neutrino masses, S8, BAO), or (b) reveal a systematic in one of the measurements.",
+  "summary": "No framework in the catalog claims to resolve the H0 tension between CMB-inferred (~67 km/s/Mpc) and late-time-measured (~73 km/s/Mpc) Hubble constant values, currently at ~5 sigma significance.",
+  "what_closes_it": "A new-physics mechanism producing a ~10% shift in either the sound horizon at last scattering (early-universe route: shorter sound horizon raises inferred H0) or the local distance ladder (late-universe route: less common, harder to evade SN1a self-calibration). Early-route candidates: early dark energy peaking at z ~ 3000 (Karwal-Kamionkowski 2016; Poulin et al. 2019); a varying fine-structure constant or electron mass before recombination shifting the sound horizon (Sekiguchi-Takahashi 2021; Hart-Chluba 2020); a decaying-DM component shifting matter density at decoupling. Late-route candidates: interacting dark sector with momentum exchange (Di Valentino et al.); modified gravity with running of G. The mechanism must respect the BAO + SN1a + S8 + sum-m_nu constraints, which most published proposals address only at the level of mild tension trade-offs.",
+  "required_field_content": {
+    "must_introduce_one_of": [
+      "qcd_blind_pseudoscalar",
+      "electroweak_singlet_real_scalar",
+      "dark_photon"
+    ],
+    "must_introduce_all_of": [],
+    "must_not_introduce": []
+  },
+  "scale_hint": "Mass scale 10^-29 to 10^-27 eV for the early-DE scalar; recombination-era physics at T ~ 0.3 eV. The closing mechanism operates at z ~ 1000-10000, not at the present epoch.",
+  "compatible_host_frameworks": [
+    "lambda_cdm_gr",
+    "f_theory_gut_axiverse",
+    "modular_string_flavor",
+    "m_theory_landscape"
+  ],
+  "blocking_mechanisms": [],
+  "principles_at_stake": [
+    {
+      "principle": "naturalness",
+      "status": "tests",
+      "note": "An early-DE field with V ~ rho_DE at z ~ 3000 has Lambda ~ 0.3 eV decay constant — a new scale unrelated to anything else in the SM, requiring its own naturalness story."
+    }
+  ],
+  "literature_anchors": [
+    {
+      "citation": "Karwal and Kamionkowski, 'Dark energy at early times, the Hubble parameter, and the string axiverse', PRD 94, 103523 (2016)",
+      "arxiv": "1608.01309"
+    },
+    {
+      "citation": "Poulin, Smith, Karwal, Kamionkowski, 'Early dark energy can resolve the Hubble tension', PRL 122, 221301 (2019)",
+      "arxiv": "1811.04083"
+    },
+    {
+      "citation": "Hart and Chluba, 'Updated fundamental constant constraints from Planck 2018 data and possible relations to the Hubble tension', MNRAS 493, 3255 (2020)",
+      "arxiv": "1912.03986"
+    },
+    {
+      "citation": "Di Valentino et al., 'In the realm of the Hubble tension — a review of solutions', Class. Quant. Grav. 38, 153001 (2021)",
+      "arxiv": "2103.01183"
+    }
+  ],
+  "tags": [
+    "cosmological_tension",
+    "early_universe_physics",
+    "active_research"
+  ]
+}
